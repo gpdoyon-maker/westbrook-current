@@ -16,7 +16,20 @@
     .events-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.25rem; }
     .event-card, .weekend-highlight { background: #fff; border-radius: 12px; padding: 1.25rem; border: 1px solid var(--border); border-left: 5px solid var(--other); box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
     .weekend-highlight { grid-column: 1 / -1; background: #fffbeb; border-left-color: #d97706; }
-    .cat-arts-music { border-left-color: var(--arts); } .cat-community-civic { border-left-color: var(--comm); } .cat-classes-learning { border-left-color: var(--class); } .cat-family-kids { border-left-color: var(--fam); } .cat-food-drink { border-left-color: var(--food); } .cat-health-wellness { border-left-color: var(--health); } .cat-markets-shopping { border-left-color: var(--market); } .cat-outdoors-nature { border-left-color: var(--nature); } .cat-sports-recreation { border-left-color: var(--sport); } .cat-seniors { border-left-color: var(--senior); } .cat-faith-spirituality { border-left-color: var(--faith); }
+    
+    /* Category Color Assignment Logic */
+    .cat-arts-music { border-left-color: var(--arts); } 
+    .cat-community-civic { border-left-color: var(--comm); } 
+    .cat-classes-learning { border-left-color: var(--class); } 
+    .cat-family-kids { border-left-color: var(--fam); } 
+    .cat-food-drink { border-left-color: var(--food); } 
+    .cat-health-wellness { border-left-color: var(--health); } 
+    .cat-markets-shopping { border-left-color: var(--market); } 
+    .cat-outdoors-nature { border-left-color: var(--nature); } 
+    .cat-sports-recreation { border-left-color: var(--sport); } 
+    .cat-seniors { border-left-color: var(--senior); } 
+    .cat-faith-spirituality { border-left-color: var(--faith); }
+
     .event-title { margin: 0.4rem 0; font-size: 1.15rem; font-weight: 700; }
     .event-meta { font-size: 0.85rem; color: var(--muted); }
     .tag { font-size: 0.7rem; font-weight: 700; background: #f1f5f9; padding: 0.2rem 0.5rem; border-radius: 4px; margin-right: 0.4rem; }
@@ -32,9 +45,11 @@
   <header><h1>Westbrook Currents</h1><div style="font-size:0.75rem; color:var(--muted)">Local events. All in one place.</div></header>
   <div class="container">
     <input type="text" id="search" class="search-box" placeholder="Search events...">
-    <div class="filter-bar"><div class="chip active" data-filter="all">All</div><div class="chip " data-filter="cat-arts---music">Arts & music</div><div class="chip " data-filter="cat-community---civic">Community & civic</div><div class="chip empty" data-filter="cat-classes---learning">Classes & learning</div><div class="chip " data-filter="cat-family---kids">Family & kids</div><div class="chip empty" data-filter="cat-food---drink">Food & drink</div><div class="chip empty" data-filter="cat-health---wellness">Health & wellness</div><div class="chip empty" data-filter="cat-markets---shopping">Markets & shopping</div><div class="chip empty" data-filter="cat-outdoors---nature">Outdoors & nature</div><div class="chip empty" data-filter="cat-sports---recreation">Sports & recreation</div><div class="chip empty" data-filter="cat-seniors">Seniors</div><div class="chip empty" data-filter="cat-faith---spirituality">Faith & spirituality</div><div class="chip empty" data-filter="cat-other">Other</div></div>
+    <div class="filter-bar"><div class="chip active" data-filter="all">All</div>
+    <div class="chip " data-filter="cat-arts-music">Arts & music</div><div class="chip " data-filter="cat-community-civic">Community & civic</div><div class="chip empty" data-filter="cat-classes-learning">Classes & learning</div><div class="chip " data-filter="cat-family-kids">Family & kids</div><div class="chip empty" data-filter="cat-food-drink">Food & drink</div><div class="chip empty" data-filter="cat-health-wellness">Health & wellness</div><div class="chip empty" data-filter="cat-markets-shopping">Markets & shopping</div><div class="chip empty" data-filter="cat-outdoors-nature">Outdoors & nature</div><div class="chip empty" data-filter="cat-sports-recreation">Sports & recreation</div><div class="chip empty" data-filter="cat-seniors">Seniors</div><div class="chip empty" data-filter="cat-faith-spirituality">Faith & spirituality</div><div class="chip empty" data-filter="cat-other">Other</div>
+    </div>
     <div class="events-grid" id="grid"><div class="date-section-divider"><span>📍 Today (Friday, Sep 25)</span></div>
-    <article class="event-card cat-arts---music" data-title="dear passenger cd release pre order party" data-venue="lenny's pub" data-cat="cat-arts---music">
+    <article class="event-card cat-arts-music" data-title="dear passenger cd release pre order party" data-venue="lenny's pub" data-cat="cat-arts-music">
       <div class="event-content">
         
         <div class="event-meta">Fri, Sep 25 • 7:00 PM • Lenny's Pub</div>
@@ -53,7 +68,7 @@
         </details>
       </div>
     </article><div class="date-section-divider"><span>Upcoming Events</span></div>
-    <article class="event-card cat-arts---music" data-title="travis james humphrey" data-venue="lenny's pub" data-cat="cat-arts---music">
+    <article class="event-card cat-arts-music" data-title="travis james humphrey" data-venue="lenny's pub" data-cat="cat-arts-music">
       <div class="event-content">
         
         <div class="event-meta">Sat, Sep 26 • 7:00 PM • Lenny's Pub</div>
@@ -72,7 +87,7 @@
         </details>
       </div>
     </article>
-    <article class="event-card cat-family---kids" data-title="kids fun festival at rock row" data-venue="quarryside at rock row" data-cat="cat-family---kids">
+    <article class="event-card cat-family-kids" data-title="kids fun festival at rock row" data-venue="quarryside at rock row" data-cat="cat-family-kids">
       <div class="event-content">
         
         <div class="event-meta">Sat, Sep 26 • 12:00 PM • Quarryside at Rock Row</div>
@@ -91,7 +106,7 @@
         </details>
       </div>
     </article>
-    <article class="event-card cat-arts---music" data-title="back cove books presents: “an evening with lois lowry &amp; rebecca traister”" data-venue="westbrook performing arts center" data-cat="cat-arts---music">
+    <article class="event-card cat-arts-music" data-title="back cove books presents: “an evening with lois lowry &amp; rebecca traister”" data-venue="westbrook performing arts center" data-cat="cat-arts-music">
       <div class="event-content">
         
         <div class="event-meta">Tue, Sep 29 • 6:30 PM • Westbrook Performing Arts Center</div>
@@ -110,7 +125,7 @@
         </details>
       </div>
     </article>
-    <article class="event-card cat-arts---music" data-title="bruce marshall" data-venue="lenny's pub" data-cat="cat-arts---music">
+    <article class="event-card cat-arts-music" data-title="bruce marshall" data-venue="lenny's pub" data-cat="cat-arts-music">
       <div class="event-content">
         
         <div class="event-meta">Wed, Sep 30 • 6:30 PM • Lenny's Pub</div>
@@ -129,7 +144,7 @@
         </details>
       </div>
     </article>
-    <article class="event-card cat-family---kids" data-title="bike festival at rock row" data-venue="quarryside at rock row" data-cat="cat-family---kids">
+    <article class="event-card cat-family-kids" data-title="bike festival at rock row" data-venue="quarryside at rock row" data-cat="cat-family-kids">
       <div class="event-content">
         
         <div class="event-meta">Sat, Oct 03 • 12:00 PM • Quarryside at Rock Row</div>
@@ -148,7 +163,7 @@
         </details>
       </div>
     </article>
-    <article class="event-card cat-community---civic" data-title="regular city council meeting" data-venue="westbrook, me" data-cat="cat-community---civic">
+    <article class="event-card cat-community-civic" data-title="regular city council meeting" data-venue="westbrook, me" data-cat="cat-community-civic">
       <div class="event-content">
         
         <div class="event-meta">Mon, Oct 05 • 7:00 PM • Westbrook, ME</div>
@@ -167,7 +182,7 @@
         </details>
       </div>
     </article>
-    <article class="event-card cat-family---kids" data-title="trick or treat at rock row" data-venue="quarryside at rock row" data-cat="cat-family---kids">
+    <article class="event-card cat-family-kids" data-title="trick or treat at rock row" data-venue="quarryside at rock row" data-cat="cat-family-kids">
       <div class="event-content">
         
         <div class="event-meta">Sat, Oct 24 • 11:30 AM • Quarryside at Rock Row</div>
@@ -186,7 +201,7 @@
         </details>
       </div>
     </article>
-    <article class="event-card cat-family---kids" data-title="santa claus is coming to rock row" data-venue="cowbell rock row" data-cat="cat-family---kids">
+    <article class="event-card cat-family-kids" data-title="santa claus is coming to rock row" data-venue="cowbell rock row" data-cat="cat-family-kids">
       <div class="event-content">
         
         <div class="event-meta">Tue, Dec 15 • 5:30 PM • Cowbell Rock Row</div>
@@ -206,7 +221,7 @@
       </div>
     </article></div>
   </div>
-  <footer>Updated Sep 25, 3:12 PM • Westbrook, Maine</footer>
+  <footer>Updated Sep 25, 3:16 PM • Westbrook, Maine</footer>
   <script>
     const search = document.getElementById('search'); const chips = document.querySelectorAll('.chip'); const cards = document.querySelectorAll('.event-card, .weekend-highlight');
     function runFilter() {
