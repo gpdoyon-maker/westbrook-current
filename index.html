@@ -3,49 +3,86 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-B6N445HL5H"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B6N445HL5H');</script>
   <style>
-    :root { --bg: #f8fafc; --card-bg: #fff; --text: #0f172a; --muted: #64748b; --border: #e2e8f0; --comm: #0284c7; --arts: #7c3aed; --class: #4f46e5; --fam: #db2777; --food: #ea580c; --health: #0d9488; --market: #b45309; --nature: #16a34a; --sport: #e11d48; --senior: #475569; --faith: #854d0e; --other: #64748b; }
-    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding-bottom: 50px; }
-    header { background: #fff; padding: 1rem; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; text-align: center; }
-    .container { max-width: 1000px; margin: 0 auto; padding: 1rem; }
-    h1 { margin: 0; font-size: 1.5rem; color: var(--comm); font-weight: 800; }
-    .search-box { width: 100%; padding: 0.8rem; border: 1px solid var(--border); border-radius: 12px; margin: 1rem 0; font-size: 1rem; outline: none; box-sizing: border-box; }
-    .filter-bar { display: flex; gap: 0.5rem; overflow-x: auto; padding-bottom: 0.8rem; scrollbar-width: none; margin-bottom: 1rem; }
-    .chip { padding: 0.4rem 0.9rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; border: 1px solid var(--border); background: #fff; cursor: pointer; white-space: nowrap; }
-    .chip.active { background: var(--comm); color: #fff; border-color: var(--comm); }
-    .chip.empty { opacity: 0.3; }
-    .events-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.25rem; }
-    .event-card, .weekend-highlight { background: #fff; border-radius: 12px; padding: 1.25rem; border: 1px solid var(--border); border-left: 5px solid var(--other); box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
-    .weekend-highlight { grid-column: 1 / -1; background: #fffbeb; border-left-color: #d97706; }
+    :root { 
+      --bg: #f1f5f9; --card-bg: #fff; --text: #002147; --muted: #475569; --border: #cbd5e1;
+      /* Primary Branding Colors from Logo */
+      --logo-dark: #002147; --logo-mid: #005696; --logo-light: #5091CD;
+      /* Category Color Mapping */
+      --comm: var(--logo-mid); --arts: #6d28d9; --class: #0369a1; --fam: #be185d; 
+      --food: #c2410c; --health: #0f766e; --market: #92400e; --nature: #15803d; 
+      --sport: #b91c1c; --senior: #334155; --faith: #713f12; --other: #64748b; 
+    }
+    body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding-bottom: 50px; }
     
-    /* Category Color Assignment Logic */
-    .cat-arts-music { border-left-color: var(--arts); } 
-    .cat-community-civic { border-left-color: var(--comm); } 
-    .cat-classes-learning { border-left-color: var(--class); } 
-    .cat-family-kids { border-left-color: var(--fam); } 
-    .cat-food-drink { border-left-color: var(--food); } 
-    .cat-health-wellness { border-left-color: var(--health); } 
-    .cat-markets-shopping { border-left-color: var(--market); } 
-    .cat-outdoors-nature { border-left-color: var(--nature); } 
-    .cat-sports-recreation { border-left-color: var(--sport); } 
-    .cat-seniors { border-left-color: var(--senior); } 
-    .cat-faith-spirituality { border-left-color: var(--faith); }
+    header { background: #fff; padding: 1.5rem 1rem; border-bottom: 3px solid var(--logo-mid); position: sticky; top: 0; z-index: 100; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+    .brand-container { max-width: 400px; margin: 0 auto; }
+    .site-logo { width: 100%; height: auto; display: block; margin: 0 auto; max-width: 320px; }
+    .header-text-fallback { display: none; } /* Hidden unless logo fails */
+    
+    /* If logo image isn't found, show text style as backup */
+    .site-logo:not([src]) + .header-text-fallback, .site-logo[src=""] + .header-text-fallback { display: block; }
+    h1 { margin: 0; font-size: 1.75rem; color: var(--logo-dark); font-weight: 800; letter-spacing: -0.02em; }
+    .tagline { font-size: 0.85rem; color: var(--logo-mid); font-weight: 600; margin-top: 0.25rem; }
 
-    .event-title { margin: 0.4rem 0; font-size: 1.15rem; font-weight: 700; }
-    .event-meta { font-size: 0.85rem; color: var(--muted); }
-    .tag { font-size: 0.7rem; font-weight: 700; background: #f1f5f9; padding: 0.2rem 0.5rem; border-radius: 4px; margin-right: 0.4rem; }
-    .date-section-divider { grid-column: 1 / -1; margin-top: 2rem; font-weight: 800; color: var(--muted); display: flex; align-items: center; font-size: 0.75rem; text-transform: uppercase; }
-    .date-section-divider::after { content: ""; flex: 1; height: 1px; background: var(--border); margin-left: 1rem; }
-    details summary { cursor: pointer; color: var(--comm); font-weight: 600; font-size: 0.85rem; margin-top: 0.8rem; list-style: none; }
-    details summary::after { content: " + More Info"; }
-    details[open] summary::after { content: " - Less Info"; }
-    .event-actions { display: flex; gap: 0.5rem; margin-top: 1rem; flex-wrap: wrap; }
-    .action-btn { flex: 1; min-width: 80px; text-align: center; padding: 0.6rem; background: #f8fafc; border: 1px solid var(--border); border-radius: 8px; font-size: 0.8rem; font-weight: 700; text-decoration: none; color: var(--text); cursor: pointer; }
-    footer { text-align: center; padding: 3rem; color: var(--muted); font-size: 0.8rem; }
+    .container { max-width: 1050px; margin: 0 auto; padding: 1rem; }
+    .search-box { width: 100%; padding: 1rem 1.25rem; border: 2px solid var(--border); border-radius: 14px; margin: 1rem 0; font-size: 1rem; outline: none; box-sizing: border-box; transition: border-color 0.2s; }
+    .search-box:focus { border-color: var(--logo-mid); box-shadow: 0 0 0 4px rgba(0,86,150,0.1); }
+    
+    .filter-bar { display: flex; gap: 0.5rem; overflow-x: auto; padding-bottom: 0.8rem; scrollbar-width: none; margin-bottom: 1.5rem; }
+    .chip { padding: 0.5rem 1.1rem; border-radius: 25px; font-size: 0.85rem; font-weight: 700; border: 1px solid var(--border); background: #fff; cursor: pointer; white-space: nowrap; transition: all 0.2s; color: var(--muted); }
+    .chip.active { background: var(--logo-mid); color: #fff; border-color: var(--logo-mid); box-shadow: 0 4px 6px rgba(0,86,150,0.2); }
+    .chip.empty { opacity: 0.35; grayscale: 1; }
+    
+    .events-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
+    .event-card, .weekend-highlight { background: #fff; border-radius: 16px; padding: 1.5rem; border: 1px solid var(--border); border-top: 6px solid var(--other); box-shadow: 0 4px 12px rgba(0,0,0,0.03); transition: transform 0.2s; position: relative; overflow: hidden; }
+    .weekend-highlight { grid-column: 1 / -1; background: #fffdf5; border-top-color: #d97706; }
+    .event-card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.06); }
+    
+    /* Category Accent Color Assignments */
+    .cat-arts-music { border-top-color: var(--arts); } 
+    .cat-community-civic { border-top-color: var(--comm); } 
+    .cat-classes-learning { border-top-color: var(--class); } 
+    .cat-family-kids { border-top-color: var(--fam); } 
+    .cat-food-drink { border-top-color: var(--food); } 
+    .cat-health-wellness { border-top-color: var(--health); } 
+    .cat-markets-shopping { border-top-color: var(--market); } 
+    .cat-outdoors-nature { border-top-color: var(--nature); } 
+    .cat-sports-recreation { border-top-color: var(--sport); } 
+    .cat-seniors { border-top-color: var(--senior); } 
+    .cat-faith-spirituality { border-top-color: var(--faith); }
+
+    .highlight-pill { display: inline-block; background: #fef3c7; color: #92400e; font-size: 0.7rem; font-weight: 800; padding: 0.25rem 0.6rem; border-radius: 6px; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .event-title { margin: 0.5rem 0; font-size: 1.25rem; font-weight: 800; line-height: 1.2; color: var(--logo-dark); }
+    .event-meta { font-size: 0.9rem; color: var(--muted); font-weight: 500; margin-bottom: 0.75rem; }
+    .tag { font-size: 0.75rem; font-weight: 700; background: #f1f5f9; padding: 0.3rem 0.6rem; border-radius: 6px; margin-right: 0.4rem; color: var(--logo-mid); }
+    
+    .date-section-divider { grid-column: 1 / -1; margin-top: 2.5rem; font-weight: 800; color: var(--logo-mid); display: flex; align-items: center; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; }
+    .date-section-divider::after { content: ""; flex: 1; height: 2px; background: var(--logo-light); opacity: 0.3; margin-left: 1rem; }
+    
+    details summary { cursor: pointer; color: var(--logo-mid); font-weight: 700; font-size: 0.9rem; margin-top: 1rem; list-style: none; display: inline-block; }
+    details summary::after { content: " ▾ Details"; }
+    details[open] summary::after { content: " ▴ Hide"; }
+    .details-body { font-size: 0.95rem; margin-top: 0.75rem; padding-top: 1rem; border-top: 1px dashed var(--border); line-height: 1.6; color: #334155; }
+    
+    .event-actions { display: flex; gap: 0.6rem; margin-top: 1.25rem; flex-wrap: wrap; }
+    .action-btn { flex: 1; min-width: 90px; text-align: center; padding: 0.7rem; background: #f8fafc; border: 1px solid var(--border); border-radius: 10px; font-size: 0.8rem; font-weight: 700; text-decoration: none; color: var(--logo-dark); cursor: pointer; transition: all 0.2s; }
+    .action-btn:hover { background: var(--logo-mid); color: #fff; border-color: var(--logo-mid); }
+    .cal-btn { border-color: var(--logo-light); color: var(--logo-mid); }
+    
+    footer { text-align: center; padding: 4rem 1rem; color: var(--muted); font-size: 0.8rem; font-weight: 500; border-top: 1px solid var(--border); background: #fff; margin-top: 4rem; }
   </style></head><body>
-  <header><h1>Westbrook Currents</h1><div style="font-size:0.75rem; color:var(--muted)">Local events. All in one place.</div></header>
+  <header>
+    <div class="brand-container">
+      <img src="https://gpdoyon-maker.github.io/westbrook-current/logo.png" alt="Westbrook Currents" class="site-logo">
+      <div class="header-text-fallback">
+        <h1>Westbrook Currents</h1>
+        <div class="tagline">Local events. Community connections.</div>
+      </div>
+    </div>
+  </header>
   <div class="container">
-    <input type="text" id="search" class="search-box" placeholder="Search events...">
-    <div class="filter-bar"><div class="chip active" data-filter="all">All</div>
+    <input type="text" id="search" class="search-box" placeholder="Find events, venues, or keywords...">
+    <div class="filter-bar"><div class="chip active" data-filter="all">All Events</div>
     <div class="chip " data-filter="cat-arts-music">Arts & music</div><div class="chip " data-filter="cat-community-civic">Community & civic</div><div class="chip empty" data-filter="cat-classes-learning">Classes & learning</div><div class="chip " data-filter="cat-family-kids">Family & kids</div><div class="chip empty" data-filter="cat-food-drink">Food & drink</div><div class="chip empty" data-filter="cat-health-wellness">Health & wellness</div><div class="chip empty" data-filter="cat-markets-shopping">Markets & shopping</div><div class="chip empty" data-filter="cat-outdoors-nature">Outdoors & nature</div><div class="chip empty" data-filter="cat-sports-recreation">Sports & recreation</div><div class="chip empty" data-filter="cat-seniors">Seniors</div><div class="chip empty" data-filter="cat-faith-spirituality">Faith & spirituality</div><div class="chip empty" data-filter="cat-other">Other</div>
     </div>
     <div class="events-grid" id="grid"><div class="date-section-divider"><span>📍 Today (Friday, Sep 25)</span></div>
@@ -221,12 +258,20 @@
       </div>
     </article></div>
   </div>
-  <footer>Updated Sep 25, 3:16 PM • Westbrook, Maine</footer>
+  <footer>
+    &copy; 2026 Westbrook Currents • Local events. Community connections.<br>
+    <span style="opacity: 0.7; font-size: 0.7rem;">Updated Sep 25, 4:50 PM</span>
+  </footer>
   <script>
     const search = document.getElementById('search'); const chips = document.querySelectorAll('.chip'); const cards = document.querySelectorAll('.event-card, .weekend-highlight');
     function runFilter() {
       const q = search.value.toLowerCase(), f = document.querySelector('.chip.active').dataset.filter;
       cards.forEach(c => { c.style.display = ((c.dataset.title.includes(q) || c.dataset.venue.includes(q)) && (f === 'all' || c.dataset.cat === f)) ? '' : 'none'; });
+      document.querySelectorAll('.date-section-divider').forEach(div => {
+        let n = div.nextElementSibling, v = false;
+        while(n && !n.classList.contains('date-section-divider')) { if(n.style.display !== 'none') { v = true; break; } n = n.nextElementSibling; }
+        div.style.display = v ? '' : 'none';
+      });
     }
     search.addEventListener('input', runFilter); chips.forEach(c => c.addEventListener('click', () => { if(c.classList.contains('empty')) return; chips.forEach(x => x.classList.remove('active')); c.classList.add('active'); runFilter(); }));
 
