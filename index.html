@@ -1,0 +1,127 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Westbrook Currents</title>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B6N445HL5H"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B6N445HL5H');</script>
+  <style>
+    :root { --bg: #f8fafc; --card-bg: #fff; --text: #0f172a; --muted: #64748b; --border: #e2e8f0; --comm: #0284c7; --arts: #7c3aed; --class: #4f46e5; --fam: #db2777; --food: #ea580c; --health: #0d9488; --market: #b45309; --nature: #16a34a; --sport: #e11d48; --senior: #475569; --faith: #854d0e; --other: #64748b; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding-bottom: 50px; }
+    header { background: #fff; padding: 1rem; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; text-align: center; }
+    .container { max-width: 1000px; margin: 0 auto; padding: 1rem; }
+    h1 { margin: 0; font-size: 1.5rem; color: var(--comm); font-weight: 800; }
+    .search-box { width: 100%; padding: 0.8rem; border: 1px solid var(--border); border-radius: 12px; margin: 1rem 0; font-size: 1rem; outline: none; box-sizing: border-box; }
+    .filter-bar { display: flex; gap: 0.5rem; overflow-x: auto; padding-bottom: 0.8rem; scrollbar-width: none; margin-bottom: 1rem; }
+    .chip { padding: 0.4rem 0.9rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; border: 1px solid var(--border); background: #fff; cursor: pointer; white-space: nowrap; }
+    .chip.active { background: var(--comm); color: #fff; border-color: var(--comm); }
+    .chip.empty { opacity: 0.3; }
+    .events-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.25rem; }
+    .event-card, .weekend-highlight { background: #fff; border-radius: 12px; padding: 1.25rem; border: 1px solid var(--border); border-left: 5px solid var(--other); box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
+    .weekend-highlight { grid-column: 1 / -1; background: #fffbeb; border-left-color: #d97706; }
+    .cat-arts-music { border-left-color: var(--arts); } .cat-community-civic { border-left-color: var(--comm); } .cat-classes-learning { border-left-color: var(--class); } .cat-family-kids { border-left-color: var(--fam); } .cat-food-drink { border-left-color: var(--food); } .cat-health-wellness { border-left-color: var(--health); } .cat-markets-shopping { border-left-color: var(--market); } .cat-outdoors-nature { border-left-color: var(--nature); } .cat-sports-recreation { border-left-color: var(--sport); } .cat-seniors { border-left-color: var(--senior); } .cat-faith-spirituality { border-left-color: var(--faith); }
+    .event-title { margin: 0.4rem 0; font-size: 1.15rem; font-weight: 700; }
+    .event-meta { font-size: 0.85rem; color: var(--muted); }
+    .tag { font-size: 0.7rem; font-weight: 700; background: #f1f5f9; padding: 0.2rem 0.5rem; border-radius: 4px; margin-right: 0.4rem; }
+    .date-section-divider { grid-column: 1 / -1; margin-top: 2rem; font-weight: 800; color: var(--muted); display: flex; align-items: center; font-size: 0.75rem; text-transform: uppercase; }
+    .date-section-divider::after { content: ""; flex: 1; height: 1px; background: var(--border); margin-left: 1rem; }
+    details summary { cursor: pointer; color: var(--comm); font-weight: 600; font-size: 0.85rem; margin-top: 0.8rem; list-style: none; }
+    details summary::after { content: " + More Info"; }
+    details[open] summary::after { content: " - Less Info"; }
+    .event-actions { display: flex; gap: 0.5rem; margin-top: 1rem; }
+    .action-btn { flex: 1; text-align: center; padding: 0.6rem; background: #f8fafc; border: 1px solid var(--border); border-radius: 8px; font-size: 0.8rem; font-weight: 700; text-decoration: none; color: var(--text); }
+    footer { text-align: center; padding: 3rem; color: var(--muted); font-size: 0.8rem; }
+  </style></head><body>
+  <header><h1>Westbrook Currents</h1><div style="font-size:0.75rem; color:var(--muted)">Local events. All in one place.</div></header>
+  <div class="container">
+    <input type="text" id="search" class="search-box" placeholder="Search events...">
+    <div class="filter-bar"><div class="chip active" data-filter="all">All</div><div class="chip empty" data-filter="cat-arts---music">Arts & music</div><div class="chip empty" data-filter="cat-community---civic">Community & civic</div><div class="chip empty" data-filter="cat-classes---learning">Classes & learning</div><div class="chip empty" data-filter="cat-family---kids">Family & kids</div><div class="chip empty" data-filter="cat-food---drink">Food & drink</div><div class="chip empty" data-filter="cat-health---wellness">Health & wellness</div><div class="chip empty" data-filter="cat-markets---shopping">Markets & shopping</div><div class="chip empty" data-filter="cat-outdoors---nature">Outdoors & nature</div><div class="chip empty" data-filter="cat-sports---recreation">Sports & recreation</div><div class="chip empty" data-filter="cat-seniors">Seniors</div><div class="chip empty" data-filter="cat-faith---spirituality">Faith & spirituality</div><div class="chip empty" data-filter="cat-other">Other</div></div>
+    <div class="events-grid" id="grid"><div class="date-section-divider"><span>📍 Today (Friday, Sep 25)</span></div>
+    <article class="event-card cat-arts" data-title="dear passenger cd release pre order party" data-venue="lenny's pub" data-cat="cat-arts">
+      <div class="event-content">
+        
+        <div class="event-meta">Fri, Sep 25 • 7:00 PM • Lenny's Pub</div>
+        <h3 class="event-title">Dear Passenger CD Release Pre Order Party</h3>
+        <div class="tags"><span class="tag">#Arts</span></div>
+        <details><summary></summary><div class="details-body">Album release pre-order celebration with Dear Passenger performing live at Lenny's Pub.<div class="event-actions"><a href="https://www.lennyspub.com/calendar" target="_blank" class="action-btn">Link</a><a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Dear%20Passenger%20CD%20Release%20Pre%20Order%20Party&dates=20260925T230000Z/20260926T000000Z&details=Album%20release%20pre-order%20celebration%20with%20Dear%20Passenger%20performing%20live%20at%20Lenny's%20Pub.%5Cn%5Cnhttps%3A%2F%2Fwww.lennyspub.com%2Fcalendar&location=Lenny's%20Pub&ctz=America/New_York" target="_blank" class="action-btn cal-btn">+ Google</a></div></div></details>
+      </div>
+    </article><div class="date-section-divider"><span>Upcoming Events</span></div>
+    <article class="event-card cat-arts" data-title="travis james humphrey" data-venue="lenny's pub" data-cat="cat-arts">
+      <div class="event-content">
+        
+        <div class="event-meta">Sat, Sep 26 • 7:00 PM • Lenny's Pub</div>
+        <h3 class="event-title">Travis James Humphrey</h3>
+        <div class="tags"><span class="tag">#Arts</span></div>
+        <details><summary></summary><div class="details-body">Live musical performance by Travis James Humphrey at Lenny's Pub.<div class="event-actions"><a href="https://www.lennyspub.com/calendar" target="_blank" class="action-btn">Link</a><a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Travis%20James%20Humphrey&dates=20260926T230000Z/20260927T000000Z&details=Live%20musical%20performance%20by%20Travis%20James%20Humphrey%20at%20Lenny's%20Pub.%5Cn%5Cnhttps%3A%2F%2Fwww.lennyspub.com%2Fcalendar&location=Lenny's%20Pub&ctz=America/New_York" target="_blank" class="action-btn cal-btn">+ Google</a></div></div></details>
+      </div>
+    </article>
+    <article class="event-card cat-family" data-title="kids fun festival at rock row" data-venue="quarryside at rock row" data-cat="cat-family">
+      <div class="event-content">
+        
+        <div class="event-meta">Sat, Sep 26 • 12:00 PM • Quarryside at Rock Row</div>
+        <h3 class="event-title">Kids Fun Festival at Rock Row</h3>
+        <div class="tags"><span class="tag">#Family</span><span class="tag">#Free</span></div>
+        <details><summary></summary><div class="details-body">Looking for something to do with the whole family? Look no further, the Rock Row Kids Fun Festival is just the place for you on September 26th.<div class="event-actions"><a href="https://rockrow.com/event/kids-fun/" target="_blank" class="action-btn">Link</a><a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Kids%20Fun%20Festival%20at%20Rock%20Row&dates=20260926T160000Z/20260926T200000Z&details=Looking%20for%20something%20to%20do%20with%20the%20whole%20family%3F%20Look%20no%20further%2C%20the%20Rock%20Row%20Kids%20Fun%20Festival%20is%20just%20the%20place%20for%20you%20on%20September%2026th.%5Cn%5Cnhttps%3A%2F%2Frockrow.com%2Fevent%2Fkids-fun%2F&location=Quarryside%20at%20Rock%20Row&ctz=America/New_York" target="_blank" class="action-btn cal-btn">+ Google</a></div></div></details>
+      </div>
+    </article>
+    <article class="event-card cat-arts" data-title="back cove books presents: “an evening with lois lowry &amp; rebecca traister”" data-venue="westbrook performing arts center" data-cat="cat-arts">
+      <div class="event-content">
+        
+        <div class="event-meta">Tue, Sep 29 • 6:30 PM • Westbrook Performing Arts Center</div>
+        <h3 class="event-title">Back Cove Books presents: “An Evening with Lois Lowry &amp; Rebecca Traister”</h3>
+        <div class="tags"><span class="tag">#Arts</span></div>
+        <details><summary></summary><div class="details-body">Join Newbery Medal recipient Lois Lowry and author Rebecca Traister for an evening of discussion, interaction, and empowerment celebrating Lowry's new novel, Building 903.<div class="event-actions"><a href="https://www.westbrookpac.org/event/back-cove-books-presents-an-evening-with-lois-lowry-rebecca-traister/" target="_blank" class="action-btn">Link</a><a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Back%20Cove%20Books%20presents%3A%20%E2%80%9CAn%20Evening%20with%20Lois%20Lowry%20%26%20Rebecca%20Traister%E2%80%9D&dates=20260929T223000Z/20260930T003000Z&details=Join%20Newbery%20Medal%20recipient%20Lois%20Lowry%20and%20author%20Rebecca%20Traister%20for%20an%20evening%20of%20discussion%2C%20interaction%2C%20and%20empowerment%20celebrating%20Lowry's%20new%20novel%2C%20Building%20903.%5Cn%5Cnhttps%3A%2F%2Fwww.westbrookpac.org%2Fevent%2Fback-cove-books-presents-an-evening-with-lois-lowry-rebecca-traister%2F&location=Westbrook%20Performing%20Arts%20Center&ctz=America/New_York" target="_blank" class="action-btn cal-btn">+ Google</a></div></div></details>
+      </div>
+    </article>
+    <article class="event-card cat-arts" data-title="bruce marshall" data-venue="lenny's pub" data-cat="cat-arts">
+      <div class="event-content">
+        
+        <div class="event-meta">Wed, Sep 30 • 6:30 PM • Lenny's Pub</div>
+        <h3 class="event-title">Bruce Marshall</h3>
+        <div class="tags"><span class="tag">#Arts</span></div>
+        <details><summary></summary><div class="details-body">Live performance by Bruce Marshall at Lenny's Pub.<div class="event-actions"><a href="https://www.lennyspub.com/calendar" target="_blank" class="action-btn">Link</a><a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bruce%20Marshall&dates=20260930T223000Z/20260930T233000Z&details=Live%20performance%20by%20Bruce%20Marshall%20at%20Lenny's%20Pub.%5Cn%5Cnhttps%3A%2F%2Fwww.lennyspub.com%2Fcalendar&location=Lenny's%20Pub&ctz=America/New_York" target="_blank" class="action-btn cal-btn">+ Google</a></div></div></details>
+      </div>
+    </article>
+    <article class="event-card cat-family" data-title="bike festival at rock row" data-venue="quarryside at rock row" data-cat="cat-family">
+      <div class="event-content">
+        
+        <div class="event-meta">Sat, Oct 03 • 12:00 PM • Quarryside at Rock Row</div>
+        <h3 class="event-title">Bike Festival at Rock Row</h3>
+        <div class="tags"><span class="tag">#Family</span><span class="tag">#Free</span></div>
+        <details><summary></summary><div class="details-body">Looking for something to do with the whole family? Look no further, the Bike Festival is just the place for you on Sat, October 3 from 12pm - 6pm for all things Bike related!<div class="event-actions"><a href="https://rockrow.com/event/bike-festival-at-rock-row/" target="_blank" class="action-btn">Link</a><a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bike%20Festival%20at%20Rock%20Row&dates=20261003T160000Z/20261003T220000Z&details=Looking%20for%20something%20to%20do%20with%20the%20whole%20family%3F%20Look%20no%20further%2C%20the%20Bike%20Festival%20is%20just%20the%20place%20for%20you%20on%20Sat%2C%20October%203%20from%2012pm%20-%206pm%20for%20all%20things%20Bike%20related!%5Cn%5Cnhttps%3A%2F%2Frockrow.com%2Fevent%2Fbike-festival-at-rock-row%2F&location=Quarryside%20at%20Rock%20Row&ctz=America/New_York" target="_blank" class="action-btn cal-btn">+ Google</a></div></div></details>
+      </div>
+    </article>
+    <article class="event-card cat-civic" data-title="regular city council meeting" data-venue="westbrook, me" data-cat="cat-civic">
+      <div class="event-content">
+        
+        <div class="event-meta">Mon, Oct 05 • 7:00 PM • Westbrook, ME</div>
+        <h3 class="event-title">Regular City Council Meeting</h3>
+        <div class="tags"><span class="tag">#Civic</span><span class="tag">#Free</span></div>
+        <details><summary></summary><div class="details-body">Regular City Council Meeting held by the City of Westbrook at 125 Stroudwater Street.<div class="event-actions"><a href="https://www.westbrookmaine.gov/Calendar.aspx?EID=3252" target="_blank" class="action-btn">Link</a><a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Regular%20City%20Council%20Meeting&dates=20261005T230000Z/20261006T000000Z&details=Regular%20City%20Council%20Meeting%20held%20by%20the%20City%20of%20Westbrook%20at%20125%20Stroudwater%20Street.%5Cn%5Cnhttps%3A%2F%2Fwww.westbrookmaine.gov%2FCalendar.aspx%3FEID%3D3252&location=Westbrook%2C%20ME&ctz=America/New_York" target="_blank" class="action-btn cal-btn">+ Google</a></div></div></details>
+      </div>
+    </article>
+    <article class="event-card cat-family" data-title="trick or treat at rock row" data-venue="quarryside at rock row" data-cat="cat-family">
+      <div class="event-content">
+        
+        <div class="event-meta">Sat, Oct 24 • 11:30 AM • Quarryside at Rock Row</div>
+        <h3 class="event-title">Trick or Treat at Rock Row</h3>
+        <div class="tags"><span class="tag">#Family</span><span class="tag">#Free</span></div>
+        <details><summary></summary><div class="details-body">Join us right here at Rock Row from 11:30am-2:30pm on October 24 and enjoy treats and festive fun for a “Hauntingly” good time!<div class="event-actions"><a href="https://rockrow.com/event/trick-or-treat-at-rock-row/" target="_blank" class="action-btn">Link</a><a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Trick%20or%20Treat%20at%20Rock%20Row&dates=20261024T153000Z/20261024T183000Z&details=Join%20us%20right%20here%20at%20Rock%20Row%20from%2011%3A30am-2%3A30pm%20on%20October%2024%20and%20enjoy%20treats%20and%20festive%20fun%20for%20a%20%E2%80%9CHauntingly%E2%80%9D%20good%20time!%5Cn%5Cnhttps%3A%2F%2Frockrow.com%2Fevent%2Ftrick-or-treat-at-rock-row%2F&location=Quarryside%20at%20Rock%20Row&ctz=America/New_York" target="_blank" class="action-btn cal-btn">+ Google</a></div></div></details>
+      </div>
+    </article>
+    <article class="event-card cat-family" data-title="santa claus is coming to rock row" data-venue="cowbell rock row" data-cat="cat-family">
+      <div class="event-content">
+        
+        <div class="event-meta">Tue, Dec 15 • 5:30 PM • Cowbell Rock Row</div>
+        <h3 class="event-title">Santa Claus is Coming To Rock Row</h3>
+        <div class="tags"><span class="tag">#Family</span><span class="tag">#Free</span></div>
+        <details><summary></summary><div class="details-body">Join us right here at Cowbell Rock Row on December 15 for this special meet &amp; greet, photo opportunity with Santa!<div class="event-actions"><a href="https://rockrow.com/event/santa2026/" target="_blank" class="action-btn">Link</a><a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Santa%20Claus%20is%20Coming%20To%20Rock%20Row&dates=20261215T223000Z/20261216T003000Z&details=Join%20us%20right%20here%20at%20Cowbell%20Rock%20Row%20on%20December%2015%20for%20this%20special%20meet%20%26%20greet%2C%20photo%20opportunity%20with%20Santa!%5Cn%5Cnhttps%3A%2F%2Frockrow.com%2Fevent%2Fsanta2026%2F&location=Cowbell%20Rock%20Row&ctz=America/New_York" target="_blank" class="action-btn cal-btn">+ Google</a></div></div></details>
+      </div>
+    </article></div>
+  </div>
+  <footer>Updated Sep 25, 12:57 PM • Westbrook, Maine</footer>
+  <script>
+    const search = document.getElementById('search'); const chips = document.querySelectorAll('.chip'); const cards = document.querySelectorAll('.event-card, .weekend-highlight');
+    function runFilter() {
+      const q = search.value.toLowerCase(), f = document.querySelector('.chip.active').dataset.filter;
+      cards.forEach(c => { c.style.display = ((c.dataset.title.includes(q) || c.dataset.venue.includes(q)) && (f === 'all' || c.dataset.cat === f)) ? '' : 'none'; });
+    }
+    search.addEventListener('input', runFilter); chips.forEach(c => c.addEventListener('click', () => { if(c.classList.contains('empty')) return; chips.forEach(x => x.classList.remove('active')); c.classList.add('active'); runFilter(); }));
+  </script></body></html>
