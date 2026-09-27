@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Westbrook Currents</title>
-  <link rel="icon" type="image/png" href="https://gpdoyon-maker.github.io/westbrook-current/favicon.png?v=1790527014889">
+  <link rel="icon" type="image/png" href="https://gpdoyon-maker.github.io/westbrook-current/favicon.png?v=1790529066665">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-B6N445HL5H"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B6N445HL5H');</script>
   <style>
@@ -14,38 +14,34 @@
     }
     body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text-navy); margin: 0; min-height: 100vh; overflow-x: hidden; }
     
-    /* Header Styles - Navy Background to match logo */
-    header { background: var(--logo-dark); padding: 1.25rem 1rem; border-bottom: 2px solid var(--logo-mid); position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-    .brand-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+    header { background: var(--logo-dark); padding: 1.25rem 1rem; border-bottom: 2px solid var(--logo-mid); position: sticky; top: 0; z-index: 1000; display: flex; justify-content: center; }
+    .brand-container { max-width: 1200px; width: 100%; display: flex; justify-content: space-between; align-items: center; }
     .logo-desktop { height: 60px; width: auto; } .logo-mobile { height: 45px; width: auto; display: none; }
     .menu-icon { font-size: 1.4rem; cursor: pointer; color: #fff; }
 
     .controls-wrapper { background: #fff; border-bottom: 1px solid var(--border); padding: 0.8rem 1rem; position: sticky; top: 93px; z-index: 900; }
-    .controls-container { max-width: 1200px; margin: 0 auto; display: flex; gap: 1rem; }
-    .search-input { flex: 2; padding: 0.65rem 1rem; border-radius: 8px; border: 1px solid var(--border); font-size: 1rem; outline: none; transition: border-color 0.2s; }
-    .search-input:focus { border-color: var(--logo-mid); }
-    .select-input { flex: 1; padding: 0.65rem; border-radius: 8px; border: 1px solid var(--border); background: #fff; cursor: pointer; font-size: 0.9rem; font-weight: 600; color: var(--text-navy); }
+    .controls-container { max-width: 1200px; margin: 0 auto; display: flex; gap: 0.75rem; align-items: center; }
+    .search-input { flex: 2; padding: 0.65rem 1rem; border-radius: 8px; border: 1px solid var(--border); font-size: 1rem; outline: none; }
+    .select-input { flex: 1; padding: 0.65rem; border-radius: 8px; border: 1px solid var(--border); background: #fff; cursor: pointer; font-size: 0.85rem; font-weight: 600; color: var(--text-navy); }
 
     .main-layout { display: flex; max-width: 1200px; margin: 0 auto; width: 100%; flex: 1; }
     .list-pane { flex: 1; border-right: 1px solid var(--border); min-height: calc(100vh - 170px); }
     .detail-pane { width: 480px; position: sticky; top: 165px; height: calc(100vh - 165px); padding: 2.5rem; overflow-y: auto; background: #fff; }
     
-    .date-header { padding: 2rem 1.5rem 0.75rem; font-weight: 800; font-size: 0.8rem; color: var(--logo-mid); letter-spacing: 0.08em; }
+    .month-header { background: #f1f5f9; padding: 0.75rem 1.5rem; font-weight: 900; font-size: 0.9rem; color: var(--logo-dark); letter-spacing: 0.1em; border-bottom: 1px solid var(--border); }
+    .date-header { padding: 1.5rem 1.5rem 0.5rem; font-weight: 800; font-size: 0.75rem; color: var(--logo-mid); letter-spacing: 0.05em; }
     .event-row { display: flex; padding: 1.5rem; border-bottom: 1px solid #f1f5f9; cursor: pointer; transition: all 0.2s; }
     .event-row:hover { background: #f8fafc; }
     .event-row.active { background: #f0f7ff; box-shadow: inset 4px 0 0 var(--logo-mid); }
     
-    .row-time { width: 95px; font-weight: 700; font-size: 0.95rem; color: var(--text-navy); }
+    .row-time { width: 95px; font-weight: 700; font-size: 0.9rem; }
     .row-content { flex: 1; display: flex; flex-direction: column; gap: 0.3rem; }
-    .row-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; }
-    .row-title { font-weight: 800; font-size: 1.15rem; line-height: 1.2; }
-    .row-price { font-size: 0.9rem; font-weight: 600; color: var(--text-muted); }
-    .row-meta { font-size: 0.95rem; color: var(--text-muted); }
-    .row-category { font-size: 0.8rem; font-weight: 700; display: flex; align-items: center; gap: 0.6rem; color: var(--text-muted); }
+    .row-title { font-weight: 800; font-size: 1.1rem; line-height: 1.2; }
+    .row-meta { font-size: 0.9rem; color: var(--text-muted); }
+    .row-category { font-size: 0.75rem; font-weight: 700; display: flex; align-items: center; gap: 0.5rem; color: var(--text-muted); }
     .cat-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
-    .row-arrow { color: #cbd5e1; font-size: 1.5rem; padding-left: 1rem; }
+    .row-arrow { color: #cbd5e1; font-size: 1.5rem; }
 
-    /* Category Specific Color Mapping */
     .cat-arts-music .cat-dot { background: var(--arts); } .cat-community-civic .cat-dot { background: var(--comm); }
     .cat-classes-learning .cat-dot { background: var(--learning); } .cat-family-kids .cat-dot { background: var(--family); }
     .cat-food-drink .cat-dot { background: var(--food); } .cat-health-wellness .cat-dot { background: var(--health); }
@@ -54,39 +50,35 @@
     .cat-faith-spirituality .cat-dot { background: var(--faith); } .cat-other .cat-dot { background: var(--other); }
 
     .detail-card { animation: fadeIn 0.3s ease-out; }
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-    .detail-img { width: 100%; height: 260px; object-fit: cover; border-radius: 12px; margin-bottom: 2rem; display: none; }
-    .detail-img.visible { display: block; }
-    .detail-title { font-size: 2.25rem; font-weight: 900; line-height: 1.1; margin: 0 0 1.5rem; color: var(--text-navy); }
-    .detail-info { display: flex; gap: 1rem; margin-bottom: 1.25rem; font-size: 1.05rem; align-items: flex-start; }
-    .detail-summary { margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border); line-height: 1.7; font-size: 1.1rem; color: #334155; }
-    .detail-actions { margin-top: 2.5rem; display: flex; flex-direction: column; gap: 0.8rem; }
-    .btn { padding: 1.1rem; border-radius: 12px; text-align: center; font-weight: 800; text-decoration: none; border: none; cursor: pointer; font-size: 1rem; transition: all 0.2s; }
+    .detail-title { font-size: 2.15rem; font-weight: 900; line-height: 1.1; margin-bottom: 1.5rem; color: var(--text-navy); }
+    .detail-info { display: flex; gap: 1rem; margin-bottom: 1.25rem; font-size: 1.05rem; }
+    .detail-summary { margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border); line-height: 1.7; font-size: 1.1rem; }
+    .btn { padding: 1rem; border-radius: 12px; text-align: center; font-weight: 800; text-decoration: none; border: none; cursor: pointer; display: block; width: 100%; margin-bottom: 0.75rem; }
     .btn-blue { background: var(--logo-mid); color: #fff; }
-    .btn-blue:hover { background: var(--logo-dark); }
     .btn-white { border: 2px solid var(--border); color: var(--text-navy); background: #fff; }
-    .btn-white:hover { border-color: var(--logo-mid); color: var(--logo-mid); }
 
     @media (max-width: 768px) {
       header { position: relative; padding: 1rem; } .logo-desktop { display: none; } .logo-mobile { display: block; }
-      .controls-wrapper { top: 0; padding: 0.5rem 1rem; } .controls-container { flex-direction: column; gap: 0.5rem; }
+      .controls-wrapper { top: 0; } .controls-container { flex-direction: column; }
       .detail-pane { display: none; } .list-pane { border-right: none; }
       .mobile-details { display: none; width: 100%; padding: 1.5rem 0; border-top: 1px dashed var(--border); margin-top: 1rem; }
-      .event-row.expanded { flex-direction: column; background: #fff !important; cursor: default; }
+      .event-row.expanded { flex-direction: column; background: #fff !important; }
       .event-row.expanded .mobile-details { display: block; }
-      .event-row.expanded .row-arrow { transform: rotate(90deg); }
-      .row-time { width: 75px; font-size: 0.85rem; }
-      .row-title { font-size: 1.05rem; }
+      .row-time { width: 75px; }
     }
   </style></head><body>
 
   <header><div class="brand-container">
-    <img src="https://gpdoyon-maker.github.io/westbrook-current/logo-desktop.png?v=1790527014889" class="logo-desktop" alt="Westbrook Currents">
-    <img src="https://gpdoyon-maker.github.io/westbrook-current/logo-mobile.png?v=1790527014889" class="logo-mobile" alt="Westbrook Currents">
+    <img src="https://gpdoyon-maker.github.io/westbrook-current/logo-desktop.png?v=1790529066665" class="logo-desktop" alt="Westbrook Currents">
+    <img src="https://gpdoyon-maker.github.io/westbrook-current/logo-mobile.png?v=1790529066665" class="logo-mobile" alt="Westbrook Currents">
     <div class="menu-icon">≡</div>
   </div></header>
 
   <div class="controls-wrapper"><div class="controls-container">
+    <select id="monthJump" class="select-input" onchange="jumpToMonth()">
+      <option value="">Jump to Month...</option>
+      <option value="month-September-2026">September 2026</option><option value="month-October-2026">October 2026</option><option value="month-December-2026">December 2026</option>
+    </select>
     <select id="catFilter" class="select-input" onchange="runFilters()">
       <option value="all">All Categories</option>
       <option value="cat-arts-music">Arts & music</option><option value="cat-community-civic">Community & civic</option><option value="cat-classes-learning">Classes & learning</option><option value="cat-family-kids">Family & kids</option><option value="cat-food-drink">Food & drink</option><option value="cat-health-wellness">Health & wellness</option><option value="cat-markets-shopping">Markets & shopping</option><option value="cat-outdoors-nature">Outdoors & nature</option><option value="cat-sports-recreation">Sports & recreation</option><option value="cat-seniors">Seniors</option><option value="cat-faith-spirituality">Faith & spirituality</option><option value="cat-other">Other</option>
@@ -95,7 +87,7 @@
   </div></div>
 
   <div class="main-layout">
-    <div class="list-pane" id="eventList"><div class="date-header">TUESDAY, SEPTEMBER 29</div>
+    <div class="list-pane" id="eventList"><div class="month-header" id="month-September-2026">SEPTEMBER 2026</div><div class="date-header">TUESDAY, SEPTEMBER 29</div>
     <div class="event-row cat-arts-music" 
          id="ev-0"
          data-title="Back Cove Books presents: “An Evening with Lois Lowry &amp; Rebecca Traister”"
@@ -149,7 +141,7 @@
       </div>
       <div class="row-arrow">›</div>
       <div class="mobile-details" id="details-mobile-1"></div>
-    </div><div class="date-header">SATURDAY, OCTOBER 3</div>
+    </div><div class="month-header" id="month-October-2026">OCTOBER 2026</div><div class="date-header">SATURDAY, OCTOBER 3</div>
     <div class="event-row cat-family-kids" 
          id="ev-2"
          data-title="Bike Festival at Rock Row"
@@ -230,7 +222,7 @@
       </div>
       <div class="row-arrow">›</div>
       <div class="mobile-details" id="details-mobile-4"></div>
-    </div><div class="date-header">TUESDAY, DECEMBER 15</div>
+    </div><div class="month-header" id="month-December-2026">DECEMBER 2026</div><div class="date-header">TUESDAY, DECEMBER 15</div>
     <div class="event-row cat-family-kids" 
          id="ev-5"
          data-title="Santa Claus is Coming To Rock Row"
@@ -260,30 +252,38 @@
     </div></div>
     <div class="detail-pane" id="detailPane">
       <div style="text-align:center; padding-top:6rem; color:var(--text-muted); font-weight:500;">
-        <div style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.2;">📍</div>
+        <div style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.2;">📅</div>
         Select an event to view details.
       </div>
     </div>
   </div>
 
   <script>
+    function jumpToMonth() {
+      const val = document.getElementById('monthJump').value;
+      if (val) {
+        const el = document.getElementById(val);
+        const yOffset = -145; // Accounts for sticky header/controls
+        const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({top: y, behavior: 'smooth'});
+      }
+    }
+
     function selectEvent(id) {
       const row = document.getElementById('ev-' + id);
       const data = row.dataset;
       const html = `
         <div class="detail-card">
-          ${data.img ? '<img src="'+data.img+'" class="detail-img visible">' : ''}
-          <div style="font-size:0.8rem; font-weight:800; text-transform:uppercase; color:var(--logo-mid); margin-bottom:0.75rem; display:flex; align-items:center; gap:0.5rem;">
-            <span class="cat-dot" style="background:var(--logo-mid)"></span> ${data.category}
-          </div>
+          ${data.img ? '<img src="'+data.img+'" style="width:100%; border-radius:12px; margin-bottom:1.5rem;">' : ''}
+          <div style="font-size:0.8rem; font-weight:800; text-transform:uppercase; color:var(--logo-mid); margin-bottom:0.75rem;">${data.category}</div>
           <h2 class="detail-title">${data.title}</h2>
           <div class="detail-info">📅 <strong>${data.date}</strong></div>
           <div class="detail-info">⏰ <strong>${data.time}</strong></div>
-          <div class="detail-info">📍 <div><strong>${data.venue}</strong><br><span style="font-size:0.9rem; color:var(--text-muted)">${data.address}</span></div></div>
+          <div class="detail-info">📍 <div><strong>${data.venue}</strong><br>${data.address}</div></div>
           <div class="detail-info">🏷️ ${data.free}</div>
           ${data.accessibility === 'true' ? '<div class="detail-info" style="color:#15803d; font-weight:700;">♿ Handicap Accessible</div>' : ''}
           <div class="detail-summary">${data.summary}</div>
-          <div class="detail-actions">
+          <div style="margin-top:2rem;">
             ${data.link ? '<a href="'+data.link+'" target="_blank" class="btn btn-blue">Visit Event Website ↗</a>' : ''}
             <a href="${data.gcal}" target="_blank" class="btn btn-white">Add to Google Calendar</a>
             <button onclick="downloadIcs('${data.title}','${data.date}','${data.time}','','${data.venue}','${data.summary}')" class="btn btn-white">Add to iCal / Outlook</button>
@@ -311,9 +311,12 @@
         const match = (r.dataset.title.toLowerCase().includes(q) || r.dataset.venue.toLowerCase().includes(q)) && (cat === 'all' || r.classList.contains(cat));
         r.style.display = match ? 'flex' : 'none';
       });
-      document.querySelectorAll('.date-header').forEach(h => {
+      document.querySelectorAll('.date-header, .month-header').forEach(h => {
         let n = h.nextElementSibling, v = false;
-        while(n && !n.classList.contains('date-header')) { if(n.style.display !== 'none') { v = true; break; } n = n.nextElementSibling; }
+        while(n && !n.classList.contains('date-header') && !n.classList.contains('month-header')) {
+          if(n.style.display !== 'none') { v = true; break; }
+          n = n.nextElementSibling;
+        }
         h.style.display = v ? 'block' : 'none';
       });
     }
