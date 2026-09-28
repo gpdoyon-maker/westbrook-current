@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Westbrook Currents</title><link rel="icon" type="image/png" href="https://gpdoyon-maker.github.io/westbrook-current/favicon.png?v=1790626512282"><script async src="https://www.googletagmanager.com/gtag/js?id=G-B6N445HL5H"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-B6N445HL5H');</script><style>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Westbrook Currents</title><link rel="icon" type="image/png" href="https://gpdoyon-maker.github.io/westbrook-current/favicon.png?v=1790628573990"><style>
   :root { 
     --bg-gutter: #f1f5f9; --card-bg: #fff; --text-navy: #002147; --text-muted: #475569; --border: #e2e8f0; 
     --logo-dark: #002147; --logo-mid: #005696; --logo-light: #5091CD; 
@@ -16,11 +16,328 @@
   .nav-links a { color: #fff; text-decoration: none; font-weight: 700; font-size: 0.9rem; opacity: 0.8; transition: opacity 0.2s; }
   .nav-links a:hover { opacity: 1; text-decoration: underline; }
   .menu-toggle { display: none; background: none; border: 1px solid rgba(255,255,255,0.2); color: #fff; font-size: 1.5rem; cursor: pointer; padding: 4px 10px; border-radius: 6px; line-height: 1; }
+  
   .site-footer { background: var(--logo-dark); color: var(--logo-light); text-align: center; padding: 2.5rem 1.5rem; font-size: 0.85rem; margin-top: 2rem; border-top: 4px solid var(--logo-mid); }
   .site-footer p { margin: 0.5rem 0; font-weight: 500; }
   .site-footer a { color: var(--logo-light); text-decoration: underline; }
-  @media (max-width: 768px) { header { padding: 1rem; } .logo-desktop { display: none; } .logo-mobile { display: block; } .menu-toggle { display: block; } .site-tagline { font-size: 0.75rem; } .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: -1rem; right: -1rem; background: var(--logo-dark); padding: 1.5rem; border-bottom: 4px solid var(--logo-mid); box-shadow: 0 10px 20px rgba(0,0,0,0.2); gap: 1.25rem; text-align: center; } .nav-links.is-open { display: flex; } .nav-links a { font-size: 1.2rem; } }
- .controls-wrapper { background: #fff; border-bottom: 1px solid var(--border); padding: 0.75rem 1rem; position: sticky; top: 104px; z-index: 1900; box-shadow: 0 4px 12px rgba(0,0,0,0.08); } .controls-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.5fr 2fr; gap: 0.75rem; align-items: center; } .search-input { width: 100%; padding: 0.6rem 0.75rem 0.6rem 2.2rem; border-radius: 8px; border: 1.5px solid var(--border); font-size: 0.95rem; outline: none; box-sizing: border-box; } .select-input { width: 100%; padding: 0.6rem; border-radius: 8px; border: 1.5px solid var(--border); background: #fff; cursor: pointer; font-size: 0.85rem; font-weight: 700; color: var(--text-navy); box-sizing: border-box; } .main-layout { display: flex; max-width: 1200px; margin: 0 auto; width: 100%; flex: 1; } .list-pane { flex: 1; border-right: 1px solid var(--border); background: var(--bg-gutter); padding-bottom: 4rem; } .detail-pane { width: 460px; position: sticky; top: 135px; height: calc(100vh - 135px); padding: 2rem; overflow-y: auto; background: #fff; border-left: 1px solid var(--border); } .month-header { background: #e2e8f0; padding: 1rem 1.5rem; font-weight: 900; font-size: 0.8rem; color: var(--logo-dark); letter-spacing: 0.15em; position: sticky; top: 0; z-index: 10; margin: 0; } .date-header { padding: 1.25rem 1.5rem 0.75rem; font-weight: 800; font-size: 0.7rem; color: var(--logo-mid); margin: 0; display: flex; align-items: center; gap: 0.75rem; } .today-marker { background: var(--logo-mid); color: #fff; font-size: 0.6rem; padding: 2px 6px; border-radius: 4px; letter-spacing: 0.05em; } .event-row { display: flex; margin: 0 1rem 0.5rem; padding: 0.85rem 1.25rem; background: #fff; border-radius: 8px; border: 1px solid var(--border); border-left: 4px solid var(--other); cursor: pointer; transition: transform 0.2s; align-items: center; text-align: left; } .event-row:hover { transform: translateY(-2px); } .event-row.active { border-color: var(--logo-mid); box-shadow: 0 0 0 2px var(--logo-mid); } .row-time { width: 85px; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; } .row-content { flex: 1; display: flex; flex-direction: column; gap: 0.2rem; min-width: 0; } .row-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; } .row-title { flex: 1; font-weight: 800; font-size: 1.05rem; line-height: 1.25; margin: 0; } .row-price { font-size: 0.85rem; font-weight: 700; color: #475569; min-width: 45px; text-align: right; flex-shrink: 0; } .row-meta { font-size: 0.9rem; color: var(--text-muted); } .row-category { font-size: 0.7rem; font-weight: 700; display: flex; align-items: center; gap: 0.4rem; color: var(--text-muted); text-transform: uppercase; } .cat-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; flex-shrink: 0; } .row-arrow { color: #cbd5e1; font-size: 1.5rem; padding-left: 1.5rem; flex-shrink: 0; } .btn-group { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 2rem; } .btn { flex: 1 1 140px; padding: 1.1rem; border-radius: 12px; text-align: center; font-weight: 800; text-decoration: none; border: none; cursor: pointer; font-size: 1rem; box-sizing: border-box; transition: all 0.2s; } .btn-blue { background: var(--logo-mid); color: #fff; } .btn-white { border: 2px solid var(--border); color: var(--text-navy); background: #fff; } .idle-dashboard { text-align: left; padding: 1rem; animation: fadeIn 0.4s ease; } @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } } @media (max-width: 768px) { header { position: relative; padding: 0.75rem; } .controls-wrapper { top: 0; padding: 0.5rem; } .controls-container { grid-template-columns: 1fr 1fr; } #searchInput { grid-column: span 2; } .detail-pane { display: none; } .list-pane { border-right: none; } .event-row { margin: 0 0.75rem 0.75rem; } .mobile-details { display: none; width: 100%; padding: 1.5rem 0; border-top: 1px dashed var(--border); margin-top: 1rem; } .event-row.expanded { flex-direction: column; background: #fff !important; transform: none; box-shadow: none; border-left-width: 6px; align-items: flex-start; } .event-row.expanded .mobile-details { display: block; } .event-row.expanded .row-arrow { position: absolute; right: 1.25rem; top: 1.25rem; transform: rotate(90deg); } .row-time { width: 75px; font-size: 0.8rem; } .row-title { font-size: 1rem; } }</style></head><body><header><div class="brand-container"><div class="logo-group"><a href="index.html"><img src="https://gpdoyon-maker.github.io/westbrook-current/logo-desktop.webp?v=1790626512282" class="logo-desktop" alt="Westbrook Currents - Local events and community connections for Westbrook, Maine only"></a><a href="index.html"><img src="https://gpdoyon-maker.github.io/westbrook-current/logo-mobile.webp?v=1790626512282" class="logo-mobile" alt="Westbrook Currents - Local events and community connections for Westbrook, Maine only"></a><p class="site-tagline">Local events, real connections — Westbrook, ME only</p></div><button class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="main-nav" onclick="toggleMobileMenu()">≡</button><nav class="nav-links" id="main-nav"><a href="index.html">Events</a><a href="about.html">About</a></nav></div></header><div class="controls-wrapper"><div class="controls-container"><select id="monthJump" class="select-input" onchange="jumpToMonth()"><option value="">Jump...</option><option value="month-September-2026">September 2026</option><option value="month-October-2026">October 2026</option></select><select id="catFilter" class="select-input" onchange="runFilters()"><option value="all">Category...</option><option value="cat-arts-music">Arts & music</option><option value="cat-community-civic">Community & civic</option><option value="cat-classes-learning">Classes & learning</option><option value="cat-family-kids">Family & kids</option><option value="cat-food-drink">Food & drink</option><option value="cat-health-wellness">Health & wellness</option><option value="cat-markets-shopping">Markets & shopping</option><option value="cat-outdoors-nature">Outdoors & nature</option><option value="cat-sports-recreation">Sports & recreation</option><option value="cat-seniors">Seniors</option><option value="cat-faith-spirituality">Faith & spirituality</option><option value="cat-other">Other</option></select><div style="position:relative; width:100%;"><input type="text" id="searchInput" class="search-input" placeholder="Search events..." oninput="runFilters()"></div></div></div><div class="main-layout"><div class="list-pane" id="eventList"><h2 class="month-header" id="month-September-2026">SEPTEMBER 2026</h2><h3 class="date-header" data-date="Monday, September 28, 2026">MONDAY, SEPTEMBER 28</h3><div class="event-row cat-health-wellness" id="ev-0" tabindex="0" role="button" aria-label="Testing 123" data-title="Testing 123" data-date="Monday, September 28, 2026" data-time="10:15 AM — 11:15 AM" data-venue="" data-address="Riverbank Park, Westbrook, ME" data-category="Health &amp; wellness" data-summary="Twsting the summary." data-link="" data-gcal="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Testing%20123&amp;dates=20260928T141500Z/20260928T151500Z&amp;details=Twsting%20the%20summary.&amp;location=&amp;ctz=America/New_York" data-free="Free" data-accessibility="true" data-img="" onclick="selectEvent(0)" onkeydown="handleRowKey(event, 0)"><div class="row-time">10:15 AM</div><div class="row-content"><div class="row-top"><h4 class="row-title">Testing 123</h4><span class="row-price">Free</span></div><div class="row-meta"></div><div class="row-category"><span class="cat-dot"></span> Health &amp; wellness</div></div><div class="row-arrow" aria-hidden="true">›</div><div class="mobile-details" id="details-mobile-0"></div></div><div class="event-row cat-community-civic" id="ev-1" tabindex="0" role="button" aria-label="Moving Day for Jacob" data-title="Moving Day for Jacob" data-date="Monday, September 28, 2026" data-time="8:00 AM — 3:30 PM" data-venue="Jacob &amp; Natalie's House" data-address="12 Westbrook Street, Westbrook, ME 04092" data-category="Community &amp; civic" data-summary="I hope your in shape!" data-link="" data-gcal="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Moving%20Day%20for%20Jacob&amp;dates=20260928T120000Z/20260928T193000Z&amp;details=I%20hope%20your%20in%20shape!&amp;location=Jacob%20%26%20Natalie's%20House&amp;ctz=America/New_York" data-free="Free" data-accessibility="true" data-img="" onclick="selectEvent(1)" onkeydown="handleRowKey(event, 1)"><div class="row-time">8:00 AM</div><div class="row-content"><div class="row-top"><h4 class="row-title">Moving Day for Jacob</h4><span class="row-price">Free</span></div><div class="row-meta">Jacob &amp; Natalie's House</div><div class="row-category"><span class="cat-dot"></span> Community &amp; civic</div></div><div class="row-arrow" aria-hidden="true">›</div><div class="mobile-details" id="details-mobile-1"></div></div><h3 class="date-header" data-date="Tuesday, September 29, 2026">TUESDAY, SEPTEMBER 29</h3><div class="event-row cat-health-wellness" id="ev-2" tabindex="0" role="button" aria-label="Peewee's Playhouse" data-title="Peewee's Playhouse" data-date="Tuesday, September 29, 2026" data-time="3:00 PM" data-venue="" data-address="Park" data-category="Health &amp; wellness" data-summary="Today's top headlines feature a powerful coastal storm in the Northeast, security arrests in the United Kingdom, and ongoing developments in the Middle East, according to NBC News." data-link="" data-gcal="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Peewee's%20Playhouse&amp;dates=20260929T190000Z/20260929T200000Z&amp;details=Today's%20top%20headlines%20feature%20a%20powerful%20coastal%20storm%20in%20the%20Northeast%2C%20security%20arrests%20in%20the%20United%20Kingdom%2C%20and%20ongoing%20developments%20in%20the%20Middle%20East%2C%20according%20to%20NBC%20News.&amp;location=&amp;ctz=America/New_York" data-free="Free" data-accessibility="true" data-img="" onclick="selectEvent(2)" onkeydown="handleRowKey(event, 2)"><div class="row-time">3:00 PM</div><div class="row-content"><div class="row-top"><h4 class="row-title">Peewee's Playhouse</h4><span class="row-price">Free</span></div><div class="row-meta"></div><div class="row-category"><span class="cat-dot"></span> Health &amp; wellness</div></div><div class="row-arrow" aria-hidden="true">›</div><div class="mobile-details" id="details-mobile-2"></div></div><div class="event-row cat-sports-recreation" id="ev-3" tabindex="0" role="button" aria-label="Testy 4321" data-title="Testy 4321" data-date="Tuesday, September 29, 2026" data-time="6:09 AM — 8:00 AM" data-venue="Doyon House" data-address="14 Settlers Road, Westbrook, ME 04092" data-category="Sports &amp; recreation" data-summary="Testy testy testy!" data-link="" data-gcal="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Testy%204321&amp;dates=20260929T100900Z/20260929T120000Z&amp;details=Testy%20testy%20testy!&amp;location=Doyon%20House&amp;ctz=America/New_York" data-free="Free" data-accessibility="true" data-img="" onclick="selectEvent(3)" onkeydown="handleRowKey(event, 3)"><div class="row-time">6:09 AM</div><div class="row-content"><div class="row-top"><h4 class="row-title">Testy 4321</h4><span class="row-price">Free</span></div><div class="row-meta">Doyon House</div><div class="row-category"><span class="cat-dot"></span> Sports &amp; recreation</div></div><div class="row-arrow" aria-hidden="true">›</div><div class="mobile-details" id="details-mobile-3"></div></div><div class="event-row cat-arts-music" id="ev-4" tabindex="0" role="button" aria-label="Warcraft for Everyone Day" data-title="Warcraft for Everyone Day" data-date="Tuesday, September 29, 2026" data-time="2:15 PM — 6:30 PM" data-venue="Gerry's Place" data-address="14 Settlers Road, Westbrook, ME 04092" data-category="Arts &amp; music" data-summary="Please, PLEAE work!" data-link="" data-gcal="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Warcraft%20for%20Everyone%20Day&amp;dates=20260929T181500Z/20260929T223000Z&amp;details=Please%2C%20PLEAE%20work!&amp;location=Gerry's%20Place&amp;ctz=America/New_York" data-free="Free" data-accessibility="true" data-img="" onclick="selectEvent(4)" onkeydown="handleRowKey(event, 4)"><div class="row-time">2:15 PM</div><div class="row-content"><div class="row-top"><h4 class="row-title">Warcraft for Everyone Day</h4><span class="row-price">Free</span></div><div class="row-meta">Gerry's Place</div><div class="row-category"><span class="cat-dot"></span> Arts &amp; music</div></div><div class="row-arrow" aria-hidden="true">›</div><div class="mobile-details" id="details-mobile-4"></div></div><h2 class="month-header" id="month-October-2026">OCTOBER 2026</h2><h3 class="date-header" data-date="Wednesday, October 14, 2026">WEDNESDAY, OCTOBER 14</h3><div class="event-row cat-health-wellness" id="ev-5" tabindex="0" role="button" aria-label="Cow Tipping Party" data-title="Cow Tipping Party" data-date="Wednesday, October 14, 2026" data-time="6:12 AM — 6:48 PM" data-venue="Cow Tipping Farm" data-address="gpdoyon@gmail.com" data-category="Health &amp; wellness" data-summary="This is my summary and I like it a lot." data-link="www.westbrookmaine.gov" data-gcal="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Cow%20Tipping%20Party&amp;dates=20261014T101200Z/20261014T224800Z&amp;details=This%20is%20my%20summary%20and%20I%20like%20it%20a%20lot.%5Cn%5Cnwww.westbrookmaine.gov&amp;location=Cow%20Tipping%20Farm&amp;ctz=America/New_York" data-free="Free" data-accessibility="true" data-img="" onclick="selectEvent(5)" onkeydown="handleRowKey(event, 5)"><div class="row-time">6:12 AM</div><div class="row-content"><div class="row-top"><h4 class="row-title">Cow Tipping Party</h4><span class="row-price">Free</span></div><div class="row-meta">Cow Tipping Farm</div><div class="row-category"><span class="cat-dot"></span> Health &amp; wellness</div></div><div class="row-arrow" aria-hidden="true">›</div><div class="mobile-details" id="details-mobile-5"></div></div></div><div class="detail-pane" id="detailPane"></div></div><footer class="site-footer"><p>© 2026 Westbrook Currents — Local events, real connections.</p><p><a href="about.html">About</a> | <a href="mailto:WestbrookCurrents@gmail.com">Contact</a></p></footer><script>
+
+  /* Relative Date Badges */
+  .date-badge { display: inline-block; padding: 2px 6px; border-radius: 4px; font-size: 0.65rem; font-weight: 900; margin-left: 8px; vertical-align: middle; }
+  .badge-today { background: #ef4444; color: #fff; }
+  .badge-tomorrow { background: var(--logo-mid); color: #fff; }
+  .badge-weekend { background: #15803d; color: #fff; }
+
+  @media (max-width: 768px) { 
+    header { position: relative; padding: 0.75rem; } 
+    .logo-desktop { display: none; } .logo-mobile { display: block; } .menu-toggle { display: block; } 
+    .site-tagline { font-size: 0.75rem; } 
+    .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: -1rem; right: -1rem; background: var(--logo-dark); padding: 1.5rem; border-bottom: 4px solid var(--logo-mid); box-shadow: 0 10px 20px rgba(0,0,0,0.2); gap: 1.25rem; text-align: center; z-index: 3000; } 
+    .nav-links.is-open { display: flex; } 
+  }
+ 
+    .controls-wrapper { background: #fff; border-bottom: 1px solid var(--border); padding: 0.75rem 1rem; position: sticky; top: 0; z-index: 1900; box-shadow: 0 4px 12px rgba(0,0,0,0.08); } 
+    .controls-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr 2fr; gap: 0.75rem; } 
+    .search-input { width: 100%; padding: 0.6rem; border-radius: 8px; border: 1.5px solid var(--border); } 
+    .main-layout { display: flex; max-width: 1200px; margin: 0 auto; } 
+    .list-pane { flex: 1; background: var(--bg-gutter); } 
+    .detail-pane { width: 450px; position: sticky; top: 60px; height: calc(100vh - 60px); padding: 2rem; background: #fff; border-left: 1px solid var(--border); overflow-y: auto; }
+    .month-header { background: #e2e8f0; padding: 0.75rem 1.5rem; font-size: 0.7rem; letter-spacing: 0.1em; position: sticky; top: 58px; z-index: 5; margin:0; }
+    .date-header { padding: 1.5rem 1.5rem 0.5rem; font-size: 0.8rem; color: var(--logo-mid); margin:0; }
+    .event-row { display: flex; margin: 0 1rem 0.5rem; padding: 1rem; background: #fff; border-radius: 8px; border: 1px solid var(--border); border-left: 4px solid var(--other); cursor: pointer; }
+    .row-time { width: 75px; font-weight: 700; font-size: 0.8rem; }
+    .row-content { flex: 1; }
+    .row-title { margin: 0 0 0.25rem; font-size: 1.1rem; line-height: 1.2; }
+    .row-meta { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.25rem; }
+    .row-category { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; display: flex; align-items: center; gap: 5px; }
+    .cat-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--other); }
+    .detail-card h2 { font-size: 2rem; line-height: 1.1; margin: 0.5rem 0 1.5rem; }
+    .btn { display: block; padding: 1rem; text-align: center; border-radius: 8px; font-weight: 800; text-decoration: none; margin-top: 1rem; }
+    .btn-blue { background: var(--logo-mid); color: #fff; }
+    @media (max-width: 768px) { 
+      .controls-container { grid-template-columns: 1fr 1fr; } 
+      #searchInput { grid-column: span 2; }
+      .detail-pane { display: none; } 
+      .month-header { top: 95px; }
+      .mobile-details { display: none; margin-top: 1rem; padding-top: 1rem; border-top: 1px dashed #ccc; }
+      .event-row.expanded .mobile-details { display: block; }
+    }
+  </style></head><body>
+  <header><div class="brand-container"><div class="logo-group"><a href="index.html"><img src="https://gpdoyon-maker.github.io/westbrook-current/logo-desktop.webp?v=1790628573990" class="logo-desktop"></a><img src="https://gpdoyon-maker.github.io/westbrook-current/logo-mobile.webp?v=1790628573990" class="logo-mobile"><p class="site-tagline">Local events, real connections — Westbrook, ME only</p></div><button class="menu-toggle" onclick="toggleMobileMenu()">≡</button><nav class="nav-links" id="main-nav"><a href="index.html">Events</a><a href="about.html">About</a></nav></div></header>
+  <div class="controls-wrapper"><div class="controls-container"><select id="mJump" class="search-input" onchange="jump()"><option value="">Month...</option><option value="month-September-2026">September 2026</option><option value="month-October-2026">October 2026</option><option value="month-December-2026">December 2026</option></select><select id="cFilter" class="search-input" onchange="runFilters()"><option value="all">Categories...</option><option value="cat-arts-&-music">Arts & music</option><option value="cat-community-&-civic">Community & civic</option><option value="cat-classes-&-learning">Classes & learning</option><option value="cat-family-&-kids">Family & kids</option><option value="cat-food-&-drink">Food & drink</option><option value="cat-health-&-wellness">Health & wellness</option><option value="cat-markets-&-shopping">Markets & shopping</option><option value="cat-outdoors-&-nature">Outdoors & nature</option><option value="cat-sports-&-recreation">Sports & recreation</option><option value="cat-seniors">Seniors</option><option value="cat-faith-&-spirituality">Faith & spirituality</option><option value="cat-other">Other</option></select><input type="text" id="searchInput" class="search-input" placeholder="Search title, venue, or category..." oninput="runFilters()"></div></div>
+  <div class="main-layout"><div class="list-pane"><h2 class="month-header" id="month-September-2026">SEPTEMBER 2026</h2><h3 class="date-header">MONDAY, SEPTEMBER 28 <span class="date-badge badge-today">TODAY</span></h3>
+      <div class="event-row cat-health-wellness" id="ev-0" onclick="selectEvent(0)" 
+           data-title="Testing 123" data-venue="" data-category="Health &amp; wellness" 
+           data-date="Monday, September 28" data-time="10:15 AM" data-summary="Twsting the summary." 
+           data-link="" data-gcal="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Testing%20123&dates=20260928T141500Z/20260928T151500Z&details=Twsting%20the%20summary.&location=" data-free="true" data-img="">
+        <div class="row-time">10:15 AM</div>
+        <div class="row-content">
+          <div class="row-top">
+            <h4 class="row-title">Testing 123</h4>
+          </div>
+          <div class="row-meta"></div>
+          <div class="row-category">
+            <span class="cat-dot"></span> Health &amp; wellness <span style="color:#15803d;margin-left:8px;">(FREE)</span>
+          </div>
+        </div>
+        <div class="row-arrow">›</div>
+        <div class="mobile-details" id="details-mobile-0"></div>
+      </div>
+      <div class="event-row cat-community-civic" id="ev-1" onclick="selectEvent(1)" 
+           data-title="Moving Day for Jacob" data-venue="Jacob &amp; Natalie's House" data-category="Community &amp; civic" 
+           data-date="Monday, September 28" data-time="8:00 AM" data-summary="I hope your in shape!" 
+           data-link="" data-gcal="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Moving%20Day%20for%20Jacob&dates=20260928T120000Z/20260928T130000Z&details=I%20hope%20your%20in%20shape!&location=Jacob%20%26%20Natalie's%20House" data-free="true" data-img="">
+        <div class="row-time">8:00 AM</div>
+        <div class="row-content">
+          <div class="row-top">
+            <h4 class="row-title">Moving Day for Jacob</h4>
+          </div>
+          <div class="row-meta">Jacob &amp; Natalie's House</div>
+          <div class="row-category">
+            <span class="cat-dot"></span> Community &amp; civic <span style="color:#15803d;margin-left:8px;">(FREE)</span>
+          </div>
+        </div>
+        <div class="row-arrow">›</div>
+        <div class="mobile-details" id="details-mobile-1"></div>
+      </div>
+      <div class="event-row cat-family-kids" id="ev-2" onclick="selectEvent(2)" 
+           data-title="Family Storytime at Walker Library" data-venue="" data-category="Family &amp; kids" 
+           data-date="Monday, September 28" data-time="TBA" data-summary="" 
+           data-link="https://www.westbrookmaine.gov/calendar.aspx?view=list&CID=0" data-gcal="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Family%20Storytime%20at%20Walker%20Library&dates=20260928/20260928&details=&location=" data-free="true" data-img="">
+        <div class="row-time">TBA</div>
+        <div class="row-content">
+          <div class="row-top">
+            <h4 class="row-title">Family Storytime at Walker Library</h4>
+          </div>
+          <div class="row-meta"></div>
+          <div class="row-category">
+            <span class="cat-dot"></span> Family &amp; kids <span style="color:#15803d;margin-left:8px;">(FREE)</span>
+          </div>
+        </div>
+        <div class="row-arrow">›</div>
+        <div class="mobile-details" id="details-mobile-2"></div>
+      </div>
+      <div class="event-row cat-family-kids" id="ev-3" onclick="selectEvent(3)" 
+           data-title="Baby Lapsit - Under age 2" data-venue="" data-category="Family &amp; kids" 
+           data-date="Monday, September 28" data-time="TBA" data-summary="" 
+           data-link="https://www.westbrookmaine.gov/calendar.aspx?view=list&CID=0" data-gcal="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Baby%20Lapsit%20-%20Under%20age%202&dates=20260928/20260928&details=&location=" data-free="true" data-img="">
+        <div class="row-time">TBA</div>
+        <div class="row-content">
+          <div class="row-top">
+            <h4 class="row-title">Baby Lapsit - Under age 2</h4>
+          </div>
+          <div class="row-meta"></div>
+          <div class="row-category">
+            <span class="cat-dot"></span> Family &amp; kids <span style="color:#15803d;margin-left:8px;">(FREE)</span>
+          </div>
+        </div>
+        <div class="row-arrow">›</div>
+        <div class="mobile-details" id="details-mobile-3"></div>
+      </div>
+      <div class="event-row cat-family-kids" id="ev-4" onclick="selectEvent(4)" 
+           data-title="Kids' Crafternoon: Dragon Eggs" data-venue="" data-category="Family &amp; kids" 
+           data-date="Monday, September 28" data-time="TBA" data-summary="" 
+           data-link="https://www.westbrookmaine.gov/calendar.aspx?view=list&CID=0" data-gcal="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Kids'%20Crafternoon%3A%20Dragon%20Eggs&dates=20260928/20260928&details=&location=" data-free="true" data-img="">
+        <div class="row-time">TBA</div>
+        <div class="row-content">
+          <div class="row-top">
+            <h4 class="row-title">Kids' Crafternoon: Dragon Eggs</h4>
+          </div>
+          <div class="row-meta"></div>
+          <div class="row-category">
+            <span class="cat-dot"></span> Family &amp; kids <span style="color:#15803d;margin-left:8px;">(FREE)</span>
+          </div>
+        </div>
+        <div class="row-arrow">›</div>
+        <div class="mobile-details" id="details-mobile-4"></div>
+      </div>
+      <div class="event-row cat-community-civic" id="ev-5" onclick="selectEvent(5)" 
+           data-title="Recreation and Conservation Meeting" data-venue="" data-category="Community &amp; civic" 
+           data-date="Monday, September 28" data-time="TBA" data-summary="" 
+           data-link="https://www.westbrookmaine.gov/calendar.aspx?view=list&CID=0" data-gcal="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Recreation%20and%20Conservation%20Meeting&dates=20260928/20260928&details=&location=" data-free="true" data-img="">
+        <div class="row-time">TBA</div>
+        <div class="row-content">
+          <div class="row-top">
+            <h4 class="row-title">Recreation and Conservation Meeting</h4>
+          </div>
+          <div class="row-meta"></div>
+          <div class="row-category">
+            <span class="cat-dot"></span> Community &amp; civic <span style="color:#15803d;margin-left:8px;">(FREE)</span>
+          </div>
+        </div>
+        <div class="row-arrow">›</div>
+        <div class="mobile-details" id="details-mobile-5"></div>
+      </div><h3 class="date-header">TUESDAY, SEPTEMBER 29 <span class="date-badge badge-tomorrow">TOMORROW</span></h3>
+      <div class="event-row cat-arts-music" id="ev-6" onclick="selectEvent(6)" 
+           data-title="Back Cove Books presents: “An Evening with Lois Lowry &amp; Rebecca Traister”" data-venue="Westbrook Performing Arts Center" data-category="Arts &amp; music" 
+           data-date="Tuesday, September 29" data-time="6:30 PM" data-summary="Join Newbery Medal recipient Lois Lowry and author Rebecca Traister for an evening of discussion, interaction, and empowerment celebrating Lowry's new novel, Building 903." 
+           data-link="https://www.westbrookpac.org/event/back-cove-books-presents-an-evening-with-lois-lowry-rebecca-traister/" data-gcal="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Back%20Cove%20Books%20presents%3A%20%E2%80%9CAn%20Evening%20with%20Lois%20Lowry%20%26%20Rebecca%20Traister%E2%80%9D&dates=20260929T223000Z/20260929T233000Z&details=Join%20Newbery%20Medal%20recipient%20Lois%20Lowry%20and%20author%20Rebecca%20Traister%20for%20an%20evening%20of%20discussion%2C%20interaction%2C%20and%20empowerment%20celebrating%20Lowry's%20new%20novel%2C%20Building%20903.&location=Westbrook%20Performing%20Arts%20Center" data-free="false" data-img="">
+        <div class="row-time">6:30 PM</div>
+        <div class="row-content">
+          <div class="row-top">
+            <h4 class="row-title">Back Cove Books presents: “An Evening with Lois Lowry &amp; Rebecca Traister”</h4>
+          </div>
+          <div class="row-meta">Westbrook Performing Arts Center</div>
+          <div class="row-category">
+            <span class="cat-dot"></span> Arts &amp; music 
+          </div>
+        </div>
+        <div class="row-arrow">›</div>
+        <div class="mobile-details" id="details-mobile-6"></div>
+      </div>
+      <div class="event-row cat-health-wellness" id="ev-7" onclick="selectEvent(7)" 
+           data-title="Peewee's Playhouse" data-venue="" data-category="Health &amp; wellness" 
+           data-date="Tuesday, September 29" data-time="3:00 PM" data-summary="Today's top headlines feature a powerful coastal storm in the Northeast, security arrests in the United Kingdom, and ongoing developments in the Middle East, according to NBC News." 
+           data-link="" data-gcal="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Peewee's%20Playhouse&dates=20260929T190000Z/20260929T200000Z&details=Today's%20top%20headlines%20feature%20a%20powerful%20coastal%20storm%20in%20the%20Northeast%2C%20security%20arrests%20in%20the%20United%20Kingdom%2C%20and%20ongoing%20developments%20in%20the%20Middle%20East%2C%20according%20to%20NBC%20News.&location=" data-free="true" data-img="">
+        <div class="row-time">3:00 PM</div>
+        <div class="row-content">
+          <div class="row-top">
+            <h4 class="row-title">Peewee's Playhouse</h4>
+          </div>
+          <div class="row-meta"></div>
+          <div class="row-category">
+            <span class="cat-dot"></span> Health &amp; wellness <span style="color:#15803d;margin-left:8px;">(FREE)</span>
+          </div>
+        </div>
+        <div class="row-arrow">›</div>
+        <div class="mobile-details" id="details-mobile-7"></div>
+      </div>
+      <div class="event-row cat-sports-recreation" id="ev-8" onclick="selectEvent(8)" 
+           data-title="Testy 4321" data-venue="Doyon House" data-category="Sports &amp; recreation" 
+           data-date="Tuesday, September 29" data-time="6:09 AM" data-summary="Testy testy testy!" 
+           data-link="" data-gcal="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Testy%204321&dates=20260929T100900Z/20260929T110900Z&details=Testy%20testy%20testy!&location=Doyon%20House" data-free="true" data-img="">
+        <div class="row-time">6:09 AM</div>
+        <div class="row-content">
+          <div class="row-top">
+            <h4 class="row-title">Testy 4321</h4>
+          </div>
+          <div class="row-meta">Doyon House</div>
+          <div class="row-category">
+            <span class="cat-dot"></span> Sports &amp; recreation <span style="color:#15803d;margin-left:8px;">(FREE)</span>
+          </div>
+        </div>
+        <div class="row-arrow">›</div>
+        <div class="mobile-details" id="details-mobile-8"></div>
+      </div>
+      <div class="event-row cat-arts-music" id="ev-9" onclick="selectEvent(9)" 
+           data-title="Warcraft for Everyone Day" data-venue="Gerry's Place" data-category="Arts &amp; music" 
+           data-date="Tuesday, September 29" data-time="2:15 PM" data-summary="Please, PLEAE work!" 
+           data-link="" data-gcal="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Warcraft%20for%20Everyone%20Day&dates=20260929T181500Z/20260929T191500Z&details=Please%2C%20PLEAE%20work!&location=Gerry's%20Place" data-free="true" data-img="">
+        <div class="row-time">2:15 PM</div>
+        <div class="row-content">
+          <div class="row-top">
+            <h4 class="row-title">Warcraft for Everyone Day</h4>
+          </div>
+          <div class="row-meta">Gerry's Place</div>
+          <div class="row-category">
+            <span class="cat-dot"></span> Arts &amp; music <span style="color:#15803d;margin-left:8px;">(FREE)</span>
+          </div>
+        </div>
+        <div class="row-arrow">›</div>
+        <div class="mobile-details" id="details-mobile-9"></div>
+      </div><h3 class="date-header">WEDNESDAY, SEPTEMBER 30</h3>
+      <div class="event-row cat-arts-music" id="ev-10" onclick="selectEvent(10)" 
+           data-title="Bruce Marshall" data-venue="Lenny's Pub" data-category="Arts &amp; music" 
+           data-date="Wednesday, September 30" data-time="6:30 PM" data-summary="Live performance by Bruce Marshall at Lenny's Pub." 
+           data-link="https://www.lennyspub.com/calendar" data-gcal="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bruce%20Marshall&dates=20260930T223000Z/20260930T233000Z&details=Live%20performance%20by%20Bruce%20Marshall%20at%20Lenny's%20Pub.&location=Lenny's%20Pub" data-free="false" data-img="">
+        <div class="row-time">6:30 PM</div>
+        <div class="row-content">
+          <div class="row-top">
+            <h4 class="row-title">Bruce Marshall</h4>
+          </div>
+          <div class="row-meta">Lenny's Pub</div>
+          <div class="row-category">
+            <span class="cat-dot"></span> Arts &amp; music 
+          </div>
+        </div>
+        <div class="row-arrow">›</div>
+        <div class="mobile-details" id="details-mobile-10"></div>
+      </div><h2 class="month-header" id="month-October-2026">OCTOBER 2026</h2><h3 class="date-header">SATURDAY, OCTOBER 3 <span class="date-badge badge-weekend">THIS WEEKEND</span></h3>
+      <div class="event-row cat-family-kids" id="ev-11" onclick="selectEvent(11)" 
+           data-title="Bike Festival at Rock Row" data-venue="Quarryside at Rock Row" data-category="Family &amp; kids" 
+           data-date="Saturday, October 3" data-time="12:00 PM" data-summary="Looking for something to do with the whole family? Look no further, the Bike Festival is just the place for you on Sat, October 3 from 12pm - 6pm for all things Bike related!" 
+           data-link="https://rockrow.com/event/bike-festival-at-rock-row/" data-gcal="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bike%20Festival%20at%20Rock%20Row&dates=20261003T160000Z/20261003T170000Z&details=Looking%20for%20something%20to%20do%20with%20the%20whole%20family%3F%20Look%20no%20further%2C%20the%20Bike%20Festival%20is%20just%20the%20place%20for%20you%20on%20Sat%2C%20October%203%20from%2012pm%20-%206pm%20for%20all%20things%20Bike%20related!&location=Quarryside%20at%20Rock%20Row" data-free="true" data-img="">
+        <div class="row-time">12:00 PM</div>
+        <div class="row-content">
+          <div class="row-top">
+            <h4 class="row-title">Bike Festival at Rock Row</h4>
+          </div>
+          <div class="row-meta">Quarryside at Rock Row</div>
+          <div class="row-category">
+            <span class="cat-dot"></span> Family &amp; kids <span style="color:#15803d;margin-left:8px;">(FREE)</span>
+          </div>
+        </div>
+        <div class="row-arrow">›</div>
+        <div class="mobile-details" id="details-mobile-11"></div>
+      </div><h3 class="date-header">MONDAY, OCTOBER 5</h3>
+      <div class="event-row cat-community-civic" id="ev-12" onclick="selectEvent(12)" 
+           data-title="Regular City Council Meeting" data-venue="Westbrook, ME" data-category="Community &amp; civic" 
+           data-date="Monday, October 5" data-time="7:00 PM" data-summary="Regular City Council Meeting held by the City of Westbrook at 125 Stroudwater Street." 
+           data-link="https://www.westbrookmaine.gov/Calendar.aspx?EID=3252" data-gcal="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Regular%20City%20Council%20Meeting&dates=20261005T230000Z/20261006T000000Z&details=Regular%20City%20Council%20Meeting%20held%20by%20the%20City%20of%20Westbrook%20at%20125%20Stroudwater%20Street.&location=Westbrook%2C%20ME" data-free="true" data-img="">
+        <div class="row-time">7:00 PM</div>
+        <div class="row-content">
+          <div class="row-top">
+            <h4 class="row-title">Regular City Council Meeting</h4>
+          </div>
+          <div class="row-meta">Westbrook, ME</div>
+          <div class="row-category">
+            <span class="cat-dot"></span> Community &amp; civic <span style="color:#15803d;margin-left:8px;">(FREE)</span>
+          </div>
+        </div>
+        <div class="row-arrow">›</div>
+        <div class="mobile-details" id="details-mobile-12"></div>
+      </div><h3 class="date-header">WEDNESDAY, OCTOBER 14</h3>
+      <div class="event-row cat-health-wellness" id="ev-13" onclick="selectEvent(13)" 
+           data-title="Cow Tipping Party" data-venue="Cow Tipping Farm" data-category="Health &amp; wellness" 
+           data-date="Wednesday, October 14" data-time="6:12 AM" data-summary="This is my summary and I like it a lot." 
+           data-link="www.westbrookmaine.gov" data-gcal="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Cow%20Tipping%20Party&dates=20261014T101200Z/20261014T111200Z&details=This%20is%20my%20summary%20and%20I%20like%20it%20a%20lot.&location=Cow%20Tipping%20Farm" data-free="true" data-img="">
+        <div class="row-time">6:12 AM</div>
+        <div class="row-content">
+          <div class="row-top">
+            <h4 class="row-title">Cow Tipping Party</h4>
+          </div>
+          <div class="row-meta">Cow Tipping Farm</div>
+          <div class="row-category">
+            <span class="cat-dot"></span> Health &amp; wellness <span style="color:#15803d;margin-left:8px;">(FREE)</span>
+          </div>
+        </div>
+        <div class="row-arrow">›</div>
+        <div class="mobile-details" id="details-mobile-13"></div>
+      </div><h3 class="date-header">SATURDAY, OCTOBER 24</h3>
+      <div class="event-row cat-family-kids" id="ev-14" onclick="selectEvent(14)" 
+           data-title="Trick or Treat at Rock Row" data-venue="Quarryside at Rock Row" data-category="Family &amp; kids" 
+           data-date="Saturday, October 24" data-time="11:30 AM" data-summary="Join us right here at Rock Row from 11:30am-2:30pm on October 24 and enjoy treats and festive fun for a “Hauntingly” good time!" 
+           data-link="https://rockrow.com/event/trick-or-treat-at-rock-row/" data-gcal="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Trick%20or%20Treat%20at%20Rock%20Row&dates=20261024T153000Z/20261024T163000Z&details=Join%20us%20right%20here%20at%20Rock%20Row%20from%2011%3A30am-2%3A30pm%20on%20October%2024%20and%20enjoy%20treats%20and%20festive%20fun%20for%20a%20%E2%80%9CHauntingly%E2%80%9D%20good%20time!&location=Quarryside%20at%20Rock%20Row" data-free="true" data-img="">
+        <div class="row-time">11:30 AM</div>
+        <div class="row-content">
+          <div class="row-top">
+            <h4 class="row-title">Trick or Treat at Rock Row</h4>
+          </div>
+          <div class="row-meta">Quarryside at Rock Row</div>
+          <div class="row-category">
+            <span class="cat-dot"></span> Family &amp; kids <span style="color:#15803d;margin-left:8px;">(FREE)</span>
+          </div>
+        </div>
+        <div class="row-arrow">›</div>
+        <div class="mobile-details" id="details-mobile-14"></div>
+      </div><h2 class="month-header" id="month-December-2026">DECEMBER 2026</h2><h3 class="date-header">TUESDAY, DECEMBER 15</h3>
+      <div class="event-row cat-family-kids" id="ev-15" onclick="selectEvent(15)" 
+           data-title="Santa Claus is Coming To Rock Row" data-venue="Cowbell Rock Row" data-category="Family &amp; kids" 
+           data-date="Tuesday, December 15" data-time="5:30 PM" data-summary="Join us right here at Cowbell Rock Row on December 15 for this special meet &amp; greet, photo opportunity with Santa!" 
+           data-link="https://rockrow.com/event/santa2026/" data-gcal="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Santa%20Claus%20is%20Coming%20To%20Rock%20Row&dates=20261215T223000Z/20261215T233000Z&details=Join%20us%20right%20here%20at%20Cowbell%20Rock%20Row%20on%20December%2015%20for%20this%20special%20meet%20%26%20greet%2C%20photo%20opportunity%20with%20Santa!&location=Cowbell%20Rock%20Row" data-free="true" data-img="">
+        <div class="row-time">5:30 PM</div>
+        <div class="row-content">
+          <div class="row-top">
+            <h4 class="row-title">Santa Claus is Coming To Rock Row</h4>
+          </div>
+          <div class="row-meta">Cowbell Rock Row</div>
+          <div class="row-category">
+            <span class="cat-dot"></span> Family &amp; kids <span style="color:#15803d;margin-left:8px;">(FREE)</span>
+          </div>
+        </div>
+        <div class="row-arrow">›</div>
+        <div class="mobile-details" id="details-mobile-15"></div>
+      </div></div><div class="detail-pane" id="detailPane"><div style="text-align:center; color:#94a3b8; margin-top:5rem;"><h3>Select an event to view details</h3></div></div></div>
+  <script>
   function toggleMobileMenu() {
     const btn = document.querySelector('.menu-toggle');
     const nav = document.getElementById('main-nav');
@@ -31,4 +348,27 @@
   function handleRowKey(e, id) {
     if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); selectEvent(id); }
   }
- function initDashboard(){const today=new Date();const options={weekday:'long',month:'long',day:'numeric',year:'numeric'};const todayStr=today.toLocaleDateString('en-US',options);document.querySelectorAll('.date-header').forEach(h=>{if(h.dataset.date===todayStr){h.innerHTML+=' <span class="today-marker">TODAY</span>';}});const rows=Array.from(document.querySelectorAll('.event-row'));const todayMatches=rows.filter(r=>r.dataset.date===todayStr);let dashboardContent='';if(todayMatches.length>0){dashboardContent='<div class="idle-dashboard"><div style="font-weight:900; font-size:0.75rem; color:var(--logo-mid); letter-spacing:0.2em; margin-bottom:0.5rem;">TODAY AT A GLANCE</div><div style="font-size:1.5rem; font-weight:900; margin-bottom:2rem; color:var(--logo-dark);">'+todayStr+'</div><div style="display:flex; flex-direction:column; gap:1rem;">';todayMatches.forEach(r=>{const dotColor=getComputedStyle(r.querySelector('.cat-dot')).backgroundColor;dashboardContent+='<div style="font-size:1rem; font-weight:500; display:flex; align-items:center; gap:0.75rem; padding-bottom:0.75rem; border-bottom:1px solid var(--border);"><span class="cat-dot" style="background:'+dotColor+'"></span> <strong style="color:var(--logo-mid); min-width:60px;">'+r.dataset.time.split(' — ')[0]+'</strong> '+r.dataset.title+'</div>';});dashboardContent+='</div></div>';}else{const top5=rows.slice(0,5);dashboardContent='<div class="idle-dashboard"><div style="font-weight:900; font-size:0.75rem; color:var(--logo-mid); letter-spacing:0.2em; margin-bottom:1.5rem;">UPCOMING HIGHLIGHTS</div><div style="display:flex; flex-direction:column; gap:1rem;">';top5.forEach(r=>{const dotColor=getComputedStyle(r.querySelector('.cat-dot')).backgroundColor;const displayDate=r.dataset.date.split(',')[1].trim();dashboardContent+='<div style="font-size:1rem; font-weight:500; display:flex; align-items:center; gap:0.75rem; padding-bottom:0.75rem; border-bottom:1px solid var(--border);"><span class="cat-dot" style="background:'+dotColor+'"></span> <strong style="color:var(--logo-mid); min-width:60px;">'+displayDate+'</strong> '+r.dataset.title+'</div>';});dashboardContent+='</div></div>';}document.getElementById('detailPane').innerHTML=dashboardContent;}window.onload=initDashboard;function jumpToMonth(){const val=document.getElementById('monthJump').value;if(val){const el=document.getElementById(val);const yOff=-150;window.scrollTo({top:el.getBoundingClientRect().top+window.pageYOffset+yOff,behavior:'smooth'});}}function selectEvent(id){const row=document.getElementById('ev-'+id);const data=row.dataset;let html='<div class="detail-card">';if(data.img&&data.img.length>5){html+='<img src="'+data.img+'" style="width:100%; border-radius:10px; margin-bottom:1.5rem;">';}html+='<div style="font-size:0.8rem; font-weight:800; text-transform:uppercase; color:var(--logo-mid); margin-bottom:0.75rem;">'+data.category+'</div><h2 style="font-size:2rem; font-weight:900; line-height:1.1; margin-bottom:1.5rem;">'+data.title+'</h2><div style="display:flex; gap:1rem; margin-bottom:1rem;">📅 <strong>'+data.date+'</strong></div><div style="display:flex; gap:1rem; margin-bottom:1rem;">⏰ <strong>'+data.time+'</strong></div><div style="display:flex; gap:1rem; margin-bottom:1rem;">📍 <div><strong>'+data.venue+'</strong><br><span style="color:var(--text-muted)">'+data.address+'</span></div></div>';if(data.accessibility==='true')html+='<div style="color:#15803d; font-weight:700; margin-bottom:1rem;">♿ Handicap Accessible</div>';html+='<div class="detail-summary" style="margin-top:2rem; padding-top:2rem; border-top:1px solid var(--border); line-height:1.6;">'+data.summary+'</div><div style="display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:2rem;">';if(data.link&&data.link.length>5)html+='<a href="'+data.link+'" target="_blank" class="btn btn-blue" style="flex:1 1 100%; margin-bottom:0.5rem; color:white; text-decoration:none;">Event Website ↗</a>';html+='<a href="'+data.gcal+'" target="_blank" class="btn btn-white" style="flex:1; text-decoration:none; color:var(--text-navy);">+ Google</a><button onclick="downloadIcs(\''+data.title.replace(/'/g,"\\'")+'\',\''+data.date+'\',\''+data.time+'\',\'\',\''+data.venue.replace(/'/g,"\\'")+'\',\''+data.summary.replace(/'/g,"\\'")+'\')" class="btn btn-white" style="flex:1;">+ iCal</button></div></div>';if(window.innerWidth<=768){const isExp=row.classList.contains('expanded');document.querySelectorAll('.event-row').forEach(r=>r.classList.remove('expanded'));if(!isExp){row.classList.add('expanded');document.getElementById('details-mobile-'+id).innerHTML=html;window.scrollTo({top:row.getBoundingClientRect().top+window.pageYOffset-150,behavior:'smooth'});}}else{document.querySelectorAll('.event-row').forEach(r=>r.classList.remove('active'));row.classList.add('active');document.getElementById('detailPane').innerHTML=html;}}function runFilters(){const q=document.getElementById('searchInput').value.toLowerCase();const cat=document.getElementById('catFilter').value;document.querySelectorAll('.event-row').forEach(r=>{const match=(r.dataset.title.toLowerCase().includes(q)||r.dataset.venue.toLowerCase().includes(q))&&(cat==='all'||r.classList.contains(cat));r.style.display=match?'flex':'none';});document.querySelectorAll('.date-header, .month-header').forEach(h=>{let n=h.nextElementSibling,v=false;while(n&&!n.classList.contains('date-header')&&!n.classList.contains('month-header')){if(n.style.display!=='none'){v=true;break;}n=n.nextElementSibling;}h.style.display=v?'block':'none';});}function downloadIcs(t,d,st,et,v,s){const ics=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//WestbrookCurrents//EN','BEGIN:VEVENT','SUMMARY:'+t,'LOCATION:'+v,'DESCRIPTION:'+s,'END:VEVENT','END:VCALENDAR'].join('\r\n');const blob=new Blob([ics],{type:'text/calendar;charset=utf-8'});const link=document.createElement('a');link.href=window.URL.createObjectURL(blob);link.download=t.replace(/[^a-z0-9]/gi,'_').toLowerCase()+'.ics';link.click();}</script></body></html>
+
+    function jump(){ const v=document.getElementById('mJump').value; if(v) window.scrollTo({top: document.getElementById(v).offsetTop - 120, behavior:'smooth'}); }
+    function runFilters(){
+      const q=document.getElementById('searchInput').value.toLowerCase();
+      const cat=document.getElementById('cFilter').value;
+      document.querySelectorAll('.event-row').forEach(r => {
+        const match = (r.dataset.title.toLowerCase().includes(q) || r.dataset.venue.toLowerCase().includes(q) || r.dataset.category.toLowerCase().includes(q)) && (cat==='all' || r.classList.contains(cat));
+        r.style.display = match ? 'flex' : 'none';
+      });
+    }
+    function selectEvent(idx){
+      const r=document.getElementById('ev-'+idx); const d=r.dataset;
+      const html=`<div class="detail-card">${d.img ? '<img src="'+d.img+'" style="width:100%; border-radius:12px; margin-bottom:1rem;">' : ''}<p style="text-transform:uppercase; color:var(--logo-mid); font-weight:800; font-size:0.8rem;">${d.category}</p><h2>${d.title}</h2><p>📍 <strong>${d.venue}</strong></p><p>📅 <strong>${d.date}</strong></p><p>⏰ <strong>${d.time}</strong></p><div style="margin:2rem 0; line-height:1.6;">${d.summary}</div><a href="${d.link}" target="_blank" class="btn btn-blue">Visit Event Website ↗</a><a href="${d.gcal}" target="_blank" class="btn" style="border:1.5px solid var(--border); color:var(--text-navy);">+ Google Calendar</a></div>`;
+      if(window.innerWidth <= 768){
+        const isExp = r.classList.contains('expanded');
+        document.querySelectorAll('.event-row').forEach(row=>row.classList.remove('expanded'));
+        if(!isExp) { r.classList.add('expanded'); document.getElementById('details-mobile-'+idx).innerHTML=html; r.scrollIntoView({behavior:'smooth', block:'center'}); }
+      } else {
+        document.querySelectorAll('.event-row').forEach(row=>row.style.borderColor='var(--border)');
+        r.style.borderColor='var(--logo-mid)';
+        document.getElementById('detailPane').innerHTML=html;
+      }
+    }
+  </script></body></html>
