@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Westbrook Currents</title><link rel="icon" type="image/png" href="https://gpdoyon-maker.github.io/westbrook-current/favicon.png?v=1790628573990"><style>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Westbrook Currents</title><link rel="icon" type="image/png" href="https://gpdoyon-maker.github.io/westbrook-current/favicon.png?v=1790678898547"><style>
   :root { 
     --bg-gutter: #f1f5f9; --card-bg: #fff; --text-navy: #002147; --text-muted: #475569; --border: #e2e8f0; 
     --logo-dark: #002147; --logo-mid: #005696; --logo-light: #5091CD; 
@@ -21,7 +21,6 @@
   .site-footer p { margin: 0.5rem 0; font-weight: 500; }
   .site-footer a { color: var(--logo-light); text-decoration: underline; }
 
-  /* Relative Date Badges */
   .date-badge { display: inline-block; padding: 2px 6px; border-radius: 4px; font-size: 0.65rem; font-weight: 900; margin-left: 8px; vertical-align: middle; }
   .badge-today { background: #ef4444; color: #fff; }
   .badge-tomorrow { background: var(--logo-mid); color: #fff; }
@@ -43,300 +42,27 @@
     .detail-pane { width: 450px; position: sticky; top: 60px; height: calc(100vh - 60px); padding: 2rem; background: #fff; border-left: 1px solid var(--border); overflow-y: auto; }
     .month-header { background: #e2e8f0; padding: 0.75rem 1.5rem; font-size: 0.7rem; letter-spacing: 0.1em; position: sticky; top: 58px; z-index: 5; margin:0; }
     .date-header { padding: 1.5rem 1.5rem 0.5rem; font-size: 0.8rem; color: var(--logo-mid); margin:0; }
-    .event-row { display: flex; margin: 0 1rem 0.5rem; padding: 1rem; background: #fff; border-radius: 8px; border: 1px solid var(--border); border-left: 4px solid var(--other); cursor: pointer; }
+    .event-row { display: flex; margin: 0 1rem 0.5rem; padding: 1rem; background: #fff; border-radius: 8px; border: 1px solid var(--border); border-left: 4px solid var(--other); cursor: pointer; transition: transform 0.1s; }
     .row-time { width: 75px; font-weight: 700; font-size: 0.8rem; }
     .row-content { flex: 1; }
     .row-title { margin: 0 0 0.25rem; font-size: 1.1rem; line-height: 1.2; }
-    .row-meta { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.25rem; }
     .row-category { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; display: flex; align-items: center; gap: 5px; }
     .cat-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--other); }
-    .detail-card h2 { font-size: 2rem; line-height: 1.1; margin: 0.5rem 0 1.5rem; }
     .btn { display: block; padding: 1rem; text-align: center; border-radius: 8px; font-weight: 800; text-decoration: none; margin-top: 1rem; }
     .btn-blue { background: var(--logo-mid); color: #fff; }
     @media (max-width: 768px) { 
       .controls-container { grid-template-columns: 1fr 1fr; } 
-      #searchInput { grid-column: span 2; }
+      #searchInput { grid-column: span 2; } 
       .detail-pane { display: none; } 
-      .month-header { top: 95px; }
-      .mobile-details { display: none; margin-top: 1rem; padding-top: 1rem; border-top: 1px dashed #ccc; }
-      .event-row.expanded .mobile-details { display: block; }
+      .month-header { top: 95px; } 
+      .event-row.expanded { flex-direction: column; align-items: stretch; background: #fdfdfd; }
+      .event-row.expanded .mobile-details { display: block; width: 100%; padding: 1.5rem 0 0.5rem; border-top: 1px dashed var(--border); margin-top: 1rem; }
+      .mobile-details { display: none; }
     }
   </style></head><body>
-  <header><div class="brand-container"><div class="logo-group"><a href="index.html"><img src="https://gpdoyon-maker.github.io/westbrook-current/logo-desktop.webp?v=1790628573990" class="logo-desktop"></a><img src="https://gpdoyon-maker.github.io/westbrook-current/logo-mobile.webp?v=1790628573990" class="logo-mobile"><p class="site-tagline">Local events, real connections — Westbrook, ME only</p></div><button class="menu-toggle" onclick="toggleMobileMenu()">≡</button><nav class="nav-links" id="main-nav"><a href="index.html">Events</a><a href="about.html">About</a></nav></div></header>
-  <div class="controls-wrapper"><div class="controls-container"><select id="mJump" class="search-input" onchange="jump()"><option value="">Month...</option><option value="month-September-2026">September 2026</option><option value="month-October-2026">October 2026</option><option value="month-December-2026">December 2026</option></select><select id="cFilter" class="search-input" onchange="runFilters()"><option value="all">Categories...</option><option value="cat-arts-&-music">Arts & music</option><option value="cat-community-&-civic">Community & civic</option><option value="cat-classes-&-learning">Classes & learning</option><option value="cat-family-&-kids">Family & kids</option><option value="cat-food-&-drink">Food & drink</option><option value="cat-health-&-wellness">Health & wellness</option><option value="cat-markets-&-shopping">Markets & shopping</option><option value="cat-outdoors-&-nature">Outdoors & nature</option><option value="cat-sports-&-recreation">Sports & recreation</option><option value="cat-seniors">Seniors</option><option value="cat-faith-&-spirituality">Faith & spirituality</option><option value="cat-other">Other</option></select><input type="text" id="searchInput" class="search-input" placeholder="Search title, venue, or category..." oninput="runFilters()"></div></div>
-  <div class="main-layout"><div class="list-pane"><h2 class="month-header" id="month-September-2026">SEPTEMBER 2026</h2><h3 class="date-header">MONDAY, SEPTEMBER 28 <span class="date-badge badge-today">TODAY</span></h3>
-      <div class="event-row cat-health-wellness" id="ev-0" onclick="selectEvent(0)" 
-           data-title="Testing 123" data-venue="" data-category="Health &amp; wellness" 
-           data-date="Monday, September 28" data-time="10:15 AM" data-summary="Twsting the summary." 
-           data-link="" data-gcal="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Testing%20123&dates=20260928T141500Z/20260928T151500Z&details=Twsting%20the%20summary.&location=" data-free="true" data-img="">
-        <div class="row-time">10:15 AM</div>
-        <div class="row-content">
-          <div class="row-top">
-            <h4 class="row-title">Testing 123</h4>
-          </div>
-          <div class="row-meta"></div>
-          <div class="row-category">
-            <span class="cat-dot"></span> Health &amp; wellness <span style="color:#15803d;margin-left:8px;">(FREE)</span>
-          </div>
-        </div>
-        <div class="row-arrow">›</div>
-        <div class="mobile-details" id="details-mobile-0"></div>
-      </div>
-      <div class="event-row cat-community-civic" id="ev-1" onclick="selectEvent(1)" 
-           data-title="Moving Day for Jacob" data-venue="Jacob &amp; Natalie's House" data-category="Community &amp; civic" 
-           data-date="Monday, September 28" data-time="8:00 AM" data-summary="I hope your in shape!" 
-           data-link="" data-gcal="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Moving%20Day%20for%20Jacob&dates=20260928T120000Z/20260928T130000Z&details=I%20hope%20your%20in%20shape!&location=Jacob%20%26%20Natalie's%20House" data-free="true" data-img="">
-        <div class="row-time">8:00 AM</div>
-        <div class="row-content">
-          <div class="row-top">
-            <h4 class="row-title">Moving Day for Jacob</h4>
-          </div>
-          <div class="row-meta">Jacob &amp; Natalie's House</div>
-          <div class="row-category">
-            <span class="cat-dot"></span> Community &amp; civic <span style="color:#15803d;margin-left:8px;">(FREE)</span>
-          </div>
-        </div>
-        <div class="row-arrow">›</div>
-        <div class="mobile-details" id="details-mobile-1"></div>
-      </div>
-      <div class="event-row cat-family-kids" id="ev-2" onclick="selectEvent(2)" 
-           data-title="Family Storytime at Walker Library" data-venue="" data-category="Family &amp; kids" 
-           data-date="Monday, September 28" data-time="TBA" data-summary="" 
-           data-link="https://www.westbrookmaine.gov/calendar.aspx?view=list&CID=0" data-gcal="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Family%20Storytime%20at%20Walker%20Library&dates=20260928/20260928&details=&location=" data-free="true" data-img="">
-        <div class="row-time">TBA</div>
-        <div class="row-content">
-          <div class="row-top">
-            <h4 class="row-title">Family Storytime at Walker Library</h4>
-          </div>
-          <div class="row-meta"></div>
-          <div class="row-category">
-            <span class="cat-dot"></span> Family &amp; kids <span style="color:#15803d;margin-left:8px;">(FREE)</span>
-          </div>
-        </div>
-        <div class="row-arrow">›</div>
-        <div class="mobile-details" id="details-mobile-2"></div>
-      </div>
-      <div class="event-row cat-family-kids" id="ev-3" onclick="selectEvent(3)" 
-           data-title="Baby Lapsit - Under age 2" data-venue="" data-category="Family &amp; kids" 
-           data-date="Monday, September 28" data-time="TBA" data-summary="" 
-           data-link="https://www.westbrookmaine.gov/calendar.aspx?view=list&CID=0" data-gcal="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Baby%20Lapsit%20-%20Under%20age%202&dates=20260928/20260928&details=&location=" data-free="true" data-img="">
-        <div class="row-time">TBA</div>
-        <div class="row-content">
-          <div class="row-top">
-            <h4 class="row-title">Baby Lapsit - Under age 2</h4>
-          </div>
-          <div class="row-meta"></div>
-          <div class="row-category">
-            <span class="cat-dot"></span> Family &amp; kids <span style="color:#15803d;margin-left:8px;">(FREE)</span>
-          </div>
-        </div>
-        <div class="row-arrow">›</div>
-        <div class="mobile-details" id="details-mobile-3"></div>
-      </div>
-      <div class="event-row cat-family-kids" id="ev-4" onclick="selectEvent(4)" 
-           data-title="Kids' Crafternoon: Dragon Eggs" data-venue="" data-category="Family &amp; kids" 
-           data-date="Monday, September 28" data-time="TBA" data-summary="" 
-           data-link="https://www.westbrookmaine.gov/calendar.aspx?view=list&CID=0" data-gcal="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Kids'%20Crafternoon%3A%20Dragon%20Eggs&dates=20260928/20260928&details=&location=" data-free="true" data-img="">
-        <div class="row-time">TBA</div>
-        <div class="row-content">
-          <div class="row-top">
-            <h4 class="row-title">Kids' Crafternoon: Dragon Eggs</h4>
-          </div>
-          <div class="row-meta"></div>
-          <div class="row-category">
-            <span class="cat-dot"></span> Family &amp; kids <span style="color:#15803d;margin-left:8px;">(FREE)</span>
-          </div>
-        </div>
-        <div class="row-arrow">›</div>
-        <div class="mobile-details" id="details-mobile-4"></div>
-      </div>
-      <div class="event-row cat-community-civic" id="ev-5" onclick="selectEvent(5)" 
-           data-title="Recreation and Conservation Meeting" data-venue="" data-category="Community &amp; civic" 
-           data-date="Monday, September 28" data-time="TBA" data-summary="" 
-           data-link="https://www.westbrookmaine.gov/calendar.aspx?view=list&CID=0" data-gcal="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Recreation%20and%20Conservation%20Meeting&dates=20260928/20260928&details=&location=" data-free="true" data-img="">
-        <div class="row-time">TBA</div>
-        <div class="row-content">
-          <div class="row-top">
-            <h4 class="row-title">Recreation and Conservation Meeting</h4>
-          </div>
-          <div class="row-meta"></div>
-          <div class="row-category">
-            <span class="cat-dot"></span> Community &amp; civic <span style="color:#15803d;margin-left:8px;">(FREE)</span>
-          </div>
-        </div>
-        <div class="row-arrow">›</div>
-        <div class="mobile-details" id="details-mobile-5"></div>
-      </div><h3 class="date-header">TUESDAY, SEPTEMBER 29 <span class="date-badge badge-tomorrow">TOMORROW</span></h3>
-      <div class="event-row cat-arts-music" id="ev-6" onclick="selectEvent(6)" 
-           data-title="Back Cove Books presents: “An Evening with Lois Lowry &amp; Rebecca Traister”" data-venue="Westbrook Performing Arts Center" data-category="Arts &amp; music" 
-           data-date="Tuesday, September 29" data-time="6:30 PM" data-summary="Join Newbery Medal recipient Lois Lowry and author Rebecca Traister for an evening of discussion, interaction, and empowerment celebrating Lowry's new novel, Building 903." 
-           data-link="https://www.westbrookpac.org/event/back-cove-books-presents-an-evening-with-lois-lowry-rebecca-traister/" data-gcal="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Back%20Cove%20Books%20presents%3A%20%E2%80%9CAn%20Evening%20with%20Lois%20Lowry%20%26%20Rebecca%20Traister%E2%80%9D&dates=20260929T223000Z/20260929T233000Z&details=Join%20Newbery%20Medal%20recipient%20Lois%20Lowry%20and%20author%20Rebecca%20Traister%20for%20an%20evening%20of%20discussion%2C%20interaction%2C%20and%20empowerment%20celebrating%20Lowry's%20new%20novel%2C%20Building%20903.&location=Westbrook%20Performing%20Arts%20Center" data-free="false" data-img="">
-        <div class="row-time">6:30 PM</div>
-        <div class="row-content">
-          <div class="row-top">
-            <h4 class="row-title">Back Cove Books presents: “An Evening with Lois Lowry &amp; Rebecca Traister”</h4>
-          </div>
-          <div class="row-meta">Westbrook Performing Arts Center</div>
-          <div class="row-category">
-            <span class="cat-dot"></span> Arts &amp; music 
-          </div>
-        </div>
-        <div class="row-arrow">›</div>
-        <div class="mobile-details" id="details-mobile-6"></div>
-      </div>
-      <div class="event-row cat-health-wellness" id="ev-7" onclick="selectEvent(7)" 
-           data-title="Peewee's Playhouse" data-venue="" data-category="Health &amp; wellness" 
-           data-date="Tuesday, September 29" data-time="3:00 PM" data-summary="Today's top headlines feature a powerful coastal storm in the Northeast, security arrests in the United Kingdom, and ongoing developments in the Middle East, according to NBC News." 
-           data-link="" data-gcal="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Peewee's%20Playhouse&dates=20260929T190000Z/20260929T200000Z&details=Today's%20top%20headlines%20feature%20a%20powerful%20coastal%20storm%20in%20the%20Northeast%2C%20security%20arrests%20in%20the%20United%20Kingdom%2C%20and%20ongoing%20developments%20in%20the%20Middle%20East%2C%20according%20to%20NBC%20News.&location=" data-free="true" data-img="">
-        <div class="row-time">3:00 PM</div>
-        <div class="row-content">
-          <div class="row-top">
-            <h4 class="row-title">Peewee's Playhouse</h4>
-          </div>
-          <div class="row-meta"></div>
-          <div class="row-category">
-            <span class="cat-dot"></span> Health &amp; wellness <span style="color:#15803d;margin-left:8px;">(FREE)</span>
-          </div>
-        </div>
-        <div class="row-arrow">›</div>
-        <div class="mobile-details" id="details-mobile-7"></div>
-      </div>
-      <div class="event-row cat-sports-recreation" id="ev-8" onclick="selectEvent(8)" 
-           data-title="Testy 4321" data-venue="Doyon House" data-category="Sports &amp; recreation" 
-           data-date="Tuesday, September 29" data-time="6:09 AM" data-summary="Testy testy testy!" 
-           data-link="" data-gcal="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Testy%204321&dates=20260929T100900Z/20260929T110900Z&details=Testy%20testy%20testy!&location=Doyon%20House" data-free="true" data-img="">
-        <div class="row-time">6:09 AM</div>
-        <div class="row-content">
-          <div class="row-top">
-            <h4 class="row-title">Testy 4321</h4>
-          </div>
-          <div class="row-meta">Doyon House</div>
-          <div class="row-category">
-            <span class="cat-dot"></span> Sports &amp; recreation <span style="color:#15803d;margin-left:8px;">(FREE)</span>
-          </div>
-        </div>
-        <div class="row-arrow">›</div>
-        <div class="mobile-details" id="details-mobile-8"></div>
-      </div>
-      <div class="event-row cat-arts-music" id="ev-9" onclick="selectEvent(9)" 
-           data-title="Warcraft for Everyone Day" data-venue="Gerry's Place" data-category="Arts &amp; music" 
-           data-date="Tuesday, September 29" data-time="2:15 PM" data-summary="Please, PLEAE work!" 
-           data-link="" data-gcal="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Warcraft%20for%20Everyone%20Day&dates=20260929T181500Z/20260929T191500Z&details=Please%2C%20PLEAE%20work!&location=Gerry's%20Place" data-free="true" data-img="">
-        <div class="row-time">2:15 PM</div>
-        <div class="row-content">
-          <div class="row-top">
-            <h4 class="row-title">Warcraft for Everyone Day</h4>
-          </div>
-          <div class="row-meta">Gerry's Place</div>
-          <div class="row-category">
-            <span class="cat-dot"></span> Arts &amp; music <span style="color:#15803d;margin-left:8px;">(FREE)</span>
-          </div>
-        </div>
-        <div class="row-arrow">›</div>
-        <div class="mobile-details" id="details-mobile-9"></div>
-      </div><h3 class="date-header">WEDNESDAY, SEPTEMBER 30</h3>
-      <div class="event-row cat-arts-music" id="ev-10" onclick="selectEvent(10)" 
-           data-title="Bruce Marshall" data-venue="Lenny's Pub" data-category="Arts &amp; music" 
-           data-date="Wednesday, September 30" data-time="6:30 PM" data-summary="Live performance by Bruce Marshall at Lenny's Pub." 
-           data-link="https://www.lennyspub.com/calendar" data-gcal="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bruce%20Marshall&dates=20260930T223000Z/20260930T233000Z&details=Live%20performance%20by%20Bruce%20Marshall%20at%20Lenny's%20Pub.&location=Lenny's%20Pub" data-free="false" data-img="">
-        <div class="row-time">6:30 PM</div>
-        <div class="row-content">
-          <div class="row-top">
-            <h4 class="row-title">Bruce Marshall</h4>
-          </div>
-          <div class="row-meta">Lenny's Pub</div>
-          <div class="row-category">
-            <span class="cat-dot"></span> Arts &amp; music 
-          </div>
-        </div>
-        <div class="row-arrow">›</div>
-        <div class="mobile-details" id="details-mobile-10"></div>
-      </div><h2 class="month-header" id="month-October-2026">OCTOBER 2026</h2><h3 class="date-header">SATURDAY, OCTOBER 3 <span class="date-badge badge-weekend">THIS WEEKEND</span></h3>
-      <div class="event-row cat-family-kids" id="ev-11" onclick="selectEvent(11)" 
-           data-title="Bike Festival at Rock Row" data-venue="Quarryside at Rock Row" data-category="Family &amp; kids" 
-           data-date="Saturday, October 3" data-time="12:00 PM" data-summary="Looking for something to do with the whole family? Look no further, the Bike Festival is just the place for you on Sat, October 3 from 12pm - 6pm for all things Bike related!" 
-           data-link="https://rockrow.com/event/bike-festival-at-rock-row/" data-gcal="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bike%20Festival%20at%20Rock%20Row&dates=20261003T160000Z/20261003T170000Z&details=Looking%20for%20something%20to%20do%20with%20the%20whole%20family%3F%20Look%20no%20further%2C%20the%20Bike%20Festival%20is%20just%20the%20place%20for%20you%20on%20Sat%2C%20October%203%20from%2012pm%20-%206pm%20for%20all%20things%20Bike%20related!&location=Quarryside%20at%20Rock%20Row" data-free="true" data-img="">
-        <div class="row-time">12:00 PM</div>
-        <div class="row-content">
-          <div class="row-top">
-            <h4 class="row-title">Bike Festival at Rock Row</h4>
-          </div>
-          <div class="row-meta">Quarryside at Rock Row</div>
-          <div class="row-category">
-            <span class="cat-dot"></span> Family &amp; kids <span style="color:#15803d;margin-left:8px;">(FREE)</span>
-          </div>
-        </div>
-        <div class="row-arrow">›</div>
-        <div class="mobile-details" id="details-mobile-11"></div>
-      </div><h3 class="date-header">MONDAY, OCTOBER 5</h3>
-      <div class="event-row cat-community-civic" id="ev-12" onclick="selectEvent(12)" 
-           data-title="Regular City Council Meeting" data-venue="Westbrook, ME" data-category="Community &amp; civic" 
-           data-date="Monday, October 5" data-time="7:00 PM" data-summary="Regular City Council Meeting held by the City of Westbrook at 125 Stroudwater Street." 
-           data-link="https://www.westbrookmaine.gov/Calendar.aspx?EID=3252" data-gcal="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Regular%20City%20Council%20Meeting&dates=20261005T230000Z/20261006T000000Z&details=Regular%20City%20Council%20Meeting%20held%20by%20the%20City%20of%20Westbrook%20at%20125%20Stroudwater%20Street.&location=Westbrook%2C%20ME" data-free="true" data-img="">
-        <div class="row-time">7:00 PM</div>
-        <div class="row-content">
-          <div class="row-top">
-            <h4 class="row-title">Regular City Council Meeting</h4>
-          </div>
-          <div class="row-meta">Westbrook, ME</div>
-          <div class="row-category">
-            <span class="cat-dot"></span> Community &amp; civic <span style="color:#15803d;margin-left:8px;">(FREE)</span>
-          </div>
-        </div>
-        <div class="row-arrow">›</div>
-        <div class="mobile-details" id="details-mobile-12"></div>
-      </div><h3 class="date-header">WEDNESDAY, OCTOBER 14</h3>
-      <div class="event-row cat-health-wellness" id="ev-13" onclick="selectEvent(13)" 
-           data-title="Cow Tipping Party" data-venue="Cow Tipping Farm" data-category="Health &amp; wellness" 
-           data-date="Wednesday, October 14" data-time="6:12 AM" data-summary="This is my summary and I like it a lot." 
-           data-link="www.westbrookmaine.gov" data-gcal="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Cow%20Tipping%20Party&dates=20261014T101200Z/20261014T111200Z&details=This%20is%20my%20summary%20and%20I%20like%20it%20a%20lot.&location=Cow%20Tipping%20Farm" data-free="true" data-img="">
-        <div class="row-time">6:12 AM</div>
-        <div class="row-content">
-          <div class="row-top">
-            <h4 class="row-title">Cow Tipping Party</h4>
-          </div>
-          <div class="row-meta">Cow Tipping Farm</div>
-          <div class="row-category">
-            <span class="cat-dot"></span> Health &amp; wellness <span style="color:#15803d;margin-left:8px;">(FREE)</span>
-          </div>
-        </div>
-        <div class="row-arrow">›</div>
-        <div class="mobile-details" id="details-mobile-13"></div>
-      </div><h3 class="date-header">SATURDAY, OCTOBER 24</h3>
-      <div class="event-row cat-family-kids" id="ev-14" onclick="selectEvent(14)" 
-           data-title="Trick or Treat at Rock Row" data-venue="Quarryside at Rock Row" data-category="Family &amp; kids" 
-           data-date="Saturday, October 24" data-time="11:30 AM" data-summary="Join us right here at Rock Row from 11:30am-2:30pm on October 24 and enjoy treats and festive fun for a “Hauntingly” good time!" 
-           data-link="https://rockrow.com/event/trick-or-treat-at-rock-row/" data-gcal="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Trick%20or%20Treat%20at%20Rock%20Row&dates=20261024T153000Z/20261024T163000Z&details=Join%20us%20right%20here%20at%20Rock%20Row%20from%2011%3A30am-2%3A30pm%20on%20October%2024%20and%20enjoy%20treats%20and%20festive%20fun%20for%20a%20%E2%80%9CHauntingly%E2%80%9D%20good%20time!&location=Quarryside%20at%20Rock%20Row" data-free="true" data-img="">
-        <div class="row-time">11:30 AM</div>
-        <div class="row-content">
-          <div class="row-top">
-            <h4 class="row-title">Trick or Treat at Rock Row</h4>
-          </div>
-          <div class="row-meta">Quarryside at Rock Row</div>
-          <div class="row-category">
-            <span class="cat-dot"></span> Family &amp; kids <span style="color:#15803d;margin-left:8px;">(FREE)</span>
-          </div>
-        </div>
-        <div class="row-arrow">›</div>
-        <div class="mobile-details" id="details-mobile-14"></div>
-      </div><h2 class="month-header" id="month-December-2026">DECEMBER 2026</h2><h3 class="date-header">TUESDAY, DECEMBER 15</h3>
-      <div class="event-row cat-family-kids" id="ev-15" onclick="selectEvent(15)" 
-           data-title="Santa Claus is Coming To Rock Row" data-venue="Cowbell Rock Row" data-category="Family &amp; kids" 
-           data-date="Tuesday, December 15" data-time="5:30 PM" data-summary="Join us right here at Cowbell Rock Row on December 15 for this special meet &amp; greet, photo opportunity with Santa!" 
-           data-link="https://rockrow.com/event/santa2026/" data-gcal="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Santa%20Claus%20is%20Coming%20To%20Rock%20Row&dates=20261215T223000Z/20261215T233000Z&details=Join%20us%20right%20here%20at%20Cowbell%20Rock%20Row%20on%20December%2015%20for%20this%20special%20meet%20%26%20greet%2C%20photo%20opportunity%20with%20Santa!&location=Cowbell%20Rock%20Row" data-free="true" data-img="">
-        <div class="row-time">5:30 PM</div>
-        <div class="row-content">
-          <div class="row-top">
-            <h4 class="row-title">Santa Claus is Coming To Rock Row</h4>
-          </div>
-          <div class="row-meta">Cowbell Rock Row</div>
-          <div class="row-category">
-            <span class="cat-dot"></span> Family &amp; kids <span style="color:#15803d;margin-left:8px;">(FREE)</span>
-          </div>
-        </div>
-        <div class="row-arrow">›</div>
-        <div class="mobile-details" id="details-mobile-15"></div>
-      </div></div><div class="detail-pane" id="detailPane"><div style="text-align:center; color:#94a3b8; margin-top:5rem;"><h3>Select an event to view details</h3></div></div></div>
+  <header><div class="brand-container"><div class="logo-group"><a href="index.html"><img src="https://gpdoyon-maker.github.io/westbrook-current/logo-desktop.webp?v=1790678898547" class="logo-desktop"></a><img src="https://gpdoyon-maker.github.io/westbrook-current/logo-mobile.webp?v=1790678898547" class="logo-mobile"><p class="site-tagline">Local events, real connections — Westbrook, ME only</p></div><button class="menu-toggle" onclick="toggleMobileMenu()">≡</button><nav class="nav-links" id="main-nav"><a href="index.html">Events</a><a href="about.html">About</a></nav></div></header>
+  <div class="controls-wrapper"><div class="controls-container"><select id="mJump" class="search-input" onchange="jump()"><option value="">Month...</option><option value="month-September-2026">September 2026</option><option value="month-October-2026">October 2026</option><option value="month-December-2026">December 2026</option></select><select id="cFilter" class="search-input" onchange="runFilters()"><option value="all">Categories...</option><option value="cat-arts-&-music">Arts & music</option><option value="cat-community-&-civic">Community & civic</option><option value="cat-classes-&-learning">Classes & learning</option><option value="cat-family-&-kids">Family & kids</option><option value="cat-food-&-drink">Food & drink</option><option value="cat-health-&-wellness">Health & wellness</option><option value="cat-markets-&-shopping">Markets & shopping</option><option value="cat-outdoors-&-nature">Outdoors & nature</option><option value="cat-sports-&-recreation">Sports & recreation</option><option value="cat-seniors">Seniors</option><option value="cat-faith-&-spirituality">Faith & spirituality</option><option value="cat-other">Other</option></select><input type="text" id="searchInput" class="search-input" placeholder="Search..." oninput="runFilters()"></div></div>
+  <div class="main-layout"><div class="list-pane"><h2 class="month-header" id="month-September-2026">SEPTEMBER 2026</h2><h3 class="date-header">TUESDAY, SEPTEMBER 29 <span class="date-badge badge-today">TODAY</span></h3><div class="event-row cat-arts-music" id="ev-0" onclick="selectEvent(0)" data-title="Back Cove Books presents: “An Evening with Lois Lowry &amp; Rebecca Traister”" data-venue="Westbrook Performing Arts Center" data-category="Arts &amp; music" data-date="Tuesday, September 29" data-time="6:30 PM" data-summary="Join Newbery Medal recipient Lois Lowry and author Rebecca Traister for an evening of discussion, interaction, and empowerment celebrating Lowry's new novel, Building 903." data-link="https://www.westbrookpac.org/event/back-cove-books-presents-an-evening-with-lois-lowry-rebecca-traister/" data-gcal="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Back%20Cove%20Books%20presents%3A%20%E2%80%9CAn%20Evening%20with%20Lois%20Lowry%20%26%20Rebecca%20Traister%E2%80%9D&dates=20260929T223000Z/20260929T233000Z&details=Join%20Newbery%20Medal%20recipient%20Lois%20Lowry%20and%20author%20Rebecca%20Traister%20for%20an%20evening%20of%20discussion%2C%20interaction%2C%20and%20empowerment%20celebrating%20Lowry's%20new%20novel%2C%20Building%20903.&location=Westbrook%20Performing%20Arts%20Center" data-free="false" data-img=""><div class="row-time">6:30 PM</div><div class="row-content"><h4 class="row-title">Back Cove Books presents: “An Evening with Lois Lowry &amp; Rebecca Traister”</h4><div class="row-meta">Westbrook Performing Arts Center</div><div class="row-category"><span class="cat-dot"></span> Arts &amp; music </div></div><div class="row-arrow">›</div><div class="mobile-details" id="details-mobile-0"></div></div><div class="event-row cat-health-wellness" id="ev-1" onclick="selectEvent(1)" data-title="Peewee's Playhouse" data-venue="" data-category="Health &amp; wellness" data-date="Tuesday, September 29" data-time="3:00 PM" data-summary="Today's top headlines feature a powerful coastal storm in the Northeast, security arrests in the United Kingdom, and ongoing developments in the Middle East, according to NBC News." data-link="" data-gcal="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Peewee's%20Playhouse&dates=20260929T190000Z/20260929T200000Z&details=Today's%20top%20headlines%20feature%20a%20powerful%20coastal%20storm%20in%20the%20Northeast%2C%20security%20arrests%20in%20the%20United%20Kingdom%2C%20and%20ongoing%20developments%20in%20the%20Middle%20East%2C%20according%20to%20NBC%20News.&location=" data-free="true" data-img=""><div class="row-time">3:00 PM</div><div class="row-content"><h4 class="row-title">Peewee's Playhouse</h4><div class="row-meta"></div><div class="row-category"><span class="cat-dot"></span> Health &amp; wellness <span style="color:#15803d;margin-left:8px;">(FREE)</span></div></div><div class="row-arrow">›</div><div class="mobile-details" id="details-mobile-1"></div></div><div class="event-row cat-sports-recreation" id="ev-2" onclick="selectEvent(2)" data-title="Testy 4321" data-venue="Doyon House" data-category="Sports &amp; recreation" data-date="Tuesday, September 29" data-time="6:09 AM" data-summary="Testy testy testy!" data-link="" data-gcal="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Testy%204321&dates=20260929T100900Z/20260929T110900Z&details=Testy%20testy%20testy!&location=Doyon%20House" data-free="true" data-img=""><div class="row-time">6:09 AM</div><div class="row-content"><h4 class="row-title">Testy 4321</h4><div class="row-meta">Doyon House</div><div class="row-category"><span class="cat-dot"></span> Sports &amp; recreation <span style="color:#15803d;margin-left:8px;">(FREE)</span></div></div><div class="row-arrow">›</div><div class="mobile-details" id="details-mobile-2"></div></div><div class="event-row cat-arts-music" id="ev-3" onclick="selectEvent(3)" data-title="Warcraft for Everyone Day" data-venue="Gerry's Place" data-category="Arts &amp; music" data-date="Tuesday, September 29" data-time="2:15 PM" data-summary="Please, PLEAE work!" data-link="" data-gcal="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Warcraft%20for%20Everyone%20Day&dates=20260929T181500Z/20260929T191500Z&details=Please%2C%20PLEAE%20work!&location=Gerry's%20Place" data-free="true" data-img=""><div class="row-time">2:15 PM</div><div class="row-content"><h4 class="row-title">Warcraft for Everyone Day</h4><div class="row-meta">Gerry's Place</div><div class="row-category"><span class="cat-dot"></span> Arts &amp; music <span style="color:#15803d;margin-left:8px;">(FREE)</span></div></div><div class="row-arrow">›</div><div class="mobile-details" id="details-mobile-3"></div></div><h3 class="date-header">WEDNESDAY, SEPTEMBER 30 <span class="date-badge badge-tomorrow">TOMORROW</span></h3><div class="event-row cat-arts-music" id="ev-4" onclick="selectEvent(4)" data-title="Bruce Marshall" data-venue="Lenny's Pub" data-category="Arts &amp; music" data-date="Wednesday, September 30" data-time="6:30 PM" data-summary="Live performance by Bruce Marshall at Lenny's Pub." data-link="https://www.lennyspub.com/calendar" data-gcal="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bruce%20Marshall&dates=20260930T223000Z/20260930T233000Z&details=Live%20performance%20by%20Bruce%20Marshall%20at%20Lenny's%20Pub.&location=Lenny's%20Pub" data-free="false" data-img=""><div class="row-time">6:30 PM</div><div class="row-content"><h4 class="row-title">Bruce Marshall</h4><div class="row-meta">Lenny's Pub</div><div class="row-category"><span class="cat-dot"></span> Arts &amp; music </div></div><div class="row-arrow">›</div><div class="mobile-details" id="details-mobile-4"></div></div><h2 class="month-header" id="month-October-2026">OCTOBER 2026</h2><h3 class="date-header">SATURDAY, OCTOBER 3 <span class="date-badge badge-weekend">THIS WEEKEND</span></h3><div class="event-row cat-family-kids" id="ev-5" onclick="selectEvent(5)" data-title="Bike Festival at Rock Row" data-venue="Quarryside at Rock Row" data-category="Family &amp; kids" data-date="Saturday, October 3" data-time="12:00 PM" data-summary="Looking for something to do with the whole family? Look no further, the Bike Festival is just the place for you on Sat, October 3 from 12pm - 6pm for all things Bike related!" data-link="https://rockrow.com/event/bike-festival-at-rock-row/" data-gcal="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bike%20Festival%20at%20Rock%20Row&dates=20261003T160000Z/20261003T170000Z&details=Looking%20for%20something%20to%20do%20with%20the%20whole%20family%3F%20Look%20no%20further%2C%20the%20Bike%20Festival%20is%20just%20the%20place%20for%20you%20on%20Sat%2C%20October%203%20from%2012pm%20-%206pm%20for%20all%20things%20Bike%20related!&location=Quarryside%20at%20Rock%20Row" data-free="true" data-img=""><div class="row-time">12:00 PM</div><div class="row-content"><h4 class="row-title">Bike Festival at Rock Row</h4><div class="row-meta">Quarryside at Rock Row</div><div class="row-category"><span class="cat-dot"></span> Family &amp; kids <span style="color:#15803d;margin-left:8px;">(FREE)</span></div></div><div class="row-arrow">›</div><div class="mobile-details" id="details-mobile-5"></div></div><h3 class="date-header">MONDAY, OCTOBER 5</h3><div class="event-row cat-community-civic" id="ev-6" onclick="selectEvent(6)" data-title="Regular City Council Meeting" data-venue="Westbrook, ME" data-category="Community &amp; civic" data-date="Monday, October 5" data-time="7:00 PM" data-summary="Regular City Council Meeting held by the City of Westbrook at 125 Stroudwater Street." data-link="https://www.westbrookmaine.gov/Calendar.aspx?EID=3252" data-gcal="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Regular%20City%20Council%20Meeting&dates=20261005T230000Z/20261006T000000Z&details=Regular%20City%20Council%20Meeting%20held%20by%20the%20City%20of%20Westbrook%20at%20125%20Stroudwater%20Street.&location=Westbrook%2C%20ME" data-free="true" data-img=""><div class="row-time">7:00 PM</div><div class="row-content"><h4 class="row-title">Regular City Council Meeting</h4><div class="row-meta">Westbrook, ME</div><div class="row-category"><span class="cat-dot"></span> Community &amp; civic <span style="color:#15803d;margin-left:8px;">(FREE)</span></div></div><div class="row-arrow">›</div><div class="mobile-details" id="details-mobile-6"></div></div><h3 class="date-header">WEDNESDAY, OCTOBER 14</h3><div class="event-row cat-health-wellness" id="ev-7" onclick="selectEvent(7)" data-title="Cow Tipping Party" data-venue="Cow Tipping Farm" data-category="Health &amp; wellness" data-date="Wednesday, October 14" data-time="6:12 AM" data-summary="This is my summary and I like it a lot." data-link="www.westbrookmaine.gov" data-gcal="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Cow%20Tipping%20Party&dates=20261014T101200Z/20261014T111200Z&details=This%20is%20my%20summary%20and%20I%20like%20it%20a%20lot.&location=Cow%20Tipping%20Farm" data-free="true" data-img=""><div class="row-time">6:12 AM</div><div class="row-content"><h4 class="row-title">Cow Tipping Party</h4><div class="row-meta">Cow Tipping Farm</div><div class="row-category"><span class="cat-dot"></span> Health &amp; wellness <span style="color:#15803d;margin-left:8px;">(FREE)</span></div></div><div class="row-arrow">›</div><div class="mobile-details" id="details-mobile-7"></div></div><h3 class="date-header">SATURDAY, OCTOBER 24</h3><div class="event-row cat-family-kids" id="ev-8" onclick="selectEvent(8)" data-title="Trick or Treat at Rock Row" data-venue="Quarryside at Rock Row" data-category="Family &amp; kids" data-date="Saturday, October 24" data-time="11:30 AM" data-summary="Join us right here at Rock Row from 11:30am-2:30pm on October 24 and enjoy treats and festive fun for a “Hauntingly” good time!" data-link="https://rockrow.com/event/trick-or-treat-at-rock-row/" data-gcal="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Trick%20or%20Treat%20at%20Rock%20Row&dates=20261024T153000Z/20261024T163000Z&details=Join%20us%20right%20here%20at%20Rock%20Row%20from%2011%3A30am-2%3A30pm%20on%20October%2024%20and%20enjoy%20treats%20and%20festive%20fun%20for%20a%20%E2%80%9CHauntingly%E2%80%9D%20good%20time!&location=Quarryside%20at%20Rock%20Row" data-free="true" data-img=""><div class="row-time">11:30 AM</div><div class="row-content"><h4 class="row-title">Trick or Treat at Rock Row</h4><div class="row-meta">Quarryside at Rock Row</div><div class="row-category"><span class="cat-dot"></span> Family &amp; kids <span style="color:#15803d;margin-left:8px;">(FREE)</span></div></div><div class="row-arrow">›</div><div class="mobile-details" id="details-mobile-8"></div></div><h2 class="month-header" id="month-December-2026">DECEMBER 2026</h2><h3 class="date-header">TUESDAY, DECEMBER 15</h3><div class="event-row cat-family-kids" id="ev-9" onclick="selectEvent(9)" data-title="Santa Claus is Coming To Rock Row" data-venue="Cowbell Rock Row" data-category="Family &amp; kids" data-date="Tuesday, December 15" data-time="5:30 PM" data-summary="Join us right here at Cowbell Rock Row on December 15 for this special meet &amp; greet, photo opportunity with Santa!" data-link="https://rockrow.com/event/santa2026/" data-gcal="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Santa%20Claus%20is%20Coming%20To%20Rock%20Row&dates=20261215T223000Z/20261215T233000Z&details=Join%20us%20right%20here%20at%20Cowbell%20Rock%20Row%20on%20December%2015%20for%20this%20special%20meet%20%26%20greet%2C%20photo%20opportunity%20with%20Santa!&location=Cowbell%20Rock%20Row" data-free="true" data-img=""><div class="row-time">5:30 PM</div><div class="row-content"><h4 class="row-title">Santa Claus is Coming To Rock Row</h4><div class="row-meta">Cowbell Rock Row</div><div class="row-category"><span class="cat-dot"></span> Family &amp; kids <span style="color:#15803d;margin-left:8px;">(FREE)</span></div></div><div class="row-arrow">›</div><div class="mobile-details" id="details-mobile-9"></div></div></div><div class="detail-pane" id="detailPane"></div></div>
   <script>
   function toggleMobileMenu() {
     const btn = document.querySelector('.menu-toggle');
@@ -360,11 +86,11 @@
     }
     function selectEvent(idx){
       const r=document.getElementById('ev-'+idx); const d=r.dataset;
-      const html=`<div class="detail-card">${d.img ? '<img src="'+d.img+'" style="width:100%; border-radius:12px; margin-bottom:1rem;">' : ''}<p style="text-transform:uppercase; color:var(--logo-mid); font-weight:800; font-size:0.8rem;">${d.category}</p><h2>${d.title}</h2><p>📍 <strong>${d.venue}</strong></p><p>📅 <strong>${d.date}</strong></p><p>⏰ <strong>${d.time}</strong></p><div style="margin:2rem 0; line-height:1.6;">${d.summary}</div><a href="${d.link}" target="_blank" class="btn btn-blue">Visit Event Website ↗</a><a href="${d.gcal}" target="_blank" class="btn" style="border:1.5px solid var(--border); color:var(--text-navy);">+ Google Calendar</a></div>`;
+      const html=`<div class="detail-card" style="width:100%; box-sizing:border-box;">${d.img && d.img.length > 5 ? '<img src="'+d.img+'" style="width:100%; border-radius:12px; margin-bottom:1.5rem;">' : ''}<p style="text-transform:uppercase; color:var(--logo-mid); font-weight:800; font-size:0.8rem; margin-bottom:0.5rem;">${d.category}</p><h2 style="margin:0 0 1.5rem 0; font-size:1.8rem; line-height:1.2;">${d.title}</h2><div style="display:flex; flex-direction:column; gap:0.75rem; margin-bottom:2rem; color:var(--text-navy); font-size:0.95rem;"><span>📍 <strong>${d.venue}</strong></span><span>📅 <strong>${d.date}</strong></span><span>⏰ <strong>${d.time}</strong></span></div><div style="margin:2rem 0; line-height:1.6; color:var(--text-muted); font-size:1rem;">${d.summary}</div><div style="display:flex; flex-direction:column; gap:0.75rem; margin-top:2rem;"><a href="${d.link}" target="_blank" class="btn btn-blue" style="margin:0;">Visit Event Website ↗</a><a href="${d.gcal}" target="_blank" class="btn" style="border:1.5px solid var(--border); color:var(--text-navy); margin:0;">+ Google Calendar</a></div></div>`;
       if(window.innerWidth <= 768){
         const isExp = r.classList.contains('expanded');
         document.querySelectorAll('.event-row').forEach(row=>row.classList.remove('expanded'));
-        if(!isExp) { r.classList.add('expanded'); document.getElementById('details-mobile-'+idx).innerHTML=html; r.scrollIntoView({behavior:'smooth', block:'center'}); }
+        if(!isExp) { r.classList.add('expanded'); document.getElementById('details-mobile-'+idx).innerHTML=html; r.scrollIntoView({behavior:'smooth', block:'start'}); window.scrollBy(0, -110); }
       } else {
         document.querySelectorAll('.event-row').forEach(row=>row.style.borderColor='var(--border)');
         r.style.borderColor='var(--logo-mid)';
