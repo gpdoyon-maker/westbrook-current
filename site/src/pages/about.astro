@@ -1,0 +1,50 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+---
+
+<SiteLayout title="About | Westbrook Currents" currentPage="about">
+  <main class="about-wrap">
+    <article class="about-content">
+      <header class="profile-section">
+        <img class="profile-photo" src="/gerry-westbrook-currents-about.webp" alt="Gerry, founder and editor of Westbrook Currents" />
+        <div class="profile-heading">
+          <p>Founder &amp; Editor</p>
+          <h1>About Westbrook Currents</h1>
+        </div>
+      </header>
+      <div class="story">
+        <p>I grew up in Westbrook, went away for a while, and eventually came home to raise a family. As a military retiree, I’ve had the chance to see the world—but Westbrook is still the place for me.</p>
+        <p>Westbrook is a diverse community with a lot to offer. From civic meetings and recreational activities to cultural celebrations and neighborhood gatherings, there are plenty of ways to get involved. Finding out what’s happening should be easy.</p>
+        <blockquote>That’s why I created Westbrook Currents: a central meeting place for community events. My goal is to bring local happenings together so you can spend less time searching and more time connecting.</blockquote>
+        <p>This site is here to complement the websites already serving our community. Events shared here—including ones you submit—can link back to the website where they were originally posted.</p>
+        <p class="signoff">Local Events. Real Connections.<br /><span>— Gerry</span></p>
+      </div>
+      <a class="back-link" href="/">Back to Events</a>
+    </article>
+  </main>
+
+  <style>
+    .about-wrap { width: min(860px, 100%); margin: 0 auto; padding: 44px 24px 20px; }
+    .about-content { padding: 38px; border: 1px solid #d8e2e8; border-radius: 6px; background: #fff; box-shadow: 0 14px 35px #092c430d; }
+    .profile-section { display: flex; align-items: center; gap: 28px; margin: 0 0 30px; padding: 0 0 28px; border-bottom: 1px solid var(--line); }
+    .profile-photo { width: 172px; height: 172px; flex: 0 0 172px; border: 4px solid #82d7ef; border-radius: 50%; object-fit: cover; }
+    .profile-heading p { margin: 0 0 8px; color: var(--blue); font-size: 12px; font-weight: 800; text-transform: uppercase; }
+    .profile-heading h1 { margin: 0; color: var(--navy); font-size: 34px; line-height: 1.12; }
+    .story { color: #294858; font-size: 16px; line-height: 1.8; }
+    .story p { margin: 0 0 18px; }
+    .story blockquote { margin: 24px 0; padding: 20px 22px; border-left: 4px solid var(--blue); color: #16445c; background: var(--mist); font-size: 18px; font-weight: 700; line-height: 1.6; }
+    .signoff { margin-top: 34px !important; color: var(--blue); font-size: 20px; font-weight: 800; line-height: 1.5 !important; }
+    .signoff span { display: inline-block; margin-top: 8px; font-size: 23px; }
+    .back-link { display: block; margin-top: 28px; padding: 14px; border-radius: 4px; color: #fff; background: var(--blue); font-size: 15px; font-weight: 800; text-align: center; text-decoration: none; }
+    .back-link:hover { background: #066b8e; }
+    @media (max-width: 600px) {
+      .about-wrap { padding: 22px 12px 12px; }
+      .about-content { padding: 24px 18px; }
+      .profile-section { flex-direction: column; gap: 18px; text-align: center; }
+      .profile-photo { width: 148px; height: 148px; flex-basis: 148px; }
+      .profile-heading h1 { font-size: 28px; }
+      .story { font-size: 15px; }
+      .story blockquote { padding: 16px; font-size: 16px; }
+    }
+  </style>
+</SiteLayout>

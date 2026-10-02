@@ -1,0 +1,301 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import events from '../data/events.json';
+
+const categoryColors: Record<string, string> = {
+  'Arts & music': '#8b6fb3',
+  'Community & civic': '#3b6e91',
+  'Classes & learning': '#a47726',
+  'Family & kids': '#c0765a',
+  'Food & drink': '#a14e4e',
+  'Health & wellness': '#347c60',
+  'Markets & shopping': '#8c7a4e',
+  'Outdoors & nature': '#4b784b',
+  'Sports & recreation': '#3e7ca6',
+  Seniors: '#71627f',
+  'Faith & spirituality': '#896b95',
+  Other: '#6e6e6e',
+};
+
+const formatDisplayTime = (value: string) => {
+  const [hours, minutes] = value.split(':').map(Number);
+  const period = hours >= 12 ? 'PM' : 'AM';
+  const hour = hours % 12 || 12;
+  return `${hour}:${String(minutes).padStart(2, '0')} ${period}`;
+};
+
+const eventRecords = events.map((event, index) => ({
+  ...event,
+  index,
+  displayStartTime: formatDisplayTime(event.startTime),
+  displayEndTime: formatDisplayTime(event.endTime),
+}));
+const categories = [...new Set(events.map((event) => event.category))].sort((a, b) => a.localeCompare(b));
+const monthKeys = [...new Set(events.map((event) => event.date.slice(0, 7)))].sort();
+const months = monthKeys.map((key) => {
+  const date = new Date(`${key}-01T12:00:00Z`);
+  const monthLabel = new Intl.DateTimeFormat('en-US', { month: 'long', year: 'numeric', timeZone: 'UTC' }).format(date);
+  const days = [...new Set(events.filter((event) => event.date.startsWith(key)).map((event) => event.date))].sort().map((day) => ({
+    date: day,
+    label: new Intl.DateTimeFormat('en-US', { weekday: 'long', month: 'long', day: 'numeric', timeZone: 'UTC' }).format(new Date(`${day}T12:00:00Z`)),
+    events: eventRecords.filter((event) => event.date === day),
+  }));
+  return { key, label: monthLabel, days };
+});
+---
+
+<SiteLayout title="Events | Westbrook Currents">
+  <main class="events-page">
+    <section class="controls-wrapper" aria-label="Event filters">
+      <div class="controls-container">
+        <label class="visually-hidden" for="monthJump">Jump to month</label>
+        <select id="monthJump" class="filter-control">
+          <option value="">Month...</option>
+          {months.map((month) => <option value={month.key}>{month.label}</option>)}
+        </select>
+        <label class="visually-hidden" for="categoryFilter">Filter by category</label>
+        <select id="categoryFilter" class="filter-control">
+          <option value="">Categories...</option>
+          {categories.map((category) => <option value={category}>{category}</option>)}
+        </select>
+        <label class="visually-hidden" for="searchInput">Search events</label>
+        <input id="searchInput" class="filter-control search-input" type="search" placeholder="Search events" autocomplete="off" />
+      </div>
+    </section>
+
+    <div class="main-layout">
+      <div class="list-pane" id="eventList" aria-label="Events">
+        {months.map((month) => (
+          <section class="month-section" id={`month-${month.key}`} data-month={month.key}>
+            <h2 class="month-header">{month.label}</h2>
+            {month.days.map((day) => (
+              <section class="date-group" data-date={day.date}>
+                <h3 class="date-header">
+                  <span>{day.label}</span>
+                  <span class="today-badge" hidden>TODAY</span>
+                </h3>
+                {day.events.map((event) => (
+                  <div class="event-entry">
+                    <button
+                      class="event-row"
+                      type="button"
+                      data-event-index={event.index}
+                      data-category={event.category}
+                      data-search={`${event.title} ${event.venue} ${event.category} ${event.description}`.toLocaleLowerCase()}
+                      style={`--event-accent:${categoryColors[event.category] ?? '#6e6e6e'}`}
+                    >
+                      <span class="row-time">{event.displayStartTime}</span>
+                      <span class="row-content">
+                        <span class="row-title">{event.title}</span>
+                        <span class="row-meta">{event.venue || 'Venue not listed'}</span>
+                        <span class="row-category"><span class="cat-dot"></span>{event.category}{event.admission === 'free' && <span class="free-label">FREE</span>}</span>
+                      </span>
+                      <span class="row-arrow" aria-hidden="true">›</span>
+                    </button>
+                    <div class="mobile-details" aria-live="polite"></div>
+                  </div>
+                ))}
+              </section>
+            ))}
+          </section>
+        ))}
+      </div>
+      <aside class="detail-pane" id="detailPane" aria-live="polite" aria-label="Event details">
+        <p class="detail-empty">Choose an event</p>
+      </aside>
+    </div>
+  </main>
+
+  <style>
+    .events-page { min-height: 70vh; }
+    .controls-wrapper { position: sticky; z-index: 8; top: 86px; padding: 12px 20px; border-bottom: 1px solid var(--line); background: #fff; box-shadow: 0 3px 10px #092c4310; }
+    .controls-container { display: grid; grid-template-columns: minmax(160px, 1fr) minmax(180px, 1fr) minmax(220px, 2fr); gap: 10px; width: min(1200px, 100%); margin: 0 auto; }
+    .filter-control { width: 100%; min-height: 42px; padding: 8px 11px; border: 1px solid #b8c9d2; border-radius: 4px; color: #16394d; background: #fff; }
+    .search-input { cursor: text; }
+    .main-layout { display: flex; width: min(1200px, 100%); min-height: calc(100vh - 140px); margin: 0 auto; }
+    .list-pane { flex: 1 1 auto; min-width: 0; background: var(--mist); }
+    .month-header { position: sticky; z-index: 4; top: 152px; margin: 0; padding: 12px 22px; color: #16445c; background: #e4edf1; font-size: 12px; font-weight: 800; text-transform: uppercase; }
+    .date-group[hidden], .month-section[hidden], .event-entry[hidden] { display: none; }
+    .date-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 0; padding: 20px 22px 8px; color: #08688e; font-size: 12px; font-weight: 800; text-transform: uppercase; }
+    .today-badge { flex: 0 0 auto; padding: 4px 8px; border-radius: 3px; color: #fff; background: #d64a46; font-size: 10px; }
+    .event-entry { margin: 0 12px 8px; }
+    .event-row { display: flex; align-items: center; width: 100%; min-height: 88px; padding: 14px; border: 1px solid var(--line); border-left: 4px solid var(--event-accent); border-radius: 4px; color: inherit; background: #fff; text-align: left; transition: border-color 120ms ease, background-color 120ms ease; }
+    .event-row:hover, .event-row:focus-visible { border-color: var(--event-accent); background: #fbfdfe; }
+    .event-row:focus-visible { outline: 3px solid #42bfe855; outline-offset: 2px; }
+    .row-time { flex: 0 0 82px; color: #28495c; font-size: 12px; font-weight: 800; }
+    .row-content { display: grid; flex: 1; min-width: 0; gap: 4px; }
+    .row-title { font-size: 16px; font-weight: 800; line-height: 1.25; }
+    .row-meta { overflow-wrap: anywhere; color: var(--muted); font-size: 13px; }
+    .row-category { display: flex; align-items: center; gap: 6px; color: #435b69; font-size: 10px; font-weight: 800; text-transform: uppercase; }
+    .cat-dot { width: 8px; height: 8px; flex: 0 0 8px; border-radius: 50%; background: var(--event-accent); }
+    .free-label { margin-left: 5px; color: #24764d; }
+    .row-arrow { margin-left: 12px; color: #6e8592; font-size: 23px; }
+    .detail-pane { position: sticky; top: 152px; flex: 0 0 390px; align-self: flex-start; height: calc(100vh - 152px); min-height: 400px; overflow-y: auto; padding: 26px; border-left: 1px solid var(--line); background: #fff; }
+    .detail-empty { margin-top: 8px; color: #71838d; font-size: 14px; }
+    .detail-category { margin: 0 0 10px; color: var(--blue); font-size: 11px; font-weight: 800; text-transform: uppercase; }
+    .detail-title { margin: 0 0 22px; color: var(--navy); font-size: 25px; line-height: 1.15; }
+    .detail-meta { display: grid; gap: 10px; margin: 0 0 24px; color: #294858; font-size: 14px; }
+    .detail-meta p { margin: 0; overflow-wrap: anywhere; }
+    .detail-description { margin: 22px 0; color: var(--muted); font-size: 15px; line-height: 1.65; white-space: pre-line; }
+    .detail-actions { display: grid; gap: 9px; margin-top: 26px; }
+    .detail-link { display: block; padding: 12px 14px; border: 1px solid var(--blue); border-radius: 4px; color: #fff; background: var(--blue); font-size: 14px; font-weight: 800; text-align: center; text-decoration: none; }
+    .detail-link.secondary { color: #16445c; background: #fff; }
+    .detail-link:hover { filter: brightness(.94); }
+    .mobile-details { display: none; }
+    .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; clip-path: inset(50%); }
+    @media (max-width: 720px) {
+      .controls-wrapper { position: sticky; top: 0; padding: 10px 12px; }
+      .controls-container { grid-template-columns: 1fr 1fr; gap: 8px; }
+      .search-input { grid-column: 1 / -1; }
+      .main-layout { display: block; }
+      .month-header { top: 0; }
+      .detail-pane { display: none; }
+      .date-header { padding: 18px 14px 8px; }
+      .event-entry { margin: 0 8px 8px; }
+      .event-row { min-height: 84px; padding: 11px; }
+      .row-time { flex-basis: 70px; font-size: 11px; }
+      .row-title { font-size: 14px; }
+      .row-meta { font-size: 12px; }
+      .row-arrow { margin-left: 4px; }
+      .event-entry.is-expanded .event-row { border-color: var(--event-accent); border-radius: 4px 4px 0 0; }
+      .event-entry.is-expanded .mobile-details { display: block; padding: 17px; border: 1px solid var(--line); border-top: 0; background: #fff; }
+      .mobile-details .detail-title { font-size: 21px; }
+    }
+  </style>
+
+  <script>
+    import eventRecords from '../data/events.json';
+
+    const monthJump = document.querySelector<HTMLSelectElement>('#monthJump');
+    const categoryFilter = document.querySelector<HTMLSelectElement>('#categoryFilter');
+    const searchInput = document.querySelector<HTMLInputElement>('#searchInput');
+    const detailPane = document.querySelector<HTMLElement>('#detailPane');
+
+    function formatTime(value) {
+      const [hours, minutes] = value.split(':').map(Number);
+      const period = hours >= 12 ? 'PM' : 'AM';
+      const hour = hours % 12 || 12;
+      return `${hour}:${String(minutes).padStart(2, '0')} ${period}`;
+    }
+
+    function calendarLink(event) {
+      const date = event.date.replaceAll('-', '');
+      const start = `${date}T${event.startTime.replace(':', '')}00`;
+      const end = `${date}T${event.endTime.replace(':', '')}00`;
+      const query = new URLSearchParams({
+        action: 'TEMPLATE',
+        text: event.title,
+        dates: `${start}/${end}`,
+        ctz: 'America/New_York',
+        details: event.description,
+        location: event.venue,
+      });
+      return `https://calendar.google.com/calendar/render?${query}`;
+    }
+
+    function createDetails(event) {
+      const content = document.createElement('div');
+      const category = document.createElement('p');
+      category.className = 'detail-category';
+      category.textContent = `${event.category} · ${event.admission === 'free' ? 'Free' : 'Paid'}`;
+      content.append(category);
+
+      const title = document.createElement('h2');
+      title.className = 'detail-title';
+      title.textContent = event.title;
+      content.append(title);
+
+      const metadata = document.createElement('div');
+      metadata.className = 'detail-meta';
+      const details = [
+        ['Venue', event.venue || 'Venue not listed'],
+        ['Date', new Intl.DateTimeFormat('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${event.date}T12:00:00Z`))],
+        ['Time', `${formatTime(event.startTime)}–${formatTime(event.endTime)}`],
+      ];
+      for (const [label, value] of details) {
+        const line = document.createElement('p');
+        const strong = document.createElement('strong');
+        strong.textContent = `${label}: `;
+        line.append(strong, document.createTextNode(value));
+        metadata.append(line);
+      }
+      content.append(metadata);
+
+      if (event.description) {
+        const description = document.createElement('p');
+        description.className = 'detail-description';
+        description.textContent = event.description;
+        content.append(description);
+      }
+
+      const actions = document.createElement('div');
+      actions.className = 'detail-actions';
+      const source = document.createElement('a');
+      source.className = 'detail-link';
+      source.href = event.sourceLink;
+      source.target = '_blank';
+      source.rel = 'noopener noreferrer';
+      source.textContent = 'Visit Event Website';
+      actions.append(source);
+
+      const calendar = document.createElement('a');
+      calendar.className = 'detail-link secondary';
+      calendar.href = calendarLink(event);
+      calendar.target = '_blank';
+      calendar.rel = 'noopener noreferrer';
+      calendar.textContent = 'Add to Google Calendar';
+      actions.append(calendar);
+      content.append(actions);
+      return content;
+    }
+
+    function applyFilters() {
+      const query = searchInput?.value.trim().toLocaleLowerCase() ?? '';
+      const category = categoryFilter?.value ?? '';
+      document.querySelectorAll<HTMLElement>('.event-entry').forEach((entry) => {
+        const button = entry.querySelector<HTMLButtonElement>('.event-row');
+        const matchesText = button?.dataset.search?.includes(query) ?? false;
+        const matchesCategory = !category || button?.dataset.category === category;
+        entry.hidden = !(matchesText && matchesCategory);
+      });
+      document.querySelectorAll<HTMLElement>('.date-group').forEach((group) => {
+        group.hidden = !group.querySelector('.event-entry:not([hidden])');
+      });
+      document.querySelectorAll<HTMLElement>('.month-section').forEach((month) => {
+        month.hidden = !month.querySelector('.date-group:not([hidden])');
+      });
+    }
+
+    const now = new Date();
+    const today = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
+    document.querySelectorAll<HTMLElement>('.date-group').forEach((group) => {
+      const badge = group.querySelector<HTMLElement>('.today-badge');
+      if (group.dataset.date === today && badge) badge.hidden = false;
+    });
+
+    monthJump?.addEventListener('change', () => {
+      const month = monthJump.value;
+      if (month) document.querySelector(`#month-${month}`)?.scrollIntoView({ behavior: 'smooth' });
+    });
+    categoryFilter?.addEventListener('change', applyFilters);
+    searchInput?.addEventListener('input', applyFilters);
+
+    document.querySelectorAll<HTMLButtonElement>('.event-row').forEach((button) => {
+      button.addEventListener('click', () => {
+        const index = Number(button.dataset.eventIndex);
+        const event = eventRecords[index];
+        const entry = button.closest<HTMLElement>('.event-entry');
+        const wasExpanded = entry?.classList.contains('is-expanded') ?? false;
+        document.querySelectorAll('.event-entry.is-expanded').forEach((expanded) => expanded.classList.remove('is-expanded'));
+        if (wasExpanded) {
+          detailPane?.replaceChildren(Object.assign(document.createElement('p'), { className: 'detail-empty', textContent: 'Choose an event' }));
+          return;
+        }
+        const details = createDetails(event);
+        detailPane?.replaceChildren(details.cloneNode(true));
+        entry?.classList.add('is-expanded');
+        entry?.querySelector<HTMLElement>('.mobile-details')?.replaceChildren(details);
+      });
+    });
+  </script>
+</SiteLayout>

@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #092c43;
+  background: #ffffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  --navy: #00243d;
+  --blue: #087ca7;
+  --cyan: #42bfe8;
+  --muted: #536875;
+  --line: #d8e2e8;
+  --mist: #f2f6f8;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100vh; }
+a { color: inherit; }
+button, input, select { font: inherit; }
+button, select { cursor: pointer; }
+
+.site-header {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  padding: 12px 24px;
+  color: #fff;
+  background: var(--navy);
+  border-bottom: 3px solid var(--blue);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: min(1200px, 100%);
+  gap: 24px;
+}
+.brand { display: flex; flex-direction: column; align-items: center; text-decoration: none; }
+.logo-desktop { display: block; width: min(330px, 37vw); height: 61px; object-fit: contain; }
+.logo-mobile { display: none; width: 244px; height: 62px; object-fit: contain; }
+.tagline { margin: 2px 0 0; color: #82d7ef; font-size: 12px; font-weight: 700; }
+.site-nav { display: flex; align-items: center; gap: 24px; }
+.site-nav a { color: #fff; font-size: 14px; font-weight: 700; text-decoration: none; }
+.site-nav a:hover, .site-nav a[aria-current='page'] { color: #82d7ef; }
+.menu-toggle { display: none; border: 1px solid #6b8799; border-radius: 4px; padding: 6px 10px; color: white; background: transparent; font-size: 21px; line-height: 1; }
+.site-footer { margin-top: 32px; padding: 30px 16px; border-top: 4px solid var(--blue); color: #b5d7e6; background: var(--navy); text-align: center; font-size: 13px; }
+.site-footer p { margin: 0; }
+
+@media (max-width: 720px) {
+  .site-header { position: relative; padding: 10px 14px; }
+  .header-inner { gap: 8px; }
+  .logo-desktop { display: none; }
+  .logo-mobile { display: block; }
+  .menu-toggle { display: inline-flex; align-items: center; justify-content: center; }
+  .site-nav { position: absolute; z-index: 12; top: 100%; right: 0; left: 0; display: none; flex-direction: column; gap: 18px; padding: 18px; border-bottom: 3px solid var(--blue); background: var(--navy); }
+  .site-nav.is-open { display: flex; }
+}
