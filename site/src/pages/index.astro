@@ -17,19 +17,34 @@ const categoryColors: Record<string, string> = {
   Other: '#6e6e6e',
 };
 
-const formatDisplayTime = (value: string) => {
-  const [hours, minutes] = value.split(':').map(Number);
+const formatDisplayTime = (value: string | null | undefined) => {
+  if (!value || typeof value !== 'string') return '';
+  const trimmedValue = value.trim();
+  if (!trimmedValue) return '';
+  const [hours, minutes] = trimmedValue.split(':').map(Number);
+  if (Number.isNaN(hours) || Number.isNaN(minutes)) return '';
   const period = hours >= 12 ? 'PM' : 'AM';
   const hour = hours % 12 || 12;
   return `${hour}:${String(minutes).padStart(2, '0')} ${period}`;
 };
 
-const eventRecords = events.map((event, index) => ({
-  ...event,
-  index,
-  displayStartTime: formatDisplayTime(event.startTime),
-  displayEndTime: formatDisplayTime(event.endTime),
-}));
+const getSortValue = (value: string | null | undefined) => {
+  if (!value || typeof value !== 'string') return Number.MAX_SAFE_INTEGER;
+  const trimmedValue = value.trim();
+  if (!trimmedValue) return Number.MAX_SAFE_INTEGER;
+  const [hours, minutes] = trimmedValue.split(':').map(Number);
+  if (Number.isNaN(hours) || Number.isNaN(minutes)) return Number.MAX_SAFE_INTEGER;
+  return hours * 60 + minutes;
+};
+
+const eventRecords = events
+  .map((event, index) => ({
+    ...event,
+    index,
+    displayStartTime: formatDisplayTime(event.startTime),
+    sortStartTime: getSortValue(event.startTime),
+  }))
+  .sort((a, b) => a.sortStartTime - b.sortStartTime || a.title.localeCompare(b.title));
 const categories = [...new Set(events.map((event) => event.category))].sort((a, b) => a.localeCompare(b));
 const monthKeys = [...new Set(events.map((event) => event.date.slice(0, 7)))].sort();
 const months = monthKeys.map((key) => {
@@ -38,7 +53,7 @@ const months = monthKeys.map((key) => {
   const days = [...new Set(events.filter((event) => event.date.startsWith(key)).map((event) => event.date))].sort().map((day) => ({
     date: day,
     label: new Intl.DateTimeFormat('en-US', { weekday: 'long', month: 'long', day: 'numeric', timeZone: 'UTC' }).format(new Date(`${day}T12:00:00Z`)),
-    events: eventRecords.filter((event) => event.date === day),
+    events: eventRecords.filter((event) => event.date === day).sort((a, b) => a.sortStartTime - b.sortStartTime),
   }));
   return { key, label: monthLabel, days };
 });
@@ -131,16 +146,16 @@ const months = monthKeys.map((key) => {
     .free-label { margin-left: 5px; color: #24764d; }
     .row-arrow { margin-left: 12px; color: #6e8592; font-size: 23px; }
     .detail-pane { position: sticky; top: 152px; flex: 0 0 390px; align-self: flex-start; height: calc(100vh - 152px); min-height: 400px; overflow-y: auto; padding: 26px; border-left: 1px solid var(--line); background: #fff; }
-    .detail-empty { margin-top: 8px; color: #71838d; font-size: 14px; }
-    .detail-category { margin: 0 0 10px; color: var(--blue); font-size: 11px; font-weight: 800; text-transform: uppercase; }
-    .detail-title { margin: 0 0 22px; color: var(--navy); font-size: 25px; line-height: 1.15; }
-    .detail-meta { display: grid; gap: 10px; margin: 0 0 24px; color: #294858; font-size: 14px; }
-    .detail-meta p { margin: 0; overflow-wrap: anywhere; }
-    .detail-description { margin: 22px 0; color: var(--muted); font-size: 15px; line-height: 1.65; white-space: pre-line; }
-    .detail-actions { display: grid; gap: 9px; margin-top: 26px; }
-    .detail-link { display: block; padding: 12px 14px; border: 1px solid var(--blue); border-radius: 4px; color: #fff; background: var(--blue); font-size: 14px; font-weight: 800; text-align: center; text-decoration: none; }
-    .detail-link.secondary { color: #16445c; background: #fff; }
-    .detail-link:hover { filter: brightness(.94); }
+    :global(.detail-empty) { margin-top: 8px; color: #71838d; font-size: 14px; }
+    :global(.detail-category) { margin: 0 0 10px; color: var(--blue); font-size: 11px; font-weight: 800; text-transform: uppercase; }
+    :global(.detail-title) { margin: 0 0 22px; color: var(--navy); font-size: 25px; line-height: 1.15; }
+    :global(.detail-meta) { display: grid; gap: 10px; margin: 0 0 24px; color: #294858; font-size: 14px; }
+    :global(.detail-meta p) { margin: 0; overflow-wrap: anywhere; }
+    :global(.detail-description) { margin: 22px 0; color: var(--muted); font-size: 15px; line-height: 1.65; white-space: pre-line; }
+    :global(.detail-actions) { display: grid; gap: 10px; margin-top: 26px; }
+    :global(.detail-link) { display: block; width: 100%; padding: 12px 14px; border: 1px solid var(--blue); border-radius: 4px; color: #fff; background: var(--blue); font: inherit; font-size: 14px; font-weight: 800; text-align: center; text-decoration: none; cursor: pointer; }
+    :global(.detail-link.secondary) { color: #16445c; background: #fff; }
+    :global(.detail-link:hover) { filter: brightness(.94); }
     .mobile-details { display: none; }
     .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; clip-path: inset(50%); }
     @media (max-width: 720px) {
@@ -159,7 +174,7 @@ const months = monthKeys.map((key) => {
       .row-arrow { margin-left: 4px; }
       .event-entry.is-expanded .event-row { border-color: var(--event-accent); border-radius: 4px 4px 0 0; }
       .event-entry.is-expanded .mobile-details { display: block; padding: 17px; border: 1px solid var(--line); border-top: 0; background: #fff; }
-      .mobile-details .detail-title { font-size: 21px; }
+      :global(.mobile-details .detail-title) { font-size: 21px; }
     }
   </style>
 
@@ -172,28 +187,154 @@ const months = monthKeys.map((key) => {
     const detailPane = document.querySelector<HTMLElement>('#detailPane');
 
     function formatTime(value) {
-      const [hours, minutes] = value.split(':').map(Number);
+      if (!value || typeof value !== 'string') return '';
+      const trimmedValue = value.trim();
+      if (!trimmedValue) return '';
+      const [hours, minutes] = trimmedValue.split(':').map(Number);
+      if (Number.isNaN(hours) || Number.isNaN(minutes)) return '';
       const period = hours >= 12 ? 'PM' : 'AM';
       const hour = hours % 12 || 12;
       return `${hour}:${String(minutes).padStart(2, '0')} ${period}`;
     }
 
-    function calendarLink(event) {
+    function cleanDescription(value) {
+      return String(value ?? '')
+        .replace(/\[(?:Visit Event Website|Add to Google Calendar)\]\([^)]*\)/gi, '')
+        .replace(/\n{3,}/g, '\n\n')
+        .trim();
+    }
+
+    function safeEventUrl(value) {
+      if (!value || typeof value !== 'string') return '';
+      try {
+        const url = new URL(value);
+        return url.protocol === 'http:' || url.protocol === 'https:' ? url.href : '';
+      } catch {
+        return '';
+      }
+    }
+
+    function eventDetailsText(event) {
+      const description = cleanDescription(event.description);
+      const eventUrl = safeEventUrl(event.sourceLink);
+      return [description, eventUrl ? `Event link: ${eventUrl}` : ''].filter(Boolean).join('\n\n');
+    }
+
+    function localDateTimeToUtc(date, time) {
+      const [year, month, day] = date.split('-').map(Number);
+      const [hours, minutes] = time.split(':').map(Number);
+      const targetWallTime = Date.UTC(year, month - 1, day, hours, minutes);
+      const formatter = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'America/New_York',
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hourCycle: 'h23',
+      });
+      let timestamp = targetWallTime;
+      for (let attempt = 0; attempt < 2; attempt += 1) {
+        const parts = Object.fromEntries(formatter.formatToParts(new Date(timestamp)).map(({ type, value }) => [type, value]));
+        const formattedWallTime = Date.UTC(Number(parts.year), Number(parts.month) - 1, Number(parts.day), Number(parts.hour), Number(parts.minute), Number(parts.second));
+        timestamp += targetWallTime - formattedWallTime;
+      }
+      return new Date(timestamp);
+    }
+
+    function googleCalendarLink(event) {
       const date = event.date.replaceAll('-', '');
-      const start = `${date}T${event.startTime.replace(':', '')}00`;
-      const end = `${date}T${event.endTime.replace(':', '')}00`;
+      let dates;
+      if (event.startTime) {
+        const start = localDateTimeToUtc(event.date, event.startTime);
+        const end = new Date(start.getTime() + 60 * 60 * 1000);
+        const formatLocal = (value) => {
+          const parts = Object.fromEntries(new Intl.DateTimeFormat('en-US', {
+            timeZone: 'America/New_York',
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit',
+            hour: '2-digit',
+            minute: '2-digit',
+            hourCycle: 'h23',
+          }).formatToParts(value).map(({ type, value: partValue }) => [type, partValue]));
+          return `${parts.year}${parts.month}${parts.day}T${parts.hour}${parts.minute}00`;
+        };
+        dates = `${formatLocal(start)}/${formatLocal(end)}`;
+      } else {
+        const nextDay = new Date(`${event.date}T00:00:00Z`);
+        nextDay.setUTCDate(nextDay.getUTCDate() + 1);
+        dates = `${date}/${nextDay.toISOString().slice(0, 10).replaceAll('-', '')}`;
+      }
       const query = new URLSearchParams({
         action: 'TEMPLATE',
-        text: event.title,
-        dates: `${start}/${end}`,
+        text: String(event.title ?? ''),
+        dates,
         ctz: 'America/New_York',
-        details: event.description,
-        location: event.venue,
+        details: eventDetailsText(event),
+        location: String(event.venue ?? ''),
       });
       return `https://calendar.google.com/calendar/render?${query}`;
     }
 
-    function createDetails(event) {
+    function escapeICSText(value) {
+      return String(value ?? '')
+        .replace(/\\/g, '\\\\')
+        .replace(/\r?\n/g, '\\n')
+        .replace(/,/g, '\\,')
+        .replace(/;/g, '\\;');
+    }
+
+    function createICS(event) {
+      const date = event.date.replaceAll('-', '');
+      let timeFields;
+      if (event.startTime) {
+        const start = localDateTimeToUtc(event.date, event.startTime);
+        const end = new Date(start.getTime() + 60 * 60 * 1000);
+        const formatUtc = (value) => value.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}Z$/, 'Z');
+        timeFields = `DTSTART:${formatUtc(start)}\r\nDTEND:${formatUtc(end)}`;
+      } else {
+        const nextDay = new Date(`${event.date}T00:00:00Z`);
+        nextDay.setUTCDate(nextDay.getUTCDate() + 1);
+        timeFields = `DTSTART;VALUE=DATE:${date}\r\nDTEND;VALUE=DATE:${nextDay.toISOString().slice(0, 10).replaceAll('-', '')}`;
+      }
+      const eventUrl = safeEventUrl(event.sourceLink);
+      const description = eventDetailsText(event);
+      const uid = globalThis.crypto?.randomUUID?.() ?? `${Date.now()}-${Math.random().toString(36).slice(2)}@westbrookcurrents.com`;
+      return [
+        'BEGIN:VCALENDAR',
+        'VERSION:2.0',
+        'PRODID:-//Westbrook Currents//Events//EN',
+        'CALSCALE:GREGORIAN',
+        'X-WR-TIMEZONE:America/New_York',
+        'BEGIN:VEVENT',
+        `UID:${uid}`,
+        `DTSTAMP:${new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d{3}Z$/, 'Z')}`,
+        timeFields,
+        `SUMMARY:${escapeICSText(event.title)}`,
+        `LOCATION:${escapeICSText(event.venue)}`,
+        `DESCRIPTION:${escapeICSText(description)}`,
+        ...(eventUrl ? [`URL:${eventUrl}`] : []),
+        'END:VEVENT',
+        'END:VCALENDAR',
+        '',
+      ].join('\r\n');
+    }
+
+    function downloadCalendarFile(event) {
+      const blob = new Blob([createICS(event)], { type: 'text/calendar;charset=utf-8' });
+      const objectUrl = URL.createObjectURL(blob);
+      const download = document.createElement('a');
+      download.href = objectUrl;
+      download.download = `${event.date}-${String(event.title ?? 'event').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'event'}.ics`;
+      document.body.append(download);
+      download.click();
+      download.remove();
+      window.setTimeout(() => URL.revokeObjectURL(objectUrl), 1000);
+    }
+
+    function createDetails(event, eventIndex) {
       const content = document.createElement('div');
       const category = document.createElement('p');
       category.className = 'detail-category';
@@ -207,11 +348,14 @@ const months = monthKeys.map((key) => {
 
       const metadata = document.createElement('div');
       metadata.className = 'detail-meta';
+      const timeText = event.startTime ? formatTime(event.startTime) : '';
       const details = [
         ['Venue', event.venue || 'Venue not listed'],
         ['Date', new Intl.DateTimeFormat('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${event.date}T12:00:00Z`))],
-        ['Time', `${formatTime(event.startTime)}–${formatTime(event.endTime)}`],
       ];
+      if (timeText) {
+        details.push(['Time', timeText]);
+      }
       for (const [label, value] of details) {
         const line = document.createElement('p');
         const strong = document.createElement('strong');
@@ -221,30 +365,42 @@ const months = monthKeys.map((key) => {
       }
       content.append(metadata);
 
-      if (event.description) {
+      const descriptionText = cleanDescription(event.description);
+      if (descriptionText) {
         const description = document.createElement('p');
         description.className = 'detail-description';
-        description.textContent = event.description;
+        description.textContent = descriptionText;
         content.append(description);
       }
 
       const actions = document.createElement('div');
       actions.className = 'detail-actions';
-      const source = document.createElement('a');
-      source.className = 'detail-link';
-      source.href = event.sourceLink;
-      source.target = '_blank';
-      source.rel = 'noopener noreferrer';
-      source.textContent = 'Visit Event Website';
-      actions.append(source);
+      const sourceHref = safeEventUrl(event.sourceLink);
+      if (sourceHref) {
+        const source = document.createElement('a');
+        source.className = 'detail-link';
+        source.href = sourceHref;
+        source.target = '_blank';
+        source.rel = 'noopener noreferrer';
+        source.textContent = 'Visit Event Website';
+        actions.append(source);
+      }
 
-      const calendar = document.createElement('a');
-      calendar.className = 'detail-link secondary';
-      calendar.href = calendarLink(event);
-      calendar.target = '_blank';
-      calendar.rel = 'noopener noreferrer';
-      calendar.textContent = 'Add to Google Calendar';
-      actions.append(calendar);
+      const googleCalendar = document.createElement('a');
+      googleCalendar.className = 'detail-link secondary';
+      googleCalendar.href = googleCalendarLink(event);
+      googleCalendar.target = '_blank';
+      googleCalendar.rel = 'noopener noreferrer';
+      googleCalendar.textContent = 'Add to Google Calendar';
+      actions.append(googleCalendar);
+
+      const appleCalendar = document.createElement('button');
+      appleCalendar.className = 'detail-link secondary';
+      appleCalendar.classList.add('download-calendar-button');
+      appleCalendar.dataset.eventIndex = String(eventIndex);
+      appleCalendar.type = 'button';
+      appleCalendar.textContent = 'Add to Apple Calendar';
+      actions.append(appleCalendar);
       content.append(actions);
       return content;
     }
@@ -280,6 +436,14 @@ const months = monthKeys.map((key) => {
     categoryFilter?.addEventListener('change', applyFilters);
     searchInput?.addEventListener('input', applyFilters);
 
+    document.addEventListener('click', (clickEvent) => {
+      const target = clickEvent.target instanceof Element
+        ? clickEvent.target.closest<HTMLButtonElement>('.download-calendar-button')
+        : null;
+      const event = target ? eventRecords[Number(target.dataset.eventIndex)] : null;
+      if (event) downloadCalendarFile(event);
+    });
+
     document.querySelectorAll<HTMLButtonElement>('.event-row').forEach((button) => {
       button.addEventListener('click', () => {
         const index = Number(button.dataset.eventIndex);
@@ -291,7 +455,7 @@ const months = monthKeys.map((key) => {
           detailPane?.replaceChildren(Object.assign(document.createElement('p'), { className: 'detail-empty', textContent: 'Choose an event' }));
           return;
         }
-        const details = createDetails(event);
+        const details = createDetails(event, index);
         detailPane?.replaceChildren(details.cloneNode(true));
         entry?.classList.add('is-expanded');
         entry?.querySelector<HTMLElement>('.mobile-details')?.replaceChildren(details);
