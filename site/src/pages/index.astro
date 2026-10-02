@@ -17,19 +17,34 @@ const categoryColors: Record<string, string> = {
   Other: '#6e6e6e',
 };
 
-const formatDisplayTime = (value: string) => {
-  const [hours, minutes] = value.split(':').map(Number);
+const formatDisplayTime = (value: string | null | undefined) => {
+  if (!value || typeof value !== 'string') return '';
+  const trimmedValue = value.trim();
+  if (!trimmedValue) return '';
+  const [hours, minutes] = trimmedValue.split(':').map(Number);
+  if (Number.isNaN(hours) || Number.isNaN(minutes)) return '';
   const period = hours >= 12 ? 'PM' : 'AM';
   const hour = hours % 12 || 12;
   return `${hour}:${String(minutes).padStart(2, '0')} ${period}`;
 };
 
-const eventRecords = events.map((event, index) => ({
-  ...event,
-  index,
-  displayStartTime: formatDisplayTime(event.startTime),
-  displayEndTime: formatDisplayTime(event.endTime),
-}));
+const getSortValue = (value: string | null | undefined) => {
+  if (!value || typeof value !== 'string') return Number.MAX_SAFE_INTEGER;
+  const trimmedValue = value.trim();
+  if (!trimmedValue) return Number.MAX_SAFE_INTEGER;
+  const [hours, minutes] = trimmedValue.split(':').map(Number);
+  if (Number.isNaN(hours) || Number.isNaN(minutes)) return Number.MAX_SAFE_INTEGER;
+  return hours * 60 + minutes;
+};
+
+const eventRecords = events
+  .map((event, index) => ({
+    ...event,
+    index,
+    displayStartTime: formatDisplayTime(event.startTime),
+    sortStartTime: getSortValue(event.startTime),
+  }))
+  .sort((a, b) => a.sortStartTime - b.sortStartTime || a.title.localeCompare(b.title));
 const categories = [...new Set(events.map((event) => event.category))].sort((a, b) => a.localeCompare(b));
 const monthKeys = [...new Set(events.map((event) => event.date.slice(0, 7)))].sort();
 const months = monthKeys.map((key) => {
@@ -38,7 +53,7 @@ const months = monthKeys.map((key) => {
   const days = [...new Set(events.filter((event) => event.date.startsWith(key)).map((event) => event.date))].sort().map((day) => ({
     date: day,
     label: new Intl.DateTimeFormat('en-US', { weekday: 'long', month: 'long', day: 'numeric', timeZone: 'UTC' }).format(new Date(`${day}T12:00:00Z`)),
-    events: eventRecords.filter((event) => event.date === day),
+    events: eventRecords.filter((event) => event.date === day).sort((a, b) => a.sortStartTime - b.sortStartTime),
   }));
   return { key, label: monthLabel, days };
 });
@@ -172,16 +187,21 @@ const months = monthKeys.map((key) => {
     const detailPane = document.querySelector<HTMLElement>('#detailPane');
 
     function formatTime(value) {
-      const [hours, minutes] = value.split(':').map(Number);
+      if (!value || typeof value !== 'string') return '';
+      const trimmedValue = value.trim();
+      if (!trimmedValue) return '';
+      const [hours, minutes] = trimmedValue.split(':').map(Number);
+      if (Number.isNaN(hours) || Number.isNaN(minutes)) return '';
       const period = hours >= 12 ? 'PM' : 'AM';
       const hour = hours % 12 || 12;
       return `${hour}:${String(minutes).padStart(2, '0')} ${period}`;
     }
 
     function calendarLink(event) {
+      if (!event.startTime) return '';
       const date = event.date.replaceAll('-', '');
       const start = `${date}T${event.startTime.replace(':', '')}00`;
-      const end = `${date}T${event.endTime.replace(':', '')}00`;
+      const end = event.endTime ? `${date}T${event.endTime.replace(':', '')}00` : `${date}T${event.startTime.replace(':', '')}00`;
       const query = new URLSearchParams({
         action: 'TEMPLATE',
         text: event.title,
@@ -207,11 +227,14 @@ const months = monthKeys.map((key) => {
 
       const metadata = document.createElement('div');
       metadata.className = 'detail-meta';
+      const timeText = event.startTime ? formatTime(event.startTime) : '';
       const details = [
         ['Venue', event.venue || 'Venue not listed'],
         ['Date', new Intl.DateTimeFormat('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${event.date}T12:00:00Z`))],
-        ['Time', `${formatTime(event.startTime)}–${formatTime(event.endTime)}`],
       ];
+      if (timeText) {
+        details.push(['Time', timeText]);
+      }
       for (const [label, value] of details) {
         const line = document.createElement('p');
         const strong = document.createElement('strong');
@@ -238,13 +261,16 @@ const months = monthKeys.map((key) => {
       source.textContent = 'Visit Event Website';
       actions.append(source);
 
-      const calendar = document.createElement('a');
-      calendar.className = 'detail-link secondary';
-      calendar.href = calendarLink(event);
-      calendar.target = '_blank';
-      calendar.rel = 'noopener noreferrer';
-      calendar.textContent = 'Add to Google Calendar';
-      actions.append(calendar);
+      const calendarHref = calendarLink(event);
+      if (calendarHref) {
+        const calendar = document.createElement('a');
+        calendar.className = 'detail-link secondary';
+        calendar.href = calendarHref;
+        calendar.target = '_blank';
+        calendar.rel = 'noopener noreferrer';
+        calendar.textContent = 'Add to Google Calendar';
+        actions.append(calendar);
+      }
       content.append(actions);
       return content;
     }
