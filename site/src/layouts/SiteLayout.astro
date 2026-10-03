@@ -3,10 +3,14 @@ import '../styles/global.css';
 
 interface Props {
   title: string;
+  description: string;
   currentPage?: 'events' | 'about';
 }
 
-const { title, currentPage = 'events' } = Astro.props;
+const { title, description, currentPage = 'events' } = Astro.props;
+const siteUrl = Astro.site ?? new URL('https://westbrookcurrents.com');
+const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
+const socialImageUrl = new URL('/logo-desktop.png', siteUrl).href;
 ---
 <!doctype html>
 <html lang="en">
@@ -15,7 +19,22 @@ const { title, currentPage = 'events' } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#00243d" />
     <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="robots" content="index, follow" />
     <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={socialImageUrl} />
+    <meta property="og:image:alt" content="Westbrook Currents logo" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:url" content={canonicalUrl} />
+    <meta name="twitter:image" content={socialImageUrl} />
+    <meta name="twitter:image:alt" content="Westbrook Currents logo" />
   </head>
   <body>
     <header class="site-header">
