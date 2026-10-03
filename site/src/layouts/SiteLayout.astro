@@ -29,11 +29,12 @@ const { title, currentPage = 'events' } = Astro.props;
         <nav class="site-nav" id="site-nav" aria-label="Main navigation">
           <a href="/" aria-current={currentPage === 'events' ? 'page' : undefined}>Events</a>
           <a href="/about/" aria-current={currentPage === 'about' ? 'page' : undefined}>About</a>
+          <a class="submit-event-link" href="https://forms.gle/JHi1DmXpAA9YGVcH6" target="_blank" rel="noopener">Submit an event</a>
         </nav>
       </div>
     </header>
     <slot />
-    <footer class="site-footer"><p>© 2026 Westbrook Currents — Local events, real connections.</p></footer>
+    <footer class="site-footer"><p>© 2026 Westbrook Currents — Local events, real connections.</p><a href="https://forms.gle/JHi1DmXpAA9YGVcH6" target="_blank" rel="noopener">Submit an event</a></footer>
     <script>
       const menuButton = document.querySelector<HTMLButtonElement>('.menu-toggle');
       const navigation = document.querySelector<HTMLElement>('#site-nav');

@@ -68,18 +68,21 @@ const months = monthKeys.map((key) => {
           <option value="">Month...</option>
           {months.map((month) => <option value={month.key}>{month.label}</option>)}
         </select>
-        <label class="visually-hidden" for="categoryFilter">Filter by category</label>
-        <select id="categoryFilter" class="filter-control">
-          <option value="">Categories...</option>
-          {categories.map((category) => <option value={category}>{category}</option>)}
-        </select>
         <label class="visually-hidden" for="searchInput">Search events</label>
         <input id="searchInput" class="filter-control search-input" type="search" placeholder="Search events" autocomplete="off" />
+      </div>
+      <div class="filter-chip-row" aria-label="Filter events">
+        <button class="filter-chip category-chip is-active" type="button" data-category-filter="" aria-pressed="true">All categories</button>
+        {categories.map((category) => (
+          <button class="filter-chip category-chip" type="button" data-category-filter={category} aria-pressed="false">{category}</button>
+        ))}
+        <button class="filter-chip featured-chip" id="featuredFilter" type="button" aria-pressed="false"><span aria-hidden="true">★</span> Featured</button>
       </div>
     </section>
 
     <div class="main-layout">
       <div class="list-pane" id="eventList" aria-label="Events">
+        <p class="featured-empty" id="featuredEmptyMessage" role="status" hidden></p>
         {months.map((month) => (
           <section class="month-section" id={`month-${month.key}`} data-month={month.key}>
             <h2 class="month-header">{month.label}</h2>
@@ -92,15 +95,17 @@ const months = monthKeys.map((key) => {
                 {day.events.map((event) => (
                   <div class="event-entry">
                     <button
-                      class="event-row"
+                      class:list={['event-row', event.highlight === true && 'is-featured']}
                       type="button"
                       data-event-index={event.index}
                       data-category={event.category}
+                      data-featured={event.highlight === true ? 'true' : 'false'}
                       data-search={`${event.title} ${event.venue} ${event.category} ${event.description}`.toLocaleLowerCase()}
                       style={`--event-accent:${categoryColors[event.category] ?? '#6e6e6e'}`}
                     >
                       <span class="row-time">{event.displayStartTime}</span>
                       <span class="row-content">
+                        {event.highlight === true && <span class="featured-badge"><span aria-hidden="true">★</span> Featured</span>}
                         <span class="row-title">{event.title}</span>
                         <span class="row-meta">{event.venue || 'Venue not listed'}</span>
                         <span class="row-category"><span class="cat-dot"></span>{event.category}{event.admission === 'free' && <span class="free-label">FREE</span>}</span>
@@ -125,6 +130,14 @@ const months = monthKeys.map((key) => {
     .events-page { min-height: 70vh; }
     .controls-wrapper { position: sticky; z-index: 8; top: 86px; padding: 12px 20px; border-bottom: 1px solid var(--line); background: #fff; box-shadow: 0 3px 10px #092c4310; }
     .controls-container { display: grid; grid-template-columns: minmax(160px, 1fr) minmax(180px, 1fr) minmax(220px, 2fr); gap: 10px; width: min(1200px, 100%); margin: 0 auto; }
+    .filter-chip-row { display: flex; flex-wrap: wrap; gap: 8px; width: min(1200px, 100%); margin: 10px auto 0; }
+    .filter-chip { min-height: 34px; padding: 6px 11px; border: 1px solid #b8c9d2; border-radius: 18px; color: #294858; background: #fff; font-size: 12px; font-weight: 700; white-space: nowrap; }
+    .filter-chip:hover, .filter-chip:focus-visible { border-color: var(--blue); }
+    .filter-chip.is-active { border-color: var(--blue); color: #fff; background: var(--blue); }
+    .featured-chip { color: #70500e; background: #fff8e6; }
+    .featured-chip.is-active { border-color: #a47726; color: #35280e; background: #f3d98f; }
+    .featured-chip span { margin-right: 3px; }
+    .featured-empty { margin: 0; padding: 14px 22px; color: #70500e; background: #fff8e6; font-size: 14px; font-weight: 700; }
     .filter-control { width: 100%; min-height: 42px; padding: 8px 11px; border: 1px solid #b8c9d2; border-radius: 4px; color: #16394d; background: #fff; }
     .search-input { cursor: text; }
     .main-layout { display: flex; width: min(1200px, 100%); min-height: calc(100vh - 140px); margin: 0 auto; }
@@ -137,8 +150,12 @@ const months = monthKeys.map((key) => {
     .event-row { display: flex; align-items: center; width: 100%; min-height: 88px; padding: 14px; border: 1px solid var(--line); border-left: 4px solid var(--event-accent); border-radius: 4px; color: inherit; background: #fff; text-align: left; transition: border-color 120ms ease, background-color 120ms ease; }
     .event-row:hover, .event-row:focus-visible { border-color: var(--event-accent); background: #fbfdfe; }
     .event-row:focus-visible { outline: 3px solid #42bfe855; outline-offset: 2px; }
+    .event-row.is-featured { border-left-width: 8px; background: #fff8e6; }
+    .event-row.is-featured:hover, .event-row.is-featured:focus-visible { background: #fff2cf; }
     .row-time { flex: 0 0 82px; color: #28495c; font-size: 12px; font-weight: 800; }
     .row-content { display: grid; flex: 1; min-width: 0; gap: 4px; }
+    .featured-badge { justify-self: start; padding: 3px 7px; border-radius: 3px; color: #59410d; background: #f3d98f; font-size: 10px; font-weight: 800; line-height: 1.2; }
+    .featured-badge span { margin-right: 2px; }
     .row-title { font-size: 16px; font-weight: 800; line-height: 1.25; }
     .row-meta { overflow-wrap: anywhere; color: var(--muted); font-size: 13px; }
     .row-category { display: flex; align-items: center; gap: 6px; color: #435b69; font-size: 10px; font-weight: 800; text-transform: uppercase; }
@@ -148,6 +165,7 @@ const months = monthKeys.map((key) => {
     .detail-pane { position: sticky; top: 152px; flex: 0 0 390px; align-self: flex-start; height: calc(100vh - 152px); min-height: 400px; overflow-y: auto; padding: 26px; border-left: 1px solid var(--line); background: #fff; }
     :global(.detail-empty) { margin-top: 8px; color: #71838d; font-size: 14px; }
     :global(.detail-category) { margin: 0 0 10px; color: var(--blue); font-size: 11px; font-weight: 800; text-transform: uppercase; }
+    :global(.detail-featured-badge) { display: inline-block; margin: 0 0 10px; padding: 4px 8px; border-radius: 3px; color: #59410d; background: #f3d98f; font-size: 11px; font-weight: 800; }
     :global(.detail-title) { margin: 0 0 22px; color: var(--navy); font-size: 25px; line-height: 1.15; }
     :global(.detail-meta) { display: grid; gap: 10px; margin: 0 0 24px; color: #294858; font-size: 14px; }
     :global(.detail-meta p) { margin: 0; overflow-wrap: anywhere; }
@@ -160,8 +178,10 @@ const months = monthKeys.map((key) => {
     .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; clip-path: inset(50%); }
     @media (max-width: 720px) {
       .controls-wrapper { position: sticky; top: 0; padding: 10px 12px; }
-      .controls-container { grid-template-columns: 1fr 1fr; gap: 8px; }
+      .controls-container { grid-template-columns: minmax(0, 1fr); gap: 8px; }
       .search-input { grid-column: 1 / -1; }
+      .filter-chip-row { flex-wrap: nowrap; overflow-x: auto; padding: 1px 0 6px; overscroll-behavior-x: contain; scrollbar-width: thin; }
+      .filter-chip { flex: 0 0 auto; }
       .main-layout { display: block; }
       .month-header { top: 0; }
       .detail-pane { display: none; }
@@ -182,9 +202,13 @@ const months = monthKeys.map((key) => {
     import eventRecords from '../data/events.json';
 
     const monthJump = document.querySelector<HTMLSelectElement>('#monthJump');
-    const categoryFilter = document.querySelector<HTMLSelectElement>('#categoryFilter');
     const searchInput = document.querySelector<HTMLInputElement>('#searchInput');
     const detailPane = document.querySelector<HTMLElement>('#detailPane');
+    const featuredFilter = document.querySelector<HTMLButtonElement>('#featuredFilter');
+    const featuredEmptyMessage = document.querySelector<HTMLElement>('#featuredEmptyMessage');
+    const categoryChips = document.querySelectorAll<HTMLButtonElement>('.category-chip');
+    let selectedCategory = '';
+    let featuredOnly = false;
 
     function formatTime(value) {
       if (!value || typeof value !== 'string') return '';
@@ -341,6 +365,13 @@ const months = monthKeys.map((key) => {
       category.textContent = `${event.category} · ${event.admission === 'free' ? 'Free' : 'Paid'}`;
       content.append(category);
 
+      if (event.highlight === true) {
+        const featuredBadge = document.createElement('p');
+        featuredBadge.className = 'detail-featured-badge';
+        featuredBadge.textContent = '★ Featured';
+        content.append(featuredBadge);
+      }
+
       const title = document.createElement('h2');
       title.className = 'detail-title';
       title.textContent = event.title;
@@ -407,12 +438,12 @@ const months = monthKeys.map((key) => {
 
     function applyFilters() {
       const query = searchInput?.value.trim().toLocaleLowerCase() ?? '';
-      const category = categoryFilter?.value ?? '';
       document.querySelectorAll<HTMLElement>('.event-entry').forEach((entry) => {
         const button = entry.querySelector<HTMLButtonElement>('.event-row');
         const matchesText = button?.dataset.search?.includes(query) ?? false;
-        const matchesCategory = !category || button?.dataset.category === category;
-        entry.hidden = !(matchesText && matchesCategory);
+        const matchesCategory = !selectedCategory || button?.dataset.category === selectedCategory;
+        const matchesFeatured = !featuredOnly || button?.dataset.featured === 'true';
+        entry.hidden = !(matchesText && matchesCategory && matchesFeatured);
       });
       document.querySelectorAll<HTMLElement>('.date-group').forEach((group) => {
         group.hidden = !group.querySelector('.event-entry:not([hidden])');
@@ -420,6 +451,15 @@ const months = monthKeys.map((key) => {
       document.querySelectorAll<HTMLElement>('.month-section').forEach((month) => {
         month.hidden = !month.querySelector('.date-group:not([hidden])');
       });
+
+      const monthKey = monthJump?.value || `${new Date().getFullYear()}-${String(new Date().getMonth() + 1).padStart(2, '0')}`;
+      const selectedMonth = document.querySelector<HTMLElement>(`.month-section[data-month="${monthKey}"]`);
+      const selectedMonthLabel = new Intl.DateTimeFormat('en-US', { month: 'long', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${monthKey}-01T12:00:00Z`));
+      const hasFeatured = selectedMonth?.querySelector('.event-entry:not([hidden]) .event-row[data-featured="true"]');
+      if (featuredEmptyMessage) {
+        featuredEmptyMessage.hidden = !featuredOnly || Boolean(hasFeatured);
+        featuredEmptyMessage.textContent = `No featured events match your filters for ${selectedMonthLabel}.`;
+      }
     }
 
     const now = new Date();
@@ -432,8 +472,25 @@ const months = monthKeys.map((key) => {
     monthJump?.addEventListener('change', () => {
       const month = monthJump.value;
       if (month) document.querySelector(`#month-${month}`)?.scrollIntoView({ behavior: 'smooth' });
+      applyFilters();
     });
-    categoryFilter?.addEventListener('change', applyFilters);
+    categoryChips.forEach((chip) => {
+      chip.addEventListener('click', () => {
+        selectedCategory = chip.dataset.categoryFilter ?? '';
+        categoryChips.forEach((categoryChip) => {
+          const isActive = categoryChip === chip;
+          categoryChip.classList.toggle('is-active', isActive);
+          categoryChip.setAttribute('aria-pressed', String(isActive));
+        });
+        applyFilters();
+      });
+    });
+    featuredFilter?.addEventListener('click', () => {
+      featuredOnly = !featuredOnly;
+      featuredFilter.classList.toggle('is-active', featuredOnly);
+      featuredFilter.setAttribute('aria-pressed', String(featuredOnly));
+      applyFilters();
+    });
     searchInput?.addEventListener('input', applyFilters);
 
     document.addEventListener('click', (clickEvent) => {

@@ -15,6 +15,7 @@ Each event has these fields:
 | `admission` | string | `free` or `paid`. |
 | `description` | string | Plain-text event description; use an empty string when none is provided. |
 | `sourceLink` | string | Absolute URL to the original event listing. |
+| `highlight` | boolean | Optional. `true` marks the event as Featured; omit this field otherwise. |
 
 The visitor's `TODAY` marker is calculated in the browser from the visitor's local calendar date and is not stored in this file. Keep times as local Westbrook times; do not store UTC timestamps or preformatted display dates here.
 
