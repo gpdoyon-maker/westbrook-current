@@ -20,3 +20,5 @@ Each event has these fields:
 The visitor's `TODAY` marker is calculated in the browser from the visitor's local calendar date and is not stored in this file. Keep times as local Westbrook times; do not store UTC timestamps or preformatted display dates here.
 
 The Google Sheet that feeds this list publishes these `startTime` and `endTime` fields. The site intentionally ignores `endTime` for display, even when a value is present.
+
+The Events page is rendered in the build-time HTML. Its schema.org `Event` JSON-LD is generated from each record's `title`, `date`, optional `startTime`, `venue`, `description`, optional `sourceLink`, and `admission`. Records without a title or valid date are omitted. Event times use the America/New_York offset for their date; `endTime`, prices, and organizers are not included.

@@ -45,6 +45,67 @@ const eventRecords = events
     sortStartTime: getSortValue(event.startTime),
   }))
   .sort((a, b) => a.sortStartTime - b.sortStartTime || a.title.localeCompare(b.title));
+
+const newYorkTimeZone = 'America/New_York';
+const getNewYorkOffsetMinutes = (timestamp: number) => {
+  const parts = Object.fromEntries(new Intl.DateTimeFormat('en-US', {
+    timeZone: newYorkTimeZone,
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hourCycle: 'h23',
+  }).formatToParts(new Date(timestamp)).map(({ type, value }) => [type, value]));
+  const localAsUtc = Date.UTC(Number(parts.year), Number(parts.month) - 1, Number(parts.day), Number(parts.hour), Number(parts.minute), Number(parts.second));
+  return (localAsUtc - timestamp) / 60_000;
+};
+const formatSchemaStartDate = (date: string, startTime?: string) => {
+  if (!startTime) return date;
+  const match = /^(\d{2}):(\d{2})$/.exec(startTime);
+  if (!match) return date;
+  const hours = Number(match[1]);
+  const minutes = Number(match[2]);
+  if (hours > 23 || minutes > 59) return date;
+  const [year, month, day] = date.split('-').map(Number);
+  const wallTimeAsUtc = Date.UTC(year, month - 1, day, hours, minutes);
+  let timestamp = wallTimeAsUtc;
+  for (let attempt = 0; attempt < 3; attempt += 1) {
+    timestamp = wallTimeAsUtc - getNewYorkOffsetMinutes(timestamp) * 60_000;
+  }
+  const offsetMinutes = getNewYorkOffsetMinutes(timestamp);
+  const sign = offsetMinutes < 0 ? '-' : '+';
+  const absoluteOffset = Math.abs(offsetMinutes);
+  const offset = `${sign}${String(Math.floor(absoluteOffset / 60)).padStart(2, '0')}:${String(absoluteOffset % 60).padStart(2, '0')}`;
+  return `${date}T${startTime}:00${offset}`;
+};
+const structuredEvents = events
+  .filter((event) => typeof event.title === 'string' && event.title.trim() && typeof event.date === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(event.date))
+  .map((event) => ({
+    '@type': 'Event',
+    name: event.title,
+    startDate: formatSchemaStartDate(event.date, event.startTime),
+    eventStatus: 'https://schema.org/EventScheduled',
+    eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+    location: {
+      '@type': 'Place',
+      ...(event.venue ? { name: event.venue } : {}),
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Westbrook',
+        addressRegion: 'ME',
+        addressCountry: 'US',
+      },
+    },
+    description: event.description ?? '',
+    ...(event.sourceLink ? { url: event.sourceLink } : {}),
+    ...(event.admission === 'free' ? { isAccessibleForFree: true } : {}),
+  }));
+const eventJsonLd = JSON.stringify({ '@context': 'https://schema.org', '@graph': structuredEvents })
+  .replace(/</g, '\\u003c')
+  .replace(/>/g, '\\u003e')
+  .replace(/&/g, '\\u0026');
 const categories = [...new Set(events.map((event) => event.category))].sort((a, b) => a.localeCompare(b));
 const monthKeys = [...new Set(events.map((event) => event.date.slice(0, 7)))].sort();
 const months = monthKeys.map((key) => {
@@ -59,8 +120,10 @@ const months = monthKeys.map((key) => {
 });
 ---
 
-<SiteLayout title="Events | Westbrook Currents">
+<SiteLayout title="Westbrook, Maine Events Calendar | Westbrook Currents" description="Find community events in Westbrook, Maine, including free, family, civic, arts, and more.">
+  <script type="application/ld+json" set:html={eventJsonLd}></script>
   <main class="events-page">
+    <h1 class="visually-hidden">Westbrook, Maine Events Calendar</h1>
     <section class="controls-wrapper" aria-label="Event filters">
       <div class="controls-container">
         <label class="visually-hidden" for="monthJump">Jump to month</label>
