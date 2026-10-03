@@ -98,7 +98,7 @@ const structuredEvents = events
         addressCountry: 'US',
       },
     },
-    description: event.description ?? '',
+    ...(event.description?.trim() ? { description: event.description } : {}),
     ...(event.sourceLink ? { url: event.sourceLink } : {}),
     ...(event.admission === 'free' ? { isAccessibleForFree: true } : {}),
   }));
