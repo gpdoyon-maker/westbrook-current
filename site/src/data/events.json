@@ -515,5 +515,16 @@
     "admission": "free",
     "description": "Learn how to play the Pokémon card game, or just have fun crafting and hanging out with other Pokémon fans! For ages 5 to 18; ages 8 and under must be with caregiver. Come to any or all of the club meetings!",
     "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3649"
+  },
+  {
+    "title": "Veterans Day Recognition - Woodlawn Cemetery",
+    "date": "2026-11-11",
+    "startTime": "11:00",
+    "endTime": "",
+    "venue": "Woodlawn Cemetery",
+    "category": "Community & civic",
+    "admission": "free",
+    "description": "Recognition of Veterans Day at Veterans Rest.",
+    "sourceLink": ""
   }
 ]
