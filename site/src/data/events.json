@@ -1,39 +1,6 @@
 [
   {
     "title": "Absentee Voting at City Hall",
-    "date": "2026-10-06",
-    "startTime": "07:30",
-    "endTime": "16:00",
-    "venue": "Westbrook City Hall (Large Conference Room)",
-    "category": "Community & civic",
-    "admission": "free",
-    "description": "Westbrook residents may register to vote and/or request an absentee ballot in person at Westbrook City Hall beginning on Monday, October 5, 2026. Absentee voting takes place during normal business hours through Thursday, October 29, 2026. All absentee ballots must be returned to Westbrook City Hall no later than 8pm on Election Day, November 3rd.",
-    "sourceLink": "https://www.westbrookmaine.gov/calendar.aspx?view=list&CID=0"
-  },
-  {
-    "title": "Family Storytime at Walker Library",
-    "date": "2026-10-06",
-    "startTime": "10:30",
-    "endTime": "11:00",
-    "venue": "Walker Library",
-    "category": "Family & kids",
-    "admission": "free",
-    "description": "Family Storytime at Walker Memorial Library is geared to ages 1-3 with caregivers, but all ages are welcome. We will sing, move around, read books, and have fun!",
-    "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3546"
-  },
-  {
-    "title": "Planning Board Meeting",
-    "date": "2026-10-06",
-    "startTime": "19:00",
-    "endTime": "22:00",
-    "venue": "Westbrook High School Room 114",
-    "category": "Community & civic",
-    "admission": "free",
-    "description": "",
-    "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=2593"
-  },
-  {
-    "title": "Absentee Voting at City Hall",
     "date": "2026-10-07",
     "startTime": "07:30",
     "endTime": "16:00",
@@ -491,7 +458,7 @@
     "venue": "Woodlawn Cemetery",
     "category": "Community & civic",
     "admission": "free",
-    "description": "Recognition of Veterans Day at Veterans Rest.",
+    "description": "Recognition of Veterans Day at Veterans Rest memorial.",
     "sourceLink": ""
   }
 ]
