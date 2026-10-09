@@ -265,8 +265,7 @@ const months = monthKeys.map((key) => {
     .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; clip-path: inset(50%); }
     @media (max-width: 720px) {
       .controls-wrapper { position: sticky; top: 0; padding: 10px 12px; }
-      .controls-container { grid-template-columns: minmax(0, 1fr); gap: 8px; }
-      .search-input { grid-column: 1 / -1; }
+      .controls-container { grid-template-columns: minmax(120px, 36%) minmax(0, 1fr); gap: 8px; }
       .filter-chip-row { flex-wrap: nowrap; overflow-x: auto; padding: 1px 0 6px; overscroll-behavior-x: contain; scrollbar-width: thin; }
       .filter-chip { flex: 0 0 auto; }
       .main-layout { display: block; }
