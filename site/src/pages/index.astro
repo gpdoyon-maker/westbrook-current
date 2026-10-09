@@ -17,6 +17,8 @@ const categoryColors: Record<string, string> = {
   Other: '#6e6e6e',
 };
 
+const isCancelled = (event: { status?: string }) => String(event.status ?? '').trim().toLowerCase() === 'cancelled';
+
 const formatDisplayTime = (value: string | null | undefined) => {
   if (!value || typeof value !== 'string') return '';
   const trimmedValue = value.trim();
@@ -86,7 +88,7 @@ const structuredEvents = events
     '@type': 'Event',
     name: event.title,
     startDate: formatSchemaStartDate(event.date, event.startTime),
-    eventStatus: 'https://schema.org/EventScheduled',
+    eventStatus: isCancelled(event) ? 'https://schema.org/EventCancelled' : 'https://schema.org/EventScheduled',
     eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
     location: {
       '@type': 'Place',
@@ -158,17 +160,18 @@ const months = monthKeys.map((key) => {
                 {day.events.map((event) => (
                   <div class="event-entry">
                     <button
-                      class:list={['event-row', event.highlight === true && 'is-featured']}
+                      class:list={['event-row', event.highlight === true && 'is-featured', isCancelled(event) && 'is-cancelled']}
                       type="button"
                       data-event-index={event.index}
                       data-category={event.category}
                       data-featured={event.highlight === true ? 'true' : 'false'}
-                      data-search={`${event.title} ${event.venue} ${event.category} ${event.description}`.toLocaleLowerCase()}
+                      data-search={`${event.title} ${event.venue} ${event.category} ${event.description} ${isCancelled(event) ? 'cancelled' : ''}`.toLocaleLowerCase()}
                       style={`--event-accent:${categoryColors[event.category] ?? '#6e6e6e'}`}
                     >
                       <span class="row-time">{event.displayStartTime}</span>
                       <span class="row-content">
-                        {event.highlight === true && <span class="featured-badge"><span aria-hidden="true">★</span> Featured</span>}
+                        {isCancelled(event) && <span class="cancelled-badge">Cancelled</span>}
+                        {event.highlight === true && !isCancelled(event) && <span class="featured-badge"><span aria-hidden="true">★</span> Featured</span>}
                         <span class="row-title">{event.title}</span>
                         <span class="row-meta">{event.venue || 'Venue not listed'}</span>
                         <span class="row-category"><span class="cat-dot"></span>{event.category}{event.admission === 'free' && <span class="free-label">FREE</span>}</span>
@@ -215,6 +218,12 @@ const months = monthKeys.map((key) => {
     .event-row:focus-visible { outline: 3px solid #42bfe855; outline-offset: 2px; }
     .event-row.is-featured { border-left-width: 8px; background: #fff8e6; }
     .event-row.is-featured:hover, .event-row.is-featured:focus-visible { background: #fff2cf; }
+    .event-row.is-cancelled, .event-row.is-cancelled.is-featured { border-left-width: 4px; border-left-color: #9aa7ae; background: #f7f8f9; }
+    .event-row.is-cancelled .row-time, .event-row.is-cancelled .row-meta, .event-row.is-cancelled .row-category { color: #7d8a92; }
+    .event-row.is-cancelled .row-time, .event-row.is-cancelled .row-title { text-decoration: line-through; text-decoration-thickness: 1px; }
+    .event-row.is-cancelled .row-title { color: #66757e; }
+    .event-row.is-cancelled .cat-dot { background: #9aa7ae; }
+    .cancelled-badge { justify-self: start; padding: 3px 7px; border-radius: 3px; color: #fff; background: #b42318; font-size: 10px; font-weight: 800; letter-spacing: .03em; text-transform: uppercase; line-height: 1.2; }
     .row-time { flex: 0 0 82px; color: #28495c; font-size: 12px; font-weight: 800; }
     .row-content { display: grid; flex: 1; min-width: 0; gap: 4px; }
     .featured-badge { justify-self: start; padding: 3px 7px; border-radius: 3px; color: #59410d; background: #f3d98f; font-size: 10px; font-weight: 800; line-height: 1.2; }
@@ -237,6 +246,8 @@ const months = monthKeys.map((key) => {
     :global(.detail-link) { display: block; width: 100%; padding: 12px 14px; border: 1px solid var(--blue); border-radius: 4px; color: #fff; background: var(--blue); font: inherit; font-size: 14px; font-weight: 800; text-align: center; text-decoration: none; cursor: pointer; }
     :global(.detail-link.secondary) { color: #16445c; background: #fff; }
     :global(.detail-link:hover) { filter: brightness(.94); }
+    :global(.detail-cancelled) { margin: 0 0 14px; padding: 10px 12px; border-left: 4px solid #b42318; color: #7a1a12; background: #fdf0ef; font-size: 14px; font-weight: 700; }
+    :global(.detail-title.is-cancelled) { color: #66757e; text-decoration: line-through; text-decoration-thickness: 1px; }
     :global(.detail-fix) { margin: 22px 0 0; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; text-align: center; }
     :global(.detail-fix a) { color: var(--blue); font-weight: 700; text-underline-offset: 2px; }
     :global(.detail-fix a:hover) { color: var(--navy); }
@@ -426,12 +437,18 @@ const months = monthKeys.map((key) => {
 
     function createDetails(event, eventIndex) {
       const content = document.createElement('div');
+      const cancelled = String(event.status ?? '').trim().toLowerCase() === 'cancelled';
       const category = document.createElement('p');
       category.className = 'detail-category';
       category.textContent = `${event.category} · ${event.admission === 'free' ? 'Free' : 'Paid'}`;
       content.append(category);
 
-      if (event.highlight === true) {
+      if (cancelled) {
+        const banner = document.createElement('p');
+        banner.className = 'detail-cancelled';
+        banner.textContent = 'This event has been cancelled.';
+        content.append(banner);
+      } else if (event.highlight === true) {
         const featuredBadge = document.createElement('p');
         featuredBadge.className = 'detail-featured-badge';
         featuredBadge.textContent = '★ Featured';
@@ -439,7 +456,7 @@ const months = monthKeys.map((key) => {
       }
 
       const title = document.createElement('h2');
-      title.className = 'detail-title';
+      title.className = cancelled ? 'detail-title is-cancelled' : 'detail-title';
       title.textContent = event.title;
       content.append(title);
 
@@ -483,21 +500,23 @@ const months = monthKeys.map((key) => {
         actions.append(source);
       }
 
-      const googleCalendar = document.createElement('a');
-      googleCalendar.className = 'detail-link secondary';
-      googleCalendar.href = googleCalendarLink(event);
-      googleCalendar.target = '_blank';
-      googleCalendar.rel = 'noopener noreferrer';
-      googleCalendar.textContent = 'Add to Google Calendar';
-      actions.append(googleCalendar);
+      if (!cancelled) {
+        const googleCalendar = document.createElement('a');
+        googleCalendar.className = 'detail-link secondary';
+        googleCalendar.href = googleCalendarLink(event);
+        googleCalendar.target = '_blank';
+        googleCalendar.rel = 'noopener noreferrer';
+        googleCalendar.textContent = 'Add to Google Calendar';
+        actions.append(googleCalendar);
 
-      const appleCalendar = document.createElement('button');
-      appleCalendar.className = 'detail-link secondary';
-      appleCalendar.classList.add('download-calendar-button');
-      appleCalendar.dataset.eventIndex = String(eventIndex);
-      appleCalendar.type = 'button';
-      appleCalendar.textContent = 'Add to Apple Calendar';
-      actions.append(appleCalendar);
+        const appleCalendar = document.createElement('button');
+        appleCalendar.className = 'detail-link secondary';
+        appleCalendar.classList.add('download-calendar-button');
+        appleCalendar.dataset.eventIndex = String(eventIndex);
+        appleCalendar.type = 'button';
+        appleCalendar.textContent = 'Add to Apple Calendar';
+        actions.append(appleCalendar);
+      }
       content.append(actions);
 
       const fix = document.createElement('p');
