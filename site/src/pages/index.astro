@@ -237,6 +237,9 @@ const months = monthKeys.map((key) => {
     :global(.detail-link) { display: block; width: 100%; padding: 12px 14px; border: 1px solid var(--blue); border-radius: 4px; color: #fff; background: var(--blue); font: inherit; font-size: 14px; font-weight: 800; text-align: center; text-decoration: none; cursor: pointer; }
     :global(.detail-link.secondary) { color: #16445c; background: #fff; }
     :global(.detail-link:hover) { filter: brightness(.94); }
+    :global(.detail-fix) { margin: 22px 0 0; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; text-align: center; }
+    :global(.detail-fix a) { color: var(--blue); font-weight: 700; text-underline-offset: 2px; }
+    :global(.detail-fix a:hover) { color: var(--navy); }
     .mobile-details { display: none; }
     .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; clip-path: inset(50%); }
     @media (max-width: 720px) {
@@ -496,6 +499,24 @@ const months = monthKeys.map((key) => {
       appleCalendar.textContent = 'Add to Apple Calendar';
       actions.append(appleCalendar);
       content.append(actions);
+
+      const fix = document.createElement('p');
+      fix.className = 'detail-fix';
+      const subject = `Change request: ${event.title} (${event.date})`;
+      const body = [
+        `Event: ${event.title}`,
+        `Date: ${event.date}`,
+        ...(event.id ? [`ID: ${event.id}`] : []),
+        '',
+        'What needs to change (or is it cancelled)?',
+        '',
+        '',
+      ].join('\n');
+      const fixLink = document.createElement('a');
+      fixLink.href = `mailto:WestbrookCurrents@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      fixLink.textContent = 'Request a change';
+      fix.append('Something wrong or cancelled? ', fixLink);
+      content.append(fix);
       return content;
     }
 
