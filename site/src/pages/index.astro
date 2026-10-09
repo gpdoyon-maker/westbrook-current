@@ -137,6 +137,11 @@ const months = monthKeys.map((key) => {
         <input id="searchInput" class="filter-control search-input" type="search" placeholder="Search events" autocomplete="off" />
       </div>
       <div class="filter-chip-row" aria-label="Filter events">
+        <button class="filter-chip weekend-chip" id="weekendFilter" type="button" aria-pressed="false">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M3 10h18M8 3v4M16 3v4"></path></svg>
+          This weekend
+        </button>
+        <span class="chip-divider" aria-hidden="true"></span>
         <button class="filter-chip category-chip is-active" type="button" data-category-filter="" aria-pressed="true">All categories</button>
         {categories.map((category) => (
           <button class="filter-chip category-chip" type="button" data-category-filter={category} aria-pressed="false">{category}</button>
@@ -148,6 +153,7 @@ const months = monthKeys.map((key) => {
     <div class="main-layout">
       <div class="list-pane" id="eventList" aria-label="Events">
         <p class="featured-empty" id="featuredEmptyMessage" role="status" hidden></p>
+        <p class="featured-empty" id="weekendEmptyMessage" role="status" hidden>No events match your filters for this weekend.</p>
         {months.map((month) => (
           <section class="month-section" id={`month-${month.key}`} data-month={month.key}>
             <h2 class="month-header">{month.label}</h2>
@@ -203,6 +209,10 @@ const months = monthKeys.map((key) => {
     .featured-chip { color: #70500e; background: #fff8e6; }
     .featured-chip.is-active { border-color: #a47726; color: #35280e; background: #f3d98f; }
     .featured-chip span { margin-right: 3px; }
+    .weekend-chip { display: inline-flex; align-items: center; gap: 6px; border: 1.5px solid var(--navy); color: var(--navy); font-weight: 800; }
+    .weekend-chip:hover, .weekend-chip:focus-visible { border-color: var(--blue); }
+    .weekend-chip.is-active { border-color: var(--navy); color: #fff; background: var(--navy); }
+    .chip-divider { flex: 0 0 1px; align-self: center; height: 22px; background: var(--line); }
     .featured-empty { margin: 0; padding: 14px 22px; color: #70500e; background: #fff8e6; font-size: 14px; font-weight: 700; }
     .filter-control { width: 100%; min-height: 42px; padding: 8px 11px; border: 1px solid #b8c9d2; border-radius: 4px; color: #16394d; background: #fff; }
     .search-input { cursor: text; }
@@ -284,8 +294,22 @@ const months = monthKeys.map((key) => {
     const featuredFilter = document.querySelector<HTMLButtonElement>('#featuredFilter');
     const featuredEmptyMessage = document.querySelector<HTMLElement>('#featuredEmptyMessage');
     const categoryChips = document.querySelectorAll<HTMLButtonElement>('.category-chip');
+    const weekendFilter = document.querySelector<HTMLButtonElement>('#weekendFilter');
+    const weekendEmptyMessage = document.querySelector<HTMLElement>('#weekendEmptyMessage');
     let selectedCategory = '';
     let featuredOnly = false;
+    let weekendOnly = false;
+
+    // Upcoming Saturday and Sunday in the visitor's local time. On Saturday this is
+    // today and tomorrow; on Sunday it is today only (Saturday has already passed).
+    function weekendDates() {
+      const toKey = (date) => `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+      const now = new Date();
+      const day = now.getDay();
+      const saturday = new Date(now.getFullYear(), now.getMonth(), now.getDate() + (day === 0 ? -1 : 6 - day));
+      const sunday = new Date(saturday.getFullYear(), saturday.getMonth(), saturday.getDate() + 1);
+      return [toKey(saturday), toKey(sunday)].filter((key) => key >= toKey(now));
+    }
 
     function formatTime(value) {
       if (!value || typeof value !== 'string') return '';
@@ -541,12 +565,15 @@ const months = monthKeys.map((key) => {
 
     function applyFilters() {
       const query = searchInput?.value.trim().toLocaleLowerCase() ?? '';
+      const weekend = weekendOnly ? weekendDates() : [];
       document.querySelectorAll<HTMLElement>('.event-entry').forEach((entry) => {
         const button = entry.querySelector<HTMLButtonElement>('.event-row');
         const matchesText = button?.dataset.search?.includes(query) ?? false;
         const matchesCategory = !selectedCategory || button?.dataset.category === selectedCategory;
         const matchesFeatured = !featuredOnly || button?.dataset.featured === 'true';
-        entry.hidden = !(matchesText && matchesCategory && matchesFeatured);
+        const entryDate = entry.closest<HTMLElement>('.date-group')?.dataset.date ?? '';
+        const matchesWeekend = !weekendOnly || weekend.includes(entryDate);
+        entry.hidden = !(matchesText && matchesCategory && matchesFeatured && matchesWeekend);
       });
       document.querySelectorAll<HTMLElement>('.date-group').forEach((group) => {
         group.hidden = !group.querySelector('.event-entry:not([hidden])');
@@ -554,6 +581,10 @@ const months = monthKeys.map((key) => {
       document.querySelectorAll<HTMLElement>('.month-section').forEach((month) => {
         month.hidden = !month.querySelector('.date-group:not([hidden])');
       });
+
+      if (weekendEmptyMessage) {
+        weekendEmptyMessage.hidden = !weekendOnly || Boolean(document.querySelector('.event-entry:not([hidden])'));
+      }
 
       const monthKey = monthJump?.value || `${new Date().getFullYear()}-${String(new Date().getMonth() + 1).padStart(2, '0')}`;
       const selectedMonth = document.querySelector<HTMLElement>(`.month-section[data-month="${monthKey}"]`);
@@ -593,6 +624,13 @@ const months = monthKeys.map((key) => {
       featuredFilter.classList.toggle('is-active', featuredOnly);
       featuredFilter.setAttribute('aria-pressed', String(featuredOnly));
       applyFilters();
+    });
+    weekendFilter?.addEventListener('click', () => {
+      weekendOnly = !weekendOnly;
+      weekendFilter.classList.toggle('is-active', weekendOnly);
+      weekendFilter.setAttribute('aria-pressed', String(weekendOnly));
+      applyFilters();
+      if (weekendOnly) window.scrollTo({ top: 0, behavior: 'smooth' });
     });
     searchInput?.addEventListener('input', applyFilters);
 
