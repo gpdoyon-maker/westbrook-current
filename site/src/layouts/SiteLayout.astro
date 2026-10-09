@@ -35,6 +35,14 @@ const socialImageUrl = new URL('/logo-desktop.png', siteUrl).href;
     <meta name="twitter:url" content={canonicalUrl} />
     <meta name="twitter:image" content={socialImageUrl} />
     <meta name="twitter:image:alt" content="Westbrook Currents logo" />
+    <!-- Google tag (gtag.js) -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-HLW97NLQT0"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-HLW97NLQT0');
+    </script>
   </head>
   <body>
     <header class="site-header">
