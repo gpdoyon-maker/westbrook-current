@@ -1,0 +1,182 @@
+---
+import rawNotices from '../data/notices.json';
+import { addDays, normalizeDate, normalizePosted, normalizeTime, nyToUtcMs } from '../lib/notice-time';
+
+interface Props {
+  kind: 'alerts' | 'notices';
+}
+
+const { kind } = Astro.props;
+
+type NoticeType = 'emergency' | 'delay' | 'general';
+const LABELS: Record<NoticeType, string> = { emergency: 'EMERGENCY', delay: 'DELAY', general: 'NOTICE' };
+const ORDER: Record<NoticeType, number> = { emergency: 0, delay: 1, general: 2 };
+
+// Accepts the sheet's Notice Type labels as well as the short names.
+function typeOf(value: unknown): NoticeType {
+  const text = String(value ?? '').toLowerCase();
+  if (text.includes('emergency')) return 'emergency';
+  if (text.includes('delay') || text.includes('cancel') || text.includes('closure')) return 'delay';
+  return 'general';
+}
+
+function officialUrl(value: unknown): URL | null {
+  try {
+    const url = new URL(String(value ?? '').trim());
+    return url.protocol === 'https:' || url.protocol === 'http:' ? url : null;
+  } catch {
+    return null;
+  }
+}
+
+// A record needs a headline, an official source link, and an expiry date. Anything
+// missing one of those is dropped so nothing unsourced or never-expiring can appear.
+const items = (rawNotices as unknown as Record<string, unknown>[])
+  .filter((notice) => notice.status === undefined || String(notice.status).trim().toLowerCase() === 'active')
+  .map((notice) => {
+    const type = typeOf(notice.type);
+    const link = officialUrl(notice.officialLink);
+    const headline = String(notice.headline ?? '').trim();
+    const expiresDate = normalizeDate(notice.expiresDate);
+    const expiresTime = normalizeTime(notice.expiresTime);
+    const showFrom = normalizeDate(notice.showFrom);
+    if (!headline || !link || !expiresDate) return null;
+    return {
+      type,
+      label: LABELS[type],
+      headline,
+      description: String(notice.description ?? '').trim(),
+      href: link.href,
+      host: link.hostname.replace(/^www\./, ''),
+      posted: normalizePosted(notice.postedAt),
+      showFromMs: showFrom ? nyToUtcMs(showFrom, '00:00') : 0,
+      expiresMs: expiresTime ? nyToUtcMs(expiresDate, expiresTime) : nyToUtcMs(addDays(expiresDate, 1), '00:00'),
+    };
+  })
+  .filter((notice): notice is NonNullable<typeof notice> => notice !== null)
+  .filter((notice) => (kind === 'alerts' ? notice.type !== 'general' : notice.type === 'general'))
+  .sort((a, b) => ORDER[a.type] - ORDER[b.type] || b.posted.localeCompare(a.posted) || a.expiresMs - b.expiresMs);
+---
+{items.length > 0 && kind === 'alerts' && (
+  <div class="alert-stack" data-notice-stack hidden>
+    {items.map((item) => (
+      <section
+        class={`alert alert-${item.type}`}
+        aria-label={`${item.label.charAt(0)}${item.label.slice(1).toLowerCase()} alert`}
+        hidden
+        data-notice
+        data-show-from-ms={item.showFromMs}
+        data-expires-ms={item.expiresMs}
+        data-posted={item.posted}
+      >
+        <div class="alert-inner">
+          <p class="alert-meta">
+            {item.type === 'emergency' ? (
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2h8l6 6v8l-6 6H8l-6-6V8z"></path><path d="M12 7v6M12 16.5h.01"></path></svg>
+            ) : (
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l10 18H2z"></path><path d="M12 10v5M12 18h.01"></path></svg>
+            )}
+            <span>{item.label}</span>
+            <span class="alert-posted" data-posted-label hidden></span>
+          </p>
+          <p class="alert-headline">{item.headline}</p>
+          {item.description && <p class="alert-detail">{item.description}</p>}
+          <a class="alert-source" href={item.href} target="_blank" rel="noopener noreferrer">Official source: {item.host} &rsaquo;</a>
+        </div>
+      </section>
+    ))}
+  </div>
+)}
+
+{items.length > 0 && kind === 'notices' && (
+  <div class="notice-stack" data-notice-stack hidden>
+    {items.map((item, index) => (
+      <div
+        class="notice"
+        hidden
+        data-notice
+        data-show-from-ms={item.showFromMs}
+        data-expires-ms={item.expiresMs}
+      >
+        <button class="notice-toggle" type="button" aria-expanded="false" aria-controls={`notice-body-${index}`}>
+          <svg class="notice-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5M12 8h.01"></path></svg>
+          <span class="notice-title">{item.headline}</span>
+          <svg class="notice-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg>
+        </button>
+        <div class="notice-body" id={`notice-body-${index}`} hidden>
+          {item.description && <p class="notice-text">{item.description}</p>}
+          <a class="notice-source" href={item.href} target="_blank" rel="noopener noreferrer">Official source: {item.host} &rsaquo;</a>
+        </div>
+      </div>
+    ))}
+  </div>
+)}
+
+<style>
+  .alert-stack[hidden], .notice-stack[hidden], .alert[hidden], .notice[hidden], .notice-body[hidden], .alert-posted[hidden] { display: none; }
+
+  .alert { padding: 12px 14px 4px; border-bottom: 2px solid var(--alert-edge); color: var(--alert-ink); background: var(--alert-bg); }
+  .alert-delay { --alert-bg: #fff4d6; --alert-edge: #a47726; --alert-ink: #35280e; --alert-accent: #6b4a0a; }
+  .alert-emergency { --alert-bg: #fde8e6; --alert-edge: #b3261e; --alert-ink: #3d0f0b; --alert-accent: #8c1c13; }
+  .alert-inner { width: min(1200px, 100%); margin: 0 auto; }
+  .alert-meta { display: flex; align-items: center; gap: 6px; margin: 0; color: var(--alert-accent); font-size: 11px; font-weight: 800; letter-spacing: .06em; }
+  .alert-posted { font-weight: 600; letter-spacing: 0; }
+  .alert-headline { margin: 4px 0 0; font-size: 15px; font-weight: 800; line-height: 1.3; }
+  .alert-emergency .alert-headline { font-size: 16px; }
+  .alert-detail { margin: 3px 0 0; font-size: 13px; line-height: 1.4; white-space: pre-line; }
+  .alert-source { display: inline-flex; align-items: center; min-height: 44px; color: var(--alert-accent); font-size: 13px; font-weight: 700; }
+
+  .notice-stack { display: grid; gap: 8px; padding: 10px 12px 0; }
+  .notice { overflow: hidden; border: 1px solid #b9dbe8; border-radius: 8px; color: var(--navy); background: #eaf4f8; }
+  .notice-toggle { display: flex; align-items: center; gap: 10px; width: 100%; min-height: 44px; padding: 8px 12px; border: 0; color: var(--navy); background: none; font-size: 13px; text-align: left; }
+  .notice-toggle:focus-visible, .notice-source:focus-visible, .alert-source:focus-visible { outline: 2px solid var(--blue); outline-offset: -2px; }
+  .notice-icon, .notice-chevron { flex: 0 0 auto; color: #0a5f80; }
+  .notice-title { flex: 1; min-width: 0; font-weight: 700; }
+  .notice.is-open .notice-chevron { transform: rotate(180deg); }
+  .notice-body { padding: 0 14px 4px 38px; color: #16394d; font-size: 13px; line-height: 1.5; }
+  .notice-text { margin: 0; white-space: pre-line; }
+  .notice-source { display: inline-flex; align-items: center; min-height: 44px; color: #0a5f80; font-weight: 700; }
+
+  @media (min-width: 721px) {
+    .alert { padding-inline: 24px; }
+  }
+</style>
+
+<script>
+  import { postedLabel } from '../lib/notice-time';
+
+  // Visibility is decided in the visitor's browser so an alert or notice disappears
+  // on time even if the page was built earlier. Anything unreadable stays hidden.
+  function refreshNotices() {
+    const now = Date.now();
+    document.querySelectorAll<HTMLElement>('[data-notice]').forEach((item) => {
+      const from = Number(item.dataset.showFromMs);
+      const until = Number(item.dataset.expiresMs);
+      const visible = now >= from && now < until;
+      item.hidden = !visible;
+      const posted = item.dataset.posted;
+      const label = item.querySelector<HTMLElement>('[data-posted-label]');
+      if (visible && posted && label) {
+        label.textContent = `· ${postedLabel(posted, now)}`;
+        label.hidden = false;
+      }
+    });
+    document.querySelectorAll<HTMLElement>('[data-notice-stack]').forEach((stack) => {
+      stack.hidden = !stack.querySelector('[data-notice]:not([hidden])');
+    });
+  }
+
+  document.addEventListener('click', (event) => {
+    const toggle = event.target instanceof Element ? event.target.closest<HTMLButtonElement>('.notice-toggle') : null;
+    const notice = toggle?.closest<HTMLElement>('.notice');
+    const body = notice?.querySelector<HTMLElement>('.notice-body');
+    if (!toggle || !notice || !body) return;
+    const opening = body.hidden;
+    body.hidden = !opening;
+    notice.classList.toggle('is-open', opening);
+    toggle.setAttribute('aria-expanded', String(opening));
+  });
+
+  refreshNotices();
+  window.setInterval(refreshNotices, 60_000);
+</script>

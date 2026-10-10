@@ -1,5 +1,6 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
+import NoticeList from '../components/NoticeList.astro';
 import events from '../data/events.json';
 
 const categoryColors: Record<string, string> = {
@@ -152,6 +153,7 @@ const months = monthKeys.map((key) => {
 
     <div class="main-layout">
       <div class="list-pane" id="eventList" aria-label="Events">
+        <NoticeList kind="notices" />
         <p class="featured-empty" id="featuredEmptyMessage" role="status" hidden></p>
         <p class="featured-empty" id="weekendEmptyMessage" role="status" hidden>No events match your filters for this weekend.</p>
         {months.map((month) => (
