@@ -126,8 +126,8 @@ const items = (rawNotices as unknown as Record<string, unknown>[])
   .alert-detail { margin: 3px 0 0; font-size: 13px; line-height: 1.4; white-space: pre-line; }
   .alert-source { display: inline-flex; align-items: center; min-height: 44px; color: var(--alert-accent); font-size: 13px; font-weight: 700; }
 
-  .notice-stack { display: grid; gap: 8px; padding: 10px 12px 0; }
-  .notice { overflow: hidden; border: 1px solid #b9dbe8; border-radius: 8px; color: var(--navy); background: #eaf4f8; }
+  .notice-stack { display: grid; gap: 8px; padding: 10px 12px; }
+  .notice { overflow: hidden; border: 1px solid #6fb0cb; border-left: 6px solid var(--blue); border-radius: 8px; color: var(--navy); background: #d3eaf5; box-shadow: 0 1px 3px #092c4320; }
   .notice-toggle { display: flex; align-items: center; gap: 10px; width: 100%; min-height: 44px; padding: 8px 12px; border: 0; color: var(--navy); background: none; font-size: 13px; text-align: left; }
   .notice-toggle:focus-visible, .notice-source:focus-visible, .alert-source:focus-visible { outline: 2px solid var(--blue); outline-offset: -2px; }
   .notice-icon, .notice-chevron { flex: 0 0 auto; color: #0a5f80; }
