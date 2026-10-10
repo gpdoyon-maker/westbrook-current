@@ -8,5 +8,15 @@
     "showFrom": "2026-10-09",
     "expiresDate": "2026-11-17",
     "expiresTime": ""
+  },
+  {
+    "type": "Cancellation / Delay",
+    "headline": "Test Parking Ban Akwrt",
+    "description": "This is only a test.",
+    "officialLink": "https://www.westbrookcurrents.com",
+    "postedAt": "2026-10-10 10:15",
+    "showFrom": "",
+    "expiresDate": "2026-10-10",
+    "expiresTime": "23:59"
   }
 ]
