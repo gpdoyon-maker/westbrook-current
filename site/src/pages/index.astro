@@ -163,7 +163,6 @@ const months = monthKeys.map((key) => {
               <section class="date-group" data-date={day.date}>
                 <h3 class="date-header">
                   <span>{day.label}</span>
-                  <span class="today-badge" hidden>TODAY</span>
                 </h3>
                 {day.events.map((event) => (
                   <div class="event-entry">
@@ -599,9 +598,16 @@ const months = monthKeys.map((key) => {
 
     const now = new Date();
     const today = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
+    // The TODAY badge is not in the built HTML (crawlers and text readers would see it on every date);
+    // it is added here, only to the date group that matches the visitor's local date.
     document.querySelectorAll<HTMLElement>('.date-group').forEach((group) => {
-      const badge = group.querySelector<HTMLElement>('.today-badge');
-      if (group.dataset.date === today && badge) badge.hidden = false;
+      if (group.dataset.date !== today) return;
+      const header = group.querySelector<HTMLElement>('.date-header');
+      if (!header || header.querySelector('.today-badge')) return;
+      const badge = document.createElement('span');
+      badge.className = 'today-badge';
+      badge.textContent = 'TODAY';
+      header.append(badge);
     });
 
     monthJump?.addEventListener('change', () => {
