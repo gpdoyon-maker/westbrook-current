@@ -9,7 +9,7 @@ interface Props {
 const { kind } = Astro.props;
 
 type NoticeType = 'emergency' | 'delay' | 'general';
-const LABELS: Record<NoticeType, string> = { emergency: 'EMERGENCY', delay: 'DELAY', general: 'NOTICE' };
+const LABELS: Record<NoticeType, string> = { emergency: 'EMERGENCY', delay: 'ALERT', general: 'NOTICE' };
 const ORDER: Record<NoticeType, number> = { emergency: 0, delay: 1, general: 2 };
 
 // Accepts the sheet's Notice Type labels as well as the short names.
