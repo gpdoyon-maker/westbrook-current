@@ -18,5 +18,15 @@
     "showFrom": "",
     "expiresDate": "2026-10-13",
     "expiresTime": "23:59"
+  },
+  {
+    "type": "Cancellation / Delay",
+    "headline": "Test alert",
+    "description": "Test alert  to clear at 9:11 AM",
+    "officialLink": "https://westbrookmaine.gov",
+    "postedAt": "2026-10-11 09:08",
+    "showFrom": "",
+    "expiresDate": "2026-10-11",
+    "expiresTime": "09:11"
   }
 ]
