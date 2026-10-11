@@ -1,6 +1,16 @@
 [
   {
     "type": "General Notice",
+    "headline": "Test General Notice",
+    "description": "This is a general notice.",
+    "officialLink": "https://maine.gov",
+    "postedAt": "",
+    "showFrom": "2026-10-11",
+    "expiresDate": "2026-10-11",
+    "expiresTime": "09:40"
+  },
+  {
+    "type": "General Notice",
     "headline": "Leaf & brush pickup, Oct 30 – Nov 17",
     "description": "Public Services collects properly bagged leaves and small piles of brush at the curb.\nLeaves must be in biodegradable paper bags, no tape.\nThis service is not connected to trash collection and generally will not happen on the same day. Brush pickup is free during this program.",
     "officialLink": "https://www.westbrookmaine.gov/191/Yard-Waste",
