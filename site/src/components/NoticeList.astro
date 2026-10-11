@@ -49,6 +49,8 @@ const items = (rawNotices as unknown as Record<string, unknown>[])
       href: link.href,
       host: link.hostname.replace(/^www\./, ''),
       posted: normalizePosted(notice.postedAt),
+      expiresDate,
+      expiresTime,
       showFromMs: showFrom ? nyToUtcMs(showFrom, '00:00') : 0,
       expiresMs: expiresTime ? nyToUtcMs(expiresDate, expiresTime) : nyToUtcMs(addDays(expiresDate, 1), '00:00'),
     };
@@ -90,30 +92,33 @@ const items = (rawNotices as unknown as Record<string, unknown>[])
 
 {items.length > 0 && kind === 'notices' && (
   <div class="notice-stack" data-notice-stack hidden>
-    {items.map((item, index) => (
+    {items.map((item) => (
       <div
         class="notice"
         hidden
         data-notice
         data-show-from-ms={item.showFromMs}
         data-expires-ms={item.expiresMs}
+        data-title={item.headline}
+        data-description={item.description}
+        data-href={item.href}
+        data-host={item.host}
+        data-expires-date={item.expiresDate}
+        data-expires-time={item.expiresTime}
       >
-        <button class="notice-toggle" type="button" aria-expanded="false" aria-controls={`notice-body-${index}`}>
+        <button class="notice-toggle" type="button" aria-expanded="false">
           <svg class="notice-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5M12 8h.01"></path></svg>
           <span class="notice-title">{item.headline}</span>
-          <svg class="notice-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg>
+          <span class="notice-arrow" aria-hidden="true">›</span>
         </button>
-        <div class="notice-body" id={`notice-body-${index}`} hidden>
-          {item.description && <p class="notice-text">{item.description}</p>}
-          <a class="notice-source" href={item.href} target="_blank" rel="noopener noreferrer">Official source: {item.host} &rsaquo;</a>
-        </div>
+        <div class="notice-mobile-details mobile-details" aria-live="polite"></div>
       </div>
     ))}
   </div>
 )}
 
 <style>
-  .alert-stack[hidden], .notice-stack[hidden], .alert[hidden], .notice[hidden], .notice-body[hidden], .alert-posted[hidden] { display: none; }
+  .alert-stack[hidden], .notice-stack[hidden], .alert[hidden], .notice[hidden], .alert-posted[hidden] { display: none; }
 
   .alert { padding: 12px 14px 4px; border-bottom: 2px solid var(--alert-edge); color: var(--alert-ink); background: var(--alert-bg); }
   .alert-delay { --alert-bg: #fff4d6; --alert-edge: #a47726; --alert-ink: #35280e; --alert-accent: #6b4a0a; }
@@ -129,16 +134,19 @@ const items = (rawNotices as unknown as Record<string, unknown>[])
   .notice-stack { display: grid; gap: 8px; padding: 10px 12px; }
   .notice { overflow: hidden; border: 1px solid #6fb0cb; border-left: 6px solid var(--blue); border-radius: 8px; color: var(--navy); background: #d3eaf5; box-shadow: 0 1px 3px #092c4320; }
   .notice-toggle { display: flex; align-items: center; gap: 10px; width: 100%; min-height: 44px; padding: 8px 12px; border: 0; color: var(--navy); background: none; font-size: 13px; text-align: left; }
-  .notice-toggle:focus-visible, .notice-source:focus-visible, .alert-source:focus-visible { outline: 2px solid var(--blue); outline-offset: -2px; }
-  .notice-icon, .notice-chevron { flex: 0 0 auto; color: #0a5f80; }
+  .notice-toggle:focus-visible, .alert-source:focus-visible { outline: 2px solid var(--blue); outline-offset: -2px; }
+  .notice-icon { flex: 0 0 auto; color: #0a5f80; }
   .notice-title { flex: 1; min-width: 0; font-weight: 700; }
-  .notice.is-open .notice-chevron { transform: rotate(180deg); }
-  .notice-body { padding: 0 14px 4px 38px; color: #16394d; font-size: 13px; line-height: 1.5; }
-  .notice-text { margin: 0; white-space: pre-line; }
-  .notice-source { display: inline-flex; align-items: center; min-height: 44px; color: #0a5f80; font-weight: 700; }
+  /* Same arrow as the event rows. Details open in the right-hand pane (desktop) or below the card (phone). */
+  .notice-arrow { flex: 0 0 auto; margin-left: 12px; color: #6e8592; font-size: 23px; line-height: 1; }
+  .notice-mobile-details { display: none; }
 
   @media (min-width: 721px) {
     .alert { padding-inline: 24px; }
+  }
+  @media (max-width: 720px) {
+    .notice-arrow { margin-left: 4px; }
+    .notice.is-open .notice-mobile-details { display: block; padding: 17px; border-top: 1px solid #6fb0cb; background: #fff; }
   }
 </style>
 
@@ -166,15 +174,90 @@ const items = (rawNotices as unknown as Record<string, unknown>[])
     });
   }
 
+  function closeNotices() {
+    document.querySelectorAll<HTMLElement>('.notice.is-open').forEach((open) => {
+      open.classList.remove('is-open');
+      open.querySelector<HTMLElement>('.notice-toggle')?.setAttribute('aria-expanded', 'false');
+      open.querySelector<HTMLElement>('.notice-mobile-details')?.replaceChildren();
+    });
+  }
+
+  // Same building blocks and wording style as an event's details.
+  function createNoticeDetails(notice: HTMLElement) {
+    const content = document.createElement('div');
+    const label = document.createElement('p');
+    label.className = 'detail-category';
+    label.textContent = 'Notice';
+    const title = document.createElement('h2');
+    title.className = 'detail-title';
+    title.textContent = notice.dataset.title ?? '';
+    content.append(label, title);
+
+    const metadata = document.createElement('div');
+    metadata.className = 'detail-meta';
+    const lines: [string, string][] = [];
+    const expiresDate = notice.dataset.expiresDate ?? '';
+    if (expiresDate) {
+      const date = new Intl.DateTimeFormat('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${expiresDate}T12:00:00Z`));
+      const [hours, minutes] = (notice.dataset.expiresTime ?? '').split(':').map(Number);
+      const time = Number.isFinite(hours) && Number.isFinite(minutes) ? ` at ${hours % 12 || 12}:${String(minutes).padStart(2, '0')} ${hours >= 12 ? 'PM' : 'AM'}` : '';
+      lines.push(['Through', `${date}${time}`]);
+    }
+    if (notice.dataset.host) lines.push(['Source', notice.dataset.host]);
+    for (const [name, value] of lines) {
+      const line = document.createElement('p');
+      const strong = document.createElement('strong');
+      strong.textContent = `${name}: `;
+      line.append(strong, document.createTextNode(value));
+      metadata.append(line);
+    }
+    content.append(metadata);
+
+    if (notice.dataset.description) {
+      const description = document.createElement('p');
+      description.className = 'detail-description';
+      description.textContent = notice.dataset.description;
+      content.append(description);
+    }
+
+    if (notice.dataset.href) {
+      const actions = document.createElement('div');
+      actions.className = 'detail-actions';
+      const source = document.createElement('a');
+      source.className = 'detail-link';
+      source.href = notice.dataset.href;
+      source.target = '_blank';
+      source.rel = 'noopener noreferrer';
+      source.textContent = 'Visit Official Source';
+      actions.append(source);
+      content.append(actions);
+    }
+    return content;
+  }
+
   document.addEventListener('click', (event) => {
-    const toggle = event.target instanceof Element ? event.target.closest<HTMLButtonElement>('.notice-toggle') : null;
-    const notice = toggle?.closest<HTMLElement>('.notice');
-    const body = notice?.querySelector<HTMLElement>('.notice-body');
-    if (!toggle || !notice || !body) return;
-    const opening = body.hidden;
-    body.hidden = !opening;
-    notice.classList.toggle('is-open', opening);
-    toggle.setAttribute('aria-expanded', String(opening));
+    const target = event.target instanceof Element ? event.target : null;
+    const toggle = target?.closest<HTMLButtonElement>('.notice-toggle') ?? null;
+    if (!toggle) {
+      // Choosing an event takes over the details pane, so a notice must not stay marked open.
+      if (target?.closest('.event-row')) closeNotices();
+      return;
+    }
+    const notice = toggle.closest<HTMLElement>('.notice');
+    if (!notice) return;
+    const detailPane = document.getElementById('detailPane');
+    const wasOpen = notice.classList.contains('is-open');
+    document.querySelectorAll('.event-entry.is-expanded').forEach((expanded) => expanded.classList.remove('is-expanded'));
+    closeNotices();
+    if (wasOpen) {
+      detailPane?.replaceChildren(Object.assign(document.createElement('p'), { className: 'detail-empty', textContent: 'Choose an event' }));
+      return;
+    }
+    const details = createNoticeDetails(notice);
+    notice.classList.add('is-open');
+    toggle.setAttribute('aria-expanded', 'true');
+    detailPane?.replaceChildren(details.cloneNode(true));
+    notice.querySelector<HTMLElement>('.notice-mobile-details')?.replaceChildren(details);
   });
 
   refreshNotices();
