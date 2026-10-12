@@ -1,0 +1,485 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { categories, categoryColors } from '../lib/categories';
+import { ENDPOINT_URL, TURNSTILE_SITE_KEY } from '../lib/submit-config';
+---
+
+<SiteLayout title="Submit an Event | Westbrook Currents" description="Share a public event in Westbrook, Maine. It's free, and every event is reviewed before it appears on Westbrook Currents." currentPage="submit">
+  <Fragment slot="head">
+    <script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
+  </Fragment>
+
+  <div id="submit-config" data-endpoint={ENDPOINT_URL} data-sitekey={TURNSTILE_SITE_KEY} hidden></div>
+  <script type="application/json" id="cat-colors" set:html={JSON.stringify(categoryColors)}></script>
+
+  <div class="submit-hero">
+    <div class="submit-hero-inner">
+      <h1>Submit a community event</h1>
+      <p>Share what's happening in Westbrook. It's free, and every event is reviewed before it appears.</p>
+    </div>
+  </div>
+
+  <main class="submit-wrap">
+    <div id="form-view" class="submit-grid">
+      <form id="submit-form" class="submit-form" autocomplete="on">
+        <p id="form-banner" class="form-banner" role="alert" hidden></p>
+
+        <section class="card" aria-labelledby="h-event">
+          <div class="card-head"><span class="step" aria-hidden="true">1</span><h2 id="h-event">About your event</h2><span class="req-note"><span class="req">*</span> Required</span></div>
+          <div class="fields">
+            <div class="field" data-field="title">
+              <label for="f-title">Event title <span class="req" aria-hidden="true">*</span></label>
+              <input id="f-title" name="title" type="text" required maxlength="120" placeholder="e.g. Community Fall Festival" />
+            </div>
+            <div class="row3">
+              <div class="field" data-field="date">
+                <label for="f-date">Date <span class="req" aria-hidden="true">*</span></label>
+                <input id="f-date" name="date" type="date" required />
+              </div>
+              <div class="field" data-field="startTime">
+                <label for="f-start">Start time <span class="req" aria-hidden="true">*</span></label>
+                <input id="f-start" name="startTime" type="time" required />
+              </div>
+              <div class="field" data-field="endTime">
+                <label for="f-end">End time <span class="opt">(optional)</span></label>
+                <input id="f-end" name="endTime" type="time" />
+              </div>
+            </div>
+            <div class="field" data-field="category">
+              <label for="f-category">Category <span class="req" aria-hidden="true">*</span></label>
+              <select id="f-category" name="category" required class="narrow">
+                <option value="" selected disabled>Select a category</option>
+                {categories.map((c) => <option value={c}>{c}</option>)}
+              </select>
+            </div>
+            <div class="field" data-field="description">
+              <label for="f-description">Description <span class="req" aria-hidden="true">*</span></label>
+              <p id="help-description" class="help">One to three sentences on what to expect. This appears when someone opens the event's details.</p>
+              <textarea id="f-description" name="description" required maxlength="500" rows="4" aria-describedby="help-description" placeholder="Tell residents what to expect, including any special information."></textarea>
+              <p class="counter" id="desc-counter">0 / 500</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="card" aria-labelledby="h-where">
+          <div class="card-head"><span class="step" aria-hidden="true">2</span><h2 id="h-where">Where, and what it costs</h2></div>
+          <div class="fields">
+            <div class="row2">
+              <div class="field" data-field="venue">
+                <label for="f-venue">Venue name <span class="req" aria-hidden="true">*</span></label>
+                <input id="f-venue" name="venue" type="text" required maxlength="100" placeholder="e.g. Riverbank Park" />
+              </div>
+              <div class="field" data-field="address">
+                <label for="f-address">Street address <span class="req" aria-hidden="true">*</span></label>
+                <input id="f-address" name="address" type="text" required maxlength="150" placeholder='Street address, or "Online"' />
+              </div>
+            </div>
+            <div class="row-choices">
+              <fieldset class="field" data-field="admission">
+                <legend>Admission <span class="req" aria-hidden="true">*</span></legend>
+                <div class="choices">
+                  <label class="choice"><input type="radio" name="admission" value="free" checked /> Free</label>
+                  <label class="choice"><input type="radio" name="admission" value="paid" /> Paid</label>
+                </div>
+              </fieldset>
+              <fieldset class="field">
+                <legend>Accessibility</legend>
+                <label class="check"><input type="checkbox" name="accessible" /> Wheelchair accessible (check if yes)</label>
+              </fieldset>
+            </div>
+            <div class="field" data-field="priceDetails" id="price-field" hidden>
+              <label for="f-price">Price details <span class="opt">(optional)</span></label>
+              <input id="f-price" name="priceDetails" type="text" maxlength="100" placeholder="e.g. Adults $5, kids under 12 free" />
+            </div>
+            <div class="field" data-field="link">
+              <label for="f-link">Official event link <span class="opt">(optional)</span></label>
+              <p id="help-link" class="help">Registration, tickets, or more information.</p>
+              <input id="f-link" name="link" type="url" maxlength="300" aria-describedby="help-link" placeholder="https://" />
+            </div>
+          </div>
+        </section>
+
+        <section class="card" aria-labelledby="h-you">
+          <div class="card-head"><span class="step" aria-hidden="true">3</span><h2 id="h-you">About you</h2><span class="req-note">Your name and email are private and never published.</span></div>
+          <div class="fields">
+            <div class="row2">
+              <div class="field" data-field="name">
+                <label for="f-name">Your name <span class="req" aria-hidden="true">*</span></label>
+                <input id="f-name" name="name" type="text" required maxlength="80" autocomplete="name" placeholder="e.g. Jane Smith" />
+              </div>
+              <div class="field" data-field="email">
+                <label for="f-email">Your email <span class="req" aria-hidden="true">*</span></label>
+                <input id="f-email" name="email" type="email" required maxlength="120" autocomplete="email" placeholder="e.g. name@example.com" />
+              </div>
+            </div>
+            <div class="row2">
+              <div class="field" data-field="organization">
+                <label for="f-org">Organization <span class="opt">(optional)</span></label>
+                <input id="f-org" name="organization" type="text" maxlength="100" placeholder="Club, business, or department" />
+              </div>
+              <div class="field" data-field="repeats">
+                <label for="f-repeats">Does it repeat? <span class="opt">(optional)</span></label>
+                <input id="f-repeats" name="repeats" type="text" maxlength="150" placeholder="e.g. Every Tuesday through December" />
+              </div>
+            </div>
+            <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          </div>
+        </section>
+
+        <details class="card pv-mobile">
+          <summary>Preview how it will look</summary>
+          <div class="pv-body">
+            <p class="pv-date pv-date-text">Pick a date</p>
+            <div class="pv-row" style="--event-accent:#6e6e6e">
+              <span class="pv-time pv-time-text">Time</span>
+              <span class="pv-content">
+                <span class="pv-title pv-title-text">Your event title</span>
+                <span class="pv-meta pv-venue-text">Venue</span>
+                <span class="pv-cat"><span class="pv-dot"></span><span class="pv-cat-text">Category</span><span class="pv-free" hidden>FREE</span></span>
+              </span>
+            </div>
+          </div>
+        </details>
+
+        <section class="card submit-card" aria-labelledby="h-send">
+          <h2 id="h-send" class="sr-only">Confirm and submit</h2>
+          <p class="notice pv-notice"><strong>One more step after you submit.</strong> We email you a link. Open it and press Confirm within 48 hours, or your event is not considered.</p>
+          <div class="field" data-field="confirm">
+            <label class="check big"><input type="checkbox" name="confirm" required /> I confirm the event information is accurate and I am authorized to submit it for publication on Westbrook Currents.</label>
+          </div>
+          <div id="ts-home"><div id="ts-box"></div></div>
+          <div class="submit-row">
+            <p class="fine">A quick security check may appear. Up to 3 confirmation emails per address per day.</p>
+            <button type="submit" id="submit-btn" class="btn">Submit event</button>
+          </div>
+        </section>
+      </form>
+
+      <aside class="submit-aside" aria-label="Preview and next steps">
+        <section class="card" aria-labelledby="h-preview">
+          <h2 id="h-preview">Preview</h2>
+          <p class="help">Updates as you type. This is how your event will look in the list.</p>
+          <p class="pv-date pv-date-text">Pick a date</p>
+          <div class="pv-row" style="--event-accent:#6e6e6e">
+            <span class="pv-time pv-time-text">Time</span>
+            <span class="pv-content">
+              <span class="pv-title pv-title-text">Your event title</span>
+              <span class="pv-meta pv-venue-text">Venue</span>
+              <span class="pv-cat"><span class="pv-dot"></span><span class="pv-cat-text">Category</span><span class="pv-free" hidden>FREE</span></span>
+            </span>
+          </div>
+        </section>
+        <section class="card" aria-labelledby="h-next">
+          <h2 id="h-next">What happens next</h2>
+          <ol class="next-list">
+            <li><span class="step sm" aria-hidden="true">1</span><div><strong>Submit the form</strong><p>Takes about two minutes.</p></div></li>
+            <li><span class="step sm" aria-hidden="true">2</span><div><strong>Confirm your email</strong><p>We email you a link. Open it and press Confirm within 48 hours. Events that are not confirmed are not considered.</p></div></li>
+            <li><span class="step sm" aria-hidden="true">3</span><div><strong>We review it</strong><p>Once confirmed, your event is reviewed before it appears on the site.</p></div></li>
+          </ol>
+        </section>
+      </aside>
+    </div>
+
+    <section id="check-view" class="check-view card" hidden aria-labelledby="h-check">
+      <div class="mail-icon" aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="3" y="6" width="22" height="16" rx="2.5" stroke="currentColor" stroke-width="2"/><path d="M4 8l10 8 10-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <h2 id="h-check" tabindex="-1">Check your email</h2>
+      <p class="lead">We sent a confirmation link to <strong id="check-email" class="wrap"></strong>.</p>
+      <ol class="next-list">
+        <li><span class="step sm" aria-hidden="true">1</span><div><p>Open the email from Westbrook Currents.</p></div></li>
+        <li><span class="step sm" aria-hidden="true">2</span><div><p>Press the button, then press <strong>Confirm</strong> on the page that opens.</p></div></li>
+        <li><span class="step sm" aria-hidden="true">3</span><div><p>Do it within 48 hours. Events that are not confirmed are not considered.</p></div></li>
+      </ol>
+      <p class="notice warn">Nothing yet? Check your spam or promotions folder. It can take a minute or two.</p>
+      <div id="ts-check-home"></div>
+      <button type="button" id="resend-btn" class="btn ghost">Send the email again</button>
+      <p id="resend-msg" class="resend-msg" role="status"></p>
+      <p class="fine center">Up to 3 confirmation emails per address per day.</p>
+      <button type="button" id="start-over" class="link-btn">Wrong address? Start over</button>
+    </section>
+  </main>
+
+  <style>
+    .submit-hero { padding: 22px 24px 26px; color: #fff; background: var(--navy); }
+    .submit-hero-inner { width: min(1100px, 100%); margin: 0 auto; }
+    .submit-hero h1 { margin: 0 0 6px; font-size: 32px; line-height: 1.15; }
+    .submit-hero p { margin: 0; color: #cfe3ee; font-size: 17px; line-height: 1.4; }
+    .submit-wrap { width: min(1100px, 100%); margin: 0 auto; padding: 26px 24px 20px; }
+    .submit-grid { display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start; }
+    .submit-form { display: flex; flex: 999 1 560px; min-width: 0; flex-direction: column; gap: 18px; }
+    .submit-aside { display: flex; flex: 1 1 300px; min-width: 0; flex-direction: column; gap: 18px; }
+    .card { padding: 22px; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+    .card h2 { margin: 0; color: var(--navy); font-size: 19px; line-height: 1.2; }
+    .card-head { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; margin-bottom: 16px; }
+    .card-head h2 { flex: 1; }
+    .step { display: inline-flex; width: 28px; height: 28px; flex: 0 0 28px; align-items: center; justify-content: center; border-radius: 50%; color: #fff; background: var(--blue); font-size: 14px; font-weight: 800; }
+    .step.sm { width: 26px; height: 26px; flex-basis: 26px; font-size: 13px; }
+    .req-note { color: var(--muted); font-size: 13px; }
+    .req { color: #b42318; }
+    .opt { color: var(--muted); font-weight: 500; }
+    .fields { display: flex; flex-direction: column; gap: 16px; }
+    .row2, .row3 { display: flex; flex-wrap: wrap; gap: 16px; }
+    .row2 > .field { flex: 1 1 230px; }
+    .row3 > .field { flex: 1 1 150px; }
+    .row-choices { display: flex; flex-wrap: wrap; gap: 16px 36px; }
+    .field { min-width: 0; margin: 0; padding: 0; border: 0; }
+    .field > label, .field > legend { display: block; margin: 0 0 6px; padding: 0; color: var(--navy); font-size: 15px; font-weight: 700; }
+    .help { margin: -2px 0 6px; color: var(--muted); font-size: 13px; line-height: 1.4; }
+    .field input[type='text'], .field input[type='email'], .field input[type='url'], .field input[type='date'], .field input[type='time'], .field select, .field textarea {
+      width: 100%; min-height: 46px; padding: 0 12px; border: 1px solid #7a8da1; border-radius: 6px; color: #092c43; background: #fff; font: inherit; font-size: 16px;
+    }
+    .field textarea { min-height: 104px; padding: 10px 12px; line-height: 1.45; resize: vertical; }
+    .field select.narrow { max-width: 420px; }
+    .field input::placeholder, .field textarea::placeholder { color: #5f7381; }
+    .field input:focus-visible, .field select:focus-visible, .field textarea:focus-visible, .choice:focus-within, .btn:focus-visible, .link-btn:focus-visible, summary:focus-visible { outline: 3px solid #42bfe8aa; outline-offset: 2px; }
+    .field [aria-invalid='true'] { border-color: #b42318; }
+    :global(.field-error) { margin: 6px 0 0; color: #b42318; font-size: 14px; font-weight: 700; }
+    .counter { margin: 4px 0 0; color: var(--muted); font-size: 13px; text-align: right; }
+    .choices { display: flex; gap: 10px; }
+    .choice { display: flex; min-height: 44px; align-items: center; gap: 8px; padding: 0 16px 0 12px; border: 1px solid #7a8da1; border-radius: 6px; font-size: 16px; font-weight: 500; }
+    .choice input, .check input { width: 20px; height: 20px; margin: 0; flex: none; accent-color: var(--blue); }
+    .check { display: flex; min-height: 44px; align-items: center; gap: 10px; font-size: 16px; font-weight: 500; }
+    .check.big { align-items: flex-start; gap: 12px; font-size: 15px; line-height: 1.45; }
+    .check.big input { width: 22px; height: 22px; margin-top: 1px; }
+    .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+    .form-banner { margin: 0; padding: 12px 14px; border: 1px solid #e5a49d; border-radius: 6px; color: #7a1a12; background: #fdeceb; font-size: 15px; font-weight: 700; line-height: 1.4; }
+    .submit-card { display: flex; flex-direction: column; gap: 16px; }
+    .notice { margin: 0; padding: 12px 14px; border: 1px solid #a9d3e3; border-radius: 6px; color: #0b3550; background: #e6f3f8; font-size: 15px; line-height: 1.45; }
+    .notice.warn { border-color: #e0c26a; color: #4a3a05; background: #fdf3d8; }
+    .pv-notice { display: none; }
+    .submit-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; }
+    .fine { margin: 0; max-width: 460px; color: var(--muted); font-size: 13px; line-height: 1.4; }
+    .fine.center { text-align: center; max-width: none; }
+    .btn { min-height: 50px; padding: 0 34px; border: 0; border-radius: 6px; color: #fff; background: var(--blue); font-size: 17px; font-weight: 800; }
+    .btn:hover { background: #066b8e; }
+    .btn:disabled { cursor: wait; opacity: .65; }
+    .btn.ghost { width: 100%; border: 2px solid var(--blue); color: var(--blue); background: #fff; font-size: 16px; }
+    .btn.ghost:hover { background: #eef7fb; }
+    .link-btn { min-height: 44px; border: 0; color: var(--blue); background: none; font-size: 16px; font-weight: 700; text-decoration: underline; }
+    .pv-date { margin: 10px 0 6px; color: #28495c; font-size: 12px; font-weight: 800; text-transform: uppercase; }
+    .pv-row { display: flex; align-items: center; min-height: 84px; padding: 14px; border: 1px solid var(--line); border-left: 4px solid var(--event-accent); border-radius: 4px; background: #fff; }
+    .pv-time { flex: 0 0 82px; color: #28495c; font-size: 12px; font-weight: 800; }
+    .pv-content { display: grid; flex: 1; min-width: 0; gap: 4px; }
+    .pv-title { overflow-wrap: anywhere; font-size: 16px; font-weight: 800; line-height: 1.25; }
+    .pv-meta { overflow-wrap: anywhere; color: var(--muted); font-size: 13px; }
+    .pv-cat { display: flex; align-items: center; gap: 6px; color: #435b69; font-size: 10px; font-weight: 800; text-transform: uppercase; }
+    .pv-dot { width: 8px; height: 8px; flex: 0 0 8px; border-radius: 50%; background: var(--event-accent); }
+    .pv-free { margin-left: 5px; color: #24764d; }
+    .is-empty { color: #71838d; font-weight: 600; }
+    .pv-mobile { display: none; padding: 0 16px; }
+    .pv-mobile summary { min-height: 52px; display: flex; align-items: center; color: var(--navy); font-size: 16px; font-weight: 800; cursor: pointer; }
+    .pv-body { padding-bottom: 16px; }
+    .next-list { display: flex; flex-direction: column; gap: 14px; margin: 14px 0 0; padding: 0; list-style: none; }
+    .next-list li { display: flex; gap: 12px; align-items: flex-start; }
+    .next-list strong { display: block; color: var(--navy); font-size: 15px; }
+    .next-list p { margin: 2px 0 0; color: #294858; font-size: 14px; line-height: 1.45; }
+    [hidden] { display: none !important; }
+    .check-view .next-list strong { display: inline; font-size: inherit; }
+    .check-view { display: flex; flex-direction: column; gap: 16px; width: min(560px, 100%); margin: 0 auto; padding: 26px 22px; }
+    .check-view h2 { font-size: 28px; }
+    .check-view h2:focus { outline: none; }
+    .mail-icon { display: flex; width: 56px; height: 56px; align-items: center; justify-content: center; border-radius: 50%; color: var(--blue); background: #e6f3f8; }
+    .lead { margin: 0; font-size: 17px; line-height: 1.45; }
+    .wrap { overflow-wrap: anywhere; }
+    .resend-msg { margin: -6px 0 0; min-height: 1.2em; color: #294858; font-size: 14px; font-weight: 700; text-align: center; }
+    @media (max-width: 899px) {
+      .submit-aside { display: none; }
+      .pv-mobile { display: block; }
+      .pv-notice { display: block; }
+    }
+    @media (max-width: 600px) {
+      .submit-hero { padding: 16px 14px 20px; }
+      .submit-hero h1 { font-size: 26px; }
+      .submit-hero p { font-size: 15px; }
+      .submit-wrap { padding: 14px 10px 10px; }
+      .card { padding: 16px; }
+      .choices { flex: 1; }
+      .choice { flex: 1; min-height: 48px; }
+      .field input[type='text'], .field input[type='email'], .field input[type='url'], .field input[type='date'], .field input[type='time'], .field select { min-height: 48px; }
+      .btn { width: 100%; min-height: 52px; }
+      .row3 > .field:first-child { flex-basis: 100%; }
+      .row3 > .field:not(:first-child) { flex-basis: calc(50% - 8px); }
+    }
+  </style>
+
+  <script>
+    const cfg = document.getElementById('submit-config') as HTMLElement;
+    const ENDPOINT = cfg.dataset.endpoint ?? '';
+    const SITE_KEY = cfg.dataset.sitekey ?? '';
+    const colors: Record<string, string> = JSON.parse(document.getElementById('cat-colors')?.textContent || '{}');
+    const loadedAt = Date.now();
+
+    const form = document.getElementById('submit-form') as HTMLFormElement;
+    const formView = document.getElementById('form-view') as HTMLElement;
+    const checkView = document.getElementById('check-view') as HTMLElement;
+    const banner = document.getElementById('form-banner') as HTMLElement;
+    const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement;
+    const tsBox = document.getElementById('ts-box') as HTMLElement;
+    const tsHome = document.getElementById('ts-home') as HTMLElement;
+    const tsCheckHome = document.getElementById('ts-check-home') as HTMLElement;
+    const priceField = document.getElementById('price-field') as HTMLElement;
+
+    type AnyField = HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement;
+    const field = (name: string) => form.elements.namedItem(name) as AnyField;
+    const val = (name: string) => (field(name)?.value ?? '').trim();
+    const checked = (name: string) => (field(name) as HTMLInputElement).checked;
+    const pad = (n: number) => String(n).padStart(2, '0');
+    const iso = (d: Date) => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+
+    // Date limits, in the visitor's own browser clock.
+    const dateInput = field('date') as HTMLInputElement;
+    const today = new Date();
+    const lastDay = new Date(today);
+    lastDay.setFullYear(lastDay.getFullYear() + 1);
+    dateInput.min = iso(today);
+    dateInput.max = iso(lastDay);
+
+    // ---- Live preview (updates both preview boxes) ----
+    const fmtTime = (v: string) => {
+      const [h, m] = v.split(':').map(Number);
+      if (Number.isNaN(h) || Number.isNaN(m)) return '';
+      return `${h % 12 || 12}:${pad(m)} ${h >= 12 ? 'PM' : 'AM'}`;
+    };
+    const fmtDate = (v: string) => {
+      const m = v.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+      if (!m) return '';
+      return new Date(+m[1], +m[2] - 1, +m[3]).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
+    };
+    const setAll = (selector: string, text: string, placeholder: string) => {
+      document.querySelectorAll<HTMLElement>(selector).forEach((el) => {
+        el.textContent = text || placeholder;
+        el.classList.toggle('is-empty', !text);
+      });
+    };
+    const updatePreview = () => {
+      const category = val('category');
+      setAll('.pv-date-text', fmtDate(val('date')), 'Pick a date');
+      setAll('.pv-time-text', fmtTime(val('startTime')), 'Time');
+      setAll('.pv-title-text', val('title'), 'Your event title');
+      setAll('.pv-venue-text', val('venue'), 'Venue');
+      setAll('.pv-cat-text', category, 'Category');
+      const accent = colors[category] ?? '#6e6e6e';
+      document.querySelectorAll<HTMLElement>('.pv-row').forEach((row) => row.style.setProperty('--event-accent', accent));
+      const isFree = (form.querySelector('input[name="admission"]:checked') as HTMLInputElement | null)?.value === 'free';
+      document.querySelectorAll<HTMLElement>('.pv-free').forEach((el) => { el.hidden = !isFree; });
+      priceField.hidden = isFree;
+      (document.getElementById('desc-counter') as HTMLElement).textContent = `${(field('description') as HTMLTextAreaElement).value.length} / 500`;
+    };
+    form.addEventListener('input', updatePreview);
+    form.addEventListener('change', updatePreview);
+    updatePreview();
+
+    // ---- Cloudflare Turnstile ----
+    let widgetId: string | null = null;
+    const turnstile = () => (window as any).turnstile;
+    const renderTurnstile = () => {
+      if (!turnstile()) { window.setTimeout(renderTurnstile, 300); return; }
+      widgetId = turnstile().render('#ts-box', { sitekey: SITE_KEY, theme: 'light' });
+    };
+    renderTurnstile();
+    const getToken = (): string => (turnstile() && widgetId !== null ? turnstile().getResponse(widgetId) || '' : '');
+    const resetTurnstile = () => { if (turnstile() && widgetId !== null) turnstile().reset(widgetId); };
+
+    // ---- Messages ----
+    const showBanner = (text: string) => { banner.textContent = text; banner.hidden = !text; if (text) banner.scrollIntoView({ block: 'center', behavior: 'smooth' }); };
+    const clearErrors = () => {
+      showBanner('');
+      form.querySelectorAll('.field-error').forEach((el) => el.remove());
+      form.querySelectorAll('[aria-invalid]').forEach((el) => el.removeAttribute('aria-invalid'));
+    };
+    const setFieldError = (name: string, message: string) => {
+      const wrapper = form.querySelector<HTMLElement>(`[data-field="${name}"]`);
+      if (!wrapper) return null;
+      const p = document.createElement('p');
+      p.className = 'field-error';
+      p.id = `err-${name}`;
+      p.textContent = message;
+      wrapper.appendChild(p);
+      const input = wrapper.querySelector<HTMLElement>('input, select, textarea');
+      input?.setAttribute('aria-invalid', 'true');
+      input?.setAttribute('aria-describedby', p.id);
+      return input;
+    };
+
+    const post = async (body: Record<string, unknown>) => {
+      const res = await fetch(ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(body) });
+      return res.json();
+    };
+    const NETWORK_MESSAGE = "We couldn't reach the server. Please check your connection and try again.";
+
+    // ---- Submit ----
+    let submittedEmail = '';
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      clearErrors();
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+      const token = getToken();
+      if (!token) { showBanner('Please wait a moment for the security check to finish, then press Submit again. If it never appears, reload the page.'); return; }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending…';
+      try {
+        const result = await post({
+          action: 'submit',
+          title: val('title'), date: val('date'), startTime: val('startTime'), endTime: val('endTime'),
+          category: val('category'), description: val('description'), venue: val('venue'), address: val('address'),
+          admission: (form.querySelector('input[name="admission"]:checked') as HTMLInputElement).value,
+          priceDetails: val('priceDetails'), accessible: checked('accessible'), link: val('link'),
+          organization: val('organization'), repeats: val('repeats'), name: val('name'), email: val('email'),
+          confirm: checked('confirm'), hp: val('website'), loadedAt, turnstileToken: token,
+        });
+        if (result.ok) {
+          submittedEmail = val('email').toLowerCase();
+          (document.getElementById('check-email') as HTMLElement).textContent = submittedEmail;
+          formView.hidden = true;
+          checkView.hidden = false;
+          tsCheckHome.appendChild(tsBox);
+          window.scrollTo({ top: 0 });
+          (document.getElementById('h-check') as HTMLElement).focus();
+        } else {
+          let first: HTMLElement | null = null;
+          for (const [name, message] of Object.entries(result.errors ?? {})) {
+            const input = setFieldError(name, String(message));
+            first = first ?? input;
+          }
+          showBanner(result.message || 'Something went wrong. Please try again.');
+          first?.focus();
+        }
+      } catch {
+        showBanner(NETWORK_MESSAGE);
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Submit event';
+        resetTurnstile();
+      }
+    });
+
+    // ---- Resend and start over ----
+    const resendBtn = document.getElementById('resend-btn') as HTMLButtonElement;
+    const resendMsg = document.getElementById('resend-msg') as HTMLElement;
+    resendBtn.addEventListener('click', async () => {
+      resendMsg.textContent = '';
+      const token = getToken();
+      if (!token) { resendMsg.textContent = 'Please wait a moment for the security check, then try again.'; return; }
+      resendBtn.disabled = true;
+      try {
+        const result = await post({ action: 'resend', email: submittedEmail, turnstileToken: token });
+        resendMsg.textContent = result.message || (result.ok ? 'Sent.' : 'Something went wrong. Please try again.');
+      } catch {
+        resendMsg.textContent = NETWORK_MESSAGE;
+      } finally {
+        resendBtn.disabled = false;
+        resetTurnstile();
+      }
+    });
+    (document.getElementById('start-over') as HTMLElement).addEventListener('click', () => {
+      checkView.hidden = true;
+      formView.hidden = false;
+      tsHome.appendChild(tsBox);
+      resetTurnstile();
+      window.scrollTo({ top: 0 });
+    });
+  </script>
+</SiteLayout>

@@ -5,10 +5,12 @@ import NoticeList from '../components/NoticeList.astro';
 interface Props {
   title: string;
   description: string;
-  currentPage?: 'events' | 'about';
+  currentPage?: 'events' | 'about' | 'submit';
+  // Private pages (the email confirmation page) are hidden from search, send no referrer, and skip analytics.
+  privatePage?: boolean;
 }
 
-const { title, description, currentPage = 'events' } = Astro.props;
+const { title, description, currentPage = 'events', privatePage = false } = Astro.props;
 const siteUrl = Astro.site ?? new URL('https://westbrookcurrents.com');
 const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
 const socialImageUrl = new URL('/logo-desktop.png', siteUrl).href;
@@ -20,7 +22,9 @@ const socialImageUrl = new URL('/logo-desktop.png', siteUrl).href;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#00243d" />
     <link rel="icon" type="image/png" href="/favicon.png" />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content={privatePage ? 'noindex, nofollow' : 'index, follow'} />
+    {privatePage && <meta name="referrer" content="no-referrer" />}
+    <slot name="head" />
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
@@ -36,14 +40,18 @@ const socialImageUrl = new URL('/logo-desktop.png', siteUrl).href;
     <meta name="twitter:url" content={canonicalUrl} />
     <meta name="twitter:image" content={socialImageUrl} />
     <meta name="twitter:image:alt" content="Westbrook Currents logo" />
-    <!-- Google tag (gtag.js) -->
-    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-HLW97NLQT0"></script>
-    <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-HLW97NLQT0');
-    </script>
+    {!privatePage && (
+      <Fragment>
+        <!-- Google tag (gtag.js) -->
+        <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-HLW97NLQT0"></script>
+        <script is:inline>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-HLW97NLQT0');
+        </script>
+      </Fragment>
+    )}
   </head>
   <body>
     <header class="site-header">
