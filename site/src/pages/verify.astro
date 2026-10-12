@@ -1,0 +1,124 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { ENDPOINT_URL } from '../lib/submit-config';
+---
+
+<SiteLayout title="Confirm your email | Westbrook Currents" description="Confirm your email address to finish submitting your event." currentPage="submit" privatePage={true}>
+  <div id="verify-config" data-endpoint={ENDPOINT_URL} hidden></div>
+
+  <main class="verify-wrap">
+    <section id="v-loading" class="v-card" aria-live="polite">
+      <h1>One moment…</h1>
+    </section>
+
+    <section id="v-ready" class="v-card" hidden>
+      <h1 tabindex="-1">Confirm your email</h1>
+      <p class="lead">One more step. Press the button to confirm that you submitted your event to Westbrook Currents.</p>
+      <button type="button" id="v-confirm" class="btn">Confirm</button>
+      <p id="v-error" class="v-error" role="alert" hidden></p>
+      <p class="fine">Didn't submit an event? Close this page. Nothing happens unless you press Confirm.</p>
+    </section>
+
+    <section id="v-done" class="v-card" hidden>
+      <div class="icon ok" aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M6 14.5l5.5 5.5L22 8.5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <h1 id="v-done-h" tabindex="-1">Thank you. You're confirmed.</h1>
+      <p class="lead" id="v-done-text"></p>
+      <a class="btn" href="/">Browse events</a>
+      <a class="plain" href="/submit">Submit another event</a>
+    </section>
+
+    <section id="v-problem" class="v-card" hidden>
+      <div class="icon warn" aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="10" stroke="currentColor" stroke-width="2.5"/><path d="M14 8v6.5l4 2.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <h1 id="v-problem-h" tabindex="-1">This link has expired</h1>
+      <p class="lead" id="v-problem-text">Confirmation links work for 48 hours, and each can be used once. It may also have been replaced by a newer email. Please submit your event again.</p>
+      <a class="btn" href="/submit">Submit an event</a>
+      <a class="plain" href="/about/">About Westbrook Currents</a>
+    </section>
+  </main>
+
+  <style>
+    .verify-wrap { width: min(560px, 100%); margin: 0 auto; padding: 28px 14px 40px; }
+    .v-card { display: flex; flex-direction: column; gap: 16px; padding: 26px 22px; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+    .v-card[hidden] { display: none; }
+    .v-card h1 { margin: 0; color: var(--navy); font-size: 28px; line-height: 1.2; }
+    .v-card h1:focus { outline: none; }
+    .lead { margin: 0; font-size: 17px; line-height: 1.5; overflow-wrap: anywhere; }
+    .fine { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.4; }
+    .btn { display: flex; width: 100%; min-height: 52px; align-items: center; justify-content: center; border: 0; border-radius: 6px; color: #fff; background: var(--blue); font-size: 18px; font-weight: 800; text-decoration: none; }
+    .btn:hover { background: #066b8e; }
+    .btn:disabled { cursor: wait; opacity: .65; }
+    .btn:focus-visible, .plain:focus-visible { outline: 3px solid #42bfe8aa; outline-offset: 2px; }
+    .plain { display: flex; min-height: 44px; align-items: center; justify-content: center; color: var(--blue); font-size: 16px; font-weight: 700; }
+    .icon { display: flex; width: 56px; height: 56px; align-items: center; justify-content: center; border-radius: 50%; }
+    .icon.ok { color: #1a6b32; background: #dff1e4; }
+    .icon.warn { color: #8a6a00; background: #fdf3d8; }
+    .v-error { margin: 0; padding: 12px 14px; border: 1px solid #e5a49d; border-radius: 6px; color: #7a1a12; background: #fdeceb; font-size: 15px; font-weight: 700; line-height: 1.4; }
+    .v-error[hidden] { display: none; }
+  </style>
+
+  <script>
+    const ENDPOINT = (document.getElementById('verify-config') as HTMLElement).dataset.endpoint ?? '';
+    const panels = ['v-loading', 'v-ready', 'v-done', 'v-problem'].map((id) => document.getElementById(id) as HTMLElement);
+    const show = (id: string, focusId?: string) => {
+      panels.forEach((p) => { p.hidden = p.id !== id; });
+      if (focusId) document.getElementById(focusId)?.focus();
+    };
+
+    // The token is read from the address, then removed from the address bar so it isn't left in history or screenshots.
+    const token = (new URLSearchParams(window.location.search).get('t') ?? '').trim().toLowerCase();
+    if (/^[0-9a-f]{64}$/.test(token)) {
+      try { history.replaceState(null, '', window.location.pathname); } catch { /* ignore */ }
+    }
+
+    const showProblem = (title: string, text: string) => {
+      (document.getElementById('v-problem-h') as HTMLElement).textContent = title;
+      (document.getElementById('v-problem-text') as HTMLElement).textContent = text;
+      show('v-problem', 'v-problem-h');
+    };
+
+    if (!/^[0-9a-f]{64}$/.test(token)) {
+      showProblem('This link doesn’t look right', 'The confirmation link is incomplete. Try opening it again from your email, or submit your event again.');
+    } else {
+      show('v-ready');
+      const btn = document.getElementById('v-confirm') as HTMLButtonElement;
+      const err = document.getElementById('v-error') as HTMLElement;
+      btn.addEventListener('click', async () => {
+        err.hidden = true;
+        btn.disabled = true;
+        btn.textContent = 'Confirming…';
+        try {
+          const res = await fetch(ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify({ action: 'verify', token }) });
+          const r = await res.json();
+          if (r.ok) {
+            const text = document.getElementById('v-done-text') as HTMLElement;
+            text.textContent = '';
+            if (r.already) {
+              text.textContent = 'This event was already confirmed. It is waiting for review. We check every event before it appears on the site.';
+            } else {
+              const b = document.createElement('b');
+              b.textContent = r.title || 'Your event';
+              text.append(b, `${r.date ? ` (${r.date})` : ''} is now waiting for review. We check every event before it appears on the site.`);
+            }
+            show('v-done', 'v-done-h');
+          } else if (r.code === 'busy') {
+            err.textContent = r.message || 'The site is busy. Please press Confirm again in a moment.';
+            err.hidden = false;
+          } else {
+            showProblem(r.code === 'expired' ? 'This link has expired' : 'This link can’t be used',
+              r.message || 'Confirmation links work for 48 hours, and each can be used once. It may also have been replaced by a newer email. Please submit your event again.');
+          }
+        } catch {
+          err.textContent = "We couldn't reach the server. Please check your connection and press Confirm again.";
+          err.hidden = false;
+        } finally {
+          btn.disabled = false;
+          btn.textContent = 'Confirm';
+        }
+      });
+    }
+  </script>
+</SiteLayout>
