@@ -18,5 +18,15 @@
     "showFrom": "",
     "expiresDate": "2026-10-13",
     "expiresTime": "05:29"
+  },
+  {
+    "type": "General Notice",
+    "headline": "Absentee Voting at City Hall",
+    "description": "Westbrook residents may register to vote and/or request an absentee ballot in person at Westbrook City Hall beginning on Monday, October 5, 2026. Absentee voting at City Hall takes place during normal business hours through Thursday, October 29, 2026. All absentee ballots must be returned to Westbrook City Hall no later than 8pm on Election Day, November 3rd. Westbrook Elections Hotline: 207-591-8116.",
+    "officialLink": "https://westbrookmaine.gov/Calendar.aspx?EID=3617",
+    "postedAt": "",
+    "showFrom": "2026-10-13",
+    "expiresDate": "2026-10-29",
+    "expiresTime": "17:00"
   }
 ]
