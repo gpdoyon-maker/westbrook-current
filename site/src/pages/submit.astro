@@ -24,6 +24,8 @@ import { ENDPOINT_URL, TURNSTILE_SITE_KEY } from '../lib/submit-config';
       <form id="submit-form" class="submit-form" autocomplete="on">
         <p id="form-banner" class="form-banner" role="alert" hidden></p>
 
+        <p class="notice eligibility"><strong>Who can submit:</strong> events open to the public and held in Westbrook, Maine. Online-only events can't be listed.</p>
+
         <section class="card" aria-labelledby="h-event">
           <div class="card-head"><span class="step" aria-hidden="true">1</span><h2 id="h-event">About your event</h2><span class="req-note"><span class="req">*</span> Required</span></div>
           <div class="fields">
@@ -44,6 +46,10 @@ import { ENDPOINT_URL, TURNSTILE_SITE_KEY } from '../lib/submit-config';
                 <label for="f-end">End time <span class="opt">(optional)</span></label>
                 <input id="f-end" name="endTime" type="time" />
               </div>
+            </div>
+            <div class="field" data-field="repeats">
+              <label for="f-repeats">Does it repeat? <span class="opt">(optional)</span></label>
+              <input id="f-repeats" name="repeats" type="text" maxlength="150" placeholder="e.g. Every Tuesday through December" />
             </div>
             <div class="field" data-field="category">
               <label for="f-category">Category <span class="req" aria-hidden="true">*</span></label>
@@ -71,7 +77,7 @@ import { ENDPOINT_URL, TURNSTILE_SITE_KEY } from '../lib/submit-config';
               </div>
               <div class="field" data-field="address">
                 <label for="f-address">Street address <span class="req" aria-hidden="true">*</span></label>
-                <input id="f-address" name="address" type="text" required maxlength="150" placeholder='Street address, or "Online"' />
+                <input id="f-address" name="address" type="text" required maxlength="150" placeholder="e.g. 671 Main Street, Westbrook" />
               </div>
             </div>
             <div class="row-choices">
@@ -112,15 +118,9 @@ import { ENDPOINT_URL, TURNSTILE_SITE_KEY } from '../lib/submit-config';
                 <input id="f-email" name="email" type="email" required maxlength="120" autocomplete="email" placeholder="e.g. name@example.com" />
               </div>
             </div>
-            <div class="row2">
-              <div class="field" data-field="organization">
-                <label for="f-org">Organization <span class="opt">(optional)</span></label>
-                <input id="f-org" name="organization" type="text" maxlength="100" placeholder="Club, business, or department" />
-              </div>
-              <div class="field" data-field="repeats">
-                <label for="f-repeats">Does it repeat? <span class="opt">(optional)</span></label>
-                <input id="f-repeats" name="repeats" type="text" maxlength="150" placeholder="e.g. Every Tuesday through December" />
-              </div>
+            <div class="field" data-field="organization">
+              <label for="f-org">Organization <span class="opt">(optional)</span></label>
+              <input id="f-org" name="organization" type="text" maxlength="100" placeholder="Club, business, or department" />
             </div>
             <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
           </div>
@@ -143,7 +143,7 @@ import { ENDPOINT_URL, TURNSTILE_SITE_KEY } from '../lib/submit-config';
 
         <section class="card submit-card" aria-labelledby="h-send">
           <h2 id="h-send" class="sr-only">Confirm and submit</h2>
-          <p class="notice pv-notice"><strong>One more step after you submit.</strong> We email you a link. Open it and press Confirm within 48 hours, or your event is not considered.</p>
+          <p class="notice pv-notice"><strong>One more step after you submit.</strong> We email you a link. Open it and press Confirm within 48 hours. We can review your event after you confirm your email.</p>
           <div class="field" data-field="confirm">
             <label class="check big"><input type="checkbox" name="confirm" required /> I confirm the event information is accurate and I am authorized to submit it for publication on Westbrook Currents.</label>
           </div>
@@ -173,7 +173,7 @@ import { ENDPOINT_URL, TURNSTILE_SITE_KEY } from '../lib/submit-config';
           <h2 id="h-next">What happens next</h2>
           <ol class="next-list">
             <li><span class="step sm" aria-hidden="true">1</span><div><strong>Submit the form</strong><p>Takes about two minutes.</p></div></li>
-            <li><span class="step sm" aria-hidden="true">2</span><div><strong>Confirm your email</strong><p>We email you a link. Open it and press Confirm within 48 hours. Events that are not confirmed are not considered.</p></div></li>
+            <li><span class="step sm" aria-hidden="true">2</span><div><strong>Confirm your email</strong><p>We email you a link. Open it and press Confirm within 48 hours. We can review your event after you confirm your email.</p></div></li>
             <li><span class="step sm" aria-hidden="true">3</span><div><strong>We review it</strong><p>Once confirmed, your event is reviewed before it appears on the site.</p></div></li>
           </ol>
         </section>
@@ -189,7 +189,7 @@ import { ENDPOINT_URL, TURNSTILE_SITE_KEY } from '../lib/submit-config';
       <ol class="next-list">
         <li><span class="step sm" aria-hidden="true">1</span><div><p>Open the email from Westbrook Currents.</p></div></li>
         <li><span class="step sm" aria-hidden="true">2</span><div><p>Press the button, then press <strong>Confirm</strong> on the page that opens.</p></div></li>
-        <li><span class="step sm" aria-hidden="true">3</span><div><p>Do it within 48 hours. Events that are not confirmed are not considered.</p></div></li>
+        <li><span class="step sm" aria-hidden="true">3</span><div><p>Do it within 48 hours. We can review your event after you confirm your email.</p></div></li>
       </ol>
       <p class="notice warn">Nothing yet? Check your spam or promotions folder. It can take a minute or two.</p>
       <div id="ts-check-home"></div>
@@ -231,6 +231,8 @@ import { ENDPOINT_URL, TURNSTILE_SITE_KEY } from '../lib/submit-config';
     }
     .field textarea { min-height: 104px; padding: 10px 12px; line-height: 1.45; resize: vertical; }
     .field select.narrow { max-width: 420px; }
+    .field input[type='date'], .field input[type='time'] { display: block; max-width: 100%; min-width: 0; -webkit-appearance: none; appearance: none; line-height: 1.2; text-align: left; }
+    .field input[type='date']::-webkit-date-and-time-value, .field input[type='time']::-webkit-date-and-time-value { min-width: 0; text-align: left; }
     .field input::placeholder, .field textarea::placeholder { color: #5f7381; }
     .field input:focus-visible, .field select:focus-visible, .field textarea:focus-visible, .choice:focus-within, .btn:focus-visible, .link-btn:focus-visible, summary:focus-visible { outline: 3px solid #42bfe8aa; outline-offset: 2px; }
     .field [aria-invalid='true'] { border-color: #b42318; }
@@ -248,6 +250,7 @@ import { ENDPOINT_URL, TURNSTILE_SITE_KEY } from '../lib/submit-config';
     .submit-card { display: flex; flex-direction: column; gap: 16px; }
     .notice { margin: 0; padding: 12px 14px; border: 1px solid #a9d3e3; border-radius: 6px; color: #0b3550; background: #e6f3f8; font-size: 15px; line-height: 1.45; }
     .notice.warn { border-color: #e0c26a; color: #4a3a05; background: #fdf3d8; }
+    .eligibility { margin-top: -4px; }
     .pv-notice { display: none; }
     .submit-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; }
     .fine { margin: 0; max-width: 460px; color: var(--muted); font-size: 13px; line-height: 1.4; }
@@ -299,8 +302,9 @@ import { ENDPOINT_URL, TURNSTILE_SITE_KEY } from '../lib/submit-config';
       .choice { flex: 1; min-height: 48px; }
       .field input[type='text'], .field input[type='email'], .field input[type='url'], .field input[type='date'], .field input[type='time'], .field select { min-height: 48px; }
       .btn { width: 100%; min-height: 52px; }
-      .row3 > .field:first-child { flex-basis: 100%; }
-      .row3 > .field:not(:first-child) { flex-basis: calc(50% - 8px); }
+      .row3 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px 12px; }
+      .row3 > .field:first-child { grid-column: 1 / -1; }
+      .field input[type='date'], .field input[type='time'] { padding: 0 8px; }
     }
   </style>
 
@@ -338,8 +342,10 @@ import { ENDPOINT_URL, TURNSTILE_SITE_KEY } from '../lib/submit-config';
 
     // ---- Live preview (updates both preview boxes) ----
     const fmtTime = (v: string) => {
-      const [h, m] = v.split(':').map(Number);
-      if (Number.isNaN(h) || Number.isNaN(m)) return '';
+      const parts = v.match(/^(\d{1,2}):(\d{2})/);
+      if (!parts) return '';
+      const h = Number(parts[1]);
+      const m = Number(parts[2]);
       return `${h % 12 || 12}:${pad(m)} ${h >= 12 ? 'PM' : 'AM'}`;
     };
     const fmtDate = (v: string) => {

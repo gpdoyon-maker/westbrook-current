@@ -155,6 +155,7 @@ const months = monthKeys.map((key) => {
       <div class="list-pane" id="eventList" aria-label="Events">
         <NoticeList kind="notices" />
         <p class="featured-empty" id="featuredEmptyMessage" role="status" hidden></p>
+        <p class="featured-empty" id="noResultsMessage" role="status" hidden>No results found. Try a different search or clear the filters.</p>
         <p class="featured-empty" id="weekendEmptyMessage" role="status" hidden>No events match your filters for this weekend.</p>
         {months.map((month) => (
           <section class="month-section" id={`month-${month.key}`} data-month={month.key}>
@@ -296,6 +297,7 @@ const months = monthKeys.map((key) => {
     const categoryChips = document.querySelectorAll<HTMLButtonElement>('.category-chip');
     const weekendFilter = document.querySelector<HTMLButtonElement>('#weekendFilter');
     const weekendEmptyMessage = document.querySelector<HTMLElement>('#weekendEmptyMessage');
+    const noResultsMessage = document.querySelector<HTMLElement>('#noResultsMessage');
     let selectedCategory = '';
     let featuredOnly = false;
     let weekendOnly = false;
@@ -582,8 +584,13 @@ const months = monthKeys.map((key) => {
         month.hidden = !month.querySelector('.date-group:not([hidden])');
       });
 
+      const nothingShown = !document.querySelector('.event-entry:not([hidden])');
       if (weekendEmptyMessage) {
-        weekendEmptyMessage.hidden = !weekendOnly || Boolean(document.querySelector('.event-entry:not([hidden])'));
+        weekendEmptyMessage.hidden = !weekendOnly || !nothingShown;
+      }
+      if (noResultsMessage) {
+        // The weekend and featured messages already explain an empty result for those filters.
+        noResultsMessage.hidden = !nothingShown || weekendOnly || featuredOnly;
       }
 
       const monthKey = monthJump?.value || `${new Date().getFullYear()}-${String(new Date().getMonth() + 1).padStart(2, '0')}`;
