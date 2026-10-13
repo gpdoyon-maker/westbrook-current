@@ -2,21 +2,7 @@
 import SiteLayout from '../layouts/SiteLayout.astro';
 import NoticeList from '../components/NoticeList.astro';
 import events from '../data/events.json';
-
-const categoryColors: Record<string, string> = {
-  'Arts & music': '#8b6fb3',
-  'Community & civic': '#3b6e91',
-  'Classes & learning': '#a47726',
-  'Family & kids': '#c0765a',
-  'Food & drink': '#a14e4e',
-  'Health & wellness': '#347c60',
-  'Markets & shopping': '#8c7a4e',
-  'Outdoors & nature': '#4b784b',
-  'Sports & recreation': '#3e7ca6',
-  Seniors: '#71627f',
-  'Faith & spirituality': '#896b95',
-  Other: '#6e6e6e',
-};
+import { categories as categoryOrder, categoryColors } from '../lib/categories';
 
 const isCancelled = (event: { status?: string }) => String(event.status ?? '').trim().toLowerCase() === 'cancelled';
 
@@ -109,7 +95,14 @@ const eventJsonLd = JSON.stringify({ '@context': 'https://schema.org', '@graph':
   .replace(/</g, '\\u003c')
   .replace(/>/g, '\\u003e')
   .replace(/&/g, '\\u0026');
-const categories = [...new Set(events.map((event) => event.category))].sort((a, b) => a.localeCompare(b));
+const usedCategories = new Set(events.map((event) => event.category));
+const knownOrder: readonly string[] = categoryOrder;
+// Filter buttons follow the shared category order. Only categories with events are shown;
+// any category outside the shared list is added at the end, alphabetically, so it never disappears.
+const categories = [
+  ...categoryOrder.filter((category) => usedCategories.has(category)),
+  ...[...usedCategories].filter((category) => !knownOrder.includes(category)).sort((a, b) => a.localeCompare(b)),
+];
 const monthKeys = [...new Set(events.map((event) => event.date.slice(0, 7)))].sort();
 const months = monthKeys.map((key) => {
   const date = new Date(`${key}-01T12:00:00Z`);
