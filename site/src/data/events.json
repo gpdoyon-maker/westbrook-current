@@ -439,5 +439,16 @@
     "admission": "free",
     "description": "Recognition of Veterans Day at Veterans Rest memorial.",
     "sourceLink": ""
+  },
+  {
+    "title": "Community Blood Drive",
+    "date": "2026-12-22",
+    "startTime": "09:00",
+    "endTime": "14:00",
+    "venue": "SW Manchester American Legion Post 62",
+    "category": "Community & civic",
+    "admission": "free",
+    "description": "Blood shortage! Donors are needed now. Hosted by the Stephen W. Manchester American Legion Post 62.",
+    "sourceLink": ""
   }
 ]
