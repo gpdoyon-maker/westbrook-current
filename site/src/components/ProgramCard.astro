@@ -19,6 +19,7 @@ const { program, checked } = Astro.props;
   <div class="card-body">
     <p>{program.summary}</p>
     {program.know && <p class="know">{program.know}</p>}
+    {program.more && <a class="btn alt" href={program.more.url}>{program.more.label} &#8594;</a>}
     <a class="btn alt" href={program.sourceUrl} target="_blank" rel="noopener noreferrer">Official page<span class="visually-hidden"> for {program.name} (opens in a new tab)</span> &#8599;</a>
     <p class="src-line">Source: {program.sourceLabel}</p>
     <p class="checked">Last checked {formatCheckedDate(checked)}</p>

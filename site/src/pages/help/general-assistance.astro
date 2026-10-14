@@ -1,0 +1,75 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import HelpDisclaimer from '../../components/HelpDisclaimer.astro';
+import { formatCheckedDate } from '../../lib/help';
+import '../../styles/help.css';
+const checked = '2026-10-14';
+const bring = [
+  'Photo ID',
+  'Signed lease or rental agreement',
+  'Current bank statement',
+  'Proof of all household income and expenses, like pay stubs or a letter from your employer',
+  'Social Security cards for everyone in your home',
+  'Passport and immigration papers, if you have them',
+  'Letters from Social Security and from Maine DHHS',
+  'A medical statement, if you cannot work',
+];
+---
+<SiteLayout
+  title="About General Assistance in Westbrook, Maine | Westbrook Currents"
+  description="What Westbrook General Assistance is, who it is for, how to make an appointment, and what to bring."
+  currentPage="help"
+>
+  <main class="help-wrap t-ga">
+    <a class="help-back" href="/help">&#8249; Get Help</a>
+    <h1>About General Assistance</h1>
+    <p class="help-sub">Westbrook&rsquo;s help of last resort.</p>
+    <p class="help-intro">General Assistance, or GA, is city help for people who cannot pay for basic needs like housing, food, utilities and prescriptions. The City of Westbrook runs it under state law. It is for emergencies, and for people who have already tried other programs.</p>
+
+    <section class="help-box limit" aria-labelledby="who-title">
+      <h2 id="who-title">What the city will ask of you</h2>
+      <ul>
+        <li>Show your income and your bills.</li>
+        <li>Look for work, if you are able to work.</li>
+        <li>Bring a medical statement, if you cannot work.</li>
+        <li>Apply to other state and local programs that may help.</li>
+      </ul>
+      <p class="fine">The city decides for 30 days at a time, based on the income you have now and what you expect to have.</p>
+      <p class="checked">Last checked {formatCheckedDate(checked)}</p>
+    </section>
+
+    <section class="help-box" aria-labelledby="apply-title">
+      <h2 id="apply-title">How to apply</h2>
+      <ol>
+        <li><strong>Call to make an appointment.</strong> It is by appointment only. The office does not take walk-ins.</li>
+        <li><strong>Answer a few questions on the phone.</strong> On your first call, staff check that you meet the rules and tell you what to bring.</li>
+        <li><strong>Go to your appointment.</strong> The city says appointments are usually within a week of your call, and last 30 to 60 minutes. Please be on time. If you are more than 10 minutes late, your appointment will be moved to another day.</li>
+      </ol>
+      <a class="big-tel" href="tel:+12075917015">207-591-7015</a>
+      <p class="fine" style="margin:0">Office hours: Monday to Thursday, 8 a.m. to 4:30 p.m. Friday, 9 a.m. to 2 p.m.</p>
+    </section>
+
+    <section class="help-box" aria-labelledby="ready-title">
+      <h2 id="ready-title">Bring to your first appointment</h2>
+      <ul>
+        {bring.map((item) => <li>{item}</li>)}
+      </ul>
+      <p class="fine" style="margin:0">The phone screening will tell you exactly what you need, so you can ask when you call.</p>
+    </section>
+
+    <section class="urgent" aria-label="After hours emergency">
+      <strong>Life-threatening emergency after hours?</strong>
+      If it cannot wait until the next business day, call Westbrook Public Safety:<br />
+      <a class="tel" href="tel:+12078540654">207-854-0654</a>
+    </section>
+
+    <section class="help-box" aria-labelledby="more-title">
+      <h2 id="more-title">Cannot reach the office?</h2>
+      <p>The state has a toll-free General Assistance line: <a href="tel:+18004426003"><strong>1-800-442-6003</strong></a>.</p>
+      <p class="src-line">Sources: <a href="https://www.westbrookmaine.gov/194/General-Assistance" target="_blank" rel="noopener noreferrer">westbrookmaine.gov: General Assistance<span class="visually-hidden"> (opens in a new tab)</span></a> and <a href="https://www.maine.gov/dhhs/ofi/programs-services/general-assistance" target="_blank" rel="noopener noreferrer">maine.gov: General Assistance<span class="visually-hidden"> (opens in a new tab)</span></a></p>
+      <p class="checked">Last checked {formatCheckedDate(checked)}</p>
+    </section>
+
+    <HelpDisclaimer />
+  </main>
+</SiteLayout>
