@@ -1,5 +1,6 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
+import NoticeList from '../components/NoticeList.astro';
 ---
 <SiteLayout
   title="Westbrook Currents | Local Events and Help in Westbrook, Maine"
@@ -11,6 +12,9 @@ import SiteLayout from '../layouts/SiteLayout.astro';
       <h1>Welcome to Westbrook Currents</h1>
       <p>Local events and city resources, all in one place.</p>
     </section>
+
+    <!-- Up to three general notices, worked out in the visitor's browser. Urgent alerts already show at the top of every page. -->
+    <NoticeList kind="notices" limit={3} inline />
 
     <nav class="tiles" aria-label="Main sections">
       <a class="tile tile-events" href="/events">
