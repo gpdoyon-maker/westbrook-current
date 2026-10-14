@@ -28,7 +28,7 @@ Notices and alerts live in `src/data/notices.json` as a JSON array, one object p
 
 | Field | Type | Format and meaning |
 | --- | --- | --- |
-| `type` | string | `General Notice` shows as a quiet, collapsible strip at the top of the Events list. `Cancellation / Delay` and `Emergency` show as alert banners at the top of every page. The short names `general`, `delay`, and `emergency` also work. |
+| `type` | string | `General Notice` shows as a quiet, collapsible strip at the top of the Events list. `Cancellation / Delay`, `Parking Ban`, and `Emergency` show as alert banners at the top of every page. `Parking Ban` and `Emergency` are red; `Cancellation / Delay` is amber. A parking ban is shown as an alert because it changes what people must do that night; set its expiry to the end of the ban window and link the City's notice. The short names `general`, `delay`, `parking`, and `emergency` also work. |
 | `headline` | string | Required. For a notice, include the dates in it, for example `Leaf & brush pickup, Oct 30 – Nov 17`. |
 | `description` | string | Optional plain text. Line breaks are kept. |
 | `officialLink` | string | Required absolute `http(s)` URL of the official source. The site shows its host name, for example `westbrookmaine.gov`. Records without a valid link are never shown. |

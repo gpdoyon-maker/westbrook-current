@@ -8,14 +8,15 @@ interface Props {
 
 const { kind } = Astro.props;
 
-type NoticeType = 'emergency' | 'delay' | 'general';
-const LABELS: Record<NoticeType, string> = { emergency: 'EMERGENCY', delay: 'ALERT', general: 'NOTICE' };
-const ORDER: Record<NoticeType, number> = { emergency: 0, delay: 1, general: 2 };
+type NoticeType = 'emergency' | 'parking' | 'delay' | 'general';
+const LABELS: Record<NoticeType, string> = { emergency: 'EMERGENCY', parking: 'PARKING BAN', delay: 'ALERT', general: 'NOTICE' };
+const ORDER: Record<NoticeType, number> = { emergency: 0, parking: 1, delay: 2, general: 3 };
 
 // Accepts the sheet's Notice Type labels as well as the short names.
 function typeOf(value: unknown): NoticeType {
   const text = String(value ?? '').toLowerCase();
   if (text.includes('emergency')) return 'emergency';
+  if (text.includes('parking')) return 'parking';
   if (text.includes('delay') || text.includes('cancel') || text.includes('closure')) return 'delay';
   return 'general';
 }
@@ -73,7 +74,7 @@ const items = (rawNotices as unknown as Record<string, unknown>[])
       >
         <div class="alert-inner">
           <p class="alert-meta">
-            {item.type === 'emergency' ? (
+            {item.type === 'emergency' || item.type === 'parking' ? (
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2h8l6 6v8l-6 6H8l-6-6V8z"></path><path d="M12 7v6M12 16.5h.01"></path></svg>
             ) : (
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l10 18H2z"></path><path d="M12 10v5M12 18h.01"></path></svg>
@@ -122,12 +123,12 @@ const items = (rawNotices as unknown as Record<string, unknown>[])
 
   .alert { padding: 12px 14px 4px; border-bottom: 2px solid var(--alert-edge); color: var(--alert-ink); background: var(--alert-bg); }
   .alert-delay { --alert-bg: #fff4d6; --alert-edge: #a47726; --alert-ink: #35280e; --alert-accent: #6b4a0a; }
-  .alert-emergency { --alert-bg: #fde8e6; --alert-edge: #b3261e; --alert-ink: #3d0f0b; --alert-accent: #8c1c13; }
+  .alert-emergency, .alert-parking { --alert-bg: #fde8e6; --alert-edge: #b3261e; --alert-ink: #3d0f0b; --alert-accent: #8c1c13; }
   .alert-inner { width: min(1200px, 100%); margin: 0 auto; }
   .alert-meta { display: flex; align-items: center; gap: 6px; margin: 0; color: var(--alert-accent); font-size: 11px; font-weight: 800; letter-spacing: .06em; }
   .alert-posted { font-weight: 600; letter-spacing: 0; }
   .alert-headline { margin: 4px 0 0; font-size: 15px; font-weight: 800; line-height: 1.3; }
-  .alert-emergency .alert-headline { font-size: 16px; }
+  .alert-emergency .alert-headline, .alert-parking .alert-headline { font-size: 16px; }
   .alert-detail { margin: 3px 0 0; font-size: 13px; line-height: 1.4; white-space: pre-line; }
   .alert-source { display: inline-flex; align-items: center; min-height: 44px; color: var(--alert-accent); font-size: 13px; font-weight: 700; }
 
