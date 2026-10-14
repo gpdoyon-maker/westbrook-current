@@ -5,7 +5,7 @@ import NoticeList from '../components/NoticeList.astro';
 interface Props {
   title: string;
   description: string;
-  currentPage?: 'events' | 'about' | 'submit';
+  currentPage?: 'events' | 'help' | 'about' | 'submit';
   // Private pages (the email confirmation page) are hidden from search, send no referrer, and skip analytics.
   privatePage?: boolean;
 }
@@ -64,6 +64,7 @@ const socialImageUrl = new URL('/logo-desktop.png', siteUrl).href;
         <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">&#9776;</button>
         <nav class="site-nav" id="site-nav" aria-label="Main navigation">
           <a href="/" aria-current={currentPage === 'events' ? 'page' : undefined}>Events</a>
+          <a href="/help" aria-current={currentPage === 'help' ? 'page' : undefined}>Get Help</a>
           <a href="/about/" aria-current={currentPage === 'about' ? 'page' : undefined}>About</a>
           <a class="submit-event-link" href="/submit">Submit an event</a>
         </nav>
