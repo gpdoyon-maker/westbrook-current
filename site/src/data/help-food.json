@@ -24,6 +24,7 @@
       "open": true,
       "programs": [
         "pantry",
+        "locker",
         "foodmap",
         "211"
       ]
@@ -77,6 +78,19 @@
       "phoneHref": "tel:+12075918147",
       "sourceLabel": "westbrookmaine.gov: Community Food & Resource Center",
       "sourceUrl": "https://www.westbrookmaine.gov/292/Westbrook-Community-Food-Resource-Center"
+    },
+    {
+      "id": "locker",
+      "tag": "Free food in Westbrook",
+      "name": "The Locker Project at Walker Memorial Library",
+      "chip": "First Thursday, 11 a.m. to noon",
+      "chipKind": "none",
+      "summary": "Free fresh food for anyone to take home, on the first Thursday of each month in the library’s Youth Program Room. Next visits: Nov. 5 and Dec. 3.",
+      "know": "Bring a bag or box if you can. Dates can change, so check the City calendar or call the Locker Project.",
+      "phone": "(207) 899-9540",
+      "phoneHref": "tel:+12078999540",
+      "sourceLabel": "westbrookmaine.gov: Locker Project event",
+      "sourceUrl": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3650"
     },
     {
       "id": "foodmap",
