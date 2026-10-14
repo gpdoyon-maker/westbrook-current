@@ -24,6 +24,7 @@
       "open": true,
       "programs": [
         "pantry",
+        "vineyard",
         "foodmap",
         "211"
       ]
@@ -75,6 +76,19 @@
       "phoneHref": "tel:+12075918147",
       "sourceLabel": "maine.gov: Cumberland County food pantries",
       "sourceUrl": "https://www.maine.gov/dacf/ard/food-assistance/tefap/Cumberland.shtml"
+    },
+    {
+      "id": "vineyard",
+      "tag": "Free food in Westbrook",
+      "name": "Vineyard Church Food Pantry",
+      "chip": "Friday evenings",
+      "chipKind": "info",
+      "summary": "A church food pantry for people in the community who are in need. It hands out food on Friday evenings.",
+      "know": "You fill out a registration form. Call first to ask the exact time and what to bring.",
+      "phone": "(207) 854-8339",
+      "phoneHref": "tel:+12078548339",
+      "sourceLabel": "vineyardportland.org: Mercy Ministry",
+      "sourceUrl": "https://vineyardportland.org/connect/ministries/mercy-ministry/"
     },
     {
       "id": "foodmap",
