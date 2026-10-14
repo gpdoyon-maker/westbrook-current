@@ -1,7 +1,7 @@
 {
   "slug": "electricity",
   "title": "Help Paying for Electricity",
-  "intro": "Maine has new help for electric bills this fall. Most Westbrook homes get power from Central Maine Power (CMP). Check your bill to be sure. Then follow the steps below.",
+  "intro": "Maine has new help for electric bills starting in the fall of 2026. Most Westbrook homes get power from Central Maine Power (CMP). Check your bill to be sure. Then follow the steps below.",
   "lastChecked": "2026-10-14",
   "emergency": {
     "title": "Worried about a shutoff?",
@@ -104,7 +104,7 @@
       "name": "Low Income Assistance Program (LIAP)",
       "chip": "Income limit applies",
       "chipKind": "limit",
-      "summary": "A monthly discount on your electric bill. Starting this fall, many CMP customers who qualify are signed up without having to apply.",
+      "summary": "A monthly discount on your electric bill. Starting in the fall of 2026, many CMP customers who qualify are signed up without having to apply.",
       "know": "The state says CMP discounts run from 25% to 81% of the bill, based on income. Look for a discount on your latest bill. The state says it should show on the November bill or later. No discount and you think you qualify? Call CMP, or ask the local agency. You can choose to opt out.",
       "phone": "(877) 544-3271",
       "phoneHref": "tel:+18775443271",
