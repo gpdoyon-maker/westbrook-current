@@ -22,32 +22,44 @@
       "title": "Need food now?",
       "sub": "Free food, no income check",
       "open": true,
-      "programs": ["pantry", "foodmap", "211"]
+      "programs": [
+        "pantry",
+        "foodmap",
+        "211"
+      ]
     },
     {
       "n": 2,
       "title": "Want help every month?",
       "sub": "Money for groceries",
-      "programs": ["snap"]
+      "programs": [
+        "snap"
+      ]
     },
     {
       "n": 3,
       "title": "Expecting, or have a child under 5?",
       "sub": "Food and nutrition help",
-      "programs": ["wic"]
+      "programs": [
+        "wic"
+      ]
     },
     {
       "n": 4,
       "title": "Age 60 or older?",
       "sub": "Meals brought to your home",
-      "programs": ["mow"]
+      "programs": [
+        "mow"
+      ]
     },
     {
       "n": 5,
       "title": "Last stop",
       "sub": "Only when other programs are not enough",
       "last": true,
-      "programs": ["ga"]
+      "programs": [
+        "ga"
+      ]
     }
   ],
   "programs": [
@@ -55,10 +67,10 @@
       "id": "pantry",
       "tag": "Free food in Westbrook",
       "name": "Westbrook Food Pantry",
-      "chip": "Call first",
+      "chip": "Tuesdays, 11 a.m. to 1 p.m.",
       "chipKind": "info",
-      "summary": "A food pantry at the Westbrook Community Center. Days and hours can change, so please call before you go.",
-      "know": "Ask what to bring and when to come.",
+      "summary": "A food pantry at the Westbrook Community Center. Open every Tuesday from 11 a.m. to 1 p.m.",
+      "know": "Hours can change, so it is a good idea to call before you go.",
       "phone": "207-591-8147",
       "phoneHref": "tel:+12075918147",
       "sourceLabel": "maine.gov: Cumberland County food pantries",
