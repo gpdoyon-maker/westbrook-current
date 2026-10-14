@@ -47,9 +47,11 @@
     {
       "n": 4,
       "title": "Age 60 or older?",
-      "sub": "Meals brought to your home",
+      "sub": "Meals and food for older adults",
       "programs": [
-        "mow"
+        "mow",
+        "csfp",
+        "cafe"
       ]
     },
     {
@@ -138,6 +140,32 @@
       "phoneHref": "tel:+18004277411",
       "sourceLabel": "smaaa.org: Meals on Wheels",
       "sourceUrl": "https://smaaa.org/services-for-older-adults/nutrition/meals-on-wheels/"
+    },
+    {
+      "id": "csfp",
+      "tag": "For seniors",
+      "name": "Commodity Supplemental Food Program (CSFP)",
+      "chip": "Age 60+, income limit applies",
+      "chipKind": "limit",
+      "summary": "Free USDA foods each month to add to a senior’s groceries.",
+      "know": "Wayside Food Programs handles sign-ups for Cumberland County, including Westbrook. Call or use the form on their site. Income limits change each year, so ask when you call.",
+      "phone": "(207) 775-4939",
+      "phoneHref": "tel:+12077754939",
+      "sourceLabel": "maine.gov: supplemental food programs",
+      "sourceUrl": "https://www.maine.gov/dacf/ard/food-assistance/supplemental-food.shtml"
+    },
+    {
+      "id": "cafe",
+      "tag": "For seniors",
+      "name": "Community Cafes",
+      "chip": "Call to ask who can come",
+      "chipKind": "info",
+      "summary": "Lunches with other people, run by the Southern Maine Agency on Aging in York and Cumberland counties.",
+      "know": "Ask which cafes are close to Westbrook, and what days they meet.",
+      "phone": "1-800-427-7411",
+      "phoneHref": "tel:+18004277411",
+      "sourceLabel": "smaaa.org: nutrition",
+      "sourceUrl": "https://smaaa.org/services-for-older-adults/nutrition/"
     },
     {
       "id": "ga",
