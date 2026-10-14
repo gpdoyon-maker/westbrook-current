@@ -1,0 +1,205 @@
+{
+  "slug": "electricity",
+  "title": "Help Paying for Electricity",
+  "intro": "Maine has new help for electric bills this fall. Most Westbrook homes get power from Central Maine Power (CMP). Check your bill to be sure. Then follow the steps below.",
+  "lastChecked": "2026-10-14",
+  "emergency": {
+    "title": "Worried about a shutoff?",
+    "text": "Call your electric company first. For CMP:",
+    "phone": "800-686-4044",
+    "phoneHref": "tel:+18006864044",
+    "text2": "Still stuck? Call the state's Consumer Assistance office:",
+    "phone2": "800-452-4699",
+    "phone2Href": "tel:+18004524699",
+    "hours2": "Monday to Friday, 9 a.m. to 4 p.m.",
+    "dangerTitle": "Life-threatening emergency?",
+    "dangerText": "Call 911. For help finding other aid any time, dial 211."
+  },
+  "who": {
+    "title": "Who may qualify",
+    "text": "Most electric help is for households with lower incomes. You may qualify if you are approved for heating help (HEAP), or you get SNAP, TANF or MaineCare, or your income is at or below 150% of the federal poverty level.",
+    "fine": "Heating help and electric help use many of the same papers. If you apply for one, ask about the other.",
+    "linkLabel": "See the heating income limits",
+    "linkUrl": "/help/heating"
+  },
+  "checklist": {
+    "title": "Get these ready",
+    "items": [
+      "Your latest electric bill, with your account number",
+      "Photo ID",
+      "Proof of income, or letters about SNAP, TANF or MaineCare",
+      "Names and birth dates for everyone in your home"
+    ],
+    "note": "The electric bill must be in the name of someone in your home. Each program may ask for more, so check its official page."
+  },
+  "agency": "toa",
+  "steps": [
+    {
+      "n": 1,
+      "title": "Check your November bill",
+      "sub": "A new monthly discount",
+      "open": true,
+      "programs": [
+        "liap"
+      ]
+    },
+    {
+      "n": 2,
+      "title": "Behind on your bill?",
+      "sub": "Payment plans and old bills",
+      "programs": [
+        "cmp",
+        "amp"
+      ]
+    },
+    {
+      "n": 3,
+      "title": "Afraid of a shutoff?",
+      "sub": "Winter protection",
+      "programs": [
+        "winter"
+      ]
+    },
+    {
+      "n": 4,
+      "title": "Lower your bill",
+      "sub": "Rebates and a help line",
+      "programs": [
+        "efficiency-maine",
+        "211"
+      ]
+    },
+    {
+      "n": 5,
+      "title": "Are you a veteran?",
+      "sub": "Extra help for veterans",
+      "programs": [
+        "vets"
+      ]
+    },
+    {
+      "n": 6,
+      "title": "Last stop",
+      "sub": "Only when other programs are not enough",
+      "last": true,
+      "programs": [
+        "ga"
+      ]
+    }
+  ],
+  "programs": [
+    {
+      "id": "toa",
+      "tag": "Your local agency",
+      "name": "The Opportunity Alliance",
+      "summary": "The local Community Action Agency for Cumberland County, which includes Westbrook. It helps with electric programs, and with heating help. Call first to make an appointment. Please do not walk in.",
+      "phone": "(207) 553-5800",
+      "phoneHref": "tel:+12075535800",
+      "sourceLabel": "maine.gov/mpuc: assistance programs",
+      "sourceUrl": "https://www.maine.gov/mpuc/consumer-assistance/programs"
+    },
+    {
+      "id": "liap",
+      "tag": "For lower-income households",
+      "name": "Low Income Assistance Program (LIAP)",
+      "chip": "Income limit applies",
+      "chipKind": "limit",
+      "summary": "A monthly discount on your electric bill. Starting this fall, many CMP customers who qualify are signed up without having to apply.",
+      "know": "The state says CMP discounts run from 25% to 81% of the bill, based on income. Look for it on your November bill or later. No discount and you think you qualify? Call CMP, or ask the local agency. You can choose to opt out.",
+      "phone": "(877) 544-3271",
+      "phoneHref": "tel:+18775443271",
+      "sourceLabel": "maine.gov: Governor's announcement",
+      "sourceUrl": "https://www.maine.gov/governor/mills/index.php/news/governor-mills-announces-automatic-electric-bill-discounts-thousands-maine-families-2026-10-01"
+    },
+    {
+      "id": "cmp",
+      "tag": "From your electric company",
+      "name": "CMP payment help",
+      "chip": "Open to CMP customers",
+      "chipKind": "info",
+      "summary": "CMP can set up a payment plan if you are behind. It also has programs for people with medical needs.",
+      "know": "Ask about payment plans, SimplePay and medical emergency protection. You can call, or sign in to My Account online.",
+      "phone": "800-686-4044",
+      "phoneHref": "tel:+18006864044",
+      "sourceLabel": "cmpco.com: ways to get help",
+      "sourceUrl": "https://www.cmpco.com/account/waystopay/help-with-bill"
+    },
+    {
+      "id": "amp",
+      "tag": "If you owe money",
+      "name": "Arrearage Management Program (AMP)",
+      "chip": "Rules apply",
+      "chipKind": "limit",
+      "summary": "Helps erase an old electric bill. Over 12 months, part of what you owe is wiped out each month you pay on time. CMP says up to $500 a month.",
+      "know": "This is for people behind on their bill who are in the LIAP or HEAP programs. Ask the local agency if you qualify.",
+      "phone": "(207) 553-5800",
+      "phoneHref": "tel:+12075535800",
+      "sourceLabel": "maine.gov/mpuc: assistance programs",
+      "sourceUrl": "https://www.maine.gov/mpuc/consumer-assistance/programs"
+    },
+    {
+      "id": "winter",
+      "tag": "Nov 15 to Apr 15",
+      "name": "Winter shutoff protection",
+      "chip": "Open to all residents",
+      "chipKind": "none",
+      "summary": "From Nov 15 to Apr 15, an electric company must get the state's permission before it can shut off a home's power.",
+      "know": "Call your electric company first and ask for a payment plan. Still worried? Call the state at 800-452-4699, Monday to Friday, 9 to 4. They do not take walk-ins.",
+      "phone": "800-452-4699",
+      "phoneHref": "tel:+18004524699",
+      "sourceLabel": "maine.gov/mpuc: Consumer Assistance",
+      "sourceUrl": "https://www.maine.gov/mpuc/consumer-assistance"
+    },
+    {
+      "id": "efficiency-maine",
+      "tag": "Lower your bill",
+      "name": "Efficiency Maine rebates",
+      "chip": "Income tiers apply",
+      "chipKind": "limit",
+      "summary": "Rebates on heat pumps, insulation and other upgrades can lower your energy use. Lower-income households get the biggest rebates.",
+      "know": "Rebate amounts can change, so check the official page or call before you buy.",
+      "phone": "866-376-2463",
+      "phoneHref": "tel:+18663762463",
+      "sourceLabel": "efficiencymaine.com: at home",
+      "sourceUrl": "https://www.efficiencymaine.com/at-home/"
+    },
+    {
+      "id": "211",
+      "tag": "Anyone",
+      "name": "211 Maine",
+      "chip": "Open to anyone",
+      "chipKind": "info",
+      "summary": "A free help line that can point you to utility help near you.",
+      "know": "You can also text your ZIP code to 898-211.",
+      "phone": "211",
+      "phoneHref": "tel:211",
+      "sourceLabel": "211maine.org",
+      "sourceUrl": "https://211maine.org/?p=1431"
+    },
+    {
+      "id": "vets",
+      "tag": "For veterans",
+      "name": "Veterans’ emergency help",
+      "chip": "Based on need",
+      "chipKind": "info",
+      "summary": "Maine has an emergency money program for veterans. The state says it can help with rent, utilities and other urgent costs.",
+      "know": "Ask if your electric bill counts, then apply with the form on the official page. The state’s Public Advocate also lists Veterans Forward (347-443-0005) and USA Cares (1-800-773-0387) for veterans who are behind on bills.",
+      "sourceLabel": "maine.gov/veterans: assistance for veterans",
+      "sourceUrl": "https://www.maine.gov/veterans/maine-veterans-assistance"
+    },
+    {
+      "id": "ga",
+      "tag": "Last resort",
+      "name": "Westbrook General Assistance",
+      "chip": "Based on your 30-day budget",
+      "chipKind": "info",
+      "summary": "City help for basic needs like heat and electricity when other programs are not enough. Appointment only, no walk-ins.",
+      "know": "Based on income for 30 days at a time. You must apply to other programs first.",
+      "phone": "207-591-7015",
+      "phoneHref": "tel:+12075917015",
+      "sourceLabel": "westbrookmaine.gov: General Assistance",
+      "sourceUrl": "https://www.westbrookmaine.gov/194/General-Assistance",
+      "last": true
+    }
+  ]
+}
