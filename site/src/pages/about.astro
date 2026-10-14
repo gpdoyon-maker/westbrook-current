@@ -2,7 +2,7 @@
 import SiteLayout from '../layouts/SiteLayout.astro';
 ---
 
-<SiteLayout title="About Westbrook Currents | Westbrook, Maine Community Events" description="Learn about Westbrook Currents, a community event calendar connecting people with local happenings in Westbrook, Maine." currentPage="about">
+<SiteLayout title="About Westbrook Currents | Westbrook, Maine Community Events" description="Learn about Westbrook Currents, an independent community website for local events and help finding assistance in Westbrook, Maine." currentPage="about">
   <main class="about-wrap">
     <article class="about-content">
       <header class="profile-section">
@@ -13,12 +13,21 @@ import SiteLayout from '../layouts/SiteLayout.astro';
         </div>
       </header>
       <div class="story">
-        <p>Growing up in Westbrook and returning here to raise our family after my time in the military taught me one thing: no matter where life takes me, Westbrook is home.</p>
-        <p>Our city is a diverse community with so much heart and plenty happening—from civic meetings and recreational activities to cultural festivals and neighborhood gatherings. Finding out what’s going on shouldn’t feel like hard work.</p>
-        <blockquote>That’s why I started Westbrook Currents: a friendly digital town square where you can discover local events and find more ways to connect with your community.</blockquote>
-        <p>This website is here to support the local websites and organizations already serving Westbrook. If you manage events for a local organization, business, or community group, you can share them here and include a link to the event on your website. It’s another way to reach people in Westbrook and bring more visitors to your site.</p>
-        <p>Have an upcoming activity or gathering that’s open to the public? <a href="/submit"><strong>Submit an event</strong></a>—we’d love to help spread the word.</p>
-        <p>Have an idea for making Westbrook Currents better? Send your suggestions to <a href="mailto:WestbrookCurrents@gmail.com?subject=Westbrook%20Currents%20suggestion"><strong>WestbrookCurrents@gmail.com</strong></a>.</p>
+        <p>Westbrook is home. I grew up here. Life and my time in the military took me to a lot of places, but I always knew where I wanted to end up. I came back, and I plan to stay in Westbrook for the rest of my life.</p>
+        <p>Our city has so much going on, and so many neighbors who could use a hand now and then. Finding out what’s happening, or where to turn for help, shouldn’t feel like hard work.</p>
+        <blockquote>That’s why I started Westbrook Currents: a friendly digital town square for Westbrook, built to grow with the community it serves.</blockquote>
+        <h2>Where we’re starting</h2>
+        <ul>
+          <li><strong>Events.</strong> Meetings, markets, music, story times, and neighborhood gatherings, all in one list.</li>
+          <li><strong>Get Help.</strong> Plain-language guides to programs that may help with everyday costs. We’re starting with help paying for heat, and adding more topics one at a time, as each one is checked.</li>
+        </ul>
+        <p>This is only the beginning. Westbrook Currents will keep changing to fit what our community needs. If there’s something you wish you could find in one place, tell me.</p>
+        <h2>How we keep it honest</h2>
+        <p>Every help program shows a link to its official page and the date we last checked it. Programs, phone numbers, and dates change, so please check with the program before you apply. If something looks out of date, let me know and I’ll fix it.</p>
+        <h2>Who we are</h2>
+        <p>Westbrook Currents is an independent community website. We are not run by the City of Westbrook or any agency listed here. We’re here to support the local groups already doing good work, and to send people their way.</p>
+        <h2>Be part of it</h2>
+        <p>Hosting something open to the public? <a href="/submit"><strong>Submit an event</strong></a>. Spotted a mistake, or have an idea? Write to me at <a href="mailto:WestbrookCurrents@gmail.com?subject=Westbrook%20Currents%20suggestion"><strong>WestbrookCurrents@gmail.com</strong></a>.</p>
         <p class="signoff"><span>— Gerry D.</span></p>
       </div>
       <a class="back-link" href="/">Back to Events</a>
@@ -34,6 +43,9 @@ import SiteLayout from '../layouts/SiteLayout.astro';
     .profile-heading h1 { margin: 0; color: var(--navy); font-size: 34px; line-height: 1.12; }
     .story { color: #294858; font-size: 16px; line-height: 1.8; }
     .story p { margin: 0 0 18px; }
+    .story h2 { margin: 34px 0 10px; color: var(--navy); font-size: 22px; line-height: 1.3; }
+    .story ul { margin: 0 0 18px; padding-left: 22px; }
+    .story li { margin: 0 0 10px; }
     .story blockquote { margin: 32px 0; padding: 22px 24px; border-left: 6px solid var(--blue); border-radius: 0 8px 8px 0; color: var(--navy); background: #e6f3f8; font-size: 21px; font-weight: 800; line-height: 1.5; }
     .signoff { margin-top: 34px !important; color: var(--blue); font-size: 20px; font-weight: 800; line-height: 1.5 !important; }
     .signoff span { display: inline-block; font-size: 23px; }
