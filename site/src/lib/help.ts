@@ -20,4 +20,5 @@ export interface HelpProgram {
   sourceLabel: string;
   sourceUrl: string;
   last?: boolean;
+  more?: { label: string; url: string };
 }

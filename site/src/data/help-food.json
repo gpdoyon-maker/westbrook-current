@@ -193,7 +193,11 @@
       "phoneHref": "tel:+12075917015",
       "sourceLabel": "westbrookmaine.gov: General Assistance",
       "sourceUrl": "https://www.westbrookmaine.gov/194/General-Assistance",
-      "last": true
+      "last": true,
+      "more": {
+        "label": "What to expect at General Assistance",
+        "url": "/help/general-assistance"
+      }
     }
   ]
 }

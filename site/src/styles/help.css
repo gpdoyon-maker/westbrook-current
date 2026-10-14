@@ -99,3 +99,9 @@ details.card[open] .card-more::before { content: 'Fewer details \2212'; }
 .help-wrap[class*="t-"] .help-box.limit { border-color: var(--edge); background: var(--tint); }
 .help-wrap[class*="t-"] .help-box.limit h2 { color: var(--accent); }
 .help-wrap[class*="t-"] .steps-head h2 { color: var(--accent); }
+
+.t-ga { --accent: #087ca7; --tint: #e6f3f8; --edge: #b7dcea; }
+.help-box ol { margin: 0 0 10px; padding-left: 22px; color: #294858; font-size: 16px; line-height: 1.45; }
+.help-box ol li { display: list-item; padding: 4px 0; }
+.help-box ol li::before { content: none; }
+.help-box .big-tel { display: inline-block; margin: 2px 0 6px; color: var(--navy); font-size: 22px; font-weight: 800; text-decoration: none; }
