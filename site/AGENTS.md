@@ -8,7 +8,7 @@
 - `src/layouts/` contains shared page chrome.
 - `src/components/` contains shared components, such as `NoticeList.astro` for notices and alerts.
 - `src/lib/` contains shared helpers.
-- `src/pages/` contains Astro routes: `index.astro` for Events, `about.astro` for About, and `help/` for the Get Help pages (`help/index.astro` is the topic list, `help/heating.astro` is the first topic).
+- `src/pages/` contains Astro routes: `index.astro` for the front door (two tiles and the next three events), `events.astro` for the full Events calendar, `about.astro` for About, and `help/` for the Get Help pages (`help/index.astro` is the topic list, `help/heating.astro` is the first topic).
 - `src/data/help-*.json` holds the content for each Get Help page, one file per topic. Page layout stays in `src/pages/help/`; shared pieces are `ProgramCard.astro` and `HelpDisclaimer.astro`.
 - `src/styles/` contains shared site styles.
 - `DATA-FORMAT.md` documents the event JSON contract.

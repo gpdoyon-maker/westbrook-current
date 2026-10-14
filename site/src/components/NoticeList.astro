@@ -4,9 +4,13 @@ import { addDays, normalizeDate, normalizePosted, normalizeTime, nyToUtcMs } fro
 
 interface Props {
   kind: 'alerts' | 'notices';
+  // Most notices to show at once, counted after expired ones are removed in the visitor's browser.
+  limit?: number;
+  // Open a notice in place, under its row, at every screen width (for pages with no details pane).
+  inline?: boolean;
 }
 
-const { kind } = Astro.props;
+const { kind, limit, inline = false } = Astro.props;
 
 type NoticeType = 'emergency' | 'parking' | 'delay' | 'general';
 const LABELS: Record<NoticeType, string> = { emergency: 'EMERGENCY', parking: 'PARKING BAN', delay: 'ALERT', general: 'NOTICE' };
@@ -92,7 +96,7 @@ const items = (rawNotices as unknown as Record<string, unknown>[])
 )}
 
 {items.length > 0 && kind === 'notices' && (
-  <div class="notice-stack" data-notice-stack hidden>
+  <div class={`notice-stack${inline ? ' notice-inline' : ''}`} data-notice-stack data-limit={limit} hidden>
     {items.map((item) => (
       <div
         class="notice"
@@ -151,6 +155,21 @@ const items = (rawNotices as unknown as Record<string, unknown>[])
   }
 </style>
 
+<!-- Home page version: rows open in place at every width. Global because the details are built by the script below. -->
+<style is:global>
+  .notice-stack.notice-inline.notice-inline { padding: 0; }
+  .notice-inline .notice-arrow { transition: transform .15s; }
+  .notice-inline .notice.is-open .notice-arrow { transform: rotate(90deg); }
+  .notice-inline .notice.is-open .notice-mobile-details { display: block; padding: 16px 18px 18px; border-top: 1px solid #6fb0cb; background: #fff; }
+  .notice-inline .detail-category { margin: 0 0 6px; color: var(--blue); font-size: 11px; font-weight: 800; text-transform: uppercase; }
+  .notice-inline .detail-title { margin: 0 0 12px; color: var(--navy); font-size: 19px; line-height: 1.25; }
+  .notice-inline .detail-meta { display: grid; gap: 6px; margin: 0 0 12px; color: #294858; font-size: 14px; }
+  .notice-inline .detail-meta p { margin: 0; overflow-wrap: anywhere; }
+  .notice-inline .detail-description { margin: 12px 0; color: #294858; font-size: 15px; line-height: 1.6; white-space: pre-line; }
+  .notice-inline .detail-actions { display: grid; margin-top: 14px; }
+  .notice-inline .detail-link { display: block; padding: 12px 14px; border: 1px solid var(--blue); border-radius: 4px; color: #fff; background: var(--blue); font-size: 15px; font-weight: 800; text-align: center; text-decoration: none; }
+</style>
+
 <script>
   import { postedLabel } from '../lib/notice-time';
 
@@ -169,6 +188,16 @@ const items = (rawNotices as unknown as Record<string, unknown>[])
         label.textContent = `· ${postedLabel(posted, now)}`;
         label.hidden = false;
       }
+    });
+    // A stack with a limit shows only its first few visible items (already sorted, most important first).
+    document.querySelectorAll<HTMLElement>('[data-notice-stack][data-limit]').forEach((stack) => {
+      const max = Number(stack.dataset.limit);
+      if (!Number.isFinite(max)) return;
+      let shown = 0;
+      stack.querySelectorAll<HTMLElement>('[data-notice]:not([hidden])').forEach((item) => {
+        if (shown >= max) item.hidden = true;
+        else shown += 1;
+      });
     });
     document.querySelectorAll<HTMLElement>('[data-notice-stack]').forEach((stack) => {
       stack.hidden = !stack.querySelector('[data-notice]:not([hidden])');
@@ -246,8 +275,22 @@ const items = (rawNotices as unknown as Record<string, unknown>[])
     }
     const notice = toggle.closest<HTMLElement>('.notice');
     if (!notice) return;
-    const detailPane = document.getElementById('detailPane');
     const wasOpen = notice.classList.contains('is-open');
+    if (notice.closest('.notice-inline')) {
+      // Home page: open or close right under the row. No details pane, and one open at a time.
+      notice.closest('.notice-inline')?.querySelectorAll<HTMLElement>('.notice.is-open').forEach((open) => {
+        open.classList.remove('is-open');
+        open.querySelector<HTMLElement>('.notice-toggle')?.setAttribute('aria-expanded', 'false');
+        open.querySelector<HTMLElement>('.notice-mobile-details')?.replaceChildren();
+      });
+      if (!wasOpen) {
+        notice.classList.add('is-open');
+        toggle.setAttribute('aria-expanded', 'true');
+        notice.querySelector<HTMLElement>('.notice-mobile-details')?.replaceChildren(createNoticeDetails(notice));
+      }
+      return;
+    }
+    const detailPane = document.getElementById('detailPane');
     document.querySelectorAll('.event-entry.is-expanded').forEach((expanded) => expanded.classList.remove('is-expanded'));
     closeNotices();
     if (wasOpen) {
