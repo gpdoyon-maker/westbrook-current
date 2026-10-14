@@ -81,3 +81,21 @@ details.card[open] .card-more::before { content: 'Fewer details \2212'; }
   .help-wrap h1 { font-size: 27px; }
 }
 .help-box .src-line { margin: 4px 0 0; color: var(--muted); font-size: 14px; }
+
+/* Topic colors: each Get Help topic gets its own accent so the pages are not all black and white. */
+.t-heat { --accent: #b4430c; --tint: #fff1e4; --edge: #f2c9a6; }
+.t-elec { --accent: #8a6100; --tint: #fff7d6; --edge: #ecd98a; }
+.t-food { --accent: #1f7a3d; --tint: #e8f6ec; --edge: #b4dcc0; }
+.topic-row[class*="t-"] { border-color: var(--edge); border-left: 8px solid var(--accent); background: var(--tint); }
+.topic-row[class*="t-"]:hover { border-color: var(--accent); }
+.topic-row[class*="t-"] strong { color: var(--accent); }
+.topic-row[class*="t-"] .topic-go { color: var(--accent); }
+.help-wrap[class*="t-"] h1 { padding-bottom: 8px; border-bottom: 4px solid var(--accent); }
+.help-wrap[class*="t-"] .step-num:not(.last) { background: var(--accent); }
+.help-wrap[class*="t-"] .step-num.last { color: var(--accent); border-color: var(--accent); }
+.help-wrap[class*="t-"] .card-tag { color: var(--accent); }
+.help-wrap[class*="t-"] details.card { border-left: 6px solid var(--accent); }
+.help-wrap[class*="t-"] details.card.last { border-color: var(--line); border-left-color: var(--accent); }
+.help-wrap[class*="t-"] .help-box.limit { border-color: var(--edge); background: var(--tint); }
+.help-wrap[class*="t-"] .help-box.limit h2 { color: var(--accent); }
+.help-wrap[class*="t-"] .steps-head h2 { color: var(--accent); }
