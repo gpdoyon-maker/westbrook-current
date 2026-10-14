@@ -66,15 +66,15 @@
     {
       "id": "pantry",
       "tag": "Free food in Westbrook",
-      "name": "Westbrook Food Pantry",
+      "name": "Westbrook Community Food & Resource Center",
       "chip": "Tuesdays, 11 a.m. to 1 p.m.",
       "chipKind": "info",
-      "summary": "A food pantry at the Westbrook Community Center. Open every Tuesday from 11 a.m. to 1 p.m.",
-      "know": "Hours can change, so it is a good idea to call before you go.",
+      "summary": "The city’s volunteer food pantry at the Westbrook Community Center. Open every Tuesday from 11 a.m. to 1 p.m.",
+      "know": "First time? Bring proof you live in Westbrook, like a utility bill or rent bill. Hours can change, so call if you are not sure.",
       "phone": "207-591-8147",
       "phoneHref": "tel:+12075918147",
-      "sourceLabel": "maine.gov: Cumberland County food pantries",
-      "sourceUrl": "https://www.maine.gov/dacf/ard/food-assistance/tefap/Cumberland.shtml"
+      "sourceLabel": "westbrookmaine.gov: Community Food & Resource Center",
+      "sourceUrl": "https://www.westbrookmaine.gov/292/Westbrook-Community-Food-Resource-Center"
     },
     {
       "id": "foodmap",
