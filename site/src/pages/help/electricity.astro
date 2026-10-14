@@ -1,0 +1,97 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import ProgramCard from '../../components/ProgramCard.astro';
+import HelpDisclaimer from '../../components/HelpDisclaimer.astro';
+import data from '../../data/help-electricity.json';
+import type { HelpProgram } from '../../lib/help';
+import { formatCheckedDate } from '../../lib/help';
+import '../../styles/help.css';
+
+const programs = data.programs as HelpProgram[];
+const byId = (id: string) => programs.find((program) => program.id === id) as HelpProgram;
+const agency = byId(data.agency);
+---
+<SiteLayout
+  title="Help Paying for Electricity in Westbrook, Maine | Westbrook Currents"
+  description="Programs that may help Westbrook, Maine residents pay their electric bill: discounts, payment help, winter shutoff rules, and who to call."
+  currentPage="help"
+>
+  <main class="help-wrap">
+    <a class="help-back" href="/help">&#8249; Get Help</a>
+    <h1>{data.title}</h1>
+    <p class="help-sub">Programs that may help Westbrook residents pay the electric bill.</p>
+    <p class="help-intro">{data.intro}</p>
+
+    <section class="urgent" aria-label="Urgent help">
+      <strong>{data.emergency.title}</strong>
+      {data.emergency.text}<br />
+      <a class="tel" href={data.emergency.phoneHref}>{data.emergency.phone}</a>
+      <br />
+      {data.emergency.text2}<br />
+      <a class="tel" href={data.emergency.phone2Href}>{data.emergency.phone2}</a>
+      <span style="display:block;font-size:14px">{data.emergency.hours2}</span>
+      <hr />
+      <strong>{data.emergency.dangerTitle}</strong>
+      {data.emergency.dangerText}
+    </section>
+
+    <section class="help-box limit" aria-labelledby="who-title">
+      <h2 id="who-title">{data.who.title}</h2>
+      <p>{data.who.text}</p>
+      <p class="fine">{data.who.fine} <a href={data.who.linkUrl}>{data.who.linkLabel}</a>.</p>
+      <p class="checked">Last checked {formatCheckedDate(data.lastChecked)}</p>
+    </section>
+
+    <section class="help-box" aria-labelledby="ready-title">
+      <h2 id="ready-title">{data.checklist.title}</h2>
+      <ul>
+        {data.checklist.items.map((item) => <li>{item}</li>)}
+      </ul>
+      <p class="fine" style="margin:0">{data.checklist.note}</p>
+    </section>
+
+    <ProgramCard program={agency} checked={data.lastChecked} />
+
+    <div class="steps-head">
+      <h2>Follow these steps</h2>
+      <button class="all-toggle" type="button" id="all-toggle" hidden>Open all steps</button>
+    </div>
+
+    {data.steps.map((step) => (
+      <details class="step" open={step.open}>
+        <summary>
+          <span class={`step-num${step.last ? ' last' : ''}`}><small>STEP</small>{step.n}</span>
+          <span class="step-text">
+            <strong>{step.title}</strong>
+            <span>{step.sub} &middot; {step.programs.length} {step.programs.length === 1 ? 'program' : 'programs'}</span>
+          </span>
+          <span class="step-chev" aria-hidden="true"></span>
+        </summary>
+        <div class="step-cards">
+          {step.programs.map((id) => <ProgramCard program={byId(id)} checked={data.lastChecked} />)}
+        </div>
+      </details>
+    ))}
+
+    <HelpDisclaimer />
+  </main>
+
+  <script>
+    // "Open all steps" needs script, so it stays hidden until the script runs. Everything else is plain HTML.
+    const toggle = document.querySelector<HTMLButtonElement>('#all-toggle');
+    const steps = Array.from(document.querySelectorAll<HTMLDetailsElement>('details.step'));
+    if (toggle && steps.length) {
+      toggle.hidden = false;
+      const sync = () => {
+        toggle.textContent = steps.every((step) => step.open) ? 'Close all steps' : 'Open all steps';
+      };
+      toggle.addEventListener('click', () => {
+        const openThem = !steps.every((step) => step.open);
+        steps.forEach((step) => { step.open = openThem; });
+        sync();
+      });
+      steps.forEach((step) => step.addEventListener('toggle', sync));
+      sync();
+    }
+  </script>
+</SiteLayout>
