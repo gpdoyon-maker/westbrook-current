@@ -1,0 +1,139 @@
+{
+  "slug": "heating",
+  "title": "Help Paying for Heat",
+  "intro": "Heating costs a lot in Maine winters. Help comes from a few places. Check your income, then follow the steps in order.",
+  "lastChecked": "2026-10-14",
+  "emergency": {
+    "lowFuelTitle": "Almost out of fuel?",
+    "lowFuelText": "Call the local agency now to book an appointment:",
+    "phone": "(207) 553-5800",
+    "phoneHref": "tel:+12075535800",
+    "dangerTitle": "Life-threatening emergency?",
+    "dangerText": "Call 911. For help finding fuel funds any time, dial 211."
+  },
+  "income": {
+    "title": "Check your income first",
+    "text": "Heating, repair and sealing programs use the same limit. Add up everyone's income before taxes.",
+    "season": "2026-2027",
+    "rows": [
+      { "people": 1, "month": "$3,173", "year": "$38,070" },
+      { "people": 2, "month": "$4,149", "year": "$49,784" },
+      { "people": 3, "month": "$5,125", "year": "$61,498" },
+      { "people": 4, "month": "$6,101", "year": "$73,213" },
+      { "people": 5, "month": "$7,077", "year": "$84,927" },
+      { "people": 6, "month": "$8,053", "year": "$96,641" }
+    ],
+    "fine": "Over the limit? You may be able to subtract some medical costs. More than 6 people? See the official chart.",
+    "sourceLabel": "mainehousing.org: HEAP income chart",
+    "sourceUrl": "https://www.mainehousing.org/charts/HEAP-Income-Elibility"
+  },
+  "checklist": {
+    "title": "Get these ready",
+    "items": [
+      "Photo ID",
+      "Proof of income for everyone in your home, and your other money records",
+      "Recent heating and electric bills",
+      "Your fuel type and your fuel dealer's name",
+      "Names and birth dates for everyone in your home"
+    ],
+    "note": "Bring all of your financial records to your appointment. Each program may ask for more, so check its official page."
+  },
+  "agency": "toa",
+  "steps": [
+    { "n": 1, "title": "Apply for HEAP", "sub": "The main heating program", "open": true, "programs": ["heap"] },
+    { "n": 2, "title": "Running low on fuel?", "sub": "Emergency help after you apply", "programs": ["ecip"] },
+    { "n": 3, "title": "Heater broken or drafty?", "sub": "Repairs and sealing", "programs": ["chip", "weatherization", "efficiency-maine"] },
+    { "n": 4, "title": "Other help", "sub": "For veterans, and for everyone", "programs": ["vefa", "211"] },
+    { "n": 5, "title": "Last stop", "sub": "Only when other programs are not enough", "last": true, "programs": ["ga"] }
+  ],
+  "programs": [
+    {
+      "id": "toa",
+      "tag": "Your local agency",
+      "name": "The Opportunity Alliance",
+      "summary": "Takes heating applications for Cumberland County, which includes Westbrook. Call first to make an appointment. Please do not walk in.",
+      "phone": "(207) 553-5800", "phoneHref": "tel:+12075535800",
+      "sourceLabel": "opportunityalliance.org/heap", "sourceUrl": "https://www.opportunityalliance.org/heap"
+    },
+    {
+      "id": "heap",
+      "tag": "For all residents",
+      "name": "Home Energy Assistance Program (HEAP)",
+      "chip": "Income limit applies", "chipKind": "limit",
+      "summary": "Help paying part of your heating bill. The money goes to your fuel dealer. It does not cover the whole winter.",
+      "know": "Homeowners and renters under the income limit. Apply from August through May.",
+      "phone": "(207) 553-5800", "phoneHref": "tel:+12075535800",
+      "sourceLabel": "mainehousing.org/heap", "sourceUrl": "https://www.mainehousing.org/heap"
+    },
+    {
+      "id": "ecip",
+      "tag": "Emergency fuel",
+      "name": "Energy Crisis Intervention Program (ECIP)",
+      "chip": "Needs an approved HEAP application", "chipKind": "limit",
+      "summary": "Emergency fuel when you are almost out. You need an approved HEAP application first.",
+      "know": "Usually opens November 1. This year the agency says the date is not set until funding arrives, sometime in November. Call to check.",
+      "phone": "(207) 553-5800", "phoneHref": "tel:+12075535800",
+      "sourceLabel": "opportunityalliance.org/ecip", "sourceUrl": "https://www.opportunityalliance.org/ecip"
+    },
+    {
+      "id": "chip",
+      "tag": "Heater repair",
+      "name": "Central Heating Improvement Program (CHIP)",
+      "chip": "Income limit applies", "chipKind": "limit",
+      "summary": "Money to repair or replace a heating system. Homes with no heat come first.",
+      "know": "Some households pay part of the cost.",
+      "phone": "(207) 553-5800", "phoneHref": "tel:+12075535800",
+      "sourceLabel": "mainehousing.org: CHIP", "sourceUrl": "https://mainehousing.org/programs-services/energy/energydetails/CHIP"
+    },
+    {
+      "id": "weatherization",
+      "tag": "Seal up your home",
+      "name": "Weatherization Assistance",
+      "chip": "Income limit applies", "chipKind": "limit",
+      "summary": "A free home energy check, then work like sealing air leaks and adding insulation.",
+      "know": "Renters need the landlord to agree to the work.",
+      "phone": "(207) 553-5800", "phoneHref": "tel:+12075535800",
+      "sourceLabel": "mainehousing.org: Weatherization", "sourceUrl": "https://mainehousing.org/programs-services/HomeImprovement/homeimprovementdetail/weatherization"
+    },
+    {
+      "id": "efficiency-maine",
+      "tag": "Any income",
+      "name": "Efficiency Maine insulation rebates",
+      "chip": "No income limit for basic rebates", "chipKind": "none",
+      "summary": "Rebates for insulation and air sealing. Lower income households get bigger rebates.",
+      "know": "A registered Efficiency Maine vendor must do the work.",
+      "sourceLabel": "efficiencymaine.com: Insulation rebates", "sourceUrl": "https://www.efficiencymaine.com/at-home/insulation-rebates-up-to-8600/"
+    },
+    {
+      "id": "vefa",
+      "tag": "Veterans",
+      "name": "Veterans’ Emergency Financial Assistance",
+      "chip": "Based on need, not a set income limit", "chipKind": "info",
+      "summary": "One-time emergency money for Maine veterans with no savings or other help.",
+      "know": "Ask if heating costs count. Contact Easterseals Maine.",
+      "phone": "(207) 828-0754 ext. 1004", "phoneHref": "tel:+12078280754,1004",
+      "sourceLabel": "maine.gov/veterans: VEFA", "sourceUrl": "https://www.maine.gov/veterans/benefits/tax-finance-benefits/vefa.html"
+    },
+    {
+      "id": "211",
+      "tag": "Anyone",
+      "name": "211 Maine",
+      "chip": "Open to anyone", "chipKind": "info",
+      "summary": "A free help line that can point you to local fuel funds and help set up a fuel delivery.",
+      "know": "You can also text your ZIP code to 898-211.",
+      "phone": "211", "phoneHref": "tel:211",
+      "sourceLabel": "211maine.org", "sourceUrl": "https://211maine.org/?p=1431"
+    },
+    {
+      "id": "ga",
+      "tag": "Last resort",
+      "name": "Westbrook General Assistance",
+      "chip": "Based on your 30-day budget", "chipKind": "info",
+      "summary": "City help for basic needs like heat when other programs are not enough. Appointment only, no walk-ins.",
+      "know": "Based on income for 30 days at a time. You must apply to other programs first.",
+      "phone": "207-591-7015", "phoneHref": "tel:+12075917015",
+      "sourceLabel": "westbrookmaine.gov: General Assistance", "sourceUrl": "https://www.westbrookmaine.gov/194/General-Assistance",
+      "last": true
+    }
+  ]
+}
