@@ -1,0 +1,145 @@
+{
+  "slug": "food",
+  "title": "Help Getting Food",
+  "intro": "If money is tight, you do not have to go hungry. Some help is free for anyone. Some depends on your income. Start with the step that fits you.",
+  "lastChecked": "2026-10-14",
+  "emergency": {
+    "title": "Need food today?",
+    "text": "Dial 211 any time to find food near you, or text your ZIP code to 898-211.",
+    "phone": "211",
+    "phoneHref": "tel:211",
+    "dangerTitle": "Life-threatening emergency?",
+    "dangerText": "Call 911."
+  },
+  "who": {
+    "title": "Who may qualify",
+    "text": "Pantries and food maps are open to anyone. SNAP and WIC have income limits. Meals on Wheels is for older adults who need help getting meals.",
+    "fine": "Not sure if you qualify? Apply anyway. The program will tell you."
+  },
+  "steps": [
+    {
+      "n": 1,
+      "title": "Need food now?",
+      "sub": "Free food, no income check",
+      "open": true,
+      "programs": ["pantry", "foodmap", "211"]
+    },
+    {
+      "n": 2,
+      "title": "Want help every month?",
+      "sub": "Money for groceries",
+      "programs": ["snap"]
+    },
+    {
+      "n": 3,
+      "title": "Expecting, or have a child under 5?",
+      "sub": "Food and nutrition help",
+      "programs": ["wic"]
+    },
+    {
+      "n": 4,
+      "title": "Age 60 or older?",
+      "sub": "Meals brought to your home",
+      "programs": ["mow"]
+    },
+    {
+      "n": 5,
+      "title": "Last stop",
+      "sub": "Only when other programs are not enough",
+      "last": true,
+      "programs": ["ga"]
+    }
+  ],
+  "programs": [
+    {
+      "id": "pantry",
+      "tag": "Free food in Westbrook",
+      "name": "Westbrook Food Pantry",
+      "chip": "Call first",
+      "chipKind": "info",
+      "summary": "A food pantry at the Westbrook Community Center. Days and hours can change, so please call before you go.",
+      "know": "Ask what to bring and when to come.",
+      "phone": "207-591-8147",
+      "phoneHref": "tel:+12075918147",
+      "sourceLabel": "maine.gov: Cumberland County food pantries",
+      "sourceUrl": "https://www.maine.gov/dacf/ard/food-assistance/tefap/Cumberland.shtml"
+    },
+    {
+      "id": "foodmap",
+      "tag": "Find food near you",
+      "name": "Good Shepherd Food Bank: Food Map",
+      "chip": "Open to anyone",
+      "chipKind": "none",
+      "summary": "A map of pantries, meal sites and other food help across Maine. It includes a mobile pantry called the Food Mobile.",
+      "know": "Open the official page and choose the Food Map. Check hours with each place before you go.",
+      "sourceLabel": "gsfb.org: get help",
+      "sourceUrl": "https://www.gsfb.org/get-help/"
+    },
+    {
+      "id": "211",
+      "tag": "Anyone",
+      "name": "211 Maine",
+      "chip": "Open to anyone",
+      "chipKind": "info",
+      "summary": "A free help line that can point you to food and other help near you.",
+      "know": "You can also text your ZIP code to 898-211.",
+      "phone": "211",
+      "phoneHref": "tel:211",
+      "sourceLabel": "211maine.org",
+      "sourceUrl": "https://211maine.org/?p=1431"
+    },
+    {
+      "id": "snap",
+      "tag": "For all residents",
+      "name": "SNAP (Food Supplement)",
+      "chip": "Income limit applies",
+      "chipKind": "limit",
+      "summary": "Money on a card (EBT) each month to buy groceries. The limit depends on how many people are in your home.",
+      "know": "Apply online, by phone or at a state office. The state has 30 days to decide, and you will have an interview. Over the limit? Some households still qualify, so you can apply anyway. Phone lines are open Monday to Friday, 7 to 4.",
+      "phone": "1-855-797-4357",
+      "phoneHref": "tel:+18557974357",
+      "sourceLabel": "maine.gov: SNAP (Food Supplement)",
+      "sourceUrl": "https://www.maine.gov/dhhs/ofi/programs-services/food-supplement"
+    },
+    {
+      "id": "wic",
+      "tag": "Families with young children",
+      "name": "WIC",
+      "chip": "Income limit applies",
+      "chipKind": "limit",
+      "summary": "Food, nutrition help and breastfeeding support for people who are pregnant or breastfeeding, and for children up to age 5.",
+      "know": "If you get MaineCare, SNAP or TANF, you already meet the income rule. Use the form on the official page, and WIC staff will call you to set up a visit.",
+      "phone": "1-800-437-9300",
+      "phoneHref": "tel:+18004379300",
+      "sourceLabel": "maine.gov: WIC",
+      "sourceUrl": "https://www.maine.gov/dhhs/wic"
+    },
+    {
+      "id": "mow",
+      "tag": "For seniors",
+      "name": "Meals on Wheels",
+      "chip": "No income limit",
+      "chipKind": "none",
+      "summary": "Meals brought to your home by the Southern Maine Agency on Aging. It is for people age 60 and older who are mostly homebound and cannot easily make meals.",
+      "know": "A $3.50 gift per meal is suggested. No one is turned away if they cannot pay. Fill out the online form or call. The page says it serves York and Cumberland counties.",
+      "phone": "1-800-427-7411",
+      "phoneHref": "tel:+18004277411",
+      "sourceLabel": "smaaa.org: Meals on Wheels",
+      "sourceUrl": "https://smaaa.org/services-for-older-adults/nutrition/meals-on-wheels/"
+    },
+    {
+      "id": "ga",
+      "tag": "Last resort",
+      "name": "Westbrook General Assistance",
+      "chip": "Based on your 30-day budget",
+      "chipKind": "info",
+      "summary": "City help for basic needs when other programs are not enough. Appointment only, no walk-ins.",
+      "know": "Based on income for 30 days at a time. You must apply to other programs first.",
+      "phone": "207-591-7015",
+      "phoneHref": "tel:+12075917015",
+      "sourceLabel": "westbrookmaine.gov: General Assistance",
+      "sourceUrl": "https://www.westbrookmaine.gov/194/General-Assistance",
+      "last": true
+    }
+  ]
+}

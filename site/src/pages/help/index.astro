@@ -2,13 +2,14 @@
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import HelpDisclaimer from '../../components/HelpDisclaimer.astro';
 import heating from '../../data/help-heating.json';
+import food from '../../data/help-food.json';
 import electricity from '../../data/help-electricity.json';
 import { formatCheckedDate } from '../../lib/help';
 import '../../styles/help.css';
 ---
 <SiteLayout
   title="Get Help in Westbrook, Maine | Westbrook Currents"
-  description="Programs and services for Westbrook, Maine residents. We are starting with help paying for heat and electricity."
+  description="Programs and services for Westbrook, Maine residents. We are starting with heat, electricity and food."
   currentPage="help"
 >
   <main class="help-wrap">
@@ -27,6 +28,13 @@ import '../../styles/help.css';
       <strong>Electricity</strong>
       <span>Help with your electric bill, payment plans and winter shutoff rules.</span>
       <em>Last checked {formatCheckedDate(electricity.lastChecked)}</em>
+      <span class="topic-go">See the steps &#8594;</span>
+    </a>
+
+    <a class="topic-row" href="/help/food">
+      <strong>Food</strong>
+      <span>Food pantries, SNAP, WIC and meals for seniors.</span>
+      <em>Last checked {formatCheckedDate(food.lastChecked)}</em>
       <span class="topic-go">See the steps &#8594;</span>
     </a>
 
