@@ -36,7 +36,7 @@
   "steps": [
     {
       "n": 1,
-      "title": "Check your November bill",
+      "title": "Check your latest CMP bill",
       "sub": "A new monthly discount",
       "open": true,
       "programs": [
@@ -105,7 +105,7 @@
       "chip": "Income limit applies",
       "chipKind": "limit",
       "summary": "A monthly discount on your electric bill. Starting this fall, many CMP customers who qualify are signed up without having to apply.",
-      "know": "The state says CMP discounts run from 25% to 81% of the bill, based on income. Look for it on your November bill or later. No discount and you think you qualify? Call CMP, or ask the local agency. You can choose to opt out.",
+      "know": "The state says CMP discounts run from 25% to 81% of the bill, based on income. Look for a discount on your latest bill. The state says it should show on the November bill or later. No discount and you think you qualify? Call CMP, or ask the local agency. You can choose to opt out.",
       "phone": "(877) 544-3271",
       "phoneHref": "tel:+18775443271",
       "sourceLabel": "maine.gov: Governor's announcement",
