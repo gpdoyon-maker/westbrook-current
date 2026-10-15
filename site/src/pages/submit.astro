@@ -47,10 +47,6 @@ import { ENDPOINT_URL, TURNSTILE_SITE_KEY } from '../lib/submit-config';
                 <input id="f-end" name="endTime" type="time" />
               </div>
             </div>
-            <div class="field" data-field="repeats">
-              <label for="f-repeats">Does it repeat? <span class="opt">(optional)</span></label>
-              <input id="f-repeats" name="repeats" type="text" maxlength="150" placeholder="e.g. Every Tuesday through December" />
-            </div>
             <div class="field" data-field="category">
               <label for="f-category">Category <span class="req" aria-hidden="true">*</span></label>
               <select id="f-category" name="category" required class="narrow">
@@ -433,7 +429,7 @@ import { ENDPOINT_URL, TURNSTILE_SITE_KEY } from '../lib/submit-config';
           category: val('category'), description: val('description'), venue: val('venue'), address: val('address'),
           admission: (form.querySelector('input[name="admission"]:checked') as HTMLInputElement).value,
           priceDetails: val('priceDetails'), accessible: checked('accessible'), link: val('link'),
-          organization: val('organization'), repeats: val('repeats'), name: val('name'), email: val('email'),
+          organization: val('organization'), name: val('name'), email: val('email'),
           confirm: checked('confirm'), hp: val('website'), loadedAt, turnstileToken: token,
         });
         if (result.ok) {
