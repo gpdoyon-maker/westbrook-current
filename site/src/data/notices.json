@@ -18,5 +18,15 @@
     "showFrom": "2026-10-13",
     "expiresDate": "2026-10-29",
     "expiresTime": "17:00"
+  },
+  {
+    "type": "General Notice",
+    "headline": "Voting & Elections guide coming Oct 20",
+    "description": "Westbrook Currents will add a plain-language voting guide on October 20. It will cover where to vote, absentee deadlines, and your sample ballot. Election Day is Tuesday, November 3.",
+    "officialLink": "https://westbrookmaine.gov/181/Elections-Voting",
+    "postedAt": "",
+    "showFrom": "",
+    "expiresDate": "2026-10-19",
+    "expiresTime": "23:55"
   }
 ]
