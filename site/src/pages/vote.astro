@@ -73,7 +73,7 @@ const ballots = [
     <details class="vote-sec">
       <summary>What is on my ballot?</summary>
       <div class="vote-body">
-        <p>Not everyone gets the same ballot. Westbrook is split into two State Senate districts and three State House districts, so there are six different ballots. Find yours with the voter lookup above, or call the City Clerk.</p>
+        <p>Not everyone gets the same ballot. Westbrook has six versions. Find yours with the voter lookup above, or call the City Clerk.</p>
         <p>This year&rsquo;s offices:</p>
         <ul>
           <li>U.S. Senate</li>
@@ -86,6 +86,11 @@ const ballots = [
           <li>County Judge of Probate</li>
           <li>District Attorney (District 2)</li>
         </ul>
+        <details class="mini">
+          <summary>What do these district numbers mean?</summary>
+          <p>Maine is cut into small areas called districts. Each district elects one person to the Maine Legislature in Augusta. Every voter lives in one State Senate district and one State House district. Where you live decides which two.</p>
+          <p>Westbrook is split between two Senate districts (26 and 27) and three House districts (126, 127 and 128). That is why there are six ballots. The other races, like Governor, are the same for everyone.</p>
+        </details>
         <p><strong>See a sample ballot (PDF).</strong> Pick the one that matches your two district numbers: your State Senate district (26 or 27) and your State House district (126, 127 or 128). The voter lookup shows both for your address.</p>
         <div class="ballot-grid">
           {ballots.map((b) => <a class="btn alt" href={`${city}/DocumentCenter/View/${b.n}`} target="_blank" rel="noopener noreferrer">{b.label}<span class="visually-hidden"> sample ballot (opens in a new tab)</span></a>)}

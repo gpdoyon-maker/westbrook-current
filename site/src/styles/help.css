@@ -131,3 +131,9 @@ details.vote-sec[open] > summary::after { content: '\2212'; }
 .ballot-grid .btn { justify-content: center; text-align: center; }
 .after-vote { display: none; }
 @media (max-width: 420px) { .ballot-grid { grid-template-columns: 1fr; } }
+
+details.mini { padding: 10px 14px; border-radius: 8px; background: var(--mist); }
+details.mini > summary { color: var(--blue); font-size: 16px; font-weight: 800; cursor: pointer; }
+details.mini[open] > summary { margin-bottom: 8px; }
+details.mini p { margin: 0 0 8px; }
+details.mini p:last-child { margin: 0; }
