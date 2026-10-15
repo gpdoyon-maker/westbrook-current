@@ -5,7 +5,7 @@ import NoticeList from '../components/NoticeList.astro';
 interface Props {
   title: string;
   description: string;
-  currentPage?: 'home' | 'events' | 'help' | 'about' | 'submit';
+  currentPage?: 'home' | 'events' | 'help' | 'about' | 'submit' | 'feedback';
   // Private pages (the email confirmation page) are hidden from search, send no referrer, and skip analytics.
   privatePage?: boolean;
 }
@@ -72,7 +72,7 @@ const socialImageUrl = new URL('/logo-desktop.png', siteUrl).href;
     </header>
     <NoticeList kind="alerts" />
     <slot />
-    <footer class="site-footer"><p>© 2026 Westbrook Currents — Local events, real connections.</p><a href="/submit">Submit an event</a></footer>
+    <footer class="site-footer"><p>© 2026 Westbrook Currents — Local events, real connections.</p><a href="/submit">Submit an event</a><a href="/feedback">Feedback</a></footer>
     <script>
       const menuButton = document.querySelector<HTMLButtonElement>('.menu-toggle');
       const navigation = document.querySelector<HTMLElement>('#site-nav');
