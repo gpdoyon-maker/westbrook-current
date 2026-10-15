@@ -37,7 +37,7 @@
     "date": "2026-10-16",
     "startTime": "15:00",
     "endTime": "16:30",
-    "venue": "Eleanor Conant Room",
+    "venue": "Walker Memorial Library : Eleanor Conant Room",
     "category": "Community & civic",
     "admission": "free",
     "description": "Enjoy quiet reading in our beautiful historic wing with other patrons. Be part of our silent book club with no commitments, no assigned reading, and no required discussion! Bring a book (or borrow one from us) and read whatever you would like while sitting in one of our cozy chairs in the Eleanor Conant Room. All ages that can read silently are welcome, but under age 8 must be with an adult.",
@@ -230,6 +230,17 @@
     "admission": "free",
     "description": "Learn how to play the Pokémon card game, or just have fun crafting and hanging out with other Pokémon fans! For ages 5 to 18; ages 8 and under must be with caregiver. Come to any or all of the club meetings!",
     "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3649"
+  },
+  {
+    "title": "Halloween on Main Street",
+    "date": "2026-10-30",
+    "startTime": "16:30",
+    "endTime": "18:00",
+    "venue": "Westbrook",
+    "category": "Community & civic",
+    "admission": "free",
+    "description": "The Westbrook Gorham Community Chamber of Commerce invites you to celebrate Halloween on Main Street! Enjoy fun, frights, food, and community with your fellow Mainers on October 25th as halloween hi-jinx take over Main Street in Westbrook!",
+    "sourceLink": "https://web.portlandregion.com/events/Westbrooks-Halloween-on-Main-St-8400/details"
   },
   {
     "title": "Coed Varsity Unified Volleyball vs Morse",
