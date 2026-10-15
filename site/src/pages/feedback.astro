@@ -39,6 +39,7 @@ const types = ['Comment', 'Question', 'Concern', 'Report wrong info'];
         </select>
       </div>
 
+      <p id="fb-about" class="fb-about" hidden>About this page: <strong id="fb-about-page"></strong></p>
       <div class="fb-field" data-field="message">
         <label for="f-message">Your message <span class="req" aria-hidden="true">*</span></label>
         <p id="help-message" class="help">If something on the site is wrong, tell us which page and what to fix.</p>
@@ -104,6 +105,7 @@ const types = ['Comment', 'Question', 'Concern', 'Report wrong info'];
     .fb-field [aria-invalid='true'] { border-color: #b42318; }
     :global(.field-error) { margin: 6px 0 0; color: #b42318; font-size: 14px; font-weight: 700; }
     .counter { margin: 4px 0 0; color: var(--muted); font-size: 13px; text-align: right; }
+    .fb-about { margin: 0; color: #294858; font-size: 15px; overflow-wrap: anywhere; }
     .privacy { padding: 12px 14px; border: 1px solid #a9d3e3; border-radius: 6px; color: #0b3550; background: #e6f3f8; font-size: 15px; line-height: 1.45; }
     .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
     .fb-banner { padding: 12px 14px; border: 1px solid #e5a49d; border-radius: 6px; color: #7a1a12; background: #fdeceb; font-size: 15px; font-weight: 700; line-height: 1.4; }
@@ -143,11 +145,27 @@ const types = ['Comment', 'Question', 'Concern', 'Report wrong info'];
       const field = (name: string) => form.elements.namedItem(name) as AnyField;
       const val = (name: string) => (field(name)?.value ?? '').trim();
 
-      // The page the visitor came from (same site only), so we know what they were looking at.
-      try {
-        const ref = document.referrer ? new URL(document.referrer) : null;
-        if (ref && ref.host === location.host) (field('page') as HTMLInputElement).value = ref.pathname;
-      } catch { /* ignore */ }
+      // The page the visitor came from, so we know what they were looking at.
+      // A link can say ?from=/help/food and ?type=wrong; otherwise we use the browser's referrer (same site only).
+      const params = new URLSearchParams(location.search);
+      let fromPage = '';
+      const wanted = params.get('from') ?? '';
+      if (/^\/[A-Za-z0-9\-_\/]{0,100}$/.test(wanted)) fromPage = wanted;
+      if (!fromPage) {
+        try {
+          const ref = document.referrer ? new URL(document.referrer) : null;
+          if (ref && ref.host === location.host) fromPage = ref.pathname;
+        } catch { /* ignore */ }
+      }
+      (field('page') as HTMLInputElement).value = fromPage;
+      if (params.get('from') && fromPage) {
+        (document.getElementById('fb-about-page') as HTMLElement).textContent = fromPage;
+        (document.getElementById('fb-about') as HTMLElement).hidden = false;
+      }
+      if (params.get('type') === 'wrong') {
+        (field('type') as HTMLSelectElement).value = 'Report wrong info';
+        (field('message') as HTMLTextAreaElement).focus();
+      }
 
       form.addEventListener('input', () => {
         (document.getElementById('fb-counter') as HTMLElement).textContent = `${(field('message') as HTMLTextAreaElement).value.length} / 1000`;
