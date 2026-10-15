@@ -68,6 +68,8 @@ details.card[open] .card-more::before { content: 'Fewer details \2212'; }
 
 .disclaimer { margin-top: 6px; padding: 14px 16px; border: 1px solid #b7dcea; border-radius: 8px; color: #294858; background: #e6f3f8; font-size: 14px; line-height: 1.5; }
 .disclaimer strong { color: var(--navy); }
+.disclaimer .report { display: block; margin-top: 8px; }
+.disclaimer a { color: var(--blue); font-weight: 700; }
 
 .topic-row { display: flex; flex-direction: column; gap: 4px; padding: 16px 18px; border: 1.5px solid var(--line); border-radius: 8px; color: inherit; background: #fff; text-decoration: none; }
 .topic-row:hover { border-color: var(--blue); }

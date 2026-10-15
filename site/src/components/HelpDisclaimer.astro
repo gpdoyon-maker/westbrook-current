@@ -1,6 +1,8 @@
 ---
 // Shown at the bottom of every Get Help page.
+const from = Astro.url.pathname.replace(/\/$/, '') || '/';
 ---
 <aside class="disclaimer" aria-label="Please check before you apply">
   <strong>Please check before you apply.</strong> We worked hard to get this right, but programs, phone numbers and dates change. Check each program or its official page first. Westbrook Currents is independent and is not run by the City of Westbrook or any agency listed here.
+  <span class="report"><strong>See something wrong?</strong> <a href={`/feedback?type=wrong&from=${encodeURIComponent(from)}`}>Tell us</a> and we will check it.</span>
 </aside>
