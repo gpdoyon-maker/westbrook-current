@@ -118,7 +118,6 @@ import { ENDPOINT_URL, TURNSTILE_SITE_KEY } from '../lib/submit-config';
               <label for="f-org">Organization <span class="opt">(optional)</span></label>
               <input id="f-org" name="organization" type="text" maxlength="100" placeholder="Club, business, or department" />
             </div>
-            <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
           </div>
         </section>
 
@@ -430,7 +429,7 @@ import { ENDPOINT_URL, TURNSTILE_SITE_KEY } from '../lib/submit-config';
           admission: (form.querySelector('input[name="admission"]:checked') as HTMLInputElement).value,
           priceDetails: val('priceDetails'), accessible: checked('accessible'), link: val('link'),
           organization: val('organization'), name: val('name'), email: val('email'),
-          confirm: checked('confirm'), hp: val('website'), loadedAt, turnstileToken: token,
+          confirm: checked('confirm'), hp: '', loadedAt, turnstileToken: token,
         });
         if (result.ok) {
           submittedEmail = val('email').toLowerCase();
