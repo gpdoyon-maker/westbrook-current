@@ -1,0 +1,162 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { formatCheckedDate } from '../lib/help';
+import '../styles/help.css';
+
+const checked = '2026-10-14';
+const city = 'https://westbrookmaine.gov';
+const clerkTel = 'tel:+12075918116';
+const dates = [
+  { when: 'Wed, Oct 14', end: '2026-10-14T23:59:59', what: 'Last day to register by mail or online.', after: 'After this, register in person at City Hall or at the voting place on Election Day.' },
+  { when: 'Thu, Oct 29, 4 p.m.', end: '2026-10-29T16:00:00', what: 'Last day to ask for an absentee ballot, or vote in person at City Hall, without a special reason.' },
+  { when: 'Tue, Nov 3, 6 a.m. to 8 p.m.', end: '2026-11-03T20:00:00', what: 'Election Day. Vote at the Westbrook Community Center.' },
+  { when: 'Tue, Nov 3, 8 p.m.', end: '2026-11-03T20:00:00', what: 'Absentee ballots must be back at City Hall by this time.' },
+];
+const ballots = [
+  { label: 'Senate 26 · House 126', n: 6376 },
+  { label: 'Senate 26 · House 127', n: 6377 },
+  { label: 'Senate 26 · House 128', n: 6378 },
+  { label: 'Senate 27 · House 126', n: 6373 },
+  { label: 'Senate 27 · House 127', n: 6374 },
+  { label: 'Senate 27 · House 128', n: 6375 },
+];
+---
+<SiteLayout
+  title="Voting & Elections in Westbrook, Maine | Westbrook Currents"
+  description="Where and when to vote in Westbrook, Maine on November 3, 2026: polling place, absentee deadlines, registration, and sample ballots."
+  currentPage="vote"
+>
+  <main class="help-wrap t-vote">
+    <a class="help-back" href="/">&#8249; Home</a>
+    <h1>Voting &amp; Elections</h1>
+    <p class="help-sub">General Election &middot; Tuesday, November 3, 2026</p>
+
+    <section class="vote-hero" aria-label="Election Day">
+      <small>Election Day</small>
+      <strong>Tuesday, Nov. 3<br />6 a.m. to 8 p.m.</strong>
+      <p>Westbrook Community Center, 426 Bridge Street.</p>
+      <p>All five wards vote at this one place.</p>
+      <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Westbrook+Community+Center+426+Bridge+Street+Westbrook+Maine" target="_blank" rel="noopener noreferrer">Get directions<span class="visually-hidden"> (opens in a new tab)</span> &#8599;</a>
+    </section>
+
+    <section class="urgent" aria-label="Absentee ballots go to City Hall">
+      <strong>Voting absentee? Return your ballot to City Hall.</strong>
+      Not the voting place. The drop box is outside the front doors of City Hall, 2 York Street. It must be there by 8 p.m. on Nov. 3.
+    </section>
+
+    <section class="help-box limit" aria-labelledby="dates-title">
+      <h2 id="dates-title">Dates to know</h2>
+      <table class="dates">
+        <caption class="visually-hidden">Important election dates</caption>
+        <tbody>
+          {dates.map((d) => (
+            <tr data-end={d.end}>
+              <th scope="row">{d.when}</th>
+              <td><span class="what">{d.what}</span>{d.after && <><br /><span class="after-note">{d.after}</span></>}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <p class="checked">Last checked {formatCheckedDate(checked)}</p>
+    </section>
+
+    <details class="vote-sec" open>
+      <summary>Am I registered?</summary>
+      <div class="vote-body">
+        <p>Look yourself up on the state&rsquo;s voter lookup. It also shows your districts.</p>
+        <a class="btn" href="https://www.maine.gov/portal/government/edemocracy/voter_lookup.php" target="_blank" rel="noopener noreferrer">Voter lookup (Maine)<span class="visually-hidden"> (opens in a new tab)</span> &#8599;</a>
+        <p><strong>Not registered?</strong> Online and mail sign-up closed Oct. 14. You can still register in person at City Hall, or at the voting place on Election Day.</p>
+        <p>You must be a U.S. citizen, live in Westbrook, and be 18 by Election Day. You may be asked for proof of who you are and where you live, like a Maine driver&rsquo;s license or a utility bill.</p>
+      </div>
+    </details>
+
+    <details class="vote-sec">
+      <summary>What is on my ballot?</summary>
+      <div class="vote-body">
+        <p>Not everyone gets the same ballot. Westbrook is split into two State Senate districts and three State House districts, so there are six different ballots. Find yours with the voter lookup above, or call the City Clerk.</p>
+        <p>This year&rsquo;s offices:</p>
+        <ul>
+          <li>U.S. Senate</li>
+          <li>U.S. Representative (District 1)</li>
+          <li>Governor</li>
+          <li>State Senate (District 26 or 27)</li>
+          <li>State Representative (District 126, 127 or 128)</li>
+          <li>County Commissioner (District 4)</li>
+          <li>County Sheriff</li>
+          <li>County Judge of Probate</li>
+          <li>District Attorney (District 2)</li>
+        </ul>
+        <p><strong>See a sample ballot (PDF):</strong></p>
+        <div class="ballot-grid">
+          {ballots.map((b) => <a class="btn alt" href={`${city}/DocumentCenter/View/${b.n}`} target="_blank" rel="noopener noreferrer">{b.label}<span class="visually-hidden"> sample ballot (opens in a new tab)</span></a>)}
+        </div>
+        <a class="btn alt" href={`${city}/DocumentCenter/View/6379`} target="_blank" rel="noopener noreferrer">City ward map (PDF)<span class="visually-hidden"> (opens in a new tab)</span> &#8599;</a>
+      </div>
+    </details>
+
+    <details class="vote-sec">
+      <summary>Can I vote early?</summary>
+      <div class="vote-body">
+        <p>Yes. This is called absentee voting. Anyone can do it. You do not need a reason until after Oct. 29.</p>
+        <p><strong>Ask for a ballot:</strong></p>
+        <ul>
+          <li>Online, at the state&rsquo;s request page</li>
+          <li>By phone: City Clerk, <a href={clerkTel}>207-591-8116</a></li>
+          <li>In person at City Hall</li>
+          <li>By mail, with the printed and signed City form</li>
+        </ul>
+        <a class="btn" href="https://apps.web.maine.gov/cgi-bin/online/AbsenteeBallot/index.pl" target="_blank" rel="noopener noreferrer">Request online<span class="visually-hidden"> (opens in a new tab)</span> &#8599;</a>
+        <p><strong>Vote it at City Hall</strong> during normal business hours through Oct. 29, or take it home.</p>
+        <p><strong>Return it by 8 p.m. on Nov. 3:</strong></p>
+        <ul>
+          <li>The drop box outside City Hall</li>
+          <li>The City Clerk&rsquo;s office inside City Hall</li>
+          <li>By mail. The city says to mail it at least one week before the election.</li>
+        </ul>
+        <p>Need help reading or marking your ballot? You can ask someone to help, but there are signing rules. The City Clerk can explain.</p>
+      </div>
+    </details>
+
+    <details class="vote-sec">
+      <summary>Questions? Call the City Clerk</summary>
+      <div class="vote-body">
+        <p>The City Clerk&rsquo;s Election Hotline can help with registration, absentee ballots, replacement ballots and more.</p>
+        <a class="btn" href={clerkTel}>Call 207-591-8116</a>
+        <a class="btn alt" href={`${city}/181/Elections-Voting`} target="_blank" rel="noopener noreferrer">City Clerk: Elections &amp; Voting<span class="visually-hidden"> (opens in a new tab)</span> &#8599;</a>
+      </div>
+    </details>
+
+    <section class="help-box after-vote" id="after-vote" aria-labelledby="after-title">
+      <h2 id="after-title">The election is over</h2>
+      <p>Thank you to everyone who voted and to the election workers. See the official results from the City.</p>
+      <a class="btn" href={`${city}/589/Election-Results`} target="_blank" rel="noopener noreferrer">Election results<span class="visually-hidden"> (opens in a new tab)</span> &#8599;</a>
+    </section>
+
+    <p class="src-line">Sources: <a href={`${city}/181/Elections-Voting`} target="_blank" rel="noopener noreferrer">westbrookmaine.gov: Elections &amp; Voting<span class="visually-hidden"> (opens in a new tab)</span></a> and <a href={`${city}/205/Absentee-Voting`} target="_blank" rel="noopener noreferrer">Absentee Voting<span class="visually-hidden"> (opens in a new tab)</span></a>. Last checked {formatCheckedDate(checked)}.</p>
+
+    <aside class="disclaimer" aria-label="Please check before you go">
+      <strong>Please check before you go.</strong> We worked hard to get this right, but dates, hours and rules can change. Check with the City Clerk at 207-591-8116. Westbrook Currents is independent and is not run by the City of Westbrook. We share voting steps only. We do not support any candidate or party.
+    </aside>
+  </main>
+
+  <script>
+    // Marks dates that have passed. The browser decides, so the page stays right without a rebuild.
+    const now = new Date();
+    const offset = (iso: string) => (iso >= '2026-11-01' ? '-05:00' : '-04:00');
+    document.querySelectorAll<HTMLElement>('tr[data-end]').forEach((row) => {
+      const iso = row.dataset.end ?? '';
+      if (!iso) return;
+      const end = new Date(`${iso}${offset(iso)}`);
+      if (now > end) {
+        row.querySelector('th')?.classList.add('closed');
+        row.querySelector('.what')?.classList.add('closed');
+        const first = row.querySelector('th');
+        if (first) first.insertAdjacentHTML('beforeend', '<span class="closed-tag">Closed</span>');
+      }
+    });
+    // After the polls close on Nov 3, point people to results.
+    if (now > new Date('2026-11-03T20:00:00-05:00')) {
+      document.getElementById('after-vote')?.setAttribute('style', 'display:block');
+    }
+  </script>
+</SiteLayout>
