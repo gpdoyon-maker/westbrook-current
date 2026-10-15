@@ -51,6 +51,7 @@ button, select { cursor: pointer; }
 .site-footer { margin-top: 32px; padding: 30px 16px; border-top: 4px solid var(--blue); color: #b5d7e6; background: var(--navy); text-align: center; font-size: 13px; }
 .site-footer p { margin: 0; }
 .site-footer a { display: inline-block; margin-top: 12px; color: #fff; font-weight: 700; text-underline-offset: 3px; }
+.site-footer a + a { margin-left: 20px; }
 
 @media (max-width: 720px) {
   .site-header { position: relative; padding: 10px 14px; }
