@@ -13,12 +13,12 @@ const dates = [
   { when: 'Tue, Nov 3, 8 p.m.', end: '2026-11-03T20:00:00', what: 'Absentee ballots must be back at City Hall by this time.' },
 ];
 const ballots = [
-  { label: 'Senate 26 · House 126', n: 6376 },
-  { label: 'Senate 26 · House 127', n: 6377 },
-  { label: 'Senate 26 · House 128', n: 6378 },
-  { label: 'Senate 27 · House 126', n: 6373 },
-  { label: 'Senate 27 · House 127', n: 6374 },
-  { label: 'Senate 27 · House 128', n: 6375 },
+  { label: 'Senate 26, House 126', n: 6376 },
+  { label: 'Senate 26, House 127', n: 6377 },
+  { label: 'Senate 26, House 128', n: 6378 },
+  { label: 'Senate 27, House 126', n: 6373 },
+  { label: 'Senate 27, House 127', n: 6374 },
+  { label: 'Senate 27, House 128', n: 6375 },
 ];
 ---
 <SiteLayout
@@ -86,7 +86,7 @@ const ballots = [
           <li>County Judge of Probate</li>
           <li>District Attorney (District 2)</li>
         </ul>
-        <p><strong>See a sample ballot (PDF):</strong></p>
+        <p><strong>See a sample ballot (PDF).</strong> Pick the one that matches your two district numbers: your State Senate district (26 or 27) and your State House district (126, 127 or 128). The voter lookup shows both for your address.</p>
         <div class="ballot-grid">
           {ballots.map((b) => <a class="btn alt" href={`${city}/DocumentCenter/View/${b.n}`} target="_blank" rel="noopener noreferrer">{b.label}<span class="visually-hidden"> sample ballot (opens in a new tab)</span></a>)}
         </div>
