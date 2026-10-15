@@ -59,7 +59,7 @@ const types = ['Comment', 'Question', 'Concern', 'Report wrong info'];
       </div>
       <p id="help-email" class="privacy"><strong>Your email stays private.</strong> Add it only if you would like a reply. We only use it to reply to you. We never share it or put it on the website.</p>
 
-      <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
+      <input class="hp" type="text" name="hp_trap" tabindex="-1" autocomplete="off" aria-hidden="true" data-lpignore="true" data-1p-ignore />
       <input type="hidden" name="page" />
 
       <div id="ts-box"></div>
@@ -189,6 +189,8 @@ const types = ['Comment', 'Question', 'Concern', 'Report wrong info'];
         event.preventDefault();
         showBanner('');
         if (!form.checkValidity()) { form.reportValidity(); return; }
+        // If a browser autofilled the hidden trap box, don't send (the server would quietly discard the message).
+        if (val('hp_trap')) { (field('hp_trap') as HTMLInputElement).value = ''; showBanner('Something went wrong. Please press Send again.'); return; }
         const token = getToken();
         if (!token) { showBanner('Please wait a moment for the security check to finish, then press Send again. If it never appears, reload the page.'); return; }
 
@@ -201,7 +203,7 @@ const types = ['Comment', 'Question', 'Concern', 'Report wrong info'];
             body: JSON.stringify({
               action: 'feedback',
               type: val('type'), message: val('message'), name: val('name'), email: val('email'), page: val('page'),
-              hp: val('website'), loadedAt, turnstileToken: token,
+              hp: val('hp_trap'), loadedAt, turnstileToken: token,
             }),
           });
           const result = await res.json();
