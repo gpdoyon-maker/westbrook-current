@@ -84,13 +84,13 @@
       "id": "vineyard",
       "tag": "Free food in Westbrook",
       "name": "Vineyard Church Food Pantry",
-      "chip": "Fridays, evening",
+      "chip": "Fridays, 5:45 p.m.",
       "chipKind": "info",
-      "summary": "A church pantry at 715 Bridgton Road, open on Friday evenings. It serves Westbrook and Portland residents who live west of Riverside.",
-      "know": "Lists give slightly different times, from about 5:30 to 6:30 p.m. Call the church office to check before you go.",
+      "summary": "A church pantry at 715 Bridgton Road. Food is handed out on Fridays starting at 5:45 p.m. It serves Westbrook and Portland residents who live west of Riverside.",
+      "know": "Arrive by 5 p.m. and line up in your car. Hours can change, so call the church office if you are not sure.",
       "phone": "(207) 854-8339",
       "phoneHref": "tel:+12078548339",
-      "sourceLabel": "Wayside Food Programs: Westbrook pantries",
+      "sourceLabel": "Wayside Food Programs; times confirmed by a pantry coordinator, Oct 16, 2026",
       "sourceUrl": "https://www.waysidemaine.org/surroundingtownswestbrook"
     },
     {
