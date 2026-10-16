@@ -107,3 +107,9 @@ details.card[open] .card-more::before { content: 'Fewer details \2212'; }
 .help-box ol li { display: list-item; padding: 4px 0; }
 .help-box ol li::before { content: none; }
 .help-box .big-tel { display: inline-block; margin: 2px 0 6px; color: var(--navy); font-size: 22px; font-weight: 800; text-decoration: none; }
+
+.guide-row { display: flex; flex-direction: column; gap: 4px; padding: 16px 18px; border: 1.5px dashed var(--blue); border-radius: 8px; color: inherit; background: #fff; text-decoration: none; }
+.guide-row:hover { background: #e6f3f8; }
+.guide-row strong { color: var(--navy); font-size: 19px; }
+.guide-row span { color: #294858; font-size: 16px; line-height: 1.4; }
+.guide-row .topic-go { color: var(--blue); }
