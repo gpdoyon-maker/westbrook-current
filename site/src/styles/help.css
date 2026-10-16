@@ -108,3 +108,9 @@ details.step[open] .step-chev::before { content: '\2212'; }
 
 /* Phone numbers inside sentences: bold, underlined, and a tap area of about 46px even though the text is one line. */
 .tel-inline, .help-box a[href^="tel:"]:not(.big-tel) { display: inline-block; padding: 12px 4px; margin: -12px -4px; color: var(--navy); font-weight: 800; text-decoration: underline; text-underline-offset: 2px; white-space: nowrap; }
+
+.guide-row { display: flex; flex-direction: column; gap: 4px; padding: 16px 18px; border: 1.5px dashed var(--blue); border-radius: 8px; color: inherit; background: #fff; text-decoration: none; }
+.guide-row:hover { background: #e6f3f8; }
+.guide-row strong { color: var(--navy); font-size: 19px; }
+.guide-row span { color: #294858; font-size: 16px; line-height: 1.4; }
+.guide-row .topic-go { color: var(--blue); }
