@@ -20,7 +20,7 @@ const byId = (id: string) => programs.find((program) => program.id === id) as He
     <a class="help-back" href="/help">&#8249; Get Help</a>
     <h1>{data.title}</h1>
     <p class="help-sub">Programs that may help Westbrook residents get food.</p>
-    <GuideLink />
+    <GuideLink topic="food" />
     <p class="help-intro">{data.intro}</p>
 
     <section class="urgent" aria-label="Urgent help">

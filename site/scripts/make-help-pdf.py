@@ -235,6 +235,18 @@ def topic_section(slug, subtitle, intro_note=None):
         out.append(Spacer(1, 6))
     return out
 
+def qr_block(made_on, path='/help'):
+    qr = QrCodeWidget(SITE_URL + path)
+    b = qr.getBounds(); size = 92
+    dr = Drawing(size, size, transform=[size / (b[2] - b[0]), 0, 0, size / (b[3] - b[1]), 0, 0]); dr.add(qr)
+    qr_row = Table([[dr, [p('The newest version is always on the website.', 'h3'), Spacer(1, 3),
+                          pm(f'Scan the code, or visit {link(SITE_URL + path, "westbrookcurrents.com" + path)}. '
+                             'Phone numbers, rules and dates can change, so check the website before you go.'),
+                          Spacer(1, 3), p(f'This guide was made on {pretty_date(made_on)}. Each program shows the date we last checked it.', 'small')]]],
+                   colWidths=[108, W - 108])
+    qr_row.setStyle(TableStyle([('VALIGN', (0, 0), (-1, -1), 'MIDDLE'), ('LEFTPADDING', (0, 0), (-1, -1), 0)]))
+    return qr_row
+
 # ---- Cover page ---------------------------------------------------------------
 def cover(made_on, topics):
     items = []
@@ -265,16 +277,7 @@ def cover(made_on, topics):
                             ('LEFTPADDING', (0, 0), (-1, -1), 0), ('TOPPADDING', (0, 1), (-1, -1), 6), ('BOTTOMPADDING', (0, 1), (-1, -1), 6)]))
     items += [tb, Spacer(1, 16)]
 
-    qr = QrCodeWidget(SITE_URL + '/help')
-    b = qr.getBounds(); size = 92
-    dr = Drawing(size, size, transform=[size / (b[2] - b[0]), 0, 0, size / (b[3] - b[1]), 0, 0]); dr.add(qr)
-    qr_row = Table([[dr, [p('The newest version is always on the website.', 'h3'), Spacer(1, 3),
-                          pm(f'Scan the code, or visit {link(SITE_URL + "/help", "westbrookcurrents.com/help")}. '
-                             'Phone numbers, rules and dates can change, so check the website before you go.'),
-                          Spacer(1, 3), p(f'This guide was made on {pretty_date(made_on)}. Each program shows the date we last checked it.', 'small')]]],
-                   colWidths=[108, W - 108])
-    qr_row.setStyle(TableStyle([('VALIGN', (0, 0), (-1, -1), 'MIDDLE'), ('LEFTPADDING', (0, 0), (-1, -1), 0)]))
-    items += [qr_row, PageBreak()]
+    items += [qr_block(made_on), PageBreak()]
     return items
 
 def closing():
@@ -287,13 +290,21 @@ def closing():
         colors.HexColor('#e6f3f8'), colors.HexColor('#b7dcea'), width=W)]
 
 # ---- Page furniture -------------------------------------------------------------
-def make(made_on):
+SINGLE = {
+    'heating': ('Help Paying for Heat Guide', 'Programs that may help Westbrook residents pay for heat.'),
+    'electricity': ('Help With the Electric Bill Guide', 'Programs that may help Westbrook residents pay the electric bill.'),
+    'food': ('Help Getting Food Guide', 'Programs that may help Westbrook residents get food.'),
+}
+
+def make(made_on, slug=None):
+    out = OUT if slug is None else os.path.join(SITE, 'public', f'westbrook-currents-{slug}-guide.pdf')
+    guide_title = 'Westbrook Help Guide' if slug is None else SINGLE[slug][0]
     def later(canv, doc):
         canv.saveState()
         canv.setFillColor(NAVY); canv.rect(0, letter[1] - 0.32 * inch, letter[0], 0.32 * inch, stroke=0, fill=1)
         canv.setFillColor(colors.white); canv.setFont('Sans-Bold', 10)
         canv.drawString(0.7 * inch, letter[1] - 0.21 * inch, 'Westbrook Currents')
-        canv.setFont('Sans', 10); canv.drawRightString(letter[0] - 0.7 * inch, letter[1] - 0.21 * inch, 'Westbrook Help Guide')
+        canv.setFont('Sans', 10); canv.drawRightString(letter[0] - 0.7 * inch, letter[1] - 0.21 * inch, guide_title)
         footer(canv, doc); canv.restoreState()
     def first(canv, doc):
         canv.saveState(); footer(canv, doc); canv.restoreState()
@@ -302,28 +313,37 @@ def make(made_on):
         canv.drawString(0.7 * inch, 0.45 * inch, f'westbrookcurrents.com/help   |   Made {pretty_date(made_on)}')
         canv.drawRightString(letter[0] - 0.7 * inch, 0.45 * inch, f'Page {doc.page}')
 
-    doc = BaseDocTemplate(OUT, pagesize=letter, leftMargin=0.7 * inch, rightMargin=0.7 * inch,
+    doc = BaseDocTemplate(out, pagesize=letter, leftMargin=0.7 * inch, rightMargin=0.7 * inch,
                           topMargin=0.62 * inch, bottomMargin=0.75 * inch,
-                          title='Westbrook Help Guide', author='Westbrook Currents',
+                          title=guide_title, author='Westbrook Currents',
                           subject='Help with heat, electricity and food in Westbrook, Maine')
     fr1 = Frame(doc.leftMargin, doc.bottomMargin, W, letter[1] - doc.bottomMargin - 0.5 * inch, id='f1', leftPadding=0, rightPadding=0)
     fr2 = Frame(doc.leftMargin, doc.bottomMargin, W, letter[1] - doc.bottomMargin - doc.topMargin, id='f2', leftPadding=0, rightPadding=0)
     doc.addPageTemplates([PageTemplate('first', [fr1], onPage=first), PageTemplate('later', [fr2], onPage=later)])
+    if slug is not None:
+        doc.pageTemplates.reverse()  # single-topic guides start on the header-bar template
 
     from reportlab.platypus import NextPageTemplate
     heat = load('heating'); elec = load('electricity'); food = load('food')
     topics = [('Heating and Fuel', 'Help paying for heating oil, propane and other heat.'),
               ('Electricity', 'Help with your electric bill, payment plans and winter shutoff rules.'),
               ('Food', 'Pantries, SNAP, WIC, Meals on Wheels and more.')]
-    story = [NextPageTemplate('later')] + cover(made_on, topics)
-    story += topic_section('heating', 'Programs that may help Westbrook residents pay for heat.')
-    story += [PageBreak()] + topic_section('electricity', 'Programs that may help Westbrook residents pay the electric bill.')
-    story += [PageBreak()] + topic_section('food', 'Programs that may help Westbrook residents get food.')
-    story += closing()
+    if slug is None:
+        story = [NextPageTemplate('later')] + cover(made_on, topics)
+        story += topic_section('heating', 'Programs that may help Westbrook residents pay for heat.')
+        story += [PageBreak()] + topic_section('electricity', 'Programs that may help Westbrook residents pay the electric bill.')
+        story += [PageBreak()] + topic_section('food', 'Programs that may help Westbrook residents get food.')
+        story += closing()
+    else:
+        # One topic only: no cover page. Page 1 uses the same header bar as the later pages.
+        story = topic_section(slug, SINGLE[slug][1]) + [Spacer(1, 14), qr_block(made_on, '/help/' + slug), Spacer(1, 12)] + closing()
     doc.build(story)
-    print('Wrote', OUT)
+    print('Wrote', out)
 
 if __name__ == '__main__':
     ap = argparse.ArgumentParser()
     ap.add_argument('--date', default=datetime.date.today().isoformat(), help='date printed on the guide, YYYY-MM-DD')
-    make(ap.parse_args().date)
+    d = ap.parse_args().date
+    make(d)
+    for s in SINGLE:
+        make(d, s)
