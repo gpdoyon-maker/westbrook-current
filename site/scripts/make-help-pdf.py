@@ -35,7 +35,12 @@ LOGO = os.path.join(SITE, 'public', 'logo-desktop.png')
 SITE_URL = 'https://westbrookcurrents.com'
 
 # ---- Fonts and colors ------------------------------------------------------
-FONT_DIR = '/usr/share/fonts/truetype/liberation'
+# The Linux system path (present on CI and most Linux machines, e.g. via the
+# fonts-liberation package). Falls back to the copy checked into this repo
+# (same font, from the official Debian fonts-liberation2 package) so the
+# script also runs on a Mac or anywhere else without that system package.
+_SYSTEM_FONT_DIR = '/usr/share/fonts/truetype/liberation'
+FONT_DIR = _SYSTEM_FONT_DIR if os.path.isdir(_SYSTEM_FONT_DIR) else os.path.join(HERE, 'fonts')
 pdfmetrics.registerFont(TTFont('Sans', f'{FONT_DIR}/LiberationSans-Regular.ttf'))
 pdfmetrics.registerFont(TTFont('Sans-Bold', f'{FONT_DIR}/LiberationSans-Bold.ttf'))
 pdfmetrics.registerFont(TTFont('Sans-Italic', f'{FONT_DIR}/LiberationSans-Italic.ttf'))
