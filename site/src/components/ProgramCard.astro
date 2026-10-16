@@ -1,6 +1,6 @@
 ---
 import type { HelpProgram } from '../lib/help';
-import { formatCheckedDate } from '../lib/help';
+import { formatCheckedDate, linkPhones } from '../lib/help';
 
 interface Props {
   program: HelpProgram;
@@ -8,20 +8,17 @@ interface Props {
 }
 const { program, checked } = Astro.props;
 ---
-<details class={`card${program.last ? ' last' : ''}`}>
-  <summary>
-    <span class="card-tag">{program.tag}</span>
-    <h3>{program.name}</h3>
-    {program.chip && <span class={`chip ${program.chipKind === 'limit' ? '' : program.chipKind ?? ''}`.trim()}>{program.chip}</span>}
+<article class={`prog-card${program.last ? ' last' : ''}`}>
+  <span class="card-tag">{program.tag}</span>
+  <h3>{program.name}</h3>
+  {program.chip && <span class={`chip ${program.chipKind === 'limit' ? '' : program.chipKind ?? ''}`.trim()}>{program.chip}</span>}
+  <p set:html={linkPhones(program.summary)} />
+  {program.know && <p class="know" set:html={linkPhones(program.know)} />}
+  <div class="card-actions">
     {program.phone && program.phoneHref && <a class="btn" href={program.phoneHref}>Call {program.phone}</a>}
-    <span class="card-more" aria-hidden="true"></span>
-  </summary>
-  <div class="card-body">
-    <p>{program.summary}</p>
-    {program.know && <p class="know">{program.know}</p>}
     {program.more && <a class="btn alt" href={program.more.url}>{program.more.label} &#8594;</a>}
-    <a class="btn alt" href={program.sourceUrl} target="_blank" rel="noopener noreferrer">Official page<span class="visually-hidden"> for {program.name} (opens in a new tab)</span> &#8599;</a>
-    <p class="src-line">Source: {program.sourceLabel}</p>
-    <p class="checked">Last checked {formatCheckedDate(checked)}</p>
+    <a class="btn alt ext" href={program.sourceUrl} target="_blank" rel="noopener noreferrer"><span>Official page &#8599;<span class="visually-hidden"> for {program.name}</span></span><span class="ext-note">(opens in a new tab)</span></a>
   </div>
-</details>
+  <p class="src-line">Source: {program.sourceLabel}</p>
+  <p class="checked">Last checked {formatCheckedDate(checked)}</p>
+</article>

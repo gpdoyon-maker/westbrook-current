@@ -44,7 +44,7 @@ const agency = byId(data.agency);
         </tbody>
       </table>
       <p class="fine">{data.income.fine} Season {data.income.season}.</p>
-      <p class="src-line">Source: <a href={data.income.sourceUrl} target="_blank" rel="noopener noreferrer">{data.income.sourceLabel}<span class="visually-hidden"> (opens in a new tab)</span></a></p>
+      <p class="src-line">Source: <a href={data.income.sourceUrl} target="_blank" rel="noopener noreferrer">{data.income.sourceLabel}</a> <span class="ext-note">(opens in a new tab) &#8599;</span></p>
       <p class="checked">Last checked {formatCheckedDate(data.lastChecked)}</p>
     </section>
 
