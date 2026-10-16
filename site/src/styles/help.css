@@ -114,3 +114,9 @@ details.step[open] .step-chev::before { content: '\2212'; }
 .guide-row strong { color: var(--navy); font-size: 19px; }
 .guide-row span { color: #294858; font-size: 16px; line-height: 1.4; }
 .guide-row .topic-go { color: var(--blue); }
+
+.pdf-link { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 48px; margin: 0 0 14px; padding: 10px 14px; border: 1.5px dashed var(--blue); border-radius: 8px; background: #fff; color: inherit; text-decoration: none; }
+.pdf-link:hover { background: #e6f3f8; }
+.pdf-link strong { color: var(--navy); font-size: 17px; }
+.pdf-link .pdf-sub { display: block; color: #294858; font-size: 15px; line-height: 1.35; }
+.pdf-link .pdf-go { flex: none; display: flex; flex-direction: column; align-items: flex-end; color: var(--blue); font-weight: 700; font-size: 16px; }

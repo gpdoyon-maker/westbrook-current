@@ -1,6 +1,7 @@
 ---
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import ProgramCard from '../../components/ProgramCard.astro';
+import GuideLink from '../../components/GuideLink.astro';
 import HelpDisclaimer from '../../components/HelpDisclaimer.astro';
 import data from '../../data/help-electricity.json';
 import type { HelpProgram } from '../../lib/help';
@@ -20,6 +21,7 @@ const agency = byId(data.agency);
     <a class="help-back" href="/help">&#8249; Get Help</a>
     <h1>{data.title}</h1>
     <p class="help-sub">Programs that may help Westbrook residents pay the electric bill.</p>
+    <GuideLink />
     <p class="help-intro">{data.intro}</p>
 
     <section class="urgent" aria-label="Urgent help">
