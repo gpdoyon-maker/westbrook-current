@@ -16,6 +16,13 @@ import NoticeList from '../components/NoticeList.astro';
     <!-- Up to three general notices, worked out in the visitor's browser. Urgent alerts already show at the top of every page. -->
     <NoticeList kind="notices" limit={3} inline />
 
+    <!-- Filled in by the script below, and only when three or more events are coming up. Kept next to the notices above so all "what's happening" content stays together, ahead of the two navigation tiles below. -->
+    <section class="coming" id="coming" aria-labelledby="coming-title" hidden>
+      <h2 id="coming-title">Coming up</h2>
+      <ul class="coming-list" id="coming-list"></ul>
+    </section>
+    <a class="see-all" href="/events">See all events &#8594;</a>
+
     <nav class="tiles" aria-label="Main sections">
       <a class="tile tile-events" href="/events">
         <strong>Find Local Events</strong>
@@ -28,13 +35,6 @@ import NoticeList from '../components/NoticeList.astro';
         <i aria-hidden="true">&#8594;</i>
       </a>
     </nav>
-
-    <!-- Filled in by the script below, and only when three or more events are coming up. -->
-    <section class="coming" id="coming" aria-labelledby="coming-title" hidden>
-      <h2 id="coming-title">Coming up</h2>
-      <ul class="coming-list" id="coming-list"></ul>
-    </section>
-    <a class="see-all" href="/events">See all events &#8594;</a>
 
     <p class="home-note">Westbrook Currents is an independent community website. It is not run by the City of Westbrook.</p>
   </main>
