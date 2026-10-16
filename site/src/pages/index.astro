@@ -21,7 +21,7 @@ import NoticeList from '../components/NoticeList.astro';
       <h2 id="coming-title">Coming up</h2>
       <ul class="coming-list" id="coming-list"></ul>
     </section>
-    <a class="see-all" href="/events">See all events &#8594;</a>
+    <a class="see-all" id="see-all" href="/events">See all events &#8594;</a>
 
     <nav class="tiles" aria-label="Main sections">
       <a class="tile tile-events" href="/events">
@@ -77,8 +77,10 @@ import NoticeList from '../components/NoticeList.astro';
 
     // Next three upcoming events. "Today" is worked out here, in the visitor's browser, never at build time.
     // Fewer than three upcoming events: the list stays hidden and only "See all events" shows.
+    // Three or more: the list shows instead, and "See all events" hides, since the tile right below it already leads to the same place.
     const section = document.querySelector<HTMLElement>('#coming');
     const list = document.querySelector<HTMLUListElement>('#coming-list');
+    const seeAll = document.querySelector<HTMLElement>('#see-all');
 
     const pad = (value: number) => String(value).padStart(2, '0');
     const now = new Date();
@@ -109,7 +111,7 @@ import NoticeList from '../components/NoticeList.astro';
       .sort((a, b) => a.event.date.localeCompare(b.event.date) || (a.start ?? 24 * 60) - (b.start ?? 24 * 60) || a.event.title.localeCompare(b.event.title))
       .slice(0, 3);
 
-    if (section && list && upcoming.length >= 3) {
+    if (section && list && seeAll && upcoming.length >= 3) {
       upcoming.forEach(({ event, start }) => {
         const item = document.createElement('li');
 
@@ -140,6 +142,7 @@ import NoticeList from '../components/NoticeList.astro';
         list.append(item);
       });
       section.hidden = false;
+      seeAll.hidden = true;
     }
   </script>
 </SiteLayout>
