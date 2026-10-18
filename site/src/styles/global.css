@@ -41,7 +41,6 @@ button, select { cursor: pointer; }
 .brand { display: flex; flex-direction: column; align-items: center; text-decoration: none; }
 .logo-desktop { display: block; width: min(330px, 37vw); height: 61px; object-fit: contain; }
 .logo-mobile { display: none; width: 244px; height: 62px; object-fit: contain; }
-.tagline { margin: 2px 0 0; color: #82d7ef; font-size: 12px; font-weight: 700; }
 .site-nav { display: flex; align-items: center; gap: 24px; }
 .site-nav a { color: #fff; font-size: 14px; font-weight: 700; text-decoration: none; }
 .site-nav a:hover, .site-nav a[aria-current='page'] { color: #82d7ef; }
