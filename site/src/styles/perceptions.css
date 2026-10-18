@@ -83,8 +83,7 @@
 .perceptions-wrap .disclaimer a { color: var(--blue); font-weight: 700; }
 
 /* Index page (list of articles in this section) */
-.perceptions-sub { margin: 0; color: var(--muted); font-size: 16px; }
-.perceptions-tagline { margin: 4px 0 0; color: var(--accent); font-size: 15px; font-weight: 700; font-style: italic; }
+.perceptions-tagline { margin: 10px 0 0; color: var(--accent); font-size: 16px; font-weight: 600; font-style: italic; }
 .article-row { display: flex; flex-direction: column; gap: 4px; padding: 16px 18px; border: 1.5px solid var(--edge); border-left: 8px solid var(--accent); border-radius: 8px; color: inherit; background: var(--tint); text-decoration: none; }
 .article-row:hover { border-color: var(--accent); }
 .article-row strong { color: var(--accent); font-size: 21px; }
