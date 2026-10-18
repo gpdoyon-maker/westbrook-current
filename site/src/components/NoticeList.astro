@@ -77,18 +77,25 @@ const items = (rawNotices as unknown as Record<string, unknown>[])
         data-posted={item.posted}
       >
         <div class="alert-inner">
-          <p class="alert-meta">
+          <button class="alert-toggle" type="button" aria-expanded="false">
             {item.type === 'emergency' || item.type === 'parking' ? (
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2h8l6 6v8l-6 6H8l-6-6V8z"></path><path d="M12 7v6M12 16.5h.01"></path></svg>
             ) : (
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l10 18H2z"></path><path d="M12 10v5M12 18h.01"></path></svg>
             )}
-            <span>{item.label}</span>
-            <span class="alert-posted" data-posted-label hidden></span>
-          </p>
-          <p class="alert-headline">{item.headline}</p>
-          {item.description && <p class="alert-detail">{item.description}</p>}
-          <a class="alert-source" href={item.href} target="_blank" rel="noopener noreferrer">Official source: {item.host} &rsaquo;</a>
+            <span class="alert-head">
+              <span class="alert-meta">
+                <span>{item.label}</span>
+                <span class="alert-posted" data-posted-label hidden></span>
+              </span>
+              <span class="alert-headline">{item.headline}</span>
+            </span>
+            <span class="alert-arrow" aria-hidden="true">&rsaquo;</span>
+          </button>
+          <div class="alert-details">
+            {item.description && <p class="alert-detail">{item.description}</p>}
+            <a class="alert-source" href={item.href} target="_blank" rel="noopener noreferrer">Official source: {item.host} &rsaquo;</a>
+          </div>
         </div>
       </section>
     ))}
@@ -125,21 +132,28 @@ const items = (rawNotices as unknown as Record<string, unknown>[])
 <style>
   .alert-stack[hidden], .notice-stack[hidden], .alert[hidden], .notice[hidden], .alert-posted[hidden] { display: none; }
 
-  .alert { padding: 12px 14px 4px; border-bottom: 2px solid var(--alert-edge); color: var(--alert-ink); background: var(--alert-bg); }
+  .alert { border-bottom: 2px solid var(--alert-edge); color: var(--alert-ink); background: var(--alert-bg); }
   .alert-delay { --alert-bg: #fff4d6; --alert-edge: #a47726; --alert-ink: #35280e; --alert-accent: #6b4a0a; }
   .alert-emergency, .alert-parking { --alert-bg: #fde8e6; --alert-edge: #b3261e; --alert-ink: #3d0f0b; --alert-accent: #8c1c13; }
-  .alert-inner { width: min(1200px, 100%); margin: 0 auto; }
+  .alert-inner { width: min(1200px, 100%); margin: 0 auto; padding: 0 14px; }
+  .alert-toggle { display: flex; align-items: center; gap: 10px; width: 100%; min-height: 48px; padding: 10px 0; border: 0; color: inherit; background: none; font: inherit; text-align: left; cursor: pointer; }
+  .alert-toggle svg { flex: 0 0 auto; color: var(--alert-accent); }
+  .alert-head { flex: 1; min-width: 0; }
   .alert-meta { display: flex; align-items: center; gap: 6px; margin: 0; color: var(--alert-accent); font-size: 11px; font-weight: 800; letter-spacing: .06em; }
   .alert-posted { font-weight: 600; letter-spacing: 0; }
-  .alert-headline { margin: 4px 0 0; font-size: 15px; font-weight: 800; line-height: 1.3; }
+  .alert-headline { display: block; margin-top: 2px; font-size: 15px; font-weight: 800; line-height: 1.3; }
   .alert-emergency .alert-headline, .alert-parking .alert-headline { font-size: 16px; }
-  .alert-detail { margin: 3px 0 0; font-size: 13px; line-height: 1.4; white-space: pre-line; }
+  .alert-arrow { flex: 0 0 auto; color: var(--alert-accent); font-size: 23px; line-height: 1; transition: transform .15s; }
+  .alert.is-open .alert-arrow { transform: rotate(90deg); }
+  .alert-details { display: none; padding: 0 0 14px 24px; }
+  .alert.is-open .alert-details { display: block; }
+  .alert-detail { margin: 0 0 6px; font-size: 13px; line-height: 1.4; white-space: pre-line; }
   .alert-source { display: inline-flex; align-items: center; min-height: 44px; color: var(--alert-accent); font-size: 13px; font-weight: 700; }
 
   .notice-stack { display: grid; gap: 8px; padding: 10px 12px; }
   .notice { overflow: hidden; border: 1px solid #6fb0cb; border-left: 6px solid var(--blue); border-radius: 8px; color: var(--navy); background: #d3eaf5; box-shadow: 0 1px 3px #092c4320; }
   .notice-toggle { display: flex; align-items: center; gap: 10px; width: 100%; min-height: 44px; padding: 8px 12px; border: 0; color: var(--navy); background: none; font-size: 13px; text-align: left; }
-  .notice-toggle:focus-visible, .alert-source:focus-visible { outline: 2px solid var(--blue); outline-offset: -2px; }
+  .notice-toggle:focus-visible, .alert-toggle:focus-visible, .alert-source:focus-visible { outline: 2px solid var(--blue); outline-offset: -2px; }
   .notice-icon { flex: 0 0 auto; color: #0a5f80; }
   .notice-title { flex: 1; min-width: 0; font-weight: 700; }
   /* Same arrow as the event rows. Details open in the right-hand pane (desktop) or below the card (phone). */
@@ -147,7 +161,8 @@ const items = (rawNotices as unknown as Record<string, unknown>[])
   .notice-mobile-details { display: none; }
 
   @media (min-width: 721px) {
-    .alert { padding-inline: 24px; }
+    .alert-inner { padding-inline: 24px; }
+    .alert-details { padding-left: 34px; }
   }
   @media (max-width: 720px) {
     .notice-arrow { margin-left: 4px; }
@@ -267,6 +282,17 @@ const items = (rawNotices as unknown as Record<string, unknown>[])
 
   document.addEventListener('click', (event) => {
     const target = event.target instanceof Element ? event.target : null;
+
+    const alertToggle = target?.closest<HTMLButtonElement>('.alert-toggle') ?? null;
+    if (alertToggle) {
+      const alert = alertToggle.closest<HTMLElement>('.alert');
+      if (alert) {
+        const open = alert.classList.toggle('is-open');
+        alertToggle.setAttribute('aria-expanded', String(open));
+      }
+      return;
+    }
+
     const toggle = target?.closest<HTMLButtonElement>('.notice-toggle') ?? null;
     if (!toggle) {
       // Choosing an event takes over the details pane, so a notice must not stay marked open.
