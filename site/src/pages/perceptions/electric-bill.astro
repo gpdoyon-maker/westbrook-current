@@ -1,0 +1,159 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import '../../styles/perceptions.css';
+
+const from = Astro.url.pathname.replace(/\/$/, '') || '/';
+---
+<SiteLayout
+  title="Who's Really Driving Up Your Electric Bill? | Factual Perceptions | Westbrook Currents"
+  description="The suspects, their excuses, and why there's no single villain behind rising CMP electric bills in Maine."
+  currentPage="perceptions"
+>
+  <main class="perceptions-wrap">
+    <a class="help-back" href="/perceptions">&#8249; Factual Perceptions</a>
+    <p class="eyebrow">Factual Perceptions &middot; Electricity</p>
+    <h1>Who's Really Driving Up Your Electric Bill?</h1>
+    <p class="dek">The suspects, their excuses, and why there's no single villain</p>
+    <p class="byline">Published and fact-checked Oct 18, 2026</p>
+
+    <a class="pdf-link" href="/whos-driving-up-your-bill.pdf" target="_blank" rel="noopener noreferrer">
+      <span><strong>Want a printable copy?</strong> <span class="pdf-sub">Download this article as a PDF to read offline or share.</span></span>
+      <span class="pdf-go">Download PDF &#8599;</span>
+    </a>
+
+    <p class="section-head">The Perception</p>
+
+    <p>I've tracked every utility bill in this house, by hand, every month, since 2013. It's a little obsessive. It's also exactly the kind of habit that should make rate hikes easy to shrug off &mdash; I have the receipts, literally.</p>
+    <p>And the receipts say: my electric bill is up about 27% over that stretch. Spread across ten years, that's not the horror story I expected to find. My inner accountant is unbothered.</p>
+    <p>My inner everyone-else, on the other hand, is not. The second I hear CMP is asking for another increase, I feel it &mdash; that little jolt of "here we go again," even though I just told you the math isn't actually that bad. I'm someone who genuinely likes facts, and the facts aren't the problem here. My reaction is.</p>
+    <p>Here's my best guess why: electricity is one of the only bills I can't shop around for. No competing supplier is going to show up and undercut CMP for my business, so any increase feels less like a market and more like something happening to me. I want my own income to climb along with everything else's cost, so in theory I should be sympathetic &mdash; I just don't love being on the paying end of that logic.</p>
+    <p>That gap between what I know and how I feel is exactly why I spent real time learning how electricity pricing actually works, instead of staying annoyed. Maybe if you understand the whole trip your money takes &mdash; from the power plant to the number at the bottom of your bill &mdash; you'll feel a little less ambushed next time. Maybe.</p>
+
+    <p class="section-head">The Facts</p>
+
+    <div class="bluf">
+      <b>The short version</b>
+      <p>Let's skip to the end first, since that's only fair. No single company or agency is secretly jacking up your electric bill. It's fuel costs, market rules, supplier bids, power lines, and government policy, all pulling in their own direction at once. That's the <em>who</em>. The <em>why</em> is worth five more minutes of your time.</p>
+      <p>Quick bill math: your bill has two parts. Supply pays for the electricity itself &mdash; the rate the state approves each year. Delivery pays CMP to get that power to your house, through local lines and the bigger regional grid.</p>
+      <p>If you're a CMP residential customer on the Standard Offer &mdash; meaning you haven't shopped around for a different supplier &mdash; you're paying <b>12.721&cent;</b> per kilowatt-hour for supply in 2026, up from <b>10.6128&cent;</b> in 2025. Maine's average home uses about <b>550 kWh</b> a month, so that works out to roughly <b>$11.60 more</b> a month, just for supply. Annoying, sure, but it's not the 20% bill explosion some headlines made it sound like &mdash; and it's only half the story, since delivery costs about as much (see below).</p>
+    </div>
+
+    <p class="lede">Electricity isn't optional, and most of us can't just switch to a different set of power lines down the street. So when the bill jumps, getting mad is a pretty reasonable reaction. Let's put five suspects on the stand anyway and see what they'd say for themselves. (Their "testimony" below is paraphrased, not actual quotes &mdash; and the findings are one person's read of the evidence, not a court ruling.)</p>
+
+    <div class="diagram-card">
+      <h3>Supply vs. delivery: six years of your CMP bill</h3>
+      <p>Supply and delivery have both climbed since 2021, just not steadily. The one real outlier is 2023, when wholesale fuel prices spiked and pushed the supply rate up sharply &mdash; that's a different mechanism than the "storm recovery" costs you'll sometimes hear mentioned on the delivery side, which is a separate charge. Supply dropped back down the following year; delivery has crept up more gradually the whole time.</p>
+      <p>Add it up and from 2021 to 2026, CMP's delivery rate rose about 28%, supply rose about 8%, and your combined rate rose about 17%. Delivery actually cost more than supply, per kilowatt-hour, in both 2024 and 2025 &mdash; the steadier line usually gets less attention than the one that spikes.</p>
+    </div>
+
+    <p>Now, let's meet our first of five suspects.</p>
+
+    <section class="suspect" id="s1">
+      <span class="num">1</span><h2>The power producers</h2>
+      <div class="quote">Their story: "Fuel, repairs, and just keeping the plant ready to run cost real money."</div>
+      <p>Power producers are the ones actually making electricity. They offer that power into a regional market, where it gets bought up before it ever reaches your wall outlet. What they can charge depends on fuel prices, how much the plant can produce, and who else is competing to sell. One thing worth knowing: Maine's utility regulator doesn't sit there approving each plant's daily asking price.</p>
+      <div class="finding"><b>Finding</b><p>Their costs and their bids genuinely do move the needle. But making money isn't the same as cheating you. If you think a price is unfair, you need actual evidence about costs and bidding behavior, not just a gut feeling.</p></div>
+    </section>
+
+    <section class="suspect" id="s2">
+      <span class="num">2</span><h2>The electricity suppliers</h2>
+      <div class="quote">Their story: "We're promising you a price before we even know what all our own costs will be."</div>
+      <p>Suppliers are the middlemen who buy electricity and line up enough of it to cover what their customers will use. (Some suppliers also own power plants, but that's a separate hat they wear.) If you haven't gone out and picked a different electricity company, you're automatically on the Standard Offer &mdash; Maine's default supply option.</p>
+      <p>The state's utility commission asks a handful of suppliers to bid for the job, then picks from among them. That's a completely different process from the regional power market itself.</p>
+      <p>Locking in a fixed price months in advance is a bet, and bets carry risk: bad weather, fuel getting more expensive, customers using more power than expected. Suppliers can hedge some of that risk ahead of time, but they can't erase it. So part of what you're paying for in their bid is, frankly, a cushion for the unknown, on top of their regular costs and their hoped-for profit.</p>
+      <p>Here's a real example of how "the unknown" plays out: back in March 2026, the U.S. government's energy forecasters flagged that reduced fuel shipments through the Strait of Hormuz were pushing gas prices up in Europe and Asia, while expecting U.S. prices to stay mostly unaffected. Useful context, but it's a forecast, not proof of anything about Maine specifically. And the timeline doesn't even line up: Maine's 2026 supply bids were already locked in back in November 2025, months before that report came out.</p>
+      <div class="finding"><b>Finding</b><p>The risk suppliers take on is real, not an excuse &mdash; but it's also not a blank check to charge whatever. Having multiple suppliers bid against each other helps keep prices honest; it just can't guarantee a cheap one.</p></div>
+    </section>
+
+    <section class="suspect" id="s3">
+      <span class="num">3</span><h2>ISO New England</h2>
+      <div class="quote">Their story: "Everybody wants power, often at the exact same moment."</div>
+      <p>ISO New England runs the regional power grid and its markets. Think about demand like water coming out of a faucet: how fast it's flowing right now. Usage is the water you actually collect over time.</p>
+      <p>On a scorching afternoon, every air conditioner, walk-in cooler, and stove is running at once. On a mild night, a lot less is. The grid has to keep supply and demand balanced, essentially in real time, every second of every day.</p>
+      <p>Here's a simplified &mdash; and made-up, not actual Maine numbers &mdash; way prices get set: say three power plants offer electricity at $30, $50, and $90 per megawatt-hour. If meeting the next little bump in demand requires turning on that $90 plant, then $90 becomes the price everyone at that location and moment pays, including the cheaper plants that already said yes at $30 and $50. That's called marginal pricing: whatever it costs to meet the very last bit of demand sets the price for everyone.</p>
+      <p>Sounds backwards that a $30 plant gets paid $90, but the idea is it keeps sellers racing to be the cheap option, since being cheap means you almost always get picked. The tradeoff is that when an expensive plant is the one needed, everybody's price goes up with it.</p>
+      <p>Real-world prices get even messier than this &mdash; they shift by location, by how congested the power lines are, and by how much power gets lost just traveling through the wires. None of this is your household's actual fixed rate; it's the wholesale market underneath it.</p>
+      <p>One more thing worth untangling: there's no single wizard behind a curtain setting your bill. ISO New England runs the day-to-day system. A federal agency called FERC reviews the rules for that regional market.</p>
+      <p>Maine's own utility commission handles the state-level decisions. Three separate jobs &mdash; and Maine's regulators definitely aren't secretly running ISO's control room from Augusta.</p>
+      <div class="finding"><b>Finding</b><p>The market rules genuinely shape what you pay, and they're fair game to question. But "the grid has to stay balanced" doesn't automatically mean every rule gives Maine families the best deal.</p></div>
+    </section>
+
+    <div class="diagram-card">
+      <h3>The path your payment actually takes</h3>
+      <p class="cap">Five different jobs, five different suspects.</p>
+      <div class="flow">
+        <div class="flow-box"><b>Power producers</b></div>
+        <div class="flow-arrow">&#8595;</div>
+        <div class="flow-box"><b>ISO-NE market</b></div>
+        <div class="flow-arrow">&#8595;</div>
+        <div class="flow-box"><b>Supplier</b><span>Standard Offer &mdash; sets your supply price</span></div>
+        <div class="flow-arrow">&#8595;</div>
+        <div class="flow-box cmp"><b>CMP</b><span>delivers the power</span></div>
+        <div class="flow-arrow">&#8595;</div>
+        <div class="flow-box"><b>You</b><span>one combined bill</span></div>
+      </div>
+      <div class="flow-oversight">
+        <p><b>FERC</b> reviews the regional market's rules.</p>
+        <p><b>Maine PUC</b> picks the Standard Offer supplier and reviews CMP's delivery rates.</p>
+        <p><b>The Public Advocate</b> represents you in both of those processes.</p>
+      </div>
+    </div>
+
+    <section class="suspect" id="s4">
+      <span class="num">4</span><h2>The Maine Public Utilities Commission</h2>
+      <div class="quote">Their story: "Don't blame us &mdash; we just open the envelopes and pick a winner."</div>
+      <p>That's underselling what they actually do. The PUC picks who gets to be the Standard Offer supplier, writes the rules for that whole bidding process, and reviews the rates your local utility charges. What they can't do is order world fuel prices to go down. And it's not even a once-a-year thing: for the 2027 supply contract, the commission's own bid schedule already shows one round awarded back in July 2026, with another round launched that September.</p>
+      <p>So who's actually on this commission? We're leaving out specific names here &mdash; commissioners come and go, and this article isn't going to get a monthly refresh to keep names current. But the seats themselves call for real expertise: the kind of background you'd expect in energy law, utility regulation, or engineering and finance, not a political reward for someone with no relevant qualifications.</p>
+      <p>And yes, these are paid positions, not volunteer gigs. State law pegs the commission chair's salary to what a Superior Court chief justice earns, and the other commissioners' salaries to what an associate justice earns &mdash; judicial-level pay, by design, meant to attract people qualified to make these calls.</p>
+      <div class="finding"><b>Finding</b><p>Accountable for the choices within their legal authority. Not powerless, but also not the sole reason your bill went up.</p></div>
+    </section>
+
+    <div class="aside"><p><b>A quick note on who's in your corner:</b> the Maine Office of the Public Advocate is a separate state office whose whole job is representing utility customers &mdash; you &mdash; in these cases, including challenging costs they think are unfair. They don't get a deciding vote on the commission itself. Think of them as your lawyer at the table, even if they don't get to bang the gavel.</p></div>
+
+    <section class="suspect" id="s5">
+      <span class="num">5</span><h2>Central Maine Power</h2>
+      <div class="quote">Their story: "We just deliver the power. We don't pocket the supply charge."</div>
+      <p>CMP maintains the actual poles and wires, and they collect the supply portion of your bill on behalf of whichever supplier won the bid, without adding their own markup on top of it. Where CMP does make money is on the delivery side of the business, where they're allowed to earn an approved return for their investors. Local delivery rates get reviewed by Maine's PUC; the bigger regional transmission lines fall under federal oversight instead.</p>
+      <p>Put real numbers on it: in 2026, CMP's delivery charge for a Standard Offer customer works out to about 11.96&cent; per kilowatt-hour &mdash; distribution, transmission, and a small stranded-cost charge combined &mdash; versus 12.72&cent; for supply. In 2024 and 2025, delivery actually cost more per kilowatt-hour than supply did. It's easy to assume the whole fight is about supply; delivery is just as much a part of the bill.</p>
+      <p>It's fair to ask what "cost recovery" actually means when CMP uses that phrase: it means collecting money through your bill to cover specific costs. Which costs, exactly? Were they actually necessary? Who's checking CMP's math? Those are the right questions.</p>
+      <p>But calling every line item "gouging" without looking at the evidence skips past them. Worth knowing too: some of what shows up on the delivery side isn't CMP's own spending at all &mdash; it includes costs tied to public programs that just happen to ride along on the same bill.</p>
+      <p>One correction, since it comes up a lot: CMP was already an investor-owned, for-profit company long before the 2023 Pine Tree Power vote. That ballot question wasn't about whether CMP should exist &mdash; it was about creating a brand-new, customer-owned utility to take over CMP's (and Versant's) delivery systems. Voters said no. That result alone doesn't tell us whether people actually like CMP, or whether they were just wary of the proposed replacement.</p>
+      <div class="finding"><b>Finding</b><p>Responsible for how it runs its delivery business and spends its money. Not responsible for setting the Standard Offer supply price &mdash; that one's on the suppliers and the bidding process above.</p></div>
+    </section>
+
+    <p class="section-head">The Conclusion</p>
+
+    <div class="final">
+      <p>You've heard from all five: the producers, the suppliers, ISO New England, the Maine PUC, and CMP. Responsibility for your bill is spread across every one of them &mdash; that much the facts make clear. Whether that spread feels fair, or whether one of them deserves more scrutiny than the others, isn't something we're going to tell you. That's your call to make.</p>
+      <p>Next time a charge goes up, you've now got the right questions to ask: What exactly rose? Who proposed it? Who approved it? And what evidence backed it up? Draw your own conclusion &mdash; we just wanted you to have the facts to draw it from.</p>
+    </div>
+
+    <div class="sources">
+      <h3>Sources</h3>
+      <p class="cap">Every numbered source below was checked directly against the official page on Oct 18, 2026. Rules and prices change &mdash; check the official source before relying on a figure.</p>
+      <ol>
+        <li>Maine PUC &mdash; Standard Offer Rates for CMP (2025 &amp; 2026 rates): <a href="https://www.maine.gov/mpuc/regulated-utilities/electricity/standard-offer-rates/cmp" target="_blank" rel="noopener noreferrer">maine.gov/mpuc &#8599;</a></li>
+        <li>ISO New England &mdash; How Resources Are Selected and Prices Are Set: <a href="https://www.iso-ne.com/about/what-we-do/how-resources-are-selected-and-prices-are-set" target="_blank" rel="noopener noreferrer">iso-ne.com &#8599;</a></li>
+        <li>FERC &mdash; Introductory Guide for Participation in ISO New England Processes: <a href="https://www.ferc.gov/introductory-guide-participation-iso-new-england-processes" target="_blank" rel="noopener noreferrer">ferc.gov &#8599;</a></li>
+        <li>Maine Office of the Public Advocate &mdash; Response to 2026 Standard Offer Rate Increases: <a href="https://www1.maine.gov/meopa/about/news/public-advocate-responds-2026-standard-offer-supply-rate-increases" target="_blank" rel="noopener noreferrer">maine.gov/meopa &#8599;</a></li>
+        <li>Maine PUC &mdash; Standard Offer report, Resolves 2025 ch. 52: <a href="https://www.maine.gov/mpuc/sites/maine.gov.mpuc/files/inline-files/Standard%20offer%20report-Resolves%202025%20ch%2052-LD%20568-Final_0.pdf" target="_blank" rel="noopener noreferrer">maine.gov/mpuc (PDF) &#8599;</a></li>
+        <li>U.S. Energy Information Administration &mdash; Short-Term Energy Outlook, March 2026: <a href="https://www.eia.gov/outlooks/steo/archives/Mar26.pdf" target="_blank" rel="noopener noreferrer">eia.gov (PDF) &#8599;</a></li>
+        <li>Maine PUC &mdash; Standard Offer Bid Solicitations, Docket 2026-00065: <a href="https://www.maine.gov/mpuc/regulated-utilities/electricity/rfps/standard-offer/2026-00065/cmp" target="_blank" rel="noopener noreferrer">maine.gov/mpuc &#8599;</a></li>
+        <li>Maine Legislature &mdash; Title 2 &sect;6-A, commissioner salaries (chair's salary tied to the Superior Court chief justice, members' to an associate justice): <a href="https://www.legislature.maine.gov/legis/statutes/2/title2sec6-A.html" target="_blank" rel="noopener noreferrer">legislature.maine.gov &#8599;</a></li>
+        <li>Maine Legislature &mdash; Title 35-A &sect;1702, Public Advocate duties: <a href="https://legislature.maine.gov/statutes/35-a/title35-Asec1702.html" target="_blank" rel="noopener noreferrer">legislature.maine.gov &#8599;</a></li>
+        <li>Central Maine Power &mdash; Pricing: <a href="https://www.cmpco.com/account/understandyourbill/pricing" target="_blank" rel="noopener noreferrer">cmpco.com &#8599;</a></li>
+        <li>Maine Secretary of State &mdash; 2023 Election Results (Question 3): <a href="https://www.maine.gov/sos/elections-voting/election-results-data/election-results-2023" target="_blank" rel="noopener noreferrer">maine.gov/sos &#8599;</a></li>
+        <li>ISO New England &mdash; Markets and Operations: <a href="https://www.iso-ne.com/markets-operations" target="_blank" rel="noopener noreferrer">iso-ne.com &#8599;</a></li>
+        <li>ISO New England &mdash; FAQs: Locational Marginal Pricing: <a href="https://www.iso-ne.com/participate/support/faq/lmp" target="_blank" rel="noopener noreferrer">iso-ne.com &#8599;</a></li>
+        <li>Maine Department of Energy Resources &mdash; Data Center Advisory Council roster: <a href="https://www.maine.gov/energy/datacentercouncil" target="_blank" rel="noopener noreferrer">maine.gov/energy &#8599;</a></li>
+        <li>U.S. Energy Information Administration &mdash; Average Monthly Bill, Residential (Table 5.A, data for 2024: Maine averages 550 kWh/month): <a href="https://www.eia.gov/electricity/sales_revenue_price/pdf/table_5A.pdf" target="_blank" rel="noopener noreferrer">eia.gov (PDF) &#8599;</a></li>
+        <li>Maine PUC &mdash; Residential Electric Rates, current table and year-by-year archive (source for the six-year supply/delivery figures above): <a href="https://www.maine.gov/mpuc/regulated-utilities/electricity/delivery-rates" target="_blank" rel="noopener noreferrer">maine.gov/mpuc &#8599;</a></li>
+      </ol>
+    </div>
+
+    <aside class="disclaimer" aria-label="About this article">
+      <strong>Westbrook Currents is an independent community website.</strong> It is not run by the City of Westbrook, the Maine PUC, CMP, or any agency or company named here. The findings above are one person's editorial read of the evidence, not an official determination.
+      <span class="report"><strong>See something wrong?</strong> <a href={`/feedback?type=wrong&from=${encodeURIComponent(from)}`}>Tell us</a> and we will check it.</span>
+    </aside>
+  </main>
+</SiteLayout>
