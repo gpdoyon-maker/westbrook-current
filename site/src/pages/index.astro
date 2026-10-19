@@ -8,13 +8,17 @@ import NoticeList from '../components/NoticeList.astro';
   currentPage="home"
 >
   <main class="home-wrap">
-    <section class="home-welcome">
-      <h1>Welcome to Westbrook Currents</h1>
-      <p>Local events and city resources, all in one place.</p>
-    </section>
+    <h1 class="visually-hidden">Westbrook Currents</h1>
 
     <!-- Up to three general notices, worked out in the visitor's browser. Urgent alerts already show at the top of every page. -->
     <NoticeList kind="notices" limit={3} inline />
+
+    <!-- Filled in by the script below, and only when three or more events are coming up. Kept next to the notices above so all "what's happening" content stays together, ahead of the two navigation tiles below. -->
+    <section class="coming" id="coming" aria-labelledby="coming-title" hidden>
+      <h2 id="coming-title">Coming up</h2>
+      <ul class="coming-list" id="coming-list"></ul>
+    </section>
+    <a class="see-all" id="see-all" href="/events">See all events &#8594;</a>
 
     <nav class="tiles" aria-label="Main sections">
       <a class="tile tile-events" href="/events">
@@ -29,20 +33,11 @@ import NoticeList from '../components/NoticeList.astro';
       </a>
     </nav>
 
-    <!-- Filled in by the script below, and only when three or more events are coming up. -->
-    <section class="coming" id="coming" aria-labelledby="coming-title" hidden>
-      <h2 id="coming-title">Coming up</h2>
-      <ul class="coming-list" id="coming-list"></ul>
-    </section>
-    <a class="see-all" href="/events">See all events &#8594;</a>
-
     <p class="home-note">Westbrook Currents is an independent community website. It is not run by the City of Westbrook.</p>
   </main>
 
   <style is:global>
     .home-wrap { width: min(860px, 100%); margin: 0 auto; padding: 30px 16px 12px; display: flex; flex-direction: column; gap: 18px; }
-    .home-welcome h1 { margin: 0 0 6px; color: var(--navy); font-size: 32px; line-height: 1.15; }
-    .home-welcome p { margin: 0; color: var(--muted); font-size: 18px; line-height: 1.4; }
     .tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
     .tile { position: relative; display: flex; flex-direction: column; gap: 6px; min-height: 132px; padding: 20px 64px 20px 20px; border-radius: 8px; color: #fff; text-decoration: none; }
     .tile strong { font-size: 24px; line-height: 1.2; }
@@ -65,7 +60,6 @@ import NoticeList from '../components/NoticeList.astro';
     .home-note { margin: 4px 0 0; color: var(--muted); font-size: 14px; line-height: 1.45; }
     @media (max-width: 600px) {
       .home-wrap { padding: 20px 12px 8px; }
-      .home-welcome h1 { font-size: 27px; }
       .tiles { grid-template-columns: 1fr; }
       .tile { min-height: 112px; }
       .coming-list li { grid-template-columns: 1fr; gap: 2px; }
@@ -77,8 +71,10 @@ import NoticeList from '../components/NoticeList.astro';
 
     // Next three upcoming events. "Today" is worked out here, in the visitor's browser, never at build time.
     // Fewer than three upcoming events: the list stays hidden and only "See all events" shows.
+    // Three or more: the list shows instead, and "See all events" hides, since the tile right below it already leads to the same place.
     const section = document.querySelector<HTMLElement>('#coming');
     const list = document.querySelector<HTMLUListElement>('#coming-list');
+    const seeAll = document.querySelector<HTMLElement>('#see-all');
 
     const pad = (value: number) => String(value).padStart(2, '0');
     const now = new Date();
@@ -109,7 +105,7 @@ import NoticeList from '../components/NoticeList.astro';
       .sort((a, b) => a.event.date.localeCompare(b.event.date) || (a.start ?? 24 * 60) - (b.start ?? 24 * 60) || a.event.title.localeCompare(b.event.title))
       .slice(0, 3);
 
-    if (section && list && upcoming.length >= 3) {
+    if (section && list && seeAll && upcoming.length >= 3) {
       upcoming.forEach(({ event, start }) => {
         const item = document.createElement('li');
 
@@ -140,6 +136,7 @@ import NoticeList from '../components/NoticeList.astro';
         list.append(item);
       });
       section.hidden = false;
+      seeAll.hidden = true;
     }
   </script>
 </SiteLayout>

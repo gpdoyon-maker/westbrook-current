@@ -2,7 +2,7 @@
   "slug": "food",
   "title": "Help Getting Food",
   "intro": "If money is tight, you do not have to go hungry. Some help is free for anyone. Some depends on your income. Start with the step that fits you.",
-  "lastChecked": "2026-10-14",
+  "lastChecked": "2026-10-16",
   "emergency": {
     "title": "Need food today?",
     "text": "Dial 211 any time to find food near you, or text your ZIP code to 898-211.",
@@ -24,6 +24,7 @@
       "open": true,
       "programs": [
         "pantry",
+        "vineyard",
         "locker",
         "foodmap",
         "211"
@@ -78,6 +79,19 @@
       "phoneHref": "tel:+12075918147",
       "sourceLabel": "westbrookmaine.gov: Community Food & Resource Center",
       "sourceUrl": "https://www.westbrookmaine.gov/292/Westbrook-Community-Food-Resource-Center"
+    },
+    {
+      "id": "vineyard",
+      "tag": "Free food in Westbrook",
+      "name": "Vineyard Church Food Pantry",
+      "chip": "Fridays, 5:45 p.m.",
+      "chipKind": "info",
+      "summary": "A church pantry at 715 Bridgton Road. Food is handed out on Fridays starting at 5:45 p.m. It serves Westbrook and Portland residents who live west of Riverside.",
+      "know": "Arrive by 5 p.m. and line up in your car. Hours can change, so call the church office if you are not sure.",
+      "phone": "(207) 854-8339",
+      "phoneHref": "tel:+12078548339",
+      "sourceLabel": "Wayside Food Programs; times confirmed by a pantry coordinator, Oct 16, 2026",
+      "sourceUrl": "https://www.waysidemaine.org/surroundingtownswestbrook"
     },
     {
       "id": "locker",
@@ -136,11 +150,11 @@
       "chip": "Income limit applies",
       "chipKind": "limit",
       "summary": "Food, nutrition help and breastfeeding support for people who are pregnant or breastfeeding, and for children up to age 5.",
-      "know": "If you get MaineCare, SNAP or TANF, you already meet the income rule. Use the form on the official page, and WIC staff will call you to set up a visit.",
+      "know": "If you get MaineCare, SNAP or TANF, you already meet the income rule. Use the form on the official page, or call the Cumberland County WIC office (The Opportunity Alliance) at 207-553-5800 and staff will set up a visit.",
       "phone": "1-800-437-9300",
       "phoneHref": "tel:+18004379300",
       "sourceLabel": "maine.gov: WIC",
-      "sourceUrl": "https://www.maine.gov/dhhs/wic"
+      "sourceUrl": "https://www.maine.gov/dhhs/mecdc/healthy-living/wic"
     },
     {
       "id": "mow",

@@ -47,10 +47,6 @@ import { ENDPOINT_URL, TURNSTILE_SITE_KEY } from '../lib/submit-config';
                 <input id="f-end" name="endTime" type="time" />
               </div>
             </div>
-            <div class="field" data-field="repeats">
-              <label for="f-repeats">Does it repeat? <span class="opt">(optional)</span></label>
-              <input id="f-repeats" name="repeats" type="text" maxlength="150" placeholder="e.g. Every Tuesday through December" />
-            </div>
             <div class="field" data-field="category">
               <label for="f-category">Category <span class="req" aria-hidden="true">*</span></label>
               <select id="f-category" name="category" required class="narrow">
@@ -122,7 +118,6 @@ import { ENDPOINT_URL, TURNSTILE_SITE_KEY } from '../lib/submit-config';
               <label for="f-org">Organization <span class="opt">(optional)</span></label>
               <input id="f-org" name="organization" type="text" maxlength="100" placeholder="Club, business, or department" />
             </div>
-            <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
           </div>
         </section>
 
@@ -174,7 +169,7 @@ import { ENDPOINT_URL, TURNSTILE_SITE_KEY } from '../lib/submit-config';
           <ol class="next-list">
             <li><span class="step sm" aria-hidden="true">1</span><div><strong>Submit the form</strong><p>Takes about two minutes.</p></div></li>
             <li><span class="step sm" aria-hidden="true">2</span><div><strong>Confirm your email</strong><p>We email you a link. Open it and press Confirm within 48 hours. We can review your event after you confirm your email.</p></div></li>
-            <li><span class="step sm" aria-hidden="true">3</span><div><strong>We review it</strong><p>Once confirmed, your event is reviewed before it appears on the site.</p></div></li>
+            <li><span class="step sm" aria-hidden="true">3</span><div><strong>We review it</strong><p>Once confirmed, your event is reviewed before it appears on the site. We email you either way, so you will know if it is listed.</p></div></li>
           </ol>
         </section>
       </aside>
@@ -190,6 +185,7 @@ import { ENDPOINT_URL, TURNSTILE_SITE_KEY } from '../lib/submit-config';
         <li><span class="step sm" aria-hidden="true">1</span><div><p>Open the email from Westbrook Currents.</p></div></li>
         <li><span class="step sm" aria-hidden="true">2</span><div><p>Press the button, then press <strong>Confirm</strong> on the page that opens.</p></div></li>
         <li><span class="step sm" aria-hidden="true">3</span><div><p>Do it within 48 hours. We can review your event after you confirm your email.</p></div></li>
+        <li><span class="step sm" aria-hidden="true">4</span><div><p>We review it and email you either way, so you will know if it is listed.</p></div></li>
       </ol>
       <p class="notice warn">Nothing yet? Check your spam or promotions folder. It can take a minute or two.</p>
       <div id="ts-check-home"></div>
@@ -433,8 +429,8 @@ import { ENDPOINT_URL, TURNSTILE_SITE_KEY } from '../lib/submit-config';
           category: val('category'), description: val('description'), venue: val('venue'), address: val('address'),
           admission: (form.querySelector('input[name="admission"]:checked') as HTMLInputElement).value,
           priceDetails: val('priceDetails'), accessible: checked('accessible'), link: val('link'),
-          organization: val('organization'), repeats: val('repeats'), name: val('name'), email: val('email'),
-          confirm: checked('confirm'), hp: val('website'), loadedAt, turnstileToken: token,
+          organization: val('organization'), name: val('name'), email: val('email'),
+          confirm: checked('confirm'), hp: '', loadedAt, turnstileToken: token,
         });
         if (result.ok) {
           submittedEmail = val('email').toLowerCase();

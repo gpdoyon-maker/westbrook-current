@@ -1,0 +1,228 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { TURNSTILE_SITE_KEY } from '../lib/submit-config';
+import { FEEDBACK_ENDPOINT_URL } from '../lib/feedback-config';
+const types = ['Comment', 'Question', 'Concern', 'Report wrong info'];
+---
+
+<SiteLayout title="Feedback | Westbrook Currents" description="Send a comment, question, or concern about Westbrook Currents, or tell us if something on the site is wrong." currentPage="feedback">
+  <Fragment slot="head">
+    <script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
+  </Fragment>
+
+  <div id="fb-config" data-endpoint={FEEDBACK_ENDPOINT_URL} data-sitekey={TURNSTILE_SITE_KEY} hidden></div>
+
+  <div class="fb-hero">
+    <div class="fb-hero-inner">
+      <h1>Tell us what you think</h1>
+      <p>Have a comment, a question, or a concern? Did you see something that is wrong? Let us know. It takes about a minute.</p>
+    </div>
+  </div>
+
+  <main class="fb-wrap">
+    {!FEEDBACK_ENDPOINT_URL && (
+      <section class="fb-card">
+        <h2>The feedback form is not open yet</h2>
+        <p>Please check back soon.</p>
+      </section>
+    )}
+
+    {FEEDBACK_ENDPOINT_URL && (
+    <form id="fb-form" class="fb-card" autocomplete="on">
+      <p id="fb-banner" class="fb-banner" role="alert" hidden></p>
+
+      <div class="fb-field" data-field="type">
+        <label for="f-type">What is this about? <span class="req" aria-hidden="true">*</span></label>
+        <select id="f-type" name="type" required>
+          <option value="" selected disabled>Choose one</option>
+          {types.map((t) => <option value={t}>{t}</option>)}
+        </select>
+      </div>
+
+      <p id="fb-about" class="fb-about" hidden>About this page: <strong id="fb-about-page"></strong></p>
+      <div class="fb-field" data-field="message">
+        <label for="f-message">Your message <span class="req" aria-hidden="true">*</span></label>
+        <p id="help-message" class="help">If something on the site is wrong, tell us which page and what to fix.</p>
+        <textarea id="f-message" name="message" required minlength="5" maxlength="1000" rows="6" aria-describedby="help-message"></textarea>
+        <p class="counter" id="fb-counter">0 / 1000</p>
+      </div>
+
+      <div class="fb-row">
+        <div class="fb-field" data-field="name">
+          <label for="f-name">Your name <span class="opt">(optional)</span></label>
+          <input id="f-name" name="name" type="text" maxlength="80" autocomplete="name" />
+        </div>
+        <div class="fb-field" data-field="email">
+          <label for="f-email">Your email <span class="opt">(optional)</span></label>
+          <input id="f-email" name="email" type="email" maxlength="120" autocomplete="email" aria-describedby="help-email" />
+        </div>
+      </div>
+      <p id="help-email" class="privacy"><strong>Your email stays private.</strong> Add it only if you would like a reply. We only use it to reply to you. We never share it or put it on the website.</p>
+
+      <input type="hidden" name="page" />
+
+      <div id="ts-box"></div>
+      <div class="fb-actions">
+        <button type="submit" id="fb-send" class="btn">Send feedback</button>
+        <p class="fine">A quick security check may appear. This form is not for emergencies. In an emergency, call 911.</p>
+      </div>
+    </form>
+    )}
+
+    <section id="fb-done" class="fb-card fb-done" hidden aria-labelledby="h-done">
+      <div class="icon" aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M6 14.5l5.5 5.5L22 8.5" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <h2 id="h-done" tabindex="-1">Thank you. Your message was sent.</h2>
+      <p id="fb-done-text">If you left an email, we may write back.</p>
+      <div class="fb-links"><a class="btn" href="/">Back to home</a><a class="plain" href="/events">See events</a></div>
+    </section>
+  </main>
+
+  <style>
+    .fb-hero { padding: 22px 24px 26px; color: #fff; background: var(--navy); }
+    .fb-hero-inner { width: min(720px, 100%); margin: 0 auto; }
+    .fb-hero h1 { margin: 0 0 6px; font-size: 32px; line-height: 1.15; }
+    .fb-hero p { margin: 0; color: #cfe3ee; font-size: 17px; line-height: 1.4; }
+    .fb-wrap { width: min(720px, 100%); margin: 0 auto; padding: 26px 24px 20px; }
+    .fb-card { display: flex; flex-direction: column; gap: 18px; padding: 22px; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+    .fb-card h2 { margin: 0; color: var(--navy); font-size: 22px; line-height: 1.2; }
+    .fb-card p { margin: 0; }
+    .fb-row { display: flex; flex-wrap: wrap; gap: 16px; }
+    .fb-row > .fb-field { flex: 1 1 230px; }
+    .fb-field { min-width: 0; }
+    .fb-field > label { display: block; margin: 0 0 6px; color: var(--navy); font-size: 15px; font-weight: 700; }
+    .req { color: #b42318; }
+    .opt { color: var(--muted); font-weight: 500; }
+    .help { margin: -2px 0 6px; color: var(--muted); font-size: 14px; line-height: 1.4; }
+    .fb-field input[type='text'], .fb-field input[type='email'], .fb-field select, .fb-field textarea {
+      width: 100%; min-height: 48px; padding: 0 12px; border: 1px solid #7a8da1; border-radius: 6px; color: #092c43; background: #fff; font: inherit; font-size: 16px;
+    }
+    .fb-field select { max-width: 420px; }
+    .fb-field textarea { min-height: 140px; padding: 10px 12px; line-height: 1.45; resize: vertical; }
+    .fb-field input:focus-visible, .fb-field select:focus-visible, .fb-field textarea:focus-visible, .btn:focus-visible { outline: 3px solid #42bfe8aa; outline-offset: 2px; }
+    .fb-field [aria-invalid='true'] { border-color: #b42318; }
+    :global(.field-error) { margin: 6px 0 0; color: #b42318; font-size: 14px; font-weight: 700; }
+    .counter { margin: 4px 0 0; color: var(--muted); font-size: 13px; text-align: right; }
+    .fb-about { margin: 0; color: #294858; font-size: 15px; overflow-wrap: anywhere; }
+    .privacy { padding: 12px 14px; border: 1px solid #a9d3e3; border-radius: 6px; color: #0b3550; background: #e6f3f8; font-size: 15px; line-height: 1.45; }
+    .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+    .fb-banner { padding: 12px 14px; border: 1px solid #e5a49d; border-radius: 6px; color: #7a1a12; background: #fdeceb; font-size: 15px; font-weight: 700; line-height: 1.4; }
+    .fb-actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; }
+    .fine { max-width: 400px; color: var(--muted); font-size: 13px; line-height: 1.4; }
+    .btn { display: inline-flex; min-height: 50px; align-items: center; justify-content: center; padding: 0 34px; border: 0; border-radius: 6px; color: #fff; background: var(--blue); font-size: 17px; font-weight: 800; text-decoration: none; }
+    .btn:hover { background: #066b8e; }
+    .btn:disabled { cursor: wait; opacity: .65; }
+    .fb-done { align-items: flex-start; }
+    .icon { display: flex; width: 56px; height: 56px; align-items: center; justify-content: center; border-radius: 50%; color: #24764d; background: #e3f4ea; }
+    .fb-done h2:focus { outline: none; }
+    .fb-links { display: flex; flex-wrap: wrap; align-items: center; gap: 18px; }
+    .plain { color: var(--blue); font-weight: 700; }
+    [hidden] { display: none !important; }
+    @media (max-width: 600px) {
+      .fb-hero { padding: 16px 14px 20px; }
+      .fb-hero h1 { font-size: 26px; }
+      .fb-hero p { font-size: 15px; }
+      .fb-wrap { padding: 14px 10px 10px; }
+      .fb-card { padding: 16px; }
+      .btn { width: 100%; min-height: 52px; }
+    }
+  </style>
+
+  <script>
+    const cfg = document.getElementById('fb-config') as HTMLElement;
+    const ENDPOINT = cfg.dataset.endpoint ?? '';
+    const SITE_KEY = cfg.dataset.sitekey ?? '';
+    const form = document.getElementById('fb-form') as HTMLFormElement | null;
+
+    if (form && ENDPOINT) {
+      const loadedAt = Date.now();
+      const banner = document.getElementById('fb-banner') as HTMLElement;
+      const sendBtn = document.getElementById('fb-send') as HTMLButtonElement;
+      const done = document.getElementById('fb-done') as HTMLElement;
+      type AnyField = HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement;
+      const field = (name: string) => form.elements.namedItem(name) as AnyField;
+      const val = (name: string) => (field(name)?.value ?? '').trim();
+
+      // The page the visitor came from, so we know what they were looking at.
+      // A link can say ?from=/help/food and ?type=wrong; otherwise we use the browser's referrer (same site only).
+      const params = new URLSearchParams(location.search);
+      let fromPage = '';
+      const wanted = params.get('from') ?? '';
+      if (/^\/[A-Za-z0-9\-_\/]{0,100}$/.test(wanted)) fromPage = wanted;
+      if (!fromPage) {
+        try {
+          const ref = document.referrer ? new URL(document.referrer) : null;
+          if (ref && ref.host === location.host) fromPage = ref.pathname;
+        } catch { /* ignore */ }
+      }
+      (field('page') as HTMLInputElement).value = fromPage;
+      if (params.get('from') && fromPage) {
+        (document.getElementById('fb-about-page') as HTMLElement).textContent = fromPage;
+        (document.getElementById('fb-about') as HTMLElement).hidden = false;
+      }
+      if (params.get('type') === 'wrong') {
+        (field('type') as HTMLSelectElement).value = 'Report wrong info';
+        (field('message') as HTMLTextAreaElement).focus();
+      }
+
+      form.addEventListener('input', () => {
+        (document.getElementById('fb-counter') as HTMLElement).textContent = `${(field('message') as HTMLTextAreaElement).value.length} / 1000`;
+      });
+
+      // Cloudflare Turnstile
+      let widgetId: string | null = null;
+      const turnstile = () => (window as any).turnstile;
+      const renderTurnstile = () => {
+        if (!turnstile()) { window.setTimeout(renderTurnstile, 300); return; }
+        widgetId = turnstile().render('#ts-box', { sitekey: SITE_KEY, theme: 'light' });
+      };
+      renderTurnstile();
+      const getToken = (): string => (turnstile() && widgetId !== null ? turnstile().getResponse(widgetId) || '' : '');
+      const resetTurnstile = () => { if (turnstile() && widgetId !== null) turnstile().reset(widgetId); };
+
+      const showBanner = (text: string) => { banner.textContent = text; banner.hidden = !text; if (text) banner.scrollIntoView({ block: 'center', behavior: 'smooth' }); };
+      const NETWORK_MESSAGE = "We couldn't reach the server. Please check your connection and try again.";
+
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        showBanner('');
+        if (!form.checkValidity()) { form.reportValidity(); return; }
+        const token = getToken();
+        if (!token) { showBanner('Please wait a moment for the security check to finish, then press Send again. If it never appears, reload the page.'); return; }
+
+        sendBtn.disabled = true;
+        sendBtn.textContent = 'Sending…';
+        try {
+          const res = await fetch(ENDPOINT, {
+            method: 'POST',
+            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+            body: JSON.stringify({
+              action: 'feedback',
+              type: val('type'), message: val('message'), name: val('name'), email: val('email'), page: val('page'),
+              hp: '', loadedAt, turnstileToken: token,
+            }),
+          });
+          const result = await res.json();
+          if (result.ok) {
+            const text = document.getElementById('fb-done-text') as HTMLElement;
+            text.textContent = val('email') ? 'We may write back to the email you gave us.' : 'You did not leave an email, so we will not be able to write back.';
+            form.hidden = true;
+            done.hidden = false;
+            (document.getElementById('h-done') as HTMLElement).focus();
+            window.scrollTo({ top: 0 });
+          } else {
+            showBanner(result.message || 'Something went wrong. Please try again.');
+            resetTurnstile();
+          }
+        } catch {
+          showBanner(NETWORK_MESSAGE);
+          resetTurnstile();
+        } finally {
+          sendBtn.disabled = false;
+          sendBtn.textContent = 'Send feedback';
+        }
+      });
+    }
+  </script>
+</SiteLayout>
