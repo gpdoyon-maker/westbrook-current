@@ -21,6 +21,11 @@ import NoticeList from '../components/NoticeList.astro';
     <a class="see-all" id="see-all" href="/events">See all events &#8594;</a>
 
     <nav class="tiles" aria-label="Main sections">
+      <a class="tile tile-vote" href="/vote">
+        <strong>Voting &amp; Elections</strong>
+        <span>Election Day is Nov 3 &mdash; dates, deadlines and your ballot.</span>
+        <i aria-hidden="true">&#8594;</i>
+      </a>
       <a class="tile tile-events" href="/events">
         <strong>Find Local Events</strong>
         <span>See what is happening in Westbrook.</span>
@@ -38,13 +43,16 @@ import NoticeList from '../components/NoticeList.astro';
 
   <style is:global>
     .home-wrap { width: min(860px, 100%); margin: 0 auto; padding: 30px 16px 12px; display: flex; flex-direction: column; gap: 18px; }
-    .tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
     .tile { position: relative; display: flex; flex-direction: column; gap: 6px; min-height: 132px; padding: 20px 64px 20px 20px; border-radius: 8px; color: #fff; text-decoration: none; }
     .tile strong { font-size: 24px; line-height: 1.2; }
     .tile span { font-size: 17px; line-height: 1.35; color: #e3f3fa; }
     .tile i { position: absolute; top: 50%; right: 18px; display: grid; place-items: center; width: 38px; height: 38px; margin-top: -19px; border-radius: 50%; color: var(--navy); background: #82d7ef; font-size: 20px; font-style: normal; }
     .tile-events { background: var(--navy); }
     .tile-help { background: var(--blue); }
+    .tile-vote { background: #c81e3a; }
+    .tile-vote span { color: #ffd9de; }
+    .tile-vote i { color: #c81e3a; background: #fff; }
     .tile:hover, .tile:focus-visible { filter: brightness(1.12); }
     .coming { border: 1.5px solid var(--line); border-radius: 8px; background: #fff; }
     .coming h2 { margin: 0; padding: 14px 18px 8px; color: var(--blue); font-size: 13px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }

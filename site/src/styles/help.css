@@ -106,6 +106,38 @@ details.step[open] .step-chev::before { content: '\2212'; }
 .help-box ol li::before { content: none; }
 .help-box .big-tel { display: inline-flex; align-items: center; min-height: 48px; margin: 0; color: var(--navy); font-size: 22px; font-weight: 800; text-decoration: none; }
 
+/* Voting & Elections page */
+.t-vote { --accent: #00243d; --tint: #e6f3f8; --edge: #b7dcea; }
+.vote-hero { padding: 18px; border-radius: 8px; color: #fff; background: var(--navy); }
+.vote-hero small { display: block; color: #82d7ef; font-size: 13px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.vote-hero strong { display: block; margin: 4px 0 6px; font-size: 26px; line-height: 1.2; }
+.vote-hero p { margin: 0 0 4px; color: #e3f3fa; font-size: 17px; line-height: 1.4; }
+.vote-hero .btn { margin-top: 10px; color: var(--navy); background: #82d7ef; }
+.dates { width: 100%; border-collapse: collapse; }
+.dates th, .dates td { padding: 9px 0; border-bottom: 1px solid var(--line); color: #294858; font-size: 16px; line-height: 1.35; text-align: left; vertical-align: top; }
+.dates th { width: 34%; padding-right: 10px; color: var(--navy); font-weight: 800; }
+.dates tr:last-child th, .dates tr:last-child td { border-bottom: 0; }
+.dates .closed { color: var(--muted); text-decoration: line-through; }
+.dates .closed-tag { display: inline-block; margin-left: 6px; padding: 1px 8px; border-radius: 999px; color: #5b3a00; background: #fff3d6; font-size: 12px; font-weight: 800; text-decoration: none; letter-spacing: .04em; text-transform: uppercase; }
+details.vote-sec { border: 1.5px solid var(--line); border-left: 6px solid var(--blue); border-radius: 8px; background: #fff; }
+details.vote-sec > summary { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 14px 16px; list-style: none; cursor: pointer; color: var(--navy); font-size: 19px; font-weight: 800; }
+details.vote-sec > summary::-webkit-details-marker { display: none; }
+details.vote-sec > summary::after { content: '+'; color: var(--blue); font-size: 24px; }
+details.vote-sec[open] > summary::after { content: '\2212'; }
+.vote-body { display: flex; flex-direction: column; gap: 10px; margin: 0 16px; padding: 12px 0 16px; border-top: 1px solid var(--line); }
+.vote-body p { margin: 0; color: #294858; font-size: 16px; line-height: 1.45; }
+.vote-body ul { margin: 0; padding-left: 20px; color: #294858; font-size: 16px; line-height: 1.5; }
+.ballot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.ballot-grid .btn { justify-content: center; text-align: center; }
+.after-vote { display: none; }
+@media (max-width: 420px) { .ballot-grid { grid-template-columns: 1fr; } }
+
+details.mini { padding: 10px 14px; border-radius: 8px; background: var(--mist); }
+details.mini > summary { color: var(--blue); font-size: 16px; font-weight: 800; cursor: pointer; }
+details.mini[open] > summary { margin-bottom: 8px; }
+details.mini p { margin: 0 0 8px; }
+details.mini p:last-child { margin: 0; }
+
 /* Phone numbers inside sentences: bold, underlined, and a tap area of about 46px even though the text is one line. */
 .tel-inline, .help-box a[href^="tel:"]:not(.big-tel) { display: inline-block; padding: 12px 4px; margin: -12px -4px; color: var(--navy); font-weight: 800; text-decoration: underline; text-underline-offset: 2px; white-space: nowrap; }
 
