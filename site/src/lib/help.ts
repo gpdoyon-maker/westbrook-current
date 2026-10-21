@@ -30,6 +30,7 @@ export interface HelpProgram {
   know?: string;
   phone?: string;
   phoneHref?: string;
+  email?: string;
   sourceLabel: string;
   sourceUrl: string;
   last?: boolean;

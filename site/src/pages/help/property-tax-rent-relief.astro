@@ -1,0 +1,25 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import ProgramCard from '../../components/ProgramCard.astro';
+import HelpDisclaimer from '../../components/HelpDisclaimer.astro';
+import data from '../../data/help-property-tax.json';
+import type { HelpProgram } from '../../lib/help';
+import '../../styles/help.css';
+
+const programs = data.programs as HelpProgram[];
+---
+<SiteLayout
+  title="Property Tax & Rent Relief in Westbrook, Maine | Westbrook Currents"
+  description="Exemptions, credits and a tax-deferral loan for Westbrook, Maine homeowners and renters."
+  currentPage="help"
+>
+  <main class="help-wrap t-proptax">
+    <a class="help-back" href="/help">&#8249; Get Help</a>
+    <h1>{data.title}</h1>
+    <p class="help-sub">{data.intro}</p>
+
+    {programs.map((program) => <ProgramCard program={program} checked={data.lastChecked} />)}
+
+    <HelpDisclaimer />
+  </main>
+</SiteLayout>

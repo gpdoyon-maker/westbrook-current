@@ -1,0 +1,166 @@
+{
+  "slug": "housing",
+  "title": "Housing",
+  "intro": "Find your situation below — each one lists who can actually help.",
+  "lastChecked": "2026-10-21",
+  "steps": [
+    {
+      "n": 1,
+      "title": "Facing eviction",
+      "sub": "You have a notice or a court summons",
+      "open": true,
+      "programs": ["epp"]
+    },
+    {
+      "n": 2,
+      "title": "Behind on rent",
+      "sub": "Not facing eviction yet, but falling behind",
+      "programs": ["hssp"]
+    },
+    {
+      "n": 3,
+      "title": "No place to stay right now",
+      "sub": "Homeless or about to be",
+      "programs": ["two-eleven", "step-rrh"]
+    },
+    {
+      "n": 4,
+      "title": "Want a housing voucher",
+      "sub": "Ongoing help paying rent, long term",
+      "programs": ["section8", "restart"]
+    },
+    {
+      "n": 5,
+      "title": "Living with a disability",
+      "sub": "Supportive and subsidized housing",
+      "last": true,
+      "programs": ["section811-pra", "section811-vouchers", "housing-support-funds", "oads-start"]
+    }
+  ],
+  "programs": [
+    {
+      "id": "epp",
+      "tag": "Priority: court summons first",
+      "name": "Eviction Prevention Program (EPP)",
+      "chip": "Up to $800/month, 12 months max",
+      "chipKind": "limit",
+      "summary": "Pays rent arrears directly to your landlord. Priority goes to households with a court summons, then a Notice to Quit, then anyone paying over 30% of income toward rent.",
+      "know": "Income at or below 60% of area median income (whole household counts); rent at or below 125% of fair market rent. Apply online or by phone through Project Home of Portland, the statewide administrator. Both you and your landlord must take part in the application.",
+      "phone": "(207) 274-1240",
+      "phoneHref": "tel:+12072741240",
+      "email": "evictionprevention@projecthomemaine.org",
+      "sourceLabel": "evictionprevention.mainehousing.org",
+      "sourceUrl": "https://www.evictionprevention.mainehousing.org/"
+    },
+    {
+      "id": "hssp",
+      "tag": "Behind on rent, not evicted yet",
+      "name": "Housing Stability Support Program (HSSP)",
+      "chip": "Up to $3,000/year",
+      "chipKind": "limit",
+      "summary": "Pays up to $3,000 a year for a security deposit or back rent, including up to 10 months of rental help at $300 a month, paid to your landlord.",
+      "know": "Household income must be under 30% of area median income. MaineHousing delegates this program locally; in Cumberland County it is run by ProsperityME.",
+      "phone": "(207) 797-7890",
+      "phoneHref": "tel:+12077977890",
+      "sourceLabel": "Maine statute: 30-A §4768",
+      "sourceUrl": "https://www.mainelegislature.org/legis/statutes/30-A/title30-Asec4768.html"
+    },
+    {
+      "id": "two-eleven",
+      "tag": "Anyone, 24/7",
+      "name": "211 Maine",
+      "chip": "Free referral line",
+      "chipKind": "none",
+      "summary": "Free, 24/7 referral line for shelter, warming centers and rent help.",
+      "know": "Dial 211 (press 6 for homeless services), or text your ZIP code to 898-211.",
+      "phone": "211",
+      "phoneHref": "tel:211",
+      "sourceLabel": "211maine.org",
+      "sourceUrl": "https://211maine.org/?p=1431"
+    },
+    {
+      "id": "step-rrh",
+      "tag": "Must be in a shelter now",
+      "name": "STEP Rapid Re-Housing",
+      "chip": "6–12 months of rental help",
+      "chipKind": "info",
+      "summary": "Short-term rental help that tapers down, for people currently staying in a participating emergency shelter.",
+      "know": "Offered through shelters in 10 counties, including Cumberland. You need a referral from the shelter itself — start with 211 or your shelter.",
+      "phone": "(866) 357-4853",
+      "phoneHref": "tel:+18663574853",
+      "sourceLabel": "mainehousing.org: Stability through Engagement Program",
+      "sourceUrl": "https://mainehousing.org/programs-services/rental/rentaldetail/stability-through-engagement-program"
+    },
+    {
+      "id": "section8",
+      "tag": "Long-term, ongoing help",
+      "name": "Section 8 Housing Choice Voucher",
+      "chip": "Caps rent at 30–40% of income",
+      "chipKind": "limit",
+      "summary": "An ongoing rent subsidy paid to your landlord. Income at or below 50% of area median income (75% of new vouchers go to households at or below 30%).",
+      "know": "Apply online through the Maine Centralized Waiting List — one application covers MaineHousing and all 20 local housing authorities.",
+      "phone": "(207) 626-4600",
+      "phoneHref": "tel:+12076264600",
+      "sourceLabel": "mainehousing.org/hcv",
+      "sourceUrl": "https://www.mainehousing.org/hcv"
+    },
+    {
+      "id": "restart",
+      "tag": "For people who already have a voucher",
+      "name": "ReStart (Family Self-Sufficiency)",
+      "chip": "5-year savings plan",
+      "chipKind": "info",
+      "summary": "For people who already have a Section 8 voucher: a 5-year plan with career coaching that puts matching funds into savings as your income rises.",
+      "know": "Ask for the Family Self-Sufficiency Coordinator when you call.",
+      "phone": "(207) 626-4600",
+      "phoneHref": "tel:+12076264600",
+      "sourceLabel": "mainehousing.org/restart",
+      "sourceUrl": "https://www.mainehousing.org/restart"
+    },
+    {
+      "id": "section811-pra",
+      "tag": "Adults 18–61 with a disability",
+      "name": "Section 811 Project Rental Assistance (PRA)",
+      "chip": "About 60 units statewide",
+      "chipKind": "limit",
+      "summary": "About 60 units statewide, tied to specific buildings (not portable). For extremely low-income adults 18–61 with a disability, enrolled in a qualifying MaineCare waiver.",
+      "know": "MaineHousing keeps a non-public list of participating properties and matches you by preferred area once you apply — there's no public way to check whether a unit is open in Westbrook specifically.",
+      "sourceLabel": "maine.gov/dhhs/oads: Housing Services",
+      "sourceUrl": "https://www.maine.gov/dhhs/oads/get-support/housing-services"
+    },
+    {
+      "id": "section811-vouchers",
+      "tag": "Portable rent subsidy",
+      "name": "Section 811 Vouchers",
+      "chip": "Limited number statewide",
+      "chipKind": "limit",
+      "summary": "A separate, portable rent subsidy (not tied to one building), issued by MaineHousing.",
+      "know": "Apply with the 811 Preliminary Application through OADS.",
+      "sourceLabel": "maine.gov/dhhs/oads: Housing Services",
+      "sourceUrl": "https://www.maine.gov/dhhs/oads/get-support/housing-services"
+    },
+    {
+      "id": "housing-support-funds",
+      "tag": "MaineCare Section 21/29 waiver",
+      "name": "Housing Support Funds",
+      "chip": "Once-a-year lump sum",
+      "chipKind": "info",
+      "summary": "A once-a-year lump sum for rent, a deposit, or utilities — usable whether you rent, own, or live in a group home.",
+      "know": "First-come, first-served; you must reapply every year. Not available if you already have a housing subsidy or live in Shared Living.",
+      "sourceLabel": "maine.gov/dhhs/oads: Housing Services",
+      "sourceUrl": "https://www.maine.gov/dhhs/oads/get-support/housing-services"
+    },
+    {
+      "id": "oads-start",
+      "tag": "Start here",
+      "name": "Where to start for all three",
+      "summary": "Maine DHHS Office of Aging and Disability Services (OADS) screens applicants for all three disability-housing programs above.",
+      "phone": "(207) 287-9200",
+      "phoneHref": "tel:+12072879200",
+      "email": "OADS.Housing@maine.gov",
+      "sourceLabel": "maine.gov/dhhs/oads: Housing Services",
+      "sourceUrl": "https://www.maine.gov/dhhs/oads/get-support/housing-services",
+      "last": true
+    }
+  ]
+}
