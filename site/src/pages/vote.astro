@@ -3,7 +3,7 @@ import SiteLayout from '../layouts/SiteLayout.astro';
 import { formatCheckedDate } from '../lib/help';
 import '../styles/help.css';
 
-const checked = '2026-10-19';
+const checked = '2026-10-20';
 const city = 'https://westbrookmaine.gov';
 const clerkTel = 'tel:+12075918116';
 const dates = [
@@ -100,6 +100,17 @@ const ballots = [
     </details>
 
     <details class="vote-sec">
+      <summary>Why does my U.S. Senate ballot look different?</summary>
+      <div class="vote-body">
+        <p>Maine uses <strong>ranked choice voting (RCV)</strong> for some races. Instead of picking just one candidate, you rank them: 1st choice, 2nd choice, and so on.</p>
+        <p>If a candidate gets more than half the 1st-choice votes, they win outright, same as any other election. If nobody does, whoever is in last place is dropped, and anyone who ranked that candidate 1st has their vote move to their next choice. This repeats until someone has more than half.</p>
+        <p>This year, the <strong>U.S. Senate race</strong> (Susan Collins vs. Troy Jackson) uses RCV, because the ballot also includes a write-in line, giving voters three names to rank instead of two.</p>
+        <p><strong>Not every race on your ballot works this way.</strong> Your State Senate and State House races (the ones with the district numbers) are still decided by a normal majority vote, not ranking &mdash; whoever gets the most votes wins, same as always.</p>
+        <a class="btn alt" href="https://www.maine.gov/sos/elections-voting/resources-for-ranked-choice-voting" target="_blank" rel="noopener noreferrer">More on ranked choice voting (Maine)<span class="visually-hidden"> (opens in a new tab)</span> &#8599;</a>
+      </div>
+    </details>
+
+    <details class="vote-sec">
       <summary>Can I vote early?</summary>
       <div class="vote-body">
         <p>Yes. This is called absentee voting. Anyone can do it. You do not need a reason until after Oct. 29.</p>
@@ -137,7 +148,7 @@ const ballots = [
       <a class="btn" href={`${city}/589/Election-Results`} target="_blank" rel="noopener noreferrer">Election results<span class="visually-hidden"> (opens in a new tab)</span> &#8599;</a>
     </section>
 
-    <p class="src-line">Sources: <a href={`${city}/181/Elections-Voting`} target="_blank" rel="noopener noreferrer">westbrookmaine.gov: Elections &amp; Voting<span class="visually-hidden"> (opens in a new tab)</span></a> and <a href={`${city}/205/Absentee-Voting`} target="_blank" rel="noopener noreferrer">Absentee Voting<span class="visually-hidden"> (opens in a new tab)</span></a>. Last checked {formatCheckedDate(checked)}.</p>
+    <p class="src-line">Sources: <a href={`${city}/181/Elections-Voting`} target="_blank" rel="noopener noreferrer">westbrookmaine.gov: Elections &amp; Voting<span class="visually-hidden"> (opens in a new tab)</span></a>, <a href={`${city}/205/Absentee-Voting`} target="_blank" rel="noopener noreferrer">Absentee Voting<span class="visually-hidden"> (opens in a new tab)</span></a>, and the <a href="https://www.maine.gov/sos/elections-voting/resources-for-ranked-choice-voting" target="_blank" rel="noopener noreferrer">Secretary of State&rsquo;s ranked choice voting resources<span class="visually-hidden"> (opens in a new tab)</span></a>. Last checked {formatCheckedDate(checked)}.</p>
 
     <aside class="disclaimer" aria-label="Please check before you go">
       <strong>Please check before you go.</strong> We worked hard to get this right, but dates, hours and rules can change. Check with the City Clerk at 207-591-8116. Westbrook Currents is independent and is not run by the City of Westbrook. We share voting steps only. We do not support any candidate or party.
