@@ -1,8 +1,14 @@
 ---
 // Link to this topic's PDF (steps for this topic only), shown near the top of each Get Help topic page.
-interface Props { topic: 'heating' | 'electricity' | 'food'; }
+interface Props { topic: 'heating' | 'electricity' | 'food' | 'housing' | 'property-tax-rent-relief'; }
 const { topic } = Astro.props;
-const names = { heating: 'heating', electricity: 'electricity', food: 'food' };
+const names = {
+  heating: 'heating',
+  electricity: 'electricity',
+  food: 'food',
+  housing: 'housing',
+  'property-tax-rent-relief': 'property tax',
+};
 ---
 <a class="pdf-link" href={`/westbrook-currents-${topic}-guide.pdf`} target="_blank" rel="noopener noreferrer">
   <span><strong>Get the {names[topic]} steps (PDF)</strong> <span class="pdf-sub">Every step on this page in one file, to print or save.</span></span>
