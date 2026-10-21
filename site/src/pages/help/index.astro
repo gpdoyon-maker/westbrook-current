@@ -1,11 +1,10 @@
 ---
 import SiteLayout from '../../layouts/SiteLayout.astro';
-import HelpDisclaimer from '../../components/HelpDisclaimer.astro';
 import heating from '../../data/help-heating.json';
 import food from '../../data/help-food.json';
 import electricity from '../../data/help-electricity.json';
 import housing from '../../data/help-housing.json';
-import propertyTax from '../../data/help-property-tax.json';
+import propertyTax from '../../data/help-property-tax-rent-relief.json';
 import { formatCheckedDate } from '../../lib/help';
 import '../../styles/help.css';
 ---
@@ -41,7 +40,7 @@ import '../../styles/help.css';
     </a>
 
     <div class="topic-row-wrap">
-      <span class="new-pill" style="background:#7a3b66">New</span>
+      <span class="new-pill" data-new-until="2026-11-04" style="background:#7a3b66">New</span>
       <a class="topic-row t-house" href="/help/housing">
         <strong>Housing</strong>
         <span>Facing eviction, behind on rent, no place to stay, or looking for a voucher.</span>
@@ -51,7 +50,7 @@ import '../../styles/help.css';
     </div>
 
     <div class="topic-row-wrap">
-      <span class="new-pill" style="background:#0f6e6e">New</span>
+      <span class="new-pill" data-new-until="2026-11-04" style="background:#0f6e6e">New</span>
       <a class="topic-row t-proptax" href="/help/property-tax-rent-relief">
         <strong>Property Tax &amp; Rent Relief</strong>
         <span>Exemptions, credits and a tax-deferral loan for homeowners and renters.</span>
@@ -60,13 +59,14 @@ import '../../styles/help.css';
       </a>
     </div>
 
-    <a class="guide-row" href="/westbrook-currents-help-guide.pdf" target="_blank" rel="noopener noreferrer">
-      <strong>Printable Help Guide (PDF)</strong>
-      <span>Heating, Electricity &amp; Food in one file, to print or save.</span>
-      <span class="topic-go">Open the guide &#8599;</span>
-      <span class="ext-note">(PDF, opens in a new tab)</span>
-    </a>
-
-    <HelpDisclaimer />
   </main>
+
+  <script>
+    // "New" pills carry their own expiry date, so a topic stops looking new on its own —
+    // no need to remember to come back and remove the badge by hand.
+    document.querySelectorAll<HTMLElement>('.new-pill[data-new-until]').forEach((pill) => {
+      const until = new Date(`${pill.dataset.newUntil}T23:59:59`);
+      if (new Date() > until) pill.remove();
+    });
+  </script>
 </SiteLayout>

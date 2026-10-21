@@ -149,12 +149,6 @@ details.mini p:last-child { margin: 0; }
 .help-linkout { padding: 12px 14px; border: 1.5px dashed var(--blue); border-radius: 8px; background: #e6f3f8; color: #294858; font-size: 14px; line-height: 1.5; }
 .help-linkout a { color: var(--blue); font-weight: 700; }
 
-.guide-row { display: flex; flex-direction: column; gap: 4px; padding: 16px 18px; border: 1.5px dashed var(--blue); border-radius: 8px; color: inherit; background: #fff; text-decoration: none; }
-.guide-row:hover { background: #e6f3f8; }
-.guide-row strong { color: var(--navy); font-size: 19px; }
-.guide-row span { color: #294858; font-size: 16px; line-height: 1.4; }
-.guide-row .topic-go { color: var(--blue); }
-
 .pdf-link { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 48px; margin: 0 0 14px; padding: 10px 14px; border: 1.5px dashed var(--blue); border-radius: 8px; background: #fff; color: inherit; text-decoration: none; }
 .pdf-link:hover { background: #e6f3f8; }
 .pdf-link strong { color: var(--navy); font-size: 17px; }

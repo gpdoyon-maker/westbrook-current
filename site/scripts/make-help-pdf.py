@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
 """
-Makes the printable Westbrook Currents Help Guide (PDF) from the Get Help data files.
+Makes one printable PDF per Get Help topic, from the Get Help data files.
+There is no combined "every topic" PDF — each topic gets its own, so a page
+can be printed on its own instead of a document that keeps growing.
 
-  python3 site/scripts/make-help-pdf.py            # writes site/public/westbrook-currents-help-guide.pdf
+  python3 site/scripts/make-help-pdf.py            # writes one PDF per topic in SINGLE below
   python3 site/scripts/make-help-pdf.py --date 2026-10-16
 
 The words, phone numbers, links and "Last checked" dates all come from
 site/src/data/help-*.json, the same files the website pages use. Run this again
-whenever one of those files changes, then commit the new PDF with it.
+whenever one of those files changes, then commit the new PDF(s) with it. Adding a
+new Get Help topic (e.g. Transportation) means adding it to TOPICS and SINGLE below.
 
 Needs Python 3 with the reportlab and Pillow packages. It is not part of the website build.
 """
@@ -24,14 +27,12 @@ from reportlab.graphics.barcode.qr import QrCodeWidget
 from reportlab.graphics.shapes import Drawing
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
-from reportlab.platypus import (BaseDocTemplate, Flowable, Frame, KeepTogether, PageBreak, PageTemplate,
+from reportlab.platypus import (BaseDocTemplate, Flowable, Frame, KeepTogether, PageTemplate,
                                 Paragraph, Spacer, Table, TableStyle)
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SITE = os.path.dirname(HERE)
 DATA = os.path.join(SITE, 'src', 'data')
-OUT = os.path.join(SITE, 'public', 'westbrook-currents-help-guide.pdf')
-LOGO = os.path.join(SITE, 'public', 'logo-desktop.png')
 SITE_URL = 'https://westbrookcurrents.com'
 
 # ---- Fonts and colors ------------------------------------------------------
@@ -57,6 +58,8 @@ TOPICS = {
     'heating': dict(accent=colors.HexColor('#b4430c'), tint=colors.HexColor('#fff1e4'), edge=colors.HexColor('#f2c9a6')),
     'electricity': dict(accent=colors.HexColor('#8a6100'), tint=colors.HexColor('#fff7d6'), edge=colors.HexColor('#ecd98a')),
     'food': dict(accent=colors.HexColor('#1f7a3d'), tint=colors.HexColor('#e8f6ec'), edge=colors.HexColor('#b4dcc0')),
+    'housing': dict(accent=colors.HexColor('#7a3b66'), tint=colors.HexColor('#f5e9f0'), edge=colors.HexColor('#dcbdd1')),
+    'property-tax-rent-relief': dict(accent=colors.HexColor('#0f6e6e'), tint=colors.HexColor('#e3f3f1'), edge=colors.HexColor('#aedbd6')),
 }
 
 def style(name, **kw):
@@ -77,7 +80,6 @@ S = {
     'step': style('step', fontName='Sans-Bold', fontSize=14, leading=17, textColor=NAVY),
     'stepsub': style('stepsub', fontSize=10.5, leading=13, textColor=MUTED),
     'urgent': style('urgent', fontSize=11.5, leading=16, textColor=colors.HexColor('#5c1511')),
-    'cover_sub': style('cover_sub', fontSize=14, leading=19, textColor=INK),
 }
 
 def p(text, st='body'):
@@ -163,6 +165,8 @@ def program_card(prog, checked, t):
     lines = []
     if prog.get('phone') and prog.get('phoneHref'):
         lines.append(f'<b>Call: {escape(prog["phone"])}</b>')
+    if prog.get('email'):
+        lines.append(f'Email: {link("mailto:" + prog["email"], prog["email"])}')
     if prog.get('more'):
         lines.append(f'{escape(prog["more"]["label"])}: {link(SITE_URL + prog["more"]["url"], short_url(SITE_URL + prog["more"]["url"]))}')
     lines.append(f'Official page: {link(prog["sourceUrl"], short_url(prog["sourceUrl"]))}')
@@ -187,19 +191,20 @@ def topic_section(slug, subtitle, intro_note=None):
     programs = {x['id']: x for x in d['programs']}
     out = [topic_banner(d['title'], subtitle, t), Spacer(1, 8), p(d['intro']), Spacer(1, 8)]
 
-    em = d['emergency']
-    if slug == 'heating':
-        lines = [p(em['lowFuelTitle'], 'step'), p(em['lowFuelText']), pm(f'<b><font size="15">{escape(em["phone"])}</font></b>'),
-                 Spacer(1, 5), p(em['dangerTitle'], 'step'), p(em['dangerText'])]
-    elif slug == 'electricity':
-        lines = [p(em['title'], 'step'), p(em['text']), pm(f'<b><font size="15">{escape(em["phone"])}</font></b>'), Spacer(1, 3),
-                 p(em['text2']), pm(f'<b><font size="15">{escape(em["phone2"])}</font></b>  ({escape(em["hours2"])})'),
-                 Spacer(1, 5), p(em['dangerTitle'], 'step'), p(em['dangerText'])]
-    else:
-        lines = [p(em['title'], 'step'), p(em['text']), Spacer(1, 5), p(em['dangerTitle'], 'step'), p(em['dangerText'])]
-    out += [urgent_box(lines), Spacer(1, 10)]
+    em = d.get('emergency')
+    if em:
+        if slug == 'heating':
+            lines = [p(em['lowFuelTitle'], 'step'), p(em['lowFuelText']), pm(f'<b><font size="15">{escape(em["phone"])}</font></b>'),
+                     Spacer(1, 5), p(em['dangerTitle'], 'step'), p(em['dangerText'])]
+        elif slug == 'electricity':
+            lines = [p(em['title'], 'step'), p(em['text']), pm(f'<b><font size="15">{escape(em["phone"])}</font></b>'), Spacer(1, 3),
+                     p(em['text2']), pm(f'<b><font size="15">{escape(em["phone2"])}</font></b>  ({escape(em["hours2"])})'),
+                     Spacer(1, 5), p(em['dangerTitle'], 'step'), p(em['dangerText'])]
+        else:
+            lines = [p(em['title'], 'step'), p(em['text']), Spacer(1, 5), p(em['dangerTitle'], 'step'), p(em['dangerText'])]
+        out += [urgent_box(lines), Spacer(1, 10)]
 
-    if slug == 'heating':
+    if slug == 'heating' and d.get('income'):
         inc = d['income']
         rows = [['People in home', 'Per month', 'Per year']] + [[str(r['people']), r['month'], r['year']] for r in inc['rows']]
         tbl = Table(rows, colWidths=[(W - 40) * .4, (W - 40) * .3, (W - 40) * .3])
@@ -213,7 +218,7 @@ def topic_section(slug, subtitle, intro_note=None):
         out += [box([p(inc['title'], 'h2'), p(inc['text']), Spacer(1, 4), tbl, Spacer(1, 4), p(src, 'small'),
                      pm(f'Source: {link(inc["sourceUrl"], inc["sourceLabel"])}. Last checked {pretty_date(d["lastChecked"])}.', 'small')],
                     t['tint'], t['edge'], width=W), Spacer(1, 10)]
-    else:
+    elif d.get('who'):
         who = d['who']
         extra = [p(who['fine'], 'small')]
         if who.get('linkUrl'):
@@ -227,17 +232,24 @@ def topic_section(slug, subtitle, intro_note=None):
     if d.get('agency'):
         out += [program_card(programs[d['agency']], d['lastChecked'], t), Spacer(1, 12)]
 
-    out += [p('Follow these steps', 'h2'), Spacer(1, 2)]
-    for step in d['steps']:
-        block = [step_head(step, t), Spacer(1, 6)]
-        for i, pid in enumerate(step['programs']):
-            card = program_card(programs[pid], d['lastChecked'], t)
-            if i == 0:
-                out.append(KeepTogether(block + [card]))
-            else:
-                out.append(card)
+    if d.get('steps'):
+        out += [p('Follow these steps', 'h2'), Spacer(1, 2)]
+        for step in d['steps']:
+            block = [step_head(step, t), Spacer(1, 6)]
+            for i, pid in enumerate(step['programs']):
+                card = program_card(programs[pid], d['lastChecked'], t)
+                if i == 0:
+                    out.append(KeepTogether(block + [card]))
+                else:
+                    out.append(card)
+                out.append(Spacer(1, 8))
+            out.append(Spacer(1, 6))
+    else:
+        # No steps: a flat list of programs, like Property Tax & Rent Relief.
+        out += [p('Programs', 'h2'), Spacer(1, 2)]
+        for prog in d['programs']:
+            out.append(program_card(prog, d['lastChecked'], t))
             out.append(Spacer(1, 8))
-        out.append(Spacer(1, 6))
     return out
 
 def qr_block(made_on, path='/help'):
@@ -251,39 +263,6 @@ def qr_block(made_on, path='/help'):
                    colWidths=[108, W - 108])
     qr_row.setStyle(TableStyle([('VALIGN', (0, 0), (-1, -1), 'MIDDLE'), ('LEFTPADDING', (0, 0), (-1, -1), 0)]))
     return qr_row
-
-# ---- Cover page ---------------------------------------------------------------
-def cover(made_on, topics):
-    items = []
-    from PIL import Image
-    w, h = Image.open(LOGO).size
-    lw = W - 36; lh = lw * h / w
-    from reportlab.platypus import Image as RLImage
-    head = Table([[RLImage(LOGO, width=lw, height=lh)]], colWidths=[W])
-    head.setStyle(TableStyle([('BACKGROUND', (0, 0), (-1, -1), NAVY), ('LEFTPADDING', (0, 0), (-1, -1), 18),
-                              ('TOPPADDING', (0, 0), (-1, -1), 16), ('BOTTOMPADDING', (0, 0), (-1, -1), 16)]))
-    items += [head, Spacer(1, 22), p('Westbrook Help Guide', 'h1'), Spacer(1, 6),
-              p('Help with heat, electricity and food for people who live in Westbrook, Maine.', 'cover_sub'), Spacer(1, 14)]
-
-    emerg = [p('Need help right now?', 'step'),
-             pm('<b>Life-threatening emergency:</b> call <b>911</b>.'),
-             pm('<b>Help finding food, fuel or other help any time:</b> dial <b>211</b>, or text your ZIP code to <b>898-211</b>.')]
-    items += [urgent_box(emerg), Spacer(1, 14)]
-
-    items += [p('How to use this guide', 'h2'),
-              p('Each section has the same parts: urgent numbers first, then who may qualify, then what to get ready, then the steps in order. '
-                'Start with Step 1 and keep going only if you need more help.'),
-              Spacer(1, 4),
-              p('Call first. Most offices want you to phone before you visit, and many do not take walk-ins.'), Spacer(1, 12)]
-
-    rows = [[p('Inside this guide', 'h2'), '']] + [[pm(f'<b>{escape(name)}</b>'), p(desc, 'small')] for name, desc in topics]
-    tb = Table(rows, colWidths=[W * .32, W * .68])
-    tb.setStyle(TableStyle([('SPAN', (0, 0), (1, 0)), ('LINEBELOW', (0, 1), (-1, -1), .6, LINE), ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
-                            ('LEFTPADDING', (0, 0), (-1, -1), 0), ('TOPPADDING', (0, 1), (-1, -1), 6), ('BOTTOMPADDING', (0, 1), (-1, -1), 6)]))
-    items += [tb, Spacer(1, 16)]
-
-    items += [qr_block(made_on), PageBreak()]
-    return items
 
 def closing():
     return [Spacer(1, 6), box([
@@ -299,11 +278,13 @@ SINGLE = {
     'heating': ('Help Paying for Heat Guide', 'Programs that may help Westbrook residents pay for heat.'),
     'electricity': ('Help With the Electric Bill Guide', 'Programs that may help Westbrook residents pay the electric bill.'),
     'food': ('Help Getting Food Guide', 'Programs that may help Westbrook residents get food.'),
+    'housing': ('Housing Help Guide', 'Programs that may help Westbrook residents with eviction, rent, shelter and vouchers.'),
+    'property-tax-rent-relief': ('Property Tax & Rent Relief Guide', 'Exemptions, credits and a tax-deferral loan for Westbrook homeowners and renters.'),
 }
 
-def make(made_on, slug=None):
-    out = OUT if slug is None else os.path.join(SITE, 'public', f'westbrook-currents-{slug}-guide.pdf')
-    guide_title = 'Westbrook Help Guide' if slug is None else SINGLE[slug][0]
+def make(made_on, slug):
+    out = os.path.join(SITE, 'public', f'westbrook-currents-{slug}-guide.pdf')
+    guide_title = SINGLE[slug][0]
     def later(canv, doc):
         canv.saveState()
         canv.setFillColor(NAVY); canv.rect(0, letter[1] - 0.32 * inch, letter[0], 0.32 * inch, stroke=0, fill=1)
@@ -311,8 +292,6 @@ def make(made_on, slug=None):
         canv.drawString(0.7 * inch, letter[1] - 0.21 * inch, 'Westbrook Currents')
         canv.setFont('Sans', 10); canv.drawRightString(letter[0] - 0.7 * inch, letter[1] - 0.21 * inch, guide_title)
         footer(canv, doc); canv.restoreState()
-    def first(canv, doc):
-        canv.saveState(); footer(canv, doc); canv.restoreState()
     def footer(canv, doc):
         canv.setFillColor(MUTED); canv.setFont('Sans', 9)
         canv.drawString(0.7 * inch, 0.45 * inch, f'westbrookcurrents.com/help   |   Made {pretty_date(made_on)}')
@@ -320,28 +299,12 @@ def make(made_on, slug=None):
 
     doc = BaseDocTemplate(out, pagesize=letter, leftMargin=0.7 * inch, rightMargin=0.7 * inch,
                           topMargin=0.62 * inch, bottomMargin=0.75 * inch,
-                          title=guide_title, author='Westbrook Currents',
-                          subject='Help with heat, electricity and food in Westbrook, Maine')
-    fr1 = Frame(doc.leftMargin, doc.bottomMargin, W, letter[1] - doc.bottomMargin - 0.5 * inch, id='f1', leftPadding=0, rightPadding=0)
-    fr2 = Frame(doc.leftMargin, doc.bottomMargin, W, letter[1] - doc.bottomMargin - doc.topMargin, id='f2', leftPadding=0, rightPadding=0)
-    doc.addPageTemplates([PageTemplate('first', [fr1], onPage=first), PageTemplate('later', [fr2], onPage=later)])
-    if slug is not None:
-        doc.pageTemplates.reverse()  # single-topic guides start on the header-bar template
+                          title=guide_title, author='Westbrook Currents', subject=SINGLE[slug][1])
+    # Every page (including the first) uses the same header-bar template: there is no cover page.
+    fr = Frame(doc.leftMargin, doc.bottomMargin, W, letter[1] - doc.bottomMargin - doc.topMargin, id='f', leftPadding=0, rightPadding=0)
+    doc.addPageTemplates([PageTemplate('later', [fr], onPage=later)])
 
-    from reportlab.platypus import NextPageTemplate
-    heat = load('heating'); elec = load('electricity'); food = load('food')
-    topics = [('Heating and Fuel', 'Help paying for heating oil, propane and other heat.'),
-              ('Electricity', 'Help with your electric bill, payment plans and winter shutoff rules.'),
-              ('Food', 'Pantries, SNAP, WIC, Meals on Wheels and more.')]
-    if slug is None:
-        story = [NextPageTemplate('later')] + cover(made_on, topics)
-        story += topic_section('heating', 'Programs that may help Westbrook residents pay for heat.')
-        story += [PageBreak()] + topic_section('electricity', 'Programs that may help Westbrook residents pay the electric bill.')
-        story += [PageBreak()] + topic_section('food', 'Programs that may help Westbrook residents get food.')
-        story += closing()
-    else:
-        # One topic only: no cover page. Page 1 uses the same header bar as the later pages.
-        story = topic_section(slug, SINGLE[slug][1]) + [Spacer(1, 14), qr_block(made_on, '/help/' + slug), Spacer(1, 12)] + closing()
+    story = topic_section(slug, SINGLE[slug][1]) + [Spacer(1, 14), qr_block(made_on, '/help/' + slug), Spacer(1, 12)] + closing()
     doc.build(story)
     print('Wrote', out)
 
@@ -349,6 +312,5 @@ if __name__ == '__main__':
     ap = argparse.ArgumentParser()
     ap.add_argument('--date', default=datetime.date.today().isoformat(), help='date printed on the guide, YYYY-MM-DD')
     d = ap.parse_args().date
-    make(d)
     for s in SINGLE:
         make(d, s)
