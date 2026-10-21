@@ -1,0 +1,91 @@
+{
+  "slug": "property-tax-rent-relief",
+  "title": "Property Tax & Rent Relief",
+  "intro": "For homeowners and renters — these programs lower what you owe, not just help you catch up.",
+  "lastChecked": "2026-10-21",
+  "programs": [
+    {
+      "id": "homestead",
+      "tag": "Any homeowner — not income-based",
+      "name": "Homestead Exemption",
+      "chip": "Up to $25,000 of value exempt",
+      "chipKind": "info",
+      "summary": "Removes part of your home's value from taxation if you've owned and lived in it for at least 12 months as of April 1.",
+      "know": "Apply once using the city's Homestead Application — it stays in effect every year after that unless you move.",
+      "phone": "(207) 854-0638",
+      "phoneHref": "tel:+12078540638",
+      "email": "assessors@westbrook.me.us",
+      "sourceLabel": "westbrookmaine.gov: Tax Relief",
+      "sourceUrl": "https://www.westbrookmaine.gov/162/Tax-Relief"
+    },
+    {
+      "id": "veteran",
+      "tag": "Veterans, and un-remarried surviving spouses",
+      "name": "Veteran Exemption",
+      "chip": "$6,000 now → up to $5,000–$50,000 from Apr 2027",
+      "chipKind": "info",
+      "summary": "Reduces your home's taxable value. The current amount is a flat $6,000. Starting April 1, 2027, it becomes tiered by age and VA disability rating, from $5,000 up to $50,000.",
+      "know": "You'll need proof of service (Form DD214) with your application.",
+      "phone": "(207) 854-0638",
+      "phoneHref": "tel:+12078540638",
+      "email": "assessors@westbrook.me.us",
+      "sourceLabel": "westbrookmaine.gov: Tax Relief",
+      "sourceUrl": "https://www.westbrookmaine.gov/162/Tax-Relief"
+    },
+    {
+      "id": "blind",
+      "tag": "Legally blind homeowners",
+      "name": "Blind Exemption",
+      "chip": "$4,000 now → $5,000 from Apr 2027",
+      "chipKind": "info",
+      "summary": "Reduces your home's taxable value if you are legally blind. For Westbrook's current tax rate, this works out to about $54 a year in actual savings.",
+      "know": "You'll need a letter from a licensed doctor or optometrist confirming legal blindness, submitted with your application by April 1 each year.",
+      "phone": "(207) 854-0638",
+      "phoneHref": "tel:+12078540638",
+      "email": "assessors@westbrook.me.us",
+      "sourceLabel": "westbrookmaine.gov: Tax Relief",
+      "sourceUrl": "https://www.westbrookmaine.gov/162/Tax-Relief"
+    },
+    {
+      "id": "fairness-credit",
+      "tag": "Renters and homeowners — income-based",
+      "name": "Property Tax Fairness Credit",
+      "chip": "Refundable state income tax credit",
+      "chipKind": "limit",
+      "summary": "A refundable state income tax credit if you pay a high share of your income toward rent or property tax. Claimed on Form 1040ME, Schedule PTFC — not a separate application to the City.",
+      "know": "Available whether or not you owe Maine income tax; any amount above what you owe is refunded to you.",
+      "phone": "(207) 626-8475",
+      "phoneHref": "tel:+12076268475",
+      "sourceLabel": "maine.gov: Property Tax Fairness Credit",
+      "sourceUrl": "https://www.maine.gov/revenue/taxes/tax-relief-credits-programs/income-tax-credits/property-tax-fairness-credit"
+    },
+    {
+      "id": "deferral",
+      "tag": "Homeowners 65+, or permanently disabled",
+      "name": "Property Tax Deferral Program",
+      "chip": "Income under $80,000 · assets under $100,000–$150,000",
+      "chipKind": "limit",
+      "summary": "This is a loan, not a discount. The State pays your property tax and places a lien on your home; it's repaid with interest when you sell, move, or pass away.",
+      "know": "The asset limit is $100,000 for a single owner, or $150,000 for multiple owners.",
+      "phone": "(207) 624-5600",
+      "phoneHref": "tel:+12076245600",
+      "email": "prop.tax@maine.gov",
+      "sourceLabel": "westbrookmaine.gov: Tax Relief",
+      "sourceUrl": "https://www.westbrookmaine.gov/162/Tax-Relief"
+    },
+    {
+      "id": "senior",
+      "tag": "Westbrook residents 65+, homeowners and renters",
+      "name": "Westbrook Senior Property Tax Assistance",
+      "chip": "FY27 window: Jul 1, 2026 – Jun 1, 2027",
+      "chipKind": "limit",
+      "summary": "You must have lived in Westbrook at least 8 years, and have received the Property Tax Fairness Credit (above) in the prior tax year.",
+      "know": "Reapply every year during the enrollment window.",
+      "phone": "(207) 854-9105",
+      "phoneHref": "tel:+12078549105",
+      "email": "taxcollector@westbrook.me.us",
+      "sourceLabel": "westbrookmaine.gov: Tax Relief",
+      "sourceUrl": "https://www.westbrookmaine.gov/162/Tax-Relief"
+    }
+  ]
+}

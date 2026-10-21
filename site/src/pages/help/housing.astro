@@ -1,0 +1,71 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import ProgramCard from '../../components/ProgramCard.astro';
+import HelpDisclaimer from '../../components/HelpDisclaimer.astro';
+import data from '../../data/help-housing.json';
+import type { HelpProgram } from '../../lib/help';
+import '../../styles/help.css';
+
+const programs = data.programs as HelpProgram[];
+const byId = (id: string) => programs.find((program) => program.id === id) as HelpProgram;
+---
+<SiteLayout
+  title="Housing Help in Westbrook, Maine | Westbrook Currents"
+  description="Facing eviction, behind on rent, no place to stay, or looking for a housing voucher? Programs that may help Westbrook, Maine residents."
+  currentPage="help"
+>
+  <main class="help-wrap t-house">
+    <a class="help-back" href="/help">&#8249; Get Help</a>
+    <h1>{data.title}</h1>
+    <p class="help-sub">{data.intro}</p>
+
+    <div class="help-linkout">
+      <strong style="color:var(--navy)">Need help with heat or electricity instead?</strong> See <a href="/help/heating">Heating &amp; Fuel</a> or <a href="/help/electricity">Electricity</a>. For a general emergency safety net (rent, utilities, food), see <a href="/help/general-assistance">General Assistance</a> &mdash; already on this site, not repeated here.
+    </div>
+
+    <div class="steps-head">
+      <h2>Find your situation</h2>
+      <button class="all-toggle" type="button" id="all-toggle" hidden>Open all steps</button>
+    </div>
+
+    {data.steps.map((step) => (
+      <details class="step" open={step.open}>
+        <summary>
+          <span class={`step-num${step.last ? ' last' : ''}`}><small>STEP</small>{step.n}</span>
+          <span class="step-text">
+            <strong>{step.title}</strong>
+            <span>{step.sub}</span>
+          </span>
+          <span class="step-chev" aria-hidden="true"></span>
+        </summary>
+        <div class="step-cards">
+          {step.programs.map((id) => <ProgramCard program={byId(id)} checked={data.lastChecked} />)}
+          {step.n === 2 && (
+            <div class="help-linkout">Also see <a href="/help/general-assistance">General Assistance</a> for a last-resort municipal safety net.</div>
+          )}
+        </div>
+      </details>
+    ))}
+
+    <HelpDisclaimer />
+  </main>
+
+  <script>
+    // "Open all steps" needs script, so it stays hidden until the script runs. Everything else is plain HTML.
+    const toggle = document.querySelector<HTMLButtonElement>('#all-toggle');
+    const steps = Array.from(document.querySelectorAll<HTMLDetailsElement>('details.step'));
+    if (toggle && steps.length) {
+      toggle.hidden = false;
+      const sync = () => {
+        toggle.textContent = steps.every((step) => step.open) ? 'Close all steps' : 'Open all steps';
+      };
+      toggle.addEventListener('click', () => {
+        const openThem = !steps.every((step) => step.open);
+        steps.forEach((step) => { step.open = openThem; });
+        sync();
+      });
+      steps.forEach((step) => step.addEventListener('toggle', sync));
+      sync();
+    }
+  </script>
+</SiteLayout>

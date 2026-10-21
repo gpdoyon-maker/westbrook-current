@@ -4,6 +4,8 @@ import HelpDisclaimer from '../../components/HelpDisclaimer.astro';
 import heating from '../../data/help-heating.json';
 import food from '../../data/help-food.json';
 import electricity from '../../data/help-electricity.json';
+import housing from '../../data/help-housing.json';
+import propertyTax from '../../data/help-property-tax.json';
 import { formatCheckedDate } from '../../lib/help';
 import '../../styles/help.css';
 ---
@@ -38,9 +40,29 @@ import '../../styles/help.css';
       <span class="topic-go">See the steps &#8594;</span>
     </a>
 
+    <div class="topic-row-wrap">
+      <span class="new-pill" style="background:#7a3b66">New</span>
+      <a class="topic-row t-house" href="/help/housing">
+        <strong>Housing</strong>
+        <span>Facing eviction, behind on rent, no place to stay, or looking for a voucher.</span>
+        <em>Last checked {formatCheckedDate(housing.lastChecked)}</em>
+        <span class="topic-go">See the steps &#8594;</span>
+      </a>
+    </div>
+
+    <div class="topic-row-wrap">
+      <span class="new-pill" style="background:#0f6e6e">New</span>
+      <a class="topic-row t-proptax" href="/help/property-tax-rent-relief">
+        <strong>Property Tax &amp; Rent Relief</strong>
+        <span>Exemptions, credits and a tax-deferral loan for homeowners and renters.</span>
+        <em>Last checked {formatCheckedDate(propertyTax.lastChecked)}</em>
+        <span class="topic-go">See the steps &#8594;</span>
+      </a>
+    </div>
+
     <a class="guide-row" href="/westbrook-currents-help-guide.pdf" target="_blank" rel="noopener noreferrer">
       <strong>Printable Help Guide (PDF)</strong>
-      <span>All three topics in one file, to print or save.</span>
+      <span>Heating, Electricity &amp; Food in one file, to print or save.</span>
       <span class="topic-go">Open the guide &#8599;</span>
       <span class="ext-note">(PDF, opens in a new tab)</span>
     </a>

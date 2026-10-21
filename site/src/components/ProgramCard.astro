@@ -16,6 +16,7 @@ const { program, checked } = Astro.props;
   {program.know && <p class="know" set:html={linkPhones(program.know)} />}
   <div class="card-actions">
     {program.phone && program.phoneHref && <a class="btn" href={program.phoneHref}>Call {program.phone}</a>}
+    {program.email && <a class="btn alt" href={`mailto:${program.email}`}>{program.email}</a>}
     {program.more && <a class="btn alt" href={program.more.url}>{program.more.label} &#8594;</a>}
     <a class="btn alt ext" href={program.sourceUrl} target="_blank" rel="noopener noreferrer"><span>Official page &#8599;<span class="visually-hidden"> for {program.name}</span></span><span class="ext-note">(opens in a new tab)</span></a>
   </div>
