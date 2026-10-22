@@ -1,0 +1,82 @@
+/* TL;DW! pages: City Council meeting summaries. Uses the site tokens from global.css,
+   plus its own accent (raspberry) distinct from every other pillar. */
+.tldw-wrap { --accent: #c2185b; --tint: #fdeaf1; --edge: #f0c4d6; width: min(760px, 100%); margin: 0 auto; padding: 28px 16px 56px; box-sizing: border-box; display: flex; flex-direction: column; gap: 16px; }
+.tldw-wrap .help-back { color: var(--blue); font-size: 14px; font-weight: 800; text-decoration: none; }
+.tldw-wrap .help-back:hover { text-decoration: underline; }
+.tldw-wrap h1 { margin: 0; color: var(--navy); font-size: 34px; line-height: 1.1; padding-bottom: 10px; border-bottom: 4px solid var(--accent); }
+.tldw-tagline { margin: 0; color: var(--accent); font-size: 16px; font-weight: 700; font-style: italic; }
+
+.tldw-intro { margin: 0; padding: 18px 20px; border: 1.5px solid var(--edge); border-left: 6px solid var(--accent); border-radius: 8px; background: var(--tint); color: #223042; font-size: 16px; line-height: 1.6; }
+.tldw-intro p { margin: 0 0 10px; }
+.tldw-intro p:last-child { margin-bottom: 0; }
+.tldw-intro .caveat { font-size: 14px; color: #7a1140; }
+.tldw-intro .sign { color: #7a1140; font-weight: 700; font-size: 14px; }
+
+.tldw-search { position: relative; }
+.tldw-search input { width: 100%; box-sizing: border-box; padding: 13px 16px 13px 42px; border: 1.5px solid var(--line); border-radius: 8px; font-size: 16px; font-family: inherit; color: var(--navy); background: #fff; }
+.tldw-search input::placeholder { color: var(--muted); }
+.tldw-search svg { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; pointer-events: none; }
+.tldw-search-note { margin: -8px 0 0; color: var(--muted); font-size: 13px; }
+.tldw-empty { display: none; padding: 16px 18px; border: 1.5px dashed var(--line); border-radius: 8px; color: var(--muted); font-size: 14px; text-align: center; }
+.tldw-empty.show { display: block; }
+
+.tldw-list-label { margin: 10px 0 0; color: var(--muted); font-size: 13px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.meeting-card { display: flex; flex-direction: column; gap: 6px; padding: 16px 18px; border: 1.5px solid var(--line); border-left: 8px solid var(--accent); border-radius: 8px; background: #fff; text-decoration: none; }
+.meeting-card:hover { border-color: var(--accent); }
+.mc-top { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.mc-date { color: var(--muted); font-size: 13px; font-weight: 800; letter-spacing: .03em; text-transform: uppercase; }
+.hot-badge { display: inline-flex; align-items: center; gap: 4px; padding: 2px 9px; border-radius: 999px; background: var(--tint); color: var(--accent); border: 1px solid var(--edge); font-size: 12px; font-weight: 800; }
+.meeting-card strong { color: var(--navy); font-size: 20px; }
+.meeting-card .blurb { color: #294858; font-size: 15px; line-height: 1.45; }
+.tldw-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 2px; }
+.tldw-tag { padding: 2px 8px; border-radius: 6px; background: #eef0f6; color: #3d4566; font-size: 12px; font-weight: 700; }
+.mc-go { color: var(--accent); font-size: 14px; font-weight: 800; margin-top: 2px; }
+.more-soon { padding: 16px 18px; border: 1.5px dashed var(--line); border-radius: 8px; color: var(--muted); font-size: 14px; text-align: center; }
+
+/* Meeting detail page */
+.tldw-eyebrow { color: var(--accent); font-size: 13px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.tldw-meta { margin: 0; color: var(--muted); font-size: 15px; }
+.tldw-pdf-link { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; min-height: 48px; padding: 14px 18px; border: 1.5px dashed var(--accent); border-radius: 8px; background: #fff; color: inherit; text-decoration: none; }
+.tldw-pdf-link:hover { background: var(--tint); }
+.tldw-pdf-link strong { display: block; color: var(--navy); font-size: 16px; }
+.tldw-pdf-link .sub { display: block; color: var(--muted); font-size: 14px; margin-top: 2px; }
+.tldw-pdf-link .go { flex-shrink: 0; padding: 9px 16px; border-radius: 6px; background: var(--accent); color: #fff; font-weight: 700; font-size: 14px; }
+
+.tldw-video-box { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding: 14px 18px; border: 1.5px solid var(--line); border-radius: 8px; background: #fff; }
+.tldw-video-box svg { flex: none; width: 22px; height: 22px; }
+.tldw-video-box a.watch { color: var(--blue); font-weight: 800; text-decoration: underline; }
+.tldw-scrub-note { margin: -6px 0 0; color: var(--muted); font-size: 13px; line-height: 1.4; }
+
+.tldw-wrap .intro-line { margin: 0; color: #294858; font-size: 16px; line-height: 1.55; }
+.tldw-section-head { margin: 10px 0 0; padding-top: 18px; border-top: 2px solid var(--line); color: var(--navy); font-size: 13px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+
+details.tldw-item { border: 1.5px solid var(--line); border-radius: 8px; background: #fff; }
+details.tldw-item > summary { display: flex; gap: 12px; align-items: flex-start; padding: 14px 16px; list-style: none; cursor: pointer; }
+details.tldw-item > summary::-webkit-details-marker { display: none; }
+.ti-text { flex: 1; min-width: 0; }
+.ti-top { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.ti-ts { color: var(--accent); font-weight: 800; font-size: 13px; font-variant-numeric: tabular-nums; }
+.ti-hot { display: inline-flex; align-items: center; gap: 3px; padding: 1px 7px; border-radius: 999px; background: var(--tint); color: var(--accent); font-size: 11px; font-weight: 800; }
+.ti-title { display: block; color: var(--navy); font-size: 17px; font-weight: 800; margin-top: 3px; }
+.ti-brief { display: block; color: var(--muted); font-size: 14px; margin-top: 2px; }
+.ti-chev { flex: none; color: var(--blue); font-size: 22px; font-weight: 800; margin-top: 2px; }
+details.tldw-item[open] .ti-chev { color: var(--accent); }
+.ti-body { padding: 0 16px 16px 16px; display: flex; flex-direction: column; gap: 10px; border-top: 1px solid var(--line); margin-top: 2px; padding-top: 12px; }
+.ti-body p { margin: 0; color: #294858; font-size: 15px; line-height: 1.5; }
+.ti-body .label { margin: 4px 0 -2px; color: var(--navy); font-size: 12px; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; }
+.ti-body ul { margin: 0; padding-left: 20px; color: #294858; font-size: 15px; line-height: 1.5; }
+
+.tldw-quote { margin: 0; padding: 10px 14px; border-left: 3px solid var(--accent); background: var(--tint); color: #5c1030; font-size: 15px; font-style: italic; line-height: 1.5; }
+.tldw-quote cite { display: block; margin-top: 6px; color: #7a1140; font-size: 13px; font-style: normal; font-weight: 800; }
+
+.tldw-decision { display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px; border-radius: 6px; background: #e6f4ea; color: #14532d; font-size: 13px; font-weight: 800; align-self: flex-start; }
+.tldw-decision.split { background: #fdecea; color: #8c1a12; }
+
+.tldw-wrap .disclaimer { margin-top: 6px; padding: 14px 16px; border: 1px solid var(--edge); border-radius: 8px; color: #294858; background: var(--tint); font-size: 14px; line-height: 1.5; }
+.tldw-wrap .disclaimer strong { color: var(--navy); }
+.tldw-made-with { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.5; }
+
+@media (max-width: 600px) {
+  .tldw-wrap { padding: 20px 12px 40px; }
+  .tldw-wrap h1 { font-size: 27px; }
+}
