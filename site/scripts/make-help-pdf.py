@@ -171,7 +171,7 @@ def program_card(prog, checked, t):
         lines.append(f'{escape(prog["more"]["label"])}: {link(SITE_URL + prog["more"]["url"], short_url(SITE_URL + prog["more"]["url"]))}')
     lines.append(f'Official page: {link(prog["sourceUrl"], short_url(prog["sourceUrl"]))}')
     inner += [Spacer(1, 5)] + [pm(x, 'body') for x in lines]
-    inner += [Spacer(1, 4), p(f'Source: {prog["sourceLabel"]}. Last checked {pretty_date(checked)}.', 'small')]
+    inner += [Spacer(1, 4), p(f'Source: {prog["sourceLabel"]}. Last checked {pretty_date(prog.get("checked", checked))}.', 'small')]
     tb = Table([[inner]], colWidths=[W - 18])
     tb.setStyle(TableStyle([
         ('BOX', (0, 0), (-1, -1), 1, LINE), ('LINEBEFORE', (0, 0), (0, -1), 5, t['accent']),

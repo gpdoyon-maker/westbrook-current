@@ -21,5 +21,5 @@ const { program, checked } = Astro.props;
     <a class="btn alt ext" href={program.sourceUrl} target="_blank" rel="noopener noreferrer"><span>Official page &#8599;<span class="visually-hidden"> for {program.name}</span></span><span class="ext-note">(opens in a new tab)</span></a>
   </div>
   <p class="src-line">Source: {program.sourceLabel}</p>
-  <p class="checked">Last checked {formatCheckedDate(checked)}</p>
+  <p class="checked">Last checked {formatCheckedDate(program.checked ?? checked)}</p>
 </article>

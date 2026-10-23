@@ -35,4 +35,5 @@ export interface HelpProgram {
   sourceUrl: string;
   last?: boolean;
   more?: { label: string; url: string };
+  checked?: string; // ISO date; overrides the page's lastChecked for this one program, when it was verified separately
 }

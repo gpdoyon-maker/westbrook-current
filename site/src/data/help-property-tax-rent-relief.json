@@ -74,6 +74,21 @@
       "sourceUrl": "https://www.westbrookmaine.gov/162/Tax-Relief"
     },
     {
+      "id": "habitat-critical-home-repair",
+      "tag": "Low-income homeowners — not just seniors",
+      "name": "Critical Home Repair (Habitat for Humanity)",
+      "chip": "Income under 80% of area median",
+      "chipKind": "limit",
+      "summary": "Labor is donated for safety repairs — structural rot, unsafe roofing or flooring, no heat or water, electrical or plumbing hazards — including accessibility modifications to help you stay in your home safely. You pay a share of the materials cost, scaled to your income.",
+      "know": "You must own your home (a mortgage is fine), have lived there at least 3 years, and its tax assessment can't exceed $350,000. Doesn't cover cosmetic updates, appliances, foundations, ramps, or weatherization — ask about a referral to another program for those.",
+      "phone": "(207) 772-2151 ext. 104",
+      "phoneHref": "tel:+12077722151,104",
+      "email": "molly@habitatme.org",
+      "sourceLabel": "habitatportlandme.org: Critical Home Repair",
+      "sourceUrl": "https://habitatportlandme.org/program/critical-home-repair/",
+      "checked": "2026-10-23"
+    },
+    {
       "id": "senior",
       "tag": "Westbrook residents 65+, homeowners and renters",
       "name": "Westbrook Senior Property Tax Assistance",
