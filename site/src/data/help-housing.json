@@ -27,14 +27,8 @@
       "n": 4,
       "title": "Want a housing voucher",
       "sub": "Ongoing help paying rent, long term",
-      "programs": ["section8", "restart"]
-    },
-    {
-      "n": 5,
-      "title": "Living with a disability",
-      "sub": "Supportive and subsidized housing",
       "last": true,
-      "programs": ["section811-pra", "section811-vouchers", "housing-support-funds", "oads-start"]
+      "programs": ["section8", "restart"]
     }
   ],
   "programs": [
@@ -115,51 +109,7 @@
       "phone": "(207) 626-4600",
       "phoneHref": "tel:+12076264600",
       "sourceLabel": "mainehousing.org/restart",
-      "sourceUrl": "https://www.mainehousing.org/restart"
-    },
-    {
-      "id": "section811-pra",
-      "tag": "Adults 18–61 with a disability",
-      "name": "Section 811 Project Rental Assistance (PRA)",
-      "chip": "About 60 units statewide",
-      "chipKind": "limit",
-      "summary": "About 60 units statewide, tied to specific buildings (not portable). For extremely low-income adults 18–61 with a disability, enrolled in a qualifying MaineCare waiver.",
-      "know": "MaineHousing keeps a non-public list of participating properties and matches you by preferred area once you apply — there's no public way to check whether a unit is open in Westbrook specifically.",
-      "sourceLabel": "maine.gov/dhhs/oads: Housing Services",
-      "sourceUrl": "https://www.maine.gov/dhhs/oads/get-support/housing-services"
-    },
-    {
-      "id": "section811-vouchers",
-      "tag": "Portable rent subsidy",
-      "name": "Section 811 Vouchers",
-      "chip": "Limited number statewide",
-      "chipKind": "limit",
-      "summary": "A separate, portable rent subsidy (not tied to one building), issued by MaineHousing.",
-      "know": "Apply with the 811 Preliminary Application through OADS.",
-      "sourceLabel": "maine.gov/dhhs/oads: Housing Services",
-      "sourceUrl": "https://www.maine.gov/dhhs/oads/get-support/housing-services"
-    },
-    {
-      "id": "housing-support-funds",
-      "tag": "MaineCare Section 21/29 waiver",
-      "name": "Housing Support Funds",
-      "chip": "Once-a-year lump sum",
-      "chipKind": "info",
-      "summary": "A once-a-year lump sum for rent, a deposit, or utilities — usable whether you rent, own, or live in a group home.",
-      "know": "First-come, first-served; you must reapply every year. Not available if you already have a housing subsidy or live in Shared Living.",
-      "sourceLabel": "maine.gov/dhhs/oads: Housing Services",
-      "sourceUrl": "https://www.maine.gov/dhhs/oads/get-support/housing-services"
-    },
-    {
-      "id": "oads-start",
-      "tag": "Start here",
-      "name": "Where to start for all three",
-      "summary": "Maine DHHS Office of Aging and Disability Services (OADS) screens applicants for all three disability-housing programs above.",
-      "phone": "(207) 287-9200",
-      "phoneHref": "tel:+12072879200",
-      "email": "OADS.Housing@maine.gov",
-      "sourceLabel": "maine.gov/dhhs/oads: Housing Services",
-      "sourceUrl": "https://www.maine.gov/dhhs/oads/get-support/housing-services",
+      "sourceUrl": "https://www.mainehousing.org/restart",
       "last": true
     }
   ]
