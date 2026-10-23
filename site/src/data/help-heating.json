@@ -88,7 +88,8 @@
       "programs": [
         "chip",
         "weatherization",
-        "efficiency-maine"
+        "efficiency-maine",
+        "mobile-home-initiative"
       ]
     },
     {
@@ -183,6 +184,20 @@
       "know": "A registered Efficiency Maine vendor must do the work.",
       "sourceLabel": "efficiencymaine.com: Insulation rebates",
       "sourceUrl": "https://www.efficiencymaine.com/at-home/insulation-rebates-up-to-8600/"
+    },
+    {
+      "id": "mobile-home-initiative",
+      "tag": "Single-wide mobile homes only",
+      "name": "Mobile Home Initiative (Efficiency Maine)",
+      "chip": "Up to $13,900 rebate — steep eligibility",
+      "chipKind": "limit",
+      "summary": "A $13,900 rebate toward a new ducted heat pump system, for single-wide mobile homes currently heated with propane, oil, or kerosene — one of the largest home-heating rebates in the state.",
+      "know": "Eligibility is steep: your home must be a single-wide mobile home and your year-round residence, not heated with natural gas or baseboard, and on Efficiency Maine's list of eligible towns (Westbrook qualifies). Income must be at or below 80% of the county median, or you already receive MaineCare, HEAP, SNAP, or TANF. You'll contribute $1,000 toward the project (or finance it through an Efficiency Maine loan), and your existing heating system is removed to make room for the new one.",
+      "phone": "(866) 376-2463",
+      "phoneHref": "tel:+18663762463",
+      "sourceLabel": "efficiencymaine.com: Mobile Home Initiative",
+      "sourceUrl": "https://www.efficiencymaine.com/at-home/mobile-home-initiative/",
+      "checked": "2026-10-23"
     },
     {
       "id": "vefa",
