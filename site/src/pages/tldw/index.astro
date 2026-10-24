@@ -3,8 +3,8 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
 import meetings from '../../data/tldw-meetings.json';
 import '../../styles/tldw.css';
 
-const categories = ['Regular Meeting', 'Special Meeting', 'Committee of the Whole', 'Planning Board'];
-const topicList = ['Budget & Taxes', 'Zoning & Development', 'Housing', 'Ordinances', 'Infrastructure', 'Transit & Transportation', 'Public Safety', 'Parks & Recreation', 'Personnel', 'General Assistance'];
+const categories = ['Regular Meeting', 'Special Meeting', 'Committee of the Whole', 'Planning Board', 'School Committee'];
+const topicList = ['Budget & Taxes', 'Zoning & Development', 'Housing', 'Ordinances', 'Infrastructure', 'Transit & Transportation', 'Public Safety', 'Parks & Recreation', 'Personnel', 'General Assistance', 'Education'];
 
 const categoryCounts: Record<string, number> = {};
 categories.forEach((c) => { categoryCounts[c] = meetings.filter((m: any) => m.category === c).length; });
@@ -41,7 +41,7 @@ function cardCta(m: any) {
     </div>
 
     <div class="tldw-intro">
-      <p>City Council, Committee of the Whole, and Planning Board meetings run two hours or more, and not everyone can spare that much time &mdash; even though what gets decided in that room touches your taxes, your streets, your parks. These summaries are here to help: a quick read on what came up and what was decided, so you can judge for yourself what&rsquo;s worth your time.</p>
+      <p>City Council, Committee of the Whole, Planning Board, and School Committee meetings run two hours or more, and not everyone can spare that much time &mdash; even though what gets decided in that room touches your taxes, your streets, your parks, and your kids&rsquo; schools. These summaries are here to help: a quick read on what came up and what was decided, so you can judge for yourself what&rsquo;s worth your time.</p>
       <p>Think of each one as a guide, <b>not a substitute</b> for the meeting itself. Use it to find the parts that matter most to you, then jump to the video and watch those parts directly.</p>
       <p class="sign">&mdash; Gerry</p>
     </div>
@@ -117,7 +117,7 @@ function cardCta(m: any) {
 
               <a class="mc-compact" href={cardHref(m)} target={m.slug === '2026-10-19-special-meeting' ? undefined : '_blank'} rel={m.slug === '2026-10-19-special-meeting' ? undefined : 'noopener noreferrer'}>
                 <span class="mcc-date">{m.dateLabel}</span>
-                <span class="mcc-type-badge" data-cat={m.category}>{m.category.replace('Committee of the Whole', 'CoW').replace(' Meeting', '').replace('Planning Board', 'PB')}</span>
+                <span class="mcc-type-badge" data-cat={m.category}>{m.category.replace('Committee of the Whole', 'CoW').replace(' Meeting', '').replace('Planning Board', 'PB').replace('School Committee', 'School')}</span>
                 <span class="mcc-title">{m.title}</span>
                 {m.hot && <span class="mcc-hot">&#128293;</span>}
               </a>
