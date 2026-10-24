@@ -68,7 +68,7 @@ import { ENDPOINT_URL, TURNSTILE_SITE_KEY } from '../lib/submit-config';
           <div class="fields">
             <div class="row2">
               <div class="field" data-field="venue">
-                <label for="f-venue">Venue name <span class="req" aria-hidden="true">*</span></label>
+                <label for="f-venue">Location name <span class="req" aria-hidden="true">*</span></label>
                 <input id="f-venue" name="venue" type="text" required maxlength="100" placeholder="e.g. Riverbank Park" />
               </div>
               <div class="field" data-field="address">
@@ -129,7 +129,7 @@ import { ENDPOINT_URL, TURNSTILE_SITE_KEY } from '../lib/submit-config';
               <span class="pv-time pv-time-text">Time</span>
               <span class="pv-content">
                 <span class="pv-title pv-title-text">Your event title</span>
-                <span class="pv-meta pv-venue-text">Venue</span>
+                <span class="pv-meta pv-venue-text">Location</span>
                 <span class="pv-cat"><span class="pv-dot"></span><span class="pv-cat-text">Category</span><span class="pv-free" hidden>FREE</span></span>
               </span>
             </div>
@@ -159,7 +159,7 @@ import { ENDPOINT_URL, TURNSTILE_SITE_KEY } from '../lib/submit-config';
             <span class="pv-time pv-time-text">Time</span>
             <span class="pv-content">
               <span class="pv-title pv-title-text">Your event title</span>
-              <span class="pv-meta pv-venue-text">Venue</span>
+              <span class="pv-meta pv-venue-text">Location</span>
               <span class="pv-cat"><span class="pv-dot"></span><span class="pv-cat-text">Category</span><span class="pv-free" hidden>FREE</span></span>
             </span>
           </div>
@@ -360,7 +360,7 @@ import { ENDPOINT_URL, TURNSTILE_SITE_KEY } from '../lib/submit-config';
       setAll('.pv-date-text', fmtDate(val('date')), 'Pick a date');
       setAll('.pv-time-text', fmtTime(val('startTime')), 'Time');
       setAll('.pv-title-text', val('title'), 'Your event title');
-      setAll('.pv-venue-text', val('venue'), 'Venue');
+      setAll('.pv-venue-text', val('venue'), 'Location');
       setAll('.pv-cat-text', category, 'Category');
       const accent = colors[category] ?? '#6e6e6e';
       document.querySelectorAll<HTMLElement>('.pv-row').forEach((row) => row.style.setProperty('--event-accent', accent));
