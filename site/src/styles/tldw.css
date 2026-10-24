@@ -37,6 +37,7 @@
 .mc-type-badge[data-cat="Special Meeting"], .mcc-type-badge[data-cat="Special Meeting"] { background: #8e5572; }
 .mc-type-badge[data-cat="Committee of the Whole"], .mcc-type-badge[data-cat="Committee of the Whole"] { background: #5b7f5b; }
 .mc-type-badge[data-cat="Planning Board"], .mcc-type-badge[data-cat="Planning Board"] { background: #b9822f; }
+.mc-type-badge[data-cat="School Committee"], .mcc-type-badge[data-cat="School Committee"] { background: #6a4c93; }
 .mc-compact { display: none; align-items: center; gap: 10px; padding: 9px 4px; border-bottom: 1px solid var(--line); text-decoration: none; color: inherit; }
 .mcc-date { color: var(--muted); font-size: 12px; width: 68px; flex-shrink: 0; }
 .mcc-title { font-size: 13.5px; font-weight: 700; color: var(--navy); flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
