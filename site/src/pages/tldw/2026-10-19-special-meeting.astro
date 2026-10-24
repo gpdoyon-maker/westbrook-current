@@ -3,6 +3,13 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
 import '../../styles/tldw.css';
 
 const VIDEO_URL = 'https://vimeo.com/1237411633';
+
+function tsLink(ts: string) {
+  const parts = ts.split(':').map(Number);
+  const [h, m, s] = parts.length === 3 ? parts : [0, parts[0], parts[1]];
+  const frag = (h ? `${h}h` : '') + `${m}m${String(s).padStart(2, '0')}s`;
+  return `${VIDEO_URL}#t=${frag}`;
+}
 ---
 <SiteLayout
   title="TL;DW! Westbrook City Council — October 19, 2026 | Westbrook Currents"
@@ -24,7 +31,7 @@ const VIDEO_URL = 'https://vimeo.com/1237411633';
       <svg viewBox="0 0 24 24" fill="none" stroke="#087ca7" stroke-width="2"><rect x="2" y="5" width="15" height="14" rx="2"></rect><path d="M17 10l5-3v10l-5-3z"></path></svg>
       <a class="watch" href={VIDEO_URL} target="_blank" rel="noopener noreferrer">Watch the full video on Vimeo &#8599;</a>
     </div>
-    <p class="tldw-scrub-note">Each item below shows a timestamp like <b>57:13</b> (minutes:seconds) or <b>1:52:13</b> (hours:minutes:seconds) &mdash; that's the exact spot in the video above. Open the video, then jump to the time shown.</p>
+    <p class="tldw-scrub-note">Each item below shows a timestamp like <b>57:13</b> (minutes:seconds) or <b>1:52:13</b> (hours:minutes:seconds). Click it to jump straight to that moment in the video.</p>
 
     <p class="intro-line">Quick read: a Saccarappa Park deal and a data center ban both move forward quietly. The real fireworks are below &mdash; a proposal to rename the Recreation &amp; Conservation Commission turned into the sharpest floor fight in months.</p>
 
@@ -32,7 +39,7 @@ const VIDEO_URL = 'https://vimeo.com/1237411633';
     <details class="tldw-item">
       <summary>
         <span class="ti-text">
-          <span class="ti-top"><span class="ti-ts">10:46</span></span>
+          <span class="ti-top"><a class="ti-ts" href={tsLink('10:46')} target="_blank" rel="noopener noreferrer">10:46</a></span>
           <span class="ti-title">Roll Call &amp; Pledge</span>
           <span class="ti-brief">All seven members present. Quorum established.</span>
         </span>
@@ -48,7 +55,7 @@ const VIDEO_URL = 'https://vimeo.com/1237411633';
     <details class="tldw-item">
       <summary>
         <span class="ti-text">
-          <span class="ti-top"><span class="ti-ts">12:21</span></span>
+          <span class="ti-top"><a class="ti-ts" href={tsLink('12:21')} target="_blank" rel="noopener noreferrer">12:21</a></span>
           <span class="ti-title">Route 302 Corridor Study</span>
           <span class="ti-brief">A regional safety study, still in its early data-gathering phase.</span>
         </span>
@@ -63,7 +70,7 @@ const VIDEO_URL = 'https://vimeo.com/1237411633';
     <details class="tldw-item">
       <summary>
         <span class="ti-text">
-          <span class="ti-top"><span class="ti-ts">23:34</span></span>
+          <span class="ti-top"><a class="ti-ts" href={tsLink('23:34')} target="_blank" rel="noopener noreferrer">23:34</a></span>
           <span class="ti-title">Curbside Brush &amp; Leaf Collection</span>
           <span class="ti-brief">This year's collection schedule for brush and leaves.</span>
         </span>
@@ -77,7 +84,7 @@ const VIDEO_URL = 'https://vimeo.com/1237411633';
     <details class="tldw-item">
       <summary>
         <span class="ti-text">
-          <span class="ti-top"><span class="ti-ts">26:21</span></span>
+          <span class="ti-top"><a class="ti-ts" href={tsLink('26:21')} target="_blank" rel="noopener noreferrer">26:21</a></span>
           <span class="ti-title">Absentee Voting &amp; Election Day (Nov. 3)</span>
           <span class="ti-brief">Deadlines and extended hours at the Clerk's Office.</span>
         </span>
@@ -91,7 +98,7 @@ const VIDEO_URL = 'https://vimeo.com/1237411633';
     <details class="tldw-item">
       <summary>
         <span class="ti-text">
-          <span class="ti-top"><span class="ti-ts">27:10</span></span>
+          <span class="ti-top"><a class="ti-ts" href={tsLink('27:10')} target="_blank" rel="noopener noreferrer">27:10</a></span>
           <span class="ti-title">Parking Ordinance Review, Prospect Street, Shaughnessy Recognition &amp; Student-Athlete Statement</span>
           <span class="ti-brief">Three unrelated items covered in one segment.</span>
         </span>
@@ -112,7 +119,7 @@ const VIDEO_URL = 'https://vimeo.com/1237411633';
     <details class="tldw-item">
       <summary>
         <span class="ti-text">
-          <span class="ti-top"><span class="ti-ts">33:05</span></span>
+          <span class="ti-top"><a class="ti-ts" href={tsLink('33:05')} target="_blank" rel="noopener noreferrer">33:05</a></span>
           <span class="ti-title">Meeting Start Time (6 pm vs. 7 pm)</span>
           <span class="ti-brief">Turcotte questions the 2024 switch to a 6 pm start.</span>
         </span>
@@ -130,7 +137,7 @@ const VIDEO_URL = 'https://vimeo.com/1237411633';
     <details class="tldw-item">
       <summary>
         <span class="ti-text">
-          <span class="ti-top"><span class="ti-ts">35:42</span></span>
+          <span class="ti-top"><a class="ti-ts" href={tsLink('35:42')} target="_blank" rel="noopener noreferrer">35:42</a></span>
           <span class="ti-title">Recreation &amp; Conservation Commission Rename (preview)</span>
           <span class="ti-brief">Early objections, before the order itself was formally read.</span>
         </span>
@@ -146,7 +153,7 @@ const VIDEO_URL = 'https://vimeo.com/1237411633';
     <details class="tldw-item">
       <summary>
         <span class="ti-text">
-          <span class="ti-top"><span class="ti-ts">47:30</span></span>
+          <span class="ti-top"><a class="ti-ts" href={tsLink('47:30')} target="_blank" rel="noopener noreferrer">47:30</a></span>
           <span class="ti-title">Orders 2026-109, 110, 111, 112, 114 &mdash; Consent Block</span>
           <span class="ti-brief">Fire truck bid, asset forfeiture, Mill Brook Preserve, Rock Row Trail, landslide vendor list &mdash; no discussion.</span>
         </span>
@@ -160,7 +167,7 @@ const VIDEO_URL = 'https://vimeo.com/1237411633';
     <details class="tldw-item">
       <summary>
         <span class="ti-text">
-          <span class="ti-top"><span class="ti-ts">49:36</span></span>
+          <span class="ti-top"><a class="ti-ts" href={tsLink('49:36')} target="_blank" rel="noopener noreferrer">49:36</a></span>
           <span class="ti-title">Order 2026-113 &mdash; Credere Associates Task Order No. 11 (Riverwalk North)</span>
           <span class="ti-brief">Pulled out of the consent block, funded via an EPA Brownfields grant.</span>
         </span>
@@ -176,7 +183,7 @@ const VIDEO_URL = 'https://vimeo.com/1237411633';
     <details class="tldw-item">
       <summary>
         <span class="ti-text">
-          <span class="ti-top"><span class="ti-ts">51:12</span></span>
+          <span class="ti-top"><a class="ti-ts" href={tsLink('51:12')} target="_blank" rel="noopener noreferrer">51:12</a></span>
           <span class="ti-title">Resolve 2026-18 &mdash; Endorsing Community Development Block Grant Applications</span>
           <span class="ti-brief">Two CDBG applications: a family stability grant and Brown Street design funding.</span>
         </span>
@@ -190,7 +197,7 @@ const VIDEO_URL = 'https://vimeo.com/1237411633';
     <details class="tldw-item" id="order-2026-115">
       <summary>
         <span class="ti-text">
-          <span class="ti-top"><span class="ti-ts">54:44</span></span>
+          <span class="ti-top"><a class="ti-ts" href={tsLink('54:44')} target="_blank" rel="noopener noreferrer">54:44</a></span>
           <span class="ti-title">Order 2026-115 &mdash; Memorandum of Understanding (MOU) with Quaker Lane Associates, LLC &mdash; Saccarappa Park</span>
           <span class="ti-brief">A new deal tied to the apartments going up next to the park.</span>
         </span>
@@ -206,7 +213,7 @@ const VIDEO_URL = 'https://vimeo.com/1237411633';
     <details class="tldw-item" id="order-2026-116" open>
       <summary>
         <span class="ti-text">
-          <span class="ti-top"><span class="ti-ts">57:13</span><span class="ti-hot">&#128293; Feisty</span></span>
+          <span class="ti-top"><a class="ti-ts" href={tsLink('57:13')} target="_blank" rel="noopener noreferrer">57:13</a><span class="ti-hot">&#128293; Feisty</span></span>
           <span class="ti-title">Recreation &amp; Conservation Commission Rename</span>
           <span class="ti-brief">The meeting's real floor fight &mdash; passed 6&ndash;1 after sharp public pushback.</span>
         </span>
@@ -219,28 +226,28 @@ const VIDEO_URL = 'https://vimeo.com/1237411633';
         <p>Every other item passed without debate. This one drew two rounds of public comment, a sharp council exchange, a procedural clash with the chair, and the only non-unanimous vote of the night.</p>
 
         <p class="label">The case against (spoken during general public comment, before this order was formally read &mdash; see timestamps)</p>
-        <p class="tldw-quote">&ldquo;I object to the replacement of conservation in the committee to be titled with sustainability. Sustainability is a term that is too often used by companies and government entities in various forms of greenwashing&hellip; These changes under consideration should have followed a new comprehensive plan.&rdquo;<cite>&mdash; David Von Segern, former Rec &amp; Con Commission member (public comment) &middot; 35:42</cite></p>
-        <p class="tldw-quote">&ldquo;[We requested a joint workshop with council.] It wasn't [scheduled]. Don't know why, I can guess, but I don't like to assume&hellip; rather than building roadblocks and taking the power of many and consolidating&hellip; those levers of power into the hands of a few. I don't think we like that when we see it a little south of us in D.C.&rdquo;<cite>&mdash; Matt Brunner, Chair, Recreation &amp; Conservation Commission (public comment) &middot; 38:45</cite></p>
-        <p class="tldw-quote">&ldquo;Our superpower is suggestion&hellip; our other superpower&hellip; has been holding the administration accountable for some things that were overlooked&hellip; I think to get rid of that check, that balance, is a dangerous and slippery slope.&rdquo;<cite>&mdash; Matt Brunner &middot; 38:45</cite></p>
+        <p class="tldw-quote">&ldquo;I object to the replacement of conservation in the committee to be titled with sustainability. Sustainability is a term that is too often used by companies and government entities in various forms of greenwashing&hellip; These changes under consideration should have followed a new comprehensive plan.&rdquo;<cite>&mdash; David Von Segern, former Rec &amp; Con Commission member (public comment) &middot; <a class="ts-link" href={tsLink('35:42')} target="_blank" rel="noopener noreferrer">35:42</a></cite></p>
+        <p class="tldw-quote">&ldquo;[We requested a joint workshop with council.] It wasn't [scheduled]. Don't know why, I can guess, but I don't like to assume&hellip; rather than building roadblocks and taking the power of many and consolidating&hellip; those levers of power into the hands of a few. I don't think we like that when we see it a little south of us in D.C.&rdquo;<cite>&mdash; Matt Brunner, Chair, Recreation &amp; Conservation Commission (public comment) &middot; <a class="ts-link" href={tsLink('38:45')} target="_blank" rel="noopener noreferrer">38:45</a></cite></p>
+        <p class="tldw-quote">&ldquo;Our superpower is suggestion&hellip; our other superpower&hellip; has been holding the administration accountable for some things that were overlooked&hellip; I think to get rid of that check, that balance, is a dangerous and slippery slope.&rdquo;<cite>&mdash; Matt Brunner &middot; <a class="ts-link" href={tsLink('38:45')} target="_blank" rel="noopener noreferrer">38:45</a></cite></p>
 
         <p class="label">The counterpoint</p>
-        <p class="tldw-quote">&ldquo;I do believe that at the heart of conservation is sustainability. They are very interchangeable&hellip; I really go and look at the duties and the charge of the committee&hellip; I would feel comfortable with that.&rdquo;<cite>&mdash; Councilor Michael Shaughnessy &middot; 1:16:26</cite></p>
+        <p class="tldw-quote">&ldquo;I do believe that at the heart of conservation is sustainability. They are very interchangeable&hellip; I really go and look at the duties and the charge of the committee&hellip; I would feel comfortable with that.&rdquo;<cite>&mdash; Councilor Michael Shaughnessy &middot; <a class="ts-link" href={tsLink('1:16:26')} target="_blank" rel="noopener noreferrer">1:16:26</a></cite></p>
         <p>Shaughnessy proposed the amendment ultimately adopted with the order: a one-year report-back on how the new committee performs.</p>
-        <p class="tldw-quote">&ldquo;We have been transparent through this whole process&hellip; it's going to be up to the council to decide whether or not you think we've hit the mark.&rdquo;<cite>&mdash; City Administrator Angela Holmes &middot; 1:22:16</cite></p>
+        <p class="tldw-quote">&ldquo;We have been transparent through this whole process&hellip; it's going to be up to the council to decide whether or not you think we've hit the mark.&rdquo;<cite>&mdash; City Administrator Angela Holmes &middot; <a class="ts-link" href={tsLink('1:22:16')} target="_blank" rel="noopener noreferrer">1:22:16</a></cite></p>
         <p>Holmes' broader rationale: the ordinance has been in legal tension with the city charter's council/mayor authority since the commission's creation in 1970; the purpose/membership/duties/scope review was applied consistently across every city board and commission, not singled out here; and members may reapply, as happened when the Library Advisory Committee was previously restructured.</p>
 
         <p class="label">The dissent</p>
-        <p class="tldw-quote">&ldquo;I've been observing this administration&hellip; removing a lot of the opportunities for our constituents to have a voice&hellip; this is probably the most disgusting thing I've seen on the council in the 11 years I've been on the council&hellip; I think it's underhanded, I think it's shady, I think it is incredibly disrespectful to the constituents&hellip; I will be voting against this regardless of how it goes.&rdquo;<cite>&mdash; Councilor Anna Turcotte &middot; 1:19:00</cite></p>
+        <p class="tldw-quote">&ldquo;I've been observing this administration&hellip; removing a lot of the opportunities for our constituents to have a voice&hellip; this is probably the most disgusting thing I've seen on the council in the 11 years I've been on the council&hellip; I think it's underhanded, I think it's shady, I think it is incredibly disrespectful to the constituents&hellip; I will be voting against this regardless of how it goes.&rdquo;<cite>&mdash; Councilor Anna Turcotte &middot; <a class="ts-link" href={tsLink('1:19:00')} target="_blank" rel="noopener noreferrer">1:19:00</a></cite></p>
         <p>Turcotte also clashed procedurally with President Munro, who asked her to &ldquo;focus on the merits of the issue and stop interrupting&rdquo;:</p>
-        <p class="tldw-quote">&ldquo;You can't shut me up, okay? I'm speaking&hellip; This is the second time you interrupted me. Point of order. This is disgusting.&rdquo;<cite>&mdash; Councilor Anna Turcotte &middot; 1:21:37</cite></p>
+        <p class="tldw-quote">&ldquo;You can't shut me up, okay? I'm speaking&hellip; This is the second time you interrupted me. Point of order. This is disgusting.&rdquo;<cite>&mdash; Councilor Anna Turcotte &middot; <a class="ts-link" href={tsLink('1:21:37')} target="_blank" rel="noopener noreferrer">1:21:37</a></cite></p>
 
         <p class="label">Mayor's rebuttal (defending staff, not re-arguing the policy)</p>
-        <p class="tldw-quote">&ldquo;I just want to respond directly to the characterization of the city administration as corrupt, underhanded, or shady. Those are very serious accusations&hellip; an honest disagreement is not evidence of dishonesty. And a different judgment is not evidence of corruption.&rdquo;<cite>&mdash; Mayor David Morse &middot; 1:30:10</cite></p>
+        <p class="tldw-quote">&ldquo;I just want to respond directly to the characterization of the city administration as corrupt, underhanded, or shady. Those are very serious accusations&hellip; an honest disagreement is not evidence of dishonesty. And a different judgment is not evidence of corruption.&rdquo;<cite>&mdash; Mayor David Morse &middot; <a class="ts-link" href={tsLink('1:30:10')} target="_blank" rel="noopener noreferrer">1:30:10</a></cite></p>
 
         <p class="label">Follow-up from the public, after the vote context was set</p>
-        <p class="tldw-quote">&ldquo;[Staff said] there's nothing that legally precludes this from happening. It's a fancy way of saying we don't have to do it&hellip; If time sensitivity was important here, I don't think we'd be sunsetting everybody, requiring new applications&hellip;&rdquo;<cite>&mdash; Matt Brunner (second public comment) &middot; 1:35:30</cite></p>
+        <p class="tldw-quote">&ldquo;[Staff said] there's nothing that legally precludes this from happening. It's a fancy way of saying we don't have to do it&hellip; If time sensitivity was important here, I don't think we'd be sunsetting everybody, requiring new applications&hellip;&rdquo;<cite>&mdash; Matt Brunner (second public comment) &middot; <a class="ts-link" href={tsLink('1:35:30')} target="_blank" rel="noopener noreferrer">1:35:30</a></cite></p>
 
-        <span class="tldw-decision">&#10003; Approved 6&ndash;1 by roll call [1:41:51] (Councilor Turcotte dissenting), with Shaughnessy's one-year review amendment attached.</span>
+        <span class="tldw-decision">&#10003; Approved 6&ndash;1 by roll call [<a class="ts-link" href={tsLink('1:41:51')} target="_blank" rel="noopener noreferrer">1:41:51</a>] (Councilor Turcotte dissenting), with Shaughnessy's one-year review amendment attached.</span>
         <p class="label">Action items</p>
         <ul>
           <li>Open a new online application form for the Recreation &amp; Sustainability Committee once adopted &mdash; Assignee: City Administration | Deadline: within the week following adoption.</li>
@@ -253,7 +260,7 @@ const VIDEO_URL = 'https://vimeo.com/1237411633';
     <details class="tldw-item">
       <summary>
         <span class="ti-text">
-          <span class="ti-top"><span class="ti-ts">1:42:05</span></span>
+          <span class="ti-top"><a class="ti-ts" href={tsLink('1:42:05')} target="_blank" rel="noopener noreferrer">1:42:05</a></span>
           <span class="ti-title">Order 2026-117 &mdash; Mass Gathering Permit &amp; Road Closure (Halloween on Main Street)</span>
           <span class="ti-brief">Main Street closure for the Together Days Committee's Halloween event.</span>
         </span>
@@ -267,7 +274,7 @@ const VIDEO_URL = 'https://vimeo.com/1237411633';
     <details class="tldw-item">
       <summary>
         <span class="ti-text">
-          <span class="ti-top"><span class="ti-ts">1:48:03</span></span>
+          <span class="ti-top"><a class="ti-ts" href={tsLink('1:48:03')} target="_blank" rel="noopener noreferrer">1:48:03</a></span>
           <span class="ti-title">Order 2026-118 &mdash; Bureau of Highway Safety Grant Funds (First Reading)</span>
           <span class="ti-brief">$40,351.60 across five sub-grants for police training and enforcement.</span>
         </span>
@@ -283,7 +290,7 @@ const VIDEO_URL = 'https://vimeo.com/1237411633';
     <details class="tldw-item">
       <summary>
         <span class="ti-text">
-          <span class="ti-top"><span class="ti-ts">1:50:41</span></span>
+          <span class="ti-top"><a class="ti-ts" href={tsLink('1:50:41')} target="_blank" rel="noopener noreferrer">1:50:41</a></span>
           <span class="ti-title">Order 2026-119 &mdash; Drainage Easement at 41 Brown Street (First Reading)</span>
           <span class="ti-brief">An easement with Portland Water District to replace a failing culvert.</span>
         </span>
@@ -299,7 +306,7 @@ const VIDEO_URL = 'https://vimeo.com/1237411633';
     <details class="tldw-item">
       <summary>
         <span class="ti-text">
-          <span class="ti-top"><span class="ti-ts">1:52:13</span></span>
+          <span class="ti-top"><a class="ti-ts" href={tsLink('1:52:13')} target="_blank" rel="noopener noreferrer">1:52:13</a></span>
           <span class="ti-title">Order 2026-120 &mdash; Land Use Ordinance: Data Center Ban (First Reading)</span>
           <span class="ti-brief">Prohibits data centers citywide, following a 180-day moratorium.</span>
         </span>
@@ -317,7 +324,7 @@ const VIDEO_URL = 'https://vimeo.com/1237411633';
     <details class="tldw-item">
       <summary>
         <span class="ti-text">
-          <span class="ti-top"><span class="ti-ts">1:55:35</span></span>
+          <span class="ti-top"><a class="ti-ts" href={tsLink('1:55:35')} target="_blank" rel="noopener noreferrer">1:55:35</a></span>
           <span class="ti-title">Closing Public Comment &amp; Executive Session</span>
           <span class="ti-brief">Council enters executive session; the transcript ends there.</span>
         </span>

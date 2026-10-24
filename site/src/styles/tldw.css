@@ -55,7 +55,10 @@ details.tldw-item > summary { display: flex; gap: 12px; align-items: flex-start;
 details.tldw-item > summary::-webkit-details-marker { display: none; }
 .ti-text { flex: 1; min-width: 0; }
 .ti-top { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
-.ti-ts { color: var(--accent); font-weight: 800; font-size: 13px; font-variant-numeric: tabular-nums; }
+.ti-ts { color: var(--accent); font-weight: 800; font-size: 13px; font-variant-numeric: tabular-nums; text-decoration: none; }
+.ti-ts:hover { text-decoration: underline; }
+.ts-link { text-decoration: underline; text-decoration-style: dotted; text-underline-offset: 2px; }
+.ts-link:hover { text-decoration-style: solid; }
 .ti-hot { display: inline-flex; align-items: center; gap: 3px; padding: 1px 7px; border-radius: 999px; background: var(--tint); color: var(--accent); font-size: 11px; font-weight: 800; }
 .ti-title { display: block; color: var(--navy); font-size: 17px; font-weight: 800; margin-top: 3px; }
 .ti-brief { display: block; color: var(--muted); font-size: 14px; margin-top: 2px; }
