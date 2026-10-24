@@ -44,6 +44,9 @@ button, select { cursor: pointer; }
 .site-nav { display: flex; align-items: center; gap: 24px; }
 .site-nav a { color: #fff; font-size: 14px; font-weight: 700; text-decoration: none; }
 .site-nav a:hover, .site-nav a[aria-current='page'] { color: #82d7ef; }
+/* Base .new-pill rule duplicated here (also defined in help.css) so the nav badge works on pages that don't load help.css. */
+.new-pill { position: absolute; top: -10px; right: 14px; padding: 2px 10px; border-radius: 999px; color: #fff; font-size: 11px; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; }
+.new-pill.nav-new-pill { position: static; display: inline-block; top: auto; right: auto; margin-left: 6px; background: #c2185b; vertical-align: 2px; }
 .site-nav .submit-event-link { align-self: center; padding: 9px 12px; border-radius: 4px; color: var(--navy); background: #82d7ef; }
 .site-nav .submit-event-link:hover { color: var(--navy); background: #a4e5f5; }
 .menu-toggle { display: none; border: 1px solid #6b8799; border-radius: 4px; padding: 6px 10px; color: white; background: transparent; font-size: 21px; line-height: 1; }
