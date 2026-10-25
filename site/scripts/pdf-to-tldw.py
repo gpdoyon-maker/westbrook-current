@@ -121,8 +121,10 @@ def parse(pdf):
             continue
         if text.startswith('Produced by Westbrook Currents'):
             continue
-        if text == 'How this was made':
-            if k < len(rest):
+        if p[0] == 'How this was made':
+            if len(p) > 1:
+                how_made = join(p[1:])
+            elif k < len(rest):
                 how_made = join(rest[k])
                 k += 1
             continue
@@ -156,6 +158,7 @@ def parse(pdf):
 
         # heading with timestamp at the end of its (possibly two-line) first lines,
         # followed by body text in the same paragraph
+        took_heading = False
         if len(p) > 1:
             for n in (1, 2):
                 if n < len(p):
@@ -165,7 +168,15 @@ def parse(pdf):
                         blocks.append({'t': 'h', 'x': h, 'ts': ts})
                         text = join(p[n:])
                         state = None
+                        took_heading = True
                         break
+
+        # a short sub-heading line glued to the paragraph that follows it
+        if (state is None and not took_heading and len(p) > 1 and len(p[0]) < 75 and p[0][-1:] not in '.?!:;,”"—-'
+                and not p[0].startswith(('“', '—', '•', '[')) and p[1][:1].isupper() and len(join(p[1:])) > 80
+                and not any(re.search(TS + r'\s*$', ln) for ln in p[:2])):
+            blocks.append({'t': 'h', 'x': p[0], 'ts': None})
+            text = join(p[1:])
 
         if state == 'kd':
             items = []

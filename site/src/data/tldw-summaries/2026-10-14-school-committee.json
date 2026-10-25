@@ -538,12 +538,8 @@
   {
    "t": "p",
    "x": "None."
-  },
-  {
-   "t": "p",
-   "x": "How this was made This summary was produced from the meeting video (linked above, hosted on the City's Vimeo showcase). The audio was downloaded with Downie 4 and transcribed with speaker diarization using MacWhisper. Claude (Anthropic's AI) cross-checked names against the official School Committee roster, attributed speakers from context (introductions, roll-call order, direct address by the Chair) rather than the raw diarization labels alone, and drafted this summary and the quoted excerpts. Quotes are lightly cleaned of filler words/false starts but not reworded. No agenda or back-up packet was published for this meeting (checked westbrookschools.org, 2026-10-24); this summary is drawn from the video/transcript alone. Review tier: Not reviewed."
   }
  ],
- "howMade": "",
+ "howMade": "This summary was produced from the meeting video (linked above, hosted on the City's Vimeo showcase). The audio was downloaded with Downie 4 and transcribed with speaker diarization using MacWhisper. Claude (Anthropic's AI) cross-checked names against the official School Committee roster, attributed speakers from context (introductions, roll-call order, direct address by the Chair) rather than the raw diarization labels alone, and drafted this summary and the quoted excerpts. Quotes are lightly cleaned of filler words/false starts but not reworded. No agenda or back-up packet was published for this meeting (checked westbrookschools.org, 2026-10-24); this summary is drawn from the video/transcript alone. Review tier: Not reviewed.",
  "slug": "2026-10-14-school-committee"
 }

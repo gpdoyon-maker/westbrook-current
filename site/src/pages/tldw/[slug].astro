@@ -87,7 +87,11 @@ function brief(body: any[]) {
   const p = body.find((b) => b.t === 'p');
   if (!p) return '';
   const s = p.x.replace(/\[\d{1,2}:\d{2}(?::\d{2})?\]\s*/g, '');
-  const first = s.split(/(?<=[.!?])\s/)[0];
+  // first sentence, without stopping at abbreviations like "Dr." or "M.R.S.A."
+  const abbr = /(?:\b(?:Dr|Mr|Mrs|Ms|St|Jr|Sr|Sen|Rep|Gov|No|vs|etc)|\b[A-Z]|\.[A-Z])\.$/;
+  const pieces = s.split(/(?<=[.!?])\s+/);
+  let first = pieces[0];
+  for (let i = 1; i < pieces.length && abbr.test(first); i++) first += ' ' + pieces[i];
   return first.length > 150 ? first.slice(0, 147).trimEnd() + '…' : first;
 }
 
@@ -108,6 +112,7 @@ const pageTitle = `TL;DW! ${heading} | Westbrook Currents`;
       <div class="tldw-video-box">
         <svg viewBox="0 0 24 24" fill="none" stroke="#087ca7" stroke-width="2"><rect x="2" y="5" width="15" height="14" rx="2"></rect><path d="M17 10l5-3v10l-5-3z"></path></svg>
         <a class="watch" href={videoUrl} target="_blank" rel="noopener noreferrer">Watch the full video on Vimeo &#8599;</a>
+        {data.packetUrl && <a class="watch" href={data.packetUrl} target="_blank" rel="noopener noreferrer">Meeting packet{data.packetNote ? ` ${data.packetNote}` : ''} &#8599;</a>}
       </div>
     )}
     <p class="tldw-scrub-note">Each item shows a timestamp like <b>57:13</b> (minutes:seconds) or <b>1:52:13</b> (hours:minutes:seconds). Tap it to jump to that moment in the video.</p>

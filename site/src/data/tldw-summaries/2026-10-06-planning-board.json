@@ -214,8 +214,13 @@
    "x": "JB Brown & Sons and Westbrook Development Corporation returned with a revised, ~306-unit mixed market-rate/affordable rental project (down from an original concept of 800+ units, and from 322 at the last workshop) on ~68 acres between Stroudwater Street and the arterial, near Westbrook Middle School. A workshop item — no approval was requested or voted on tonight."
   },
   {
+   "t": "h",
+   "x": "Why it's this meeting's one real controversy",
+   "ts": null
+  },
+  {
    "t": "p",
-   "x": "Why it's this meeting's one real controversy Nine members of the public spoke, almost entirely on one theme: routing an estimated 500+ daily vehicle trips onto two-lane Stroudwater Street (which becomes Westbrook Street in Portland) instead of the limited-access arterial bordering the back of the site."
+   "x": "Nine members of the public spoke, almost entirely on one theme: routing an estimated 500+ daily vehicle trips onto two-lane Stroudwater Street (which becomes Westbrook Street in Portland) instead of the limited-access arterial bordering the back of the site."
   },
   {
    "t": "h",
@@ -333,8 +338,13 @@
    "x": "The Village Review Overlay Zone (VROZ) piece drew no opposition: staff proposed returning VROZ architectural review authority to the Planning Board and sunsetting the VROZ committee, which longtime member Robin Tannenbaum supported: “as a founding member… times have changed… let her go.” The Zoning Board of Appeals (ZBA) piece was different."
   },
   {
+   "t": "h",
+   "x": "The proposal (Jenny Franceschi, Assistant City Administrator)",
+   "ts": null
+  },
+  {
    "t": "p",
-   "x": "The proposal (Jenny Franceschi, Assistant City Administrator) Remove a property owner's ability to appeal a Code Enforcement Officer (CEO) enforcement action to the Zoning Board of Appeals (ZBA) — that path would go to Superior Court instead. Appeals of a CEO's interpretation of the ordinance, or of a permit denial/approval, would still go to the ZBA unchanged. Rationale: the City now sends separate attorneys for the CEO and the ZBA to every enforcement-action hearing, which Franceschi said has become a real cost driver."
+   "x": "Remove a property owner's ability to appeal a Code Enforcement Officer (CEO) enforcement action to the Zoning Board of Appeals (ZBA) — that path would go to Superior Court instead. Appeals of a CEO's interpretation of the ordinance, or of a permit denial/approval, would still go to the ZBA unchanged. Rationale: the City now sends separate attorneys for the CEO and the ZBA to every enforcement-action hearing, which Franceschi said has become a real cost driver."
   },
   {
    "t": "h",
@@ -407,12 +417,8 @@
   {
    "t": "a",
    "x": "Revisit the Planning Board's meeting-date policy for future election years — Assignee: City Administration | Deadline: none set."
-  },
-  {
-   "t": "p",
-   "x": "How this was made This summary was produced from the meeting video (linked above, hosted on the City's Vimeo showcase). The audio was downloaded with Downie 4 and transcribed with speaker diarization using MacWhisper. Claude (Anthropic's AI) cross-checked names against the official Planning Board roster, attributed speakers from context (introductions, roll-call order, direct address by the Chair) rather than the raw diarization labels alone, and drafted this summary and the quoted excerpts. Quotes are lightly cleaned of filler words/false starts but not reworded. Review tier: Not reviewed."
   }
  ],
- "howMade": "",
+ "howMade": "This summary was produced from the meeting video (linked above, hosted on the City's Vimeo showcase). The audio was downloaded with Downie 4 and transcribed with speaker diarization using MacWhisper. Claude (Anthropic's AI) cross-checked names against the official Planning Board roster, attributed speakers from context (introductions, roll-call order, direct address by the Chair) rather than the raw diarization labels alone, and drafted this summary and the quoted excerpts. Quotes are lightly cleaned of filler words/false starts but not reworded. Review tier: Not reviewed.",
  "slug": "2026-10-06-planning-board"
 }

@@ -55,8 +55,13 @@
    "x": "City Administrator Angela Holmes presented a repeal-and-replace of Code of Ordinances Chapter 7, Article III (Recreation & Conservation Commission), plus related amendments to Chapter 295 (Trees, Green Space) — the same rewrite that later passed as Order 2026-116 at the Oct 19, 2026 Special City Council Meeting. This is the Committee of the Whole's review and referral step; no commission members were present or spoke tonight despite two invitations from the Chair."
   },
   {
+   "t": "h",
+   "x": "Staff's rationale (City Administrator Angela Holmes)",
+   "ts": null
+  },
+  {
    "t": "p",
-   "x": "Staff's rationale (City Administrator Angela Holmes) The 1970 ordinance (amended 1987, 2018) carried over 1960s state-statute language that assigns operational (department), executive (mayoral), and legislative (council) authority to what is legally only an advisory body — conflicting with the City Charter. Staff met with the Commission four separate times, including a paused first attempt after initial pushback, before drafting this version; that feedback is included in the packet. The"
+   "x": "The 1970 ordinance (amended 1987, 2018) carried over 1960s state-statute language that assigns operational (department), executive (mayoral), and legislative (council) authority to what is legally only an advisory body — conflicting with the City Charter. Staff met with the Commission four separate times, including a paused first attempt after initial pushback, before drafting this version; that feedback is included in the packet. The"
   },
   {
    "t": "p",
@@ -166,12 +171,8 @@
   {
    "t": "p",
    "x": "None."
-  },
-  {
-   "t": "p",
-   "x": "How this was made This summary was produced from the meeting video (linked above, hosted on the City's Vimeo showcase). The audio was downloaded with Downie 4 and transcribed with speaker diarization using MacWhisper. Claude (Anthropic's AI) cross-checked names against the official city council roster, attributed speakers from context (introductions, roll-call order, direct address by the Chair) rather than the raw diarization labels alone, and drafted this summary and the quoted excerpts. Quotes are lightly cleaned of filler words/false starts but not reworded. Review tier: Not reviewed."
   }
  ],
- "howMade": "",
+ "howMade": "This summary was produced from the meeting video (linked above, hosted on the City's Vimeo showcase). The audio was downloaded with Downie 4 and transcribed with speaker diarization using MacWhisper. Claude (Anthropic's AI) cross-checked names against the official city council roster, attributed speakers from context (introductions, roll-call order, direct address by the Chair) rather than the raw diarization labels alone, and drafted this summary and the quoted excerpts. Quotes are lightly cleaned of filler words/false starts but not reworded. Review tier: Not reviewed.",
  "slug": "2026-10-05-committee-of-the-whole"
 }
