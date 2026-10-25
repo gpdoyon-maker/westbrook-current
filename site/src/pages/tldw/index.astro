@@ -101,7 +101,7 @@ function cardCta(m: any) {
               data-topics={m.topics.join('|')}
               data-search={[m.title, m.blurb, ...m.tags, ...m.topics, m.category].join(' ').toLowerCase()}
             >
-              <a class="meeting-card mc-full" href={cardHref(m)} target={m.slug === '2026-10-19-special-meeting' ? undefined : '_blank'} rel={m.slug === '2026-10-19-special-meeting' ? undefined : 'noopener noreferrer'}>
+              <a class="meeting-card mc-full" href={cardHref(m)}>
                 <div class="mc-top">
                   <span class="mc-type-badge" data-cat={m.category}>{m.category}</span>
                   <span class="mc-date">{m.dateLabel}</span>
@@ -115,7 +115,7 @@ function cardCta(m: any) {
                 <span class="mc-go">{cardCta(m)}</span>
               </a>
 
-              <a class="mc-compact" href={cardHref(m)} target={m.slug === '2026-10-19-special-meeting' ? undefined : '_blank'} rel={m.slug === '2026-10-19-special-meeting' ? undefined : 'noopener noreferrer'}>
+              <a class="mc-compact" href={cardHref(m)}>
                 <span class="mcc-date">{m.dateLabel}</span>
                 <span class="mcc-type-badge" data-cat={m.category}>{m.category.replace('Committee of the Whole', 'CoW').replace(' Meeting', '').replace('Planning Board', 'PB').replace('School Committee', 'School')}</span>
                 <span class="mcc-title">{m.title}</span>
