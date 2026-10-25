@@ -20,11 +20,20 @@ for (const m of meetings as any[]) {
   }
 }
 
+// Meetings with an HTML summary open that page; the PDF is only a link on that page.
+// Meetings not yet converted still link to their PDF until their HTML page exists.
+const htmlSlugs = new Set(
+  Object.keys(import.meta.glob('../../data/tldw-summaries/*.json')).map((p) => p.split('/').pop()!.replace('.json', ''))
+);
+htmlSlugs.add('2026-10-19-special-meeting'); // hand-built page
+function hasHtml(m: any) {
+  return htmlSlugs.has(m.slug);
+}
 function cardHref(m: any) {
-  return m.slug === '2026-10-19-special-meeting' ? `/tldw/${m.slug}` : m.pdfHref;
+  return hasHtml(m) ? `/tldw/${m.slug}` : m.pdfHref;
 }
 function cardCta(m: any) {
-  return m.slug === '2026-10-19-special-meeting' ? 'Read the TL;DW! →' : 'Read the full summary (PDF) →';
+  return hasHtml(m) ? 'Read the TL;DW! →' : 'Read the full summary (PDF) →';
 }
 ---
 <SiteLayout
