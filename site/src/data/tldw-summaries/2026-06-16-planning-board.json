@@ -1,0 +1,86 @@
+{
+ "title": "Westbrook Planning Board — Planning Board Meeting",
+ "fields": {
+  "Date": "Tuesday, June 16, 2026",
+  "Time": "7:00 PM",
+  "Location": "Westbrook High School (Room 114), 125 Stroudwater St. (Hybrid via Zoom)",
+  "Video": "https://vimeo.com/1201955612",
+  "Packet": "https://www.westbrookmaine.gov/AgendaCenter/ViewFile/Agenda/_06162026-1010"
+ },
+ "packetUrl": "https://www.westbrookmaine.gov/AgendaCenter/ViewFile/Agenda/_06162026-1010",
+ "packetNote": "",
+ "note": "This summary highlights the meeting's key discussions and decisions, with direct quotes and timestamps for verification — it is not a substitute for watching the full meeting. Only four of nine board members were present tonight, including Vice Chair John Turcotte presiding in Chair Larry McWilliams' absence. For complete context, nuance, and anything not covered here, watch the full video at the link above. (Produced by: WestbrookCurrents.com)",
+ "blocks": [
+  {
+   "t": "h",
+   "x": "Regular Business",
+   "ts": null
+  },
+  {
+   "t": "h",
+   "x": "25-000402 — Site Plan Amendment Extension — 619 Bridgton Rd., Cloutier Properties",
+   "ts": "0:09"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "Ryan Russell, representing Cloutier Properties, explained the requested one-year extension is needed because the company's engineers are still awaiting a Maine DEP response on a pending permit amendment (supplemental information was filed as recently as June 1). Staff confirmed this is technically the first extension request under Cloutier Properties' ownership, since an earlier extension predated the project's transfer to this applicant. No public comment, no board objection."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "Approved by unanimous roll call, 4–0 (extending approval through May 6, 2027), moved by Kevin Price, seconded by Nancy Litrocapes."
+  },
+  {
+   "t": "label",
+   "x": "Action Items"
+  },
+  {
+   "t": "p",
+   "x": "None."
+  },
+  {
+   "t": "h",
+   "x": "Workshop — 500 Spring St., JSIP Westbrook (26-000405)",
+   "ts": "6:25"
+  },
+  {
+   "t": "p",
+   "x": "Sean Toby (Haley Ward), Dave Andronico (JSIP Westbrook), and Aubrey Bennett (Market Square Architects) presented an updated version of a project first workshopped in 2024: 228 multifamily units across seven three-story buildings on the former Twin Falls golf course (roughly 61–62 acres). Since 2024, 17 townhouses originally planned along Spring Street have been dropped, reducing both unit count and impervious coverage; the previously DEP-reviewed stormwater design is otherwise unchanged. The plan includes 409 parking spaces (1.79 per unit), scattered covered garages, and a central clubhouse with a pool. Sewer routes to a private pump station tied into and upgrading the aging public Miles Lane station. Architecturally, the team described a “contemporary New England” style across three building types distinguished mainly by color."
+  },
+  {
+   "t": "p",
+   "x": "No one from the public attended in person; two residents spoke remotely."
+  },
+  {
+   "t": "q",
+   "x": "“This is a very well established large stand of a very invasive species... I would like to request that the board require an invasive species management plan for this site.”",
+   "cite": "Jen Bonta, Miles Lane (remote public comment)",
+   "ts": "16:12"
+  },
+  {
+   "t": "p",
+   "x": "Bonta raised concern about a roughly one-third-acre, decades-established stand of invasive Japanese knotweed near the planned ledge-removal and road area and asked that all landscaping use Maine-native species; the applicant agreed to address both in the landscape plan. Paul Dryanon (477 Saco St., Recreation & Conservation Commission) [19:43] asked whether a previously discussed trail connection to Landing Road remains part of the plan; the applicant confirmed land south of the Stroudwater River will be formally deeded to the Presumpscot Regional Land Trust, with additional acreage potentially offered to support a larger trail network, though a Landing Road connection depends on cooperation from other abutters, with extending the Spring Street sidewalk as a fallback."
+  },
+  {
+   "t": "p",
+   "x": "Board members raised design and traffic questions: one member supported the native-plant request, suggested a landscaped berm along Spring Street to buffer road noise, and questioned the clubhouse's arched gable/cupola styling as inconsistent with the main buildings' more residential character [24:42]. Kevin Price [26:49] asked for comparative parking-ratio data from similar regional developments, flagged Spring Street traffic and pedestrian safety (noting a recent speed-limit reduction from 35 to 25 mph) as the likely dominant concern at a future public hearing, and asked about screening garage backs visible from the road. Acting Chair Turcotte proposed a board site walk, possibly in July, and asked for an elevation rendering showing the development's appearance from Spring Street given the road's grade change."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "No vote — workshop item."
+  }
+ ],
+ "howMade": "This summary was produced from the meeting video (linked above, hosted on the City's Vimeo showcase). The audio was downloaded with Downie 4 and transcribed with speaker diarization using MacWhisper. Claude (Anthropic's AI) cross-checked names against the official Planning Board roster, attributed speakers from context (introductions, roll-call order, direct address by the presiding officer) rather than the raw diarization labels alone, and drafted this summary and the quoted excerpts. Quotes are lightly cleaned of filler words/false starts but not reworded. Review tier: Not reviewed.",
+ "slug": "2026-06-16-planning-board"
+}
