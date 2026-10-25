@@ -1,0 +1,152 @@
+---
+// HTML version of a TL;DW! meeting summary. Content comes from
+// src/data/tldw-summaries/<slug>.json (made by scripts/pdf-to-tldw.py).
+// The PDF is only a separate download link (to save or forward).
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import meetings from '../../data/tldw-meetings.json';
+import '../../styles/tldw.css';
+
+export function getStaticPaths() {
+  const files = import.meta.glob('../../data/tldw-summaries/*.json', { eager: true }) as Record<string, any>;
+  return Object.values(files)
+    .map((m: any) => m.default)
+    .filter((d: any) => d.slug !== '2026-10-19-special-meeting') // that page is hand-built
+    .map((d: any) => ({ params: { slug: d.slug }, props: { data: d } }));
+}
+
+const { data } = Astro.props as { data: any };
+const meeting: any = (meetings as any[]).find((m) => m.slug === data.slug) || {};
+const f = data.fields || {};
+const videoUrl: string = f.Video || '';
+
+function tsLink(ts: string) {
+  const parts = ts.split(':').map(Number);
+  const [h, m, s] = parts.length === 3 ? parts : [0, parts[0], parts[1]];
+  const frag = (h ? `${h}h` : '') + `${m}m${String(s).padStart(2, '0')}s`;
+  return `${videoUrl}#t=${frag}`;
+}
+// Split text so "[12:34]" becomes a link and everything else stays plain (escaped) text.
+function parts(text: string) {
+  return text.split(/(\[\d{1,2}:\d{2}(?::\d{2})?\])/).filter(Boolean).map((t) => {
+    const m = t.match(/^\[(\d{1,2}:\d{2}(?::\d{2})?)\]$/);
+    return m ? { ts: m[1] } : { text: t };
+  });
+}
+
+// Group blocks: section heads, and one collapsible item per timestamped heading.
+type Item = { kind: 'item'; title: string; ts: string; body: any[] };
+type Section = { kind: 'section'; title: string };
+const rows: (Item | Section)[] = [];
+const bl: any[] = data.blocks;
+let cur: Item | null = null;
+for (let i = 0; i < bl.length; i++) {
+  const b = bl[i];
+  if (b.t === 'h') {
+    const next = bl[i + 1];
+    const isSection = !b.ts && (/^[IVX]+[.–]/.test(b.x) || !cur || (next && next.t === 'h' && next.ts) || !next);
+    if (b.ts) {
+      cur = { kind: 'item', title: b.x, ts: b.ts, body: [] };
+      rows.push(cur);
+    } else if (isSection) {
+      cur = null;
+      rows.push({ kind: 'section', title: b.x });
+    } else if (cur) {
+      cur.body.push({ t: 'sub', x: b.x });
+    }
+    continue;
+  }
+  if (!cur) {
+    cur = { kind: 'item', title: 'Overview', ts: '', body: [] };
+    rows.push(cur);
+  }
+  cur.body.push(b);
+}
+// drop empty "None." action lists and the redundant "Discussion Summary" / "Key Decisions" labels
+function cleaned(body: any[]) {
+  const out: any[] = [];
+  for (let i = 0; i < body.length; i++) {
+    const b = body[i];
+    if (b.t === 'label') {
+      if (b.x === 'Action Items') {
+        const rest: any[] = [];
+        let j = i + 1;
+        while (j < body.length && (body[j].t === 'a' || (body[j].t === 'p' && body[j].x === 'None.'))) {
+          if (body[j].t === 'a') rest.push(body[j]);
+          j++;
+        }
+        if (rest.length) out.push({ t: 'sub', x: rest.length === 1 ? 'Action item' : 'Action items' }, ...rest);
+        i = j - 1;
+      }
+      continue;
+    }
+    out.push(b);
+  }
+  return out;
+}
+function brief(body: any[]) {
+  const p = body.find((b) => b.t === 'p');
+  if (!p) return '';
+  const s = p.x.replace(/\[\d{1,2}:\d{2}(?::\d{2})?\]\s*/g, '');
+  const first = s.split(/(?<=[.!?])\s/)[0];
+  return first.length > 150 ? first.slice(0, 147).trimEnd() + '…' : first;
+}
+
+const dateLabel = meeting.dateLabel || f.Date || '';
+const category = meeting.category || '';
+const heading = `${(data.title || '').split(' — ')[0]} — ${f.Date ? f.Date.replace(/^\w+day,\s*/, '') : dateLabel}`;
+const metaBits = [f.Location, f.Time && f.Time.replace(/\s*\(.*\)$/, '')].filter(Boolean);
+const pageTitle = `TL;DW! ${heading} | Westbrook Currents`;
+---
+<SiteLayout title={pageTitle} description={meeting.blurb || 'Plain-language summary of the meeting.'} currentPage="tldw">
+  <main class="tldw-wrap">
+    <a class="help-back" href="/tldw">&#8249; TL;DW!</a>
+    {category && <span class="tldw-eyebrow">{category}</span>}
+    <h1>{heading}</h1>
+    <p class="tldw-meta">{metaBits.join(' · ')}</p>
+
+    {videoUrl && (
+      <div class="tldw-video-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#087ca7" stroke-width="2"><rect x="2" y="5" width="15" height="14" rx="2"></rect><path d="M17 10l5-3v10l-5-3z"></path></svg>
+        <a class="watch" href={videoUrl} target="_blank" rel="noopener noreferrer">Watch the full video on Vimeo &#8599;</a>
+      </div>
+    )}
+    <p class="tldw-scrub-note">Each item shows a timestamp like <b>57:13</b> (minutes:seconds) or <b>1:52:13</b> (hours:minutes:seconds). Tap it to jump to that moment in the video.</p>
+
+    {meeting.blurb && <p class="intro-line">Quick read: {meeting.blurb}</p>}
+
+    {rows.map((r) => r.kind === 'section' ? (
+      <p class="tldw-section-head">{r.title}</p>
+    ) : (
+      <details class="tldw-item">
+        <summary>
+          <span class="ti-text">
+            {r.ts && <span class="ti-top"><a class="ti-ts" href={tsLink(r.ts)} target="_blank" rel="noopener noreferrer">{r.ts}</a></span>}
+            <span class="ti-title">{r.title}</span>
+            {brief(r.body) && <span class="ti-brief">{brief(r.body)}</span>}
+          </span>
+          <span class="ti-chev">+</span>
+        </summary>
+        <div class="ti-body">
+          {cleaned(r.body).map((b: any) => {
+            if (b.t === 'p') return <p>{parts(b.x).map((s: any) => s.ts ? <a class="ts-link" href={tsLink(s.ts)} target="_blank" rel="noopener noreferrer">{s.ts}</a> : s.text)}</p>;
+            if (b.t === 'sub') return <p class="label">{b.x}</p>;
+            if (b.t === 'q') return <p class="tldw-quote">{b.x}<cite>&mdash; {b.cite}{b.ts && <> &middot; <a class="ts-link" href={tsLink(b.ts)} target="_blank" rel="noopener noreferrer">{b.ts}</a></>}</cite></p>;
+            if (b.t === 'd') return <span class="tldw-decision">&#10003; {b.x}</span>;
+            if (b.t === 'a') return <ul><li>{b.x}</li></ul>;
+            return null;
+          })}
+        </div>
+      </details>
+    ))}
+
+    <a class="tldw-pdf-link" href={`/tldw-${data.slug}.pdf`} target="_blank" rel="noopener noreferrer">
+      <span><strong>Download the PDF</strong><span class="sub">To save a copy or forward it. The page above has the same content.</span></span>
+      <span class="go">PDF &#8599;</span>
+    </a>
+
+    <div class="disclaimer">
+      <strong>Not a replacement for watching.</strong> This summary highlights the meeting's key discussions and decisions &mdash; it is not a substitute for watching the full meeting. Summarization necessarily condenses and selects; for complete context, nuance, and anything not covered here, watch the full video.
+    </div>
+    {data.howMade && <p class="tldw-made-with">How this was made: {data.howMade.replace(/^This summary was produced from the meeting video/, 'Produced from the meeting video')}</p>}
+  </main>
+</SiteLayout>
