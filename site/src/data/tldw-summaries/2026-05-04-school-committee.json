@@ -1,0 +1,51 @@
+{
+ "title": "Westbrook School Committee — Special Meeting",
+ "fields": {
+  "Date": "Monday, May 4, 2026",
+  "Time": "5:00 PM",
+  "Location": "Westbrook High School (Room 114), 117 Stroudwater St. (Hybrid via Zoom)",
+  "Video": "https://vimeo.com/1189177547",
+  "Packet": "https://drive.google.com/file/d/1l6-9Ycl193iO2e-1z7tcQM5uckrkKPfe/view (Google Drive, via westbrookschools.org)"
+ },
+ "packetUrl": "https://drive.google.com/file/d/1l6-9Ycl193iO2e-1z7tcQM5uckrkKPfe/view",
+ "packetNote": "(Google Drive, via westbrookschools.org)",
+ "note": "This summary highlights the meeting's key discussions and decisions, with direct quotes and timestamps for verification — it is not a substitute for watching the full meeting. Six of seven regular members were present (Brooke Reed not confirmed present at either roll call); no student representatives attended. This was a brief, single-item special meeting. For complete context, nuance, and anything not covered, watch the full video at the link above. (Produced by: WestbrookCurrents.com)",
+ "blocks": [
+  {
+   "t": "h",
+   "x": "Revised FY27 Budget: Second & Final Reading",
+   "ts": null
+  },
+  {
+   "t": "h",
+   "x": "6.1 — Adoption of the Revised FY27 Budget (Second and Final Reading, Roll Call Vote)",
+   "ts": "1:09"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "This brief, single-item special meeting finalized the budget revision first approved April 29: a $136,295.39 reduction to Articles 3, 4, and 4A, reflecting the School Resource Officer (SRO) program's cost moving entirely into the City's public safety budget (see the April 29 summary for full background). No public comment, no committee discussion."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "Approved 6–0 by roll call (second and final reading). This completes the School Committee's side of the FY27 budget process; the combined municipal/school budget proceeds to City Council's own second and final vote the same evening."
+  },
+  {
+   "t": "label",
+   "x": "Action Items"
+  },
+  {
+   "t": "p",
+   "x": "None."
+  }
+ ],
+ "howMade": "This summary was produced from the meeting video (linked above, hosted on the City's Vimeo showcase). The audio was downloaded with Downie 4 and transcribed with speaker diarization using MacWhisper. Claude (Anthropic's AI) cross-checked names against the official School Committee roster, attributed speakers from context (introductions, roll-call order, direct address by the Chair) rather than the raw diarization labels alone, and drafted this summary and the quoted excerpts. Quotes are lightly cleaned of filler words/false starts but not reworded. Review tier: Not reviewed.",
+ "slug": "2026-05-04-school-committee"
+}

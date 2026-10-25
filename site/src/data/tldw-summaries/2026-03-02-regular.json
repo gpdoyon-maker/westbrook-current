@@ -1,0 +1,348 @@
+{
+ "title": "Westbrook City Council — Regular Meeting",
+ "fields": {
+  "Date": "Monday, March 2, 2026",
+  "Time": "6:00 PM",
+  "Location": "Westbrook High School (Room 114), 125 Stroudwater St. (Hybrid via Zoom)",
+  "Video": "https://vimeo.com/1169721489",
+  "Packet": "https://www.westbrookmaine.gov/AgendaCenter/ViewFile/Agenda/_03022026-991"
+ },
+ "packetUrl": "https://www.westbrookmaine.gov/AgendaCenter/ViewFile/Agenda/_03022026-991",
+ "packetNote": "",
+ "note": "This summary highlights the meeting's key discussions and decisions, with direct quotes and timestamps for verification — it is not a substitute for watching the full meeting. Summarization necessarily condenses and selects; for complete context, nuance, and anything not covered here, watch the full video at the link above. (Produced by: WestbrookCurrents.com)",
+ "blocks": [
+  {
+   "t": "h",
+   "x": "Mayor's Message: FY2025 Financial Audit",
+   "ts": null
+  },
+  {
+   "t": "h",
+   "x": "Audit Presentation (Christian Smith, Wipfli)",
+   "ts": "1:35"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "Opinion: an unmodified (clean) opinion — financial statements complete, accurate, and GAAP-compliant, with no disagreements with management and no significant accounting-practice changes."
+  },
+  {
+   "t": "p",
+   "x": "Single audit: the City received about $5.6 million in federal funds this year (~$5M School Dept., ~$600K City); two School Dept. programs tested (Title I, School Nutrition) with a clean opinion and no findings."
+  },
+  {
+   "t": "p",
+   "x": "Management letter: no comments for the City. Three “best practices” recommendations for the School Department — two repeat items (balance-sheet reconciliation timing; recording of school construction activity run through city-controlled cash) and one new item (a timing mismatch reconciling School Nutrition Program deposits). Dr. Brian Mazjanis attributed these to summer-accrual timing and said the repeat items were smaller in magnitude than prior years; Councilor Turcotte pressed for detail on each."
+  },
+  {
+   "t": "p",
+   "x": "Accounting changes: new standard GASB 101 increased the City's estimated compensated-absences liability by about $948,000 (an accrual-basis estimate only, not affecting the budget or fund financial statements). The former Riverfront Parking Garage enterprise fund was reclassified into Capital Projects this year."
+  },
+  {
+   "t": "p",
+   "x": "Fund balance: School Dept. fund balance decreased $483,000 to $905,000; City general fund balance decreased $1.8 million to roughly $15.9 million. Combined decrease was $2.33 million against a budgeted $2.19 million ($148,000 unfavorable variance). Unassigned general fund balance is about 13% of the annual budget (Scarborough/South Portland run 15–16%, Sanford roughly 8%). Bonds payable decreased about $3 million."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "Informational — no vote taken."
+  },
+  {
+   "t": "label",
+   "x": "Action Items"
+  },
+  {
+   "t": "a",
+   "x": "City Administrator Holmes to follow up with Councilor Turcotte on recent audit-contract pricing and contract length."
+  },
+  {
+   "t": "h",
+   "x": "Public Comment: Westbrook Bucket Brigade & Historical Society Dispute",
+   "ts": "23:32"
+  },
+  {
+   "t": "p",
+   "x": "The great majority of tonight's public comment concerned an ongoing conflict between the Westbrook Bucket Brigade (a volunteer group of current/retired public-safety personnel restoring and displaying historic fire apparatus) and the current leadership of the Westbrook Historical Society, which has hosted the Bucket Brigade's displays at the city-owned Westbrook Community Center since a 2022 partnership. Nine speakers addressed the Council, all aligned with the Bucket Brigade; no representative of the Historical Society's current leadership spoke to present that side. This summary reflects that imbalance in who chose to speak, not a Council or city finding of fact."
+  },
+  {
+   "t": "p",
+   "x": "What Bucket Brigade speakers described: after new Historical Society board leadership took over in 2025, the relationship deteriorated — meetings in the shared space were ordered stopped, chairs were removed, officers were “suspended,” displays were dismantled and boxed (reportedly ~80 boxes), and the group's bank account (~$9,800) and keys/equipment were taken. Several speakers described this happening to elderly members, including 82-year-old Chief Engineer Clyde Chapman, using terms including age discrimination, harassment, and elder abuse. Multiple speakers said a Historical Society attorney sent members a cease-and-desist letter directing them not to contact city officials, staff, or other donors."
+  },
+  {
+   "t": "q",
+   "x": "“The Circle [Historical] Society is holding all our artifacts, our bank account, our computers, printers, copiers, machines and toolboxes, rendering our day-to-day operations useless... The community center is a city-owned building and the space in question, as I understand, is subsidized by the taxpayer dollars. The city should be looking into this.”",
+   "cite": "Jim Rogers, reading a statement on behalf of Bucket Brigade Chief Engineer Clyde Chapman",
+   "ts": "32:08"
+  },
+  {
+   "t": "q",
+   "x": "“This correspondence appeared to threaten our First Amendment rights, as we were informed, and I quote: ‘Accordingly, you are hereby directed to immediately cease and desist from contacting city officials.’”",
+   "cite": "Adele Jones, Bucket Brigade secretary (public comment)",
+   "ts": "39:31"
+  },
+  {
+   "t": "q",
+   "x": "“Some of the issues raised by the Westbrook Bucket Brigade are a hostile work environment, elder abuse, ageism, ADA violations, theft by deception... I am requesting the council to form an exploratory committee and to hold a workshop so we can move forward to a resolution.”",
+   "cite": "Greg Serpis, Bucket Brigade board member, letter read into the record by the Clerk",
+   "ts": "56:46"
+  },
+  {
+   "t": "p",
+   "x": "Other speakers identifying as Bucket Brigade members, supporters, or family of longtime Westbrook public-safety personnel included Jeffrey Joyce, Ron Jones (retired EMS deputy chief, 23 years), Linda Gain, Stephen Pellerin, Kathy Rogers, Jennifer Rogers Wascott, John Westcott, Mike Sanfi (the Historical Society's former longtime president), and Susan Simonson (a current Historical Society member who said the Society has not held a legally required annual meeting in nearly two years). Several asked the Council to form an exploratory committee, mediate, or help renegotiate lease/space arrangements; a few, including Jeffrey Joyce in the second comment period, suggested the city should stop funding or housing the Historical Society's current leadership altogether."
+  },
+  {
+   "t": "h",
+   "x": "The City's response",
+   "ts": null
+  },
+  {
+   "t": "p",
+   "x": "Both organizations are private, non-city 501(c)(3) entities; the City's only role is as the Historical Society's landlord at the Community Center (roughly $5,000/year rent, which the Council separately appropriates back to the Society, plus roughly $2,500/year toward operating costs, per public comment). City Administrator Holmes said the administration met with Bucket Brigade members and found it valuable, but has been advised by legal counsel that mediating a dispute between two private organizations — especially where both sides may have retained attorneys — carries civil-liability risk the City should avoid. She said the City had offered the Bucket Brigade alternative space, which the group found inadequate; Bucket Brigade speaker Kathy Rogers disputed this in the second comment period, describing the offered space as having shrunk across discussions from roughly 1,500 to as little as 250 square feet."
+  },
+  {
+   "t": "q",
+   "x": "“I had not heard until this evening the suggestion that we should evict the Historical Society — I think that is a very separate issue from whether or not we can help arbitrate these disputes with them... Speaking as the mayor of the city, I just don't see that we have the power to do what it appears that you're asking us to do. I don't think the council does either.”",
+   "cite": "Mayor David Morse",
+   "ts": "1:40:02"
+  },
+  {
+   "t": "p",
+   "x": "Councilor Rairdon offered to personally help convene the two groups if the administration organized it. Councilor Turcotte asked pointed questions about the City's legal exposure, confirmed neither organization is part of city structure, and recommended elder-abuse or theft allegations go to police rather than the Council; she and Councilor McCambridge noted 501(c)(3) compliance is a state-level matter the City doesn't track, and that Community Center tenancy isn't contingent on 501(c)(3) status. Mayor Morse noted the Council will separately revisit the Historical Society's annual $5,000 appropriation during spring budget season."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "No vote or referral taken on this matter tonight."
+  },
+  {
+   "t": "h",
+   "x": "Orders of the Day — Second & Final Reading",
+   "ts": null
+  },
+  {
+   "t": "h",
+   "x": "Orders 2026-16 through 2026-23 — FY26 CIP, GO Bonds & Related Items (Consent)",
+   "ts": "1:11:50"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "All first-read at the Feb. 23, 2026 Special meeting: FY 2026 Capital Improvement Plan; General Obligation Bonds up to $1,915,000; an $8,000 Fire Dept. thermal-imaging-camera donation; a $10,000 Fire Dept. furniture-replacement donation; $22,000 in emergency fire-alarm repairs at the Riverfront Parking Garage; the 2026 Sewer Lining Program bid award ($242,045); Credere Associates Task Order A-100 for the Brownfields Assessment Grant ($210,000); and $12,369.76 for Summer Camp busing — see that meeting's summary for full detail. Orders 2026-17 through -23 were voted together first; the Council returned to 2026-16 separately at Councilor Rairdon's request, who reported following up directly with City Administrator Holmes on the fire-training-facility CIP deferral raised by firefighters at the Feb. 23 meeting."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "Orders 2026-17 through -23 passed together by roll call, 6–0."
+  },
+  {
+   "t": "d",
+   "x": "Order 2026-16 (FY26 CIP) passed separately, 6–0."
+  },
+  {
+   "t": "label",
+   "x": "Action Items"
+  },
+  {
+   "t": "p",
+   "x": "None."
+  },
+  {
+   "t": "q",
+   "x": "“I realize now that these projects, just because they get delayed, doesn't mean that they're not going to happen... I feel very confident that this structure will be built... I just wanted to say my comments on that because I was out for the last meeting, I wasn't here, but I understand now.”",
+   "cite": "Councilor Gary Rairdon",
+   "ts": "1:15:23"
+  },
+  {
+   "t": "h",
+   "x": "New Business",
+   "ts": null
+  },
+  {
+   "t": "h",
+   "x": "Order 2026-24 — EMS Master Fee Schedule Update (First & Final Reading)",
+   "ts": "1:17:30"
+  },
+  {
+   "t": "p",
+   "x": "Found on page 281 of the packet."
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "Annual update to emergency-medical-services and ambulance-transport billing rates (Code of Ordinances Ch. A400), keeping cost recovery consistent with market rates and insurance-allowable charges, per a memo from Deputy Fire Chief Brian Langerman. Councilor Rairdon urged residents not to avoid calling 911 over cost concerns, noting much of the expense is insurance-covered."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "Approved by unanimous roll call, 6–0."
+  },
+  {
+   "t": "label",
+   "x": "Action Items"
+  },
+  {
+   "t": "p",
+   "x": "None."
+  },
+  {
+   "t": "h",
+   "x": "Order 2026-25 — Bond Proceeds Reallocation — Canal Elementary School (First Reading)",
+   "ts": "1:19:20"
+  },
+  {
+   "t": "p",
+   "x": "Found on page 285 of the packet."
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "Reallocates up to $365,000 in unspent proceeds from the Spring 2025 General Obligation bond (originally $2.8M, including $1.7M for the Canal Elementary School bathroom/vestibule project) to two other Canal School projects: $65,000 for exterior siding (CIP #25-46) and $300,000 for ADA bathroom renovation at Congin (CIP #25-47). The Canal project came in well under budget; Dr. Mazjanis attributed savings to favorable bid timing and having one contractor (Ganniston Construction) handle both the WHS and Canal bathroom projects simultaneously."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "Passed first reading, unanimous roll call, 6–0."
+  },
+  {
+   "t": "label",
+   "x": "Action Items"
+  },
+  {
+   "t": "p",
+   "x": "None."
+  },
+  {
+   "t": "h",
+   "x": "Order 2026-26 — Capital Project Fund Reallocation — Westbrook High School (First Reading)",
+   "ts": "1:28:10"
+  },
+  {
+   "t": "p",
+   "x": "Found on page 289 of the packet."
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "Reallocates $385,000 in unused capital funds from the completed Westbrook High School Restroom/ADA Renovation project (C2512, originally $1.4M from the General Fund Balance) to two other WHS projects: $35,000 for burglary/security system upgrades (CIP #24-36) and $350,000 for window and door replacements"
+  },
+  {
+   "t": "p",
+   "x": "(CIP #24-60). Because these are General Fund Balance dollars rather than bond proceeds, Administrator Holmes said this is being brought to Council for transparency, on legal counsel's recommendation, similar to the bond-reallocation process."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "Passed first reading, unanimous roll call, 6–0."
+  },
+  {
+   "t": "label",
+   "x": "Action Items"
+  },
+  {
+   "t": "p",
+   "x": "None."
+  },
+  {
+   "t": "h",
+   "x": "Order 2026-27 — Public Safety Radio Equipment, Phase 3 (First Reading)",
+   "ts": "1:29:29"
+  },
+  {
+   "t": "p",
+   "x": "Found on page 292 of the packet."
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "Authorizes purchase of Phase 3 public-safety radio equipment (end-user mobile/portable radios for Police and Fire field personnel) from sole-source vendor Radio Communications Management, Inc. (Portland, ME) for $678,746.01, funded through the FY26 CIP (item #25-11, the final phase of the Public Safety Radio Infrastructure upgrade)."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "Passed first reading, unanimous roll call, 6–0."
+  },
+  {
+   "t": "label",
+   "x": "Action Items"
+  },
+  {
+   "t": "p",
+   "x": "None."
+  },
+  {
+   "t": "h",
+   "x": "Closing",
+   "ts": null
+  },
+  {
+   "t": "h",
+   "x": "Public Comment (Second) & Adjournment",
+   "ts": "1:45:04"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "Councilor Chau raised a longer-term finance question for the Finance Committee: whether the City's recurring ~$1.5 million/year paving program would be more cost-effective funded directly from the operating budget rather than bonded annually, given cumulative interest costs. Councilor McCambridge reminded residents of the Westbrook contingent marching in Portland's St. Patrick's Day Parade, Sunday, March 15 at noon. No referrals, no committee reports, no executive session."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "Motion to adjourn approved by unanimous roll call, 6–0."
+  },
+  {
+   "t": "label",
+   "x": "Action Items"
+  },
+  {
+   "t": "p",
+   "x": "None."
+  }
+ ],
+ "howMade": "This summary was produced from the meeting video (linked above, hosted on the City's Vimeo showcase). The audio was downloaded with Downie 4 and transcribed with speaker diarization using MacWhisper. Claude (Anthropic's AI) cross-checked names and figures against the official packet and the city council roster, attributed speakers from context (introductions, roll-call order, direct address by the presiding officer) rather than the raw diarization labels alone, and drafted this summary and the quoted excerpts. Quotes are lightly cleaned of filler words/false starts but not reworded. Review tier: Not reviewed.",
+ "slug": "2026-03-02-regular"
+}

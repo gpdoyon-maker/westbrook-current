@@ -1,0 +1,173 @@
+{
+ "title": "Westbrook Planning Board — Planning Board Meeting",
+ "fields": {
+  "Date": "Tuesday, September 1, 2026",
+  "Time": "7:00 PM",
+  "Location": "Westbrook High School (Room 114), 125 Stroudwater St. (Hybrid via Zoom)",
+  "Video": "https://vimeo.com/1223175864",
+  "Packet": "https://www.westbrookmaine.gov/AgendaCenter/ViewFile/Agenda/_09012026-1026"
+ },
+ "packetUrl": "https://www.westbrookmaine.gov/AgendaCenter/ViewFile/Agenda/_09012026-1026",
+ "packetNote": "",
+ "note": "This summary highlights the meeting's key discussions and decisions, with direct quotes and timestamps for verification — it is not a substitute for watching the full meeting. Five of nine seated board members were present (McWilliams, Frazier, Price, Farnham, Schrage); Turcotte, Axelson, Litrocapes, and Tannenbaum were absent. For complete context, nuance, and anything not covered, watch the full video at the link above. (Produced by: WestbrookCurrents.com)",
+ "blocks": [
+  {
+   "t": "h",
+   "x": "New Business",
+   "ts": null
+  },
+  {
+   "t": "h",
+   "x": "26-000636 — Subdivision, Final Vote — 108 Longfellow Street, Longfellow 108 LLC",
+   "ts": "1:58"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "Dustin Roma (DM Roma Consulting Engineers) returned with the final plan for the three-lot subdivision workshopped August 4, adding a confirmed sight-distance measurement at the proposed Lot 1 driveway (shown adequate in both directions) and conditions restricting Lots 2 and 3 to shared access over the existing easement rather than new curb cuts onto Longfellow Street. City Planner Rebecca Spitella flagged one correction to the conditions of approval (the application date needed to read August 6, 2026) and confirmed the open-space fee is due before the final plans can be released for recording."
+  },
+  {
+   "t": "p",
+   "x": "Member Jason Frazier questioned why a straightforward single-family subdivision like this one is subject to an open-space fee-in-lieu at all, given the resulting lots have ample private yard space; staff explained the fee formula (a percentage of average lot size times an assessor-set cost per developable acre) and pointed to the ordinance-amendment workshop item later on the agenda for the fuller policy rationale and planned revisions. No public comment."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "Approved 5–0 by roll call, moved by Kevin Price (with the amended application date), seconded by Oriana Farnham. The board separately voted 5–0 to move into workshop session for the remaining agenda items."
+  },
+  {
+   "t": "label",
+   "x": "Action Items"
+  },
+  {
+   "t": "p",
+   "x": "None."
+  },
+  {
+   "t": "h",
+   "x": "Point / Counterpoint",
+   "ts": null
+  },
+  {
+   "t": "q",
+   "x": "“It just seems in this case ... why are we charging fees for these little subdivisions that people have freestanding ... single-family homes with plenty of outdoor space ... Multifamily, that makes sense ... but for this I don't know why we're doing that, but I guess that's just what we do.”",
+   "cite": "Jason Frazier, Board Member",
+   "ts": "11:05"
+  },
+  {
+   "t": "h",
+   "x": "Workshop",
+   "ts": null
+  },
+  {
+   "t": "h",
+   "x": "25-001050 — Land Use Ordinance Amendment — Subdivision Review Additional Requirements (§335-13.3.H)",
+   "ts": "13:47"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "City Planner Rebecca Spitella reintroduced this “social engagement” ordinance amendment, previously workshopped last fall, ahead of a planned October public hearing. Originating from a City Council referral, it would fold the subdivision ordinance's existing, partly duplicative “appearance assessment” findings into clearer community site-design standards (modeled on the Village Review Overlay district's) covering building orientation toward public streets, parking located behind/beside structures where feasible, native-species landscaping, and lower-scale pedestrian lighting that mimics the spacing, not necessarily the fixture style, of public street lighting."
+  },
+  {
+   "t": "p",
+   "x": "It also rewrites the open-space standard: 300 sq. ft. per studio/one-bedroom unit and 500 sq. ft. per two-plus-bedroom unit when amenities are provided on site (up from a flat 300 sq. ft. regardless of unit size), a higher land-reservation requirement when conservation is used instead (to discourage reserving land that was unbuildable anyway), and a recalculated fee-in-lieu, based on an assessor-set cost per developable acre, for projects that can do neither."
+  },
+  {
+   "t": "p",
+   "x": "Several members pressed for clarity: Kevin Price asked how the amendment applies to projects already in process, prompting a board discussion (led by Chair McWilliams) about whether site plan extensions should have a hard cap rather than the current informal practice. Jason Frazier argued the lighting standard was too rigid and should state safety/anti-glare goals rather than dictate fixture spacing, and asked for clearer language on what counts as a “corner” lot. Oriana Farnham agreed clearer lighting language would help the board judge designs consistently, and pushed back on allowing non-native ornamental landscaping by waiver; Lucas Schrage agreed, citing the city's stewardship of the Presumpscot River. Staff welcomed the lighting feedback and will revise that language, and will cross-check a new state dark-sky law (effective October 1, for publicly funded projects) against the city's own ordinance. No public comment."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "No vote — workshop item; a public hearing is targeted for the October 2026 meeting."
+  },
+  {
+   "t": "label",
+   "x": "Action Items"
+  },
+  {
+   "t": "p",
+   "x": "None."
+  },
+  {
+   "t": "h",
+   "x": "Point / Counterpoint",
+   "ts": null
+  },
+  {
+   "t": "q",
+   "x": "“I think we can and should regulate that as a city ... I support ‘shall use native plants’ and let them [use] the waiver provision [only] if they feel really passionate ... it doesn't just affect the people who live on that property.”",
+   "cite": "Oriana Farnham, Board Member (on native-species landscaping)",
+   "ts": "44:28"
+  },
+  {
+   "t": "h",
+   "x": "26-000777 — Land Use Ordinance Amendment — Data Centers Ordinance",
+   "ts": "49:53"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "City Planner Rebecca Spitella gave an extensive briefing prompted by a City Council referral, following the state legislature's near-passage of LD 307 (which would have created a Maine Data Center Coordination Council and an 18-month moratorium, vetoed by Governor Mills) and the Westbrook City Council's own precautionary June 1, 2026 180-day local moratorium, passed even though no data center project was then pending. Today, “data center” is a defined use with no standards beyond ordinary site plan review, permitted only within the Rock Row contract zone."
+  },
+  {
+   "t": "p",
+   "x": "Spitella covered data center types (small on-site “enterprise” server rooms up through large AI-driven “hyperscale” centers — none of the latter exist in Maine, and total New England data center capacity is smaller than Northern Virginia's alone) and four impact areas: water use/discharge (evaporative cooling is most common and most water-intensive; closed-loop “dry” cooling uses far less water but more energy; immersion cooling raises unresolved PFAS questions); power demand (could stress or support the grid depending on existing capacity, with the state's Public Utilities Commission (PUC) conducting its own ongoing regulatory review); noise (continuous ambient equipment noise, locally regulated only via a police-department reasonableness standard); and economic development (a non-depreciating tax base but relatively few permanent jobs, and a public-trust risk around community benefit agreements)."
+  },
+  {
+   "t": "p",
+   "x": "Staff recommendation: given the pace of industry change versus regulation, and Westbrook's dense population pattern making it more likely to stress than support the grid, staff recommended removing data centers as a permitted use from the Rock Row contract zone — effectively prohibiting new standalone development citywide for now — while continuing to allow small on-site “enterprise” IT rooms as an accessory use."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "No formal vote — informational/advisory workshop discussion to shape a forthcoming ordinance amendment; the board was broadly supportive of the staff recommendation described above."
+  },
+  {
+   "t": "label",
+   "x": "Action Items"
+  },
+  {
+   "t": "p",
+   "x": "None."
+  },
+  {
+   "t": "h",
+   "x": "Point / Counterpoint",
+   "ts": null
+  },
+  {
+   "t": "q",
+   "x": "“If it doesn't impact the community, it doesn't do any harm, then there's no harm in having one, right?”",
+   "cite": "Jason Frazier, Board Member (data scientist by profession)",
+   "ts": "1:16:43"
+  },
+  {
+   "t": "q",
+   "x": "“I don't think Westbrook should be the test case for that ... we will be at public hearings until midnight every single time we have a planning board meeting if somebody brings a data center to town ... community benefit agreements are consolation prizes. They are not benefits to the community.”",
+   "cite": "Oriana Farnham, Board Member",
+   "ts": "1:26:40"
+  }
+ ],
+ "howMade": "This summary was produced from the meeting video (linked above, hosted on the City's Vimeo showcase). The audio was downloaded with Downie 4 and transcribed with speaker diarization using MacWhisper. Claude (Anthropic's AI) cross-checked names against the official Planning Board roster, attributed speakers from context (introductions, roll-call order, direct address by the Chair) rather than the raw diarization labels alone, and drafted this summary and the quoted excerpts. Quotes are lightly cleaned of filler words/false starts but not reworded. Review tier: Not reviewed.",
+ "slug": "2026-09-01-planning-board"
+}

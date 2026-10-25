@@ -1,0 +1,138 @@
+{
+ "title": "Westbrook City Council — Committee of the Whole",
+ "fields": {
+  "Date": "Monday, February 2, 2026",
+  "Time": "6:00 PM",
+  "Location": "Westbrook High School (Room 114), 125 Stroudwater St. (Hybrid via Zoom)",
+  "Video": "https://vimeo.com/1161244268",
+  "Packet": "https://www.westbrookmaine.gov/AgendaCenter/ViewFile/Agenda/_02022026-985"
+ },
+ "packetUrl": "https://www.westbrookmaine.gov/AgendaCenter/ViewFile/Agenda/_02022026-985",
+ "packetNote": "",
+ "note": "This summary highlights the meeting's key discussions and decisions, with direct quotes and timestamps for verification — it is not a substitute for watching the full meeting. Summarization necessarily condenses and selects; for complete context, nuance, and anything not covered here, watch the full video at the link above. (Produced by: WestbrookCurrents.com)",
+ "blocks": [
+  {
+   "t": "h",
+   "x": "Roll Call",
+   "ts": null
+  },
+  {
+   "t": "h",
+   "x": "Roll Call",
+   "ts": "0:30"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "A short, single-item meeting led by Committee Chair Gary Rairdon. Councilors McCambridge, Munro, Chau, and Turcotte answered present at roll call; Councilor Faulkingham arrived shortly after but was present and voted on both roll-call votes; Vice President Shaughnessy was absent the entire meeting."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "Informational — no vote taken."
+  },
+  {
+   "t": "label",
+   "x": "Action Items"
+  },
+  {
+   "t": "p",
+   "x": "None."
+  },
+  {
+   "t": "h",
+   "x": "Remote Participation Policy",
+   "ts": "1:13"
+  },
+  {
+   "t": "p",
+   "x": "The meeting's only substantive item, referred to committee after several instances of Zoom-bombing during remote public comment in the prior year. City Administrator Angela Holmes introduced the discussion; City Solicitor Cameron Ferrante gave the legal overview."
+  },
+  {
+   "t": "p",
+   "x": "Council and board meetings are a “limited public forum,” subject to a lesser standard of scrutiny than a fully open forum: the City can act against speech that disrupts the body's business, but cannot pre-screen or categorically restrict what the public is permitted to say in advance. State law also requires remote public participation to be offered whenever a councilor is participating remotely."
+  },
+  {
+   "t": "q",
+   "x": "“Providing specific or explicit limitations on what people can or can't say during a council meeting is difficult to set [as] parameters... I'd advise the council against trying to do so within its remote meeting policy or within its policies generally.”",
+   "cite": "City Solicitor Cameron Ferrante",
+   "ts": "2:13"
+  },
+  {
+   "t": "p",
+   "x": "Ferrante laid out three options: leave the policy as-is; restrict the first public-comment period to agenda items only, with a second, open-topic period later (President Munro noted the School Committee does this); or narrow remote participation itself to cases like unexpected inability to attend, rather than planned travel. He cautioned against amending the policy specifically to target hate speech, calling that “trickier territory.”"
+  },
+  {
+   "t": "p",
+   "x": "Councilor Chau asked whether the Council's informal practice — cutting off a remote commenter who gives an implausible Westbrook address before their comments turn offensive — needs to be written into the policy. Ferrante said no: the Council is already legally permitted to do this without it being spelled out. City Administrator Holmes cautioned that verifying an address in real time is logistically difficult, especially since the Council also allows non-residents to speak; Ferrante agreed that an out-of-town or unverifiable address isn't by itself grounds to refuse someone the floor."
+  },
+  {
+   "t": "q",
+   "x": "“I have a spinal cord injury and I'm unable to physically bring myself to the meeting, but here I am and I'm coherent and I can speak at a meeting and participate... I think that we've done a good job shutting down any troll-like comments from outside of our city, and I don't remember ever having this issue in the last two, three years. So I would just leave it the way it is.”",
+   "cite": "Councilor Anna Turcotte",
+   "ts": "14:41"
+  },
+  {
+   "t": "p",
+   "x": "President Munro said she favors keeping the remote option for councilors (illness, caregiving, travel) but did not press the agenda-items-only idea further. No councilor proposed changing the policy."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "Motion to take no further action on this item (leaving the policy and current practice unchanged) [17:40] passed, 6–0 (Shaughnessy absent). Councilor Chau noted the referral is not permanently closed and could return to committee later."
+  },
+  {
+   "t": "label",
+   "x": "Action Items"
+  },
+  {
+   "t": "p",
+   "x": "None."
+  },
+  {
+   "t": "h",
+   "x": "Adjournment",
+   "ts": null
+  },
+  {
+   "t": "h",
+   "x": "Adjournment",
+   "ts": "18:02"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "A five-minute break was called immediately after to let City staff reset the recording equipment before the Regular Council meeting that followed the same evening."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "Motion to adjourn approved by unanimous roll call, 6–0."
+  },
+  {
+   "t": "label",
+   "x": "Action Items"
+  },
+  {
+   "t": "p",
+   "x": "None."
+  }
+ ],
+ "howMade": "This summary was produced from the meeting video (linked above, hosted on the City's Vimeo showcase). The audio was downloaded with Downie 4 and transcribed with speaker diarization using MacWhisper. Claude (Anthropic's AI) cross-checked names and figures against the official packet and the city council roster, attributed speakers from context (introductions, roll-call order, direct address by the presiding officer) rather than the raw diarization labels alone, and drafted this summary and the quoted excerpts. Quotes are lightly cleaned of filler words/false starts but not reworded. Review tier: Not reviewed.",
+ "slug": "2026-02-02-committee-of-the-whole"
+}

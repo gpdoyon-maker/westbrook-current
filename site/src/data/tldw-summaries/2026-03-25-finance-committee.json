@@ -1,0 +1,219 @@
+{
+ "title": "Westbrook School Committee — Finance Committee Meeting",
+ "fields": {
+  "Date": "Wednesday, March 25, 2026",
+  "Time": "5:00 PM",
+  "Location": "Westbrook High School (Room 114), 125 Stroudwater St. (Hybrid via Zoom)",
+  "Video": "https://vimeo.com/1177089504",
+  "Packet": "No agenda was published for this meeting (checked westbrookschools.org, 2026-10-24)."
+ },
+ "packetUrl": "",
+ "packetNote": "No agenda was published for this meeting (checked westbrookschools.org, 2026-10-24).",
+ "note": "This summary highlights the meeting's key discussions and decisions, with direct quotes and timestamps for verification — it is not a substitute for watching the full meeting. The full committee sat as the committee of the whole for this “revisit list” session, working through open items from the three prior cost-center review nights (March 18, 19, and 24); no votes were taken. For complete context, nuance, and anything not covered, watch the full video at the link above. (Produced by: WestbrookCurrents.com)",
+ "blocks": [
+  {
+   "t": "h",
+   "x": "What the District Pays the City & an Emerging MOU Push",
+   "ts": null
+  },
+  {
+   "t": "h",
+   "x": "City Charges Reviewed, Facility-Use Imbalance Raised",
+   "ts": "11:14"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "Chair Poitras read the full list of annual City charges: two School Resource Officers ($135,958 combined), athletic field maintenance ($121,500), police game-supervision charges, fire/rescue event charges, lifeguard supervision, and fuel (the last one actually a benefit, since the district buys off the City's bulk contract rate). A member raised that the City uses school facilities (tennis courts, track, fields, playgrounds, even this meeting room) without charge, and proposed a Memorandum of Understanding (MOU) to offset these in-kind exchanges. Chair Poitras confirmed she, Chair Mancuso, and district staff are meeting with City officials that Friday specifically on this, plus two further fairness questions: why the district doesn't earn interest on City-held funds, and why new-construction tax growth doesn't translate into added school funding."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "No vote — budget review."
+  },
+  {
+   "t": "label",
+   "x": "Action Items"
+  },
+  {
+   "t": "p",
+   "x": "None."
+  },
+  {
+   "t": "h",
+   "x": "Point / Counterpoint",
+   "ts": null
+  },
+  {
+   "t": "q",
+   "x": "“We are very open with our property...but for the city to not want to support that...is really frustrating, especially when we're then paying them a decent amount of money out of our budget that is already incredibly tight.”",
+   "cite": "A committee member (on the City's use of school facilities)",
+   "ts": "03:01:56"
+  },
+  {
+   "t": "h",
+   "x": "Facilities Follow-Ups",
+   "ts": null
+  },
+  {
+   "t": "h",
+   "x": "Middle School Bathroom Locks: Resolved",
+   "ts": "02:36:41"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "Following up directly on the concern raised March 24, the committee agreed to add $23,000 to the budget to replace the lock hardware on single-occupancy student bathrooms at Westbrook Middle School. Chair Poitras confirmed the cost is a real quote, not a placeholder, and shared that after hearing about the issue she asked her own fifth-grade daughter, who said she, too, is scared to use the bathroom there."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "Resolved — $23,000 added to the budget by committee consensus (informal, no formal vote required at this stage)."
+  },
+  {
+   "t": "label",
+   "x": "Action Items"
+  },
+  {
+   "t": "p",
+   "x": "None."
+  },
+  {
+   "t": "h",
+   "x": "Point / Counterpoint",
+   "ts": null
+  },
+  {
+   "t": "q",
+   "x": "“When it comes to school safety, door locks and all that, you can have the money you want if it comes to the safety of these kids in the school.”",
+   "cite": "Noreen Poitras, Finance Committee Chair",
+   "ts": "02:38:04"
+  },
+  {
+   "t": "h",
+   "x": "Compass Program Relocation: Unresolved, Process Concerns Raised",
+   "ts": "37:51"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "The $20,000 budgeted allowance to relocate the high school's Compass alternative-education program into the main building (versus a $46,000 full quote with a dedicated bathroom, or $32,000 without) was revealed as a rough placeholder rather than a final figure. A member pressed that the renovation “is landing a bit sideways,” since it hadn't come up during Facilities Committee tours or prior budget discussions, and asked where it ranks against other capital priorities before committing funds. Staff confirmed it would likely qualify as an eligible capital-bond expense if funded that way instead."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "Remains on the revisit list for the following week's meeting, pending a staff priority ranking."
+  },
+  {
+   "t": "label",
+   "x": "Action Items"
+  },
+  {
+   "t": "p",
+   "x": "None."
+  },
+  {
+   "t": "h",
+   "x": "Technology: Network Solutions Specialist & a Live Security Disclosure",
+   "ts": null
+  },
+  {
+   "t": "h",
+   "x": "Cybersecurity Position Questioned, Infinite Campus Breach Notice Disclosed",
+   "ts": "01:02:10"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "A member pressed IT Director Barbara Morgan on whether a requested Network Solutions Specialist position was urgent this year. In response, staff disclosed that as of that Monday, the district received notice from Infinite Campus (its student information system) of a potential data breach. Morgan explained the department runs with one fewer position than in 2015 despite device counts roughly tripling since, with WRVC's role managing network access for students from up to twelve sending districts (about 80% of its enrollment) adding further complexity. Separately, Chair Mancuso asked district leadership to study whether scaling back one-to-one device distribution in grades K–4 could meaningfully reduce the technology budget; Dr. Lancia called it a worthy but complex, emotionally charged question deserving a longer-term community conversation."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "No vote — budget review."
+  },
+  {
+   "t": "label",
+   "x": "Action Items"
+  },
+  {
+   "t": "p",
+   "x": "None."
+  },
+  {
+   "t": "h",
+   "x": "Other Revisit Items & Closing Direction",
+   "ts": null
+  },
+  {
+   "t": "h",
+   "x": "Transportation, Roofs, Utilities & PAC Center Resolved; More Budget Cuts Requested",
+   "ts": "03:12:22"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "Smaller items resolved: a $1,000 reallocation within Transportation (tolls/fees to mechanic equipment); roof costs confirmed to vary by school based on actual invoices, with new solar panels (resting on weighted mounts, not affixed) confirmed not to interfere with roof servicing; utility budgets confirmed reduced for FY27 reflecting solar savings as panels come online across four buildings before the new fiscal year begins; and the Performing Arts Center's $5,000 marketing line confirmed deferred to next year, funded from its own surplus with no general-fund impact."
+  },
+  {
+   "t": "p",
+   "x": "Closing the meeting, Chair Poitras directed staff to prepare a full K-12 class-size breakdown, an analysis of filling new positions by shifting existing staff, an instructional-stipend efficiency review, and any further possible reductions ahead of the following week's final pre-budget meeting."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "No vote — budget review."
+  },
+  {
+   "t": "label",
+   "x": "Action Items"
+  },
+  {
+   "t": "p",
+   "x": "None."
+  },
+  {
+   "t": "h",
+   "x": "Point / Counterpoint",
+   "ts": null
+  },
+  {
+   "t": "q",
+   "x": "“As of right now, I am not comfortable with a 9.88 percent [increase] going to the taxpayers in this budget.”",
+   "cite": "Noreen Poitras, Finance Committee Chair",
+   "ts": "03:12:22"
+  }
+ ],
+ "howMade": "This summary was produced from the meeting video (linked above, hosted on the City's Vimeo showcase). The audio was downloaded with Downie 4 and transcribed with speaker diarization using MacWhisper. Claude (Anthropic's AI) cross-checked names against the official School Committee roster, attributed speakers from context (introductions, roll-call order, direct address by the Chair) rather than the raw diarization labels alone, and drafted this summary and the quoted excerpts. Quotes are lightly cleaned of filler words/false starts but not reworded. Review tier: Not reviewed.",
+ "slug": "2026-03-25-finance-committee"
+}

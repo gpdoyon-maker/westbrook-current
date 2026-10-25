@@ -1,0 +1,93 @@
+{
+ "title": "Westbrook School Committee — Finance Committee Meeting",
+ "fields": {
+  "Date": "Wednesday, April 8, 2026",
+  "Time": "5:00 PM",
+  "Location": "Westbrook High School (Room 114), 125 Stroudwater St. (Hybrid via Zoom)",
+  "Video": "https://vimeo.com/1181340693",
+  "Packet": "No agenda was published for this short session (confirmed on westbrookschools.org, 2026-10-24) — it directly preceded, and fed into, that evening's 7:00 PM Full Board meeting."
+ },
+ "packetUrl": "",
+ "packetNote": "No agenda was published for this short session (confirmed on westbrookschools.org, 2026-10-24) — it directly preceded, and fed into, that evening's 7:00 PM Full Board meeting.",
+ "note": "This summary highlights the meeting's key discussions and decisions, with direct quotes and timestamps for verification — it is not a substitute for watching the full meeting. This brief session immediately preceded the Full Board's own 7:00 PM meeting the same evening (see the companion School Committee summary for that meeting's budget vote and public hearing). No roll-call votes were recorded; the committee gave verbal consensus on both items below. For complete context, nuance, and anything not covered, watch the full video at the link above. (Produced by: WestbrookCurrents.com)",
+ "blocks": [
+  {
+   "t": "h",
+   "x": "Final Pre-Vote Budget Session",
+   "ts": null
+  },
+  {
+   "t": "h",
+   "x": "Favorable Health Insurance Rate Allows a Final Reduction",
+   "ts": "2:16"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "Dr. Mazjanis reported the district's health insurance rate increase came in far better than expected: 3.74%, down from the 10% figure used as recently as the prior week (itself already reduced from an original 15% placeholder). This allows an additional $518,474.37 reduction to the general fund and $13,946.97 across the district's enterprise accounts. Combined with earlier adjustments, this brings the final FY27 budget to $57,349,321.39, a 7.5% increase over FY26 (down from the original 9.88% proposal) and a 7.34% impact on the local tax share."
+  },
+  {
+   "t": "p",
+   "x": "Dr. Lancia separately flagged a possible future revenue upside unrelated to this budget: a proposed change to the state's EPS education funding formula, moving through the Legislature, would add roughly $125 per low-income-classified student if adopted — an estimated $196,400 for Westbrook, not yet approved and not included in this budget."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "Consensus to forward the reduced, 3.74%-insurance-rate budget to the full School Committee for that evening's vote; no roll-call vote recorded."
+  },
+  {
+   "t": "label",
+   "x": "Action Items"
+  },
+  {
+   "t": "p",
+   "x": "None."
+  },
+  {
+   "t": "h",
+   "x": "Request to Reallocate SRO Costs to the City",
+   "ts": null
+  },
+  {
+   "t": "h",
+   "x": "Chair Mancuso Reports on a Formal Request to City Hall",
+   "ts": "11:01"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "Chair Mancuso reported she sent a formal written request to City Administrator Angela Holmes, on the School Committee's behalf, asking the City to move the cost-sharing lines for the district's School Resource Officer (SRO) program out of the school budget and into the City's public safety budget. The request emphasized that school leadership highly values the SRO partnership, but argued the program functions primarily as community policing and public safety rather than part of the district's core statutory obligations — notably, one of the largest remaining budget lines not directly tied to education or facilities, at a time when the committee has already cut instructional staff elsewhere."
+  },
+  {
+   "t": "p",
+   "x": "City Hall has forwarded its municipal budget to City Council, with an expectation the Council will vote on this specific reallocation request after the school budget's own presentation on April 15."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "Consensus to formally signal School Committee support for pursuing the reallocation with City Council; no roll-call vote recorded."
+  },
+  {
+   "t": "label",
+   "x": "Action Items"
+  },
+  {
+   "t": "p",
+   "x": "None."
+  }
+ ],
+ "howMade": "This summary was produced from the meeting video (linked above, hosted on the City's Vimeo showcase). The audio was downloaded with Downie 4 and transcribed with speaker diarization using MacWhisper. Claude (Anthropic's AI) cross-checked names against the official School Committee roster, attributed speakers from context (introductions, roll-call order, direct address by the Chair) rather than the raw diarization labels alone, and drafted this summary and the quoted excerpts. Quotes are lightly cleaned of filler words/false starts but not reworded. Review tier: Not reviewed.",
+ "slug": "2026-04-08-finance-committee"
+}

@@ -1,0 +1,530 @@
+{
+ "title": "Westbrook City Council — Special Meeting",
+ "fields": {
+  "Date": "Monday, February 23, 2026",
+  "Time": "7:00 PM",
+  "Location": "Conducted entirely remotely via Zoom (weather)",
+  "Video": "https://vimeo.com/1167573026",
+  "Packet": "https://www.westbrookmaine.gov/AgendaCenter/ViewFile/Agenda/_02232026-989"
+ },
+ "packetUrl": "https://www.westbrookmaine.gov/AgendaCenter/ViewFile/Agenda/_02232026-989",
+ "packetNote": "",
+ "note": "This summary highlights the meeting's key discussions and decisions, with direct quotes and timestamps for verification — it is not a substitute for watching the full meeting. Summarization necessarily condenses and selects; for complete context, nuance, and anything not covered here, watch the full video at the link above. (Produced by: WestbrookCurrents.com)",
+ "blocks": [
+  {
+   "t": "h",
+   "x": "In Memoriam: Former Councilor John O'Hara",
+   "ts": null
+  },
+  {
+   "t": "h",
+   "x": "Remembering John O'Hara (21+ years of service through 2018, d. Feb. 13, 2026)",
+   "ts": "2:48"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "The meeting opened with an extended, unplanned tribute to former City Councilor John O'Hara, who died Feb. 13, 2026 after more than 21 years on the Council. Interim Director of Economic & Community Development Jerre Bryant, Councilors Turcotte, Chau, and Rairdon, and Mayor Morse each shared memories; O'Hara's legacy was connected to projects including the middle school, Anding Road, and the Green Fund."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "Informational — no vote taken."
+  },
+  {
+   "t": "label",
+   "x": "Action Items"
+  },
+  {
+   "t": "p",
+   "x": "None."
+  },
+  {
+   "t": "q",
+   "x": "“John brought a commitment and a level of energy to the legislative process in Westbrook that was genuine, was persistent. And agree or disagree with the point he was trying to make, he always put a smile on your face... Many members of the media have identified John over the years as the most quotable politician in the city of Westbrook.”",
+   "cite": "Jerre Bryant, Interim Director of Economic & Community Development",
+   "ts": "3:41"
+  },
+  {
+   "t": "h",
+   "x": "Mayor's Message: Annual Project Updates (Robyn Saunders)",
+   "ts": "15:20"
+  },
+  {
+   "t": "p",
+   "x": "Project Manager Robyn Saunders gave her wide-ranging annual briefing on the City's major projects, noting roughly $7 million in outside grant funding has been brought to the five highlighted FY26 projects."
+  },
+  {
+   "t": "p",
+   "x": "Landslide Vulnerability Assessment: following the September 2020 landslide along Warren Avenue into the Presumpscot River (which prompted a state of emergency), the City partnered with the University of Maine"
+  },
+  {
+   "t": "p",
+   "x": "College of Engineering and the Maine Geological Survey on a three-phase study of the Presumpscot clay formation responsible for regional landslide risk. Phase three, now underway with policy consultant Camoin Associates, Resilient Roots, and the USM Muskie School, will produce a model ordinance/overlay-district recommendation requiring extra geotechnical engineering in landslide-susceptible areas — expected within the year. (Same project as Order 2026-12, see below.)"
+  },
+  {
+   "t": "p",
+   "x": "Riverwalk North: a Brownfields cleanup/redevelopment project along the river's north bank. An archaeological survey found no significant indigenous findings. Natural-resource constraints are pushing the trail alignment away from the river, in tension with abutter feedback favoring a route further back; negotiations with Maine DEP and the U.S. Army Corps of Engineers are ongoing. The preliminary $8 million estimate (based on outdated 2015 design standards) is expected to change; a funding source transcribed as “Wick” seeded $300,000 that leveraged another $4 million from USEPA, leaving roughly a $3.7 million gap, with construction expected around FY28."
+  },
+  {
+   "t": "p",
+   "x": "Saccarappa Park: a $900,000 Brownfields Cleanup Award from Maine DECD is funding redevelopment of this downtown park. A revised cost estimate found a roughly $2 million gap for above-ground elements not Brownfields-eligible; construction is being phased and delayed into later 2026 to coordinate with the adjacent Kidder Street private development ($45+ million investment, 1,200 linear feet of riverwalk boardwalk under a public easement). A separate $250,000 DECD grant will help clean up the connecting Mill Lane trail."
+  },
+  {
+   "t": "p",
+   "x": "New Brownfields Assessment Program: a $500,000 USEPA award (no local match) will fund a City-run program to assess additional contaminated/underutilized properties, with Credere Associates as the qualified environmental professional (see Order 2026-22)."
+  },
+  {
+   "t": "p",
+   "x": "PFAS at Fraser Field/Warren Field/Westbrook High School: listed as Tier IV PFAS sites by Maine DEP in 2018. The City is using GPCOG's Brownfields Assessment Grant to fund sampling (the same MOU previewed at the Feb. 2 meeting — see Order 2026-15). The Portland Water District is separately evaluating two of these same locations for a $15–20 million combined-sewer storage project, so timing between the two efforts will need to be coordinated."
+  },
+  {
+   "t": "p",
+   "x": "Future projects (FY27+): Riverwalk South lighting/security (~$600,000, pending CDBG funding); Westbrook Soccer Club field improvements (~$750,000) — the Small Hardy Road field's owners have agreed to donate it to the City, with a spring 2026 dedication ceremony planned; a $150,000 splash-pad feasibility study; and beaver pond improvements."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "Informational — no vote taken."
+  },
+  {
+   "t": "h",
+   "x": "Public Comment & Order 2026-16: Fire Training Facility CIP Deferral",
+   "ts": "54:22"
+  },
+  {
+   "t": "p",
+   "x": "Two Westbrook firefighters used public comment to urge the Council to reverse course on deferring Capital Improvement Plan funding for a long-planned regional fire training facility, developed jointly with the Westbrook Regional Vocational Center (WRVC)."
+  },
+  {
+   "t": "q",
+   "x": "“On March 6, 2024, the City of Westbrook and the Westbrook Regional Vocational Center received $1.5 million in community project funding for the federal government to fund a fire training facility... If we keep delaying this project, not only will the cost rise, we may also risk losing this amazing opportunity. [It] would train the Westbrook Fire Department's 48 firefighters for over 800 hours... and train at least 20 new firefighters a year to help increase recruitment and retention in the area.”",
+   "cite": "Lieutenant Brandon Burchetto (public comment)",
+   "ts": "54:49"
+  },
+  {
+   "t": "p",
+   "x": "Burchetto said a $150,000 FY26 soft-cost allocation was reduced to $50,000 and then deferred entirely to FY27. Firefighter Joe Carroll, who has worked on securing the project's federal earmark since 2023 and travels regularly to Washington, D.C. on it, echoed the concern, noting the project's regional/vocational-partnership angle was central to winning congressional support, and that training out-of-town (currently in Yarmouth) costs the department significant overtime and apparatus wear."
+  },
+  {
+   "t": "p",
+   "x": "During discussion of Order 2026-16 (CIP adoption), Councilor Rairdon raised the firefighters' concerns directly, asking whether the deferral could be reconsidered given the risk of losing the federal award. City Administrator Angela Holmes responded that deferral reflects a due-diligence pause, not a cancellation — the City is roughly three years into the federal grant's six-year spend-down window and wants to ensure the project proceeds correctly before committing further CIP funds in FY26. No amendment was offered."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "Order 2026-16 (FY 2026 Capital Improvement Plan) passed [1:17:43] unanimously, 7–0, with Rairdon's concern on the record but unresolved."
+  },
+  {
+   "t": "h",
+   "x": "Orders of the Day — Second & Final Reading",
+   "ts": null
+  },
+  {
+   "t": "h",
+   "x": "Orders 2026-09, -10, -11, -12 — Emergency Repairs & Landslide Policy Services (Consent)",
+   "ts": "1:02:10"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "All four first-read at the Feb. 2, 2026 meeting: gas meters ($20,607.85), Public Services HVAC ($43,688 + $11,350), Walker Memorial Library HVAC ($43,636), and the Landslide Vulnerability Project policy-services agreement with Camoin Associates (not to exceed $90,000) — see that meeting's summary for full detail. Moved together; no discussion."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "Passed together by roll call, 6–0 (Rairdon recorded absent for this specific vote due to a momentary technical gap, not a dissent)."
+  },
+  {
+   "t": "label",
+   "x": "Action Items"
+  },
+  {
+   "t": "p",
+   "x": "None."
+  },
+  {
+   "t": "h",
+   "x": "New Business",
+   "ts": null
+  },
+  {
+   "t": "h",
+   "x": "Resolve 2026-08 — Constable (Process Server) Appointments & Reappointments",
+   "ts": "1:04:51"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "Annual appointment/reappointment of Constables (process servers) for the Westbrook Housing Authority under Code of Ordinances §68-18 (constables may not carry weapons). Names as transcribed, not independently verified against the packet: Aaron Malloy, Hilary Elizabeth Moan, Mark Latinmi, Brittany Schmick, and Kristen Spiller."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "Approved by unanimous roll call, 7–0."
+  },
+  {
+   "t": "label",
+   "x": "Action Items"
+  },
+  {
+   "t": "p",
+   "x": "None."
+  },
+  {
+   "t": "h",
+   "x": "Order 2026-13 — Winterfest 2026 Mass Gathering Permit",
+   "ts": "1:06:46"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "Approves a major mass-gathering permit for Winterfest 2026 (Discover Downtown Westbrook), Saturday, March 7 at Riverbank Park, with expected attendance over 2,000."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "Approved by unanimous roll call, 7–0."
+  },
+  {
+   "t": "label",
+   "x": "Action Items"
+  },
+  {
+   "t": "p",
+   "x": "None."
+  },
+  {
+   "t": "h",
+   "x": "Order 2026-14 — Q2 FY26 Unappropriated Funds Report",
+   "ts": "1:07:58"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "Routine acceptance of the quarterly report on grants/donations under $5,000 accepted without advance Council approval, per Order 2021-121."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "Approved by unanimous roll call, 7–0."
+  },
+  {
+   "t": "label",
+   "x": "Action Items"
+  },
+  {
+   "t": "p",
+   "x": "None."
+  },
+  {
+   "t": "h",
+   "x": "Order 2026-15 — GPCOG Memorandum of Understanding — PFAS Site Assessments",
+   "ts": "1:09:42"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "Authorizes the City to enter a Memorandum of Understanding with Greater Portland Council of Governments (GPCOG) for PFAS soil sampling at Fraser Field (489 Main St.), Warren Field (25 Stevens Ave.), and Westbrook High School (125 Stroudwater St.) — funded entirely through GPCOG's USEPA Brownfields grant at no cost to the City. First previewed at the Feb. 2 meeting; see §3 above."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "Approved by unanimous roll call, 7–0."
+  },
+  {
+   "t": "label",
+   "x": "Action Items"
+  },
+  {
+   "t": "p",
+   "x": "None."
+  },
+  {
+   "t": "h",
+   "x": "Orders of the Day — Two Readings Required",
+   "ts": null
+  },
+  {
+   "t": "h",
+   "x": "Order 2026-17 — General Obligation Bonds (Spring 2026)",
+   "ts": "1:17:50"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "Authorizes up to $1,915,000 in General Obligation Bonds through the Maine Municipal Bond Bank: $915,000 for the City's share of the $1,665,000 Saco Street resurfacing project (MDOT providing $750,000), and $1,000,000 for the city-wide paving program. The City is retiring $1,005,000 in bonded debt this year."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "Passed first reading, unanimous roll call, 7–0."
+  },
+  {
+   "t": "label",
+   "x": "Action Items"
+  },
+  {
+   "t": "p",
+   "x": "None."
+  },
+  {
+   "t": "h",
+   "x": "Order 2026-18 — Fire Department Donation — Thermal Imaging Cameras",
+   "ts": "1:19:38"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "Accepts an $8,000 donation from Maureen Strout and authorizes purchase of two thermal imaging cameras from Industrial Protection Services, LLC (South Portland, ME) for $7,966."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "Passed first reading, unanimous roll call, 7–0."
+  },
+  {
+   "t": "label",
+   "x": "Action Items"
+  },
+  {
+   "t": "p",
+   "x": "None."
+  },
+  {
+   "t": "h",
+   "x": "Order 2026-19 — Fire Department Donation — Furniture Replacement",
+   "ts": "1:21:56"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "Accepts a $10,000 donation from the estate of Blanche E. Kelley, given in memory of her brother, former Fire Chief Wilfred Rosenblad, and authorizes $10,821.75 in Fire Department replacement furniture for the Public Safety Building and Station 3 from Working Fire Furniture & Mattress Co., Inc. (Mebane, NC)."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "Passed first reading, unanimous roll call, 7–0."
+  },
+  {
+   "t": "label",
+   "x": "Action Items"
+  },
+  {
+   "t": "p",
+   "x": "None."
+  },
+  {
+   "t": "h",
+   "x": "Order 2026-20 — Emergency Fire Alarm Repair — Riverfront Parking Garage",
+   "ts": "1:24:31"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "Confirms $22,000 in emergency fire-alarm-system repairs at the Riverfront Parking Garage (Dana Court) — Corey Electric ($7,800), Pine State Fire and Security ($11,700), and Gilman Electric ($2,500) — after the roughly 20-year-old original system failed outright. Funded through the garage's lease-funded reserve account, not City tax dollars."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "Passed first reading, unanimous roll call, 7–0."
+  },
+  {
+   "t": "label",
+   "x": "Action Items"
+  },
+  {
+   "t": "p",
+   "x": "None."
+  },
+  {
+   "t": "h",
+   "x": "Order 2026-21 — 2026 Sewer Lining Program Bid Award",
+   "ts": "1:27:16"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "Awards the 2026 Sewer Lining Program bid to low bidder Insituform Technologies, LLC ($242,045) to line roughly 5,700 linear feet of sewer pipe (trenchless technology, no street excavation) across eight streets, reducing inflow/infiltration into the sanitary sewer system."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "Passed first reading, unanimous roll call, 7–0."
+  },
+  {
+   "t": "label",
+   "x": "Action Items"
+  },
+  {
+   "t": "p",
+   "x": "None."
+  },
+  {
+   "t": "h",
+   "x": "Order 2026-22 — Credere Associates Task Order A-100 — Brownfields Assessment Grant",
+   "ts": "1:31:14"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "Authorizes Task Order A-100 with Credere Associates ($210,000) as the City's qualified environmental professional for its $500,000 USEPA Brownfields Assessment Grant."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "Passed first reading, unanimous roll call, 7–0."
+  },
+  {
+   "t": "label",
+   "x": "Action Items"
+  },
+  {
+   "t": "p",
+   "x": "None."
+  },
+  {
+   "t": "h",
+   "x": "Order 2026-23 — Summer Camp Field Trip Busing",
+   "ts": "1:33:06"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "Authorizes $12,369.76 to Dirigo Bus Lines (Gorham, ME) for six Westbrook Community Center Summer Camp field trips."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "Passed first reading, unanimous roll call, 7–0."
+  },
+  {
+   "t": "label",
+   "x": "Action Items"
+  },
+  {
+   "t": "p",
+   "x": "None."
+  },
+  {
+   "t": "h",
+   "x": "Closing",
+   "ts": null
+  },
+  {
+   "t": "h",
+   "x": "Public Comment (Second) & Adjournment",
+   "ts": "1:34:24"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "President Munro noted the value of being able to conduct Council business remotely on a snow night. No referrals, no committee reports, no executive session."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "Motion to adjourn approved by unanimous roll call, 7–0."
+  },
+  {
+   "t": "label",
+   "x": "Action Items"
+  },
+  {
+   "t": "p",
+   "x": "None."
+  }
+ ],
+ "howMade": "This summary was produced from the meeting video (linked above, hosted on the City's Vimeo showcase). The audio was downloaded with Downie 4 and transcribed with speaker diarization using MacWhisper. Claude (Anthropic's AI) cross-checked names and figures against the official packet and the city council roster, attributed speakers from context (introductions, roll-call order, direct address by the presiding officer) rather than the raw diarization labels alone, and drafted this summary and the quoted excerpts. Quotes are lightly cleaned of filler words/false starts but not reworded. Review tier: Not reviewed.",
+ "slug": "2026-02-23-special"
+}
