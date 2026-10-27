@@ -40,7 +40,17 @@
 .bar-stack { width: 80%; max-width: 46px; display: flex; flex-direction: column; border-radius: 3px 3px 0 0; overflow: hidden; }
 .bar-stack .supply { background: var(--accent); }
 .bar-stack .delivery { background: var(--blue); }
+.bar-stack .actual { background: var(--blue); }
+.bar-stack .proposed { background: #c0392b; }
 .bar-year { font-size: 13px; font-weight: 700; color: var(--muted); margin-top: 6px; }
+
+.perceptions-wrap ul.plain { margin: 0 0 18px; padding-left: 22px; }
+.perceptions-wrap ul.plain li { color: #223042; font-size: 20px; line-height: 1.55; margin-bottom: 10px; }
+
+.rate-table { width: 100%; border-collapse: collapse; font-size: 15px; margin-top: 10px; }
+.rate-table th { padding: 6px 8px; border-bottom: 2px solid var(--line); color: var(--muted); font-size: 13px; font-weight: 700; text-align: right; }
+.rate-table td { padding: 8px; border-bottom: 1px solid var(--line); color: var(--navy); font-weight: 700; text-align: right; }
+.rate-table th:first-child, .rate-table td:first-child { text-align: left; color: #223042; font-weight: 400; }
 
 .flow { display: flex; flex-direction: column; align-items: center; gap: 2px; margin: 14px 0 4px; }
 .flow-box { width: 100%; max-width: 320px; padding: 12px 16px; border-radius: 8px; background: var(--tint); border: 1.5px solid var(--edge); text-align: center; }
