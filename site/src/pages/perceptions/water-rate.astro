@@ -4,14 +4,14 @@ import '../../styles/perceptions.css';
 
 const from = Astro.url.pathname.replace(/\/$/, '') || '/';
 
-const chartYears = ["'22", "'23", "'24", "'25", "'26", "'27*"];
-const chartValues = [3.7, 5.6, 5.9, 5.9, 6.8, 10.4];
-const chartMax = 12;
+const chartYears = ["'24", "'25", "'26", "'27*"];
+const chartValues = [6.4, 5.9, 7.4, 11.2];
+const chartMax = 13;
 const chartHeight = 150;
 ---
 <SiteLayout
   title="Why Is Your Water Bill Going Up? | Factual Perceptions | Westbrook Currents"
-  description="A plain-English look at Portland Water District's proposed 2027 water rate increase — what it costs, why it's bigger than usual, and whether it's fair."
+  description="A plain-English, fact-checked look at Portland Water District's proposed 2027 water rate increase — what it costs, how PWD sets rates, and where the money goes."
   currentPage="perceptions"
   image="/og-pwd-water-rate-2027.png"
 >
@@ -20,10 +20,10 @@ const chartHeight = 150;
     <p class="eyebrow">Factual Perceptions &middot; Water</p>
     <h1>Why Is Your Water Bill Going Up?</h1>
     <p class="dek">A plain-English look at Portland Water District's proposed 2027 water rate increase</p>
-    <p class="byline">Published Oct 27, 2026</p>
+    <p class="byline">Published Oct 27, 2026 &middot; Corrected Oct 27, 2026 after an independent fact-check</p>
 
     <a class="pdf-link" href="/pwd-2027-water-rate-fact-sheet.pdf" target="_blank" rel="noopener noreferrer">
-      <span><strong>Want a printable copy?</strong> <span class="pdf-sub">Download this as a one-page PDF to read offline or share.</span></span>
+      <span><strong>Want a printable copy?</strong> <span class="pdf-sub">Download this as a PDF to read offline or share.</span></span>
       <span class="pdf-go">Download PDF &#8599;</span>
     </a>
 
@@ -42,13 +42,15 @@ const chartHeight = 150;
 
     <p class="section-head">What the Number Really Means</p>
 
-    <p>The $3.12 comes from a <b>10.4% rate increase for homes</b> (11.2% once you count businesses and other customer classes). That's close to <b>double</b> PWD's usual yearly increase over the last five years, which averaged about 5.6% a year.</p>
+    <p>PWD plans this as an average <b>10.4% increase for the residential class</b> (11.2% once you count businesses and other customer classes) &mdash; that's the figure PWD uses to plan how much total revenue it needs from residential customers as a group. A single typical household's own bill, calculated directly from the published tariff, actually rises closer to <b>9.7%</b>: the minimum charge everyone pays goes up 9.8%, the next tier up 9.7%, so most typical bills land close to that second number. The class-wide 10.4% blends in every account size and usage level across the whole residential class, not just one typical bill.</p>
+
+    <p>Compared with PWD's own recently confirmed average rate adjustments, this proposal is still clearly the biggest in years &mdash; well above 2026's 7.4% and more than any other confirmed year in this chart.</p>
 
     <div class="diagram-card">
-      <h3>Six-Year History: Residential Water Rate Increases</h3>
+      <h3>Four-Year History: Average Water Rate Adjustments</h3>
       <div class="bar-chart">
         <div class="bar-legend">
-          <span><i class="actual"></i> Actual increase, 2022&ndash;2026</span>
+          <span><i class="actual"></i> Actual increase, 2024&ndash;2026</span>
           <span><i class="proposed"></i> Proposed for 2027 (not yet approved)</span>
         </div>
         <div class="bar-rows">
@@ -63,27 +65,29 @@ const chartHeight = 150;
           ))}
         </div>
       </div>
-      <p class="cap">Dollar impact per year, for a typical residential bill: 2022 +$0.81/mo &bull; 2023 +$1.28 &bull; 2024 +$1.52 &bull; 2025 +$1.49 &bull; 2026 +$1.92 &bull; <b>2027 (proposed) +$3.12</b>.</p>
+      <p class="cap">Figures are each year's PWD-published average/blended adjustment across all customer classes, the only basis consistently available for every year shown. For residential customers specifically, PWD's own board order put 2025's increase at 5.5%; the proposed 2027 residential increase is 10.4% (see above).</p>
+      <p class="cap">Dollar impact per year, for a typical 7-CCF residential bill: 2024 +$1.52/mo &bull; 2025 +$1.49 &bull; 2026 +$1.92 &bull; <b>2027 (proposed) +$3.12</b>. We could not independently re-confirm residential-specific figures for 2022&ndash;2023 in this round of fact-checking, so those years aren't shown here.</p>
     </div>
 
     <div class="aside">
-      <p><b>Use less water than average?</b> PWD's $3.12 figure assumes a "typical" home using about 7 hundred-cubic-feet (CCF) a month. A lower-usage household, closer to 5 CCF a month, would see roughly <b>$2.57</b> more. A larger, 4-person household at PWD's own 10-CCF "typical" benchmark would see closer to <b>$4.05</b>.</p>
+      <p><b>Use less water than average?</b> PWD's $3.12 figure is based on 7 CCF (hundred cubic feet) a month, close to PWD's own stated "typical" usage. A lower-usage household, around 5 CCF a month, would see about <b>$2.50</b> more; a 4-person household using closer to 10 CCF would see about <b>$4.05</b> more. All three work out to roughly the same ~9.7% increase &mdash; the percentage stays fairly steady across usage levels within this tier, even though the residential class-wide figure above is reported as 10.4%.</p>
     </div>
 
     <p class="section-head">Where the Money Actually Goes</p>
 
-    <p>PWD borrowed $90 million in 2026 to pay for a batch of projects, and 2027 is when the first loan payments on that borrowing come due &mdash; that single fact is the main reason this increase is so much bigger than recent years. Here's what that $90 million paid for, and what else is driving costs up:</p>
+    <p>PWD keeps a separate Water Fund from its wastewater funds &mdash; water customers' bills only pay for water-side costs, not wastewater projects like the new North Windham treatment plant (that cost is billed to municipalities through separate wastewater assessments, not to water ratepayers). For 2027, PWD's own Water Fund budget is up $4.4 million, or 12.0%, over 2026 &mdash; split roughly evenly between higher day-to-day operating costs (+9.8%, about $2.2 million) and higher capital financing costs (+15.5%, about $2.2 million, mostly debt service on new borrowing). Specific drivers PWD names in its own Water Fund budget:</p>
 
     <ul class="plain">
-      <li>The new wastewater treatment plant in North Windham ($42 million) &mdash; now open, with its first loan payments starting in 2027</li>
-      <li>Work on water and wastewater treatment plants and pump stations ($25 million)</li>
-      <li>New digital water meters at every home, district-wide ($11 million) &mdash; already under way</li>
-      <li>Replacing aging water mains ($9 million)</li>
-      <li>PWD's main office ($3 million)</li>
-      <li>8 new employees, mostly to support these same projects ($1.9 million in salary and benefits)</li>
+      <li>$11 million to replace aging water mains across the district</li>
+      <li>$5.5 million to upgrade chemical storage facilities at the Sebago Lake Water Treatment Facility</li>
+      <li>Debt service up 11.8% ($1.19 million) as new borrowing is issued &mdash; total Water Fund debt is projected to rise from $99.2 million at the end of 2026 to $122.7 million at the end of 2027</li>
+      <li>Salaries and wages up 8.6% ($557,000) and employee benefits up 10.9% ($293,000)</li>
+      <li>Treatment chemical costs up 17.3% ($122,000), mostly from a 15% rise in the unit cost of chemicals</li>
+      <li>Purchased power up 17.4% ($138,000), largely a newly locked-in energy contract at the Sebago Lake plant with a 50% rate increase, partly offset by lower CMP transmission/delivery rates</li>
+      <li>Contracted services up 10.7% ($275,000), mostly paving, contractor construction, and traffic control tied to water-main work</li>
     </ul>
 
-    <p>Add it up and PWD's day-to-day operating budget is up 16% for 2027, to $80.2 million. PWD itself says rates will likely keep rising &mdash; its 2027 budget letter states plainly that "a higher level of investments in our infrastructure will cause rates to increase in 2027 and in the coming years." This isn't a one-time catch-up; PWD is telling residents to expect more of the same.</p>
+    <p>PWD's general manager, writing about the district's overall investment needs (water and wastewater combined, not water alone), put it plainly in the 2027 budget letter: "a higher level of investments in our infrastructure will cause rates to increase in 2027 and in the coming years." The Water Fund's own numbers point the same direction &mdash; debt is climbing and main-replacement work is ongoing &mdash; so there's no specific PWD statement promising this is a one-time catch-up.</p>
 
     <div class="diagram-card">
       <h3>What Changes on Your Bill</h3>
@@ -98,23 +102,21 @@ const chartHeight = 150;
           <tr><td>Next 70 CCF, per CCF</td><td>$3.13</td><td>$3.59</td><td>+14.7%</td></tr>
         </tbody>
       </table>
-      <p class="cap">Residential customers see the smallest percentage increase of any customer class: 10.4%, versus 12.9% for commercial, 14.4% for industrial, and 13.7% for government accounts. The blended average across every class is 11.2%.</p>
+      <p class="cap">By customer class, the proposed increase is 10.4% for residential, 12.9% commercial, 14.4% industrial, 13.7% government, 9.8% for fire-protection accounts, and 1.7% for the small "Other" class &mdash; residential is below the commercial/industrial/government classes but above fire-protection and "Other." The blended average across every class is 11.2%.</p>
     </div>
 
     <p class="section-head">The Legal Backdrop</p>
 
-    <p>PWD is a consumer-owned, quasi-municipal water utility chartered by the state &mdash; this is not a full Maine Public Utilities Commission (PUC) rate case. PWD's own Board of Trustees sets water rates and votes on this one directly.</p>
+    <p>PWD's water rates get <b>no Maine Public Utilities Commission (PUC) review at all.</b> Under a 2014 state law ("An Act to Reform the Regulation of Consumer-Owned Water Utilities"), PWD requested and received an exemption &mdash; effective January 1, 2016 &mdash; from PUC review of its water rates, financing, and related service standards. Since then, water rates have been set entirely by PWD's own 11-member elected Board of Trustees, with no state regulator approving or reviewing them.</p>
 
-    <p>Maine law gives a smaller utility a faster "streamlined" path for raising rates, but it's capped at 3% a year for a utility PWD's size (10% cumulative over 5 years). A single-year 10.4% increase is well above that cap, so PWD has to use the standard, fuller rate-setting process &mdash; meaning more public process and scrutiny, not less.</p>
+    <p>PWD's own process: its Finance Committee reviews the numbers, the full Board votes to move forward, supporting documents go public, customers get a mailed notice, the Board holds a public hearing (this year, November 9), then the Board casts a final vote (this year, November 23). PWD files the approved rate schedule with the PUC afterward, but only for the PUC's information &mdash; not for approval.</p>
 
     <div class="aside">
-      <p><b>Has Maine's Public Advocate weighed in?</b> Not yet, and it's too early to expect it. PWD's Trustees don't vote on this until November 23, 2026, and PWD doesn't file its new rates with the Public Utilities Commission and the Public Advocate until after that vote. As of October 26, 2026, no case had been opened yet in the PUC's docket system for this filing, even though several other Maine water districts proposing 2027 increases already had open dockets. Once PWD files, the Public Advocate's office can review it and petition for an independent investigation if it finds reason to.</p>
+      <p><b>Where does the Public Advocate fit in?</b> Because PWD is exempt from PUC review, the Maine Office of the Public Advocate &mdash; which formally represents customers before the PUC on rates like CMP's electricity &mdash; has no required role in this specific process. The November 9 public hearing in front of PWD's own Board is the actual point of public input and accountability for this increase; there's no separate state-level review step to watch for afterward.</p>
     </div>
 
     <div class="final">
-      <p><b>VERDICT: Is this fair?</b></p>
-      <p><b>Honest number, real reasons.</b> The $3.12/month figure is accurate, and the reasons behind it are specific and traceable to real projects &mdash; not vague excuses. Nothing in PWD's own materials points to waste or a hidden emergency; a new treatment plant, genuinely aging pipes, and a planned meter upgrade are the ordinary reasons utilities cite for a step-change increase.</p>
-      <p><b>But the size of the jump is real, and worth a question.</b> It's close to double PWD's usual pace, and PWD itself says more increases are coming after 2027. A fair, specific question to raise at the November 9 hearing: ask PWD for its multi-year rate forecast, not just 2027 &mdash; that's what would show whether this is a one-time catch-up or the new normal.</p>
+      <p>You've now got the verified numbers: what PWD is proposing, what it means for a typical bill, where PWD itself says the money goes, how its rate-setting process actually works, and how this compares with recent years. Whether an increase of this size is the right call &mdash; and whether PWD's water-fund spending is being managed well &mdash; isn't something we're going to tell you. That's a judgment only you can make, and the November 9 hearing is the place to make it heard.</p>
     </div>
 
     <div class="sources">
@@ -124,14 +126,14 @@ const chartHeight = 150;
         <li>Portland Water District &mdash; Water Rate Adjustment (2027 proposal overview, hearing details): <a href="https://www.pwd.org/water-rate-adjustment/" target="_blank" rel="noopener noreferrer">pwd.org &#8599;</a></li>
         <li>Portland Water District &mdash; proposed 2027 water tariff: <a href="https://www.pwd.org/wp-content/uploads/2026/10/Water-Tariffs-2027-Proposed.pdf" target="_blank" rel="noopener noreferrer">pwd.org (PDF) &#8599;</a></li>
         <li>Portland Water District &mdash; current (effective 1/1/2026) billing rates: <a href="https://www.pwd.org/rates/" target="_blank" rel="noopener noreferrer">pwd.org &#8599;</a></li>
-        <li>Portland Water District &mdash; 2027 Proposed Budget, including the Letter from the General Manager (pp. 9&ndash;11): <a href="https://www.pwd.org/wp-content/uploads/2026/10/2027-Proposed-Budget.pdf" target="_blank" rel="noopener noreferrer">pwd.org (PDF) &#8599;</a></li>
+        <li>Portland Water District &mdash; 2027 Proposed Budget: General Manager's letter (pp. 9&ndash;11), Regulatory Environment and Water Rate Case Process (pp. 18&ndash;20), and the Water Fund budget (pp. 46&ndash;48): <a href="https://www.pwd.org/wp-content/uploads/2026/10/2027-Proposed-Budget.pdf" target="_blank" rel="noopener noreferrer">pwd.org (PDF) &#8599;</a></li>
         <li>Portland Water District &mdash; 2027 Water Rate Adjustment Mailer (customer-class breakdown): <a href="https://www.pwd.org/wp-content/uploads/2026/10/PWD-Rate-adjustment-letter_web.pdf" target="_blank" rel="noopener noreferrer">pwd.org (PDF) &#8599;</a></li>
-        <li>Portland Water District &mdash; news archive, prior-year rate adjustment announcements, 2022&ndash;2026: <a href="https://www.pwd.org/news/category/news/" target="_blank" rel="noopener noreferrer">pwd.org &#8599;</a></li>
-        <li>Maine Revised Statutes, Title 35-A &sect;6104 (rate suspension, investigation and hearing): <a href="https://legislature.maine.gov/statutes/35-a/title35-Asec6104.html" target="_blank" rel="noopener noreferrer">legislature.maine.gov &#8599;</a></li>
-        <li>Maine Revised Statutes, Title 35-A &sect;6104-A (streamlined rate increases, size-based caps): <a href="https://legislature.maine.gov/statutes/35-a/title35-Asec6104-A.html" target="_blank" rel="noopener noreferrer">legislature.maine.gov &#8599;</a></li>
-        <li>Maine Revised Statutes, Title 35-A &sect;6104-B (expedited rate adjustments): <a href="https://legislature.maine.gov/statutes/35-a/title35-Asec6104-B.html" target="_blank" rel="noopener noreferrer">legislature.maine.gov &#8599;</a></li>
+        <li>Portland Water District Board of Trustees &mdash; Order 25-020 (Sept. 29, 2025), proposing the 2026 adjustment and showing the rate-adjustment history since 2020: <a href="https://www.pwd.org/wp-content/uploads/2025/01/BOT-9.29.25-Website.pdf" target="_blank" rel="noopener noreferrer">pwd.org (PDF) &#8599;</a></li>
+        <li>Portland Water District Board of Trustees &mdash; Order 24-029 (Nov. 25, 2024), final 2025 rate schedule with the residential/commercial/industrial split: <a href="https://www.pwd.org/wp-content/uploads/2024/11/bot_11.25.24_website.pdf" target="_blank" rel="noopener noreferrer">pwd.org (PDF) &#8599;</a></li>
+        <li>Portland Water District &mdash; 2024 rate adjustment public hearing notice (average 6.4%, effective Jan. 1, 2024): <a href="https://www.pwd.org/news/water-rate-adjustment-and-public-hearing/" target="_blank" rel="noopener noreferrer">pwd.org &#8599;</a></li>
+        <li>Portland Water District &mdash; 2025 Budget Report, Regulatory Environment section (PUC exemption, pp. 18&ndash;19): <a href="https://www.pwd.org/wp-content/uploads/2025/01/2025_budget.pdf" target="_blank" rel="noopener noreferrer">pwd.org (PDF) &#8599;</a></li>
+        <li>Maine Revised Statutes, Title 35-A &sect;6114 (PUC exemptions for consumer-owned water utilities): <a href="https://legislature.maine.gov/statutes/35-a/title35-Asec6114.html" target="_blank" rel="noopener noreferrer">legislature.maine.gov &#8599;</a></li>
         <li>Maine Office of the Public Advocate: <a href="https://www.maine.gov/meopa" target="_blank" rel="noopener noreferrer">maine.gov/meopa &#8599;</a></li>
-        <li>Maine PUC Case Management System (docket search), checked Oct 26, 2026: <a href="https://mpuc-cms.maine.gov" target="_blank" rel="noopener noreferrer">mpuc-cms.maine.gov &#8599;</a></li>
       </ol>
     </div>
 
