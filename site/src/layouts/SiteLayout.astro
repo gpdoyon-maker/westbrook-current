@@ -8,12 +8,14 @@ interface Props {
   currentPage?: 'home' | 'events' | 'help' | 'vote' | 'perceptions' | 'tldw' | 'about' | 'submit' | 'feedback';
   // Private pages (the email confirmation page) are hidden from search, send no referrer, and skip analytics.
   privatePage?: boolean;
+  // Page-specific social share image (1200x630). Defaults to the site logo.
+  image?: string;
 }
 
-const { title, description, currentPage = 'events', privatePage = false } = Astro.props;
+const { title, description, currentPage = 'events', privatePage = false, image } = Astro.props;
 const siteUrl = Astro.site ?? new URL('https://westbrookcurrents.com');
 const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
-const socialImageUrl = new URL('/logo-desktop.png', siteUrl).href;
+const socialImageUrl = new URL(image ?? '/logo-desktop.png', siteUrl).href;
 ---
 <!doctype html>
 <html lang="en">
