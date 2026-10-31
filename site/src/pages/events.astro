@@ -241,7 +241,11 @@ const months = monthKeys.map((key) => {
     .row-arrow { margin-left: 12px; color: #6e8592; font-size: 23px; }
     .detail-pane { position: sticky; top: 152px; flex: 0 0 390px; align-self: flex-start; height: calc(100vh - 152px); min-height: 400px; overflow-y: auto; padding: 26px; border-left: 1px solid var(--line); background: #fff; }
     :global(.detail-empty) { margin-top: 8px; color: #71838d; font-size: 14px; }
-    :global(.detail-category) { margin: 0 0 10px; color: var(--blue); font-size: 11px; font-weight: 800; text-transform: uppercase; }
+    :global(.detail-head) { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin: 0 0 10px; }
+    :global(.detail-category) { margin: 0; color: var(--blue); font-size: 11px; font-weight: 800; text-transform: uppercase; }
+    :global(.detail-share) { flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; padding: 0; border: 1px solid var(--line); border-radius: 50%; color: var(--blue); background: #fff; cursor: pointer; }
+    :global(.detail-share:hover) { background: var(--mist); }
+    :global(.detail-share.is-copied) { color: #178a4c; border-color: #178a4c; }
     :global(.detail-featured-badge) { display: inline-block; margin: 0 0 10px; padding: 4px 8px; border-radius: 3px; color: #59410d; background: #f3d98f; font-size: 11px; font-weight: 800; }
     :global(.detail-title) { margin: 0 0 22px; color: var(--navy); font-size: 25px; line-height: 1.15; }
     :global(.detail-meta) { display: grid; gap: 10px; margin: 0 0 24px; color: #294858; font-size: 14px; }
@@ -454,13 +458,65 @@ const months = monthKeys.map((key) => {
       window.setTimeout(() => URL.revokeObjectURL(objectUrl), 1000);
     }
 
+    const SHARE_ICON = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"></path><path d="M7 8l5-5 5 5"></path><path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"></path></svg>';
+    const CHECK_ICON = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>';
+
+    // Deep-links straight to this one event (same /events?event=<index> link the homepage's
+    // Coming Up list uses), so whoever opens a shared link lands right on it, already expanded.
+    function shareEventUrl(index) {
+      return `${window.location.origin}/events?event=${index}`;
+    }
+
+    function showShareCopied(button) {
+      button.innerHTML = CHECK_ICON;
+      button.classList.add('is-copied');
+      button.setAttribute('aria-label', 'Link copied');
+      window.setTimeout(() => {
+        button.innerHTML = SHARE_ICON;
+        button.classList.remove('is-copied');
+        button.setAttribute('aria-label', 'Share this event');
+      }, 1600);
+    }
+
+    async function shareEvent(event, index, button) {
+      const url = shareEventUrl(index);
+      if (navigator.share) {
+        try {
+          await navigator.share({ title: event.title, url });
+          return;
+        } catch (error) {
+          // The visitor closed the native share sheet without picking anything — leave it be.
+          if (error?.name === 'AbortError') return;
+        }
+      }
+      try {
+        await navigator.clipboard.writeText(url);
+        showShareCopied(button);
+      } catch {
+        // Clipboard access denied or unsupported: nothing more we can do without adding UI.
+      }
+    }
+
     function createDetails(event, eventIndex) {
       const content = document.createElement('div');
       const cancelled = String(event.status ?? '').trim().toLowerCase() === 'cancelled';
+
+      // Category sits alongside the share button in one row, so sharing adds no extra height
+      // to the expanded card — it rides along the line that was already there.
+      const head = document.createElement('div');
+      head.className = 'detail-head';
       const category = document.createElement('p');
       category.className = 'detail-category';
       category.textContent = `${event.category} · ${event.admission === 'free' ? 'Free' : 'Paid'}`;
-      content.append(category);
+      head.append(category);
+      const shareButton = document.createElement('button');
+      shareButton.type = 'button';
+      shareButton.className = 'detail-share';
+      shareButton.dataset.eventIndex = String(eventIndex);
+      shareButton.setAttribute('aria-label', 'Share this event');
+      shareButton.innerHTML = SHARE_ICON;
+      head.append(shareButton);
+      content.append(head);
 
       if (cancelled) {
         const banner = document.createElement('p');
@@ -647,6 +703,16 @@ const months = monthKeys.map((key) => {
         : null;
       const event = target ? eventRecords[Number(target.dataset.eventIndex)] : null;
       if (event) downloadCalendarFile(event);
+    });
+
+    document.addEventListener('click', (clickEvent) => {
+      const target = clickEvent.target instanceof Element
+        ? clickEvent.target.closest<HTMLButtonElement>('.detail-share')
+        : null;
+      if (!target) return;
+      const index = Number(target.dataset.eventIndex);
+      const event = eventRecords[index];
+      if (event) shareEvent(event, index, target);
     });
 
     document.querySelectorAll<HTMLButtonElement>('.event-row').forEach((button) => {
