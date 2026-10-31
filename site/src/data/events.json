@@ -1,5 +1,17 @@
 [
   {
+    "title": "S. W. Manchester American Legion Post #62 public meeting & dinner",
+    "date": "2026-11-04",
+    "startTime": "17:30",
+    "endTime": "19:00",
+    "venue": "S.W. Manchester American Legion Post #62",
+    "category": "Community & civic",
+    "admission": "paid",
+    "description": "We're having a beef stew dinner is $10. Public and veterans are welcome! Dinner will start at 5:45 PM followed by our guest speaker, Lauren Wache, Girl Scouts Scoutmaster, who will describe the Girl Scouts program, what they learn, history.",
+    "sourceLink": "",
+    "highlight": true
+  },
+  {
     "title": "St. Anthony of Padua Christmas Craft Fair @St.Hyacinth Church",
     "date": "2026-11-07",
     "startTime": "09:00",
@@ -154,47 +166,25 @@
     "sourceLink": ""
   },
   {
-    "title": "Portland Ballet presents \"A Victorian Nutcracker\" (Morning)",
+    "title": "Portland Ballet presents \"A Victorian Nutcracker\"",
     "date": "2026-12-19",
     "startTime": "11:00",
-    "endTime": "13:00",
+    "endTime": "",
     "venue": "Westbrook Performing Arts Center",
     "category": "Arts & music",
     "admission": "paid",
-    "description": "Portland Ballet's holiday production of the beloved classic, with a first act inspired by Victoria Mansion's history and real-life characters. Perfect for the whole family. When purchasing tickets, select the venue as Westbrook Performing Arts Center.",
+    "description": "Two showings: 11:00 AM - 1:00 PM and 5:00 PM - 7:00 PM. Portland Ballet's holiday production of the beloved classic, with a first act inspired by Victoria Mansion's history and real-life characters. Perfect for the whole family. When purchasing tickets, select the venue as Westbrook Performing Arts Center.",
     "sourceLink": "https://www.portlandballet.org/nutcracker"
   },
   {
-    "title": "Portland Ballet presents \"A Victorian Nutcracker\" (Evening)",
-    "date": "2026-12-19",
-    "startTime": "17:00",
-    "endTime": "19:00",
-    "venue": "Westbrook Performing Arts Center",
-    "category": "Arts & music",
-    "admission": "paid",
-    "description": "Portland Ballet's holiday production of the beloved classic, with a first act inspired by Victoria Mansion's history and real-life characters. Perfect for the whole family. When purchasing tickets, select the venue as Westbrook Performing Arts Center.",
-    "sourceLink": "https://www.portlandballet.org/nutcracker"
-  },
-  {
-    "title": "Portland Ballet presents \"A Victorian Nutcracker\" (Morning)",
+    "title": "Portland Ballet presents \"A Victorian Nutcracker\"",
     "date": "2026-12-20",
     "startTime": "11:00",
-    "endTime": "13:00",
+    "endTime": "",
     "venue": "Westbrook Performing Arts Center",
     "category": "Arts & music",
     "admission": "paid",
-    "description": "Portland Ballet's holiday production of the beloved classic, with a first act inspired by Victoria Mansion's history and real-life characters. Perfect for the whole family. When purchasing tickets, select the venue as Westbrook Performing Arts Center.",
-    "sourceLink": "https://www.portlandballet.org/nutcracker"
-  },
-  {
-    "title": "Portland Ballet presents \"A Victorian Nutcracker\" (Evening)",
-    "date": "2026-12-20",
-    "startTime": "17:00",
-    "endTime": "19:00",
-    "venue": "Westbrook Performing Arts Center",
-    "category": "Arts & music",
-    "admission": "paid",
-    "description": "Portland Ballet's holiday production of the beloved classic, with a first act inspired by Victoria Mansion's history and real-life characters. Perfect for the whole family. When purchasing tickets, select the venue as Westbrook Performing Arts Center.",
+    "description": "Two showings: 11:00 AM - 1:00 PM and 5:00 PM - 7:00 PM. Portland Ballet's holiday production of the beloved classic, with a first act inspired by Victoria Mansion's history and real-life characters. Perfect for the whole family. When purchasing tickets, select the venue as Westbrook Performing Arts Center.",
     "sourceLink": "https://www.portlandballet.org/nutcracker"
   },
   {
