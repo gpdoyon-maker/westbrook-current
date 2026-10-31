@@ -666,5 +666,14 @@ const months = monthKeys.map((key) => {
         entry?.querySelector<HTMLElement>('.mobile-details')?.replaceChildren(details);
       });
     });
+
+    // Deep link from the homepage's Coming Up / Today in Westbrook list: /events?event=<index>
+    // opens straight to that event, already expanded, instead of just landing on the page.
+    const requestedIndex = new URLSearchParams(window.location.search).get('event');
+    if (requestedIndex !== null) {
+      const target = document.querySelector<HTMLButtonElement>(`.event-row[data-event-index="${CSS.escape(requestedIndex)}"]`);
+      target?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      target?.click();
+    }
   </script>
 </SiteLayout>

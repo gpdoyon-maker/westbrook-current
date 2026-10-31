@@ -9,12 +9,17 @@ import NoticeList from '../components/NoticeList.astro';
 >
   <main class="home-wrap">
     <h1 class="visually-hidden">Westbrook Currents</h1>
-    <p class="home-intro">Local events and city resources for Westbrook, Maine residents, all in one place.</p>
+    <p class="home-intro">Events, resources, and local life.</p>
 
     <!-- Up to three general notices, worked out in the visitor's browser. Urgent alerts already show at the top of every page. -->
     <NoticeList kind="notices" limit={3} inline />
 
-    <!-- Filled in by the script below, and only when three or more events are coming up. Kept next to the notices above so all "what's happening" content stays together, ahead of the two navigation tiles below. -->
+    <a class="events-bar" href="/events">
+      <strong>Find Local Events</strong>
+      <i aria-hidden="true">&#8594;</i>
+    </a>
+
+    <!-- Filled in by the script below, and only when three or more events are coming up. -->
     <section class="coming" id="coming" aria-labelledby="coming-title" hidden>
       <h2 id="coming-title">Coming up</h2>
       <ul class="coming-list" id="coming-list"></ul>
@@ -22,19 +27,12 @@ import NoticeList from '../components/NoticeList.astro';
     <a class="see-all" id="see-all" href="/events">See all events &#8594;</a>
 
     <nav class="tiles" aria-label="Main sections">
-      <a class="tile tile-events" href="/events">
-        <strong>Find Local Events</strong>
-        <span>See what is happening in Westbrook.</span>
-        <i aria-hidden="true">&#8594;</i>
-      </a>
       <a class="tile tile-vote" href="/vote">
         <strong>Voting &amp; Elections</strong>
-        <span>Election Day is Nov 3 &mdash; dates, deadlines and your ballot.</span>
         <i aria-hidden="true">&#8594;</i>
       </a>
       <a class="tile tile-help" href="/help">
         <strong>Get Help</strong>
-        <span>Heat, electricity and food help.</span>
         <i aria-hidden="true">&#8594;</i>
       </a>
     </nav>
@@ -44,36 +42,32 @@ import NoticeList from '../components/NoticeList.astro';
 
   <style is:global>
     .home-wrap { width: min(860px, 100%); margin: 0 auto; padding: 30px 16px 12px; display: flex; flex-direction: column; gap: 18px; }
-    .home-intro { margin: -6px 0 0; color: var(--navy); font-size: 19px; font-weight: 700; line-height: 1.35; }
+    .home-intro { margin: -6px 0 0; color: var(--navy); font-size: 19px; font-weight: 500; line-height: 1.35; }
+    .events-bar { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; border-radius: 8px; color: #fff; background: var(--navy); text-decoration: none; }
+    .events-bar strong { font-size: 20px; font-weight: 800; }
+    .events-bar i { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; color: var(--navy); background: #82d7ef; font-size: 18px; font-style: normal; }
+    .events-bar:hover, .events-bar:focus-visible { filter: brightness(1.12); }
     .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
-    .tile { position: relative; display: flex; flex-direction: column; gap: 6px; min-height: 132px; padding: 20px 64px 20px 20px; border-radius: 8px; color: #fff; text-decoration: none; }
-    .tile strong { font-size: 24px; line-height: 1.2; }
-    .tile span { font-size: 17px; line-height: 1.35; color: #e3f3fa; }
+    .tile { position: relative; display: flex; flex-direction: column; justify-content: center; gap: 6px; min-height: 90px; padding: 20px 64px 20px 20px; border-radius: 8px; color: #fff; text-decoration: none; }
+    .tile strong { font-size: 22px; line-height: 1.2; }
     .tile i { position: absolute; top: 50%; right: 18px; display: grid; place-items: center; width: 38px; height: 38px; margin-top: -19px; border-radius: 50%; color: var(--navy); background: #82d7ef; font-size: 20px; font-style: normal; }
-    .tile-events { background: var(--navy); }
     .tile-help { background: var(--blue); }
     .tile-vote { background: #c2410c; }
-    .tile-vote span { color: #ffe0c2; }
     .tile-vote i { color: #c2410c; background: #fff; }
     .tile:hover, .tile:focus-visible { filter: brightness(1.12); }
     .coming { border: 1.5px solid var(--line); border-radius: 8px; background: #fff; }
     .coming h2 { margin: 0; padding: 14px 18px 8px; color: var(--blue); font-size: 13px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
     .coming-list { margin: 0; padding: 0; list-style: none; }
-    .coming-list li { display: grid; grid-template-columns: 108px 1fr; gap: 4px 14px; padding: 12px 18px; border-top: 1px solid var(--line); }
-    .coming-when { color: var(--navy); font-size: 15px; font-weight: 800; line-height: 1.3; }
-    .coming-when small { display: block; color: var(--muted); font-size: 13px; font-weight: 700; }
-    .coming-title { color: var(--navy); font-size: 17px; font-weight: 800; line-height: 1.3; }
-    .coming-title a { text-decoration: none; }
-    .coming-title a:hover { text-decoration: underline; }
-    .coming-venue { display: block; color: var(--muted); font-size: 14px; font-weight: 400; }
+    .coming-list li { display: flex; align-items: center; gap: 12px; padding: 12px 18px; border-top: 1px solid var(--line); }
+    .coming-when { flex: 0 0 auto; color: var(--muted); font-size: 14px; font-weight: 800; white-space: nowrap; }
+    .coming-title { flex: 1 1 auto; min-width: 0; overflow: hidden; color: var(--navy); font-size: 16px; font-weight: 800; line-height: 1.3; text-decoration: underline; text-underline-offset: 2px; white-space: nowrap; text-overflow: ellipsis; }
     .see-all { align-self: flex-start; padding: 6px 2px; color: var(--blue); font-size: 16px; font-weight: 800; text-underline-offset: 3px; }
     .home-note { margin: 4px 0 0; color: var(--muted); font-size: 14px; line-height: 1.45; }
     @media (max-width: 600px) {
       .home-wrap { padding: 20px 12px 8px; }
       .home-intro { font-size: 17px; }
       .tiles { grid-template-columns: 1fr; }
-      .tile { min-height: 112px; }
-      .coming-list li { grid-template-columns: 1fr; gap: 2px; }
+      .tile { min-height: 72px; }
     }
   </style>
 
@@ -82,8 +76,9 @@ import NoticeList from '../components/NoticeList.astro';
 
     // Next three upcoming events. "Today" is worked out here, in the visitor's browser, never at build time.
     // Fewer than three upcoming events: the list stays hidden and only "See all events" shows.
-    // Three or more: the list shows instead, and "See all events" hides, since the tile right below it already leads to the same place.
+    // Three or more: the list shows instead, and "See all events" hides, since the Find Local Events bar above already leads to the same place.
     const section = document.querySelector<HTMLElement>('#coming');
+    const heading = document.querySelector<HTMLElement>('#coming-title');
     const list = document.querySelector<HTMLUListElement>('#coming-list');
     const seeAll = document.querySelector<HTMLElement>('#see-all');
 
@@ -98,14 +93,8 @@ import NoticeList from '../components/NoticeList.astro';
       if (!match) return null;
       return Number(match[1]) * 60 + Number(match[2]);
     };
-    const formatTime = (minutes: number | null) => {
-      if (minutes === null) return '';
-      const hours = Math.floor(minutes / 60);
-      return `${hours % 12 || 12}:${pad(minutes % 60)} ${hours >= 12 ? 'PM' : 'AM'}`;
-    };
     const formatDay = (date: string) => {
-      const label = new Intl.DateTimeFormat('en-US', { weekday: 'short', month: 'short', day: 'numeric', timeZone: 'UTC' }).format(new Date(`${date}T12:00:00Z`));
-      return date === today ? 'Today' : label;
+      return new Intl.DateTimeFormat('en-US', { weekday: 'short', month: 'short', day: 'numeric', timeZone: 'UTC' }).format(new Date(`${date}T12:00:00Z`));
     };
 
     const upcoming = events
@@ -116,34 +105,30 @@ import NoticeList from '../components/NoticeList.astro';
       .sort((a, b) => a.event.date.localeCompare(b.event.date) || (a.start ?? 24 * 60) - (b.start ?? 24 * 60) || a.event.title.localeCompare(b.event.title))
       .slice(0, 3);
 
-    if (section && list && seeAll && upcoming.length >= 3) {
-      upcoming.forEach(({ event, start }) => {
+    // A day with something happening today gets the "Today in Westbrook" framing, and every
+    // shown row (there are never more than three) drops its date — the title alone is enough
+    // when you're already oriented around "right now". Otherwise it stays "Coming up" with dates.
+    if (section && heading && list && seeAll && upcoming.length >= 3) {
+      const hasToday = upcoming.some(({ event }) => event.date === today);
+      heading.textContent = hasToday ? 'Today in Westbrook' : 'Coming up';
+
+      upcoming.forEach(({ event }) => {
         const item = document.createElement('li');
 
-        const when = document.createElement('span');
-        when.className = 'coming-when';
-        when.textContent = formatDay(event.date);
-        const time = formatTime(start);
-        if (time) {
-          const small = document.createElement('small');
-          small.textContent = time;
-          when.append(small);
+        if (!hasToday) {
+          const when = document.createElement('span');
+          when.className = 'coming-when';
+          when.textContent = formatDay(event.date);
+          item.append(when);
         }
 
-        const what = document.createElement('span');
-        what.className = 'coming-title';
-        const link = document.createElement('a');
-        link.href = '/events';
-        link.textContent = event.title;
-        what.append(link);
-        if (event.venue) {
-          const venue = document.createElement('span');
-          venue.className = 'coming-venue';
-          venue.textContent = event.venue;
-          what.append(venue);
-        }
+        // Links straight to this event on the Events page, auto-opened there (see events.astro).
+        const title = document.createElement('a');
+        title.className = 'coming-title';
+        title.href = `/events?event=${events.indexOf(event)}`;
+        title.textContent = event.title;
+        item.append(title);
 
-        item.append(when, what);
         list.append(item);
       });
       section.hidden = false;
