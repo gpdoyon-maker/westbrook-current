@@ -542,7 +542,9 @@ const months = monthKeys.map((key) => {
 
       const metadata = document.createElement('div');
       metadata.className = 'detail-meta';
-      const timeText = event.startTime ? formatTime(event.startTime) : '';
+      const startTimeText = formatTime(event.startTime);
+      const endTimeText = formatTime(event.endTime);
+      const timeText = startTimeText && endTimeText ? `${startTimeText} – ${endTimeText}` : startTimeText;
       const details = [
         ['Venue', event.venue || 'Venue not listed'],
         ['Date', new Intl.DateTimeFormat('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${event.date}T12:00:00Z`))],
