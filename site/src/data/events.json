@@ -1,5 +1,71 @@
 [
   {
+    "title": "Regular City Council Meeting",
+    "date": "2026-11-02",
+    "startTime": "18:00",
+    "endTime": "",
+    "venue": "Westbrook High School Room 114",
+    "category": "Community & civic",
+    "admission": "free",
+    "description": "Westbrook City Council meets in person in Room 114 at Westbrook High School, with a remote participation option available via Zoom. Written public comments must be submitted to the City Clerk's Office by 10am the morning of the meeting.",
+    "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3253"
+  },
+  {
+    "title": "Election Day",
+    "date": "2026-11-03",
+    "startTime": "06:00",
+    "endTime": "20:00",
+    "venue": "Westbrook Community Center",
+    "category": "Community & civic",
+    "admission": "free",
+    "description": "All wards vote at the Westbrook Community Center in the gym on Election Day. Absentee ballots must be returned to Westbrook City Hall and will not be accepted at the voting place.",
+    "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3633"
+  },
+  {
+    "title": "Family Storytime at Walker Library",
+    "date": "2026-11-03",
+    "startTime": "10:30",
+    "endTime": "11:00",
+    "venue": "Walker Memorial Library, Youth Services Program Room",
+    "category": "Family & kids",
+    "admission": "free",
+    "description": "Geared toward ages 1-3 with caregivers, but welcoming to all ages, this storytime includes singing, movement, and reading books.",
+    "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3554"
+  },
+  {
+    "title": "Planning Board Meeting",
+    "date": "2026-11-03",
+    "startTime": "19:00",
+    "endTime": "22:00",
+    "venue": "Westbrook High School Room 114",
+    "category": "Community & civic",
+    "admission": "free",
+    "description": "",
+    "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=2594"
+  },
+  {
+    "title": "Baby Lapsit - Under age 2",
+    "date": "2026-11-04",
+    "startTime": "10:30",
+    "endTime": "11:00",
+    "venue": "Youth Program Room",
+    "category": "Family & kids",
+    "admission": "free",
+    "description": "Baby Lapsit is a gentle storytime for babies under age 2 and their caregivers, featuring rhyming, reading, and playtime in the Youth Program Room.",
+    "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3586"
+  },
+  {
+    "title": "Kids' Crafternoon: Tissue Paper Suncatchers",
+    "date": "2026-11-04",
+    "startTime": "15:30",
+    "endTime": "16:30",
+    "venue": "",
+    "category": "Family & kids",
+    "admission": "free",
+    "description": "Make a suncatcher out of tissue paper to take home!",
+    "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3664"
+  },
+  {
     "title": "S. W. Manchester American Legion Post #62 public meeting & dinner",
     "date": "2026-11-04",
     "startTime": "17:30",
@@ -10,6 +76,28 @@
     "description": "We're having a beef stew dinner is $10. Public and veterans are welcome! Dinner will start at 5:45 PM followed by our guest speaker, Lauren Wache, Girl Scouts Scoutmaster, who will describe the Girl Scouts program, what they learn, history.",
     "sourceLink": "",
     "highlight": true
+  },
+  {
+    "title": "Family Storytime at Walker Library",
+    "date": "2026-11-05",
+    "startTime": "10:30",
+    "endTime": "11:00",
+    "venue": "Walker Memorial Library, Youth Services Program Room",
+    "category": "Family & kids",
+    "admission": "free",
+    "description": "Geared toward ages 1-3 with caregivers, but welcoming to all ages, this storytime includes singing, movement, and reading books in the Youth Services Program Room.",
+    "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3555"
+  },
+  {
+    "title": "The Locker Project at Walker Memorial Library",
+    "date": "2026-11-05",
+    "startTime": "11:00",
+    "endTime": "12:00",
+    "venue": "Walker Memorial Library, Youth Program Room",
+    "category": "Food & drink",
+    "admission": "free",
+    "description": "The Locker Project brings free, fresh food to the Youth Program Room at Walker Memorial Library for anyone to take home to help reduce food waste and hunger.",
+    "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3651"
   },
   {
     "title": "St. Anthony of Padua Christmas Craft Fair @St.Hyacinth Church",
@@ -45,6 +133,28 @@
     "sourceLink": ""
   },
   {
+    "title": "Puzzle Race - Jigsaw Puzzle Competition",
+    "date": "2026-11-07",
+    "startTime": "10:30",
+    "endTime": "12:00",
+    "venue": "Walker Memorial Library",
+    "category": "Community & civic",
+    "admission": "free",
+    "description": "Teams compete to assemble the same 500-piece puzzle the fastest to win a prize. Registration is required by November 5th, with teams of 3 to 5 people recommended for ages 12 through adult.",
+    "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3660"
+  },
+  {
+    "title": "Seed and Plant Swap",
+    "date": "2026-11-07",
+    "startTime": "10:30",
+    "endTime": "12:30",
+    "venue": "Historic Wing",
+    "category": "Outdoors & nature",
+    "admission": "free",
+    "description": "Bring healthy house plants, cuttings, seeds, and seedlings to share with other enthusiasts, and try fall sowing of native plants provided by University of Maine Extension.",
+    "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3659"
+  },
+  {
     "title": "Author Talk with Ron Romano: Stories from Maine Cemeteries: Lives Cut Short",
     "date": "2026-11-07",
     "startTime": "13:00",
@@ -67,6 +177,17 @@
     "sourceLink": "https://www.facebook.com/share/1F9iyrnXzz/?mibextid=wwXIfr"
   },
   {
+    "title": "Family Storytime at Walker Library",
+    "date": "2026-11-10",
+    "startTime": "10:30",
+    "endTime": "11:00",
+    "venue": "Walker Memorial Library, Youth Services Program Room",
+    "category": "Family & kids",
+    "admission": "free",
+    "description": "Geared toward ages 1-3 with caregivers, but welcoming to all ages, this storytime includes singing, movement, and reading books in the Youth Services Program Room.",
+    "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3556"
+  },
+  {
     "title": "Coed Varsity Unified Volleyball vs Morse",
     "date": "2026-11-10",
     "startTime": "15:30",
@@ -78,6 +199,28 @@
     "sourceLink": ""
   },
   {
+    "title": "Reading to a Dog Program (Reservations required)",
+    "date": "2026-11-10",
+    "startTime": "15:30",
+    "endTime": "16:30",
+    "venue": "Youth Program Room",
+    "category": "Family & kids",
+    "admission": "free",
+    "description": "Kids in grades PreK through 8th can sign up at the front desk for a 10-minute reading session with Hank, a certified therapy dog. Registration is required for time slots in the Youth Program Room.",
+    "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3673"
+  },
+  {
+    "title": "Library Closed for Veterans Day Holiday",
+    "date": "2026-11-11",
+    "startTime": "",
+    "endTime": "",
+    "venue": "",
+    "category": "Other",
+    "admission": "free",
+    "description": "",
+    "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3200"
+  },
+  {
     "title": "Veterans Day Recognition - Woodlawn Cemetery",
     "date": "2026-11-11",
     "startTime": "11:00",
@@ -87,6 +230,28 @@
     "admission": "free",
     "description": "Recognition of Veterans Day at Veterans Rest memorial.",
     "sourceLink": ""
+  },
+  {
+    "title": "Little Roots Family Music Time",
+    "date": "2026-11-12",
+    "startTime": "11:00",
+    "endTime": "11:45",
+    "venue": "Walker Memorial Library",
+    "category": "Arts & music",
+    "admission": "free",
+    "description": "A 45-minute music session for children ages 0-5 with a caregiver to develop a love of music through song and movement. No registration is required for this free program.",
+    "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3654"
+  },
+  {
+    "title": "Pokémon Club",
+    "date": "2026-11-12",
+    "startTime": "15:30",
+    "endTime": "16:30",
+    "venue": "",
+    "category": "Family & kids",
+    "admission": "free",
+    "description": "Learn how to play the Pokémon card game, or just have fun crafting and hanging out with other Pokémon fans! Come to any or all of the club meetings! For ages 5 to 18. Ages 8 and under must be with caregiver.",
+    "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3666"
   },
   {
     "title": "Main Street Redesign and Pedestrian Improvements Public Meeting",
@@ -122,6 +287,94 @@
     "sourceLink": ""
   },
   {
+    "title": "Special City Council Meeting",
+    "date": "2026-11-16",
+    "startTime": "18:00",
+    "endTime": "",
+    "venue": "Westbrook High School, Room 114",
+    "category": "Community & civic",
+    "admission": "free",
+    "description": "Westbrook City Council meets in person at Westbrook High School (125 Stroudwater Street) in Room 114. A remote participation option is available. Written public comments must be received by the City Clerk's Office no later than 10am the morning of the meeting.",
+    "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3264"
+  },
+  {
+    "title": "Family Storytime at Walker Library",
+    "date": "2026-11-17",
+    "startTime": "10:30",
+    "endTime": "11:00",
+    "venue": "Walker Memorial Library, Youth Services Program Room",
+    "category": "Family & kids",
+    "admission": "free",
+    "description": "Family Storytime at Walker Memorial Library is geared to ages 1-3 with caregivers, but all ages are welcome. We will sing, move around, read books, and have fun! Storytimes are Tuesdays and Thursdays at 10:30am in the Youth Services Program Room.",
+    "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3558"
+  },
+  {
+    "title": "Baby Lapsit - Under age 2",
+    "date": "2026-11-18",
+    "startTime": "10:30",
+    "endTime": "11:00",
+    "venue": "Youth Program Room",
+    "category": "Family & kids",
+    "admission": "free",
+    "description": "Baby Lapsit is a gentle storytime for babies under age 2 and their caregivers. A gentle program of rhyming, reading, and playtime. On Wednesdays from 10:30am-11 in our Youth Program Room.",
+    "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3588"
+  },
+  {
+    "title": "Silly Science - Mushrooms",
+    "date": "2026-11-18",
+    "startTime": "15:30",
+    "endTime": "16:30",
+    "venue": "",
+    "category": "Family & kids",
+    "admission": "free",
+    "description": "Silly science: Mushrooms! Learn a bit of mushroom science and have a lot of fun with us! Make a few mushrooms out of egg cartons and corks! Geared to ages 5 - 10 but open to everyone.",
+    "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3667"
+  },
+  {
+    "title": "Family Storytime at Walker Library",
+    "date": "2026-11-19",
+    "startTime": "10:30",
+    "endTime": "11:00",
+    "venue": "Walker Memorial Library, Youth Services Program Room",
+    "category": "Family & kids",
+    "admission": "free",
+    "description": "Family Storytime at Walker Memorial Library is geared to ages 1-3 with caregivers, but all ages are welcome. We will sing, move around, read books, and have fun! Storytimes are Tuesdays and Thursdays at 10:30am in the Youth Services Program Room.",
+    "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3559"
+  },
+  {
+    "title": "Hanging out in the Historic Wing",
+    "date": "2026-11-19",
+    "startTime": "15:00",
+    "endTime": "16:30",
+    "venue": "Historic Wing",
+    "category": "Community & civic",
+    "admission": "free",
+    "description": "Hang out with us upstairs in our historic wing! Knit/crochet/stitch, read a book, make a puzzle, play a game, or just sit and enjoy the atmosphere!",
+    "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3668"
+  },
+  {
+    "title": "Silent Book Club",
+    "date": "2026-11-20",
+    "startTime": "15:00",
+    "endTime": "16:30",
+    "venue": "Eleanor Conant Room",
+    "category": "Classes & learning",
+    "admission": "free",
+    "description": "Enjoy quiet reading in our beautiful historic wing with other patrons. Be part of our silent book club with no commitments, no assigned reading, and no required discussion! Audiobooks are welcome, but headphones are required; all ages that can read silently are welcome, but under age 8 must be with an adult.",
+    "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3669"
+  },
+  {
+    "title": "Adult/Teen Craft: Resin Ornaments - Ages 13 and up",
+    "date": "2026-11-21",
+    "startTime": "10:30",
+    "endTime": "12:30",
+    "venue": "Historic Wing",
+    "category": "Arts & music",
+    "admission": "free",
+    "description": "Make a few beautiful ornaments out of resin! Resin will need to cure for about a week before you can pick up your ornaments at the library. Please arrive by 12pm at the latest in order to have enough time to make an ornament or two. Ages 13 and up only due to resin chemicals.",
+    "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3670"
+  },
+  {
     "title": "Turkey Trot 5K & Kids 1 Mile",
     "date": "2026-11-22",
     "startTime": "08:30",
@@ -131,6 +384,72 @@
     "admission": "paid",
     "description": "This is a great fundraiser for our Project Graduation for the class of 2027. All proceeds will go directly to the class. Our Kids Mile - designed for participants age 12 and under, starting at 8:30am at the high school track. A traditional 5K will start at 9:30am in the parking lot by the baseball field. Runners and walkers are all welcome. All participants will receive a commemorative Turkey Trot 2026 medal! You'll need to pick up your bib and race prep items. We'll be hosting bib pickup Admission: $25 adults/ $10 kids 1 mile",
     "sourceLink": "https://runsignup.com/Race/ME/Westbrook/WHSTurkeyTrot5K2026"
+  },
+  {
+    "title": "Family Storytime at Walker Library",
+    "date": "2026-11-24",
+    "startTime": "10:30",
+    "endTime": "11:00",
+    "venue": "Walker Memorial Library, Youth Services Program Room",
+    "category": "Family & kids",
+    "admission": "free",
+    "description": "Family Storytime at Walker Memorial Library is geared to ages 1-3 with caregivers, but all ages are welcome. We will sing, move around, read books, and have fun! Storytimes are Tuesdays and Thursdays at 10:30am in the Youth Services Program Room.",
+    "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3560"
+  },
+  {
+    "title": "Pokémon Club",
+    "date": "2026-11-24",
+    "startTime": "15:30",
+    "endTime": "16:30",
+    "venue": "",
+    "category": "Family & kids",
+    "admission": "free",
+    "description": "Learn how to play the Pokémon card game, or just have fun crafting and hanging out with other Pokémon fans! Come to any or all of the club meetings! For ages 5 to 18. Ages 8 and under must be with caregiver.",
+    "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3671"
+  },
+  {
+    "title": "Baby Lapsit - Under age 2",
+    "date": "2026-11-25",
+    "startTime": "10:30",
+    "endTime": "11:00",
+    "venue": "Youth Program Room",
+    "category": "Family & kids",
+    "admission": "free",
+    "description": "Baby Lapsit is a gentle storytime for babies under age 2 and their caregivers. A gentle program of rhyming, reading, and playtime. On Wednesdays from 10:30am-11 in our Youth Program Room.",
+    "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3589"
+  },
+  {
+    "title": "Kids' Crafternoon: Make a Mini Book",
+    "date": "2026-11-25",
+    "startTime": "15:30",
+    "endTime": "16:30",
+    "venue": "",
+    "category": "Arts & music",
+    "admission": "free",
+    "description": "Craft with us! Make a miniature book out of our blank books and art supplies!",
+    "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3672"
+  },
+  {
+    "title": "Library Closed for Thanksgiving Holiday",
+    "date": "2026-11-26",
+    "startTime": "",
+    "endTime": "",
+    "venue": "",
+    "category": "Other",
+    "admission": "free",
+    "description": "",
+    "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3201"
+  },
+  {
+    "title": "Thanksgiving Day (Closure)",
+    "date": "2026-11-26",
+    "startTime": "",
+    "endTime": "",
+    "venue": "Westbrook City Hall",
+    "category": "Other",
+    "admission": "free",
+    "description": "Westbrook City Hall, the Walker Memorial Library, and the Westbrook Community Center's Administrative Offices will be closed on November 26 - 27 , 2026. Please note that the Westbrook Community Center facility will be open for public use and all classes and activities will continue, unless otherwise noted.",
+    "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3222"
   },
   {
     "title": "Dana Warp Mill Holiday Art Walk & Market",
