@@ -100,6 +100,17 @@
     "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3651"
   },
   {
+    "title": "Sit and Stitch: Crafting and Conversation",
+    "date": "2026-11-06",
+    "startTime": "15:00",
+    "endTime": "16:30",
+    "venue": "Historic Wing",
+    "category": "Arts & music",
+    "admission": "free",
+    "description": "Bring your knitting, crochet, needlework, and other crafts for crafting and conversation in the historic wing. Crafters of all ages are welcome, but children ages 8 and under must be accompanied by an adult.",
+    "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3665"
+  },
+  {
     "title": "St. Anthony of Padua Christmas Craft Fair @St.Hyacinth Church",
     "date": "2026-11-07",
     "startTime": "09:00",
@@ -219,6 +230,17 @@
     "admission": "free",
     "description": "",
     "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3200"
+  },
+  {
+    "title": "Veterans Day (Closure)",
+    "date": "2026-11-11",
+    "startTime": "",
+    "endTime": "",
+    "venue": "",
+    "category": "Other",
+    "admission": "free",
+    "description": "Westbrook City Hall, the Walker Memorial Library, and the Westbrook Community Center's Administrative Offices will be closed on November 11, 2026. The Westbrook Community Center facility remains open for public use and activities.",
+    "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3221"
   },
   {
     "title": "Veterans Day Recognition - Woodlawn Cemetery",
@@ -450,6 +472,28 @@
     "admission": "free",
     "description": "Westbrook City Hall, the Walker Memorial Library, and the Westbrook Community Center's Administrative Offices will be closed on November 26 - 27 , 2026. Please note that the Westbrook Community Center facility will be open for public use and all classes and activities will continue, unless otherwise noted.",
     "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3222"
+  },
+  {
+    "title": "Library Closed for Thanksgiving Holiday",
+    "date": "2026-11-27",
+    "startTime": "",
+    "endTime": "",
+    "venue": "",
+    "category": "Other",
+    "admission": "free",
+    "description": "",
+    "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3202"
+  },
+  {
+    "title": "Thanksgiving Friday (Closure)",
+    "date": "2026-11-27",
+    "startTime": "",
+    "endTime": "",
+    "venue": "Westbrook City Hall",
+    "category": "Other",
+    "admission": "free",
+    "description": "Westbrook City Hall, the Walker Memorial Library, and the Westbrook Community Center's Administrative Offices will be closed on November 26 - 27 , 2026. Please note that the Westbrook Community Center facility will be open for public use and all classes and activities will continue, unless otherwise noted.",
+    "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3223"
   },
   {
     "title": "Dana Warp Mill Holiday Art Walk & Market",
