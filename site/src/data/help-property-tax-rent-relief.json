@@ -2,7 +2,7 @@
   "slug": "property-tax-rent-relief",
   "title": "Property Tax & Rent Relief",
   "intro": "For homeowners and renters — these programs lower what you owe, not just help you catch up.",
-  "lastChecked": "2026-10-21",
+  "lastChecked": "2026-11-01",
   "programs": [
     {
       "id": "homestead",
@@ -24,8 +24,8 @@
       "name": "Veteran Exemption",
       "chip": "$6,000 now → up to $5,000–$50,000 from Apr 2027",
       "chipKind": "info",
-      "summary": "Reduces your home's taxable value. The current amount is a flat $6,000. Starting April 1, 2027, it becomes tiered by age and VA disability rating, from $5,000 up to $50,000.",
-      "know": "You'll need proof of service (Form DD214) with your application.",
+      "summary": "Reduces your home's taxable value. The current amount is a flat $6,000. Starting April 1, 2027, it becomes tiered by age and VA disability rating, from $5,000 up to $50,000, and it now covers veterans who didn't serve during a federally recognized war period.",
+      "know": "You'll need proof of service (Form DD214) with your application. If you're under 62, or you didn't serve during a recognized war period, you may newly qualify starting in 2027 — but it isn't automatic, so you'll need to apply or reapply to get it.",
       "phone": "(207) 854-0638",
       "phoneHref": "tel:+12078540638",
       "email": "assessors@westbrook.me.us",
@@ -39,7 +39,7 @@
       "chip": "$4,000 now → $5,000 from Apr 2027",
       "chipKind": "info",
       "summary": "Reduces your home's taxable value if you are legally blind. For Westbrook's current tax rate, this works out to about $54 a year in actual savings.",
-      "know": "You'll need a letter from a licensed doctor or optometrist confirming legal blindness, submitted with your application by April 1 each year.",
+      "know": "You'll need a letter from a licensed doctor or optometrist confirming legal blindness, submitted with a new application by April 1. If you already have this exemption, you don't need to reapply or send a new letter unless your situation has changed.",
       "phone": "(207) 854-0638",
       "phoneHref": "tel:+12078540638",
       "email": "assessors@westbrook.me.us",
