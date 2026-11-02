@@ -1,0 +1,4 @@
+# Credentials - never commit
+*firebase-adminsdk*.json
+.env
+.env.*
