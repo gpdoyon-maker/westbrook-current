@@ -19,6 +19,15 @@ const meeting: any = (meetings as any[]).find((m) => m.slug === data.slug) || {}
 const f = data.fields || {};
 const videoUrl: string = f.Video || '';
 
+// A decision line is "split" if it says a vote failed, or states a X–Y tally where Y > 0
+// (a dissent/opposition). Numbers are bounded to 1–2 digits with word boundaries so an
+// order number like "2026-120" or "26-000123" never matches as a fake tally.
+function isSplitDecision(text: string) {
+  if (/\bfailed\b/i.test(text)) return true;
+  const m = text.match(/\b(\d{1,2})\b\s*[–‒-]\s*\b(\d{1,2})\b/);
+  return !!m && Number(m[2]) > 0;
+}
+
 function tsLink(ts: string) {
   const parts = ts.split(':').map(Number);
   const [h, m, s] = parts.length === 3 ? parts : [0, parts[0], parts[1]];
@@ -136,7 +145,7 @@ const pageTitle = `TL;DW! ${heading} | Westbrook Currents`;
             if (b.t === 'p') return <p>{parts(b.x).map((s: any) => s.ts ? <a class="ts-link" href={tsLink(s.ts)} target="_blank" rel="noopener noreferrer">{s.ts}</a> : s.text)}</p>;
             if (b.t === 'sub') return <p class="label">{b.x}</p>;
             if (b.t === 'q') return <p class="tldw-quote">{b.x}<cite>&mdash; {b.cite}{b.ts && <> &middot; <a class="ts-link" href={tsLink(b.ts)} target="_blank" rel="noopener noreferrer">{b.ts}</a></>}</cite></p>;
-            if (b.t === 'd') return <span class="tldw-decision">&#10003; {b.x}</span>;
+            if (b.t === 'd') { const split = isSplitDecision(b.x); return <span class={`tldw-decision${split ? ' split' : ''}`}>{split ? '✗' : '✓'} {b.x}</span>; }
             if (b.t === 'a') return <ul><li>{b.x}</li></ul>;
             return null;
           })}
