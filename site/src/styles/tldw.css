@@ -31,7 +31,7 @@ body:has(.tldw-wrap) { background: #faf4f1; }
 .tldw-legend-sep { color: var(--edge); }
 
 /* Month groups + card/compact list */
-.tldw-month-head { position: sticky; top: 0; background: var(--navy); margin: 26px 0 12px; padding: 10px 16px; border-bottom: none; border-radius: 8px; color: #fff; font-size: 13px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.tldw-month-head { position: sticky; top: 0; background: var(--blue); margin: 26px 0 12px; padding: 10px 16px; border-bottom: none; border-radius: 8px; color: #fff; font-size: 13px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
 .mc-item { margin-bottom: 12px; }
 .mc-type-badge, .mcc-type-badge { display: inline-block; padding: 3px 10px; border-radius: 999px; color: #fff; font-size: 11px; font-weight: 800; white-space: nowrap; }
 .mc-type-badge[data-cat="Regular Meeting"], .mcc-type-badge[data-cat="Regular Meeting"] { background: #355c7d; }
@@ -89,7 +89,7 @@ body:has(.tldw-wrap) { background: #faf4f1; }
 .tldw-scrub-note { margin: -6px 0 0; color: var(--muted); font-size: 13px; line-height: 1.4; }
 
 .tldw-wrap .intro-line { margin: 0; color: #294858; font-size: 16px; line-height: 1.55; }
-.tldw-section-head { margin: 18px 0 0; padding: 10px 16px; background: var(--navy); color: #fff; border-radius: 8px; font-size: 13px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.tldw-section-head { margin: 18px 0 0; padding: 10px 16px; background: var(--blue); color: #fff; border-radius: 8px; font-size: 13px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
 
 details.tldw-item { border: 1.5px solid var(--edge); border-radius: 8px; background: var(--tint); }
 details.tldw-item[open] { border: 2px solid var(--accent); background: #fff; }
@@ -105,7 +105,9 @@ details.tldw-item > summary::-webkit-details-marker { display: none; }
 .ti-title { display: block; color: var(--navy); font-size: 17px; font-weight: 800; margin-top: 3px; }
 .ti-brief { display: block; color: var(--muted); font-size: 14px; margin-top: 2px; }
 .ti-chev { flex: none; color: var(--blue); font-size: 22px; font-weight: 800; margin-top: 2px; }
+.ti-chev::before { content: '+'; }
 details.tldw-item[open] .ti-chev { color: var(--accent); }
+details.tldw-item[open] .ti-chev::before { content: '\2212'; }
 .ti-body { padding: 0 16px 16px 16px; display: flex; flex-direction: column; gap: 10px; border-top: 1px solid var(--line); margin-top: 2px; padding-top: 12px; }
 .ti-body p { margin: 0; color: #294858; font-size: 15px; line-height: 1.5; }
 .ti-body .label { margin: 4px 0 -2px; color: var(--navy); font-size: 12px; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; }
