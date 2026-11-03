@@ -99,8 +99,13 @@
    "x": "Shaughnessy's three floor amendments (name, purpose statement, Chair/Vice Chair meeting role), combined into one motion, approved 6–0 by roll call [50:18] (McCambridge, Shaughnessy, Munro, Chau, Faulkingham, Rairdon)."
   },
   {
-   "t": "d",
-   "x": "Commission Member & Public Comment No Recreation & Conservation Commission members were present or identified on Zoom despite two invitations to speak. One resident spoke:"
+   "t": "h",
+   "x": "Commission Member & Public Comment",
+   "ts": null
+  },
+  {
+   "t": "p",
+   "x": "No Recreation & Conservation Commission members were present or identified on Zoom despite two invitations to speak. One resident spoke:"
   },
   {
    "t": "q",
@@ -115,12 +120,17 @@
    "ts": "53:19"
   },
   {
-   "t": "d",
+   "t": "p",
    "x": "Boston pressed further — “So an illegal immigrant can be on this board then” — and Holmes repeated that the ordinance does not address immigration status, only residency. No council member weighed in on the exchange; the committee moved directly to its final vote afterward."
   },
   {
-   "t": "d",
-   "x": "Referral to City Council Moved by Councilor Chau, seconded by Vice President Shaughnessy, to refer the ordinance review as amended to City Council."
+   "t": "h",
+   "x": "Referral to City Council",
+   "ts": null
+  },
+  {
+   "t": "p",
+   "x": "Moved by Councilor Chau, seconded by Vice President Shaughnessy, to refer the ordinance review as amended to City Council."
   },
   {
    "t": "label",

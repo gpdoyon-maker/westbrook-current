@@ -91,13 +91,14 @@
    "x": "No vote — workshop item. The applicant anticipates returning with a formal application in summer 2026 after state Site Law and traffic-permit submissions."
   },
   {
-   "t": "d",
-   "x": "Workshop — Bridgton Rd., Wormell Farms LLC (26-000123)"
+   "t": "h",
+   "x": "Workshop — Bridgton Rd., Wormell Farms LLC (26-000123)",
+   "ts": "1:48:34"
   },
   {
    "t": "h",
    "x": "109-Unit Multifamily — Third Phase of the Former Wormell Farm",
-   "ts": "1:48:34"
+   "ts": null
   },
   {
    "t": "label",

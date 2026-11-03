@@ -71,15 +71,16 @@
    "x": "No vote — workshop item. The applicant will return in June with the next Rock Row South Campus parcel."
   },
   {
-   "t": "d",
-   "x": "Planner's Business — Community Growth & Development Trends (Informational)"
+   "t": "h",
+   "x": "Planner's Business — Community Growth & Development Trends (Informational)",
+   "ts": "52:06"
   },
   {
-   "t": "d",
-   "x": "[52:06] Prompted by concerns raised at the May 5 meeting, City Planner Rebecca Spitella presented data on school enrollment and traffic impact trends, while previewing several large applications expected in June: 500 Spring Street (the former Twin Falls golf course site, now ~228 units), 688–712 Main Street (final review), 955 Bridgton Street (new), and Millbrook Estates (a Westbrook Housing development on East Bridge Street, returning as a workshop)."
+   "t": "p",
+   "x": "Prompted by concerns raised at the May 5 meeting, City Planner Rebecca Spitella presented data on school enrollment and traffic impact trends, while previewing several large applications expected in June: 500 Spring Street (the former Twin Falls golf course site, now ~228 units), 688–712 Main Street (final review), 955 Bridgton Street (new), and Millbrook Estates (a Westbrook Housing development on East Bridge Street, returning as a workshop)."
   },
   {
-   "t": "d",
+   "t": "p",
    "x": "A ten-year chart of Planning Board approvals versus building permits showed 2022–2023 as peak years, with growth up overall compared to a roughly 70-units-per-year average from 2006–2016; not every approved project is built on schedule, and large projects typically take two to three years from approval to construction. Regionally, Westbrook's growth rate trails neighboring Windham and Scarborough. On schools, HUD housing-type data (2018–2024) showed a balanced mix (34% single-family, 14% duplex, 53% multifamily, with multifamily skewing smaller/less likely to house school-age children), and district enrollment has stayed essentially flat despite housing growth; Spitella cautioned the often-cited 2016 school impact study significantly overprojected current enrollment (predicting ~2,885 students against actual enrollment near 2,377)."
   },
   {
@@ -89,11 +90,11 @@
    "ts": "1:09:30"
   },
   {
-   "t": "d",
+   "t": "p",
    "x": "Vice Chair John Turcotte [1:03:41] added that McKinney-Vento data (tracking housing-insecure students) in Westbrook schools has risen sharply since January, suggesting new housing may be stabilizing already-present, housing-insecure families rather than drawing new population into the district. On traffic, Spitella distinguished roadway “capacity” from driver-behavior concerns and explained the tiered review process (a state DOT permit triggers at 100+ peak-hour trips; below that, the City Engineer evaluates mitigation). Chair McWilliams, Vice Chair Turcotte, and member Tannenbaum [1:17:01] pressed on who evaluates the cumulative traffic impact of multiple nearby developments over time; Spitella acknowledged that question falls more to City Engineering and regional planning than to the board's project-by-project review authority."
   },
   {
-   "t": "d",
+   "t": "p",
    "x": "[1:28:56] Spitella closed by proposing an informal post-construction site visit to a few completed multifamily developments that initially drew significant concern (a 9-unit project on Conant Street, the 10-unit Reese Commons on Christie Way, and a 12-unit development on Micah Drive) so members can see firsthand how such projects look once built and settled. The board expressed strong interest, tentatively targeting June or July to schedule."
   },
   {

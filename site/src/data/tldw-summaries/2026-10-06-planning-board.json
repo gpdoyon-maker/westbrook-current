@@ -288,13 +288,14 @@
    "x": "No vote — workshop item. The project remains at the workshop stage; next step is state permit applications, with a return to the board expected spring 2027."
   },
   {
-   "t": "d",
-   "x": "Workshop — 680 Methodist Road (26-000821)"
+   "t": "h",
+   "x": "Workshop — 680 Methodist Road (26-000821)",
+   "ts": "2:32:24"
   },
   {
    "t": "h",
    "x": "Site Plan — Methodist Homes, LLC",
-   "ts": "2:32:24"
+   "ts": null
   },
   {
    "t": "label",
