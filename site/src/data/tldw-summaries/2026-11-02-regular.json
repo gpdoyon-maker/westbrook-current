@@ -1,0 +1,356 @@
+{
+ "title": "Westbrook City Council — Regular Meeting",
+ "fields": {
+  "Date": "Monday, November 2, 2026",
+  "Time": "6:00 PM",
+  "Location": "Westbrook High School (Room 114), 125 Stroudwater St. (Hybrid via Zoom)",
+  "Video": "https://vimeo.com/1242580228",
+  "Packet": "https://www.westbrookmaine.gov/AgendaCenter/ViewFile/Agenda/_11022026-1036"
+ },
+ "packetUrl": "https://www.westbrookmaine.gov/AgendaCenter/ViewFile/Agenda/_11022026-1036",
+ "packetNote": "",
+ "note": "This summary highlights the meeting's key discussions and decisions, with direct quotes and timestamps for verification — it is not a substitute for watching the full meeting. Six of seven Council members were present (Vice President Shaughnessy absent); every formal vote tonight passed unanimously, but both public-comment periods carried substantial, sharply differing community reaction to a prior meeting's Recreation and Conservation Commission vote. For complete context, nuance, and anything not covered, watch the full video at the link above. (Produced by: WestbrookCurrents.com)",
+ "blocks": [
+  {
+   "t": "h",
+   "x": "Mayor's Message: Greater Portland Metro's 2027 Budget & Assessment",
+   "ts": null
+  },
+  {
+   "t": "h",
+   "x": "Presented by Glenn Fenton, Executive Director, Greater Portland Metro",
+   "ts": "1:48"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "Metro's calendar-year 2027 budget is roughly $23.4 million, a 14% increase over Metro's 2026 budget. (A related but distinct figure, the aggregate increase in municipal assessments across all member communities, was cited separately at 14.4%.) Westbrook's own assessment rises a smaller 8.8%, from $908,665 to $988,210. Fenton attributed the increase mainly to wages/benefits (72% of the budget) and fuel/natural gas cost increases (roughly 35% and 65% on new contracts, after unusually favorable prior rates), plus newly launched, fully grant-funded service expansions in Scarborough and South Portland that add no cost for existing member communities. Excluding those new-service dollars, the like-for-like increase is about 4.7% ($965,000). Of Westbrook's $988,210 assessment, $408,540 is TIF-eligible (tied to the Route 3/Husky Line expansion), leaving a comparatively small general-fund exposure."
+  },
+  {
+   "t": "p",
+   "x": "Also reported: a base fare increase from $2.00 to $2.25 (reduced fare $1.00 to $1.10) effective August 1, following a public involvement process; ridership holding roughly flat despite the increase; new credit-card/mobile-wallet payment technology on buses; and an encouraging early trend in the Westbrook High School PASS program aimed at reducing truancy. A Bus Rapid Transit project update is expected back before Council in spring 2027, with a preliminary design targeted for early summer."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "label",
+   "x": "Action Items"
+  },
+  {
+   "t": "p",
+   "x": "None."
+  },
+  {
+   "t": "h",
+   "x": "Board Q&A",
+   "ts": "16:04"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "Councilor Rairdon questioned the fare increase, calling a 25-cent rise after six years without one modest compared to the City's own 14% assessment jump. Councilor Chau asked whether more member communities joining Metro lowers existing communities' costs; Fenton explained Metro's cost-allocation model is mostly variable (communities pay for the service they receive), so new members mainly help spread Metro's smaller fixed-cost base. Chau also noted this year's assessment effectively returns Westbrook to pre-ARPA funding levels, since roughly $800,000 in one-time pandemic relief and carry-forward funds that had temporarily reduced last year's assessment are no longer available. A councilor asked about the TIF-eligibility mechanics (an annual calculation tied to the Route 3/Husky Line expansion) and about the Bus Rapid Transit timeline (addressed above)."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "label",
+   "x": "Action Items"
+  },
+  {
+   "t": "p",
+   "x": "None."
+  },
+  {
+   "t": "h",
+   "x": "Orders of the Day (Second & Final Reading)",
+   "ts": null
+  },
+  {
+   "t": "h",
+   "x": "2026-118 & 2026-119 — Highway Safety Grant & 41 Brown St. Drainage Easement",
+   "ts": "39:53"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "Taken together in one motion, without discussion."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "Both passed 6–0 by roll call, moved by Councilor Rairdon, seconded by Councilor Chau."
+  },
+  {
+   "t": "label",
+   "x": "Action Items"
+  },
+  {
+   "t": "p",
+   "x": "None."
+  },
+  {
+   "t": "h",
+   "x": "2026-120 — Amending the Land Use Ordinance Regarding Data Centers (Public Hearing)",
+   "ts": "40:52"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "Finalizes the ordinance that moved through the Planning Board this fall (workshopped Sept. 1, recommended unanimously Oct. 6): data centers are prohibited as a principal use citywide, with small on-site “accessory” server rooms still allowed, and data centers are removed from the list of permitted uses in the Rock Row contract zone (the only zone that previously allowed them). First reading was Oct. 19; tonight's required public hearing drew no speakers."
+  },
+  {
+   "t": "p",
+   "x": "Mayor Morse spoke in support before the vote, citing concerns about electricity and water demand, noise, and infrastructure burden, and crediting the Planning Board's unanimous recommendation."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "Approved 6–0 by roll call."
+  },
+  {
+   "t": "label",
+   "x": "Action Items"
+  },
+  {
+   "t": "p",
+   "x": "None."
+  },
+  {
+   "t": "q",
+   "x": "“The concerns about standalone data centers are quite substantial — their demands on electricity and water, the potential for constant noise, and the burdens that they can place on infrastructure and surrounding neighborhoods ... Resource-consuming data centers are simply not a good fit for Westbrook. The ordinance being implemented tonight makes a very sensible distinction: it prohibits standalone data centers while allowing server rooms and similar facilities that support an on-site business.”",
+   "cite": "Mayor David Morse",
+   "ts": "41:48"
+  },
+  {
+   "t": "h",
+   "x": "New Business",
+   "ts": null
+  },
+  {
+   "t": "h",
+   "x": "Liquor License — Sweet Caroline's Retro Lounge, 1 Westbrook Common, Suite 5",
+   "ts": "43:25"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "A public hearing drew one speaker: owner Caroline introduced her new venue (replacing Westbrook on Tap), describing plans to integrate local art and live music. Councilors spoke favorably, having visited the space."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "Approved 6–0 by roll call, moved by Councilor Rairdon, seconded by Councilor Chau."
+  },
+  {
+   "t": "label",
+   "x": "Action Items"
+  },
+  {
+   "t": "p",
+   "x": "None."
+  },
+  {
+   "t": "h",
+   "x": "2026-121 — Retainer Agreement for Fire Apparatus Antitrust Litigation (One Reading)",
+   "ts": "46:14"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "Authorizes a contingency-fee retainer with Gustafson Gluek PLLC (Minneapolis) to represent Westbrook in the “indirect purchaser” track of a nationwide class action against four major fire-apparatus manufacturers (REV Group, Oshkosh, Pierce, Rosenbauer) and their trade association (FAMA), alleging coordinated price-fixing and production restraint — pumper-truck prices have roughly doubled in a decade and wait times have grown from 18 months to over four years nationally."
+  },
+  {
+   "t": "p",
+   "x": "City Administrator Angela Holmes explained Westbrook qualifies via its E-One Quint ladder truck, purchased in 2021 through a distributor (delivered 2023 after delay, with price adjustments and a withheld performance guarantee). No upfront cost to the City; fees are contingent on any eventual recovery. Assistant Fire Chief Gary Wagner was present for questions."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "Approved 6–0 by roll call, moved by Councilor McCambridge, seconded by Councilor Rairdon."
+  },
+  {
+   "t": "label",
+   "x": "Action Items"
+  },
+  {
+   "t": "p",
+   "x": "None."
+  },
+  {
+   "t": "h",
+   "x": "2026-122 — Authorizing Sale of 12 Water Street (First Reading)",
+   "ts": "51:02"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "Authorizes selling a roughly 8,985-sq-ft, triangular city-owned parcel to Dori Schulberger of Westbrook for not less than $50,000, proceeds directed to the Riverwalk North project. The parcel came to the City in a 2023 acquisition of former Sappi land along the Presumpscot River; Schulberger's mother had leased the site since 1980 (Scott Paper, later SD Warren/Sappi, at $400/year), placing a mobile home there; Dori inherited the lease and continued paying rent, including to the City after 2023. An independent appraisal valued the largely unbuildable parcel at $50,000. The City retains easements, including for a possible future Riverwalk North extension, though the project's current alignment ends short of this parcel at Garfield Street."
+  },
+  {
+   "t": "p",
+   "x": "Councilor Rairdon noted this was one of the first constituent issues he heard about after being re-elected in January. Three members of the public spoke in support: Schulberger's attorney Andrew Bratis called it a “win-win”; Garfield Street resident Alice Peterson supported it on the neighborhood's behalf; a third resident praised the public advocacy that helped bring about the resolution."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "First reading approved by a show of hands, all in favor, none opposed. Second and final reading scheduled for November 16, 2026."
+  },
+  {
+   "t": "label",
+   "x": "Action Items"
+  },
+  {
+   "t": "p",
+   "x": "None."
+  },
+  {
+   "t": "h",
+   "x": "2026-123 — 2026–2029 Collective Bargaining Agreement, Essential Services Unit (First Reading)",
+   "ts": "1:00:54"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "Approves a new 3-year contract for the City's newly created, 12-position Essential Services Unit (Teamsters Local 340), split off from the General Unit in March 2026 to cover employees — facilities, wastewater, grounds, administrative support — whose roles require continued operation during emergencies, distinct from public safety staff. A regional salary study found these positions running 2–11% below market; the new pay scale (effective July 1, 2026) corrects this with an average 5% increase, plus 3% COLAs in 2027 and 2028, a one-time $500 signing bonus per member, and administrative updates consistent with the City's other recent union contracts. Three-year projected cost: $107,837.46, not including scheduled step increases. Already ratified by the union membership; HR Director Joanne Lapolo was present for questions."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "First reading approved by a show of hands, all in favor, none opposed. Second and final reading scheduled for November 16, 2026."
+  },
+  {
+   "t": "label",
+   "x": "Action Items"
+  },
+  {
+   "t": "p",
+   "x": "None."
+  },
+  {
+   "t": "h",
+   "x": "Point / Counterpoint: Reaction to the Recreation & Conservation Commission Vote",
+   "ts": null
+  },
+  {
+   "t": "h",
+   "x": "Not on tonight's agenda, but raised at length in both public-comment periods",
+   "ts": "36:54"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "Both public-comment periods carried substantial, sharply differing follow-up to a prior meeting's vote to repeal and restructure the Recreation and Conservation Commission into a new committee — a vote on which Councilor Turcotte was the lone dissent. No councilor responded to either set of remarks on the record tonight, and the matter itself was not back before the Council this evening."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "label",
+   "x": "Action Items"
+  },
+  {
+   "t": "p",
+   "x": "None."
+  },
+  {
+   "t": "q",
+   "x": "“I think it's no secret that I don't agree with the decision you all made last week, all but one of you, to repeal and replace the Recreation and Conservation Commission ... I'd like to thank Councilor Turcott for her honesty and quite honestly the bravery that she displayed last meeting ... when you put yourself in a position of dissent and then kind of get tried to be silenced, I think it's a clear indicator of how daunting such an act can be.”",
+   "cite": "Matthew Brunner, Westbrook resident",
+   "ts": "36:54"
+  },
+  {
+   "t": "q",
+   "x": "“I just wanted to thank Anna [Councilor Turcotte] for the way she spoke up at the meeting ... a lot of people in our community have opinions but will not come out because they're afraid to be judged, and what Anna did last week took a lot of courage.”",
+   "cite": "Mark Fournier, 75 Walker St.",
+   "ts": "1:09:57"
+  },
+  {
+   "t": "q",
+   "x": "“During that public hearing, it sounded as though somebody could be on that committee who was in this country illegally. I think that's a grave mistake ... under the Supremacy Clause you must support and help enforce immigration law, even if you personally or collectively disagree with that ... please make it clear that persons in this country illegally are not allowed to serve in any capacity in our municipal government.”",
+   "cite": "Ken Fawson, Westbrook resident (Frenchtown)",
+   "ts": "1:05:54"
+  },
+  {
+   "t": "h",
+   "x": "First Public Comment: Other Items",
+   "ts": null
+  },
+  {
+   "t": "h",
+   "x": "Larry McWilliams, Planning Board Chair & House District 128 Candidate",
+   "ts": "34:32"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "Raised two administrative requests unrelated to tonight's votes: that Planning Board meetings not be scheduled on Election Day going forward, citing a recurring conflict for candidates; and that Council/board packets be distributed further ahead of meetings (citing a same-morning delay this week), to give members more time with lengthy agendas. He also asked, referencing the Metro budget materials, for historical data on how closely Metro's past ridership/fare-revenue projections tracked actual results — not answered live tonight."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "label",
+   "x": "Action Items"
+  },
+  {
+   "t": "p",
+   "x": "None."
+  }
+ ],
+ "howMade": "This summary was produced from the meeting video (linked above, hosted on the City's Vimeo showcase). The audio was downloaded with Downie 4 and transcribed with speaker diarization using MacWhisper. Claude (Anthropic's AI) cross-checked names against the official city council roster, attributed speakers from context (introductions, roll-call order, direct address by the presiding officer) rather than the raw diarization labels alone, and drafted this summary and the quoted excerpts. Quotes are lightly cleaned of filler words/false starts but not reworded. The meeting continued into executive session (1 M.R.S.A. §405(6)(E)) after the point captured on the source recording; by law, no content from that session is reflected here. Every quoted passage, vote tally, and dollar figure above was checked against the full timestamped transcript by Claude, then reviewed and approved by Gerald Doyon before publication.",
+ "slug": "2026-11-02-regular"
+}
