@@ -138,7 +138,7 @@ const pageTitle = `TL;DW! ${heading} | Westbrook Currents`;
             <span class="ti-title">{r.title}</span>
             {brief(r.body) && <span class="ti-brief">{brief(r.body)}</span>}
           </span>
-          <span class="ti-chev">+</span>
+          <span class="ti-chev" aria-hidden="true"></span>
         </summary>
         <div class="ti-body">
           {cleaned(r.body).map((b: any) => {

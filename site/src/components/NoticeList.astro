@@ -90,7 +90,7 @@ const items = (rawNotices as unknown as Record<string, unknown>[])
               </span>
               <span class="alert-headline">{item.headline}</span>
             </span>
-            <span class="alert-arrow" aria-hidden="true">&rsaquo;</span>
+            <span class="alert-arrow" aria-hidden="true"></span>
           </button>
           <div class="alert-details">
             {item.description && <p class="alert-detail">{item.description}</p>}
@@ -121,7 +121,7 @@ const items = (rawNotices as unknown as Record<string, unknown>[])
         <button class="notice-toggle" type="button" aria-expanded="false">
           <svg class="notice-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5M12 8h.01"></path></svg>
           <span class="notice-title">{item.headline}</span>
-          <span class="notice-arrow" aria-hidden="true">›</span>
+          <span class="notice-arrow" aria-hidden="true"></span>
         </button>
         <div class="notice-mobile-details mobile-details" aria-live="polite"></div>
       </div>
@@ -143,8 +143,9 @@ const items = (rawNotices as unknown as Record<string, unknown>[])
   .alert-posted { font-weight: 600; letter-spacing: 0; }
   .alert-headline { display: block; margin-top: 2px; font-size: 15px; font-weight: 800; line-height: 1.3; }
   .alert-emergency .alert-headline, .alert-parking .alert-headline { font-size: 16px; }
-  .alert-arrow { flex: 0 0 auto; color: var(--alert-accent); font-size: 23px; line-height: 1; transition: transform .15s; }
-  .alert.is-open .alert-arrow { transform: rotate(90deg); }
+  .alert-arrow { flex: 0 0 auto; color: var(--alert-accent); font-size: 23px; font-weight: 800; line-height: 1; }
+  .alert-arrow::before { content: '+'; }
+  .alert.is-open .alert-arrow::before { content: '\2212'; }
   .alert-details { display: none; padding: 0 0 14px 24px; }
   .alert.is-open .alert-details { display: block; }
   .alert-detail { margin: 0 0 6px; font-size: 13px; line-height: 1.4; white-space: pre-line; }
@@ -157,7 +158,9 @@ const items = (rawNotices as unknown as Record<string, unknown>[])
   .notice-icon { flex: 0 0 auto; color: #0a5f80; }
   .notice-title { flex: 1; min-width: 0; font-weight: 700; }
   /* Same arrow as the event rows. Details open in the right-hand pane (desktop) or below the card (phone). */
-  .notice-arrow { flex: 0 0 auto; margin-left: 12px; color: #6e8592; font-size: 23px; line-height: 1; }
+  .notice-arrow { flex: 0 0 auto; margin-left: 12px; color: #6e8592; font-size: 23px; font-weight: 800; line-height: 1; }
+  .notice-arrow::before { content: '+'; }
+  .notice.is-open .notice-arrow::before { content: '\2212'; }
   .notice-mobile-details { display: none; }
 
   @media (min-width: 721px) {
@@ -173,8 +176,6 @@ const items = (rawNotices as unknown as Record<string, unknown>[])
 <!-- Home page version: rows open in place at every width. Global because the details are built by the script below. -->
 <style is:global>
   .notice-stack.notice-inline.notice-inline { padding: 0; }
-  .notice-inline .notice-arrow { transition: transform .15s; }
-  .notice-inline .notice.is-open .notice-arrow { transform: rotate(90deg); }
   .notice-inline .notice.is-open .notice-mobile-details { display: block; padding: 16px 18px 18px; border-top: 1px solid #6fb0cb; background: #fff; }
   .notice-inline .detail-category { margin: 0 0 6px; color: var(--blue); font-size: 11px; font-weight: 800; text-transform: uppercase; }
   .notice-inline .detail-title { margin: 0 0 12px; color: var(--navy); font-size: 19px; line-height: 1.25; }
