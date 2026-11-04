@@ -1,12 +1,146 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
+import { formatCheckedDate } from '../lib/help';
 import '../styles/help.css';
 
+const checked = '2026-11-04';
 const city = 'https://westbrookmaine.gov';
+const sos = 'https://www.maine.gov/sos/elections-voting/election-results-data';
+const sourcePdf = `${city}/DocumentCenter/View/6438`;
+
+// Westbrook's own vote counts, as posted by the City Clerk (unofficial results
+// PDF above). These are Westbrook's totals only -- for any race that spans
+// more than Westbrook (every one of these except the unopposed/single-town
+// seats), the actual winner is decided by the full district/county/state
+// count, not by Westbrook alone.
+//
+// "incumbent" reflects who already held the seat going into this election,
+// confirmed against official/legislative sources, not just the City's PDF.
+//
+// One correction to the source PDF: it lists Nangle's Total as 0, which is
+// a clear addition error (Ward 1-5 1,538 + Absentee 2,826). Shown here as
+// 4,364, the correct sum.
+const races = [
+  {
+    office: 'U.S. Senator',
+    sub: 'Ranked choice voting statewide &mdash; shown here is the 1st-choice count only.',
+    multiTown: true,
+    candidates: [
+      { name: 'Susan Collins', party: 'R', votes: 2747, incumbent: true },
+      { name: 'Troy D. Jackson', party: 'D', votes: 6505 },
+    ],
+    writeIns: 22,
+    blank: 144,
+    open: true,
+  },
+  {
+    office: 'Governor',
+    sub: 'Gov. Janet Mills is term-limited, so this is an open seat &mdash; no incumbent is running.',
+    multiTown: true,
+    candidates: [
+      { name: 'Rick Bennett', party: 'I', votes: 726 },
+      { name: 'Robert B. Charles', party: 'R', votes: 2215 },
+      { name: 'Hannah M. Pingree', party: 'D', votes: 6700 },
+    ],
+    writeIns: 2,
+    blank: 119,
+    open: true,
+  },
+  {
+    office: 'U.S. Representative to Congress (District 1)',
+    multiTown: true,
+    candidates: [
+      { name: 'Chellie Pingree', party: 'D', votes: 7095, incumbent: true },
+      { name: 'Ronald C. Russell', party: 'R', votes: 2475 },
+    ],
+    blank: 193,
+  },
+  {
+    office: 'State Senator (District 26)',
+    multiTown: true,
+    candidates: [
+      { name: 'Kenneth James Cianchette', party: 'R', votes: 1906 },
+      { name: 'Timothy E. Nangle', party: 'D', votes: 4364, incumbent: true },
+    ],
+    blank: 169,
+  },
+  {
+    office: 'State Senator (District 27)',
+    multiTown: true,
+    unopposed: true,
+    candidates: [
+      { name: 'Jill Duson', party: 'D', votes: 2676, incumbent: true },
+    ],
+    blank: 647,
+  },
+  {
+    office: 'State Representative to the Legislature (District 126)',
+    multiTown: true,
+    candidates: [
+      { name: 'Andrew Gattine', party: 'D', votes: 454, incumbent: true },
+      { name: 'Ethan E. Mongue', party: 'R', votes: 206 },
+    ],
+    blank: 31,
+  },
+  {
+    office: 'State Representative to the Legislature (District 127)',
+    multiTown: true,
+    unopposed: true,
+    candidates: [
+      { name: 'Morgan Rielly', party: 'D', votes: 3398, incumbent: true },
+    ],
+    blank: 716,
+  },
+  {
+    office: 'State Representative to the Legislature (District 128)',
+    multiTown: true,
+    candidates: [
+      { name: 'Lawrence P. McWilliams', party: 'R', votes: 1436 },
+      { name: 'Suzanne M. Salisbury', party: 'D', votes: 3302, incumbent: true },
+    ],
+    blank: 221,
+  },
+  {
+    office: 'Judge of Probate (Cumberland County)',
+    multiTown: true,
+    unopposed: true,
+    candidates: [
+      { name: 'Paul Aranson', votes: 7843, incumbent: true },
+    ],
+    blank: 1922,
+  },
+  {
+    office: 'Sheriff (Cumberland County)',
+    multiTown: true,
+    unopposed: true,
+    candidates: [
+      { name: 'Kevin J. Joyce', votes: 8005, incumbent: true },
+    ],
+    blank: 1757,
+  },
+  {
+    office: 'District Attorney (District 2)',
+    multiTown: true,
+    candidates: [
+      { name: 'Stephanie Anderson', votes: 3241 },
+      { name: 'Jacqueline A. Sartoris', votes: 5720, incumbent: true },
+    ],
+    blank: 801,
+  },
+  {
+    office: 'County Commissioner (District 4)',
+    multiTown: true,
+    unopposed: true,
+    candidates: [
+      { name: 'Patricia A. Smith', votes: 7773, incumbent: true },
+    ],
+    blank: 1989,
+  },
+];
 ---
 <SiteLayout
-  title="Election Results | Westbrook Currents"
-  description="Results are still being counted for the November 3, 2026 general election in Westbrook, Maine. Check back soon."
+  title="Election Results (Unofficial) | Westbrook Currents"
+  description="Unofficial results for the November 3, 2026 general election in Westbrook, Maine, as posted by the City Clerk. Official results are still to come."
   currentPage="vote"
 >
   <main class="help-wrap t-vote">
@@ -14,22 +148,63 @@ const city = 'https://westbrookmaine.gov';
     <h1>Election Results</h1>
     <p class="help-sub">General Election &middot; Tuesday, November 3, 2026</p>
 
-    <section class="vote-hero" aria-label="Results pending">
-      <small>Counting in progress</small>
-      <strong>We're still waiting on the final count.</strong>
-      <p>Polls have closed, but official results aren't in yet. Check back here soon &mdash; we'll post results once they're final.</p>
-      <p>Based on past elections, most local races are usually reported by the morning after Election Day (Wednesday, Nov. 4). Statewide races using ranked choice voting can take longer if no candidate wins a majority outright.</p>
-      <a class="btn" href={`${city}/589/Election-Results`} target="_blank" rel="noopener noreferrer">City's live results page<span class="visually-hidden"> (opens in a new tab)</span> &#8599;</a>
+    <section class="vote-hero" aria-label="Unofficial results posted">
+      <small>Unofficial results</small>
+      <strong>The City has posted unofficial results.</strong>
+      <p>These are Westbrook's own vote counts, as posted by the City Clerk. They are <em>not official yet</em> &mdash; official, certified results follow later (Maine law allows up to 20 days, longer for any race that needs a ranked-choice tabulation or a recount).</p>
+      <a class="btn" href={sourcePdf} target="_blank" rel="noopener noreferrer">City's unofficial results (PDF)<span class="visually-hidden"> (opens in a new tab)</span> &#8599;</a>
     </section>
 
-    <section class="help-box" aria-labelledby="why-title">
-      <h2 id="why-title">Why the wait?</h2>
-      <p>Election workers count ballots by hand, including absentee ballots that came in right up to the 8 p.m. deadline, and send unofficial totals to the Secretary of State as soon as they're done &mdash; usually the same night or the next morning.</p>
-      <p>Official, certified results can take longer. The State has up to 20 days to certify a race, and any race decided by ranked choice voting, or close enough to call for a recount, can take noticeably longer than that.</p>
+    <section class="help-box limit" aria-labelledby="howto-title">
+      <h2 id="howto-title">How to read these</h2>
+      <p>Every race below is Westbrook's vote count only. For races that cover more than Westbrook &mdash; Governor, U.S. Senate, U.S. House, State Senate, State House, and the Cumberland County races &mdash; the actual winner is decided by the full district, county, or statewide count, not by Westbrook alone. For that bigger picture, check the <a href={sos} target="_blank" rel="noopener noreferrer">Maine Secretary of State's election results<span class="visually-hidden"> (opens in a new tab)</span> &#8599;</a>.</p>
+      <p class="fine"><strong>Incumbent</strong> means the candidate already held that seat going into this election. Races with only one name on the ballot are marked <strong>unopposed</strong>.</p>
+      <p class="checked">Last checked {formatCheckedDate(checked)}</p>
     </section>
+
+    {races.map((race) => (
+      <details class="vote-sec" open={race.open}>
+        <summary>
+          {race.office}
+          {race.unopposed && <span class="chip none">Unopposed</span>}
+        </summary>
+        <div class="vote-body">
+          {race.sub && <p set:html={race.sub} />}
+          <table class="dates results-table">
+            <caption class="visually-hidden">{race.office} results for Westbrook</caption>
+            <tbody>
+              {race.candidates.map((c) => (
+                <tr>
+                  <th scope="row">
+                    {c.name}{c.party && ` (${c.party})`}
+                    {c.incumbent && <span class="chip info">Incumbent</span>}
+                  </th>
+                  <td>{c.votes.toLocaleString()}</td>
+                </tr>
+              ))}
+              {race.writeIns && (
+                <tr>
+                  <th scope="row">Write-in candidates (combined)</th>
+                  <td>{race.writeIns.toLocaleString()}</td>
+                </tr>
+              )}
+              <tr>
+                <th scope="row">Blank</th>
+                <td>{race.blank.toLocaleString()}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
+    ))}
 
     <aside class="disclaimer" aria-label="About this page">
-      <strong>Thank you to everyone who voted, and to the election workers.</strong> Westbrook Currents is independent and is not run by the City of Westbrook. We'll share the final results here once they're certified.
+      <strong>Thank you to everyone who voted, and to the election workers.</strong> Westbrook Currents is independent and is not run by the City of Westbrook. We'll update this page once official, certified results are posted.
     </aside>
   </main>
+
+  <style is:global>
+    .results-table th { width: auto; }
+    .results-table .chip { margin-left: 8px; vertical-align: middle; }
+  </style>
 </SiteLayout>
