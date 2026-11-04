@@ -16,7 +16,7 @@ body:has(.tldw-wrap) { background: #f6f9fb; }
 .tldw-filter-toggle:hover { background: var(--mist); }
 .tldw-filter-toggle[aria-expanded="true"] { border-color: var(--accent); background: var(--tint); border-radius: 8px 8px 0 0; }
 .tldw-filter-label-text { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
-.tldw-filter-summary { text-transform: none; font-weight: 700; color: var(--navy); margin-left: 4px; }
+.tldw-filter-summary { display: inline-block; vertical-align: 1px; text-transform: none; font-weight: 700; padding: 2px 10px; border-radius: 999px; background: var(--mist); color: var(--navy); font-size: 12px; margin-left: 6px; }
 .tldw-caret { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; flex-shrink: 0; border-radius: 999px; background: var(--mist); font-size: 17px; font-weight: 800; color: var(--muted); line-height: 1; }
 .tldw-filter-toggle[aria-expanded="true"] .tldw-caret { background: var(--accent); color: #fff; }
 .tldw-pill-row, .tldw-chip-row { display: flex; gap: 8px; flex-wrap: wrap; padding: 12px 14px; margin: 0 0 10px; border: 1.5px solid var(--line); border-top: none; border-radius: 0 0 8px 8px; background: #fff; }
