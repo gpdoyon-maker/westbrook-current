@@ -10,9 +10,11 @@ interface Props {
   privatePage?: boolean;
   // Page-specific social share image (1200x630). Defaults to the site logo.
   image?: string;
+  // Alt text for the share image; defaults to the logo description.
+  imageAlt?: string;
 }
 
-const { title, description, currentPage = 'events', privatePage = false, image } = Astro.props;
+const { title, description, currentPage = 'events', privatePage = false, image, imageAlt = 'Westbrook Currents logo' } = Astro.props;
 const siteUrl = Astro.site ?? new URL('https://westbrookcurrents.com');
 const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
 const socialImageUrl = new URL(image ?? '/logo-desktop.png', siteUrl).href;
@@ -35,13 +37,13 @@ const socialImageUrl = new URL(image ?? '/logo-desktop.png', siteUrl).href;
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:image" content={socialImageUrl} />
-    <meta property="og:image:alt" content="Westbrook Currents logo" />
+    <meta property="og:image:alt" content={imageAlt} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:url" content={canonicalUrl} />
     <meta name="twitter:image" content={socialImageUrl} />
-    <meta name="twitter:image:alt" content="Westbrook Currents logo" />
+    <meta name="twitter:image:alt" content={imageAlt} />
     {!privatePage && (
       <Fragment>
         <!-- Google tag (gtag.js) -->
