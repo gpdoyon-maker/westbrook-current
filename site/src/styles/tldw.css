@@ -12,11 +12,14 @@ body:has(.tldw-wrap) { background: #f6f9fb; }
 /* Filter card */
 .tldw-filter-card { padding: 20px; border: 1.5px solid var(--edge); border-radius: 12px; background: #fff; }
 .tldw-filter-label { display: block; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin-bottom: 8px; }
-.tldw-filter-toggle { width: 100%; display: flex; align-items: center; justify-content: space-between; background: none; border: none; padding: 0; margin: 16px 0 8px; cursor: pointer; font-family: inherit; text-align: left; }
+.tldw-filter-toggle { width: 100%; display: flex; align-items: center; justify-content: space-between; min-height: 48px; padding: 12px 14px; margin: 10px 0 0; border: 1.5px solid var(--line); border-radius: 8px; background: #fff; cursor: pointer; font-family: inherit; text-align: left; transition: background .12s, border-color .12s; }
+.tldw-filter-toggle:hover { background: var(--mist); }
+.tldw-filter-toggle[aria-expanded="true"] { border-color: var(--accent); background: var(--tint); border-radius: 8px 8px 0 0; }
 .tldw-filter-label-text { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
 .tldw-filter-summary { text-transform: none; font-weight: 700; color: var(--navy); margin-left: 4px; }
-.tldw-caret { font-size: 17px; font-weight: 700; color: var(--muted); line-height: 1; }
-.tldw-pill-row, .tldw-chip-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 4px; }
+.tldw-caret { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; flex-shrink: 0; border-radius: 999px; background: var(--mist); font-size: 17px; font-weight: 800; color: var(--muted); line-height: 1; }
+.tldw-filter-toggle[aria-expanded="true"] .tldw-caret { background: var(--accent); color: #fff; }
+.tldw-pill-row, .tldw-chip-row { display: flex; gap: 8px; flex-wrap: wrap; padding: 12px 14px; margin: 0 0 10px; border: 1.5px solid var(--line); border-top: none; border-radius: 0 0 8px 8px; background: #fff; }
 .tldw-pill-row[hidden], .tldw-chip-row[hidden] { display: none; }
 .tldw-pill, .tldw-chip { padding: 7px 14px; border-radius: 999px; border: 1.5px solid var(--line); background: #fff; color: var(--navy); font-size: 13px; font-weight: 700; cursor: pointer; font-family: inherit; }
 .tldw-pill.is-active { background: var(--accent); border-color: var(--accent); color: #fff; }
