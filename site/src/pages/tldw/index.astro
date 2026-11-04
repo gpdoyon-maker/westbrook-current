@@ -62,6 +62,7 @@ function cardCta(m: any) {
         <input type="text" id="tldw-search-input" placeholder="Search by topic, name, or keyword&hellip;" aria-label="Search meeting summaries">
       </div>
 
+      <div class="tldw-filter-group-label">Filters</div>
       <button type="button" class="tldw-filter-toggle" id="type-toggle" aria-expanded="false" aria-controls="type-pills">
         <span class="tldw-filter-label-text">Meeting type <span class="tldw-filter-summary" id="type-summary">All</span></span>
         <span class="tldw-caret" id="type-caret">+</span>
@@ -192,7 +193,10 @@ function cardCta(m: any) {
       pill.addEventListener('click', () => {
         selectedCategory = pill.dataset.category ?? 'All';
         typePills.forEach((p) => p.classList.toggle('is-active', p === pill));
-        if (typeSummary) typeSummary.textContent = selectedCategory;
+        if (typeSummary) {
+          typeSummary.textContent = selectedCategory;
+          typeSummary.classList.toggle('has-selection', selectedCategory !== 'All');
+        }
         applyFilters();
       });
     });
@@ -205,6 +209,7 @@ function cardCta(m: any) {
         if (topicsSummary) {
           const n = selectedTopics.size;
           topicsSummary.textContent = n === 0 ? 'All' : n <= 2 ? Array.from(selectedTopics).join(', ') : `${n} selected`;
+          topicsSummary.classList.toggle('has-selection', n > 0);
         }
         applyFilters();
       });
@@ -218,8 +223,8 @@ function cardCta(m: any) {
       if (input) input.value = '';
       typePills.forEach((p) => p.classList.toggle('is-active', p.dataset.category === 'All'));
       topicChips.forEach((c) => c.classList.remove('is-active'));
-      if (typeSummary) typeSummary.textContent = 'All';
-      if (topicsSummary) topicsSummary.textContent = 'All';
+      if (typeSummary) { typeSummary.textContent = 'All'; typeSummary.classList.remove('has-selection'); }
+      if (topicsSummary) { topicsSummary.textContent = 'All'; topicsSummary.classList.remove('has-selection'); }
       applyFilters();
     });
 
@@ -231,6 +236,7 @@ function cardCta(m: any) {
         const willOpen = panel?.hidden ?? false;
         if (panel) panel.hidden = !willOpen;
         toggle.setAttribute('aria-expanded', String(willOpen));
+        toggle.classList.toggle('is-open', willOpen);
         if (caret) caret.textContent = willOpen ? '−' : '+';
       });
     }
