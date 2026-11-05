@@ -243,6 +243,11 @@ def topic_section(slug, subtitle, intro_note=None):
                 else:
                     out.append(card)
                 out.append(Spacer(1, 8))
+            lo = step.get('linkout')
+            if lo:
+                url = lo['url'] if lo['url'].startswith('http') else SITE_URL + lo['url']
+                out.append(pm(f'{escape(lo["text"])} {link(url, lo["label"])} {escape(lo["after"])}', 'small'))
+                out.append(Spacer(1, 6))
             out.append(Spacer(1, 6))
     else:
         # No steps: a flat list of programs, like Property Tax & Rent Relief.
