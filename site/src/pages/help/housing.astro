@@ -21,6 +21,15 @@ const byId = (id: string) => programs.find((program) => program.id === id) as He
     <p class="help-sub">{data.intro}</p>
     <GuideLink topic="housing" />
 
+    <section class="urgent" aria-label="Urgent help">
+      <strong>{data.emergency.title}</strong>
+      {data.emergency.text}<br />
+      <a class="tel" href={data.emergency.phoneHref}>{data.emergency.phone}</a>
+      <hr />
+      <strong>{data.emergency.dangerTitle}</strong>
+      {data.emergency.dangerText}
+    </section>
+
     <div class="help-linkout">
       <strong style="color:var(--navy)">Need help with heat or electricity instead?</strong> See <a href="/help/heating">Heating &amp; Fuel</a> or <a href="/help/electricity">Electricity</a>. For a general emergency safety net (rent, utilities, food), see <a href="/help/general-assistance">General Assistance</a> &mdash; already on this site, not repeated here.
     </div>
@@ -42,8 +51,8 @@ const byId = (id: string) => programs.find((program) => program.id === id) as He
         </summary>
         <div class="step-cards">
           {step.programs.map((id) => <ProgramCard program={byId(id)} checked={data.lastChecked} />)}
-          {step.n === 2 && (
-            <div class="help-linkout">Also see <a href="/help/general-assistance">General Assistance</a> for a last-resort municipal safety net.</div>
+          {step.linkout && (
+            <div class="help-linkout">{step.linkout.text} <a href={step.linkout.url}>{step.linkout.label}</a> {step.linkout.after}</div>
           )}
         </div>
       </details>

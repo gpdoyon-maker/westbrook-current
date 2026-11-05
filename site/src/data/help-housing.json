@@ -3,6 +3,14 @@
   "title": "Housing",
   "intro": "Find your situation below — each one lists who can actually help.",
   "lastChecked": "2026-10-21",
+  "emergency": {
+    "title": "Police at your door, or facing eviction today?",
+    "text": "Call 211 right now (press 6 for homeless services) — they can connect you to emergency shelter and legal help today, not just program referrals.",
+    "phone": "211",
+    "phoneHref": "tel:211",
+    "dangerTitle": "In immediate danger?",
+    "dangerText": "Call 911."
+  },
   "steps": [
     {
       "n": 1,
@@ -15,6 +23,12 @@
       "n": 2,
       "title": "Behind on rent",
       "sub": "Not facing eviction yet, but falling behind",
+      "linkout": {
+        "text": "Also see",
+        "label": "General Assistance",
+        "url": "/help/general-assistance",
+        "after": "for a last-resort municipal safety net."
+      },
       "programs": ["hssp"]
     },
     {
