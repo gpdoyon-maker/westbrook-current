@@ -20,6 +20,10 @@ const programs = data.programs as HelpProgram[];
     <p class="help-sub">{data.intro}</p>
     <GuideLink topic="property-tax-rent-relief" />
 
+    <div class="help-linkout">
+      <strong style="color:var(--navy)">Behind on rent, or facing eviction?</strong> These programs are about reducing what you owe long-term &mdash; not catching up fast. See <a href="/help/housing">Housing</a> for rent arrears help, eviction prevention and emergency shelter.
+    </div>
+
     {programs.map((program) => <ProgramCard program={program} checked={data.lastChecked} />)}
 
     <HelpDisclaimer />
