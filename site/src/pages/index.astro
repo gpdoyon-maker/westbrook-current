@@ -103,13 +103,13 @@ import NoticeList from '../components/NoticeList.astro';
       return new Intl.DateTimeFormat('en-US', { weekday: 'short', month: 'short', day: 'numeric', timeZone: 'UTC' }).format(new Date(`${date}T12:00:00Z`));
     };
 
-    const upcoming = events
+    const upcomingAll = events
       .filter((event) => typeof event.title === 'string' && event.title.trim() && /^\d{4}-\d{2}-\d{2}$/.test(String(event.date)))
       .filter((event) => String(event.status ?? '').trim().toLowerCase() !== 'cancelled')
       .map((event) => ({ event, start: toMinutes(event.startTime) }))
       .filter(({ event, start }) => event.date > today || (event.date === today && (start === null || start >= nowMinutes)))
-      .sort((a, b) => a.event.date.localeCompare(b.event.date) || (a.start ?? 24 * 60) - (b.start ?? 24 * 60) || a.event.title.localeCompare(b.event.title))
-      .slice(0, 3);
+      .sort((a, b) => a.event.date.localeCompare(b.event.date) || (a.start ?? 24 * 60) - (b.start ?? 24 * 60) || a.event.title.localeCompare(b.event.title));
+    const upcoming = upcomingAll.slice(0, 3);
 
     // "Today in Westbrook" framing (and dropping each row's date) only applies when every
     // shown event is actually today — not just the first one. A window that mixes today with
@@ -139,7 +139,17 @@ import NoticeList from '../components/NoticeList.astro';
         list.append(item);
       });
       section.hidden = false;
-      seeAll.hidden = true;
+
+      // When every shown event is today's and there are more today than fit in the
+      // capped list, say so explicitly instead of silently stopping at three -- a
+      // busy day shouldn't look like it only has three events happening.
+      const moreToday = allToday ? upcomingAll.filter(({ event }) => event.date === today).length - upcoming.length : 0;
+      if (moreToday > 0) {
+        seeAll.textContent = `+${moreToday} more happening today →`;
+        seeAll.hidden = false;
+      } else {
+        seeAll.hidden = true;
+      }
     }
   </script>
 </SiteLayout>
