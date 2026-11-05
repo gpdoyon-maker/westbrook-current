@@ -15,6 +15,7 @@ interface Props {
 }
 
 const { title, description, currentPage = 'events', privatePage = false, image, imageAlt = 'Westbrook Currents logo' } = Astro.props;
+const isLocalLife = currentPage === 'vote' || currentPage === 'tldw' || currentPage === 'perceptions';
 const siteUrl = Astro.site ?? new URL('https://westbrookcurrents.com');
 const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
 const socialImageUrl = new URL(image ?? '/logo-desktop.png', siteUrl).href;
@@ -68,9 +69,14 @@ const socialImageUrl = new URL(image ?? '/logo-desktop.png', siteUrl).href;
         <nav class="site-nav" id="site-nav" aria-label="Main navigation">
           <a href="/events" aria-current={currentPage === 'events' ? 'page' : undefined}>Events</a>
           <a href="/help" aria-current={currentPage === 'help' ? 'page' : undefined}>Get Help</a>
-          <a href="/vote" aria-current={currentPage === 'vote' ? 'page' : undefined}>Results</a>
-          <a href="/perceptions" aria-current={currentPage === 'perceptions' ? 'page' : undefined}>Factual Perceptions</a>
-          <a href="/tldw" aria-current={currentPage === 'tldw' ? 'page' : undefined}>TL;DW!</a>
+          <details class="nav-group" open={isLocalLife}>
+            <summary aria-current={isLocalLife ? 'page' : undefined}>Local Life</summary>
+            <div class="nav-group-panel">
+              <a href="/vote" aria-current={currentPage === 'vote' ? 'page' : undefined}>Election Results</a>
+              <a href="/tldw" aria-current={currentPage === 'tldw' ? 'page' : undefined}>City Meeting Summaries (TL;DW!)</a>
+              <a href="/perceptions" aria-current={currentPage === 'perceptions' ? 'page' : undefined}>Factual Perceptions</a>
+            </div>
+          </details>
           <a href="/about/" aria-current={currentPage === 'about' ? 'page' : undefined}>About</a>
           <a class="submit-event-link" href="/submit">Submit an event</a>
         </nav>
