@@ -26,12 +26,25 @@ const getSortValue = (value: string | null | undefined) => {
   return hours * 60 + minutes;
 };
 
+// Minutes after midnight when an event is over, so the page can hide it later that day.
+// Uses endTime when given; otherwise 2 hours after startTime. No start time = all day, never hidden.
+// An end at or before the start (for example past midnight) is treated as "unknown": no hiding.
+const DEFAULT_EVENT_MINUTES = 120;
+const getEndsAtMinutes = (startTime: string | null | undefined, endTime: string | null | undefined) => {
+  const start = getSortValue(startTime);
+  if (start === Number.MAX_SAFE_INTEGER) return '';
+  const end = getSortValue(endTime);
+  if (end !== Number.MAX_SAFE_INTEGER) return end > start ? String(end) : '';
+  return String(start + DEFAULT_EVENT_MINUTES);
+};
+
 const eventRecords = events
   .map((event, index) => ({
     ...event,
     index,
     displayStartTime: formatDisplayTime(event.startTime),
     sortStartTime: getSortValue(event.startTime),
+    endsAtMinutes: getEndsAtMinutes(event.startTime, event.endTime),
   }))
   .sort((a, b) => a.sortStartTime - b.sortStartTime || a.title.localeCompare(b.title));
 
@@ -164,6 +177,7 @@ const months = monthKeys.map((key) => {
                       class:list={['event-row', event.highlight === true && 'is-featured', isCancelled(event) && 'is-cancelled']}
                       type="button"
                       data-event-index={event.index}
+                      data-ends-at={event.endsAtMinutes}
                       data-category={event.category}
                       data-featured={event.highlight === true ? 'true' : 'false'}
                       data-search={`${event.title} ${event.venue} ${event.category} ${event.description} ${isCancelled(event) ? 'cancelled' : ''}`.toLocaleLowerCase()}
@@ -624,6 +638,9 @@ const months = monthKeys.map((key) => {
     function applyFilters() {
       const query = searchInput?.value.trim().toLocaleLowerCase() ?? '';
       const weekend = weekendOnly ? weekendDates() : [];
+      const clock = new Date();
+      const todayKey = `${clock.getFullYear()}-${String(clock.getMonth() + 1).padStart(2, '0')}-${String(clock.getDate()).padStart(2, '0')}`;
+      const nowMinutes = clock.getHours() * 60 + clock.getMinutes();
       document.querySelectorAll<HTMLElement>('.event-entry').forEach((entry) => {
         const button = entry.querySelector<HTMLButtonElement>('.event-row');
         const matchesText = button?.dataset.search?.includes(query) ?? false;
@@ -631,7 +648,10 @@ const months = monthKeys.map((key) => {
         const matchesFeatured = !featuredOnly || button?.dataset.featured === 'true';
         const entryDate = entry.closest<HTMLElement>('.date-group')?.dataset.date ?? '';
         const matchesWeekend = !weekendOnly || weekend.includes(entryDate);
-        entry.hidden = !(matchesText && matchesCategory && matchesFeatured && matchesWeekend);
+        // Hide today's events once they are over. Decided in the visitor's browser, never at build time.
+        const endsAt = Number(button?.dataset.endsAt);
+        const hasEnded = entryDate === todayKey && button?.dataset.endsAt !== '' && !Number.isNaN(endsAt) && endsAt <= nowMinutes;
+        entry.hidden = hasEnded || !(matchesText && matchesCategory && matchesFeatured && matchesWeekend);
       });
       document.querySelectorAll<HTMLElement>('.date-group').forEach((group) => {
         group.hidden = !group.querySelector('.event-entry:not([hidden])');
@@ -672,6 +692,8 @@ const months = monthKeys.map((key) => {
       badge.textContent = 'TODAY';
       header.append(badge);
     });
+
+    setInterval(applyFilters, 60000);
 
     monthJump?.addEventListener('change', () => {
       const month = monthJump.value;
