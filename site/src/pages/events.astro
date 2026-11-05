@@ -153,6 +153,7 @@ const months = monthKeys.map((key) => {
         {categories.map((category) => (
           <button class="filter-chip category-chip" type="button" data-category-filter={category} aria-pressed="false">{category}</button>
         ))}
+        <span class="chip-divider" aria-hidden="true"></span>
         <button class="filter-chip featured-chip" id="featuredFilter" type="button" aria-pressed="false"><span aria-hidden="true">★</span> Featured</button>
       </div>
     </section>
