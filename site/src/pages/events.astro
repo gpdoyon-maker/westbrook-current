@@ -693,7 +693,11 @@ const months = monthKeys.map((key) => {
       header.append(badge);
     });
 
+    // Run once on load (so ended events are hidden right away), then every minute,
+    // and again when a phone wakes the tab back up.
+    applyFilters();
     setInterval(applyFilters, 60000);
+    document.addEventListener('visibilitychange', () => { if (!document.hidden) applyFilters(); });
 
     monthJump?.addEventListener('change', () => {
       const month = monthJump.value;
