@@ -1,16 +1,5 @@
 [
   {
-    "title": "Sit and Stitch: Crafting and Conversation",
-    "date": "2026-11-06",
-    "startTime": "15:00",
-    "endTime": "16:30",
-    "venue": "Historic Wing",
-    "category": "Arts & music",
-    "admission": "free",
-    "description": "Bring your knitting, crochet, needlework, and other crafts for crafting and conversation in the historic wing. Crafters of all ages are welcome, but children ages 8 and under must be accompanied by an adult.",
-    "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3665"
-  },
-  {
     "title": "St. Anthony of Padua Christmas Craft Fair @St.Hyacinth Church",
     "date": "2026-11-07",
     "startTime": "09:00",
@@ -118,17 +107,6 @@
     "category": "Arts & music",
     "admission": "paid",
     "description": "Annual fall concert by one of Maine's largest community bands, led by conductor David Watts. Doors open at 2:00 PM. Admission is a $15 donation per person, payable at the door. Students are admitted free.",
-    "sourceLink": ""
-  },
-  {
-    "title": "Veteran's Free Pasta Luncheon",
-    "date": "2026-11-09",
-    "startTime": "11:30",
-    "endTime": "13:00",
-    "venue": "Westbrook Community Center, Spruce Room",
-    "category": "Community & civic",
-    "admission": "free",
-    "description": "Expeditions Community Support Program honors local veterans with a free luncheon of pasta, salad, bread, and cookies with members of their day program. RSVP by email to Sarah at shunt@woodfords.org. Hosted by Woodfords Family Services.",
     "sourceLink": ""
   },
   {
@@ -550,14 +528,36 @@
     "sourceLink": "https://www.portlandballet.org/nutcracker"
   },
   {
-    "title": "Portland Ballet presents \"A Victorian Nutcracker\"",
-    "date": "2026-12-20",
-    "startTime": "11:00",
+    "title": "Portland Ballet presents \"A Victorian Nutcracker\" — 5:00 PM showing",
+    "date": "2026-12-19",
+    "startTime": "17:00",
     "endTime": "",
     "venue": "Westbrook Performing Arts Center",
     "category": "Arts & music",
     "admission": "paid",
     "description": "Two showings: 11:00 AM - 1:00 PM and 5:00 PM - 7:00 PM. Portland Ballet's holiday production of the beloved classic, with a first act inspired by Victoria Mansion's history and real-life characters. Perfect for the whole family. When purchasing tickets, select the venue as Westbrook Performing Arts Center.",
+    "sourceLink": "https://www.portlandballet.org/nutcracker"
+  },
+  {
+    "title": "Portland Ballet presents \"A Victorian Nutcracker\"",
+    "date": "2026-12-20",
+    "startTime": "14:00",
+    "endTime": "17:00",
+    "venue": "Westbrook Performing Arts Center",
+    "category": "Arts & music",
+    "admission": "paid",
+    "description": "Two showings: 2:00 PM - 5:00 PM and 7:00 PM - 9:00 PM. Portland Ballet's holiday production of the beloved classic, with a first act inspired by Victoria Mansion's history and real-life characters. Perfect for the whole family. When purchasing tickets, select the venue as Westbrook Performing Arts Center.",
+    "sourceLink": "https://www.portlandballet.org/nutcracker"
+  },
+  {
+    "title": "Portland Ballet presents \"A Victorian Nutcracker\" — 7:00 PM showing",
+    "date": "2026-12-20",
+    "startTime": "19:00",
+    "endTime": "21:00",
+    "venue": "Westbrook Performing Arts Center",
+    "category": "Arts & music",
+    "admission": "paid",
+    "description": "Two showings: 2:00 PM - 5:00 PM and 7:00 PM - 9:00 PM. Portland Ballet's holiday production of the beloved classic, with a first act inspired by Victoria Mansion's history and real-life characters. Perfect for the whole family. When purchasing tickets, select the venue as Westbrook Performing Arts Center.",
     "sourceLink": "https://www.portlandballet.org/nutcracker"
   },
   {
