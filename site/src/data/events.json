@@ -77,6 +77,17 @@
     "sourceLink": "https://usm.maine.edu/calendar-of-events/event/southern-maine-symphony-orchestra/"
   },
   {
+    "title": "Free Studio Access Day at 3DSpaceGarden",
+    "date": "2026-11-08",
+    "startTime": "09:00",
+    "endTime": "",
+    "venue": "3DSpaceGarden, 506 Main St, Suite 26B, Westbrook, ME 04092",
+    "category": "Classes & learning",
+    "admission": "free",
+    "description": "Free open-studio day at the 3D printing/maker studio.",
+    "sourceLink": ""
+  },
+  {
     "title": "2nd Annual Winter Craft Fair",
     "date": "2026-11-08",
     "startTime": "10:00",
@@ -262,6 +273,17 @@
     "admission": "free",
     "description": "Free entry. Sponsored by WMS PTO. Contact westbrookmiddleschoolpto@gmail.com for more information.",
     "sourceLink": "https://www.facebook.com/share/p/19rycQSTjy/?mibextid=wwXIfr"
+  },
+  {
+    "title": "**Cancelled**- Waterfront Concerts presents: “An Evening with The Rush Tribute Project”",
+    "date": "2026-11-14",
+    "startTime": "19:30",
+    "endTime": "21:30",
+    "venue": "Westbrook Performing Arts Center",
+    "category": "Arts & music",
+    "admission": "paid",
+    "description": "Due to a scheduling conflict, The Rush Tribute Project show on November 14th has been canceled. Tickets will be refunded automatically at the point of purchase.",
+    "sourceLink": "https://www.westbrookpac.org/events/"
   },
   {
     "title": "Special City Council Meeting",
