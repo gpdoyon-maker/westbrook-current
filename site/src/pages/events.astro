@@ -231,7 +231,7 @@ const months = monthKeys.map((key) => {
     .month-header { position: sticky; z-index: 4; top: 152px; margin: 0; padding: 12px 22px; color: #16445c; background: #e4edf1; font-size: 12px; font-weight: 800; text-transform: uppercase; }
     .date-group[hidden], .month-section[hidden], .event-entry[hidden] { display: none; }
     .date-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 0; padding: 20px 22px 8px; color: #08688e; font-size: 12px; font-weight: 800; text-transform: uppercase; }
-    .today-badge { flex: 0 0 auto; padding: 4px 8px; border-radius: 3px; color: #fff; background: #d64a46; font-size: 10px; }
+    .today-badge { flex: 0 0 auto; padding: 4px 8px; border-radius: 3px; color: #fff; background: #d64a46; font-size: 11px; }
     .event-entry { margin: 0 12px 8px; }
     .event-row { display: flex; align-items: center; width: 100%; min-height: 88px; padding: 14px; border: 1px solid var(--line); border-left: 4px solid var(--event-accent); border-radius: 4px; color: inherit; background: #fff; text-align: left; transition: border-color 120ms ease, background-color 120ms ease; }
     .event-row:hover, .event-row:focus-visible { border-color: var(--event-accent); background: #fbfdfe; }
@@ -239,21 +239,21 @@ const months = monthKeys.map((key) => {
     .event-row.is-featured { border-left-width: 8px; background: #fff8e6; }
     .event-row.is-featured:hover, .event-row.is-featured:focus-visible { background: #fff2cf; }
     .event-row.is-cancelled, .event-row.is-cancelled.is-featured { border-left-width: 4px; border-left-color: #9aa7ae; background: #f7f8f9; }
-    .event-row.is-cancelled .row-time, .event-row.is-cancelled .row-meta, .event-row.is-cancelled .row-category { color: #7d8a92; }
+    .event-row.is-cancelled .row-time, .event-row.is-cancelled .row-meta, .event-row.is-cancelled .row-category { color: var(--muted); }
     .event-row.is-cancelled .row-time, .event-row.is-cancelled .row-title { text-decoration: line-through; text-decoration-thickness: 1px; }
     .event-row.is-cancelled .row-title { color: #66757e; }
     .event-row.is-cancelled .cat-dot { background: #9aa7ae; }
-    .cancelled-badge { justify-self: start; padding: 3px 7px; border-radius: 3px; color: #fff; background: #b42318; font-size: 10px; font-weight: 800; letter-spacing: .03em; text-transform: uppercase; line-height: 1.2; }
+    .cancelled-badge { justify-self: start; padding: 3px 7px; border-radius: 3px; color: #fff; background: #b42318; font-size: 11px; font-weight: 800; letter-spacing: .03em; text-transform: uppercase; line-height: 1.2; }
     .row-time { flex: 0 0 82px; color: #28495c; font-size: 12px; font-weight: 800; }
     .row-content { display: grid; flex: 1; min-width: 0; gap: 4px; }
-    .featured-badge { justify-self: start; padding: 3px 7px; border-radius: 3px; color: #59410d; background: #f3d98f; font-size: 10px; font-weight: 800; line-height: 1.2; }
+    .featured-badge { justify-self: start; padding: 3px 7px; border-radius: 3px; color: #59410d; background: #f3d98f; font-size: 11px; font-weight: 800; line-height: 1.2; }
     .featured-badge span { margin-right: 2px; }
     .row-title { font-size: 16px; font-weight: 800; line-height: 1.25; }
     .row-meta { overflow-wrap: anywhere; color: var(--muted); font-size: 13px; }
-    .row-category { display: flex; align-items: center; gap: 6px; color: #435b69; font-size: 10px; font-weight: 800; text-transform: uppercase; }
+    .row-category { display: flex; align-items: center; gap: 6px; color: #435b69; font-size: 11px; font-weight: 800; text-transform: uppercase; }
     .cat-dot { width: 8px; height: 8px; flex: 0 0 8px; border-radius: 50%; background: var(--event-accent); }
     .free-label { margin-left: 5px; color: #24764d; }
-    .row-arrow { margin-left: 12px; color: #6e8592; font-size: 23px; }
+    .row-arrow { margin-left: 12px; color: var(--muted); font-size: 23px; }
     .detail-pane { position: sticky; top: 152px; flex: 0 0 390px; align-self: flex-start; height: calc(100vh - 152px); min-height: 400px; overflow-y: auto; padding: 26px; border-left: 1px solid var(--line); background: #fff; }
     :global(.detail-empty) { margin-top: 8px; color: var(--muted); font-size: 14px; }
     :global(.detail-head) { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin: 0 0 10px; }
