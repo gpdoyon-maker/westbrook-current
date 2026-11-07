@@ -14,7 +14,7 @@
 .pdf-link .pdf-sub { display: block; color: var(--muted); font-size: 14px; margin-top: 2px; }
 .pdf-link .pdf-go { flex-shrink: 0; padding: 9px 16px; border-radius: 6px; background: var(--accent); color: #fff; font-weight: 700; font-size: 14px; }
 
-.section-head { margin: 36px 0 18px; padding-top: 24px; border-top: 3px solid var(--accent); color: var(--accent); font-size: 14px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.perceptions-wrap h2.section-head { margin: 36px 0 18px; padding-top: 24px; border-top: 3px solid var(--accent); color: var(--accent); font-size: 14px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
 
 /* Base reading size for every paragraph in the article; the callout boxes below match it on purpose. */
 .perceptions-wrap p { color: #223042; font-size: 20px; line-height: 1.65; margin: 0 0 18px; }
@@ -59,7 +59,7 @@
 .flow-box.cmp { background: var(--accent); border-color: var(--accent); }
 .flow-box.cmp b { color: #fff; }
 .flow-box.cmp span { color: #cfd6ee; }
-.flow-arrow { font-size: 20px; line-height: 1.2; color: var(--edge); }
+.flow-arrow { font-size: 20px; line-height: 1.2; color: var(--muted); }
 .flow-oversight { display: flex; flex-direction: column; gap: 10px; margin-top: 20px; padding-top: 16px; border-top: 1.5px dashed var(--edge); }
 .flow-oversight p { margin: 0; font-size: 14px; line-height: 1.5; color: var(--muted); }
 .flow-oversight b { color: var(--navy); }

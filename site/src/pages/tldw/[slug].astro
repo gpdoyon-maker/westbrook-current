@@ -144,7 +144,7 @@ const meetingNote = (data.note || '')
     {meetingNote && <p class="tldw-meeting-note">{meetingNote}</p>}
 
     {rows.map((r) => r.kind === 'section' ? (
-      <p class="tldw-section-head">{r.title}</p>
+      <h2 class="tldw-section-head">{r.title}</h2>
     ) : (
       <div class="tldw-item-wrap">
       {r.ts && <a class="ti-ts" href={tsLink(r.ts)} target="_blank" rel="noopener noreferrer">{r.ts}</a>}
