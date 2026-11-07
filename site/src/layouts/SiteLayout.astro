@@ -59,6 +59,7 @@ const socialImageUrl = new URL(image ?? '/logo-desktop.png', siteUrl).href;
     )}
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="site-header">
       <div class="header-inner">
         <a class="brand" href="/" aria-label="Westbrook Currents home">
@@ -82,6 +83,7 @@ const socialImageUrl = new URL(image ?? '/logo-desktop.png', siteUrl).href;
         </nav>
       </div>
     </header>
+    <div id="main-content" tabindex="-1"></div>
     <NoticeList kind="alerts" />
     <slot />
     <footer class="site-footer"><p>© 2026 Westbrook Currents — Local events, real connections.</p><a href="/submit">Submit an event</a><a href="/feedback">Feedback</a></footer>
