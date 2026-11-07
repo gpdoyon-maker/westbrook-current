@@ -32,7 +32,6 @@ body:has(.tldw-wrap) { background: #f6f9fb; }
 .tldw-view-toggle button.is-active { background: #fff; color: var(--navy); }
 .tldw-legend { display: flex; align-items: baseline; flex-wrap: wrap; gap: 10px; margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--edge); font-size: 12.5px; color: var(--muted); }
 .tldw-legend-label { font-size: 13px; font-weight: 700; color: #4a4a4a; white-space: nowrap; }
-.tldw-legend-sep { color: var(--edge); }
 
 /* Month groups + card/compact list */
 .tldw-month-head { position: sticky; top: 0; background: var(--blue); margin: 26px 0 12px; padding: 10px 16px; border-bottom: none; border-radius: 8px; color: #fff; font-size: 13px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
