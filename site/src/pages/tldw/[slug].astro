@@ -109,9 +109,21 @@ const category = meeting.category || '';
 const heading = `${(data.title || '').split(' — ')[0]} — ${f.Date ? f.Date.replace(/^\w+day,\s*/, '') : dateLabel}`;
 const metaBits = [f.Location, f.Time && f.Time.replace(/\s*\(.*\)$/, '')].filter(Boolean);
 const pageTitle = `TL;DW! ${heading} | Westbrook Currents`;
+
+// Meeting-specific context (attendance, "no votes were taken") stored in the note, minus
+// the standard disclaimer sentences that already appear at the bottom of the page.
+const noteBoilerplate = ['This summary highlights', 'Summarization necessarily', 'For complete context', '(Produced by', 'This is produced', 'For the official', 'Unofficial'];
+const meetingNote = (data.note || '')
+  .split(/(?<=[.!?)])\s+/)
+  .filter((s: string) => s && !noteBoilerplate.some((b) => s.startsWith(b)))
+  .join(' ');
 ---
 <SiteLayout title={pageTitle} description={meeting.blurb || 'Plain-language summary of the meeting.'} currentPage="tldw">
   <main class="tldw-wrap">
+    <div class="tldw-print-head">
+      <img src="/logo-desktop.webp" alt="Westbrook Currents" />
+      <span>TL;DW! meeting summary · westbrookcurrents.com/tldw/{data.slug}</span>
+    </div>
     <a class="help-back" href="/tldw">&#8249; TL;DW!</a>
     {category && <span class="tldw-eyebrow">{category}</span>}
     <h1>{heading}</h1>
@@ -126,7 +138,10 @@ const pageTitle = `TL;DW! ${heading} | Westbrook Currents`;
     )}
     <p class="tldw-scrub-note">Each item shows a timestamp like <b>57:13</b> (minutes:seconds) or <b>1:52:13</b> (hours:minutes:seconds). Tap it to jump to that moment in the video.</p>
 
-    {meeting.blurb && <p class="intro-line">Quick read: {meeting.blurb}</p>}
+    <button class="tldw-print-btn" type="button">Save or print this summary</button>
+
+    {(meeting.title || meeting.blurb) && <p class="intro-line">Quick read: {[meeting.title && `${meeting.title}.`, meeting.blurb].filter(Boolean).join(' ')}</p>}
+    {meetingNote && <p class="tldw-meeting-note">{meetingNote}</p>}
 
     {rows.map((r) => r.kind === 'section' ? (
       <p class="tldw-section-head">{r.title}</p>
@@ -163,4 +178,27 @@ const pageTitle = `TL;DW! ${heading} | Westbrook Currents`;
     </div>
     {data.howMade && <p class="tldw-made-with">How this was made: {data.howMade.replace(/^This summary was produced from the meeting video/, 'Produced from the meeting video')}</p>}
   </main>
+  <script is:inline>
+    (() => {
+      // Closed sections don't print, so open everything first and put it back afterward.
+      const items = Array.from(document.querySelectorAll('details.tldw-item'));
+      let saved = null;
+      const openAll = () => {
+        if (saved) return;
+        saved = items.map((d) => d.open);
+        items.forEach((d) => { d.open = true; });
+      };
+      const restore = () => {
+        if (!saved) return;
+        items.forEach((d, i) => { d.open = saved[i]; });
+        saved = null;
+      };
+      window.addEventListener('beforeprint', openAll);
+      window.addEventListener('afterprint', restore);
+      document.querySelector('.tldw-print-btn')?.addEventListener('click', () => {
+        openAll();
+        window.print();
+      });
+    })();
+  </script>
 </SiteLayout>
