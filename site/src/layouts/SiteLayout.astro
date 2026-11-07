@@ -69,7 +69,7 @@ const socialImageUrl = new URL(image ?? '/logo-desktop.png', siteUrl).href;
         <nav class="site-nav" id="site-nav" aria-label="Main navigation">
           <a href="/events" aria-current={currentPage === 'events' ? 'page' : undefined}>Events</a>
           <a href="/help" aria-current={currentPage === 'help' ? 'page' : undefined}>Get Help</a>
-          <details class="nav-group" open={isLocalLife}>
+          <details class="nav-group">
             <summary aria-current={isLocalLife ? 'page' : undefined}>Local Life</summary>
             <div class="nav-group-panel">
               <a href="/vote" aria-current={currentPage === 'vote' ? 'page' : undefined}>Election Results</a>
