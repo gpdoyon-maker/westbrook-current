@@ -131,7 +131,7 @@ const meetingNote = (data.note || '')
 
     {videoUrl && (
       <div class="tldw-video-box">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#087ca7" stroke-width="2"><rect x="2" y="5" width="15" height="14" rx="2"></rect><path d="M17 10l5-3v10l-5-3z"></path></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#07749b" stroke-width="2"><rect x="2" y="5" width="15" height="14" rx="2"></rect><path d="M17 10l5-3v10l-5-3z"></path></svg>
         <a class="watch" href={videoUrl} target="_blank" rel="noopener noreferrer">Watch the full video on Vimeo &#8599;</a>
         {data.packetUrl && <a class="watch" href={data.packetUrl} target="_blank" rel="noopener noreferrer">Meeting packet{data.packetNote ? ` ${data.packetNote}` : ''} &#8599;</a>}
       </div>
@@ -146,10 +146,11 @@ const meetingNote = (data.note || '')
     {rows.map((r) => r.kind === 'section' ? (
       <p class="tldw-section-head">{r.title}</p>
     ) : (
+      <div class="tldw-item-wrap">
+      {r.ts && <a class="ti-ts" href={tsLink(r.ts)} target="_blank" rel="noopener noreferrer">{r.ts}</a>}
       <details class="tldw-item">
         <summary>
           <span class="ti-text">
-            {r.ts && <span class="ti-top"><a class="ti-ts" href={tsLink(r.ts)} target="_blank" rel="noopener noreferrer">{r.ts}</a></span>}
             <span class="ti-title">{r.title}</span>
             {brief(r.body) && <span class="ti-brief">{brief(r.body)}</span>}
           </span>
@@ -166,6 +167,7 @@ const meetingNote = (data.note || '')
           })}
         </div>
       </details>
+      </div>
     ))}
 
     <a class="tldw-pdf-link" href={`/tldw-${data.slug}.pdf`} target="_blank" rel="noopener noreferrer">
