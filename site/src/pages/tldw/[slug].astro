@@ -1,7 +1,7 @@
 ---
 // HTML version of a TL;DW! meeting summary. Content comes from
-// src/data/tldw-summaries/<slug>.json (made by scripts/pdf-to-tldw.py).
-// The PDF is only a separate download link (to save or forward).
+// src/data/tldw-summaries/<slug>.json, the master copy of each summary.
+// Readers save or print this page; there is no separate PDF.
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import meetings from '../../data/tldw-meetings.json';
 import '../../styles/tldw.css';
@@ -169,11 +169,6 @@ const meetingNote = (data.note || '')
       </details>
       </div>
     ))}
-
-    <a class="tldw-pdf-link" href={`/tldw-${data.slug}.pdf`} target="_blank" rel="noopener noreferrer">
-      <span><strong>Download the PDF</strong><span class="sub">To save a copy or forward it. The page above has the same content.</span></span>
-      <span class="go">PDF &#8599;</span>
-    </a>
 
     <div class="disclaimer">
       <strong>Not a replacement for watching &mdash; and not an official record.</strong> This summary highlights the meeting's key discussions and decisions; it's not a substitute for watching the full meeting, and summarization necessarily condenses and selects. <strong>It's also an unofficial product of Westbrook Currents, an independent site &mdash; not the City of Westbrook &mdash; and may contain mistakes.</strong> For complete context or the official record, watch the full video or see the City's approved minutes.

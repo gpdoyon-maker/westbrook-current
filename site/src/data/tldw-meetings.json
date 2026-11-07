@@ -19,8 +19,7 @@
     ],
     "hot": false,
     "hotNote": null,
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-11-03-planning-board.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-11-02-regular",
@@ -43,9 +42,8 @@
       "Transit & Transportation"
     ],
     "hot": true,
-    "hotNote": "Feisty",
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-11-02-regular.pdf"
+    "hotNote": "Contested",
+    "hotHref": null
   },
   {
     "slug": "2026-10-19-special-meeting",
@@ -67,9 +65,8 @@
       "Parks & Recreation"
     ],
     "hot": true,
-    "hotNote": "Feisty",
-    "hotHref": "/tldw/2026-10-19-special-meeting#order-2026-116",
-    "pdfHref": "/tldw-2026-10-19-special-meeting.pdf"
+    "hotNote": "Contested",
+    "hotHref": "/tldw/2026-10-19-special-meeting#order-2026-116"
   },
   {
     "slug": "2026-10-14-school-committee",
@@ -93,8 +90,7 @@
     ],
     "hot": false,
     "hotNote": null,
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-10-14-school-committee.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-10-06-planning-board",
@@ -116,8 +112,7 @@
     ],
     "hot": true,
     "hotNote": "Stroudwater Meadows — 9 speakers, sharp access-road opposition",
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-10-06-planning-board.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-10-05-regular",
@@ -139,8 +134,7 @@
     ],
     "hot": false,
     "hotNote": null,
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-10-05-regular.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-10-05-committee-of-the-whole",
@@ -149,7 +143,7 @@
     "month": "October 2026",
     "category": "Committee of the Whole",
     "title": "Committee of the Whole advances the latest boards-and-committees ordinance review",
-    "blurb": "The amendment, including a one-year report-back commitment, heads to the full Council for adoption.",
+    "blurb": "The amended repeal-and-replace ordinance heads to the full Council. Staff separately plan a one-year report-back, outside the ordinance text.",
     "tags": [
       "boards and committees review",
       "ordinance referral"
@@ -159,8 +153,7 @@
     ],
     "hot": false,
     "hotNote": null,
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-10-05-committee-of-the-whole.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-09-24-school-committee",
@@ -181,8 +174,7 @@
     ],
     "hot": false,
     "hotNote": null,
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-09-24-school-committee.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-09-21-special",
@@ -191,7 +183,7 @@
     "month": "September 2026",
     "category": "Special Meeting",
     "title": "Public-comment rule change splits Council 4–2 over ward disclosure",
-    "blurb": "Dropping the requirement to state your ward or address before speaking passed over objections from Councilors Chau and McCambridge.",
+    "blurb": "Dropping the requirement to state your home address before speaking passed over objections from Councilors Chau and McCambridge.",
     "tags": [
       "public comment rules",
       "ward disclosure",
@@ -203,8 +195,7 @@
     ],
     "hot": true,
     "hotNote": "Ward-disclosure amendment, 4–2 split (McCambridge, Chau opposed)",
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-09-21-special.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-09-14-committee-of-the-whole",
@@ -225,8 +216,7 @@
     ],
     "hot": false,
     "hotNote": null,
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-09-14-committee-of-the-whole.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-09-14-regular",
@@ -234,7 +224,7 @@
     "dateLabel": "Sep 14, 2026",
     "month": "September 2026",
     "category": "Regular Meeting",
-    "title": "Council approves a new police collective bargaining agreement",
+    "title": "Council gives first-reading approval to Teamsters General Unit contract",
     "blurb": "Also: a positive update on the Student Transit Pass Program and several routine grants and equipment purchases.",
     "tags": [
       "collective bargaining agreement",
@@ -248,8 +238,7 @@
     ],
     "hot": false,
     "hotNote": null,
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-09-14-regular.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-09-01-planning-board",
@@ -270,8 +259,7 @@
     ],
     "hot": false,
     "hotNote": null,
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-09-01-planning-board.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-08-12-school-committee",
@@ -294,8 +282,7 @@
     ],
     "hot": true,
     "hotNote": "No split vote, but sustained board conflict over a member's Facebook criticism of teachers' donation wish lists",
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-08-12-school-committee.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-08-04-planning-board",
@@ -316,8 +303,7 @@
     ],
     "hot": false,
     "hotNote": null,
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-08-04-planning-board.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-08-03-regular",
@@ -338,8 +324,7 @@
     ],
     "hot": true,
     "hotNote": "Hours-long transit-pass debate (2–5 failed amendment, 5–2 final) + Riverwalk North abutter opposition",
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-08-03-regular.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-07-30-school-committee",
@@ -361,8 +346,7 @@
     ],
     "hot": false,
     "hotNote": null,
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-07-30-school-committee.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-07-20-special",
@@ -383,8 +367,7 @@
     ],
     "hot": true,
     "hotNote": "Student Transit Pass Program, 6–1 split",
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-07-20-special.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-07-20-committee-of-the-whole",
@@ -405,8 +388,7 @@
     ],
     "hot": false,
     "hotNote": null,
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-07-20-committee-of-the-whole.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-07-07-planning-board",
@@ -428,8 +410,7 @@
     ],
     "hot": true,
     "hotNote": "Millbrook Estates final vote, 3–1 split (McWilliams dissent)",
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-07-07-planning-board.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-07-06-regular",
@@ -451,8 +432,7 @@
     ],
     "hot": false,
     "hotNote": null,
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-07-06-regular.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-06-16-planning-board",
@@ -472,8 +452,7 @@
     ],
     "hot": false,
     "hotNote": null,
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-06-16-planning-board.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-06-15-special",
@@ -495,8 +474,7 @@
     ],
     "hot": true,
     "hotNote": "Tennis-court item 5–1 split + Millbrook Estates TIF public pushback",
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-06-15-special.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-06-10-school-committee",
@@ -519,8 +497,7 @@
     ],
     "hot": false,
     "hotNote": null,
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-06-10-school-committee.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-06-02-planning-board",
@@ -542,8 +519,7 @@
     ],
     "hot": true,
     "hotNote": "Millbrook Estates sharp criticism + 955 Bridgton Rd opposition, marathon 3.5-hr meeting",
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-06-02-planning-board.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-06-01-regular",
@@ -564,8 +540,7 @@
     ],
     "hot": false,
     "hotNote": null,
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-06-01-regular.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-05-19-planning-board",
@@ -585,8 +560,7 @@
     ],
     "hot": false,
     "hotNote": null,
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-05-19-planning-board.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-05-18-special",
@@ -607,8 +581,7 @@
     ],
     "hot": false,
     "hotNote": null,
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-05-18-special.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-05-13-school-committee",
@@ -631,8 +604,7 @@
     ],
     "hot": true,
     "hotNote": "Split 5–1 votes on cell-phone ban policy (JICJ) and Yonder pouch funding, both Poitras dissenting on safety",
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-05-13-school-committee.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-05-12-zoning-board-of-appeals",
@@ -653,8 +625,7 @@
     ],
     "hot": false,
     "hotNote": null,
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-05-12-zoning-board-of-appeals.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-05-05-planning-board",
@@ -676,8 +647,7 @@
     ],
     "hot": true,
     "hotNote": "Stroudwater Meadows — ~14 speakers, extensive traffic opposition",
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-05-05-planning-board.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-05-04-regular",
@@ -699,8 +669,7 @@
     ],
     "hot": true,
     "hotNote": "Rooster ordinance 5–1 split (Turcotte) ×2 + heated school-budget public comment",
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-05-04-regular.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-05-04-school-committee",
@@ -720,8 +689,7 @@
     ],
     "hot": false,
     "hotNote": null,
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-05-04-school-committee.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-04-29-school-committee",
@@ -742,8 +710,7 @@
     ],
     "hot": false,
     "hotNote": null,
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-04-29-school-committee.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-04-27-special",
@@ -764,8 +731,7 @@
     ],
     "hot": true,
     "hotNote": "Budget first reading, 5–1 split (Rairdon), sharp public pushback",
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-04-27-special.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-04-13-school-committee",
@@ -788,8 +754,7 @@
     ],
     "hot": false,
     "hotNote": null,
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-04-13-school-committee.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-04-08-school-committee",
@@ -810,8 +775,7 @@
     ],
     "hot": false,
     "hotNote": null,
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-04-08-school-committee.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-04-08-finance-committee",
@@ -832,8 +796,7 @@
     ],
     "hot": false,
     "hotNote": null,
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-04-08-finance-committee.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-04-07-planning-board",
@@ -854,8 +817,7 @@
     ],
     "hot": true,
     "hotNote": "4–1 split vote",
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-04-07-planning-board.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-04-06-regular",
@@ -878,8 +840,7 @@
     ],
     "hot": true,
     "hotNote": "Firefighters' union vs. Chief Sloan on staffing (no vote)",
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-04-06-regular.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-04-01-finance-committee",
@@ -903,8 +864,7 @@
     ],
     "hot": true,
     "hotNote": "Sharp City-funding-fairness exchange; English teacher & Tier 2 cuts contested",
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-04-01-finance-committee.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-03-25-finance-committee",
@@ -928,8 +888,7 @@
     ],
     "hot": true,
     "hotNote": "Chair: “not comfortable with a 9.88 percent” increase, orders more cuts; ongoing City-charge frustration; Compass relocation process criticism",
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-03-25-finance-committee.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-03-24-finance-committee",
@@ -952,8 +911,7 @@
     ],
     "hot": true,
     "hotNote": "Middle school bathroom-privacy fix (“I will have a hard time supporting this budget”), SRO funding challenged, $121K city field charge pushback",
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-03-24-finance-committee.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-03-19-finance-committee",
@@ -976,8 +934,7 @@
     ],
     "hot": false,
     "hotNote": null,
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-03-19-finance-committee.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-03-18-finance-committee",
@@ -999,8 +956,7 @@
     ],
     "hot": false,
     "hotNote": null,
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-03-18-finance-committee.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-03-16-special",
@@ -1009,7 +965,7 @@
     "month": "March 2026",
     "category": "Special Meeting",
     "title": "Council marks Finance Director Tressina Germani's departure after 14 years",
-    "blurb": "Also passed a Food Security Grant Program ordinance, an ambulance debt write-off policy, and funding for Riverwalk North design work.",
+    "blurb": "Also adopted a Food Security Grant Program ordinance and an ambulance debt write-off policy, and gave first-reading approval to Riverwalk North permitting and design funding.",
     "tags": [
       "Finance Director transition",
       "Food Security Grant",
@@ -1021,8 +977,7 @@
     ],
     "hot": false,
     "hotNote": null,
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-03-16-special.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-03-11-school-committee",
@@ -1044,8 +999,7 @@
     ],
     "hot": false,
     "hotNote": null,
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-03-11-school-committee.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-03-04-finance-committee",
@@ -1066,8 +1020,7 @@
     ],
     "hot": false,
     "hotNote": null,
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-03-04-finance-committee.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-03-03-planning-board",
@@ -1087,8 +1040,7 @@
     ],
     "hot": false,
     "hotNote": null,
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-03-03-planning-board.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-03-02-regular",
@@ -1097,7 +1049,7 @@
     "month": "March 2026",
     "category": "Regular Meeting",
     "title": "Council hears FY2025 audit's clean opinion, caught in a Bucket Brigade dispute",
-    "blurb": "Nine residents spoke about a dispute between the Westbrook Bucket Brigade and the Historical Society's leadership, while routine capital and school funding items advanced.",
+    "blurb": "Twelve people spoke about a dispute between the Westbrook Bucket Brigade and the Historical Society's leadership, while routine capital and school funding items advanced.",
     "tags": [
       "financial audit",
       "Westbrook Bucket Brigade",
@@ -1109,8 +1061,7 @@
     ],
     "hot": false,
     "hotNote": null,
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-03-02-regular.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-02-23-special",
@@ -1133,8 +1084,7 @@
     ],
     "hot": false,
     "hotNote": null,
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-02-23-special.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-02-11-school-committee",
@@ -1156,8 +1106,7 @@
     ],
     "hot": false,
     "hotNote": null,
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-02-11-school-committee.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-02-10-zoning-board-of-appeals",
@@ -1179,8 +1128,7 @@
     ],
     "hot": true,
     "hotNote": "Sharp credibility challenge to the Code Enforcement Officer (\"disingenuous\"), extensive board disagreement, no final vote yet",
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-02-10-zoning-board-of-appeals.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-02-03-planning-board",
@@ -1200,8 +1148,7 @@
     ],
     "hot": false,
     "hotNote": null,
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-02-03-planning-board.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-02-02-regular",
@@ -1223,8 +1170,7 @@
     ],
     "hot": false,
     "hotNote": null,
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-02-02-regular.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-02-02-committee-of-the-whole",
@@ -1243,8 +1189,7 @@
     ],
     "hot": false,
     "hotNote": null,
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-02-02-committee-of-the-whole.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-01-14-school-committee",
@@ -1265,8 +1210,7 @@
     ],
     "hot": false,
     "hotNote": null,
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-01-14-school-committee.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-01-12-special",
@@ -1287,8 +1231,7 @@
     ],
     "hot": true,
     "hotNote": "Suppressor purchase, 6–1 split (Munro) + forceful public debate",
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-01-12-special.pdf"
+    "hotHref": null
   },
   {
     "slug": "2026-01-05-regular",
@@ -1310,7 +1253,6 @@
     ],
     "hot": true,
     "hotNote": "Foster St. parking, 5–1 split (Rairdon)",
-    "hotHref": null,
-    "pdfHref": "/tldw-2026-01-05-regular.pdf"
+    "hotHref": null
   }
 ]
