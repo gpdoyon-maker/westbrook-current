@@ -86,6 +86,8 @@ body:has(.tldw-wrap) { background: #f6f9fb; }
 /* Meeting detail page */
 .tldw-eyebrow { color: var(--accent); font-size: 13px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
 .tldw-meta { margin: 0; color: var(--muted); font-size: 15px; }
+.tldw-attendance { margin: 6px 0 0; color: var(--muted); font-size: 15px; line-height: 1.5; }
+.tldw-attendance strong { color: var(--navy); font-weight: 600; }
 
 .tldw-video-box { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding: 14px 18px; border: 1.5px solid var(--line); border-radius: 8px; background: #fff; }
 .tldw-video-box svg { flex: none; width: 22px; height: 22px; }

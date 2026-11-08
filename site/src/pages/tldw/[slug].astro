@@ -128,6 +128,7 @@ const meetingNote = (data.note || '')
     {category && <span class="tldw-eyebrow">{category}</span>}
     <h1>{heading}</h1>
     <p class="tldw-meta">{metaBits.join(' · ')}</p>
+    {data.attendance && <p class="tldw-attendance"><strong>Attendance:</strong> {data.attendance}</p>}
 
     {videoUrl && (
       <div class="tldw-video-box">

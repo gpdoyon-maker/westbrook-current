@@ -3,13 +3,14 @@
  "fields": {
   "Date": "Wednesday, April 8, 2026",
   "Time": "7:00 PM",
-  "Location": "Westbrook High School (Room 114), 117 Stroudwater St. (Hybrid via Zoom)",
+  "Location": "Westbrook High School (Room 114), 125 Stroudwater St. (Hybrid via Zoom)",
   "Video": "https://vimeo.com/1181369392",
   "Packet": "https://drive.google.com/file/d/1a13Tye5X1_USLQu0B2nspD70EP7W33cE/view (Google Drive, via westbrookschools.org)"
  },
  "packetUrl": "https://drive.google.com/file/d/1a13Tye5X1_USLQu0B2nspD70EP7W33cE/view",
  "packetNote": "(Google Drive, via westbrookschools.org)",
  "note": "This summary highlights the meeting's key discussions and decisions, with direct quotes and timestamps for verification — it is not a substitute for watching the full meeting. The full committee (all seven members) and both student representatives were present. A brief 5:00 PM Finance Committee session immediately preceded this meeting (see the companion summary). For complete context, nuance, and anything not covered, watch the full video at the link above. (Produced by: WestbrookCurrents.com)",
+ "attendance": "Present: Chair Andrea Mancuso, Vice Chair Katy Rice, Allison Brunette, Erin Cavallaro, Noreen Poitras, Brooke Reed, Dr. Flynn Ross.",
  "blocks": [
   {
    "t": "h",
@@ -27,7 +28,7 @@
   },
   {
    "t": "p",
-   "x": "Dr. Lancia announced three retirements: Paula Curcio (WMS social studies teacher), Marina Davis (WHS math teacher), and Wendy Harvey (WHS co-principal, after 12 years as assistant and co-principal). He recognized extensive achievements: 35 WRVC students at the SkillsUSA state championships with multiple medalists; the WRVC/WHS eSports team's two state championship titles; a Junior Achievement Titan Challenge state title (unseating a longtime Yarmouth High School streak); WHS Winter Guard's top-Maine/gold-New-England finish; and strong college acceptances including Bowdoin, Colby, Boston University, and Northeastern. The Pre-K lottery process is underway, and two students were competing that day at the state School Nutrition cook-off after winning their regional round."
+   "x": "Dr. Lancia announced three retirements: Paula Curcio (WMS social studies teacher), Marina Davis (WHS math teacher), and Wendy Harvey (WHS co-principal, after 12 years as assistant and co-principal). He recognized extensive achievements: 35 WRVC students at the SkillsUSA state championships with multiple medalists; the WRVC/WHS eSports team's two state championship titles; a Junior Achievement Titan Challenge state title (unseating a longtime Yarmouth High School streak); WHS Winter Guard's top-Maine/gold-New-England finish; and strong college acceptances including Bowdoin, Colby, Boston University, and Northeastern. Details on the Pre-K admission lottery were to go out to interested families within a day or so, and a student and a School Nutrition staff member were competing that day at the state cook-off after winning their regional round."
   },
   {
    "t": "label",
@@ -95,7 +96,7 @@
   },
   {
    "t": "p",
-   "x": "The committee recessed into a public hearing on the proposed FY27 budget: $57,349,321.39, a 7.5% increase over FY26 (down from the original 9.88% March 4 proposal), a 7.34% increase to the local tax share. Mayor David Morse spoke during the earlier public-participation period, thanking the committee and anticipating continued City Council support ahead of a June 9 voter referendum. No one spoke in person during the hearing itself, but three written comments were read into the record — one in full support, and two urging the committee to restore funding for two Westbrook Middle School instructional coach positions under consideration for elimination."
+   "x": "The committee recessed into a public hearing on the proposed FY27 budget: $57,349,321.39, a 7.5% increase over FY26 (down from the original 9.88% March 4 proposal), a 7.34% increase to the local tax share. Mayor David Morse spoke during the earlier public-participation period, thanking the committee and anticipating continued City Council support ahead of a June 9 voter referendum. No one spoke in person during the hearing itself, but three written comments were read into the record — one in full support, and two urging the committee to keep instructional coach positions under consideration for elimination: one from a Westbrook Middle School staff member about the middle school's two coaches, and one from a Saccarappa teacher about the coaches' value there (partly read aloud, with the rest submitted in writing)."
   },
   {
    "t": "label",
@@ -124,7 +125,7 @@
   },
   {
    "t": "q",
-   "x": "“The two instructional coach positions account for less than one-third of one percent of our proposed budget. The cost of keeping them is essentially a rounding error. The cost of losing them, however, would be felt by every teacher and by extension every student in the building...this is a cut we can't afford.”",
+   "x": "“From what I can piece together, the two instructional coach positions account for less than one-third of one percent of our proposed budget. The cost of keeping them is essentially a rounding error. The cost of losing them, however, would be felt by every teacher and by extension every student in the building...this is a cut we can't afford.”",
    "cite": "Pete Vernon, Westbrook Middle School staff member (written comment)",
    "ts": "23:55"
   },
@@ -145,7 +146,7 @@
   },
   {
    "t": "p",
-   "x": "Chair Poitras read the full set of state-required budget warrant articles, including the per-category breakdown: regular instruction ($21,712,387.10), special education ($10,633,908.71), career and technical education ($3,433,294.98), other instruction ($847,790.41), student and staff support ($4,600,998.09), system administration ($2,034,810.20), school administration ($2,430,076.55), transportation ($2,705,330.37), facility maintenance ($4,836,685.98), and debt service/other commitments ($4,114,039.09). Chair Mancuso detailed roughly $1.3 million in total reductions from the original proposal (the increase falling from 9.88% to 7.5%), including seven eliminated/reduced staff positions, $114,000 cut from technology, $60,000-plus from professional development, nearly $20,000 from athletics/activities, and roughly $70,000 from facilities."
+   "x": "Finance Committee Chair Noreen Poitras read the full set of state-required budget warrant articles, including the per-category breakdown: regular instruction ($21,712,387.10), special education ($10,633,908.71), career and technical education ($3,433,294.98), other instruction ($847,790.41), student and staff support ($4,600,998.09), system administration ($2,034,810.20), school administration ($2,430,076.55), transportation ($2,705,330.37), facility maintenance ($4,836,685.98), and debt service/other commitments ($4,114,039.09). Chair Mancuso detailed roughly $1.3 million in total reductions from the original proposal (the increase falling from 9.88% to 7.5%), including seven eliminated/reduced staff positions, $114,000 cut from technology, $60,000-plus from professional development, nearly $20,000 from athletics/activities, and roughly $70,000 from facilities."
   },
   {
    "t": "label",
@@ -170,13 +171,13 @@
   },
   {
    "t": "q",
-   "x": "“I'm saddened that there was not more public input into our budget...if we don't [hear from the community], we operate off of what's presented to us in a really thoughtful way, but it also...folks lose out on a chance to have a voice in a really transparent, public process.”",
+   "x": "“If we don't [hear from the community], we operate off of what's presented to us in a really thoughtful way, but it also...folks lose out on a chance to have a voice in a really transparent, public process. And I'll say that...I'm saddened that there was not more public input into our budget.”",
    "cite": "Erin Cavallaro, Board Member (on public engagement)",
    "ts": "45:17"
   },
   {
    "t": "q",
-   "x": "“Getting the deep dive look at this, I've been really appreciative of all the work that's been done over several years to get to what is a really responsible budget.”",
+   "x": "“Getting the deep dive look at this, I've been really appreciative of all the work that's done over several years to get to what is a really responsible budget.”",
    "cite": "Dr. Flynn Ross, Board Member (first budget cycle on the committee)",
    "ts": "52:16"
   },
@@ -199,7 +200,7 @@
   },
   {
    "t": "d",
-   "x": "Approved 7–0."
+   "x": "Approved (vote count not stated on the recording)."
   },
   {
    "t": "label",

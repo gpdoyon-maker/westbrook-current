@@ -3,13 +3,14 @@
  "fields": {
   "Date": "Wednesday, February 11, 2026",
   "Time": "7:00 PM",
-  "Location": "Westbrook High School (Room 114), 117 Stroudwater St. (Hybrid via Zoom)",
+  "Location": "Westbrook High School (Room 114), 125 Stroudwater St. (Hybrid via Zoom)",
   "Video": "https://vimeo.com/1164172178",
   "Packet": "https://drive.google.com/file/d/16lYKEkCAv2Jl9qO0lRFKNnM1w84wRGk4/view (Google Drive, via westbrookschools.org)"
  },
  "packetUrl": "https://drive.google.com/file/d/16lYKEkCAv2Jl9qO0lRFKNnM1w84wRGk4/view",
  "packetNote": "(Google Drive, via westbrookschools.org)",
- "note": "This summary highlights the meeting's key discussions and decisions, with direct quotes and timestamps for verification — it is not a substitute for watching the full meeting. The full committee (all seven members) was present; one student representative (Jamila Mohamed Ahmed) was present and delivered the student report. For complete context, nuance, and anything not covered, watch the full video at the link above. (Produced by: WestbrookCurrents.com)",
+ "note": "This summary highlights the meeting's key discussions and decisions, with timestamps for verification — it is not a substitute for watching the full meeting. The full committee (all seven members) was present; one student representative (Jamila Mohamed Ahmed) was present and delivered the student report. For complete context, nuance, and anything not covered, watch the full video at the link above. (Produced by: WestbrookCurrents.com)",
+ "attendance": "Present: Chair Andrea Mancuso, Vice Chair Katy Rice, Allison Brunette, Erin Cavallaro, Noreen Poitras, Brooke Reed, Dr. Flynn Ross.",
  "blocks": [
   {
    "t": "h",
@@ -27,7 +28,7 @@
   },
   {
    "t": "p",
-   "x": "Superintendent Dr. Peter Lancia announced a $15,000 Project Canopy grant (Maine Department of Agriculture, Conservation and Forestry) to replace ash trees lost to disease around the high school bus loop, alongside athletics and family-engagement updates and a kindergarten registration reminder for children turning five before October 15, 2026."
+   "x": "Superintendent Dr. Peter Lancia announced a $15,000 Project Canopy grant (Maine Department of Agriculture, Conservation and Forestry) to replace ash trees lost to disease around the high school bus loop, alongside athletics and family-engagement updates and a kindergarten registration reminder for children turning five on or before October 15, 2026."
   },
   {
    "t": "p",
@@ -94,7 +95,7 @@
   {
    "t": "h",
    "x": "Facilities, Finance, Policy & Educational Programs Updates",
-   "ts": "26:47"
+   "ts": "25:17"
   },
   {
    "t": "label",
@@ -131,7 +132,7 @@
   },
   {
    "t": "h",
-   "x": "12.1 & 12.2 — Bond Fund Reallocation & Canal School HVAC Renovation Grant",
+   "x": "12.1 & 12.2 — Bond Fund Reallocation & Canal School HVAC Renovation Funding",
    "ts": "32:59"
   },
   {
@@ -140,7 +141,7 @@
   },
   {
    "t": "p",
-   "x": "Item 12.1 authorizes a request to City Council to reallocate remaining FY25 bond proceeds (originally $1.7 million for Canal School bathroom/vestibule work and $1.4 million for Westbrook High School bathroom renovation, both completed under budget) toward additional capital projects including Congin School bathroom renovation. Item 12.2 accepts a Maine Department of Education School Revolving Renovation Fund grant of $426,445 to replace Canal School's HVAC system, with the district responsible for repaying roughly half the award. Both items were escalated from first approval to a combined first-and-final reading on the floor."
+   "x": "Item 12.1 authorizes a request to City Council to reallocate remaining FY25 bond proceeds (originally $1.7 million for Canal School's secure vestibule, finished under budget in 2025, and bathrooms, planned for summer 2026; and $1.4 million for Westbrook High School bathrooms, finished under budget). Leftover Canal funds would go to Congin School bathrooms, then to painting at Canal if money remains; leftover high school funds would go to other high school capital projects. Item 12.2 accepts a $428,445 Maine Department of Education School Revolving Renovation Fund award to replace Canal School's HVAC system: a five-year loan, 49% forgiven, with the district repaying $218,421. Both items were escalated from first approval to a combined first-and-final reading on the floor."
   },
   {
    "t": "label",
@@ -173,7 +174,7 @@
   },
   {
    "t": "p",
-   "x": "At Noreen Poitras's request, six policy items were read into the record and voted together: adopt Policy BID (School Committee Member Compensation, newly established under the Westbrook City Charter — see the January 14, 2026 summary for its compensation schedule); approve Policy EHB (Records Management), EHB–R2 (Records Retention Schedule), and EHB–R3 (School Records to be Transferred to Next Grade Level); and delete Policy EHB–L and EHB–LR (Litigation Hold and Litigation Hold Procedures). Unlike 12.1 and 12.2, these remained first approval only."
+   "x": "At Noreen Poitras's request, six policy items were read into the record and voted together: adopt Policy BID (School Committee Member Compensation, under Westbrook City Charter Article 4.4; the packet draft sets pay at 7% of Area Median Income for the Chair, 6% for the Vice-Chair and 5% for members); approve Policy EHB (Records Management), EHB–R2 (Records Retention Schedule), and EHB–R3 (School Records to be Transferred to Next Grade Level); and delete Policy EHB–L and EHB–LR (Litigation Hold and Litigation Hold Procedures). Unlike 12.1 and 12.2, these remained first approval only."
   },
   {
    "t": "label",

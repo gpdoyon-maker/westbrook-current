@@ -3,13 +3,14 @@
  "fields": {
   "Date": "Wednesday, March 11, 2026",
   "Time": "7:00 PM",
-  "Location": "Westbrook High School (Room 114), 117 Stroudwater St. (Hybrid via Zoom)",
+  "Location": "Westbrook High School (Room 114), 125 Stroudwater St. (Hybrid via Zoom)",
   "Video": "https://vimeo.com/1172728940",
   "Packet": "https://drive.google.com/file/d/1hJDHbQj_aXGU6qL6FyDXCCPps4XzE5ev/view (Google Drive, via westbrookschools.org)"
  },
  "packetUrl": "https://drive.google.com/file/d/1hJDHbQj_aXGU6qL6FyDXCCPps4XzE5ev/view",
  "packetNote": "(Google Drive, via westbrookschools.org)",
- "note": "This summary highlights the meeting's key discussions and decisions, with direct quotes and timestamps for verification — it is not a substitute for watching the full meeting. The full committee (all seven members) was present; one student representative (Tina Nguyen) was present and delivered the student report. For complete context, nuance, and anything not covered, watch the full video at the link above. (Produced by: WestbrookCurrents.com)",
+ "note": "This summary highlights the meeting's key discussions and decisions, with timestamps for verification — it is not a substitute for watching the full meeting. The full committee (all seven members) was present; one student representative (Tina Nguyen) was present and delivered the student report. For complete context, nuance, and anything not covered, watch the full video at the link above. (Produced by: WestbrookCurrents.com)",
+ "attendance": "Present: Chair Andrea Mancuso, Vice Chair Katy Rice, Allison Brunette, Erin Cavallaro, Noreen Poitras, Brooke Reed, Dr. Flynn Ross.",
  "blocks": [
   {
    "t": "h",
@@ -56,11 +57,7 @@
   },
   {
    "t": "p",
-   "x": "FY26's $53.35 million budget was a lean “maintenance” budget; per-pupil spending ($21,135) is fourth-lowest in Cumberland County. The district's solar project is generating at Congin and Saccarappa, with the middle school and high school to follow this spring/summer, projected to save about $305,000 annually once complete (a separate figure from the $279,000 Siemens energy-efficiency savings reported March 4). All school kitchens are now halal-certified, and School Nutrition Director Mary Emerson was named Maine's Nutrition Director of the Year for 2025. The district relaunched the Westbrook Education Foundation and welcomed a new WHS"
-  },
-  {
-   "t": "p",
-   "x": "Alumni Association this year."
+   "x": "FY26's $53.35 million budget was a lean “maintenance” budget; per-pupil spending ($21,135) is fourth-lowest in Cumberland County. Solar panels have been installed at Congin and Saccarappa, with the middle school and high school scheduled for this spring/summer; once operating, the project is estimated to reduce energy costs by about $305,000 (a separate figure from the $279,000 Siemens energy-efficiency savings reported March 4). All school kitchens are now halal-certified, and School Nutrition Director Mary Emerson was named Maine's Nutrition Director of the Year for 2025. The district relaunched the Westbrook Education Foundation, and a group of alumni has been forming a new Westbrook High School Alumni Association."
   },
   {
    "t": "p",
@@ -85,7 +82,7 @@
   {
    "t": "h",
    "x": "Board Discussion: Assessments, Per-Pupil Spending & State Funding",
-   "ts": "01:04:04"
+   "ts": "57:55"
   },
   {
    "t": "label",
@@ -93,7 +90,7 @@
   },
   {
    "t": "p",
-   "x": "Member Erin Cavallaro asked whether state assessments account for a student's first language; Dr. Lancia explained multilingual students get only a one-time exemption from the English language arts test, and that the district relies more on the separate ACCESS assessment to gauge real multilingual progress. Chair Mancuso asked how the district's low per-pupil spending interacts with its unusually complex student population; Dr. Lancia described a deliberately lean, needs-based budget that still tries to remove financial barriers to opportunity even as class sizes creep upward. Dr. Flynn Ross noted the seeming paradox that Westbrook's rising property valuation has simultaneously reduced the district's federal and state funding support. Dr. Lancia reported meeting with Governor Mills the day before to discuss federal funding challenges and a newly proposed state funding formula."
+   "x": "Member Erin Cavallaro asked whether state assessments account for a student's first language; Dr. Lancia explained multilingual students get only a one-time exemption from the English language arts test, and that the district relies more on the separate ACCESS assessment to gauge real multilingual progress. Chair Mancuso asked how the district's low per-pupil spending interacts with its unusually complex student population; Dr. Lancia described a deliberately lean, needs-based budget that still tries to remove financial barriers to opportunity even as class sizes creep upward. Dr. Flynn Ross noted the seeming paradox that Westbrook's rising property valuation has simultaneously reduced the district's federal and state funding support. Separately, in her Chair's report, Chair Mancuso said she had met with Governor Mills the day before (at Representative Salisbury's invitation, with Mayor Morse and Sue Joyce of the Chamber) to discuss federal funding challenges and a newly proposed state funding formula."
   },
   {
    "t": "label",
@@ -185,7 +182,7 @@
   },
   {
    "t": "p",
-   "x": "Staff professional-development days August 27–28, students starting Monday, August 31. No staggered kindergarten/Pre-K start this year — a post-pandemic practice the district is discontinuing after a staff/community survey found strong preference against it, mainly over childcare logistics (78% of staff and 52% of community respondents preferred the calendar presented). The calendar includes 177 student days, two more than Maine's 175-day minimum."
+   "x": "Staff professional-development days August 27–28, students starting Monday, August 31, with kindergarten and Pre-K first days still to be determined because of screening days. There will be no staggered kindergarten/Pre-K start this year; Dr. Lancia said survey feedback urged against repeating the practice, and Dr. O'Donnell described views as mixed, citing childcare challenges. In the same survey, about 78% of staff and 52% of community respondents preferred this calendar overall. The calendar includes 177 student days, two more than Maine's 175-day minimum."
   },
   {
    "t": "label",

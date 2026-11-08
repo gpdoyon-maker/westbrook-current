@@ -3,13 +3,14 @@
  "fields": {
   "Date": "Wednesday, August 12, 2026",
   "Time": "6:00 PM",
-  "Location": "Westbrook High School (Room 114), 117 Stroudwater St. (Hybrid via Zoom)",
+  "Location": "Westbrook High School (Room 114), 125 Stroudwater St. (Hybrid via Zoom)",
   "Video": "https://vimeo.com/1217786673",
   "Packet": "No agenda was published for this meeting (checked westbrookschools.org/page/westbrook-school-committee, 2026-10-24)."
  },
  "packetUrl": "",
  "packetNote": "No agenda was published for this meeting (checked westbrookschools.org/page/westbrook-school-committee, 2026-10-24).",
  "note": "This summary highlights the meeting's key discussions and decisions, with direct quotes and timestamps for verification — it is not a substitute for watching the full meeting. All seven regular members were present (Brooke Reed arrived partway through); no student representative attended. Every formal vote passed unanimously, but the Chair's report and public comment aired a real, sustained board disagreement over a member's social-media criticism of teachers' classroom donation wish lists — covered here at length with direct quotes. Summarization necessarily condenses and selects; for complete context, nuance, and anything not covered, watch the full video at the link above. (Produced by: WestbrookCurrents.com)",
+ "attendance": "Present: Chair Andrea Mancuso, Vice Chair Katy Rice, Allison Brunette, Erin Cavallaro, Noreen Poitras, Brooke Reed (arrived after roll call), Dr. Flynn Ross.",
  "blocks": [
   {
    "t": "h",
@@ -98,7 +99,7 @@
   },
   {
    "t": "p",
-   "x": "After a community Facebook post invited Westbrook teachers to share their classroom “Amazon wish lists,” a school committee member publicly characterized teachers' participation as a potential violation of school policy, state law, and professional ethics. Chair Mancuso devoted an extended, prepared statement to the matter."
+   "x": "After a community Facebook post invited Westbrook teachers to share their classroom “Amazon wish lists,” a school committee member publicly said teachers' participation violated school policy, and publicly supported other social-media posts calling it a violation of state law and professional ethics. Chair Mancuso devoted an extended, prepared statement to the matter."
   },
   {
    "t": "p",
@@ -136,7 +137,7 @@
   },
   {
    "t": "p",
-   "x": "Topics from the 5:00 PM Finance Committee meeting held earlier that evening: the FY27 federal Title allocation ($1.2 million, with funds shifted to support Title I teacher salary/benefits); an ongoing payroll specialist search; the proposed special-education transportation van lease (see item 12.3); two new part-time School Nutrition positions at Canal School (see item 12.2); the FY26 audit still in progress; a concern about unusually high Sacarappa School electrical costs relative to WRVC, with usage data requested; continued Siemens solar-project savings; and a request to file the Adult Education warrant separately for audit-trail clarity. The Chair suggested a joint Finance/Facilities presentation from Siemens' own data representative on future energy projects; Poitras agreed to coordinate with Facilities Chair Brooke Reed."
+   "x": "Topics from the 5:00 PM Finance Committee meeting held earlier that evening: the FY27 federal Title allocation ($1.2 million, with funds shifted to support Title I teacher salary/benefits); an ongoing payroll specialist search; the proposed special-education transportation van lease (see item 12.3); two new part-time School Nutrition positions at Canal School (see item 12.2); FY26 still being closed out, with auditors arriving the following Monday; a concern about unusually high Sacarappa School electrical costs relative to WRVC, with usage data requested; continued Siemens solar-project savings; and a request to file the Adult Education warrant separately for audit-trail clarity. The Chair suggested a joint Finance/Facilities presentation from Siemens' own data representative on future energy projects; Poitras agreed to coordinate with Facilities Chair Brooke Reed."
   },
   {
    "t": "label",
@@ -178,7 +179,7 @@
   },
   {
    "t": "d",
-   "x": "Approved 7–0, moved by Erin Cavallaro, seconded by Brooke Reed."
+   "x": "Approved 7–0, moved by Erin Cavallaro and seconded by another member."
   },
   {
    "t": "label",
@@ -284,7 +285,7 @@
   {
    "t": "h",
    "x": "Public Comments Read Into the Record",
-   "ts": "35:19"
+   "ts": "36:19"
   },
   {
    "t": "label",
@@ -292,7 +293,7 @@
   },
   {
    "t": "p",
-   "x": "Erin Cavallaro read two public comments supporting classroom wish lists: Rebecca Allen, a second-grade teacher at Sacarappa, described her district-provided supply budget as adequate for necessities, with her personal wish list consisting of enrichment items beyond that budget. Aaron Druin, a first-grade teacher at Canal, framed wish lists as a voluntary supplement that can coexist with continued advocacy for strong school funding."
+   "x": "Erin Cavallaro read two public comments supporting classroom wish lists: Rebecca Allen, a second-grade teacher at Sacarappa, said she is grateful for her supply budget, which together with reimbursement and donated supplies from Ruth's covers her classroom necessities; after 18 years of teaching, her wish list is enrichment items, though she noted that isn't the case for all teachers. Aaron Druin, a first-grade teacher at Canal, framed wish lists as a voluntary supplement that can coexist with continued advocacy for strong school funding."
   },
   {
    "t": "label",
@@ -333,7 +334,7 @@
   },
   {
    "t": "p",
-   "x": "Poitras added a Finance Committee data point: $146,000 in unspent books-and-supplies budget districtwide last year (Sacarappa at roughly 18–19% unspent, Canal at roughly 19.42%). The Chair responded that the finance director had cautioned the figure spans many smaller individual accounts rather than one large pool, and suggested the administration examine whether supply funds are being tracked and maximized effectively year to year as a budget-season follow-up."
+   "x": "Poitras added a Finance Committee data point: $146,000 in unspent books-and-supplies budget districtwide last year (Sacarappa at roughly 18–19% unspent, Canal at 19.42%). The Chair responded that the finance director had cautioned the figure spans many smaller individual accounts rather than one large pool, and suggested the administration examine whether supply funds are being tracked and maximized effectively year to year as a budget-season follow-up."
   },
   {
    "t": "label",

@@ -9,6 +9,7 @@
  "packetUrl": "https://www.westbrookmaine.gov/AgendaCenter/ViewFile/Agenda/_02102026-984",
  "packetNote": "",
  "note": "This summary highlights the meeting's key discussions and decisions, with direct quotes and timestamps for verification — it is not a substitute for watching the full meeting. Summarization necessarily condenses and selects; for complete context, nuance, and anything not covered here, watch the full video at the link above. (Produced by: WestbrookCurrents.com)",
+ "attendance": "Present: Chair Aaron Burns, Vice Chair Keith Richard, Nancy Heath, Kevin Moss, Sherri Quint. Alternate Cliff McCarthy also attended but was not seated.",
  "blocks": [
   {
    "t": "h",
@@ -18,7 +19,7 @@
   {
    "t": "h",
    "x": "Roll Call & Election of Officers",
-   "ts": "00:07"
+   "ts": "09:07"
   },
   {
    "t": "label",
@@ -26,7 +27,7 @@
   },
   {
    "t": "p",
-   "x": "Roll call: Nancy Heath, Keith Richard, Cliff McCarthy, Sherri Quint, Kevin Moss, and Chair Aaron Burns all answered present — a full board. Aaron Burns was nominated and elected Chair unanimously; Keith Richard was then nominated and elected Vice Chair unanimously (both by voice vote, no roll call recorded). The board clarified that Kevin Moss had recently been promoted from alternate to a regular voting seat after another member left the board, making Cliff McCarthy the board's current alternate."
+   "x": "Roll call: Nancy Heath, Keith Richard, Cliff McCarthy, Sherri Quint, Kevin Moss, and Chair Aaron Burns were present; Burns later said the board was full that night. Aaron Burns was nominated and elected Chair with no opposition heard; Keith Richard was then nominated and elected Vice Chair unanimously (both by voice vote, no roll call recorded). The board clarified that Kevin Moss had recently been promoted from alternate to a regular voting seat after another member left the board, making Cliff McCarthy the board's current alternate."
   },
   {
    "t": "label",
@@ -34,7 +35,7 @@
   },
   {
    "t": "d",
-   "x": "Aaron Burns elected Chair; Keith Richard elected Vice Chair — both unanimous."
+   "x": "Aaron Burns elected Chair (no opposition heard); Keith Richard elected Vice Chair unanimously."
   },
   {
    "t": "label",
@@ -65,7 +66,7 @@
   },
   {
    "t": "p",
-   "x": "Stroudwater General has operated at 640 Saco Street under a legal nonconforming (“grandfathered”) use since at least 2016/2018 as a medical marijuana caregiver cultivation facility — an enclosed, locked facility for growing, processing, and storing medical marijuana, not open to the public. City emails spanning 2023–2025, including from the property's prior owner through current owner Alex Zhang, repeatedly confirmed the business may sell what it grows and manufactures on-site directly to patients as an accessory use. On Nov. 5, 2025, CEO Stetson issued a Notice of Violation alleging the business had grown into a de facto medical marijuana dispensary or unauthorized “caregiver retail store” — citing the business's website and Weed Maps listing (both describing appointment-free, call-ahead access and posted hours), exterior signage, and information relayed by the Maine Office of Cannabis Policy (OCP), the state's medical marijuana regulator. Zhang, through attorney Jill Cohen, appealed on the 30th and final day of the correction window, saying repeated requests for a compliance re-inspection had gone unanswered."
+   "x": "Stroudwater General has operated at 640 Saco Street under a legal nonconforming (“grandfathered”) use since at least 2016/2018 as a medical marijuana caregiver cultivation facility — an enclosed, locked facility for growing, processing, and storing medical marijuana, not open to the public. City emails spanning 2023–2025, including messages to the property's prior owner, to current owner Alex Zhang, and to his attorney, repeatedly confirmed the business may sell what it grows and manufactures on-site directly to patients as an accessory use. On Nov. 5, 2025, CEO Stetson issued a Notice of Violation alleging the business had grown into a de facto medical marijuana dispensary or unauthorized “caregiver retail store” — citing the business's website and Weed Maps listing (both describing appointment-free, call-ahead access and posted hours), exterior signage, and information relayed by the Maine Office of Cannabis Policy (OCP), the state's medical marijuana regulator. Zhang, through attorney Jill Cohen, appealed on the 30th and final day of the correction window, saying repeated requests for a compliance re-inspection had gone unanswered."
   },
   {
    "t": "h",
@@ -74,13 +75,13 @@
   },
   {
    "t": "p",
-   "x": "Cohen argued the NOV was issued in error: a caregiver is always authorized under Maine law to sell what they grow to patients, with no municipal authorization required; CEO Stetson never personally inspected the site and relied solely on secondhand information from OCP and outdated photographs; Stetson failed to respond to repeated requests for a compliance re-inspection; and extensive remedial steps had been taken since August 2025 (a door buzzer, a formal appointment system, a scrubbed online presence, selling through non-compliant third-party product lines) that current photos, taken the week of the hearing, show in place."
+   "x": "Cohen argued the NOV was issued in error: a caregiver is always authorized under Maine law to sell what they grow to patients, with no municipal authorization required; CEO Stetson never personally inspected the site and relied solely on secondhand information from OCP and outdated photographs; Stetson failed to respond to repeated requests for a compliance re-inspection; and extensive remedial steps had been taken since August 2025 (a door buzzer, a formal appointment system, a scrubbed online presence, selling through non-compliant third-party product lines) that current photos, taken the week before the hearing, show in place."
   },
   {
    "t": "q",
    "x": "“For him to stand in front of this body and [say that]… it's just not true. I think it goes to the weight and credibility — and I hate saying this — of Mr. Stetson's testimony tonight… That was just disingenuous.”",
-   "cite": "Attorney Jill Cohen, on CEO Stetson's claim that he confirmed non-compliance by looking at the storefront",
-   "ts": "2:08:28"
+   "cite": "Attorney Jill Cohen, responding to CEO Stetson's explanation for not doing a compliance inspection",
+   "ts": "2:06:03"
   },
   {
    "t": "h",
@@ -89,13 +90,7 @@
   },
   {
    "t": "p",
-   "x": "Stetson testified the exterior signage, the business's own website and Weed Maps listing (both inviting walk-ins with posted hours), and branded third-party products on display led him to conclude the business had become a de facto retail operation. Solicitor Collins argued the ordinance's definition of a cultivation facility doesn't mention selling at all — any sales the City has tolerated were only ever an accessory use — and that the accumulated evidence shows the business has become indistinguishable from a retail store, regardless of the exact legal label."
-  },
-  {
-   "t": "q",
-   "x": "“Going back to the pictures — yes, there's a tip jar, and… that is unsettling for me because that tip jar will — well, I can't not see retail activity when there's a tip jar.”",
-   "cite": "City Solicitor Kristen Collins, on the significance of the evidence",
-   "ts": "3:31:01"
+   "x": "Stetson testified the exterior signage and the business's own website and Weed Maps listing (both inviting walk-ins with posted hours) led him to conclude the business had become a de facto retail operation. Solicitor Collins pointed to third-party brands listed on the business's website and argued the ordinance's definition of a cultivation facility doesn't mention selling at all — the City has tacitly allowed some sales there for years, which she said she doesn't necessarily accept as an accessory use, and even an accessory use would have to be a minor part of the business — and that the accumulated evidence shows the business has become indistinguishable from a retail store, regardless of the exact legal label."
   },
   {
    "t": "h",
@@ -104,7 +99,13 @@
   },
   {
    "t": "p",
-   "x": "Chair Burns pressed early on the central legal question: whether this is a zoning/land-use issue (what the board can decide) versus a question of what a caregiver is allowed to do under state law (which it cannot). Board attorney Ben McCall confirmed the board's role is narrow — determining only whether CEO Stetson correctly interpreted and applied the zoning ordinance, under a de novo standard of review (no deference to his original decision) and a preponderance-of-the-evidence burden resting on the appellant. Discussion repeatedly circled two linked questions: whether sales were being made to the general public rather than a defined patient roster, and whether products not grown or manufactured on-site were being sold. Several board members pointed to the posted hours, public-facing appointment system, and the tip jar as evidence of retail activity exceeding the nonconforming use; alternate Cliff McCarthy pushed back repeatedly that the record lacked anything dated specifically to Nov. 5, 2025, calling the City's evidence “a relay of information… copy-paste what someone said, and now you're in violation.” The board agreed it was not a full “dispensary” (Zhang isn't a nonprofit, and the scale described didn't rise to that level), but did not feel it needed to settle on the separate label “caregiver retail store” either — the real question, the board agreed, was simply whether the use exceeded the scope of the legally nonconforming cultivation facility."
+   "x": "Chair Burns pressed early on the central legal question: whether this is a zoning/land-use issue (what the board can decide) versus a question of what a caregiver is allowed to do under state law (which it cannot). Board attorney Ben McCall confirmed the board's role is narrow — determining only whether CEO Stetson correctly interpreted and applied the zoning ordinance, under a de novo standard of review (no deference to his original decision) and a preponderance-of-the-evidence burden resting on the appellant. Discussion repeatedly circled two linked questions: whether sales were being made to the general public rather than a defined patient roster, and whether products not grown or manufactured on-site were being sold. Several board members pointed to the posted hours, public-facing appointment system, and the tip jar as evidence of retail activity exceeding the nonconforming use; one board member pushed back repeatedly that the record lacked anything documenting conditions on Nov. 5, 2025, calling the City's evidence “a relay of information… copy-paste what someone said, and now you're in violation.” The board agreed it was not a full “dispensary” (Zhang isn't a nonprofit, and the scale described didn't rise to that level), but did not feel it needed to settle on the separate label “caregiver retail store” either — the real question, the board agreed, was simply whether the use exceeded the scope of the legally nonconforming cultivation facility."
+  },
+  {
+   "t": "q",
+   "x": "“Going back to the pictures — yes, there's a tip jar, and… that is unsettling for me because that tip jar will — well, I can't not see retail activity when there's a tip jar.”",
+   "cite": "A Zoning Board of Appeals member, during deliberations",
+   "ts": "3:28:51"
   },
   {
    "t": "h",
@@ -125,7 +126,7 @@
   },
   {
    "t": "d",
-   "x": "Board has jurisdiction to hear the appeal — unanimous."
+   "x": "Board has jurisdiction to hear the appeal — acknowledged without objection (no vote called)."
   },
   {
    "t": "p",

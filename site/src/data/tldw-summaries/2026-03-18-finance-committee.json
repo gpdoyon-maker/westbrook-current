@@ -3,13 +3,14 @@
  "fields": {
   "Date": "Wednesday, March 18, 2026",
   "Time": "5:00 PM",
-  "Location": "Westbrook High School (Room 114), 125 Stroudwater St. (Hybrid via Zoom)",
+  "Location": "Westbrook High School (Room 114), 125 Stroudwater St.",
   "Video": "https://vimeo.com/1174915735",
   "Packet": "No agenda was published for this meeting (checked westbrookschools.org, 2026-10-24)."
  },
  "packetUrl": "",
  "packetNote": "No agenda was published for this meeting (checked westbrookschools.org, 2026-10-24).",
- "note": "This summary highlights the meeting's key discussions and decisions, with direct quotes and timestamps for verification — it is not a substitute for watching the full meeting. The full committee sat as the committee of the whole for this FY27 cost-center budget review session; no votes were taken. For complete context, nuance, and anything not covered, watch the full video at the link above. (Produced by: WestbrookCurrents.com)",
+ "note": "This summary highlights the meeting's key discussions and decisions, with direct quotes and timestamps for verification — it is not a substitute for watching the full meeting. Under this year's format, the whole School Committee sits as the Finance Committee for FY27 cost-center budget review; no votes were taken. For complete context, nuance, and anything not covered, watch the full video at the link above. (Produced by: WestbrookCurrents.com)",
+ "attendance": "Present: Finance Committee Chair Noreen Poitras, School Committee Chair Andrea Mancuso, Erin Cavallaro, Dr. Flynn Ross. Not stated on the recording: School Committee Vice Chair Katy Rice, Allison Brunette, Brooke Reed.",
  "blocks": [
   {
    "t": "h",
@@ -27,7 +28,7 @@
   },
   {
    "t": "p",
-   "x": "Director of Music Suzanne Prue reported a strong year (31 students to District Honors ensembles, 11 to All-State, 16 to the District Honors Jazz Festival), but flagged a roughly 25% ($2,000) cut to the middle school's per-pupil supplies line, driven by a smaller participating student count. She said the middle school has already exhausted its instrument-repair budget this year and is borrowing from the high school's repair line, and that the cut would meaningfully affect consumables like reeds and mouthpieces."
+   "x": "Director of Music Sue Proulx reported a strong year (31 students to District Honors ensembles, 11 to All-State, 16 to the District Honors Jazz Festival). A member flagged a roughly 25% (about $2,000) cut to the middle school's per-pupil supplies line; staff first linked it to student counts, but later in the evening said it may reflect a prior-year calculation error and promised to verify. Proulx said the middle school has already exhausted its instrument-repair budget this year and is borrowing from the high school's repair line, and that the cut would meaningfully affect consumables like reeds and mouthpieces."
   },
   {
    "t": "label",
@@ -56,7 +57,7 @@
   },
   {
    "t": "p",
-   "x": "Jamie Grant reported the Center remains fully self-sustaining: FY25 revenue of $193,666 against $131,561 in expenses, a $62,105 surplus, confirmed by Dr. Mazjanis as having zero effect on the general fund. This year's surplus plus a Warren Memorial Foundation grant funded a $92,000 lighting upgrade. Member Andrea Mancuso noted this fulfills the promise made when the Center was built roughly sixteen years ago that it would never cost taxpayers."
+   "x": "Jamie Grant reported the Center remains fully self-sustaining: FY25 revenue of $193,666 against $131,561 in expenses, a $62,105 surplus, confirmed by Dr. Mazjanis as having zero effect on the general fund. Carryover funds plus Warren Memorial Foundation funding paid for a $92,000 lighting upgrade. A member noted this fulfills the promise made when the Center was built roughly sixteen years ago that it would never cost taxpayers."
   },
   {
    "t": "label",
@@ -90,11 +91,11 @@
   },
   {
    "t": "p",
-   "x": "Director of Facilities Tony Lombardo walked through utilities and repair lines for each building. Member Andrea Mancuso confirmed with Dr. Mazjanis the budget-level energy savings: solar generation saves a projected $302,300 against $223,830 in bonding debt service (net $66,170), and the Siemens efficiency project saves $279,444 against $256,453 in debt service (net $22,987) — roughly $89,000 in real FY27 savings combined, expected to grow as energy prices rise."
+   "x": "Director of Facilities Tony Lombardo walked through utilities and repair lines for each building. A member confirmed with Dr. Mazjanis the budget-level energy savings: the overview chart projects a $302,300 drop in FY27 utility spending; after debt service ($223,830 for solar bonding, and $256,453 for the Siemens efficiency projects against $279,444 in projected efficiency savings), staff confirmed net FY27 reductions of $66,170 for solar and $22,987 for efficiency, as stated at the meeting — roughly $89,000 in real FY27 savings combined, expected to grow as energy prices rise."
   },
   {
    "t": "p",
-   "x": "Waste removal costs rose sharply after the district learned it was no longer covered under a municipal joint-vendor arrangement with the City (no written agreement was ever found); Lombardo negotiated a rate the vendor has verbally committed to hold for several years. Middle school HVAC concerns include a failing air handler and a two-year-old chiller component the vendor won't honor under warranty. High school repairs include a $15,000 federal tree-replacement grant requiring a match, Compass program relocation costs, and roof/sidewalk safety work; members asked whether some of these could be capital-improvement eligible rather than absorbed into the operating repair budget."
+   "x": "Waste removal costs rose sharply after the district learned it was no longer covered under a municipal joint-vendor arrangement with the City (the City could supply little history, and the district has no written contract with the vendor); Lombardo negotiated a rate the vendor has verbally committed to hold for several years. Middle school HVAC concerns include a failing air handler and a two-year-old chiller component the vendor won't honor under warranty. High school repairs include a $15,000 federal tree-replacement grant requiring a match, Compass program relocation costs, and roof/sidewalk safety work; members asked whether some of these could be capital-improvement eligible rather than absorbed into the operating repair budget."
   },
   {
    "t": "label",
@@ -119,9 +120,15 @@
   },
   {
    "t": "q",
-   "x": "“It feels like we're robbing Peter to pay Paul. We are a department of the city and we are paying the city to do work...it's hard to look at $121,000 and think about the teaching position that could be filling that.”",
+   "x": "“It feels like we're robbing Peter to pay Paul. We are a department of the city and we are paying the city to do work.”",
    "cite": "Board Member (on a $121,000 annual city charge for athletic-field maintenance)",
    "ts": "01:39:23"
+  },
+  {
+   "t": "q",
+   "x": "“We did thoroughly explore this topic with City Hall as part of last year's budgeting process. The perspective of the municipal budgeters is that all city expenses...are assessed to the department which incurs the expense.”",
+   "cite": "Board Member (on the City's rationale for the charge)",
+   "ts": "01:39:36"
   },
   {
    "t": "h",
@@ -139,7 +146,7 @@
   },
   {
    "t": "p",
-   "x": "Director of Transportation Melissa Foy requested two new positions: a van driver (cut last year, which she said has required her to personally drive long out-of-district routes) and a bus aide for a specific out-of-district placement. She flagged rising bus replacement costs (now about $172,000, up from under $100,000 six years ago). She also voiced genuine safety concern about the upcoming March 27 rollout of real-time bus tracking for parents, worried it could lead some parents to let children wait unsupervised or run toward an arriving bus, and said translation services will ensure rollout communications reach families in their home languages."
+   "x": "Director of Transportation Melissa Foye requested two new positions: a van driver (cut last year, which she said has required her to personally drive long out-of-district routes) and a bus aide for a specific out-of-district placement. She flagged rising bus replacement costs (now about $172,000, up from under $100,000 six years ago). She also voiced genuine safety concern about the upcoming March 27 rollout of real-time bus tracking for parents, worried it could lead some parents to let children wait unsupervised or run toward an arriving bus, and, asked about families who need translation, staff said the district's own notice will go out translated through Reach My Teach and that they would look into whether BusRight's messages are translated."
   },
   {
    "t": "label",
@@ -236,7 +243,7 @@
   },
   {
    "t": "p",
-   "x": "HR Director Martha Sumner described a department of two (herself and a full-time HR generalist, added only two and a half years ago) supporting 506 employees and three collective bargaining agreements. She noted a past pipe leak damaged some HR and Finance paper records, motivating an ongoing digitization push. Asked whether recent market-rate salary adjustments have affected staff retention, Sumner said she hasn't seen pay-driven resignations this year; Dr. Lancia said he's preparing data that appears to show a positive retention effect from the adjustments."
+   "x": "HR Director Martha Sumner described a department of two (herself and a full-time HR generalist, added only two and a half years ago) supporting 506 employees and three collective bargaining agreements. She noted a water-heater leak at Central Office this past year damaged some HR and Finance paper records, motivating an ongoing digitization push. Asked whether recent market-rate salary adjustments have affected staff retention, Sumner said she hasn't seen pay-driven resignations this year; Dr. Lancia said he's preparing data that appears to show a positive retention effect from the adjustments."
   },
   {
    "t": "label",
