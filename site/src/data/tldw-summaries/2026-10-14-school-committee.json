@@ -3,13 +3,14 @@
  "fields": {
   "Date": "Wednesday, October 14, 2026",
   "Time": "7:00 PM",
-  "Location": "Westbrook High School (Room 114), 117 Stroudwater St. (Hybrid via Zoom)",
+  "Location": "Westbrook High School (Room 114), 125 Stroudwater St. (Hybrid via Zoom)",
   "Video": "https://vimeo.com/1236019921",
   "Packet": "https://drive.google.com/file/d/19QuAviIlqf5zkaLz_B7lmarS6vYl9SBP/view?usp=drive_link (Google Drive, via westbrookschools.org)"
  },
  "packetUrl": "https://drive.google.com/file/d/19QuAviIlqf5zkaLz_B7lmarS6vYl9SBP/view?usp=drive_link",
  "packetNote": "(Google Drive, via westbrookschools.org)",
- "note": "This summary highlights the meeting's key discussions and decisions, with direct quotes and timestamps for verification — it is not a substitute for watching the full meeting. All seven regular members were present; both student representatives attended, including new member Skylar Stevenson. The meeting addressed a serious social media incident involving two students, at length and with unified committee condemnation, alongside a major energy efficiency financing item. Every vote passed unanimously. Summarization necessarily condenses and selects; for complete context, nuance, and anything not covered, watch the full video at the link above. (Produced by: WestbrookCurrents.com)",
+ "note": "This summary highlights the meeting's key discussions and decisions, with direct quotes and timestamps for verification — it is not a substitute for watching the full meeting. All seven regular members were present; both student representatives attended, including new member Skylar Stevenson. The meeting addressed a serious social media incident involving two students at length, with the Superintendent, the Chair and Ms. Cavallaro speaking to it, alongside a major energy efficiency financing item. Every vote passed unanimously. Summarization necessarily condenses and selects; for complete context, nuance, and anything not covered, watch the full video at the link above. (Produced by: WestbrookCurrents.com)",
+ "attendance": "Present: Chair Andrea Mancuso, Vice Chair Katy Rice, Allison Brunette, Erin Cavallaro, Noreen Poitras, Brooke Reed (remote), Dr. Flynn Ross.",
  "blocks": [
   {
    "t": "h",
@@ -27,7 +28,7 @@
   },
   {
    "t": "p",
-   "x": "In response to a question from the Chair, Dr. Lancia reported the district has lost three special education ed techs in the past month (two from the middle school) and currently has 16 special-education ed tech openings — more than 10% of the roughly 60 such positions districtwide, many vacant since the start of the school year. Coverage is being managed through substitutes and reassignment; active recruiting includes a recent USM job fair and social media outreach."
+   "x": "The Chair noted the district has lost three special education ed techs in the past month (two from the middle school). Dr. Lancia reported 16 current special-education ed tech openings, out of roughly 60 such positions districtwide by his estimate, many vacant since the start of the school year. Coverage is being managed through substitutes and reassignment; active recruiting includes a recent USM job fair and social media outreach."
   },
   {
    "t": "label",
@@ -57,7 +58,7 @@
   },
   {
    "t": "p",
-   "x": "Dr. Lancia read a prepared statement responding to an anonymous social media page that, the prior week, used a false narrative about transgender athletes to attack two Westbrook High School student athletes by name and photograph. He reaffirmed the district's equity and inclusion commitments, citing the district's statement of equity and opportunity and policies AC and ACAA (referencing Title IX and the Maine Human Rights Act)."
+   "x": "Dr. Lancia read a prepared statement responding to an anonymous social media page that, the prior week, used a false narrative about transgender athletes to attack two Westbrook High School student athletes by photograph. He reaffirmed the district's equity and inclusion commitments, citing the district's statement of equity and opportunity and policies AC and ACAA (referencing Title IX and the Maine Human Rights Act)."
   },
   {
    "t": "label",
@@ -72,6 +73,11 @@
    "x": "None."
   },
   {
+   "t": "h",
+   "x": "Chair's Remarks",
+   "ts": "12:51"
+  },
+  {
    "t": "q",
    "x": "“The recent social media posts targeting our student athletes are unacceptable. Singling out children and using their photographs to advance a political agenda is wrong … Adults have a responsibility to exercise integrity and discretion … Let kids be kids.”",
    "cite": "Mayor David Morse"
@@ -79,12 +85,7 @@
   {
    "t": "q",
    "x": "“Two female Westbrook High School athletes experienced a hateful online attack by adults … we are also encouraged by our community's response stating loudly that Westbrook will not stand for this type of hate. All students deserve to feel safe and welcome here.”",
-   "cite": "State Representatives Susan Salisbury, Drew Gattine, and Morgan Rielly (names as best captured from the audio)"
-  },
-  {
-   "t": "h",
-   "x": "Chair's Remarks",
-   "ts": "12:51"
+   "cite": "State Representatives Suzanne Salisbury, Drew Gattine, and Morgan Rielly (names as best captured from the audio)"
   },
   {
    "t": "label",
@@ -92,7 +93,7 @@
   },
   {
    "t": "p",
-   "x": "Chair Mancuso addressed a circulating rumor that a committee member had been involved in spreading the false information, stating plainly she was confident no board member had done so, and that scapegoating school staff or leadership “is just further cowardice.” She noted the posts came down within hours once their inaccuracy became clear, without any retraction or apology from the original source. Erin Cavallaro echoed the sentiment, emphasizing that community standards are defined “by the choices that our neighbors make when those principles are tested.” No vote or formal action was associated with this discussion."
+   "x": "Chair Mancuso read statements from Mayor David Morse and the city's State House representatives, then addressed a circulating rumor that a committee member had been involved in spreading the false information, stating plainly she was confident no board member had done so, and that scapegoating school staff or leadership “is just further cowardice.” She noted the posts came down within hours, and that the original source issued no apology or retraction even though the information was known to be wrong within the hour of posting. Erin Cavallaro echoed the sentiment, emphasizing that community standards are defined “by the choices that our neighbors make when those principles are tested.” No vote or formal action was associated with this discussion."
   },
   {
    "t": "label",
@@ -185,7 +186,7 @@
   },
   {
    "t": "p",
-   "x": "Director of Facilities Vicky Hebert toured the committee through Canal School's new bathrooms and pre-K rooms (state-funded startup furniture for five rooms); the existing playground was flagged as unsuitable for four-year-olds and will need review."
+   "x": "Vickie Hebert toured the committee through Canal School's new bathrooms and pre-K rooms (state-funded startup furniture for five rooms); the existing playground was flagged as unsuitable for four-year-olds and will need review."
   },
   {
    "t": "label",
@@ -210,7 +211,7 @@
   },
   {
    "t": "p",
-   "x": "Revenue adjustments: WRVC down roughly $213,388 (a technical program not running this year), pre-K up roughly $145,675 (enrollment growth), and the ED-279 state subsidy line up roughly $204,750, for a net General Purpose Aid (GPA) gain of roughly $137,038. Total major-capital debt service stands at about $4.11 million. Poitras raised concern that the contingency fund — roughly $239,000 — is “extremely tight” this early in the fiscal year."
+   "x": "Revenue adjustments: WRVC down roughly $213,388 (a technical program not running this year), pre-K up roughly $145,675 (enrollment growth), and the ED-279 state subsidy line up roughly $204,750, for a net General Purpose Aid (GPA) gain of roughly $137,038. Total major-capital debt service stands at about $4.11 million. Poitras raised concern that the contingency fund — roughly $239,000 — is “extremely tight.”"
   },
   {
    "t": "p",
@@ -353,7 +354,7 @@
   },
   {
    "t": "p",
-   "x": "The Chair thanked the support staff negotiating team, Westbrook Education Association president Sue Lombardo, chief negotiator Noreen Poitras, and negotiating-team members Katy Rice and Andrea Mancuso."
+   "x": "The Chair thanked the support staff negotiators, and Dr. Lancia and the administrative team. Dr. Lancia then thanked union president Sue Lombardo, the committee's chief negotiator Noreen Poitras, and negotiating-team members Katy Rice and Andrea Mancuso."
   },
   {
    "t": "label",
@@ -361,7 +362,7 @@
   },
   {
    "t": "d",
-   "x": "Approved unanimously by roll call (including student advisory votes), moved by Erin Cavallaro, seconded by Noreen Poitras."
+   "x": "Approved unanimously by roll call of the committee, moved by Erin Cavallaro, seconded by Noreen Poitras."
   },
   {
    "t": "label",
@@ -382,11 +383,11 @@
   },
   {
    "t": "p",
-   "x": "Facilities Director Tony Lombardo explained the combined Westbrook High School/WRVC fire alarm system was installed in 1988 (38 years old) and has triggered six false alarms this summer alone, including one requiring an overnight fire watch. The district is replacing the system in phases with a compatible Siemens system, starting with the main control panel and the most problem-prone device loop, at a cost of $38,650, funded from the already-tight contingency line."
+   "x": "Facilities Director Tony Lombardo explained the combined Westbrook High School/WRVC fire alarm system was installed in 1988 (38 years old) and has triggered six false alarms this summer alone, including one requiring an evening fire watch. The district is replacing the system in phases with a compatible Siemens system, starting with the main control panel and the most problem-prone device loop, at a cost of $38,650, funded from the already-tight contingency line."
   },
   {
    "t": "p",
-   "x": "Because the next phase of work won't begin until parts arrive in late November, the committee scheduled this for final approval the following month rather than making it first-and-final, per the required 72-hour gap between first and final votes."
+   "x": "Because Phase 1 work won't begin until the remaining parts arrive at the end of November, the committee scheduled this for final approval the following month rather than making it first-and-final, per the required 72-hour gap between first and final votes."
   },
   {
    "t": "label",
@@ -452,11 +453,11 @@
   },
   {
    "t": "p",
-   "x": "Chair Mancuso pressed for the actual draft Project Development Agreement (the packet contained only the older one), and confirmed the district's legal counsel, Drummond Woodsum, has not yet reviewed the new agreement — review is planned between the required readings, after a prior version required counsel to strike objectionable liability-limitation clauses. She confirmed no contract will be signed before a second, final committee vote."
+   "x": "Chair Mancuso pressed for the actual draft Project Development Agreement (the packet contained only the older one), and confirmed the district's legal counsel, Drummond Woodsum, has not yet reviewed the new agreement — review is planned between the required readings, after a prior version required counsel to strike objectionable liability-limitation clauses. She asked whether any contract would be signed before a second, final committee vote."
   },
   {
    "t": "p",
-   "x": "Anticipated project scope is roughly $3–6 million and would likely require bonding. Dr. Flynn Ross highlighted the scale of potential financial upside: roughly $492,000 in avoided energy costs, $58,000 in solar profit, a potential $768,547 solar investment tax credit, roughly $50,000 in solar renewable-energy-credit sales, and a further $500,000–$1 million in potential Efficiency Maine rebates. Erin Cavallaro, who attended a Siemens presentation at Canal, strongly endorsed the project, noting urgency tied to the November 3 election's potential effect on Efficiency Maine funding, and asked for a shorter presentation to the full committee before the final vote. Noreen Poitras asked whether a future full remodel of Westbrook High School might render this work redundant; staff clarified the two are separate projects, though a future remodel would likely align with any new energy equipment installed now."
+   "x": "Anticipated project scope is roughly $3–6 million and would likely require bonding. Dr. Flynn Ross, citing the Siemens presentation, pointed to results from the earlier phases (roughly $492,000 in avoided energy costs, $58,000 in solar profit, a potential $768,547 solar investment tax credit, and roughly $50,000 in solar credit sales), plus $500,000–$1 million in potential Efficiency Maine rebates for the next phase. Erin Cavallaro, who attended a Siemens presentation at Canal, strongly endorsed the project, noting urgency tied to the November 3 election's potential effect on Efficiency Maine funding, and asked for a shorter presentation to the full committee before the final vote. Noreen Poitras asked whether a future full remodel of Westbrook High School might render this work redundant; the response was that the two are separate projects, though a future remodel would likely align with any new energy equipment installed now."
   },
   {
    "t": "label",
@@ -485,7 +486,7 @@
   },
   {
    "t": "p",
-   "x": "Erin Cavallaro, the committee's delegate, previewed the resolutions up for a vote at the October 24 assembly, noting the immigration-enforcement-related resolutions were likely to generate the most discussion. She highlighted one new proposed resolution — that school boards should include at least one voting student member — as something Westbrook already does with two."
+   "x": "Erin Cavallaro, the committee's delegate, previewed the resolutions up for a vote at the October 24 assembly, noting the immigration-enforcement-related resolutions were likely to generate the most discussion. She highlighted one new proposed resolution — that school boards should include at least one voting student member — noting that Westbrook already has two student members (who cast advisory votes)."
   },
   {
    "t": "label",
@@ -519,11 +520,7 @@
   },
   {
    "t": "p",
-   "x": "October 21, 5:00 PM: Facilities Committee (Westbrook High School). October 28, 5:00 PM: Policy Committee (Central Office). November 4, 5:00 PM: Finance Committee (Central Office). November 11: no school (Veterans"
-  },
-  {
-   "t": "p",
-   "x": "Day). November 18, 5:00 PM: Educational Programs Committee (Central Office), followed by the November regular School Committee meeting at 7:00 PM (Room 114). November 25: no school (compensatory day); Policy Committee, 5:00 PM (Central Office). November 26–27: no school (Thanksgiving)."
+   "x": "October 21, 5:00 PM: Facilities Committee (Westbrook High School). October 28, 5:00 PM: Policy Committee (Central Office). November 4, 5:00 PM: Finance Committee (Central Office). November 11: no school (Veterans Day). November 18, 5:00 PM: Educational Programs Committee (Central Office), followed by the November regular School Committee meeting at 7:00 PM (Room 114). November 25: no school (compensatory day); Policy Committee, 5:00 PM (Central Office). November 26–27: no school (Thanksgiving)."
   },
   {
    "t": "label",

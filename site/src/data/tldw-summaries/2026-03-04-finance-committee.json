@@ -10,6 +10,7 @@
  "packetUrl": "https://drive.google.com/file/d/1wGkdwxR68In_XCduVWHu4WdH9imJpf7C/view",
  "packetNote": "(Google Drive, via westbrookschools.org)",
  "note": "This summary highlights the meeting's key discussions and decisions, with direct quotes and timestamps for verification — it is not a substitute for watching the full meeting. This was the FY27 budget season's opening Finance Committee meeting; per standing practice, the full School Committee sat as the committee of the whole. No votes were taken — this was the first of several weeks of budget presentation and review. For complete context, nuance, and anything not covered, watch the full video at the link above. (Produced by: WestbrookCurrents.com)",
+ "attendance": "Present: Finance Committee Chair Noreen Poitras, School Committee Chair Andrea Mancuso, School Committee Vice Chair Katy Rice, Allison Brunette, Erin Cavallaro, Brooke Reed (remote), Dr. Flynn Ross.",
  "blocks": [
   {
    "t": "h",
@@ -48,7 +49,7 @@
   {
    "t": "h",
    "x": "Monthly Financial Reports & Capital Improvement Plan Update",
-   "ts": "17:52"
+   "ts": "09:45"
   },
   {
    "t": "label",
@@ -56,11 +57,11 @@
   },
   {
    "t": "p",
-   "x": "Dr. Mazjanis reviewed routine budget-to-actual reporting; January's elevated 12% spend rate (versus a typical ~8%) reflects a three-paycheck month. Substitute-teacher spending ($64,000 for the period) was flagged as a line to watch. Member Andrea Mancuso asked why Westbrook Middle School's water/sewer budget showed only 19% remaining versus 30–40% at other schools; staff will investigate."
+   "x": "Dr. Mazjanis reviewed routine budget-to-actual reporting; January's elevated 12% spend rate (versus a typical ~8%) reflects a three-paycheck month. Substitute-teacher spending ($64,000 for the period) was flagged as a line to watch. A committee member asked why Westbrook Middle School's water/sewer budget showed only 19% remaining versus 30–40% at other schools; staff will investigate."
   },
   {
    "t": "p",
-   "x": "Dr. Lancia reported City Council has given first-reading approval to the bond-fund reallocations previously discussed at the February 11 School Committee meeting (Canal/Congin exterior and bathroom work, Westbrook High School security system and window/door replacement), and described FY27 as an intentional pause from aggressive capital work given limited staff capacity. The district received another Maine Revolving Renovation Fund grant for Canal School this cycle and narrowly missed a second grant for Congin."
+   "x": "Dr. Lancia reported City Council has given first-reading approval to the reallocations of leftover bond and City-granted fund-balance money previously discussed at the February 11 School Committee meeting (Canal/Congin exterior and bathroom work, Westbrook High School security system and window/door replacement), and described FY27 as an intentional pause from aggressive capital work given limited staff capacity. The district received another Maine Revolving Renovation Fund grant for Canal School this cycle and narrowly missed a second grant for Congin."
   },
   {
    "t": "label",
@@ -98,7 +99,7 @@
   },
   {
    "t": "p",
-   "x": "Four main drivers: (1) moving positions off unreliable federal funding — five positions moving from Title I to the general fund ($585,806, the first step of a multi-year transition), plus five special-education Ed Tech IIIs moving off IDEA funding, which also avoids an 18% Maine PERS penalty on federally-funded positions; (2) the new Pre-K program at Canal School, costing $384,864 in local funds for its general-education portion (the special-education portion remains state-funded), partially offset as the roughly $100,000 currently paid to the Opportunity Alliance is removed from the elementary schools' budgets; (3) existing-staff salary/benefit increases (~$2.5 million, reflecting current contracts and a conservatively budgeted 10% health-benefit increase); and (4) new/reorganized positions (~$591,578) plus rising special-education out-of-district placement costs."
+   "x": "Four main drivers: (1) moving positions off unreliable federal funding — five positions moving from Title I to the general fund ($585,806, the first step of a multi-year transition), plus five special-education Ed Tech IIIs moving off IDEA funding, which also avoids an 18% Maine PERS penalty on federally-funded positions; (2) the new Pre-K program at Canal School, costing $384,864 in local funds for its general-education portion (the special-education portion remains state-funded), partially offset as the roughly $100,000 currently paid to the Opportunity Alliance is removed from the elementary schools' budgets; (3) existing-staff salary/benefit increases (~$2.5 million, reflecting current contracts and a 10% health-benefit placeholder, lowered from 15%); and (4) new/reorganized positions (~$591,578) plus rising special-education out-of-district placement costs."
   },
   {
    "t": "label",
@@ -160,7 +161,7 @@
   },
   {
    "t": "p",
-   "x": "General Purpose Aid to Education (ED279) is projected to rise about $2.4 million, but Westbrook's local-vs-state cost share has flipped to 52% local / 48% state (the reverse of a few years ago) as the city's property valuation rises. The district also has far less fund-balance cushion available this year, having already used $700,000 of FY24 carryforward to buy down the FY26 budget. Using preliminary 2025 valuation figures, staff estimated the FY27 mill rate at 9.72 (up from 8.74) — roughly a $336.31 annual increase for a home valued at the city's 2025 average of $341,000, explicitly caveated as a preliminary estimate."
+   "x": "General Purpose Aid to Education (ED279) is projected to rise about $2.4 million, but Westbrook's local-vs-state cost share has flipped to 52% local / 48% state (the reverse of a few years ago) as the city's property valuation rises. The district also has far less fund-balance cushion available this year, having already used $700,000 of FY24 carryforward to buy down the FY26 budget. Using preliminary 2025 valuation figures, staff estimated the school portion of the FY27 mill rate at 9.72 (up from 8.74) — roughly a $336.31 annual increase for a home valued at the city's 2025 average of $341,000, explicitly caveated as a preliminary estimate."
   },
   {
    "t": "label",

@@ -10,6 +10,7 @@
  "packetUrl": "https://www.westbrookmaine.gov/AgendaCenter/ViewFile/Agenda/_06022026-1009",
  "packetNote": "",
  "note": "This summary highlights the meeting's key discussions and decisions, with direct quotes and timestamps for verification — it is not a substitute for watching the full meeting. This was an exceptionally long meeting (nearly 3.5 hours, seven substantive items) with heavy public turnout; summarization necessarily condenses and selects more than usual, especially in the public comment sections. For complete context, nuance, and anything not covered here, watch the full video at the link above. (Produced by: WestbrookCurrents.com)",
+ "attendance": "Present: Chair Larry McWilliams, Vice Chair John Turcotte, Karen Axelson, Jason Frazier, Nancy Litrocapes, Kevin Price, Robin Tannenbaum, Lucas Schrage (alternate). Absent: Oriana Farnham (alternate).",
  "blocks": [
   {
    "t": "h",
@@ -27,7 +28,7 @@
   },
   {
    "t": "p",
-   "x": "Chair Larry McWilliams announced that 500 Spring Street, listed on the printed agenda, would instead be heard June 16 given tonight's heavy workload. Roll call: eight of nine seated members present (McWilliams, Lucas Schrage, Robin Tannenbaum, Kevin Price, Nancy Litrocapes, Jason Frazier, Karen Axelson, and Vice Chair John Turcotte); Oriana Farnham absent. No minutes were on the agenda."
+   "x": "Chair Larry McWilliams announced that 500 Spring Street, listed on the printed agenda, would instead be heard June 16 given tonight's heavy workload. Roll call: eight of nine seated members present (McWilliams, Lucas Schrage, Robin Tannenbaum, Kevin Price, Nancy Litrocapes, Jason Frazier, Karen Axelson, and Vice Chair John Turcotte); Oriana Farnham absent. There were no minutes to approve."
   },
   {
    "t": "label",
@@ -56,7 +57,7 @@
   },
   {
    "t": "p",
-   "x": "The applicant, requesting a one-year extension to a previously amended site plan, did not appear. Staff indicated outreach had been made about a possible June 16 appearance."
+   "x": "The applicant, requesting a one-year extension to a previously amended site plan, did not appear. The Chair said the applicant had been contacted about possibly coming to the June 16 meeting."
   },
   {
    "t": "label",
@@ -186,7 +187,7 @@
   },
   {
    "t": "p",
-   "x": "Board reaction was strongly positive. Member Jason Frazier asked for more landscape-berming detail and example renderings. Vice Chair John Turcotte praised the team for showing the building in context with its neighbors for the first time and asked for similarly contextual views going forward. Member Robin Tannenbaum, initially disoriented by inconsistent plan orientations, asked for a standard north arrow in future submissions and confirmed there is no conference/banquet space. Member Kevin Price asked how facade consistency would be maintained once retail tenants are chosen; the team explained master developer Waterstone will build out and lease the ground-floor shell directly using a consistent architectural “frame.”"
+   "x": "Board reaction was strongly positive. Member Jason Frazier asked for more landscape-berming detail and example renderings. Vice Chair John Turcotte praised the team for showing the building in context with its neighbors for the first time and asked for similarly contextual views going forward. Member Robin Tannenbaum, initially disoriented by inconsistent plan orientations, asked for a standard north arrow in future submissions. Member Karen Axelson confirmed there is no conference/banquet space. One member asked how facade consistency would be maintained once retail tenants are chosen; the team explained master developer Waterstone will build out and lease the ground-floor shell directly using a consistent architectural “frame.”"
   },
   {
    "t": "label",
@@ -211,7 +212,7 @@
   },
   {
    "t": "p",
-   "x": "Tyler Nord (President, Westbrook Development Corporation) reintroduced a project first approved for a contract zone amendment and sketch plan in 2024 that stalled when state funding cycles changed; the design is unchanged. Proposal: two 36-unit, three-story affordable apartment buildings (LIHTC-funded, 50–60% area median income, no age restriction) on two vacant lots at the existing 138-unit Millbrook Estates complex, roughly two-thirds of which is already protected open space via a Presumpscot Regional Land Trust partnership. Nord cited statewide data (roughly 25,000 affordable units needed by 2030, only 2,000–3,000 built so far) and estimated about 40% of current Westbrook residents income-qualify for this project. Architects described wraparound porches, gabled (not flat) roofs stepping down toward the rear, and retained street trees intended to soften the buildings' scale."
+   "x": "Tyler Norod (President, Westbrook Development Corporation) reintroduced a project first approved for a contract zone amendment and sketch plan in 2024 that stalled when state funding cycles changed; the design is unchanged. Proposal: two 36-unit, three-story affordable apartment buildings (funded through the Low-Income Housing Tax Credit (LIHTC), 50–60% area median income) on two vacant lots at the existing 138-unit Millbrook Estates complex, roughly two-thirds of which is already protected open space via a Presumpscot Regional Land Trust partnership. Nord cited statewide data (roughly 25,000 affordable units needed by 2030, only 2,000–3,000 built so far) and estimated about 40% of current Westbrook residents income-qualify for this project. Architects described wraparound porches, gabled (not flat) roofs stepping down toward the rear, and retained street trees intended to soften the buildings' scale."
   },
   {
    "t": "h",
@@ -230,12 +231,12 @@
   },
   {
    "t": "h",
-   "x": "Board reaction — notably split",
+   "x": "Board reaction — mostly supportive, Chair opposed",
    "ts": null
   },
   {
    "t": "p",
-   "x": "Member Kevin Price was strongly supportive, calling the project “a testament to what you can do” and praising its integration with the land trust green space. Vice Chair John Turcotte asked staff to verify whether the original 2024 approval included conditions restricting use of these lots, and requested additional parking buffering. Member Jason Frazier took a middle position, supporting the need in principle but asking how the height gap to smaller homes across the street could be visually bridged."
+   "x": "Members Karen Axelson and Robin Tannenbaum recused from this item. Alternate Lucas Schrage was strongly supportive, calling the project “a testament to what you can do” and praising its integration with the land trust green space. Vice Chair John Turcotte asked staff to verify whether the original Millbrook Estates approval, which predates the current board, included conditions restricting use of these lots, and requested additional parking buffering. Another member took a middle position, supporting the need in principle but asking how the height gap to smaller homes across the street could be visually bridged."
   },
   {
    "t": "q",
@@ -268,11 +269,11 @@
    "t": "q",
    "x": "“The traffic... Friday nights in the summer, we can't even get out of our road. I've sat there fifteen minutes or so just trying to get out.”",
    "cite": "Ann Sturgeon, resident (public comment)",
-   "ts": "2:50:29"
+   "ts": "2:52:36"
   },
   {
    "t": "p",
-   "x": "Staff (Rebecca Spitella) gave an extended process explainer: this is a conceptual workshop stage only; the unit-count range will be fixed once a wetland delineation determines buildable area; “driveway” terminology refers to legal frontage status, not literal width (it will be rebuilt to private-way standards with verified emergency-vehicle turning templates); and a Westbrook police officer is currently issuing the second-highest number of speeding tickets statewide in an effort to address Route 302 speeding broadly. Chair McWilliams asked about buffering options (no fence is permitted under the adjacent HOA's covenant) and the driveway's raised grade as a possible icy-conditions hazard, and floated a future board site walk once the design is more finalized, which the applicant and staff agreed to coordinate."
+   "x": "Staff (Rebecca Spitella) gave an extended process explainer: this is a conceptual workshop stage only; the unit-count range will be fixed once a wetland delineation determines buildable area; “driveway” terminology refers to legal frontage status, not literal width (it will be rebuilt to private-way standards with verified emergency-vehicle turning templates); and a Westbrook police officer is currently issuing the second-highest number of speeding tickets statewide in an effort to address Route 302 speeding broadly. Chair McWilliams asked about buffering options (no fence is permitted under the adjacent homeowners association's (HOA's) covenant) and the driveway's raised grade as a possible icy-conditions hazard, and floated a future board site walk, which the applicant said he would coordinate with staff once the plan is ready."
   },
   {
    "t": "label",

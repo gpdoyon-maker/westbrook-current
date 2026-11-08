@@ -9,7 +9,8 @@
  },
  "packetUrl": "https://drive.google.com/file/d/1yHnAh8Kpb2Qo2JHpkNmrwVcpHl6wyKeh/view",
  "packetNote": "(Google Drive, via westbrookschools.org)",
- "note": "This summary highlights the meeting's key discussions and decisions, with direct quotes and timestamps for verification — it is not a substitute for watching the full meeting. This was the fifth and intended-final Finance Committee budget session (ran roughly 4.5 hours); no votes were taken — the budget moves to the full School Committee as a recommendation. For complete context, nuance, and anything not covered, watch the full video at the link above. (Produced by: WestbrookCurrents.com)",
+ "note": "This summary highlights the meeting's key discussions and decisions, with direct quotes and timestamps for verification — it is not a substitute for watching the full meeting. This was the fifth and intended-final Finance Committee budget session (ran roughly 4.5 hours); no formal motions were made, but the chair settled items by informal show-of-hands tallies, including a 4–2 tally to remove the two secondary instructional coaches. The budget moves to the full School Committee as a recommendation. For complete context, nuance, and anything not covered, watch the full video at the link above. (Produced by: WestbrookCurrents.com)",
+ "attendance": "Present: Finance Committee Chair Noreen Poitras, School Committee Chair Andrea Mancuso, School Committee Vice Chair Katy Rice, Erin Cavallaro, Dr. Flynn Ross. Not stated on the recording: Allison Brunette, Brooke Reed.",
  "blocks": [
   {
    "t": "h",
@@ -61,7 +62,7 @@
   },
   {
    "t": "p",
-   "x": "Technology ($111,000 proposed cut): eliminates the new cybersecurity-focused Network Solutions Specialist position and defers the planned 11th-grade laptop-to-iPad transition, keeping older students on existing (six-plus-year-old) laptops. Dr. O'Donnell cautioned against reducing elementary device counts instead, citing curriculum and logistics disruption."
+   "x": "Technology ($111,000 proposed cut): defers the planned 11th-grade laptop-to-iPad transition, keeping older students on existing (six-plus-year-old) laptops, and trims middle and high school repair and maintenance lines. Dr. O'Donnell cautioned against reducing elementary device counts instead, citing curriculum and logistics disruption."
   },
   {
    "t": "p",
@@ -73,7 +74,7 @@
   },
   {
    "t": "d",
-   "x": "No vote — budget review."
+   "x": "No formal vote — budget review (informal show-of-hands tallies; see Final Decisions below)."
   },
   {
    "t": "label",
@@ -86,7 +87,7 @@
   {
    "t": "h",
    "x": "Athletics, Facilities & Staff Reductions (Tiers 1 & 2)",
-   "ts": "01:39:49"
+   "ts": "52:37"
   },
   {
    "t": "label",
@@ -98,11 +99,11 @@
   },
   {
    "t": "p",
-   "x": "Staff Tier 1 ($574,453.50 as proposed) eliminates several stipends, the Equity Resource Coordinator, three instructional coaches, and a vacant maintenance position, and reduces two staff schedules. City Administrator Angela Holmes gave a detailed School Resource Officer (SRO) cost breakdown here: the district pays 50% of SRO salary/benefits ($136,295.29) even though police data shows SROs spend 75–85% of their time on SRO-specific duties, not general patrol."
+   "x": "Staff Tier 1 ($574,453.50 as proposed) eliminates several stipends, the Equity Resource Coordinator, the secondary literacy and math instructional coaches, a vacant maintenance position, and a requested new network specialist position, and reduces two staff schedules. Before the staff tiers, City Administrator Angela Holmes gave a detailed School Resource Officer (SRO) cost breakdown: the district pays 50% of SRO salary/benefits ($136,295.29) even though police data shows SROs spend 75–85% of their time on SRO-specific duties, not general patrol."
   },
   {
    "t": "p",
-   "x": "Staff Tier 2 eliminates a long-requested high school English teacher, a general education Ed Tech, the Multilingual Instructional Coach, and the two remaining elementary literacy/math coaches — described by staff as “getting close to the bone.”"
+   "x": "Staff Tier 2 eliminates a long-requested high school English teacher, a general education Ed Tech, the Multilingual Instructional Coach, and the two remaining elementary literacy/math coaches — which staff described as getting close to “cutting into the bone.”"
   },
   {
    "t": "label",
@@ -110,7 +111,7 @@
   },
   {
    "t": "d",
-   "x": "No vote — budget review."
+   "x": "No formal vote — an informal show-of-hands tally of 4–2 removed the two Tier 1 secondary instructional coaches."
   },
   {
    "t": "label",
@@ -135,7 +136,7 @@
   },
   {
    "t": "p",
-   "x": "As the reduction list review wound down, members voiced sharp frustration that peer communities devote a materially higher share of their municipal budgets to schools than Westbrook does, while the district pays the City for SROs and athletic-field maintenance without reciprocal City investment. Chair Mancuso offered a process framing: send the budget forward without further cuts and let the City Council and voters decide, rather than continue cutting tonight. No city commitment was reached on the record."
+   "x": "As the reduction list review wound down, members voiced sharp frustration that peer communities devote a materially higher share of their municipal budgets to schools than Westbrook does, while the district pays the City for SROs and athletic-field maintenance; Katy Rice acknowledged the City's recent help with street sweeping and playgrounds but said the City must contribute more. Chair Mancuso offered a process framing: send the budget forward without further cuts and let the City Council and voters decide, rather than continue cutting tonight. No city commitment was reached on the record."
   },
   {
    "t": "label",
@@ -160,14 +161,14 @@
   },
   {
    "t": "q",
-   "x": "“I'm really struggling with the fact that we're sitting here talking about taking out staff that helps our teachers teach better...the districts around us, the percentage of the municipal budget that goes to the schools is at least 10% higher than what we're doing here...it's not okay anymore.”",
+   "x": "“I'm really struggling with the fact that we're sitting here talking about taking out staff that helps our teachers teach better...the districts around us, the cities around us, the percentage of the municipal budget that goes to the schools is at least 10% higher than what we're doing here...it's not okay anymore.”",
    "cite": "Katy Rice, Board Member"
   },
   {
    "t": "q",
    "x": "“We can't keep saying that kids come first while funding them last...maybe [the City] can start with paying for SROs. And maybe they can start with not charging us $121,000 to mow and stripe our fields.”",
    "cite": "Erin Cavallaro, Board Member",
-   "ts": "04:04:31"
+   "ts": "04:05:25"
   },
   {
    "t": "q",
@@ -183,7 +184,7 @@
   {
    "t": "h",
    "x": "What Stays, What's Cut, and What's Still Open",
-   "ts": "04:17:42"
+   "ts": "04:26:58"
   },
   {
    "t": "label",
@@ -191,7 +192,7 @@
   },
   {
    "t": "p",
-   "x": "Chair Poitras summarized the committee's consensus: Tier 1's leadership stipends and the English teacher position are kept (the English teacher decision held open pending further class-size data); all of Tier 2 is rejected (the elementary coaches, Multilingual Instructional Coach, and general education Ed Tech all stay); professional development and supplies stay fully funded. The technology, athletics, and facilities reductions proceed, along with the remaining Tier 1 staff items. The budget's contingency line increases to 0.5%, funded by removing a separate $25,000 emergency-repairs line. A pending health-insurance rate update (maximum 11%, possibly lower) could allow further last-minute adjustment before April 15. No final total dollar figure or percentage increase was stated on the record; a “version three” budget was still being assembled as the meeting closed."
+   "x": "Chair Poitras summarized the committee's consensus: Tier 1's stipends are kept (the high school's student-support team stipends and coordinator, and the middle school's leadership stipends), while Tier 1's two secondary instructional coaches are removed on an informal 4–2 tally. No Tier 2 cuts were made: the general education Ed Tech is kept, the English teacher is on the revisit list pending further class-size data, and the Multilingual Instructional Coach and elementary coaches stay in “for right now,” since their tally was paused and not finished. Professional development and supplies stay fully funded. The technology, athletics, and facilities reductions proceed, along with the remaining Tier 1 staff items. The budget's contingency line increases to 0.5% (about $77,000 more, per staff's estimate), and a separate $25,000 emergency-repairs line is removed and folded into it. A pending health-insurance rate update (maximum 11%, possibly lower) could allow further last-minute adjustment before April 15. No final total dollar figure or percentage increase was stated on the record; a “version three” budget was still being assembled as the meeting closed."
   },
   {
    "t": "label",
@@ -199,7 +200,7 @@
   },
   {
    "t": "d",
-   "x": "No vote — the budget moves to the School Committee's April 8 public hearing and first reading as a recommendation, not an approved document."
+   "x": "No formal vote — the budget moves to the School Committee's April 8 public hearing and first reading as a recommendation, not an approved document."
   },
   {
    "t": "label",

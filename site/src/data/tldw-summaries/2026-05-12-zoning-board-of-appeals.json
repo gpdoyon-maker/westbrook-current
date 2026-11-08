@@ -10,6 +10,7 @@
  "packetUrl": "",
  "packetNote": "No agenda was published for this meeting (checked the City's Agenda Center, Nov. 7, 2026).",
  "note": "This summary highlights the meeting's key discussions and decisions, with direct quotes and timestamps for verification — it is not a substitute for watching the full meeting. Summarization necessarily condenses and selects; for complete context, nuance, and anything not covered here, watch the full video at the link above. (Produced by: WestbrookCurrents.com)",
+ "attendance": "Present: Interim Vice Chair Cliff McCarthy (alternate), Nancy Heath, Sherri Quint, Kevin Moss (alternate). Absent: Chair Aaron Burns, Vice Chair Keith Richard, Peter Mancuso.",
  "blocks": [
   {
    "t": "h",
@@ -53,11 +54,11 @@
   {
    "t": "h",
    "x": "96 Hammond Road — Practical Difficulty Variance",
-   "ts": "03:03"
+   "ts": "03:24"
   },
   {
    "t": "p",
-   "x": "Tax Map 44, Lot 87, Residential Growth Area 2. Request for a 4.99-foot rear setback variance to allow construction of a 26-by-26-foot attached garage with living space above. Applicant's name rendered inconsistently in the recording as “Erica/Daniel Higginbottom” (agenda item) and “Danielle Hagenbotham” (self-introduction) — see Notes."
+   "x": "Tax Map 44, Lot 87, Residential Growth Area 2. Request for a 4.99-foot rear setback variance to allow construction of a 26-by-26-foot attached garage with living space above. Applicant's name rendered inconsistently in the recording as “Erica/Daniel Higginbottom” (as the item was introduced) and “Danielle Hagenbotham” (self-introduction); the correct spelling could not be confirmed because no agenda was published."
   },
   {
    "t": "h",
@@ -84,11 +85,11 @@
   },
   {
    "t": "p",
-   "x": "City Attorney Lewis walked the board through Westbrook's “practical difficulty” variance standard: strict enforcement must cause a practical difficulty (precluding a permitted use and significant economic injury), plus six further criteria — unique property circumstances (not general neighborhood conditions); no undesirable change to neighborhood character or harm to abutting property values; the difficulty isn't the result of the applicant's or a prior owner's own actions; no feasible alternative exists; no adverse effect on the natural environment; and the property isn't within a shoreland area. The board briefly realized partway through that it had skipped the “prior owner's actions” criterion and circled back to it, debating whether the 2005 relocation (apparently aligned to the street rather than the new lot lines) counted as a disqualifying prior action; the board concluded it read as an oversight rather than an intentional choice, and that the criterion should be read to mean an intentional act. CEO Stetson confirmed no neighbor complaints had been received and the property isn't in a resource-protection or shoreland zone."
+   "x": "City Attorney Lewis walked the board through Westbrook's “practical difficulty” variance standard: strict enforcement must cause a practical difficulty (precluding a permitted use and significant economic injury), plus six further criteria — unique property circumstances (not general neighborhood conditions); no undesirable change to neighborhood character or harm to abutting property values; the difficulty isn't the result of the applicant's or a prior owner's own actions; no feasible alternative exists; no adverse effect on the natural environment; and the property isn't within a shoreland area. The board briefly realized partway through that it had skipped the “prior owner's actions” criterion and circled back to it, debating whether the 2005 relocation (apparently aligned to the street rather than the new lot lines) counted as a disqualifying prior action; City Attorney Lewis advised that “prior owner” is generally read to mean any prior owner and that siting the house to suit the slope could still count as an action taken, but said the board could interpret the criterion itself. The board concluded the placement read as an oversight rather than an intentional choice, and that the criterion should be read to mean an intentional act. CEO Stetson confirmed no neighbor complaints had been received and the property isn't in a resource-protection or shoreland zone."
   },
   {
    "t": "p",
-   "x": "All seven criteria were found met, each by a 4–0 show of hands (criteria one through six by formal poll; the seventh, on shoreland location, confirmed by informal consensus without a separate formal vote). The board then approved the variance by unanimous voice vote, with no dissent recorded."
+   "x": "Six criteria were found met, each by a 4–0 show of hands; the seventh, on shoreland location, was confirmed by informal agreement without a separate vote. The board then approved the variance by a show of hands; no count was announced and no opposing votes were called for."
   },
   {
    "t": "label",
@@ -96,11 +97,11 @@
   },
   {
    "t": "d",
-   "x": "All seven variance criteria found met, 4–0 each."
+   "x": "Six variance criteria found met, 4–0 each; the seventh (property not in a shoreland area) confirmed by informal agreement without a separate vote."
   },
   {
    "t": "d",
-   "x": "Variance approved by unanimous voice vote."
+   "x": "Variance approved by a show of hands."
   },
   {
    "t": "label",

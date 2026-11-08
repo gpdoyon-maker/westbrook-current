@@ -3,13 +3,14 @@
  "fields": {
   "Date": "Wednesday, June 10, 2026",
   "Time": "7:00 PM",
-  "Location": "Westbrook High School (Room 114), 117 Stroudwater St. (Hybrid via Zoom)",
+  "Location": "Westbrook High School (Room 114), 125 Stroudwater St. (Hybrid via Zoom)",
   "Video": "https://vimeo.com/1200268817",
   "Packet": "No agenda was published for this meeting (checked westbrookschools.org/page/westbrook-school-committee, 2026-10-24)."
  },
  "packetUrl": "",
  "packetNote": "No agenda was published for this meeting (checked westbrookschools.org/page/westbrook-school-committee, 2026-10-24).",
  "note": "This summary highlights the meeting's key discussions and decisions, with direct quotes and timestamps for verification — it is not a substitute for watching the full meeting. Six of seven regular members were present (Brooke Reed absent); one student representative attended (the other graduated with the Class of 2026 days earlier). A largely ceremonial meeting honoring Teachers of the Year and retirees; every vote passed unanimously. Summarization necessarily condenses and selects; for complete context, nuance, and anything not covered, watch the full video at the link above. (Produced by: WestbrookCurrents.com)",
+ "attendance": "Present: Chair Andrea Mancuso, Vice Chair Katy Rice, Allison Brunette, Erin Cavallaro, Noreen Poitras, Dr. Flynn Ross. Absent: Brooke Reed.",
  "blocks": [
   {
    "t": "h",
@@ -27,7 +28,7 @@
   },
   {
    "t": "p",
-   "x": "One honoree per building: Michael Crawford (PE, Westbrook Middle School), Haley Tardiff (special education, Sacarappa School), Selena Mardin (kindergarten, Congin Elementary School), Kirk Nigren (building trades, Westbrook Regional Vocational Center), Brian Adams (math, Westbrook High School), and Hannah Gundersdorf (kindergarten, Canal School)."
+   "x": "One honoree per building: Michael Crawford (physical education, Westbrook Middle School), Haley Tardiff (special education, Sacarappa School), Selena Mardin (kindergarten, Congin Elementary School), Kirk Nigren (building trades, Westbrook Regional Vocational Center (WRVC)), Brian Adams (math, Westbrook High School), and Hannah Gundersdorf (kindergarten, Canal School)."
   },
   {
    "t": "label",
@@ -52,7 +53,7 @@
   },
   {
    "t": "p",
-   "x": "Eric Jensen (7 years, Transportation), Jody Peterson and Melissa Foy (Transportation), Sandy Beasley (37 years, Canal), a Westbrook Middle School staff member with 39 years of service (name not clearly captured in the transcript), Maura McDermott (5 years, special education, Westbrook Middle School), Juni Dugas (25 years, administrative assistant, Westbrook Middle School), Paula Curcio (35 years, social studies, Westbrook Middle School), Marina Davis (7 years, math, Westbrook High School), Sarah Barker (cook, Westbrook High School), Nicole Sturgis (10 years, aspirations counselor, Westbrook High School), and Wendy Harvey (12 years, co-principal, Westbrook High School)."
+   "x": "Eric Jensen (7 years, Transportation; Jody Peterson and Melissa Foy were also named from Transportation), Sandy Beasley (37 years, Canal), a Westbrook Middle School staff member with 39 years of service (name not clearly captured in the transcript), Maura McDermott (5 years, special education, Westbrook Middle School), Juni Dugas (25 years, administrative assistant, Westbrook Middle School), Paula Curcio (35 years, social studies, Westbrook Middle School), Marina Davis (7 years, math, Westbrook High School), Sarah Barker (cook, Westbrook High School), Nicole Sturgis (10 years, aspirations counselor, Westbrook High School), and Wendy Harvey (12 years, co-principal, Westbrook High School)."
   },
   {
    "t": "label",
@@ -82,7 +83,7 @@
   },
   {
    "t": "p",
-   "x": "The FY27 school budget referendum passed with roughly 70% voting yes, with unusually high turnout for a June vote. Superintendent Lancia thanked City staff, the elections team, and City Clerk Ledoux for processing results overnight."
+   "x": "The fiscal year 2027 (FY27) school budget referendum passed with roughly 70% voting yes. Superintendent Lancia thanked voters, administrators, and committee members."
   },
   {
    "t": "p",
@@ -94,7 +95,7 @@
   },
   {
    "t": "p",
-   "x": "Special services leadership restructuring: Director of Special Services Kelly Fogg retired last year; three searches for a replacement were unsuccessful, and Fogg has worked this year as a 3-day-a-week contracted consultant. Dr. Lancia proposed keeping two full-time assistant directors (one fully general-fund funded; one funded 20% general fund / 80% Maine Department of Education, reflecting that position's oversight of pre-K special education and “child find” requirements) and adding a third assistant director for one year only, funded from the savings of not filling the director position plus increased state funding share — no new general-fund money — while Fogg continues as a paid consultant. In discussion, Cavallaro confirmed the new position is a one-year-only bargaining-unit contract to be reassessed before the FY28 budget; Poitras asked for full salary/structure details; Mancuso confirmed the savings should fully cover the position (aside from possible benefits costs) and that no board action was being requested that evening. Lancia explained the special education director role is difficult to fill statewide due to its specific certification requirements and small candidate pools, and that partnering with a neighboring district's director hasn't been explored, given Westbrook's position as the county's largest special education program, but remains open to it."
+   "x": "Special services leadership restructuring: Director of Special Services Kelly Fogg retired last year; repeated searches for a replacement, including one this year, were unsuccessful, and Fogg has worked this year as a 3-day-a-week contracted consultant. Dr. Lancia proposed keeping two full-time assistant directors (one fully general-fund funded; one funded 20% general fund / 80% Maine Department of Education, reflecting that position's oversight of pre-K special education and “child find” requirements) and adding a third assistant director for one year only, funded from the savings of not filling the director position plus increased state funding share — no new general-fund money — while Fogg continues as a paid consultant. In discussion, asked by a committee member, Lancia said the new position would be a one-year-only bargaining-unit contract to be reassessed before the FY28 budget; Poitras asked for full salary/structure details; asked by Mancuso, Lancia said the savings should entirely cover the position (aside from possible benefits costs) and that no board action was needed since no new money was involved. Lancia explained the special education director role is difficult to fill statewide due to its specific certification requirements and small candidate pools, and that partnering with a neighboring district's director hasn't been explored, given Westbrook's position as the county's largest special education program, but remains open to it."
   },
   {
    "t": "label",
@@ -119,7 +120,7 @@
   },
   {
    "t": "p",
-   "x": "Dr. O'Donnell, who also announced she is leaving after six years for Scarborough Public Schools, presented NWEA growth and achievement data comparing 2024–25 to 2025–26 across grades K–10, showing generally stable-to-improving trends districtwide — Westbrook High School and Westbrook Middle School both holding at or above roughly 60% of students meeting growth targets, with similar positive patterns at Congin, Canal, and Sacarappa elementary schools. In response to questions from Cavallaro, she distinguished “achievement” (performance against grade-level expectation) from “growth target” (predicted year-over-year progress), and said district benchmarking data could be pulled with more lead time."
+   "x": "Dr. O'Donnell, who also announced she is leaving after six years for Scarborough Public Schools, presented Northwest Evaluation Association (NWEA) growth and achievement data comparing 2024–25 to 2025–26 across grades K–10, showing generally stable-to-improving trends districtwide — Westbrook High School at 60% or better of students meeting growth targets and Westbrook Middle School close to 60%; the elementary schools were generally positive, with some dips (notably in Sacarappa achievement). In response to questions from Cavallaro, she distinguished “achievement” (performance against grade-level expectation) from “growth target” (predicted year-over-year progress), and said district benchmarking data could be pulled with more lead time."
   },
   {
    "t": "label",
@@ -144,7 +145,7 @@
   },
   {
    "t": "p",
-   "x": "Thanked outgoing senior student representative Tina for her service, having just watched her graduate, and welcomed Jamila Mohamed Ahmed continuing into her third year as student representative."
+   "x": "Thanked outgoing senior student representative Tina for her service, having just watched her graduate, and welcomed Jamila Mohamed Ahmed continuing into her third year as student representative. Noted unusually high turnout for a June vote, and thanked staff, the City Hall elections team, and City Clerk Ledoux, whose official results came a little after 2 a.m."
   },
   {
    "t": "p",
@@ -152,7 +153,7 @@
   },
   {
    "t": "p",
-   "x": "Reported ongoing conversations with City staff about pesticide/fertilizer use on shared school/municipal athletic fields, including an informal meeting with City Administrator Angela Holmes and Mayor David Morse. Field-maintenance contracts have not been rebid in some time; the plan is to gather information over the summer so requests for proposals accounting for the school department's field needs can go out in the fall."
+   "x": "Reported ongoing conversations with City staff about pesticide/fertilizer use on shared school/municipal athletic fields, including an informal meeting with City Administrator Angela Holmes and Mayor David Morse. Field-maintenance contracts have not been rebid in some time; Mancuso's sense was that the City hopes to gather information over the summer so requests for proposals accounting for the school department's field needs can go out in the fall; she will share her notes with Dr. Lancia and the committee."
   },
   {
    "t": "label",
@@ -177,7 +178,7 @@
   },
   {
    "t": "p",
-   "x": "End-of-year wind-down districtwide: step-up and field days at the elementary and middle schools, a district-wide 4th grade Beach Day sponsored by the Westbrook Education Foundation, Sacarappa's end-of-year picnic and field day, Westbrook Middle School's 8th grade promotion (June 16, dance after), the last day of school (June 17), a Congin PTO family fun night, and Westbrook High School finals."
+   "x": "End-of-year wind-down districtwide: step-up and field days at the elementary and middle schools, a district-wide 4th grade Beach Day sponsored by the Westbrook Education Foundation, Sacarappa's end-of-year picnic and field day, Westbrook Middle School's 8th grade promotion (June 16, dance after), the last day of school (June 17), a Congin Parent Teacher Organization (PTO) family fun night, and Westbrook High School finals."
   },
   {
    "t": "label",
@@ -232,11 +233,11 @@
   },
   {
    "t": "p",
-   "x": "Policy JICJ (student device use/cell-phone ban), Policy EEA (student transportation), Policy IKB (homework), the MLTI purchase for 2026–2027, and the Yonder pouch fund reallocation."
+   "x": "Policy JICJ (student device use/cell-phone ban), Policy EEA (student transportation), Policy IKB (homework), the Maine Learning Technology Initiative (MLTI) purchase for 2026–2027, and the Yonder pouch fund reallocation."
   },
   {
    "t": "p",
-   "x": "Notably, JICJ and the Yonder pouch funding had each split 5–1 at first approval on May 13, with Noreen Poitras the lone dissent both times on student-safety grounds — at final approval, she herself moved this aggregate motion, which included both items."
+   "x": "Notably, JICJ and the Yonder pouch funding had each split 5–1 at first approval on May 13, with Noreen Poitras casting the JICJ dissent on student-safety grounds — at final approval, she herself moved this aggregate motion, which included both items."
   },
   {
    "t": "label",

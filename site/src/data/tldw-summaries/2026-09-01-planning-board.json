@@ -10,6 +10,7 @@
  "packetUrl": "https://www.westbrookmaine.gov/AgendaCenter/ViewFile/Agenda/_09012026-1026",
  "packetNote": "",
  "note": "This summary highlights the meeting's key discussions and decisions, with direct quotes and timestamps for verification — it is not a substitute for watching the full meeting. Five of nine seated board members were present (McWilliams, Frazier, Price, Farnham, Schrage); Turcotte, Axelson, Litrocapes, and Tannenbaum were absent. For complete context, nuance, and anything not covered, watch the full video at the link above. (Produced by: WestbrookCurrents.com)",
+ "attendance": "Present: Chair Larry McWilliams, Jason Frazier, Kevin Price, Oriana Farnham (alternate), Lucas Schrage (alternate). Absent: Vice Chair John Turcotte, Karen Axelson, Nancy Litrocapes, Robin Tannenbaum.",
  "blocks": [
   {
    "t": "h",
@@ -31,7 +32,7 @@
   },
   {
    "t": "p",
-   "x": "Member Jason Frazier questioned why a straightforward single-family subdivision like this one is subject to an open-space fee-in-lieu at all, given the resulting lots have ample private yard space; staff explained the fee formula (a percentage of average lot size times an assessor-set cost per developable acre) and pointed to the ordinance-amendment workshop item later on the agenda for the fuller policy rationale and planned revisions. No public comment."
+   "x": "Member Jason Frazier questioned why a small land subdivision like this one is subject to an open-space fee-in-lieu at all, given the resulting lots have ample private yard space; staff explained the fee formula (a percentage of average lot size times an assessor-set cost per developable acre) and pointed to the ordinance-amendment workshop item later on the agenda for the fuller policy rationale and planned revisions. No public comment."
   },
   {
    "t": "label",
@@ -84,7 +85,7 @@
   },
   {
    "t": "p",
-   "x": "Several members pressed for clarity: Kevin Price asked how the amendment applies to projects already in process, prompting a board discussion (led by Chair McWilliams) about whether site plan extensions should have a hard cap rather than the current informal practice. Jason Frazier argued the lighting standard was too rigid and should state safety/anti-glare goals rather than dictate fixture spacing, and asked for clearer language on what counts as a “corner” lot. Oriana Farnham agreed clearer lighting language would help the board judge designs consistently, and pushed back on allowing non-native ornamental landscaping by waiver; Lucas Schrage agreed, citing the city's stewardship of the Presumpscot River. Staff welcomed the lighting feedback and will revise that language, and will cross-check a new state dark-sky law (effective October 1, for publicly funded projects) against the city's own ordinance. No public comment."
+   "x": "Several members pressed for clarity: Kevin Price asked how the amendment applies to projects already in process, prompting a board discussion (led by Chair McWilliams) about whether site plan extensions should have a hard cap rather than the current informal practice. Jason Frazier argued the lighting standard was too rigid and should state safety/anti-glare goals rather than dictate fixture spacing, and a member asked for clearer language on what counts as a “corner” lot. Oriana Farnham agreed clearer lighting language would help the board judge designs consistently, and backed keeping native plantings mandatory (“shall”), leaving the board's waiver provision as the route for any exception; another member agreed, citing the city's stewardship of the Presumpscot River. Staff welcomed the lighting feedback and will revise that language, and will cross-check a new state dark-sky law (effective October 1, for publicly funded projects) against the city's own ordinance. No public comment."
   },
   {
    "t": "label",
@@ -109,7 +110,7 @@
   },
   {
    "t": "q",
-   "x": "“I think we can and should regulate that as a city ... I support ‘shall use native plants’ and let them [use] the waiver provision [only] if they feel really passionate ... it doesn't just affect the people who live on that property.”",
+   "x": "“I think we can and should regulate that as a city ... it doesn't just affect the people who live on that property ... I support ‘shall use native plants’ and let them, if they feel really passionate, use the waiver provision.”",
    "cite": "Oriana Farnham, Board Member (on native-species landscaping)",
    "ts": "44:28"
   },
@@ -124,7 +125,7 @@
   },
   {
    "t": "p",
-   "x": "City Planner Rebecca Spitella gave an extensive briefing prompted by a City Council referral, following the state legislature's near-passage of LD 307 (which would have created a Maine Data Center Coordination Council and an 18-month moratorium, vetoed by Governor Mills) and the Westbrook City Council's own precautionary June 1, 2026 180-day local moratorium, passed even though no data center project was then pending. Today, “data center” is a defined use with no standards beyond ordinary site plan review, permitted only within the Rock Row contract zone."
+   "x": "City Planner Rebecca Spitella gave an extensive briefing prompted by a City Council referral, following the state legislature's passage of LD 307 (which would have created a Maine Data Center Coordination Council and an 18-month moratorium), which Governor Mills vetoed, and the Westbrook City Council's own precautionary June 1, 2026 180-day local moratorium, passed even though no data center project was then pending. Today, “data center” is a defined use with no standards beyond ordinary site plan review, permitted only within the Rock Row contract zone."
   },
   {
    "t": "p",
@@ -140,7 +141,7 @@
   },
   {
    "t": "d",
-   "x": "No formal vote — informational/advisory workshop discussion to shape a forthcoming ordinance amendment; the board was broadly supportive of the staff recommendation described above."
+   "x": "No formal vote — informational/advisory workshop discussion to shape a forthcoming ordinance amendment. Views were mixed: Oriana Farnham fully supported the staff recommendation, while Chair Larry McWilliams and another member floated keeping the use with limits (such as a wattage cap, closed-loop cooling or self-generated power). Staff will reach out to Rock Row's owners about the board's direction."
   },
   {
    "t": "label",
@@ -163,9 +164,15 @@
   },
   {
    "t": "q",
-   "x": "“I don't think Westbrook should be the test case for that ... we will be at public hearings until midnight every single time we have a planning board meeting if somebody brings a data center to town ... community benefit agreements are consolation prizes. They are not benefits to the community.”",
+   "x": "“I don't think Westbrook should be the test case for that.”",
    "cite": "Oriana Farnham, Board Member",
    "ts": "1:26:40"
+  },
+  {
+   "t": "q",
+   "x": "“We will be at public hearings until midnight every single time we have a planning board meeting if somebody brings a data center to town ... community benefits agreements are consolation prizes. They are not benefits to the community.”",
+   "cite": "Oriana Farnham, Board Member",
+   "ts": "1:28:46"
   }
  ],
  "howMade": "This summary was produced from the meeting video (linked above, hosted on the City's Vimeo showcase). The audio was transcribed with AI-assisted speech-to-text and speaker identification. This process cross-checked names against the official Planning Board roster, attributed speakers from context (introductions, roll-call order, direct address by the Chair) rather than the raw diarization labels alone, and drafted this summary and the quoted excerpts. Quotes are lightly cleaned of filler words/false starts but not reworded. Reviewed by Gerald Doyon.",

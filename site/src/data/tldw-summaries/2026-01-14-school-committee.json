@@ -3,13 +3,14 @@
  "fields": {
   "Date": "Wednesday, January 14, 2026",
   "Time": "7:00 PM",
-  "Location": "Westbrook High School (Room 114), 117 Stroudwater St. (Hybrid via Zoom)",
+  "Location": "Westbrook High School (Room 114), 125 Stroudwater St. (Hybrid via Zoom)",
   "Video": "https://vimeo.com/1154494646",
   "Packet": "https://drive.google.com/file/d/1oTQFeFYsw7t3c49ZfJ0LghKA_OCqn099/view (Google Drive, via westbrookschools.org)"
  },
  "packetUrl": "https://drive.google.com/file/d/1oTQFeFYsw7t3c49ZfJ0LghKA_OCqn099/view",
  "packetNote": "(Google Drive, via westbrookschools.org)",
- "note": "This summary highlights the meeting's key discussions and decisions, with direct quotes and timestamps for verification — it is not a substitute for watching the full meeting. The full committee (all seven members) plus both student representatives were present. For complete context, nuance, and anything not covered, watch the full video at the link above. (Produced by: WestbrookCurrents.com)",
+ "note": "This summary highlights the meeting's key discussions and decisions, with timestamps for verification — it is not a substitute for watching the full meeting. The full committee (all seven members) plus both student representatives were present. For complete context, nuance, and anything not covered, watch the full video at the link above. (Produced by: WestbrookCurrents.com)",
+ "attendance": "Present: Chair Andrea Mancuso, Vice Chair Katy Rice, Allison Brunette, Erin Cavallaro, Noreen Poitras, Brooke Reed, Dr. Flynn Ross.",
  "blocks": [
   {
    "t": "h",
@@ -31,7 +32,7 @@
   },
   {
    "t": "p",
-   "x": "WRVC Director Gloria Noyes and Assistant Director Kim Bennett presented a new, unscripted student-testimonial recruiting video for the Westbrook Regional Vocational Center (WRVC), spanning early childhood education, electrical, automotive, EMS/firefighting, culinary, and business programs. Recruiting season is underway, with online applications opening February 1. Superintendent Dr. Peter Lancia separately corrected a date in the packet's FY27 budget calendar: the City Council's second budget reading will be May 4, 2026 at 6:00 PM, not April 4 as earlier circulated."
+   "x": "WRVC Director Gloria Noyes presented a new, unscripted student-testimonial recruiting video for the Westbrook Regional Vocational Center (WRVC), spanning early childhood education, electrical, automotive, EMS/firefighting, culinary, and business programs. Recruiting season is underway, with online applications opening February 1. Superintendent Dr. Peter Lancia separately corrected a date in the packet's FY27 budget calendar: the City Council's second budget reading will be May 4, 2026 at 6:00 PM, not April 4 as earlier circulated."
   },
   {
    "t": "label",
@@ -102,7 +103,7 @@
   },
   {
    "t": "p",
-   "x": "The cell-phone ad hoc committee (Cavallaro) surveyed high school students, faculty, and staff in December on cell phone use, gathering baseline data ahead of vendor outreach and planned community forums this winter and spring. Educational Programs (Rice) previewed three items: the district assuming new pre-K programming at Canal School as the state's CDS program ends; an early-stage “intervention programming” framework aimed at more tier-one classroom support; and curriculum changes including a phased return from integrated “SM1/SM2” math to a traditional Algebra 1/Algebra 2/Geometry sequence, a new CTE Exploratory Program for sophomores, a new Cooperative Education credit program, and continued growth in WRVC's cybersecurity program."
+   "x": "The cell-phone ad hoc committee (Cavallaro) surveyed high school students, faculty, and staff in December on cell phone use, gathering baseline data ahead of vendor outreach and planned community forums this winter and spring. Educational Programs (Rice) previewed three items: the district assuming new pre-K programming, likely at Canal School, as the state's CDS program ends; an early-stage “intervention programming” framework aimed at more tier-one classroom support; and curriculum changes including a phased return from integrated “SM1/SM2” math to a traditional Algebra 1/Algebra 2/Geometry sequence, a new CTE Exploratory Program for sophomores, a new Cooperative Education credit program, and continued growth in WRVC's cybersecurity program."
   },
   {
    "t": "label",
@@ -173,7 +174,7 @@
   },
   {
    "t": "p",
-   "x": "Chair Mancuso noted the December 18, 2025 minutes needed a floor amendment to correctly reflect that the committee's executive session that night ended in a 7–0 vote to enter it, and that the committee adjourned directly from executive session without returning to open session."
+   "x": "Chair Mancuso noted the December 18, 2025 minutes needed a floor amendment to correctly reflect that, after the recess that night, the committee voted 7–0 to enter executive session, and that the committee adjourned directly from executive session without returning to open session."
   },
   {
    "t": "label",
@@ -181,7 +182,7 @@
   },
   {
    "t": "d",
-   "x": "Minutes approved as amended, 6–1 with one abstention (member not identified in the transcript)."
+   "x": "Minutes approved as amended, 6–0 with one abstention (Dr. Flynn Ross, per the approved minutes)."
   },
   {
    "t": "label",
