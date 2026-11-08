@@ -4,6 +4,8 @@
 Every change to this site must meet **WCAG 2.1 Level AA**. This applies to pages, components, styles and new content, and an accessibility failure is a bug to fix before merging, not a later cleanup. Gerald wants this as a real commitment and an honest selling point.
 
 ### Before every pull request
+A GitHub check named "Accessibility check" (`.github/workflows/accessibility.yml`, script `site/scripts/a11y-check.mjs`) scans every built page with axe at desktop and phone widths on each pull request, and fails on any violation. Run it locally with `npm run build && node scripts/a11y-check.mjs` from `site/` (first `npm install --no-save playwright@1.47.2 @axe-core/playwright@4.10.0` and `npx playwright install chromium`). It doesn't replace the steps below.
+
 1. Run axe-core against each changed page and each page type it affects, including its open or expanded states.
 2. Check any new interaction with the keyboard alone.
 3. Fix all errors. If one can't be fixed, say so in the pull request and tell Gerald.
