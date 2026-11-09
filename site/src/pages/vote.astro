@@ -6,7 +6,7 @@ import '../styles/help.css';
 const checked = '2026-11-09';
 const city = 'https://westbrookmaine.gov';
 const sos = 'https://www.maine.gov/sos/elections-voting/election-results-data';
-const sourcePdf = `${city}/589/Election-Results`;
+const sourcePdf = `${city}/DocumentCenter/View/6439`;
 
 // Westbrook's own vote counts, from the City Clerk's certified official results
 // (signed by Ellis Ledoux, City Clerk, 11/04/2026). These are Westbrook's totals
@@ -163,7 +163,7 @@ const races = [
       <small>Official results</small>
       <strong>The City has certified official results.</strong>
       <p>These are Westbrook's own vote counts, certified by City Clerk Ellis Ledoux on November 4, 2026. Certification made a few small corrections to the unofficial count posted the day after the election &mdash; nothing changed the outcome of any race.</p>
-      <a class="btn" href={sourcePdf} target="_blank" rel="noopener noreferrer">City's election results page<span class="visually-hidden"> (opens in a new tab)</span> &#8599;</a>
+      <a class="btn" href={sourcePdf} target="_blank" rel="noopener noreferrer">City's official results (PDF)<span class="visually-hidden"> (opens in a new tab)</span> &#8599;</a>
     </section>
 
     <section class="help-box limit" aria-labelledby="howto-title">
