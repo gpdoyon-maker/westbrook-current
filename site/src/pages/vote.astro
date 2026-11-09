@@ -3,34 +3,45 @@ import SiteLayout from '../layouts/SiteLayout.astro';
 import { formatCheckedDate } from '../lib/help';
 import '../styles/help.css';
 
-const checked = '2026-11-04';
+const checked = '2026-11-09';
 const city = 'https://westbrookmaine.gov';
 const sos = 'https://www.maine.gov/sos/elections-voting/election-results-data';
-const sourcePdf = `${city}/DocumentCenter/View/6438`;
+const sourcePdf = `${city}/DocumentCenter/View/6439`;
 
-// Westbrook's own vote counts, as posted by the City Clerk (unofficial results
-// PDF above). These are Westbrook's totals only -- for any race that spans
-// more than Westbrook (every one of these except the unopposed/single-town
-// seats), the actual winner is decided by the full district/county/state
-// count, not by Westbrook alone.
+// Westbrook's own vote counts, from the City Clerk's certified official results
+// (signed by Ellis Ledoux, City Clerk, 11/04/2026). These are Westbrook's totals
+// only -- for any race that spans more than Westbrook (every one of these except
+// the unopposed/single-town seats), the actual winner is decided by the full
+// district/county/state count, not by Westbrook alone.
 //
 // "incumbent" reflects who already held the seat going into this election,
 // confirmed against official/legislative sources, not just the City's PDF.
 //
-// One correction to the source PDF: it lists Nangle's Total as 0, which is
-// a clear addition error (Ward 1-5 1,538 + Absentee 2,826). Shown here as
-// 4,364, the correct sum.
+// One addition error in the source PDF, present in both the unofficial and the
+// official document: it lists Nangle's Total as blank/0, which doesn't match its
+// own Ward 1-5 + Absentee columns (1,538 + 2,826). Shown here as 4,364, the
+// correct sum.
+//
+// The official document spells two candidates' names differently than their own
+// public/legislative records (prints "Reilly, Morgan J" and "Ducson, Jill C.");
+// kept here as "Morgan Rielly" and "Jill Duson," their correct public spelling.
+//
+// Certification made a few small corrections to the unofficial count posted the
+// day after the election: U.S. Senator (Collins 2,747 -> 3,047, Blank 144 -> 188),
+// U.S. Representative (Pingree 7,095 -> 7,094), State Rep. District 126
+// (Blank 31 -> 29), and Judge of Probate (Blank 1,922 -> 1,919). Every other race
+// was unchanged by certification.
 const races = [
   {
     office: 'U.S. Senator',
     sub: 'Ranked choice voting statewide &mdash; shown here is the 1st-choice count only.',
     multiTown: true,
     candidates: [
-      { name: 'Susan Collins', party: 'R', votes: 2747, incumbent: true },
+      { name: 'Susan Collins', party: 'R', votes: 3047, incumbent: true },
       { name: 'Troy D. Jackson', party: 'D', votes: 6505 },
     ],
     writeIns: 22,
-    blank: 144,
+    blank: 188,
     open: true,
   },
   {
@@ -50,7 +61,7 @@ const races = [
     office: 'U.S. Representative to Congress (District 1)',
     multiTown: true,
     candidates: [
-      { name: 'Chellie Pingree', party: 'D', votes: 7095, incumbent: true },
+      { name: 'Chellie Pingree', party: 'D', votes: 7094, incumbent: true },
       { name: 'Ronald C. Russell', party: 'R', votes: 2475 },
     ],
     blank: 193,
@@ -80,7 +91,7 @@ const races = [
       { name: 'Andrew Gattine', party: 'D', votes: 454, incumbent: true },
       { name: 'Ethan E. Mongue', party: 'R', votes: 206 },
     ],
-    blank: 31,
+    blank: 29,
   },
   {
     office: 'State Representative to the Legislature (District 127)',
@@ -107,7 +118,7 @@ const races = [
     candidates: [
       { name: 'Paul Aranson', votes: 7843, incumbent: true },
     ],
-    blank: 1922,
+    blank: 1919,
   },
   {
     office: 'Sheriff (Cumberland County)',
@@ -139,8 +150,8 @@ const races = [
 ];
 ---
 <SiteLayout
-  title="Election Results (Unofficial) | Westbrook Currents"
-  description="Unofficial results for the November 3, 2026 general election in Westbrook, Maine, as posted by the City Clerk. Official results are still to come."
+  title="Election Results (Official) | Westbrook Currents"
+  description="Official, certified results for the November 3, 2026 general election in Westbrook, Maine, as certified by the City Clerk."
   currentPage="vote"
 >
   <main class="help-wrap t-vote">
@@ -148,11 +159,11 @@ const races = [
     <h1>Election Results</h1>
     <p class="help-sub">General Election &middot; Tuesday, November 3, 2026</p>
 
-    <section class="vote-hero" aria-label="Unofficial results posted">
-      <small>Unofficial results</small>
-      <strong>The City has posted unofficial results.</strong>
-      <p>These are Westbrook's own vote counts, as posted by the City Clerk. They are <em>not official yet</em> &mdash; official, certified results follow later (Maine law allows up to 20 days, longer for any race that needs a ranked-choice tabulation or a recount).</p>
-      <a class="btn" href={sourcePdf} target="_blank" rel="noopener noreferrer">City's unofficial results (PDF)<span class="visually-hidden"> (opens in a new tab)</span> &#8599;</a>
+    <section class="vote-hero" aria-label="Official results certified">
+      <small>Official results</small>
+      <strong>The City has certified official results.</strong>
+      <p>These are Westbrook's own vote counts, certified by City Clerk Ellis Ledoux on November 4, 2026. Certification made a few small corrections to the unofficial count posted the day after the election &mdash; nothing changed the outcome of any race.</p>
+      <a class="btn" href={sourcePdf} target="_blank" rel="noopener noreferrer">City's official results (PDF)<span class="visually-hidden"> (opens in a new tab)</span> &#8599;</a>
     </section>
 
     <section class="help-box limit" aria-labelledby="howto-title">
@@ -199,7 +210,7 @@ const races = [
     ))}
 
     <aside class="disclaimer" aria-label="About this page">
-      <strong>Thank you to everyone who voted, and to the election workers.</strong> Westbrook Currents is independent and is not run by the City of Westbrook. We'll update this page once official, certified results are posted.
+      <strong>Thank you to everyone who voted, and to the election workers.</strong> Westbrook Currents is independent and is not run by the City of Westbrook.
     </aside>
   </main>
 
