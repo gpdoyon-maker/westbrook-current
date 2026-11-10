@@ -134,6 +134,10 @@ details.tldw-item:has(.ti-hot)[open] { border: 2px solid var(--contention); back
 details.tldw-item:has(.ti-hot) .tldw-quote { border-left-color: var(--contention); background: #fff; color: var(--contention-ink); }
 details.tldw-item:has(.ti-hot) .tldw-quote cite { color: #8c1c13; }
 
+.tldw-factcheck { margin: 0; padding: 10px 14px; border: 1.5px dashed var(--edge); border-left: 6px solid var(--navy); border-radius: 6px; background: #fff; color: var(--navy); font-size: 14px; line-height: 1.5; }
+.tldw-factcheck a { color: var(--blue); font-weight: 700; }
+.tldw-factcheck .fc-label { display: block; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .04em; }
+.tldw-factcheck .fc-note { display: block; margin-bottom: 4px; font-size: 13px; font-style: italic; color: var(--muted); }
 .tldw-decision { display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px; border-radius: 6px; background: #e6f4ea; color: #14532d; font-size: 13px; font-weight: 800; align-self: flex-start; }
 .tldw-decision.split { background: #fdecea; color: #8c1a12; }
 
@@ -180,6 +184,8 @@ details.tldw-item:has(.ti-hot) .tldw-quote cite { color: #8c1c13; }
   .ti-body .label { font-size: 8.5pt; margin: 6px 0 2px; break-after: avoid; }
   .tldw-quote { padding: 4px 0 4px 10px; background: none !important; border-left: 3px solid var(--accent); font-size: 10.5pt; color: #1f2d3a; -webkit-print-color-adjust: exact; print-color-adjust: exact; break-inside: avoid; }
   details.tldw-item:has(.ti-hot) .tldw-quote { color: #1f2d3a; border-left-color: var(--contention); }
+  .tldw-factcheck { padding: 4px 0 4px 10px; border: none; border-left: 3px solid var(--navy); font-size: 10.5pt; color: #1f2d3a; break-inside: avoid; }
+  .tldw-factcheck a::after { content: " (" attr(href) ")"; font-weight: 400; word-break: break-all; }
   .tldw-decision { display: inline-block; padding: 2px 8px; border-radius: 4px; background: #e6f4ea !important; color: #14532d; font-size: 10.5pt; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .tldw-decision.split { background: #fdecea !important; color: #8c1a12; }
   .tldw-wrap .disclaimer { background: none; padding: 8px 10px; font-size: 9.5pt; break-inside: avoid; margin-top: 14px; }
