@@ -363,7 +363,7 @@
   },
   {
    "t": "p",
-   "x": "June 17: last day of school (half day). August 5, 5:00 PM: Finance Committee (Central Office). August 12, 7:00 PM: next regular School Committee meeting (Room 114, Westbrook High School). August 28–29: staff back-to-school days. August 31: first day of school."
+   "x": "June 17: last day of school (half day). August 5, 5:00 PM: Finance Committee (Central Office). August 12, 7:00 PM: next regular School Committee meeting (Room 114, Westbrook High School). August 31: first day of school."
   },
   {
    "t": "label",
@@ -416,6 +416,6 @@
    "x": "None."
   }
  ],
- "howMade": "This summary was produced from the meeting video (linked above, hosted on the City's Vimeo showcase). The audio was transcribed with AI-assisted speech-to-text and speaker identification. This process cross-checked names against the official School Committee roster, attributed speakers from context (introductions, roll-call order, direct address by the Chair) rather than the raw diarization labels alone, and drafted this summary and the quoted excerpts. Quotes are lightly cleaned of filler words/false starts but not reworded. No agenda or back-up packet was published for this meeting (checked westbrookschools.org, 2026-10-24); this summary is drawn from the video/transcript alone. Reviewed by Gerald Doyon.",
+ "howMade": "This summary was produced from the meeting video (linked above, hosted on the City's Vimeo showcase). The audio was transcribed with AI-assisted speech-to-text and speaker identification. This process cross-checked names against the official School Committee roster, attributed speakers from context (introductions, roll-call order, direct address by the Chair) rather than the raw diarization labels alone, and drafted this summary and the quoted excerpts. Quotes are lightly cleaned of filler words/false starts but not reworded. No agenda or back-up packet was published for this meeting (checked westbrookschools.org, 2026-10-24); this summary is drawn from the video/transcript alone. Reviewed by Gerald Doyon. A separate AI accuracy check then compared this summary against the transcript and agenda packet. Errors it found were corrected, and Gerald Doyon verified against the meeting video the points only the video could settle.",
  "slug": "2026-06-10-school-committee"
 }
