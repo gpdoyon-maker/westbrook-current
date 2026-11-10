@@ -2,7 +2,7 @@
  "title": "Westbrook School Committee — Finance Committee Meeting",
  "fields": {
   "Date": "Wednesday, April 1, 2026",
-  "Time": "7:00 PM",
+  "Time": "5:00 PM",
   "Location": "Westbrook High School (Room 114), 125 Stroudwater St. (Hybrid via Zoom)",
   "Video": "https://vimeo.com/1179362898",
   "Packet": "https://drive.google.com/file/d/1yHnAh8Kpb2Qo2JHpkNmrwVcpHl6wyKeh/view (Google Drive, via westbrookschools.org)"
@@ -10,7 +10,7 @@
  "packetUrl": "https://drive.google.com/file/d/1yHnAh8Kpb2Qo2JHpkNmrwVcpHl6wyKeh/view",
  "packetNote": "(Google Drive, via westbrookschools.org)",
  "note": "This summary highlights the meeting's key discussions and decisions, with direct quotes and timestamps for verification — it is not a substitute for watching the full meeting. This was the fifth and intended-final Finance Committee budget session (ran roughly 4.5 hours); no formal motions were made, but the chair settled items by informal show-of-hands tallies, including a 4–2 tally to remove the two secondary instructional coaches. The budget moves to the full School Committee as a recommendation. For complete context, nuance, and anything not covered, watch the full video at the link above. (Produced by: WestbrookCurrents.com)",
- "attendance": "Present: Finance Committee Chair Noreen Poitras, School Committee Chair Andrea Mancuso, School Committee Vice Chair Katy Rice, Allison Brunette, Erin Cavallaro, Dr. Flynn Ross. Brooke Reed was absent for the 4–2 instructional-coaches tally; whether she attended earlier is not stated.",
+ "attendance": "Present: Finance Committee Chair Noreen Poitras, School Committee Chair Andrea Mancuso, School Committee Vice Chair Katy Rice, Allison Brunette, Erin Cavallaro, Dr. Flynn Ross. Absent: Brooke Reed.",
  "blocks": [
   {
    "t": "h",
@@ -211,6 +211,6 @@
    "x": "None."
   }
  ],
- "howMade": "This summary was produced from the meeting video (linked above, hosted on the City's Vimeo showcase). The audio was transcribed with AI-assisted speech-to-text and speaker identification. This process cross-checked names against the official School Committee roster, attributed speakers from context (introductions, roll-call order, direct address by the Chair) rather than the raw diarization labels alone, and drafted this summary and the quoted excerpts. Quotes are lightly cleaned of filler words/false starts but not reworded. Reviewed by Gerald Doyon.",
+ "howMade": "This summary was produced from the meeting video (linked above, hosted on the City's Vimeo showcase). The audio was transcribed with AI-assisted speech-to-text and speaker identification. This process cross-checked names against the official School Committee roster, attributed speakers from context (introductions, roll-call order, direct address by the Chair) rather than the raw diarization labels alone, and drafted this summary and the quoted excerpts. Quotes are lightly cleaned of filler words/false starts but not reworded. Reviewed by Gerald Doyon. A separate AI accuracy check then compared this summary against the transcript and agenda packet. Errors it found were corrected, and Gerald Doyon verified against the meeting video the points only the video could settle.",
  "slug": "2026-04-01-finance-committee"
 }
