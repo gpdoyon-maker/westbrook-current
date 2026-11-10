@@ -57,7 +57,17 @@
   },
   {
    "t": "p",
-   "x": "FY26's $53.35 million budget was a lean “maintenance” budget; per-pupil spending ($21,135) is fourth-lowest in Cumberland County, according to the district. (Westbrook Currents check: the Maine Department of Education's latest posted figures, for FY2025, put Westbrook at $22,291 per pupil, 11th-lowest of 17 Cumberland County districts on total cost. The district did not say which measure its ranking uses; it may refer to the local taxpayer share, which the state does not rank.) Solar panels have been installed at Congin and Saccarappa, with the middle school and high school scheduled for this spring/summer; once operating, the project is estimated to reduce energy costs by about $305,000 a year (a separate figure from the $279,000 Siemens energy-efficiency savings reported March 4). All school kitchens are now halal-certified, and School Nutrition Director Mary Emerson was named Maine's Nutrition Director of the Year for 2025. The district relaunched the Westbrook Education Foundation, and a group of alumni has been forming a new Westbrook High School Alumni Association."
+   "x": "FY26's $53.35 million budget was a lean “maintenance” budget; per-pupil spending ($21,135) is fourth-lowest in Cumberland County, according to the district. Solar panels have been installed at Congin and Saccarappa, with the middle school and high school scheduled for this spring/summer; once operating, the project is estimated to reduce energy costs by about $305,000 a year (a separate figure from the $279,000 Siemens energy-efficiency savings reported March 4). All school kitchens are now halal-certified, and School Nutrition Director Mary Emerson was named Maine's Nutrition Director of the Year for 2025. The district relaunched the Westbrook Education Foundation, and a group of alumni has been forming a new Westbrook High School Alumni Association."
+  },
+  {
+   "t": "fc",
+   "x": "State figures don't support this ranking on total cost. The Maine Department of Education's latest posted data (FY2025) puts Westbrook at $22,291 per pupil, 11th-lowest of 17 Cumberland County districts. The district hasn't said which measure its ranking uses.",
+   "links": [
+    {
+     "label": "Maine DOE, FY2025 per-pupil expenditures (PDF)",
+     "url": "https://www.maine.gov/doe/sites/maine.gov.doe/files/inline-files/School%20Finance%20-%20FY25%20Resident%20Expenditure%20Per%20Pupil%20-%201.7.2026.pdf"
+    }
+   ]
   },
   {
    "t": "p",
