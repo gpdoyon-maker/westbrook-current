@@ -49,7 +49,7 @@
   {
    "t": "h",
    "x": "Facilities, Technology & Community",
-   "ts": "22:40"
+   "ts": "26:11"
   },
   {
    "t": "label",
@@ -57,7 +57,7 @@
   },
   {
    "t": "p",
-   "x": "FY26's $53.35 million budget was a lean “maintenance” budget; per-pupil spending ($21,135) is fourth-lowest in Cumberland County. Solar panels have been installed at Congin and Saccarappa, with the middle school and high school scheduled for this spring/summer; once operating, the project is estimated to reduce energy costs by about $305,000 (a separate figure from the $279,000 Siemens energy-efficiency savings reported March 4). All school kitchens are now halal-certified, and School Nutrition Director Mary Emerson was named Maine's Nutrition Director of the Year for 2025. The district relaunched the Westbrook Education Foundation, and a group of alumni has been forming a new Westbrook High School Alumni Association."
+   "x": "FY26's $53.35 million budget was a lean “maintenance” budget; per-pupil spending ($21,135) is fourth-lowest in Cumberland County. Solar panels have been installed at Congin and Saccarappa, with the middle school and high school scheduled for this spring/summer; once operating, the project is estimated to reduce energy costs by about $305,000 a year (a separate figure from the $279,000 Siemens energy-efficiency savings reported March 4). All school kitchens are now halal-certified, and School Nutrition Director Mary Emerson was named Maine's Nutrition Director of the Year for 2025. The district relaunched the Westbrook Education Foundation, and a group of alumni has been forming a new Westbrook High School Alumni Association."
   },
   {
    "t": "p",
@@ -201,6 +201,6 @@
    "x": "None."
   }
  ],
- "howMade": "This summary was produced from the meeting video (linked above, hosted on the City's Vimeo showcase). The audio was transcribed with AI-assisted speech-to-text and speaker identification. This process cross-checked names against the official School Committee roster, attributed speakers from context (introductions, roll-call order, direct address by the Chair) rather than the raw diarization labels alone, and drafted this summary and the quoted excerpts. Quotes are lightly cleaned of filler words/false starts but not reworded. Reviewed by Gerald Doyon.",
+ "howMade": "This summary was produced from the meeting video (linked above, hosted on the City's Vimeo showcase). The audio was transcribed with AI-assisted speech-to-text and speaker identification. This process cross-checked names against the official School Committee roster, attributed speakers from context (introductions, roll-call order, direct address by the Chair) rather than the raw diarization labels alone, and drafted this summary and the quoted excerpts. Quotes are lightly cleaned of filler words/false starts but not reworded. Reviewed by Gerald Doyon. A separate AI accuracy check then compared this summary against the transcript and agenda packet. Errors it found were corrected, and Gerald Doyon verified against the meeting video the points only the video could settle.",
  "slug": "2026-03-11-school-committee"
 }

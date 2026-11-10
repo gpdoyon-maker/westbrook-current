@@ -10,7 +10,7 @@
  "packetUrl": "",
  "packetNote": "No agenda was published for this meeting (checked westbrookschools.org, 2026-10-24).",
  "note": "This summary highlights the meeting's key discussions and decisions, with direct quotes and timestamps for verification — it is not a substitute for watching the full meeting. Members met for this “revisit list” session, working through open items from the three prior cost-center review nights (March 18, 19, and 24); no votes were taken. For complete context, nuance, and anything not covered, watch the full video at the link above. (Produced by: WestbrookCurrents.com)",
- "attendance": "Present: Finance Committee Chair Noreen Poitras, School Committee Chair Andrea Mancuso, School Committee Vice Chair Katy Rice, Erin Cavallaro. Not stated on the recording: Allison Brunette, Brooke Reed, Dr. Flynn Ross.",
+ "attendance": "Present: Finance Committee Chair Noreen Poitras, School Committee Chair Andrea Mancuso, School Committee Vice Chair Katy Rice, Allison Brunette, Erin Cavallaro, Brooke Reed. Absent: Dr. Flynn Ross.",
  "blocks": [
   {
    "t": "h",
@@ -28,7 +28,7 @@
   },
   {
    "t": "p",
-   "x": "Chair Poitras read the full list of annual City charges: two School Resource Officers ($135,958 combined), athletic field maintenance ($121,500), police game-supervision charges, fire/rescue event charges, lifeguard supervision, and fuel (the last one actually a benefit, since the district buys off the City's bulk contract rate). A member raised that the City uses school facilities (tennis courts, track, fields, playgrounds, even this meeting room) without charge, and proposed a Memorandum of Understanding (MOU) to offset these in-kind exchanges. Chair Poitras confirmed she, Chair Mancuso, and district staff are meeting with City officials that Friday specifically on this, plus two further fairness questions: why the district doesn't earn interest on City-held funds, and why new-construction tax growth doesn't translate into added school funding."
+   "x": "Chair Poitras read the full list of annual City charges: two School Resource Officers ($135,958 combined), athletic field maintenance ($121,500), police game-supervision charges, fire/rescue event charges, lifeguard supervision, and fuel (the last one actually a benefit, since the district buys off the City's bulk contract rate). School Committee Vice Chair Katy Rice raised that the City uses school facilities (tennis courts, track, fields, playgrounds, even this meeting room) without charge, and proposed a Memorandum of Understanding (MOU) to offset these in-kind exchanges. Chair Poitras confirmed she, Chair Mancuso, and district staff are meeting with City officials that Friday specifically on this, plus two further fairness questions: why the district doesn't earn interest on City-held funds, and why new-construction tax growth doesn't translate into added school funding."
   },
   {
    "t": "label",
@@ -54,7 +54,7 @@
   {
    "t": "q",
    "x": "“We are very open with our property...but for the city to not want to support that...is really frustrating, especially when we're then paying them a decent amount of money out of our budget that is already incredibly tight.”",
-   "cite": "A committee member (on the City's use of school facilities)",
+   "cite": "School Committee Vice Chair Katy Rice (on the City's use of school facilities)",
    "ts": "03:01:56"
   },
   {
@@ -73,7 +73,7 @@
   },
   {
    "t": "p",
-   "x": "Following up directly on the concern raised March 24, the committee agreed to add $23,000 to the budget to replace the lock hardware on single-occupancy student bathrooms at Westbrook Middle School. Facilities Director Tony Lombardo confirmed the cost is a real quote, not a placeholder, and a committee member shared that their fifth-grade daughter said she, too, is scared to use the bathroom there."
+   "x": "Following up directly on the concern raised March 24, the committee agreed to add $23,000 to the budget to replace the lock hardware on single-occupancy student bathrooms at Westbrook Middle School. Facilities Director Tony Lombardo confirmed the cost is a real quote, not a placeholder, and Brooke Reed shared that their fifth-grade daughter said she, too, is scared to use the bathroom there."
   },
   {
    "t": "label",
@@ -214,6 +214,6 @@
    "cite": "Noreen Poitras, Finance Committee Chair"
   }
  ],
- "howMade": "This summary was produced from the meeting video (linked above, hosted on the City's Vimeo showcase). The audio was transcribed with AI-assisted speech-to-text and speaker identification. This process cross-checked names against the official School Committee roster, attributed speakers from context (introductions, roll-call order, direct address by the Chair) rather than the raw diarization labels alone, and drafted this summary and the quoted excerpts. Quotes are lightly cleaned of filler words/false starts but not reworded. Reviewed by Gerald Doyon.",
+ "howMade": "This summary was produced from the meeting video (linked above, hosted on the City's Vimeo showcase). The audio was transcribed with AI-assisted speech-to-text and speaker identification. This process cross-checked names against the official School Committee roster, attributed speakers from context (introductions, roll-call order, direct address by the Chair) rather than the raw diarization labels alone, and drafted this summary and the quoted excerpts. Quotes are lightly cleaned of filler words/false starts but not reworded. Reviewed by Gerald Doyon. A separate AI accuracy check then compared this summary against the transcript and agenda packet. Errors it found were corrected, and Gerald Doyon verified against the meeting video the points only the video could settle.",
  "slug": "2026-03-25-finance-committee"
 }
