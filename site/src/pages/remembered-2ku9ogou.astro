@@ -11,7 +11,7 @@ import { VETERANS_ENDPOINT } from '../lib/veterans-config';
 
   <main class="vr">
     <h1>Maine Veterans Remembered</h1>
-    <p class="vr-intro">Recent obituaries of Maine veterans, newest first. Tap “Read obituary” to see the full notice.</p>
+    <p class="vr-intro">Recent obituaries of Maine veterans, newest first. Tap “Read obituary” to see the full notice. In Compact view, tap a name to see more.</p>
     <p class="vr-updated" id="vr-updated" hidden></p>
 
     <div class="vr-toggle" role="group" aria-label="Who to show" id="vr-toggle" hidden>
@@ -33,6 +33,7 @@ import { VETERANS_ENDPOINT } from '../lib/veterans-config';
     <section class="vr-foot" aria-label="About this page">
       <p class="vr-private">This page is not listed on the website. Please share the link only with your group.</p>
       <p>Information comes from public obituaries posted by Maine newspapers and funeral homes. We may miss some. See something wrong or missing? <a href="/feedback">Tell us</a>.</p>
+      <p>ANG = Air National Guard. NG = Army National Guard.</p>
     </section>
   </main>
 </SiteLayout>
@@ -55,12 +56,21 @@ import { VETERANS_ENDPOINT } from '../lib/veterans-config';
   .vr-view-btns button { min-height: 40px; padding: 6px 14px; border: 0; border-radius: 6px; color: var(--navy); background: transparent; font-size: .9375rem; font-weight: 700; }
   .vr-view-btns button[aria-pressed='true'] { background: #fff; }
   .vr-view-btns button:focus-visible { outline: 3px solid var(--blue); outline-offset: 1px; }
-  .vr-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; padding: 10px 4px 10px 10px; border-bottom: 1px solid var(--line); border-left: 4px solid var(--navy); }
-  .vr-row.is-guard { border-left-color: #b07800; }
+  details.vr-row { margin: 0 0 8px; border: 1px solid var(--line); border-left: 5px solid var(--navy); border-radius: 8px; background: var(--mist); }
+  details.vr-row.is-guard { border-left-color: #b07800; }
+  details.vr-row[open] { border-color: var(--navy); border-left-color: var(--navy); background: #fff; }
+  details.vr-row.is-guard[open] { border-left-color: #b07800; }
+  details.vr-row > summary { display: flex; align-items: center; gap: 10px; min-height: 48px; padding: 8px 12px; list-style: none; cursor: pointer; }
+  details.vr-row > summary::-webkit-details-marker { display: none; }
+  details.vr-row > summary:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }
+  .vr-row-main { display: flex; flex: 1; flex-wrap: wrap; align-items: center; gap: 6px 10px; min-width: 0; }
   .vr-row .vr-chips { margin: 0; }
   .vr-row-name { color: #092c43; font-size: 1.0625rem; font-weight: 700; line-height: 1.3; }
-  a.vr-row-name { text-decoration: underline; text-underline-offset: 3px; }
-  a.vr-row-name:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }
+  .vr-chev { flex: none; color: var(--blue); font-size: 1.375rem; font-weight: 800; line-height: 1; }
+  .vr-chev::before { content: '+'; }
+  details.vr-row[open] .vr-chev { color: var(--navy); }
+  details.vr-row[open] .vr-chev::before { content: '\2212'; }
+  .vr-row-body { padding: 10px 12px 12px; border-top: 1px solid var(--line); }
   .vr-status { margin: 0 0 16px; padding: 14px 16px; border: 1px dashed var(--line); border-radius: 10px; color: var(--muted); background: #fff; }
   .vr-status:empty { display: none; }
   .vr h2 { margin: 8px 0 10px; padding-bottom: 6px; border-bottom: 2px solid var(--line); color: var(--navy); font-size: 1.125rem; }
@@ -107,56 +117,74 @@ import { VETERANS_ENDPOINT } from '../lib/veterans-config';
     return e;
   }
 
-  function card(r: Row) {
-    const guard = isGuard(r);
-    const a = el('article', guard ? 'vr-card is-guard' : 'vr-card');
-    a.append(el('h3', '', r.name));
-    const meta = [r.age != null ? `Age ${r.age}` : '', r.town].filter(Boolean).join(' · ');
-    if (meta) a.append(el('p', 'vr-meta', meta));
-    a.append(el('p', 'vr-died', `Died ${dayText(r.died)}`));
-
-    a.append(chipList(r));
-
-    if (r.unit) {
-      const u = el('p', 'vr-unit');
-      u.append(el('strong', '', 'Unit: '), document.createTextNode(r.unit));
-      a.append(u);
-    }
-    if (r.funeralHome) a.append(el('p', 'vr-fh', `Funeral home: ${r.funeralHome}`));
-    if (r.link) {
-      const btn = el('a', 'vr-btn');
-      btn.href = r.link;
-      btn.target = '_blank';
-      btn.rel = 'noopener';
-      btn.append(el('span', '', `Read obituary ↗`), el('small', '', '(opens in a new tab)'));
-      btn.setAttribute('aria-label', `Read the obituary for ${r.name} (opens in a new tab)`);
-      a.append(btn);
-    }
-    return a;
-  }
+  // Guard branches are shown short (the group knows them); screen readers still hear the full name.
+  const SHORT_BRANCH: Record<string, string> = { 'air national guard': 'ANG', 'army national guard': 'NG' };
 
   function chipList(r: Row) {
     const chips = el('ul', 'vr-chips');
     chips.setAttribute('aria-label', 'Service');
     const branches = r.branches.filter((b) => b !== 'Unknown');
-    (branches.length ? branches : ['Veteran']).forEach((b) => chips.append(el('li', /National Guard/i.test(b) ? 'is-guard' : '', b)));
+    (branches.length ? branches : ['Veteran']).forEach((b) => {
+      const li = el('li', /National Guard/i.test(b) ? 'is-guard' : '');
+      const short = SHORT_BRANCH[b.trim().toLowerCase()];
+      if (short) {
+        li.title = b;
+        const vis = el('span', '', short);
+        vis.setAttribute('aria-hidden', 'true');
+        li.append(vis, el('span', 'visually-hidden', b));
+      } else {
+        li.textContent = b;
+      }
+      chips.append(li);
+    });
     return chips;
   }
 
-  // Compact view: name (links to the obituary when there is one) and service only.
+  // Age, town, date, unit, funeral home and the obituary button: shared by cards and opened compact rows.
+  function details(r: Row, parent: HTMLElement) {
+    const meta = [r.age != null ? `Age ${r.age}` : '', r.town].filter(Boolean).join(' · ');
+    if (meta) parent.append(el('p', 'vr-meta', meta));
+    parent.append(el('p', 'vr-died', `Died ${dayText(r.died)}`));
+    return () => {
+      if (r.unit) {
+        const u = el('p', 'vr-unit');
+        u.append(el('strong', '', 'Unit: '), document.createTextNode(r.unit));
+        parent.append(u);
+      }
+      if (r.funeralHome) parent.append(el('p', 'vr-fh', `Funeral home: ${r.funeralHome}`));
+      if (r.link) {
+        const btn = el('a', 'vr-btn');
+        btn.href = r.link;
+        btn.target = '_blank';
+        btn.rel = 'noopener';
+        btn.append(el('span', '', `Read obituary ↗`), el('small', '', '(opens in a new tab)'));
+        btn.setAttribute('aria-label', `Read the obituary for ${r.name} (opens in a new tab)`);
+        parent.append(btn);
+      }
+    };
+  }
+
+  function card(r: Row) {
+    const a = el('article', isGuard(r) ? 'vr-card is-guard' : 'vr-card');
+    a.append(el('h3', '', r.name));
+    const rest = details(r, a);
+    a.append(chipList(r));
+    rest();
+    return a;
+  }
+
+  // Compact view: name and service; tap the line to open the rest (same +/− pattern as TL;DW! items).
   function row(r: Row) {
-    const d = el('div', isGuard(r) ? 'vr-row is-guard' : 'vr-row');
-    if (r.link) {
-      const a = el('a', 'vr-row-name', `${r.name} ↗`);
-      a.href = r.link;
-      a.target = '_blank';
-      a.rel = 'noopener';
-      a.setAttribute('aria-label', `${r.name}: read the obituary (opens in a new tab)`);
-      d.append(a);
-    } else {
-      d.append(el('span', 'vr-row-name', r.name));
-    }
-    d.append(chipList(r));
+    const d = el('details', isGuard(r) ? 'vr-row is-guard' : 'vr-row');
+    const sum = el('summary');
+    const main = el('span', 'vr-row-main');
+    main.append(el('span', 'vr-row-name', r.name), chipList(r));
+    const chev = el('span', 'vr-chev');
+    chev.setAttribute('aria-hidden', 'true');
+    sum.append(main, chev);
+    const body = el('div', 'vr-row-body');
+    details(r, body)();
+    d.append(sum, body);
     return d;
   }
 
