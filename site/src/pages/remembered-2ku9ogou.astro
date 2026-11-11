@@ -121,7 +121,9 @@ import { VETERANS_ENDPOINT } from '../lib/veterans-config';
   // Cards and opened rows spell them out.
   const SHORT_BRANCH: Record<string, string> = { 'air national guard': 'ANG', 'army national guard': 'ARNG' };
 
-  const branchList = (r: Row) => { const b = r.branches.filter((x) => x !== 'Unknown'); return b.length ? b : ['Veteran']; };
+  // "U.S. Army" / "United States Air Force" show as "Army" / "Air Force"; the U.S. is understood.
+  const plainBranch = (b: string) => b.replace(/^(U\.?\s?S\.?|United States)\s+/i, '').trim();
+  const branchList = (r: Row) => { const b = r.branches.filter((x) => x !== 'Unknown').map(plainBranch).filter(Boolean); return b.length ? [...new Set(b)] : ['Veteran']; };
 
   function chipList(r: Row, useShort: boolean) {
     const chips = el('ul', 'vr-chips');
