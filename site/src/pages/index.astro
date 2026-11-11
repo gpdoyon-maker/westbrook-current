@@ -28,8 +28,8 @@ import NoticeList from '../components/NoticeList.astro';
     <a class="see-all" id="see-all" href="/events">See all events &#8594;</a>
 
     <nav class="tiles" aria-label="Main sections">
-      <a class="tile tile-vote" href="/vote">
-        <strong>Election Results</strong>
+      <a class="tile tile-tldw" href="/tldw">
+        <strong>City Meeting Summaries (TL;DW!)</strong>
         <i aria-hidden="true">&#8594;</i>
       </a>
       <a class="tile tile-help" href="/help">
@@ -50,14 +50,13 @@ import NoticeList from '../components/NoticeList.astro';
     .events-bar strong { font-size: 20px; font-weight: 800; }
     .events-bar i { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; color: var(--navy); background: #82d7ef; font-size: 18px; font-style: normal; }
     .events-bar:hover, .events-bar:focus-visible { filter: brightness(1.12); }
-    .tiles { display: grid; grid-template-columns: minmax(160px, 1fr) minmax(220px, 2fr); gap: 14px; }
+    .tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
     .tile { position: relative; display: flex; flex-direction: column; justify-content: center; gap: 6px; min-height: 90px; padding: 20px 64px 20px 20px; border-radius: 8px; color: #fff; text-decoration: none; }
     .tile strong { font-size: 22px; line-height: 1.2; }
     .tile i { position: absolute; top: 50%; right: 18px; display: grid; place-items: center; width: 38px; height: 38px; margin-top: -19px; border-radius: 50%; color: var(--navy); background: #82d7ef; font-size: 20px; font-style: normal; }
     .tile-help { background: var(--blue); }
-    .tile-vote { background: #c2410c; min-height: 64px; padding: 14px 50px 14px 16px; }
-    .tile-vote strong { font-size: 16px; }
-    .tile-vote i { width: 28px; height: 28px; margin-top: -14px; right: 14px; color: #c2410c; background: #fff; font-size: 15px; }
+    .tile-tldw { background: var(--blue); }
+    .tile-tldw strong { font-size: 18px; }
     .tile:hover, .tile:focus-visible { filter: brightness(1.12); }
     .coming { border: 1.5px solid var(--line); border-left: 4px solid var(--cyan); border-radius: 8px; background: var(--mist); }
     .coming h2 { margin: 0; padding: 14px 18px 8px; color: var(--blue); font-size: 13px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
@@ -73,7 +72,6 @@ import NoticeList from '../components/NoticeList.astro';
       .home-intro { font-size: 16px; }
       .tiles { grid-template-columns: 1fr; }
       .tile { min-height: 72px; }
-      .tile-vote { min-height: 52px; padding: 12px 46px 12px 14px; }
     }
   </style>
 
