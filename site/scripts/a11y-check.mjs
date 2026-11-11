@@ -66,7 +66,10 @@ if (!pages.length) {
 
 const server = await serve();
 const origin = `http://127.0.0.1:${server.address().port}`;
-const browser = await chromium.launch();
+// CI sets A11Y_BROWSER_CHANNEL=chrome to use the runner's installed Chrome; locally,
+// Playwright's own Chromium is used.
+const channel = process.env.A11Y_BROWSER_CHANNEL;
+const browser = await chromium.launch(channel ? { channel } : {});
 let failures = 0;
 let checked = 0;
 
