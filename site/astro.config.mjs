@@ -4,5 +4,5 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://westbrookcurrents.com',
   trailingSlash: 'never',
-  integrations: [sitemap({ filter: (page) => !page.includes('/verify') })],
+  integrations: [sitemap({ filter: (page) => !page.includes('/verify') && !page.includes('/remembered-') })],
 });

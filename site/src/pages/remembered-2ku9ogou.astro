@@ -1,0 +1,171 @@
+---
+// Maine Veterans Remembered: an unlisted page for Gerry's Air National Guard retiree group.
+// Not linked from any menu, kept out of the sitemap (astro.config.mjs) and search (privatePage).
+// The list loads in the visitor's browser from the Veterans.gs web app, which sends only Approved rows.
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { VETERANS_ENDPOINT } from '../lib/veterans-config';
+---
+
+<SiteLayout title="Maine Veterans Remembered | Westbrook Currents" description="Recent obituaries of Maine veterans." privatePage={true}>
+  <div id="vr-config" data-endpoint={VETERANS_ENDPOINT} hidden></div>
+
+  <main class="vr">
+    <h1>Maine Veterans Remembered</h1>
+    <p class="vr-intro">Recent obituaries of Maine veterans, newest first. Tap “Read obituary” to see the full notice.</p>
+    <p class="vr-updated" id="vr-updated" hidden></p>
+
+    <div class="vr-toggle" role="group" aria-label="Who to show" id="vr-toggle" hidden>
+      <button type="button" aria-pressed="true" data-filter="all">All veterans (<span id="vr-n-all">0</span>)</button>
+      <button type="button" aria-pressed="false" data-filter="guard">Guard only (<span id="vr-n-guard">0</span>)</button>
+    </div>
+
+    <p class="vr-status" id="vr-status" role="status">Loading the list…</p>
+    <div id="vr-list"></div>
+
+    <section class="vr-foot" aria-label="About this page">
+      <p class="vr-private">This page is not listed on the website. Please share the link only with your group.</p>
+      <p>Information comes from public obituaries posted by Maine newspapers and funeral homes. We may miss some. See something wrong or missing? <a href="/feedback">Tell us</a>.</p>
+    </section>
+  </main>
+</SiteLayout>
+
+<!-- Global (all selectors start with .vr) because the cards are built in the browser, where scoped styles do not reach. -->
+<style is:global>
+  .vr { width: min(640px, 100%); margin: 0 auto; padding: 20px 16px 8px; }
+  .vr h1 { margin: 4px 0 6px; color: var(--navy); font-size: 1.75rem; line-height: 1.2; }
+  .vr-intro { margin: 0 0 6px; color: var(--muted); font-size: 1.0625rem; line-height: 1.45; }
+  .vr-updated { margin: 0 0 14px; color: var(--muted); font-size: .9375rem; }
+  .vr-toggle { display: flex; margin-bottom: 18px; overflow: hidden; border: 2px solid var(--navy); border-radius: 10px; }
+  .vr-toggle[hidden] { display: none; }
+  .vr-toggle button { flex: 1; min-height: 48px; padding: 6px 8px; border: 0; color: var(--navy); background: #fff; font-size: 1rem; font-weight: 700; }
+  .vr-toggle button[aria-pressed='true'] { color: #fff; background: var(--navy); }
+  .vr-toggle button:focus-visible { outline: 3px solid var(--blue); outline-offset: -5px; }
+  .vr-status { margin: 0 0 16px; padding: 14px 16px; border: 1px dashed var(--line); border-radius: 10px; color: var(--muted); background: #fff; }
+  .vr-status:empty { display: none; }
+  .vr h2 { margin: 8px 0 10px; padding-bottom: 6px; border-bottom: 2px solid var(--line); color: var(--navy); font-size: 1.125rem; }
+  .vr h2 .vr-count { color: var(--muted); font-size: .9375rem; font-weight: 400; }
+  .vr-card { margin: 0 0 12px; padding: 14px 14px 12px; border: 1px solid var(--line); border-left: 5px solid var(--navy); border-radius: 10px; background: #fff; }
+  .vr-card.is-guard { border-left-color: #b07800; }
+  .vr-card h3 { margin: 0 0 2px; color: #092c43; font-size: 1.25rem; line-height: 1.25; }
+  .vr-meta { margin: 0; color: var(--muted); font-size: 1rem; }
+  .vr-died { margin: 2px 0 8px; font-weight: 700; }
+  .vr-chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 8px; padding: 0; list-style: none; }
+  .vr-chips li { padding: 4px 10px; border-radius: 999px; color: var(--navy); background: #e6eef3; font-size: .875rem; font-weight: 700; }
+  .vr-chips li.is-guard { color: #6b4500; background: #fff2d6; }
+  .vr-unit { margin: 0 0 8px; }
+  .vr-unit strong { color: #6b4500; }
+  .vr-fh { margin: 0 0 10px; color: var(--muted); font-size: .9375rem; }
+  .vr-btn { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 48px; padding: 8px 12px; border-radius: 8px; color: #fff; background: var(--navy); font-weight: 700; line-height: 1.2; text-align: center; text-decoration: none; }
+  .vr-btn small { margin-top: 2px; font-size: .8125rem; font-weight: 400; }
+  .vr-btn:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }
+  .vr-foot { margin: 20px 0 16px; color: var(--muted); font-size: .9375rem; }
+  .vr-foot p { margin: 0 0 8px; }
+  .vr-private { padding: 10px 12px; border-radius: 8px; color: var(--navy); background: var(--mist); }
+</style>
+
+<script>
+  type Row = { name: string; age: number | null; died: string; branches: string[]; town: string; funeralHome: string; link: string; unit: string };
+
+  const endpoint = (document.getElementById('vr-config') as HTMLElement).dataset.endpoint || '';
+  const statusEl = document.getElementById('vr-status') as HTMLElement;
+  const listEl = document.getElementById('vr-list') as HTMLElement;
+  const toggleEl = document.getElementById('vr-toggle') as HTMLElement;
+  const updatedEl = document.getElementById('vr-updated') as HTMLElement;
+  let rows: Row[] = [];
+
+  const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  const SHORT = ['Jan.', 'Feb.', 'March', 'April', 'May', 'June', 'July', 'Aug.', 'Sept.', 'Oct.', 'Nov.', 'Dec.'];
+  const parts = (iso: string) => iso.split('-').map(Number);
+  const dayText = (iso: string) => { const [y, m, d] = parts(iso); return `${SHORT[m - 1]} ${d}, ${y}`; };
+  const isGuard = (r: Row) => r.branches.some((b) => /National Guard/i.test(b));
+
+  function el<K extends keyof HTMLElementTagNameMap>(tag: K, cls?: string, text?: string) {
+    const e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text) e.textContent = text;
+    return e;
+  }
+
+  function card(r: Row) {
+    const guard = isGuard(r);
+    const a = el('article', guard ? 'vr-card is-guard' : 'vr-card');
+    a.append(el('h3', '', r.name));
+    const meta = [r.age != null ? `Age ${r.age}` : '', r.town].filter(Boolean).join(' · ');
+    if (meta) a.append(el('p', 'vr-meta', meta));
+    a.append(el('p', 'vr-died', `Died ${dayText(r.died)}`));
+
+    const chips = el('ul', 'vr-chips');
+    chips.setAttribute('aria-label', 'Service');
+    const branches = r.branches.filter((b) => b !== 'Unknown');
+    (branches.length ? branches : ['Veteran']).forEach((b) => chips.append(el('li', /National Guard/i.test(b) ? 'is-guard' : '', b)));
+    a.append(chips);
+
+    if (r.unit) {
+      const u = el('p', 'vr-unit');
+      u.append(el('strong', '', 'Unit: '), document.createTextNode(r.unit));
+      a.append(u);
+    }
+    if (r.funeralHome) a.append(el('p', 'vr-fh', `Funeral home: ${r.funeralHome}`));
+    if (r.link) {
+      const btn = el('a', 'vr-btn');
+      btn.href = r.link;
+      btn.target = '_blank';
+      btn.rel = 'noopener';
+      btn.append(el('span', '', `Read obituary ↗`), el('small', '', '(opens in a new tab)'));
+      btn.setAttribute('aria-label', `Read the obituary for ${r.name} (opens in a new tab)`);
+      a.append(btn);
+    }
+    return a;
+  }
+
+  function render(filter: 'all' | 'guard') {
+    listEl.textContent = '';
+    const shown = filter === 'guard' ? rows.filter(isGuard) : rows;
+    if (!shown.length) {
+      statusEl.textContent = filter === 'guard' ? 'No Guard members on the list right now.' : 'No one is on the list yet.';
+      return;
+    }
+    statusEl.textContent = '';
+    let month = '';
+    let section: HTMLElement | null = null;
+    shown.forEach((r) => {
+      const [y, m] = parts(r.died);
+      const key = `${y}-${m}`;
+      if (key !== month) {
+        month = key;
+        const count = shown.filter((x) => x.died.startsWith(r.died.slice(0, 7))).length;
+        section = el('section');
+        const h = el('h2', '', `${MONTHS[m - 1]} ${y} `);
+        h.append(el('span', 'vr-count', `· ${count}`));
+        section.append(h);
+        listEl.append(section);
+      }
+      section!.append(card(r));
+    });
+  }
+
+  toggleEl.querySelectorAll<HTMLButtonElement>('button').forEach((b) => {
+    b.addEventListener('click', () => {
+      toggleEl.querySelectorAll('button').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+      render(b.dataset.filter as 'all' | 'guard');
+    });
+  });
+
+  async function load() {
+    if (!endpoint) { statusEl.textContent = 'This list is not set up yet.'; return; }
+    try {
+      const res = await fetch(endpoint);
+      const data = await res.json();
+      if (!data.ok || !Array.isArray(data.rows)) throw new Error('bad data');
+      rows = data.rows;
+      (document.getElementById('vr-n-all') as HTMLElement).textContent = String(rows.length);
+      (document.getElementById('vr-n-guard') as HTMLElement).textContent = String(rows.filter(isGuard).length);
+      if (data.updated) { updatedEl.textContent = `Last updated ${dayText(data.updated)}`; updatedEl.hidden = false; }
+      toggleEl.hidden = false;
+      render('all');
+    } catch {
+      statusEl.textContent = 'The list could not load. Please try again in a few minutes.';
+    }
+  }
+  load();
+</script>
