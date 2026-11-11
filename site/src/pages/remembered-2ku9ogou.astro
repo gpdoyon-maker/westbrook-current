@@ -33,7 +33,7 @@ import { VETERANS_ENDPOINT } from '../lib/veterans-config';
     <section class="vr-foot" aria-label="About this page">
       <p class="vr-private">This page is not listed on the website. Please share the link only with your group.</p>
       <p>Information comes from public obituaries posted by Maine newspapers and funeral homes. We may miss some. See something wrong or missing? <a href="/feedback">Tell us</a>.</p>
-      <p>ANG = Air National Guard. NG = Army National Guard.</p>
+      <p>ANG = Air National Guard. ARNG = Army National Guard.</p>
     </section>
   </main>
 </SiteLayout>
@@ -83,7 +83,7 @@ import { VETERANS_ENDPOINT } from '../lib/veterans-config';
   .vr-chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 8px; padding: 0; list-style: none; }
   .vr-chips li { padding: 4px 10px; border-radius: 999px; color: var(--navy); background: #e6eef3; font-size: .875rem; font-weight: 700; }
   .vr-chips li.is-guard { color: #6b4500; background: #fff2d6; }
-  .vr-unit { margin: 0 0 8px; }
+  .vr-unit, .vr-svc { margin: 0 0 8px; }
   .vr-unit strong { color: #6b4500; }
   .vr-fh { margin: 0 0 10px; color: var(--muted); font-size: .9375rem; }
   .vr-btn { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 48px; padding: 8px 12px; border-radius: 8px; color: #fff; background: var(--navy); font-weight: 700; line-height: 1.2; text-align: center; text-decoration: none; }
@@ -117,16 +117,18 @@ import { VETERANS_ENDPOINT } from '../lib/veterans-config';
     return e;
   }
 
-  // Guard branches are shown short (the group knows them); screen readers still hear the full name.
-  const SHORT_BRANCH: Record<string, string> = { 'air national guard': 'ANG', 'army national guard': 'NG' };
+  // In Compact rows, Guard branches are shown short; screen readers still hear the full name.
+  // Cards and opened rows spell them out.
+  const SHORT_BRANCH: Record<string, string> = { 'air national guard': 'ANG', 'army national guard': 'ARNG' };
 
-  function chipList(r: Row) {
+  const branchList = (r: Row) => { const b = r.branches.filter((x) => x !== 'Unknown'); return b.length ? b : ['Veteran']; };
+
+  function chipList(r: Row, useShort: boolean) {
     const chips = el('ul', 'vr-chips');
     chips.setAttribute('aria-label', 'Service');
-    const branches = r.branches.filter((b) => b !== 'Unknown');
-    (branches.length ? branches : ['Veteran']).forEach((b) => {
+    branchList(r).forEach((b) => {
       const li = el('li', /National Guard/i.test(b) ? 'is-guard' : '');
-      const short = SHORT_BRANCH[b.trim().toLowerCase()];
+      const short = useShort ? SHORT_BRANCH[b.trim().toLowerCase()] : '';
       if (short) {
         li.title = b;
         const vis = el('span', '', short);
@@ -168,7 +170,7 @@ import { VETERANS_ENDPOINT } from '../lib/veterans-config';
     const a = el('article', isGuard(r) ? 'vr-card is-guard' : 'vr-card');
     a.append(el('h3', '', r.name));
     const rest = details(r, a);
-    a.append(chipList(r));
+    a.append(chipList(r, false));
     rest();
     return a;
   }
@@ -178,12 +180,18 @@ import { VETERANS_ENDPOINT } from '../lib/veterans-config';
     const d = el('details', isGuard(r) ? 'vr-row is-guard' : 'vr-row');
     const sum = el('summary');
     const main = el('span', 'vr-row-main');
-    main.append(el('span', 'vr-row-name', r.name), chipList(r));
+    main.append(el('span', 'vr-row-name', r.name), chipList(r, true));
     const chev = el('span', 'vr-chev');
     chev.setAttribute('aria-hidden', 'true');
     sum.append(main, chev);
     const body = el('div', 'vr-row-body');
-    details(r, body)();
+    const rest = details(r, body);
+    if (branchList(r).some((b) => SHORT_BRANCH[b.trim().toLowerCase()])) {
+      const sv = el('p', 'vr-svc');
+      sv.append(el('strong', '', 'Service: '), document.createTextNode(branchList(r).join(', ')));
+      body.append(sv);
+    }
+    rest();
     d.append(sum, body);
     return d;
   }
