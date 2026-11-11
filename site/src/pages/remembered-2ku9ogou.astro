@@ -57,9 +57,7 @@ import { VETERANS_ENDPOINT } from '../lib/veterans-config';
   .vr-view-btns button[aria-pressed='true'] { background: #fff; }
   .vr-view-btns button:focus-visible { outline: 3px solid var(--blue); outline-offset: 1px; }
   details.vr-row { margin: 0 0 8px; border: 1px solid var(--line); border-left: 5px solid var(--navy); border-radius: 8px; background: var(--mist); }
-  details.vr-row.is-guard { border-left-color: #b07800; }
-  details.vr-row[open] { border-color: var(--navy); border-left-color: var(--navy); background: #fff; }
-  details.vr-row.is-guard[open] { border-left-color: #b07800; }
+  details.vr-row[open] { border-color: #9aa8b2; background: #fff; }
   details.vr-row > summary { display: flex; align-items: center; gap: 10px; min-height: 48px; padding: 8px 12px; list-style: none; cursor: pointer; }
   details.vr-row > summary::-webkit-details-marker { display: none; }
   details.vr-row > summary:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }
@@ -76,17 +74,31 @@ import { VETERANS_ENDPOINT } from '../lib/veterans-config';
   .vr h2 { margin: 8px 0 10px; padding-bottom: 6px; border-bottom: 2px solid var(--line); color: var(--navy); font-size: 1.125rem; }
   .vr h2 .vr-count { color: var(--muted); font-size: .9375rem; font-weight: 400; }
   .vr-card { margin: 0 0 12px; padding: 14px 14px 12px; border: 1px solid var(--line); border-left: 5px solid var(--navy); border-radius: 10px; background: #fff; }
-  .vr-card.is-guard { border-left-color: #b07800; }
+  /* Branch colors: left edge of each card/row follows the first branch listed. */
+  .vr-card[data-branch], details.vr-row[data-branch] { border-left-color: var(--br, #6b7780); }
+  [data-branch='army'] { --br: #221f20; }
+  [data-branch='usmc'] { --br: #a6192e; }
+  [data-branch='navy'] { --br: #00205b; }
+  [data-branch='af'] { --br: #00308f; }
+  [data-branch='cg'] { --br: #c8102e; }
+  [data-branch='sf'] { --br: #2c3e50; }
+  [data-branch='guard'] { --br: #b07800; }
   .vr-card h3 { margin: 0 0 2px; color: #092c43; font-size: 1.25rem; line-height: 1.25; }
   .vr-meta { margin: 0; color: var(--muted); font-size: 1rem; }
   .vr-died { margin: 2px 0 8px; font-weight: 700; }
   .vr-chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 8px; padding: 0; list-style: none; }
-  .vr-chips li { padding: 4px 10px; border-radius: 999px; color: var(--navy); background: #e6eef3; font-size: .875rem; font-weight: 700; }
-  .vr-chips li.is-guard { color: #6b4500; background: #fff2d6; }
+  .vr-chips li { padding: 4px 10px; border-radius: 999px; color: #36434c; background: #e6eaed; font-size: .875rem; font-weight: 700; }
+  .vr-chips li.br-army { color: #ffcc01; background: #221f20; }
+  .vr-chips li.br-usmc { color: #fff; background: #a6192e; }
+  .vr-chips li.br-navy { color: #fff; background: #00205b; }
+  .vr-chips li.br-af { color: #fff; background: #00308f; }
+  .vr-chips li.br-cg { color: #fff; background: #c8102e; }
+  .vr-chips li.br-sf { color: #fff; background: #2c3e50; }
+  .vr-chips li.br-guard { color: #6b4500; background: #fff2d6; }
   .vr-unit, .vr-svc { margin: 0 0 8px; }
   .vr-unit strong { color: #6b4500; }
   .vr-fh { margin: 0 0 10px; color: var(--muted); font-size: .9375rem; }
-  .vr-btn { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 48px; padding: 8px 12px; border-radius: 8px; color: #fff; background: var(--navy); font-weight: 700; line-height: 1.2; text-align: center; text-decoration: none; }
+  .vr-btn { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 48px; padding: 6px 12px; border: 2px solid var(--navy); border-radius: 8px; color: var(--navy); background: #fff; font-weight: 700; line-height: 1.2; text-align: center; text-decoration: none; }
   .vr-btn small { margin-top: 2px; font-size: .8125rem; font-weight: 400; }
   .vr-btn:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }
   .vr-foot { margin: 20px 0 16px; color: var(--muted); font-size: .9375rem; }
@@ -123,13 +135,17 @@ import { VETERANS_ENDPOINT } from '../lib/veterans-config';
 
   // "U.S. Army" / "United States Air Force" show as "Army" / "Air Force"; the U.S. is understood.
   const plainBranch = (b: string) => b.replace(/^(U\.?\s?S\.?|United States)\s+/i, '').trim();
+  // Branch -> color key. National Guard first so 'Air National Guard' isn't read as Air Force.
+  const branchKey = (b: string) =>
+    /coast guard/i.test(b) ? 'cg' : /national guard/i.test(b) ? 'guard' : /marine/i.test(b) ? 'usmc' :
+    /space force/i.test(b) ? 'sf' : /air force|usaf/i.test(b) ? 'af' : /navy|naval/i.test(b) ? 'navy' : /army/i.test(b) ? 'army' : 'vet';
   const branchList = (r: Row) => { const b = r.branches.filter((x) => x !== 'Unknown').map(plainBranch).filter(Boolean); return b.length ? [...new Set(b)] : ['Veteran']; };
 
   function chipList(r: Row, useShort: boolean) {
     const chips = el('ul', 'vr-chips');
     chips.setAttribute('aria-label', 'Service');
     branchList(r).forEach((b) => {
-      const li = el('li', /National Guard/i.test(b) ? 'is-guard' : '');
+      const li = el('li', `br-${branchKey(b)}`);
       const short = useShort ? SHORT_BRANCH[b.trim().toLowerCase()] : '';
       if (short) {
         li.title = b;
@@ -169,7 +185,8 @@ import { VETERANS_ENDPOINT } from '../lib/veterans-config';
   }
 
   function card(r: Row) {
-    const a = el('article', isGuard(r) ? 'vr-card is-guard' : 'vr-card');
+    const a = el('article', 'vr-card');
+    a.dataset.branch = branchKey(branchList(r)[0]);
     a.append(el('h3', '', r.name));
     const rest = details(r, a);
     a.append(chipList(r, false));
@@ -179,7 +196,8 @@ import { VETERANS_ENDPOINT } from '../lib/veterans-config';
 
   // Compact view: name and service; tap the line to open the rest (same +/− pattern as TL;DW! items).
   function row(r: Row) {
-    const d = el('details', isGuard(r) ? 'vr-row is-guard' : 'vr-row');
+    const d = el('details', 'vr-row');
+    d.dataset.branch = branchKey(branchList(r)[0]);
     const sum = el('summary');
     const main = el('span', 'vr-row-main');
     main.append(el('span', 'vr-row-name', r.name), chipList(r, true));
