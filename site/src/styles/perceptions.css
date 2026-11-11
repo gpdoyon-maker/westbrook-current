@@ -94,12 +94,15 @@
 
 /* Index page (list of articles in this section) */
 .perceptions-tagline { margin: 10px 0 0; color: var(--accent); font-size: 16px; font-weight: 600; font-style: italic; }
-.article-row { display: flex; flex-direction: column; gap: 4px; padding: 16px 18px; border: 1.5px solid var(--edge); border-left: 8px solid var(--accent); border-radius: 8px; color: inherit; background: var(--tint); text-decoration: none; }
-.article-row:hover { border-color: var(--accent); }
-.article-row strong { color: var(--accent); font-size: 21px; }
+/* Tiles alternate between the section slate and plum. */
+.article-list { display: flex; flex-direction: column; gap: 12px; }
+.article-row { --row: var(--accent); --row-tint: var(--tint); --row-edge: var(--edge); display: flex; flex-direction: column; gap: 4px; padding: 16px 18px; border: 1.5px solid var(--row-edge); border-left: 8px solid var(--row); border-radius: 8px; color: inherit; background: var(--row-tint); text-decoration: none; }
+.article-row:nth-child(even) { --row: #6b3a6e; --row-tint: #f5eef5; --row-edge: #dcc7dd; }
+.article-row:hover { border-color: var(--row); }
+.article-row strong { color: var(--row); font-size: 21px; }
 .article-row span { color: #294858; font-size: 16px; line-height: 1.4; }
 .article-row em { color: #3d5766; font-size: 13px; font-style: normal; font-weight: 700; }
-.article-go { color: var(--accent); font-size: 15px; font-weight: 800; }
+.article-go { color: var(--row); font-size: 15px; font-weight: 800; }
 
 @media (max-width: 600px) {
   .perceptions-wrap { padding: 20px 12px 40px; }
