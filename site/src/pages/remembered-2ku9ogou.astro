@@ -13,6 +13,7 @@ import { VETERANS_ENDPOINT } from '../lib/veterans-config';
     <h1>Maine Veterans Remembered</h1>
     <p class="vr-intro">Recent obituaries of Maine veterans, newest first. Tap “Read obituary” to see the full notice. In Compact view, tap a name to see more.</p>
     <p class="vr-updated" id="vr-updated" hidden></p>
+    <p class="vr-tally" id="vr-tally" hidden><span class="vr-tally-n" id="vr-tally-n"></span> <span class="vr-tally-t"><span id="vr-tally-t"></span><span class="visually-hidden">. </span><small id="vr-tally-s"></small></span></p>
 
     <div class="vr-toggle" role="group" aria-label="Who to show" id="vr-toggle" hidden>
       <button type="button" aria-pressed="true" data-filter="all">All veterans (<span id="vr-n-all">0</span>)</button>
@@ -44,6 +45,11 @@ import { VETERANS_ENDPOINT } from '../lib/veterans-config';
   .vr h1 { margin: 4px 0 6px; color: var(--navy); font-size: 1.75rem; line-height: 1.2; }
   .vr-intro { margin: 0 0 6px; color: var(--muted); font-size: 1.0625rem; line-height: 1.45; }
   .vr-updated { margin: 0 0 14px; color: var(--muted); font-size: .9375rem; }
+  .vr-tally { display: flex; align-items: center; gap: 14px; margin: 0 0 18px; padding: 12px 16px; border-left: 5px solid var(--navy); border-radius: 8px; background: var(--mist); }
+  .vr-tally[hidden] { display: none; }
+  .vr-tally-n { color: var(--navy); font-size: 2.25rem; font-weight: 700; line-height: 1; }
+  .vr-tally-t { line-height: 1.35; }
+  .vr-tally-t small { display: block; color: var(--muted); font-size: .875rem; }
   .vr-toggle { display: flex; margin-bottom: 18px; overflow: hidden; border: 2px solid var(--navy); border-radius: 10px; }
   .vr-toggle[hidden] { display: none; }
   .vr-toggle button { flex: 1; min-height: 48px; padding: 6px 8px; border: 0; color: var(--navy); background: #fff; font-size: 1rem; font-weight: 700; }
@@ -273,8 +279,16 @@ import { VETERANS_ENDPOINT } from '../lib/veterans-config';
       (document.getElementById('vr-n-guard') as HTMLElement).textContent = String(rows.filter(isGuard).length);
       if (data.updated) {
         const n = Number(data.added) || 0;
-        updatedEl.textContent = `Last updated ${dayText(data.updated)}` + (n > 0 ? `: ${n} ${n === 1 ? 'veteran' : 'veterans'} added.` : '');
-        updatedEl.hidden = false;
+        const day = dayText(data.updated);
+        if (n > 0) {
+          (document.getElementById('vr-tally-n') as HTMLElement).textContent = String(n);
+          (document.getElementById('vr-tally-t') as HTMLElement).textContent = `${n === 1 ? 'veteran' : 'veterans'} added to this list on ${day}`;
+          (document.getElementById('vr-tally-s') as HTMLElement).textContent = `Last updated ${day}`;
+          (document.getElementById('vr-tally') as HTMLElement).hidden = false;
+        } else {
+          updatedEl.textContent = `Last updated ${day}`;
+          updatedEl.hidden = false;
+        }
       }
       toggleEl.hidden = false;
       viewEl.hidden = false;
