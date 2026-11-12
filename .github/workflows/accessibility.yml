@@ -36,10 +36,13 @@ jobs:
       - name: Build site
         run: npm run build
 
+      # Uses the Google Chrome already on GitHub's runner image instead of
+      # downloading Playwright's Chromium, whose system packages come from Ubuntu's
+      # package mirrors -- when those are unreachable the check hung for 20 minutes.
       - name: Install accessibility tools
-        run: |
-          npm install --no-save playwright@1.47.2 @axe-core/playwright@4.10.0
-          npx playwright install --with-deps chromium
+        run: npm install --no-save playwright@1.47.2 @axe-core/playwright@4.10.0
 
       - name: Scan every page
+        env:
+          A11Y_BROWSER_CHANNEL: chrome
         run: node scripts/a11y-check.mjs
