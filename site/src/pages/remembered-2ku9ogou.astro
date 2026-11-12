@@ -20,6 +20,15 @@ import { VETERANS_ENDPOINT } from '../lib/veterans-config';
       <button type="button" aria-pressed="false" data-filter="guard">Guard only (<span id="vr-n-guard">0</span>)</button>
     </div>
 
+    <div class="vr-search" id="vr-search" role="search" hidden>
+      <label for="vr-q">Search by last name</label>
+      <div class="vr-search-box">
+        <input id="vr-q" type="search" autocomplete="off" spellcheck="false" aria-describedby="vr-q-hint">
+        <button type="button" class="vr-clear" id="vr-clear" aria-label="Clear search" hidden>&times;</button>
+      </div>
+      <p class="vr-hint" id="vr-q-hint">Any part of the name works. For example, “pel” finds Pelletier.</p>
+    </div>
+
     <div class="vr-view" id="vr-view" hidden>
       <span class="vr-view-label" id="vr-view-label">Show as</span>
       <div class="vr-view-btns" role="group" aria-labelledby="vr-view-label">
@@ -28,6 +37,7 @@ import { VETERANS_ENDPOINT } from '../lib/veterans-config';
       </div>
     </div>
 
+    <p class="vr-found" id="vr-found" role="status"></p>
     <p class="vr-status" id="vr-status" role="status">Loading the list…</p>
     <div id="vr-list"></div>
 
@@ -55,6 +65,20 @@ import { VETERANS_ENDPOINT } from '../lib/veterans-config';
   .vr-toggle button { flex: 1; min-height: 48px; padding: 6px 8px; border: 0; color: var(--navy); background: #fff; font-size: 1rem; font-weight: 700; }
   .vr-toggle button[aria-pressed='true'] { color: #fff; background: var(--navy); }
   .vr-toggle button:focus-visible { outline: 3px solid var(--blue); outline-offset: -5px; }
+  .vr-search { margin: 0 0 14px; }
+  .vr-search[hidden] { display: none; }
+  .vr-search label { display: block; margin: 0 0 4px; color: var(--navy); font-weight: 700; }
+  .vr-search-box { position: relative; }
+  .vr-search input { box-sizing: border-box; width: 100%; min-height: 48px; padding: 8px 52px 8px 12px; border: 2px solid #6b7780; border-radius: 8px; color: #1f2d3a; background: #fff; font: inherit; font-size: 1.0625rem; }
+  .vr-search input:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; border-color: var(--navy); }
+  .vr-search input::-webkit-search-cancel-button { display: none; }
+  .vr-clear { position: absolute; top: 2px; right: 2px; width: 44px; height: 44px; border: 0; border-radius: 6px; color: var(--navy); background: transparent; font-size: 1.5rem; font-weight: 700; line-height: 1; cursor: pointer; }
+  .vr-clear[hidden] { display: none; }
+  .vr-clear:hover { background: var(--mist); }
+  .vr-clear:focus-visible { outline: 3px solid var(--blue); outline-offset: -3px; }
+  .vr-hint { margin: 4px 0 0; color: var(--muted); font-size: .9375rem; }
+  .vr-found { margin: 0 0 12px; color: var(--navy); font-weight: 700; }
+  .vr-found:empty { display: none; }
   .vr-view { display: flex; align-items: center; justify-content: flex-end; gap: 8px; margin: -6px 0 14px; }
   .vr-view[hidden] { display: none; }
   .vr-view-label { color: var(--muted); font-size: .9375rem; font-weight: 700; }
@@ -222,15 +246,37 @@ import { VETERANS_ENDPOINT } from '../lib/veterans-config';
     return d;
   }
 
+  // Last-name search: letters anywhere in the last name; ignores case, accents and punctuation.
+  // Jr./Sr./II/III are skipped, and "St. Pierre" or "de la Cruz" count as one last name.
+  const norm = (s: string) => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z]/g, '');
+  const SUFFIX = /^(jr|sr|ii|iii|iv|v)$/;
+  const PARTICLE = /^(st|ste|saint|de|du|des|la|le|van|von|mac)$/;
+  function lastName(full: string) {
+    const w = full.replace(/["“”(][^"“”)]*["“”)]/g, ' ').trim().split(/\s+/).filter((x) => norm(x));
+    while (w.length > 1 && SUFFIX.test(norm(w[w.length - 1]))) w.pop();
+    let i = w.length - 1;
+    while (i > 1 && PARTICLE.test(norm(w[i - 1]))) i--;
+    return norm(w.slice(i).join(''));
+  }
+  const qEl = document.getElementById('vr-q') as HTMLInputElement;
+  const clearEl = document.getElementById('vr-clear') as HTMLButtonElement;
+  const foundEl = document.getElementById('vr-found') as HTMLElement;
+
   let filterNow: 'all' | 'guard' = 'all';
   let viewNow: 'cards' | 'compact' = 'cards';
 
   function render(filter: 'all' | 'guard' = filterNow) {
     filterNow = filter;
     listEl.textContent = '';
-    const shown = filter === 'guard' ? rows.filter(isGuard) : rows;
+    const pool = filter === 'guard' ? rows.filter(isGuard) : rows;
+    const term = norm(qEl.value);
+    clearEl.hidden = qEl.value === '';
+    const shown = term ? pool.filter((r) => lastName(r.name).includes(term)) : pool;
+    foundEl.textContent = term && shown.length ? `${shown.length} of ${pool.length} shown` : '';
     if (!shown.length) {
-      statusEl.textContent = filter === 'guard' ? 'No Guard members on the list right now.' : 'No one is on the list yet.';
+      statusEl.textContent = !pool.length
+        ? (filter === 'guard' ? 'No Guard members on the list right now.' : 'No one is on the list yet.')
+        : `No ${filter === 'guard' ? 'Guard members' : 'veterans'} with “${qEl.value.trim()}” in their last name.`;
       return;
     }
     statusEl.textContent = '';
@@ -268,6 +314,10 @@ import { VETERANS_ENDPOINT } from '../lib/veterans-config';
     });
   });
 
+  qEl.addEventListener('input', () => render());
+  qEl.addEventListener('keydown', (e) => { if (e.key === 'Escape' && qEl.value) { qEl.value = ''; render(); } });
+  clearEl.addEventListener('click', () => { qEl.value = ''; render(); qEl.focus(); });
+
   async function load() {
     if (!endpoint) { statusEl.textContent = 'This list is not set up yet.'; return; }
     try {
@@ -291,6 +341,7 @@ import { VETERANS_ENDPOINT } from '../lib/veterans-config';
         }
       }
       toggleEl.hidden = false;
+      (document.getElementById('vr-search') as HTMLElement).hidden = false;
       viewEl.hidden = false;
       render('all');
     } catch {
