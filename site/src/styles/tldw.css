@@ -81,7 +81,6 @@ body:has(.tldw-wrap) { background: #f6f9fb; }
 .tldw-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 2px; }
 .tldw-tag { padding: 2px 8px; border-radius: 6px; background: #eef0f6; color: #3d4566; font-size: 12px; font-weight: 700; }
 .mc-go { color: var(--accent); font-size: 14px; font-weight: 800; margin-top: 2px; }
-.more-soon { padding: 16px 18px; border: 1.5px dashed var(--line); border-radius: 8px; color: var(--muted); font-size: 14px; text-align: center; }
 
 /* Meeting detail page */
 .tldw-eyebrow { color: var(--accent); font-size: 13px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
