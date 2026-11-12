@@ -283,7 +283,7 @@ import { VETERANS_ENDPOINT } from '../lib/veterans-config';
         if (n > 0) {
           (document.getElementById('vr-tally-n') as HTMLElement).textContent = String(n);
           (document.getElementById('vr-tally-t') as HTMLElement).textContent = `${n === 1 ? 'veteran' : 'veterans'} added to this list on ${day}`;
-          (document.getElementById('vr-tally-s') as HTMLElement).textContent = `Last updated ${day}`;
+          (document.getElementById('vr-tally-s') as HTMLElement).textContent = 'Checked for new obituaries twice a day';
           (document.getElementById('vr-tally') as HTMLElement).hidden = false;
         } else {
           updatedEl.textContent = `Last updated ${day}`;
