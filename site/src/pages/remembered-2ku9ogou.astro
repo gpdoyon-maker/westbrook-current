@@ -271,7 +271,11 @@ import { VETERANS_ENDPOINT } from '../lib/veterans-config';
       rows = data.rows;
       (document.getElementById('vr-n-all') as HTMLElement).textContent = String(rows.length);
       (document.getElementById('vr-n-guard') as HTMLElement).textContent = String(rows.filter(isGuard).length);
-      if (data.updated) { updatedEl.textContent = `Last updated ${dayText(data.updated)}`; updatedEl.hidden = false; }
+      if (data.updated) {
+        const n = Number(data.added) || 0;
+        updatedEl.textContent = `Last updated ${dayText(data.updated)}` + (n > 0 ? `: ${n} ${n === 1 ? 'veteran' : 'veterans'} added.` : '');
+        updatedEl.hidden = false;
+      }
       toggleEl.hidden = false;
       viewEl.hidden = false;
       render('all');
