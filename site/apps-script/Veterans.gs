@@ -14,6 +14,7 @@
  *   3. Give that URL to Claude, who puts it in site/src/lib/veterans-config.ts.
  * After any later code change: Deploy > Manage deployments > edit > New version > Deploy.
  * The onEdit function below needs no setup; it runs on its own when the Sheet is edited by hand.
+ * onEdit changes take effect as soon as the code is saved (no new deployment needed).
  *
  * No secrets are needed. Everything sent comes from public obituaries.
  */
@@ -91,15 +92,17 @@ function build_() {
   return { ok: true, updated: updated, added: added, rows: rows };
 }
 
-// Runs by itself whenever someone edits the Sheet by hand. When a Status cell (column K) on the
-// Veterans tab is changed to "Approved", it writes today's date in Approved On (column M) and
-// clears the page's 10-minute cache so the change shows right away. Changing a row away from
-// Approved clears its Approved On date. (Edits made by the scheduled search don't trigger this;
+// Runs by itself whenever someone edits the Sheet by hand. Any hand edit on the Veterans tab
+// (a branch, town, link, status...) clears the page's 10-minute cache so the change shows right
+// away. When a Status cell (column K) is changed to "Approved", it also writes today's date in
+// Approved On (column M); changing a row away from Approved clears that date. (Edits made by the scheduled search don't trigger this;
 // its own approvals use Date Added instead.)
 function onEdit(e) {
   if (!e || !e.range) return;
   var sheet = e.range.getSheet();
   if (sheet.getName() !== SHEET_NAME) return;
+  try { CacheService.getScriptCache().remove(CACHE_KEY); } catch (err) {}
+
   var firstCol = e.range.getColumn();
   var lastCol = firstCol + e.range.getNumColumns() - 1;
   if (STATUS_COL < firstCol || STATUS_COL > lastCol) return;
@@ -119,7 +122,6 @@ function onEdit(e) {
     if (!approved && stamps[i][0] !== '') { stamps[i][0] = ''; changed = true; }
   }
   if (changed) stamp.setNumberFormat('@').setValues(stamps);
-  try { CacheService.getScriptCache().remove(CACHE_KEY); } catch (err) {}
 }
 
 function unit_(notes) {
