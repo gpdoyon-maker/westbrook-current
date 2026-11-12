@@ -13,6 +13,7 @@
  *      Approve the permissions when asked. Copy the Web app URL.
  *   3. Give that URL to Claude, who puts it in site/src/lib/veterans-config.ts.
  * After any later code change: Deploy > Manage deployments > edit > New version > Deploy.
+ * The onEdit function below needs no setup; it runs on its own when the Sheet is edited by hand.
  *
  * No secrets are needed. Everything sent comes from public obituaries.
  */
@@ -20,6 +21,9 @@
 var SHEET_ID = '1UtYMwmq9c5L1dOdj5LLQCLje7wrwGrkCvZ9zbDZ7tHs';
 var SHEET_NAME = 'Veterans';
 var CACHE_SECONDS = 600; // 10 minutes: approvals show up on the page within 10 minutes
+var CACHE_KEY = 'veterans_v2';
+var STATUS_COL = 11;      // K
+var APPROVED_ON_COL = 13; // M
 
 // Short unit names (as the scheduled task writes them at the start of Notes) -> full names.
 var UNITS = [
@@ -31,11 +35,11 @@ var UNITS = [
 
 function doGet() {
   var cache = CacheService.getScriptCache();
-  var cached = cache.get('veterans_v1');
+  var cached = cache.get(CACHE_KEY);
   if (cached) return out_(cached);
 
   var body = JSON.stringify(build_());
-  if (body.length < 90000) cache.put('veterans_v1', body, CACHE_SECONDS);
+  if (body.length < 90000) cache.put(CACHE_KEY, body, CACHE_SECONDS);
   return out_(body);
 }
 
@@ -44,15 +48,19 @@ function build_() {
   var values = sheet.getDataRange().getValues();
   var tz = Session.getScriptTimeZone();
   var rows = [];
+  var liveDates = [];
 
   // Columns: A Name, B Age, C Date of Death, D Branch, E Town, F Funeral Home,
-  // G Obituary Link, H Source, I Date Added, J Confidence, K Status, L Notes
+  // G Obituary Link, H Source, I Date Added, J Confidence, K Status, L Notes, M Approved On
   for (var i = 1; i < values.length; i++) {
     var r = values[i];
     if (String(r[10]).trim() !== 'Approved') continue;
     var name = String(r[0]).trim();
     var died = dateText_(r[2], tz);
     if (!name || !died) continue;
+
+    var live = dateText_(r[12], tz) || dateText_(r[8], tz);
+    if (live) liveDates.push(live);
 
     var link = String(r[6]).trim();
     if (!/^https:\/\//i.test(link)) link = '';
@@ -70,7 +78,48 @@ function build_() {
   }
 
   rows.sort(function (a, b) { return a.died < b.died ? 1 : a.died > b.died ? -1 : 0; });
-  return { ok: true, updated: Utilities.formatDate(new Date(), tz, 'yyyy-MM-dd'), rows: rows };
+
+  // "Last updated" = the most recent day a veteran went live, and how many went live that day.
+  // A row goes live on its Approved On date (column M, stamped by onEdit when Gerry approves
+  // by hand), or else its Date Added (column I, when the search approved it itself).
+  var updated = '';
+  var added = 0;
+  for (var j = 0; j < liveDates.length; j++) {
+    if (liveDates[j] > updated) { updated = liveDates[j]; added = 1; }
+    else if (liveDates[j] === updated) added++;
+  }
+  return { ok: true, updated: updated, added: added, rows: rows };
+}
+
+// Runs by itself whenever someone edits the Sheet by hand. When a Status cell (column K) on the
+// Veterans tab is changed to "Approved", it writes today's date in Approved On (column M) and
+// clears the page's 10-minute cache so the change shows right away. Changing a row away from
+// Approved clears its Approved On date. (Edits made by the scheduled search don't trigger this;
+// its own approvals use Date Added instead.)
+function onEdit(e) {
+  if (!e || !e.range) return;
+  var sheet = e.range.getSheet();
+  if (sheet.getName() !== SHEET_NAME) return;
+  var firstCol = e.range.getColumn();
+  var lastCol = firstCol + e.range.getNumColumns() - 1;
+  if (STATUS_COL < firstCol || STATUS_COL > lastCol) return;
+
+  var firstRow = Math.max(e.range.getRow(), 2);
+  var lastRow = e.range.getRow() + e.range.getNumRows() - 1;
+  if (lastRow < firstRow) return;
+  var n = lastRow - firstRow + 1;
+  var status = sheet.getRange(firstRow, STATUS_COL, n, 1).getValues();
+  var stamp = sheet.getRange(firstRow, APPROVED_ON_COL, n, 1);
+  var stamps = stamp.getValues();
+  var today = Utilities.formatDate(new Date(), Session.getScriptTimeZone(), 'yyyy-MM-dd');
+  var changed = false;
+  for (var i = 0; i < n; i++) {
+    var approved = String(status[i][0]).trim() === 'Approved';
+    if (approved && stamps[i][0] === '') { stamps[i][0] = today; changed = true; }
+    if (!approved && stamps[i][0] !== '') { stamps[i][0] = ''; changed = true; }
+  }
+  if (changed) stamp.setNumberFormat('@').setValues(stamps);
+  try { CacheService.getScriptCache().remove(CACHE_KEY); } catch (err) {}
 }
 
 function unit_(notes) {
