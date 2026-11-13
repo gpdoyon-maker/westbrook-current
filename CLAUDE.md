@@ -28,5 +28,12 @@ Run the changed pages through WAVE (`https://wave.webaim.org/report#/<page URL>`
 ### How to describe this publicly
 Automated tools check only part of WCAG. Accurate wording today is "passes automated WCAG 2.1 AA scans." Don't say "WCAG compliant" or "ADA compliant" until screen reader, zoom and full keyboard testing are done and the untagged guide PDFs are resolved.
 
+## Whitespace and visual hierarchy
+When asked for a "design" or "whitespace" change, distinguish **passive** whitespace (the default rhythm — line-height, standard gaps, margins everything gets) from **active** whitespace (extra space added on purpose to make one thing read as more important). Most of this site is a dense, scannable layout (events, notices, listings) and should stay that way — don't add generous marketing-style spacing across the board. Reserve active whitespace for the few things that are genuinely the page's lead thought or its primary destinations.
+
+- Reuse the `gap` on the existing flex/grid container for the base rhythm; add deliberate extra space with `margin-top` on the one element that needs to stand apart — flex/grid items don't collapse margins, so it stacks cleanly on top of the gap.
+- **Always check the real phone-width layout before adding space**, not just scale it down from desktop. On this homepage, `Get Help` already sits right at the edge of the first screen on a typical phone (confirmed: top edge at 794px on an 812px-tall viewport) — any extra vertical space pushes it further below the fold, which fights the point of making it more prominent. The fix used here (2026-11-13, PR #153): desktop-only (`@media (min-width: 601px)`) `margin-top: 26px` on `.events-bar` and `.tiles` in `index.astro`; mobile (`max-width: 600px`, the breakpoint already used in this file) is untouched.
+- This is a judgment call, not a numeric rule — verify any new whitespace change at both desktop and 375×812 phone width in the browser pane before merging, the same way accessibility changes get checked at both widths above.
+
 ## TL;DW! summaries
 Each meeting's JSON file in `site/src/data/tldw-summaries/` is the master copy. There are no meeting PDFs. The workflow is in `PROCESS.md` in the Westbrook City Council Meetings folder.
