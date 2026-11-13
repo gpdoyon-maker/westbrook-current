@@ -73,6 +73,14 @@ import NoticeList from '../components/NoticeList.astro';
       .tiles { grid-template-columns: 1fr; }
       .tile { min-height: 72px; }
     }
+    /* Desktop only: a bit more room sets the hero apart from the dense list below it,
+       and before the tiles sets them apart as the page's two destinations. On phones
+       the tiles already sit at the edge of the first screen, so this stays desktop-only
+       to avoid pushing Get Help further out of view. */
+    @media (min-width: 601px) {
+      .events-bar { margin-top: 26px; }
+      .tiles { margin-top: 26px; }
+    }
   </style>
 
   <script>
