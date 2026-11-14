@@ -57,7 +57,15 @@
   },
   {
    "t": "p",
-   "x": "Director Mark Campbell (first budget cycle) reported 511 high school and 405 middle school athlete participations, plus 26 and 12 clubs respectively. He flagged a 15-point gender participation gap he is working to track more precisely. New costs include officiating fee increases tied to the Consumer Price Index, a measure of price changes. For the first time, there is also a budgeted line for playoff-game officiating/travel (five playoff games hosted this year already). Campbell is testing the athletic-management software against an alternative. He said it could yield savings of up to about $3,000."
+   "x": "Director Mark Campbell (first budget cycle) reported 511 high school and 405 middle school athlete participations, plus 26 and 12 clubs respectively. He flagged a 15-point gender participation gap he is working to track more precisely."
+  },
+  {
+   "t": "p",
+   "x": "New costs include officiating fee increases tied to the Consumer Price Index, a measure of price changes. For the first time, there is also a budgeted line for playoff-game officiating/travel (five playoff games hosted this year already)."
+  },
+  {
+   "t": "p",
+   "x": "Campbell is testing the athletic-management software against an alternative. He said it could yield savings of up to about $3,000."
   },
   {
    "t": "label",
@@ -153,11 +161,19 @@
   },
   {
    "t": "p",
-   "x": "Principal Jeff Garrett reported strong outcomes (38% of students in early college/Advanced Placement/dual enrollment). Garrett renewed the school's multi-year request for a new English teacher: seven teachers currently cover roughly"
+   "x": "Principal Jeff Garrett reported strong outcomes (38% of students in early college/Advanced Placement/dual enrollment)."
   },
   {
    "t": "p",
-   "x": "700 students, versus eight in math. English is the only subject required all four years, and some sections approach 25 students. Also proposed: relocating the school's Compass alternative-education program (about 15 students) from a separate outbuilding into renovated space inside the main building. Also proposed: a technology shift from MacBooks toward iPads following a fall pilot. Both the high school's and middle school's SRO funding and the Compass relocation were added to the revisit list. The library equipment line, zeroed out in past years, was restored. The IXL software line was corrected on the spot for a savings of about $4,646."
+   "x": "Garrett renewed the school's multi-year request for a new English teacher: seven teachers currently cover roughly 700 students, versus eight in math. English is the only subject required all four years, and some sections approach 25 students."
+  },
+  {
+   "t": "p",
+   "x": "Also proposed: relocating the school's Compass alternative-education program (about 15 students) from a separate outbuilding into renovated space inside the main building. Also proposed: a technology shift from MacBooks toward iPads following a fall pilot."
+  },
+  {
+   "t": "p",
+   "x": "Both the high school's and middle school's SRO funding and the Compass relocation were added to the revisit list. The library equipment line, zeroed out in past years, was restored. The IXL software line was corrected on the spot for a savings of about $4,646."
   },
   {
    "t": "label",
@@ -191,7 +207,11 @@
   },
   {
    "t": "p",
-   "x": "Westbrook Regional Vocational Center (WRVC) Director Gloria Noyes reported enrollment up 44–50 students despite closing the commercial driver's license program, driven by active recruitment. The budget funds two new programs: a Career and Technical Education Exploratory Program and a Cooperative Education internship program. Both are expected to further grow enrollment and state subsidy. Noyes flagged aging-building issues at the roughly 30-year-old facility (roof leaks, inconsistent temperatures, no secure entry vestibule). Staff said the entry-security issue might be handled within the operating budget. The building is on the list for capital-planning talks with the City."
+   "x": "Westbrook Regional Vocational Center (WRVC) Director Gloria Noyes reported enrollment up 44–50 students despite closing the commercial driver's license program, driven by active recruitment. The budget funds two new programs: a Career and Technical Education Exploratory Program and a Cooperative Education internship program. Both are expected to further grow enrollment and state subsidy."
+  },
+  {
+   "t": "p",
+   "x": "Noyes flagged aging-building issues at the roughly 30-year-old facility (roof leaks, inconsistent temperatures, no secure entry vestibule). Staff said the entry-security issue might be handled within the operating budget. The building is on the list for capital-planning talks with the City."
   },
   {
    "t": "label",
@@ -220,7 +240,11 @@
   },
   {
    "t": "p",
-   "x": "Director Jen Brooks reported the state's third-largest adult education program, recognized this year as a top performer in Maine, serving 576 students (up nearly 7%). Outside revenue covers about $292,000 of the program's roughly $668,500 cost. That revenue includes workforce-training revenue, grants, and a state subsidy up 9.88% to $165,122. This leaves a local share of roughly $376,310. The budget expands digital literacy instruction for workforce readiness. It also pilots an online English platform (Burlington English). Brooks said January's immigration-enforcement events showed the program needs it in order to be “ready for anything.”"
+   "x": "Director Jen Brooks reported the state's third-largest adult education program, recognized this year as a top performer in Maine, serving 576 students (up nearly 7%). Outside revenue covers about $292,000 of the program's roughly $668,500 cost. That revenue includes workforce-training revenue, grants, and a state subsidy up 9.88% to $165,122. This leaves a local share of roughly $376,310."
+  },
+  {
+   "t": "p",
+   "x": "The budget expands digital literacy instruction for workforce readiness. It also pilots an online English platform (Burlington English). Brooks said January's immigration-enforcement events showed the program needs it in order to be “ready for anything.”"
   },
   {
    "t": "label",

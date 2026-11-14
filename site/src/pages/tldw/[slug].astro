@@ -88,6 +88,13 @@ function cleaned(body: any[]) {
       }
       continue;
     }
+    // consecutive "li" blocks (list items inside a discussion) render as one bulleted list
+    if (b.t === 'li') {
+      const prev = out[out.length - 1];
+      if (prev && prev.t === 'ul') prev.items.push(b);
+      else out.push({ t: 'ul', items: [b] });
+      continue;
+    }
     out.push(b);
   }
   return out;
@@ -165,6 +172,7 @@ const meetingNote = (data.note || '')
             if (b.t === 'fc') return <aside class="tldw-factcheck" aria-label="Westbrook Currents fact check"><span class="fc-label">Independent fact check by Westbrook Currents</span><span class="fc-note">Added after the meeting from public records. This was not said at the meeting and does not come from the City.</span> {b.x}{b.links && b.links.length > 0 && <span class="fc-src"> {b.links.length > 1 ? 'Sources' : 'Source'}: {b.links.map((l: any, i: number) => <>{i > 0 && '; '}<a href={l.url} target="_blank" rel="noopener noreferrer">{l.label}</a></>)}</span>}</aside>;
             if (b.t === 'd') { const split = isSplitDecision(b.x); return <span class={`tldw-decision${split ? ' split' : ''}`}>{split ? '✗' : '✓'} {parts(b.x).map((s: any) => s.ts ? <a class="ts-link" href={tsLink(s.ts)} target="_blank" rel="noopener noreferrer">{s.ts}</a> : s.text)}</span>; }
             if (b.t === 'a') return <ul><li>{b.x}</li></ul>;
+            if (b.t === 'ul') return <ul>{b.items.map((it: any) => <li>{parts(it.x).map((s: any) => s.ts ? <a class="ts-link" href={tsLink(s.ts)} target="_blank" rel="noopener noreferrer">{s.ts}</a> : s.text)}</li>)}</ul>;
             return null;
           })}
         </div>

@@ -32,11 +32,55 @@
   },
   {
    "t": "p",
-   "x": "Each board is checked against five questions. Is its purpose clear and free of conflicts? Is its membership the right size and properly qualified? Are its duties clear, and do they avoid repeating the work of staff or departments? Is its scope of authority consistent with state law and the City Charter? The fifth is a set of standard clerical corrections. These include capping term lengths at three years (unless state law requires otherwise), removing ward-specific representation requirements, eliminating gendered language, and standardizing term-end dates to June 30. They also include correcting each body's title to match whether it works as a board (quasi-judicial/regulatory), a commission (policy development), or a committee (advisory/working group)."
+   "x": "Each board is checked against five questions."
+  },
+  {
+   "t": "li",
+   "x": "Is its purpose clear and free of conflicts?"
+  },
+  {
+   "t": "li",
+   "x": "Is its membership the right size and properly qualified?"
+  },
+  {
+   "t": "li",
+   "x": "Are its duties clear, and do they avoid repeating the work of staff or departments?"
+  },
+  {
+   "t": "li",
+   "x": "Is its scope of authority consistent with state law and the City Charter?"
   },
   {
    "t": "p",
-   "x": "Holmes also noted a parallel effort to standardize agenda, minutes, and public-notice practices and to better publicize open BCC vacancies. City Clerk Ledoux and City Solicitor Ferrante are leading it. Two more review sessions are planned: September 14 for five additional boards, and September 21 reserved for final discussion. Council adoption is expected around October 5."
+   "x": "The fifth is a set of standard clerical corrections. These include:"
+  },
+  {
+   "t": "li",
+   "x": "capping term lengths at three years (unless state law requires otherwise)"
+  },
+  {
+   "t": "li",
+   "x": "removing ward-specific representation requirements"
+  },
+  {
+   "t": "li",
+   "x": "eliminating gendered language"
+  },
+  {
+   "t": "li",
+   "x": "standardizing term-end dates to June 30"
+  },
+  {
+   "t": "li",
+   "x": "correcting each body's title to match whether it works as a board (quasi-judicial/regulatory), a commission (policy development), or a committee (advisory/working group)"
+  },
+  {
+   "t": "p",
+   "x": "Holmes also noted a parallel effort to standardize agenda, minutes, and public-notice practices and to better publicize open BCC vacancies. City Clerk Ledoux and City Solicitor Ferrante are leading it."
+  },
+  {
+   "t": "p",
+   "x": "Two more review sessions are planned: September 14 for five additional boards, and September 21 reserved for final discussion. Council adoption is expected around October 5."
   },
   {
    "t": "label",
@@ -74,7 +118,15 @@
   },
   {
    "t": "p",
-   "x": "This board has seven members (five ward seats and two at-large seats). It currently has no sitting members. Staff recommend reducing it to five members. State law allows five to seven, and most neighboring communities use five. Staff also recommend removing the ward-specific seat requirement. They want to add a duties section and a state-statute reference that the ordinance now lacks. They also recommend shortening terms from five to three years, with staggered expirations (terms ending in different years) ending June 30."
+   "x": "This board has seven members (five ward seats and two at-large seats). It currently has no sitting members."
+  },
+  {
+   "t": "p",
+   "x": "Staff recommend reducing it to five members. State law allows five to seven, and most neighboring communities use five."
+  },
+  {
+   "t": "p",
+   "x": "Staff also recommend removing the ward-specific seat requirement. They want to add a duties section and a state-statute reference that the ordinance now lacks. They also recommend shortening terms from five to three years, with staggered expirations (terms ending in different years) ending June 30."
   },
   {
    "t": "p",
@@ -108,7 +160,15 @@
   },
   {
    "t": "p",
-   "x": "Staff (Franceschi) responded that removing ward requirements on other bodies in the past solved real staffing problems. Those bodies were the Planning Board and Zoning Board of Appeals. Willing volunteers had been turned away because no seat was open for their specific ward. Mayor Morse, a former councilor, recalled that the City previously removed ward requirements from the Public Safety Commission, the Zoning Board of Appeals, and the Planning Board for the same reason. He also said geographic balance can still be weighed informally when recommending appointees. Turcotte asked whether that intent could be written down as a policy. It would direct future administrations to still weigh ward representation as a factor, even without a hard requirement. Mayor Morse suggested a mission statement listing it as a factor and said he would talk to staff about it. No vote was taken."
+   "x": "Staff (Franceschi) responded that removing ward requirements on other bodies in the past solved real staffing problems. Those bodies were the Planning Board and Zoning Board of Appeals. Willing volunteers had been turned away because no seat was open for their specific ward."
+  },
+  {
+   "t": "p",
+   "x": "Mayor Morse, a former councilor, recalled that the City previously removed ward requirements from the Public Safety Commission, the Zoning Board of Appeals, and the Planning Board for the same reason. He also said geographic balance can still be weighed informally when recommending appointees."
+  },
+  {
+   "t": "p",
+   "x": "Turcotte asked whether that intent could be written down as a policy. It would direct future administrations to still weigh ward representation as a factor, even without a hard requirement. Mayor Morse suggested a mission statement listing it as a factor and said he would talk to staff about it. No vote was taken."
   },
   {
    "t": "h",
@@ -130,11 +190,31 @@
   },
   {
    "t": "p",
-   "x": "This board has three members and also has no sitting members. Staff's recommendation goes beyond clerical cleanup. Staff recommend eliminating the board entirely. They found that its duties duplicate work the Public Services and Finance Departments already do. They also found that its stated scope of authority conflicts with the authority of the City Council, the Mayor, and various departments over cemetery fee-setting and management. The surrounding ordinance language also mentions an obsolete “Director of Parks and Cemeteries” position. Its duties have since split between the Directors of Public Services and Community Services. Staff are still finalizing language to reflect that. Other cleanup includes removing gendered language and renaming “Pauper's Graves” to “Public Graves.”"
+   "x": "This board has three members and also has no sitting members. Staff's recommendation goes beyond clerical cleanup. Staff recommend eliminating the board entirely."
   },
   {
    "t": "p",
-   "x": "Councilor Chau voiced a concern he returned to twice. He said boards should not be eliminated just because the City does not like them. They should be eliminated only when their function is truly redundant. He said he was comfortable with this specific elimination on the merits but wanted that principle on the record for future reviews. Staff explicitly agreed with the distinction. Councilor Michael Shaughnessy noted that cemeteries are quasi-public spaces that matter deeply to residents. Shaughnessy suggested that some way for the public to give input should remain, even without a dedicated board. President Munro recalled, with personal fondness, a past trustee's hands-on groundskeeping work. Munro cautioned against dismissing the board's historical contributions. But Munro did not object to the elimination, given the duplicated duties and the fact that the board already has no members."
+   "x": "Staff found that its duties duplicate work the Public Services and Finance Departments already do. Staff also found that its stated scope of authority conflicts with the authority of the City Council, the Mayor, and various departments over cemetery fee-setting and management."
+  },
+  {
+   "t": "p",
+   "x": "The surrounding ordinance language also mentions an obsolete “Director of Parks and Cemeteries” position. Its duties have since split between the Directors of Public Services and Community Services. Staff are still finalizing language to reflect that. Other cleanup includes removing gendered language and renaming “Pauper's Graves” to “Public Graves.”"
+  },
+  {
+   "t": "p",
+   "x": "Councilor Chau voiced a concern he returned to twice. He said boards should not be eliminated just because the City does not like them. They should be eliminated only when their function is truly redundant."
+  },
+  {
+   "t": "p",
+   "x": "He said he was comfortable with this specific elimination on the merits but wanted that principle on the record for future reviews. Staff explicitly agreed with the distinction."
+  },
+  {
+   "t": "p",
+   "x": "Councilor Michael Shaughnessy noted that cemeteries are quasi-public spaces that matter deeply to residents. Shaughnessy suggested that some way for the public to give input should remain, even without a dedicated board."
+  },
+  {
+   "t": "p",
+   "x": "President Munro recalled, with personal fondness, a past trustee's hands-on groundskeeping work. Munro cautioned against dismissing the board's historical contributions. But Munro did not object to the elimination, given the duplicated duties and the fact that the board already has no members."
   },
   {
    "t": "label",
@@ -172,11 +252,39 @@
   },
   {
    "t": "p",
-   "x": "This body hears appeals from residents denied General Assistance. It has no current members. Councilor Chau's own appointment expired in February. Staff recommend these changes. Membership would be up to three qualified individuals, with “residents” changed to “individuals,” since relevant expertise matters more than local residency. The body would be renamed from “Authority” to “Board” to reflect its quasi-judicial function. The staff title “General Assistance Administrator” would become “General Assistance Director” to match current practice."
+   "x": "This body hears appeals from residents denied General Assistance. It has no current members. Councilor Chau's own appointment expired in February. Staff recommend these changes."
+  },
+  {
+   "t": "li",
+   "x": "Membership would be up to three qualified individuals, with “residents” changed to “individuals,” since relevant expertise matters more than local residency."
+  },
+  {
+   "t": "li",
+   "x": "The body would be renamed from “Authority” to “Board” to reflect its quasi-judicial function."
+  },
+  {
+   "t": "li",
+   "x": "The staff title “General Assistance Administrator” would become “General Assistance Director” to match current practice."
   },
   {
    "t": "p",
-   "x": "Councilor Chau drew on his own experience on the board. He described it as a deceptively demanding seat. Hearings must be convened within five days of an appeal (a state-law requirement). That is difficult to schedule among volunteer members. Unscheduled cases are sometimes sent to Portland's hearing authority instead. He cautioned against over-specifying local ordinance language beyond state law. He pointed in particular to a draft section implying the City would write its own rules and regulations for General Assistance administration. Harrison Deah, Director of General Assistance & Social Services, explained that the City adopts the Maine Municipal Association's model ordinance each year, so it does not have to draft its own. Staff agreed to look at referencing state law by citation rather than restating it. President Munro asked what “qualified” means in practice. Staff clarified that it refers to experience with due-process hearings, General Assistance law, or similar proceedings."
+   "x": "Councilor Chau drew on his own experience on the board. He described it as a deceptively demanding seat."
+  },
+  {
+   "t": "p",
+   "x": "Hearings must be convened within five days of an appeal (a state-law requirement). That is difficult to schedule among volunteer members. Unscheduled cases are sometimes sent to Portland's hearing authority instead."
+  },
+  {
+   "t": "p",
+   "x": "He cautioned against over-specifying local ordinance language beyond state law. He pointed in particular to a draft section implying the City would write its own rules and regulations for General Assistance administration."
+  },
+  {
+   "t": "p",
+   "x": "Harrison Deah, Director of General Assistance & Social Services, explained that the City adopts the Maine Municipal Association's model ordinance each year, so it does not have to draft its own. Staff agreed to look at referencing state law by citation rather than restating it."
+  },
+  {
+   "t": "p",
+   "x": "President Munro asked what “qualified” means in practice. Staff clarified that it refers to experience with due-process hearings, General Assistance law, or similar proceedings."
   },
   {
    "t": "label",
@@ -214,7 +322,27 @@
   },
   {
    "t": "p",
-   "x": "This was the lightest-touch item of the evening. The body has five members (two current members and three vacancies). It was substantially rewritten roughly four years ago. At that time it was renamed from the “Library Board of Trustees” and clarified as purely advisory. It is distinct from the separate Walker Memorial Board of Regents, which was established under the will of Joseph Walker. Staff found its purpose, membership size, duties, and scope of authority all already appropriate. They proposed only minor cleanup. One fix clarifies that “The Library” refers to the Walker Memorial Library as a City department. Another moves a confusingly placed reference to the Will of Walker to a more appropriate section. Staff also proposed standard staggering and numbering fixes."
+   "x": "This was the lightest-touch item of the evening. The body has five members (two current members and three vacancies). It was substantially rewritten roughly four years ago. At that time it was renamed from the “Library Board of Trustees” and clarified as purely advisory."
+  },
+  {
+   "t": "p",
+   "x": "It is distinct from the separate Walker Memorial Board of Regents, which was established under the will of Joseph Walker."
+  },
+  {
+   "t": "p",
+   "x": "Staff found its purpose, membership size, duties, and scope of authority all already appropriate. They proposed only minor cleanup."
+  },
+  {
+   "t": "li",
+   "x": "One fix clarifies that “The Library” refers to the Walker Memorial Library as a City department."
+  },
+  {
+   "t": "li",
+   "x": "Another moves a confusingly placed reference to the Will of Walker to a more appropriate section."
+  },
+  {
+   "t": "li",
+   "x": "Staff also proposed standard staggering and numbering fixes."
   },
   {
    "t": "label",
@@ -248,7 +376,11 @@
   },
   {
    "t": "p",
-   "x": "No public comment was offered. The Committee was reminded of the two remaining review sessions. September 14 will cover the Recreation & Conservation Commission, Planning Board, Village Review Overlay Zone Committee, Zoning Board of Appeals, and Public Safety Commission. September 21 is reserved for final discussion. City Clerk Ledoux explained that residents can apply for any open board seat through the Boards & Committees section of westbrookmaine.gov. The Committee of the Whole adjourned and moved directly into the Special City Council meeting that followed the same night."
+   "x": "No public comment was offered. The Committee was reminded of the two remaining review sessions. September 14 will cover the Recreation & Conservation Commission, Planning Board, Village Review Overlay Zone Committee, Zoning Board of Appeals, and Public Safety Commission. September 21 is reserved for final discussion."
+  },
+  {
+   "t": "p",
+   "x": "City Clerk Ledoux explained that residents can apply for any open board seat through the Boards & Committees section of westbrookmaine.gov. The Committee of the Whole adjourned and moved directly into the Special City Council meeting that followed the same night."
   },
   {
    "t": "label",

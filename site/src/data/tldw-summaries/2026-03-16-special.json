@@ -28,11 +28,19 @@
   },
   {
    "t": "p",
-   "x": "Finance Department: Finance Director Tressina Germani departed after nearly 14 years with the City. Deputy Finance Director Laura King was appointed Interim Finance Director. She has been with the City since 2023 and was previously a Portland Water District financial analyst for seven years. The Tax Collector position is also vacant, and state statute places that obligation on the Finance Director (see Order 2026-28). To bridge the gap, the City added two vendors to its approved vendor list (Order 2026-30). They are the Maine Municipal Association (part-time consulting support, $150/hour) and Robert Half Recruiters & Employment Agency (temporary front-line staffing, ~$35/hour)."
+   "x": "Finance Department: Finance Director Tressina Germani departed after nearly 14 years with the City. Deputy Finance Director Laura King was appointed Interim Finance Director. She has been with the City since 2023 and was previously a Portland Water District financial analyst for seven years."
   },
   {
    "t": "p",
-   "x": "Assistant City Administrator: Jennie Franceschi was promoted to Assistant City Administrator. She has been Director of Planning & Code Enforcement since 2016. She was also the Maine Association of Planners' 2025 Planner of the Year. She will continue part-time as Planning Director until a replacement is hired. Full transition is expected around May 1."
+   "x": "The Tax Collector position is also vacant, and state statute places that obligation on the Finance Director (see Order 2026-28). To bridge the gap, the City added two vendors to its approved vendor list (Order 2026-30). They are the Maine Municipal Association (part-time consulting support, $150/hour) and Robert Half Recruiters & Employment Agency (temporary front-line staffing, ~$35/hour)."
+  },
+  {
+   "t": "p",
+   "x": "Assistant City Administrator: Jennie Franceschi was promoted to Assistant City Administrator. She has been Director of Planning & Code Enforcement since 2016."
+  },
+  {
+   "t": "p",
+   "x": "She was also the Maine Association of Planners' 2025 Planner of the Year. She will continue part-time as Planning Director until a replacement is hired. Full transition is expected around May 1."
   },
   {
    "t": "p",
@@ -78,7 +86,11 @@
   },
   {
    "t": "p",
-   "x": "Hayley Bankis is facilities manager for the Center for Autism and Related Disorders. It is a pediatric therapy provider new to Westbrook, at 39 Mechanic St., Suite 300. She asked about the process for requesting 15-minute parking in front of the building. The parking would safely accommodate children with disabilities who cannot safely walk from the current lot. City Administrator Holmes directed her to email the City Clerk's office to coordinate with the relevant departments."
+   "x": "Hayley Bankis is facilities manager for the Center for Autism and Related Disorders. It is a pediatric therapy provider new to Westbrook, at 39 Mechanic St., Suite 300."
+  },
+  {
+   "t": "p",
+   "x": "Bankis asked about the process for requesting 15-minute parking in front of the building. The parking would safely accommodate children with disabilities who cannot safely walk from the current lot. City Administrator Holmes directed her to email the City Clerk's office to coordinate with the relevant departments."
   },
   {
    "t": "label",
@@ -112,7 +124,23 @@
   },
   {
    "t": "p",
-   "x": "All were first read (the first of two required votes) at the Mar. 2, 2026 meeting. They cover reallocating up to $365,000 in unspent Spring 2025 bond proceeds (money the City borrowed) to Canal/Congin School projects. They also cover reallocating $385,000 in unused Westbrook High School capital funds to security-system and window/door projects. They also include $678,746.01 for Phase 3 public safety radio equipment. See that meeting's summary for full detail. Moved together; no discussion."
+   "x": "All were first read (the first of two required votes) at the Mar. 2, 2026 meeting. They cover:"
+  },
+  {
+   "t": "li",
+   "x": "Reallocating up to $365,000 in unspent Spring 2025 bond proceeds (money the City borrowed) to Canal/Congin School projects."
+  },
+  {
+   "t": "li",
+   "x": "Reallocating $385,000 in unused Westbrook High School capital funds to security-system and window/door projects."
+  },
+  {
+   "t": "li",
+   "x": "$678,746.01 for Phase 3 public safety radio equipment."
+  },
+  {
+   "t": "p",
+   "x": "See that meeting's summary for full detail. Moved together; no discussion."
   },
   {
    "t": "label",
@@ -150,7 +178,15 @@
   },
   {
    "t": "p",
-   "x": "It is owned by Blessing Hospitality LLC in partnership with Antonio, Nobel Rugo, and Peter Mutima, and managed by James Bowser. Councilor Rairdon flagged a discrepancy between the ownership percentages on the state application and on the supplemental ownership form. For example, one partner was listed at 35% on one form and 33% on the other. Antonio explained the differences reflect recent equity changes as new investor-partners joined after the initial application was filed. The Clerk's office agreed to confirm the correct figures with the State before the license takes effect."
+   "x": "It is owned by Blessing Hospitality LLC in partnership with Antonio, Nobel Rugo, and Peter Mutima, and managed by James Bowser."
+  },
+  {
+   "t": "p",
+   "x": "Councilor Rairdon flagged a discrepancy between the ownership percentages on the state application and on the supplemental ownership form. For example, one partner was listed at 35% on one form and 33% on the other."
+  },
+  {
+   "t": "p",
+   "x": "Antonio explained the differences reflect recent equity changes as new investor-partners joined after the initial application was filed. The Clerk's office agreed to confirm the correct figures with the State before the license takes effect."
   },
   {
    "t": "label",
@@ -254,7 +290,15 @@
   },
   {
    "t": "p",
-   "x": "Adds Robert Half Recruiters & Employment Agency and the Maine Municipal Association as approved vendors to keep Finance Department staffing steady (see Mayor's Message above). Councilor Chau asked whether spending over $10,000 needed a Council vote and why no cost figures were provided. The administration said spending was nearing the $5,000 limit requiring Council approval unless a vendor is on the annual list. Interim Finance Director Laura King and City Administrator Holmes confirmed this is a temporary bridge, not a long-term arrangement. They agreed to keep the Council updated on costs."
+   "x": "Adds Robert Half Recruiters & Employment Agency and the Maine Municipal Association as approved vendors to keep Finance Department staffing steady (see Mayor's Message above)."
+  },
+  {
+   "t": "p",
+   "x": "Councilor Chau asked whether spending over $10,000 needed a Council vote and why no cost figures were provided. The administration said spending was nearing the $5,000 limit requiring Council approval unless a vendor is on the annual list."
+  },
+  {
+   "t": "p",
+   "x": "Interim Finance Director Laura King and City Administrator Holmes confirmed this is a temporary bridge, not a long-term arrangement. They agreed to keep the Council updated on costs."
   },
   {
    "t": "label",
@@ -353,7 +397,15 @@
   },
   {
    "t": "p",
-   "x": "Allows the Finance Department to write off, on an annual basis, ambulance-billing receivables (money owed to the City) more than seven years old. That is the point at which debt-collection industry standards consider medical debt no longer reasonably collectible. The City currently carries more than $1.4 million in unpaid ambulance billing debt dating from 2003 to the present. Under the policy, a write-off removes accounts from active receivables but does not forgive the debt. An initial “true-up” will address the existing backlog, with one additional year written off annually going forward. Councilor Rairdon asked for an annual report of the amount written off. The administration agreed to provide it."
+   "x": "Allows the Finance Department to write off, on an annual basis, ambulance-billing receivables (money owed to the City) more than seven years old. That is the point at which debt-collection industry standards consider medical debt no longer reasonably collectible. The City currently carries more than $1.4 million in unpaid ambulance billing debt dating from 2003 to the present."
+  },
+  {
+   "t": "p",
+   "x": "Under the policy, a write-off removes accounts from active receivables but does not forgive the debt. An initial “true-up” will address the existing backlog, with one additional year written off annually going forward."
+  },
+  {
+   "t": "p",
+   "x": "Councilor Rairdon asked for an annual report of the amount written off. The administration agreed to provide it."
   },
   {
    "t": "label",

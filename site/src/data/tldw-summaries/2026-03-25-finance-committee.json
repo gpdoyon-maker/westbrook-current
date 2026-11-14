@@ -28,7 +28,43 @@
   },
   {
    "t": "p",
-   "x": "Chair Poitras read the full list of annual City charges. They are two School Resource Officers ($135,958 combined), athletic field maintenance ($121,500), police game-supervision charges, fire/rescue event charges, lifeguard supervision, and fuel. The fuel charge is actually a benefit, since the district buys off the City's bulk contract rate. School Committee Vice Chair Katy Rice raised that the City uses school facilities (tennis courts, track, fields, playgrounds, even this meeting room) without charge. Rice proposed a Memorandum of Understanding (MOU), a written agreement, to offset these in-kind (non-cash) exchanges. Chair Poitras confirmed she, Chair Mancuso, and district staff are meeting with City officials that Friday specifically on this. They will also raise two further fairness questions: why the district doesn't earn interest on City-held funds, and why new-construction tax growth doesn't translate into added school funding."
+   "x": "Chair Poitras read the full list of annual City charges. They are:"
+  },
+  {
+   "t": "li",
+   "x": "Two School Resource Officers ($135,958 combined)."
+  },
+  {
+   "t": "li",
+   "x": "Athletic field maintenance ($121,500)."
+  },
+  {
+   "t": "li",
+   "x": "Police game-supervision charges."
+  },
+  {
+   "t": "li",
+   "x": "Fire/rescue event charges."
+  },
+  {
+   "t": "li",
+   "x": "Lifeguard supervision."
+  },
+  {
+   "t": "li",
+   "x": "Fuel."
+  },
+  {
+   "t": "p",
+   "x": "The fuel charge is actually a benefit, since the district buys off the City's bulk contract rate."
+  },
+  {
+   "t": "p",
+   "x": "School Committee Vice Chair Katy Rice raised that the City uses school facilities (tennis courts, track, fields, playgrounds, even this meeting room) without charge. Rice proposed a Memorandum of Understanding (MOU), a written agreement, to offset these in-kind (non-cash) exchanges."
+  },
+  {
+   "t": "p",
+   "x": "Chair Poitras confirmed she, Chair Mancuso, and district staff are meeting with City officials that Friday specifically on this. They will also raise two further fairness questions: why the district doesn't earn interest on City-held funds, and why new-construction tax growth doesn't translate into added school funding."
   },
   {
    "t": "label",
@@ -113,7 +149,11 @@
   },
   {
    "t": "p",
-   "x": "The $20,000 budgeted allowance to relocate the high school's Compass alternative-education program into the main building was revealed as a rough placeholder rather than a final figure. That compares with a $46,000 full quote with a dedicated bathroom, or $32,000 without. A member pressed that the renovation “is landing a bit sideways,” since it hadn't come up during Facilities Committee tours or prior budget discussions. The member also asked where it ranks against other capital priorities before committing funds. Staff confirmed it would likely qualify as an eligible capital-bond expense (paid for with money the City borrows) if funded that way instead."
+   "x": "The $20,000 budgeted allowance to relocate the high school's Compass alternative-education program into the main building was revealed as a rough placeholder rather than a final figure. That compares with a $46,000 full quote with a dedicated bathroom, or $32,000 without."
+  },
+  {
+   "t": "p",
+   "x": "A member pressed that the renovation “is landing a bit sideways,” since it hadn't come up during Facilities Committee tours or prior budget discussions. The member also asked where it ranks against other capital priorities before committing funds. Staff confirmed it would likely qualify as an eligible capital-bond expense (paid for with money the City borrows) if funded that way instead."
   },
   {
    "t": "label",
@@ -147,7 +187,15 @@
   },
   {
    "t": "p",
-   "x": "A member pressed Information Technology Director Barbara Morgan on whether a requested Network Solutions Specialist position was urgent this year. In response, staff disclosed that as of that Monday, the district received notice from Infinite Campus (its student information system) of a potential data breach. Morgan explained the department runs with one fewer position than in 2015, despite device counts roughly tripling since. She said the Westbrook Regional Vocational Center's role managing network access for students from up to twelve sending districts (about 80% of its enrollment) adds further complexity. Separately, Chair Mancuso asked district leadership to study whether scaling back one-to-one device distribution in grades K–4 could meaningfully reduce the technology budget. Dr. Lancia called it a worthy but complex, emotionally charged question. He said it deserves a longer-term community conversation."
+   "x": "A member pressed Information Technology Director Barbara Morgan on whether a requested Network Solutions Specialist position was urgent this year. In response, staff disclosed that as of that Monday, the district received notice from Infinite Campus (its student information system) of a potential data breach."
+  },
+  {
+   "t": "p",
+   "x": "Morgan explained the department runs with one fewer position than in 2015, despite device counts roughly tripling since. She said the Westbrook Regional Vocational Center's role managing network access for students from up to twelve sending districts (about 80% of its enrollment) adds further complexity."
+  },
+  {
+   "t": "p",
+   "x": "Separately, Chair Mancuso asked district leadership to study whether scaling back one-to-one device distribution in grades K–4 could meaningfully reduce the technology budget. Dr. Lancia called it a worthy but complex, emotionally charged question. He said it deserves a longer-term community conversation."
   },
   {
    "t": "label",
@@ -181,7 +229,31 @@
   },
   {
    "t": "p",
-   "x": "Smaller items resolved: a $1,000 reallocation within Transportation (tolls/fees to mechanic equipment). Roof costs were confirmed to vary by school based on actual invoices. New solar panels (resting on weighted mounts, not affixed) were confirmed not to interfere with roof servicing. Electricity budgets were confirmed reduced for fiscal year 2027 (FY27), reflecting solar savings as panels come online across four buildings by about the start of the new fiscal year. Water was budgeted up about 5.9%. The Performing Arts Center's $5,000 marketing line was confirmed deferred to next year, funded from its own surplus with no general-fund impact."
+   "x": "Smaller items resolved:"
+  },
+  {
+   "t": "li",
+   "x": "A $1,000 reallocation within Transportation (tolls/fees to mechanic equipment)."
+  },
+  {
+   "t": "li",
+   "x": "Roof costs were confirmed to vary by school based on actual invoices."
+  },
+  {
+   "t": "li",
+   "x": "New solar panels (resting on weighted mounts, not affixed) were confirmed not to interfere with roof servicing."
+  },
+  {
+   "t": "li",
+   "x": "Electricity budgets were confirmed reduced for fiscal year 2027 (FY27), reflecting solar savings as panels come online across four buildings by about the start of the new fiscal year."
+  },
+  {
+   "t": "li",
+   "x": "Water was budgeted up about 5.9%."
+  },
+  {
+   "t": "li",
+   "x": "The Performing Arts Center's $5,000 marketing line was confirmed deferred to next year, funded from its own surplus with no general-fund impact."
   },
   {
    "t": "p",

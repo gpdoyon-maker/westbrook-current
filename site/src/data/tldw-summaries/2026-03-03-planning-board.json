@@ -28,7 +28,11 @@
   },
   {
    "t": "p",
-   "x": "Chair Larry McWilliams called the meeting to order. At roll call, seven of nine seated members were present: McWilliams, Vice Chair John Turcotte, Lucas Schrage, Oriana Farnham, Robin Tannenbaum, Kevin Price, and Nancy Litrocapes. Jason Frazier and Karen Axelson were absent. There were no minutes to approve."
+   "x": "Chair Larry McWilliams called the meeting to order. At roll call, seven of nine seated members were present: McWilliams, Vice Chair John Turcotte, Lucas Schrage, Oriana Farnham, Robin Tannenbaum, Kevin Price, and Nancy Litrocapes."
+  },
+  {
+   "t": "p",
+   "x": "Jason Frazier and Karen Axelson were absent. There were no minutes to approve."
   },
   {
    "t": "label",
@@ -62,7 +66,15 @@
   },
   {
    "t": "p",
-   "x": "Barry Geyer (Jones & Beach Engineers), with Kevin King and Mike Harrison of Prompto, presented the same 50′×50′ warehouse addition to Building B and the same expanded parking. The board reviewed both at the February 3 workshop. The addition includes a 12,000-gallon tank farm. Impervious coverage (ground covered by buildings and pavement) increases from 42.5% to 48.1%, well under the 80% zoning maximum. A planned rain garden offsets this. The applicant confirmed all outstanding staff comments from the prior meeting have been addressed. There was no public comment and there were no board questions."
+   "x": "Barry Geyer (Jones & Beach Engineers), with Kevin King and Mike Harrison of Prompto, presented the same 50′×50′ warehouse addition to Building B and the same expanded parking. The board reviewed both at the February 3 workshop."
+  },
+  {
+   "t": "p",
+   "x": "The addition includes a 12,000-gallon tank farm. Impervious coverage (ground covered by buildings and pavement) increases from 42.5% to 48.1%, well under the 80% zoning maximum. A planned rain garden offsets this."
+  },
+  {
+   "t": "p",
+   "x": "The applicant confirmed all outstanding staff comments from the prior meeting have been addressed. There was no public comment and there were no board questions."
   },
   {
    "t": "label",
@@ -95,7 +107,15 @@
   },
   {
    "t": "p",
-   "x": "Member Nancy Litrocapes asked how staff assesses one requirement of the ordinance (a city law). The requirement is that a facility not burden on-site septic or off-site waste disposal. Spitella explained that code enforcement reviews documented septic sizing against plumbing-code requirements for the added capacity during permitting. This is because the use shifts from a conditional use to a permitted use. A conditional use is allowed only with board approval and conditions, so it requires board review. A permitted use is reviewed administratively by the code officer. An upgrade could be required before approval if an existing system is undersized."
+   "x": "Member Nancy Litrocapes asked how staff assesses one requirement of the ordinance (a city law). The requirement is that a facility not burden on-site septic or off-site waste disposal."
+  },
+  {
+   "t": "p",
+   "x": "Spitella explained that code enforcement reviews documented septic sizing against plumbing-code requirements for the added capacity during permitting. This is because the use shifts from a conditional use to a permitted use."
+  },
+  {
+   "t": "p",
+   "x": "A conditional use is allowed only with board approval and conditions, so it requires board review. A permitted use is reviewed administratively by the code officer. An upgrade could be required before approval if an existing system is undersized."
   },
   {
    "t": "label",
@@ -129,11 +149,35 @@
   },
   {
    "t": "p",
-   "x": "Pastor Joel Miller presented Redeemer Church's request for a Place of Worship conditional use in a 3,600-square-foot suite at 33 Elmwood Avenue. The building also houses a restaurant/event space (formerly a bowling alley/entertainment venue), currently open only for private events. The church currently meets at the American Legion near Riverbank Park but is limited to an early 8 AM slot due to other tenants there. It hopes to move to a more accessible 10 AM service time. It anticipates growth from an average attendance of about 25. The open sanctuary floor plan could seat an estimated 100–150, depending on final fire/code occupancy limits. Those limits will be determined separately from tonight's land-use review. The build-out adds a small nursery room for childcare during services. The congregation does not plan to use the building's existing kitchen facilities."
+   "x": "Pastor Joel Miller presented Redeemer Church's request for a Place of Worship conditional use in a 3,600-square-foot suite at 33 Elmwood Avenue. The building also houses a restaurant/event space (formerly a bowling alley/entertainment venue), currently open only for private events."
   },
   {
    "t": "p",
-   "x": "Staff (Rebecca Spitella) confirmed ample on-site parking. Staff also confirmed that the property owner has consented to the use and to the church applying. The restaurant use is currently limited to private events, so staff does not anticipate a parking or scheduling conflict between the two uses. Board members asked about potential parking conflicts (addressed above). They asked whether the kitchen would be used (no). They also asked whether the landlord might eventually allow the church to expand into more of the building if the congregation outgrows the current suite. Pastor Miller said that conversation hasn't happened yet. He said the church sees this as a near-term rather than permanent home. Board members expressed enthusiasm about the building being reactivated for community use."
+   "x": "The church currently meets at the American Legion near Riverbank Park but is limited to an early 8 AM slot due to other tenants there. It hopes to move to a more accessible 10 AM service time. It anticipates growth from an average attendance of about 25."
+  },
+  {
+   "t": "p",
+   "x": "The open sanctuary floor plan could seat an estimated 100–150, depending on final fire/code occupancy limits. Those limits will be determined separately from tonight's land-use review."
+  },
+  {
+   "t": "p",
+   "x": "The build-out adds a small nursery room for childcare during services. The congregation does not plan to use the building's existing kitchen facilities."
+  },
+  {
+   "t": "p",
+   "x": "Staff (Rebecca Spitella) confirmed ample on-site parking. Staff also confirmed that the property owner has consented to the use and to the church applying. The restaurant use is currently limited to private events, so staff does not anticipate a parking or scheduling conflict between the two uses."
+  },
+  {
+   "t": "p",
+   "x": "Board members asked about potential parking conflicts (addressed above). They asked whether the kitchen would be used (no). They also asked whether the landlord might eventually allow the church to expand into more of the building if the congregation outgrows the current suite."
+  },
+  {
+   "t": "p",
+   "x": "Pastor Miller said that conversation hasn't happened yet. He said the church sees this as a near-term rather than permanent home."
+  },
+  {
+   "t": "p",
+   "x": "Board members expressed enthusiasm about the building being reactivated for community use."
   },
   {
    "t": "label",

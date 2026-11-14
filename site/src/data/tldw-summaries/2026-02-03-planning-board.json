@@ -28,7 +28,11 @@
   },
   {
    "t": "p",
-   "x": "Chair Larry McWilliams called the meeting to order. At roll call, five of seven regular members were present: McWilliams, Kevin Price, Nancy Litrocapes, Jason Frazier, and Karen Axelson. Alternate Lucas Schrage was also present. Robin Tannenbaum and Vice Chair John Turcotte were absent. Alternate Oriana Farnham arrived a few minutes later and was seated for all substantive votes. This was the board's first meeting of 2026, since no meeting was held in January."
+   "x": "Chair Larry McWilliams called the meeting to order. At roll call, five of seven regular members were present: McWilliams, Kevin Price, Nancy Litrocapes, Jason Frazier, and Karen Axelson. Alternate Lucas Schrage was also present."
+  },
+  {
+   "t": "p",
+   "x": "Robin Tannenbaum and Vice Chair John Turcotte were absent. Alternate Oriana Farnham arrived a few minutes later and was seated for all substantive votes. This was the board's first meeting of 2026, since no meeting was held in January."
   },
   {
    "t": "p",
@@ -74,15 +78,31 @@
   },
   {
    "t": "p",
-   "x": "Craig Burris (Acorn Engineering, for the applicant) asked the board to change the phasing plan for a site plan approved August 6, 2024. The change adds a new Phase One. It would clear roughly 9.2 acres of the ~30-acre parcel, install erosion control, and remove stumps before the later construction phases. The goal is to make the site more visible and walkable for prospective donors. The applicant asked that this phase last zero to six months, rather than the originally proposed zero to three."
+   "x": "Craig Burris (Acorn Engineering, for the applicant) asked the board to change the phasing plan for a site plan approved August 6, 2024. The change adds a new Phase One. It would clear roughly 9.2 acres of the ~30-acre parcel, install erosion control, and remove stumps before the later construction phases."
   },
   {
    "t": "p",
-   "x": "Chair McWilliams raised extended concerns about approving large-scale clearing before the project's funding is secured. He suggested the board consider requiring replacement tree plantings elsewhere in the city as a condition. Staff (Rebecca Spitella) explained that the project is in an unusual position. It already has a valid site plan approval, so it must follow a more protective erosion-control process. Clearing undeveloped rural-zoned land would otherwise need no city permit at all. Member Oriana Farnham argued against adding conditions, on fairness grounds. She noted that a golf course, cemetery, or single-family homeowner could clear the same land without any Planning Board review. She also noted the funding challenges facing a minority-owned nonprofit in the current environment."
+   "x": "The goal is to make the site more visible and walkable for prospective donors. The applicant asked that this phase last zero to six months, rather than the originally proposed zero to three."
   },
   {
    "t": "p",
-   "x": "A temple board member explained the fundraising strategy. Major donors who know similar projects elsewhere often need to see a cleared, walkable site before they commit funding. The temple has secured enough to cover the clearing itself and is pursuing more financing for road construction. Member Jason Frazier asked about erosion control. The applicant's engineer described silt fencing installed before clearing, concentrated around wetlands and streams. Frazier later suggested a wildlife-friendly seed mix to stabilize the ground after clearing. The applicant agreed to consider it."
+   "x": "Chair McWilliams raised extended concerns about approving large-scale clearing before the project's funding is secured. He suggested the board consider requiring replacement tree plantings elsewhere in the city as a condition."
+  },
+  {
+   "t": "p",
+   "x": "Staff (Rebecca Spitella) explained that the project is in an unusual position. It already has a valid site plan approval, so it must follow a more protective erosion-control process. Clearing undeveloped rural-zoned land would otherwise need no city permit at all."
+  },
+  {
+   "t": "p",
+   "x": "Member Oriana Farnham argued against adding conditions, on fairness grounds. She noted that a golf course, cemetery, or single-family homeowner could clear the same land without any Planning Board review. She also noted the funding challenges facing a minority-owned nonprofit in the current environment."
+  },
+  {
+   "t": "p",
+   "x": "A temple board member explained the fundraising strategy. Major donors who know similar projects elsewhere often need to see a cleared, walkable site before they commit funding. The temple has secured enough to cover the clearing itself and is pursuing more financing for road construction."
+  },
+  {
+   "t": "p",
+   "x": "Member Jason Frazier asked about erosion control. The applicant's engineer described silt fencing installed before clearing, concentrated around wetlands and streams. Frazier later suggested a wildlife-friendly seed mix to stabilize the ground after clearing. The applicant agreed to consider it."
   },
   {
    "t": "label",
@@ -116,7 +136,23 @@
   },
   {
    "t": "p",
-   "x": "Barry Geyer (Jones & Beach Engineers), with Kevin King and Mike Harrison of Kay Brothers/Prompto 10 Minute Oil Change, presented a sketch plan. It adds a 50′×50′ addition to an existing warehouse building, plus more parking, at the 1.74-acre Industrial Park District property. The building is used for warehousing and regional oil distribution. Kay Brothers supplies 26 Prompto locations, none currently in Westbrook. It is not an active oil-change retail site. The addition raises impervious coverage (ground covered by buildings and pavement) from 42.5% to 48.1%, under the 80% zoning maximum. A planned rain garden would offset this. Board questions focused on oil-spill containment. Barry Geyer said the addition will hold three 4,000-gallon vertical tanks, each with secondary containment. Kevin King added that the facility files a Spill Prevention, Control, and Countermeasure (SPCC) report with the federal Environmental Protection Agency (EPA) and the Maine Department of Environmental Protection (DEP). That report requires 110% secondary containment. He also said the warehouse has a third layer of containment."
+   "x": "Barry Geyer (Jones & Beach Engineers), with Kevin King and Mike Harrison of Kay Brothers/Prompto 10 Minute Oil Change, presented a sketch plan. It adds a 50′×50′ addition to an existing warehouse building, plus more parking, at the 1.74-acre Industrial Park District property."
+  },
+  {
+   "t": "p",
+   "x": "The building is used for warehousing and regional oil distribution. Kay Brothers supplies 26 Prompto locations, none currently in Westbrook. It is not an active oil-change retail site."
+  },
+  {
+   "t": "p",
+   "x": "The addition raises impervious coverage (ground covered by buildings and pavement) from 42.5% to 48.1%, under the 80% zoning maximum. A planned rain garden would offset this."
+  },
+  {
+   "t": "p",
+   "x": "Board questions focused on oil-spill containment. Barry Geyer said the addition will hold three 4,000-gallon vertical tanks, each with secondary containment."
+  },
+  {
+   "t": "p",
+   "x": "Kevin King added that the facility files a Spill Prevention, Control, and Countermeasure (SPCC) report with the federal Environmental Protection Agency (EPA) and the Maine Department of Environmental Protection (DEP). That report requires 110% secondary containment. He also said the warehouse has a third layer of containment."
   },
   {
    "t": "label",
@@ -145,15 +181,31 @@
   },
   {
    "t": "p",
-   "x": "Assistant City Administrator Jennie Franceschi explained that the amendment responds to recent state legislation. It raises the number of unrelated children a home-based provider can care for without state licensing, from two to three, or four if the additional children are siblings. It also requires that small-scale child care facilities be allowed as a permitted use in all residential zones. The zoning officer would approve them administratively, so they would not come before the board. City Planner Rebecca Spitella detailed the related changes in terminology, which match state statute language. She also described added flexibility for play-area location and parking standards in limited cases. Commercial-zone standards are unchanged."
+   "x": "Assistant City Administrator Jennie Franceschi explained that the amendment responds to recent state legislation. It raises the number of unrelated children a home-based provider can care for without state licensing, from two to three, or four if the additional children are siblings."
   },
   {
    "t": "p",
-   "x": "Chair McWilliams raised extended questions about reduced oversight. Small home-based providers below the new licensing threshold need no license or city registration, so enforcement would depend only on complaints. Staff confirmed that is correct. They described a few children in a private home as having an impact comparable to a large family's own children living there. No vote was requested tonight. This returns for formal board action later."
+   "x": "The amendment also requires that small-scale child care facilities be allowed as a permitted use in all residential zones. The zoning officer would approve them administratively, so they would not come before the board."
   },
   {
    "t": "p",
-   "x": "Discussion also touched on broader state housing and zoning mandate legislation from the prior session. These mandates include minimum-density and reduced-parking rules for sewered areas. The City opposes them outside its designated growth areas. Staff planned to testify at a public hearing in Augusta the following week. They offered to share bill numbers and talking points with interested board members."
+   "x": "City Planner Rebecca Spitella detailed the related changes in terminology, which match state statute language. She also described added flexibility for play-area location and parking standards in limited cases. Commercial-zone standards are unchanged."
+  },
+  {
+   "t": "p",
+   "x": "Chair McWilliams raised extended questions about reduced oversight. Small home-based providers below the new licensing threshold need no license or city registration, so enforcement would depend only on complaints. Staff confirmed that is correct. They described a few children in a private home as having an impact comparable to a large family's own children living there."
+  },
+  {
+   "t": "p",
+   "x": "No vote was requested tonight. This returns for formal board action later."
+  },
+  {
+   "t": "p",
+   "x": "Discussion also touched on broader state housing and zoning mandate legislation from the prior session. These mandates include minimum-density and reduced-parking rules for sewered areas. The City opposes them outside its designated growth areas."
+  },
+  {
+   "t": "p",
+   "x": "Staff planned to testify at a public hearing in Augusta the following week. They offered to share bill numbers and talking points with interested board members."
   },
   {
    "t": "label",

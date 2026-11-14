@@ -28,7 +28,11 @@
   },
   {
    "t": "p",
-   "x": "With Chair Aaron Burns and Vice Chair Keith Richard both absent, City Attorney Gray Lewis opened the meeting and oversaw election of an interim Vice Chair for the night. Cliff McCarthy was nominated and elected, 3 in favor and 1 abstaining. Roll call: Nancy Heath, Sherri Quint, Kevin Moss, and Cliff McCarthy present; Burns, Richard, and Peter Mancuso absent. The Feb. 10, 2026 minutes were then approved, 4–0."
+   "x": "With Chair Aaron Burns and Vice Chair Keith Richard both absent, City Attorney Gray Lewis opened the meeting and oversaw election of an interim Vice Chair for the night. Cliff McCarthy was nominated and elected, 3 in favor and 1 abstaining."
+  },
+  {
+   "t": "p",
+   "x": "Roll call: Nancy Heath, Sherri Quint, Kevin Moss, and Cliff McCarthy present; Burns, Richard, and Peter Mancuso absent. The Feb. 10, 2026 minutes were then approved, 4–0."
   },
   {
    "t": "label",
@@ -58,7 +62,11 @@
   },
   {
    "t": "p",
-   "x": "Tax Map 44, Lot 87, Residential Growth Area 2. The request is for a 4.99-foot rear setback variance. A setback is the required distance from a property line, and a variance is permission to break a zoning rule because of a hardship. It would allow construction of a 26-by-26-foot attached garage with living space above. The applicant's name is rendered inconsistently in the recording as “Erica/Daniel Higginbottom” (as the item was introduced) and “Danielle Hagenbotham” (self-introduction). The correct spelling could not be confirmed because no agenda was published."
+   "x": "Tax Map 44, Lot 87, Residential Growth Area 2. The request is for a 4.99-foot rear setback variance. A setback is the required distance from a property line, and a variance is permission to break a zoning rule because of a hardship. It would allow construction of a 26-by-26-foot attached garage with living space above."
+  },
+  {
+   "t": "p",
+   "x": "The applicant's name is rendered inconsistently in the recording as “Erica/Daniel Higginbottom” (as the item was introduced) and “Danielle Hagenbotham” (self-introduction). The correct spelling could not be confirmed because no agenda was published."
   },
   {
    "t": "h",
@@ -67,7 +75,15 @@
   },
   {
    "t": "p",
-   "x": "The house was built in 1939. It was relocated to its current foundation in October 2005, per a building permit referenced during the hearing. At that time the original larger parcel was subdivided so a new house could be built on the adjoining lot. Code Enforcement Officer (CEO) Brian Stetson testified that the house appears to have been sited to align with the curve of the street. It was not placed squarely within the new, smaller lot's boundaries. That left it angled in a way that now makes a conventional rear addition impossible without a setback variance. The current owners, who bought the property in 2018, are requesting the variance to accommodate their growing family."
+   "x": "The house was built in 1939. It was relocated to its current foundation in October 2005, per a building permit referenced during the hearing. At that time the original larger parcel was subdivided so a new house could be built on the adjoining lot."
+  },
+  {
+   "t": "p",
+   "x": "Code Enforcement Officer (CEO) Brian Stetson testified that the house appears to have been sited to align with the curve of the street. It was not placed squarely within the new, smaller lot's boundaries. That left it angled in a way that now makes a conventional rear addition impossible without a setback variance."
+  },
+  {
+   "t": "p",
+   "x": "The current owners, who bought the property in 2018, are requesting the variance to accommodate their growing family."
   },
   {
    "t": "h",
@@ -76,7 +92,11 @@
   },
   {
    "t": "p",
-   "x": "The applicant testified the addition would let the family stay in a house and neighborhood they love rather than move. She had discussed the project informally with both abutting neighbors by text message (not formal letters). Both indicated support. One noted the addition would actually increase their own backyard privacy. She described considering alternatives (a smaller footprint, an angled addition, converting the existing deck). She concluded the lot's shape and the house's angled placement meant some setback intrusion was unavoidable. She cited a comparable, previously approved variance nearby and noted most neighborhood homes already have garages."
+   "x": "The applicant testified the addition would let the family stay in a house and neighborhood they love rather than move. She had discussed the project informally with both abutting neighbors by text message (not formal letters). Both indicated support. One noted the addition would actually increase their own backyard privacy."
+  },
+  {
+   "t": "p",
+   "x": "The applicant described considering alternatives (a smaller footprint, an angled addition, converting the existing deck). She concluded the lot's shape and the house's angled placement meant some setback intrusion was unavoidable. She cited a comparable, previously approved variance nearby and noted most neighborhood homes already have garages."
   },
   {
    "t": "h",
@@ -85,7 +105,47 @@
   },
   {
    "t": "p",
-   "x": "City Attorney Lewis walked the board through Westbrook's “practical difficulty” variance standard. First, strict enforcement must cause a practical difficulty (precluding a permitted use and significant economic injury). There are also six further criteria: unique property circumstances (not general neighborhood conditions); no undesirable change to neighborhood character or harm to abutting property values; the difficulty isn't the result of the applicant's or a prior owner's own actions; no feasible alternative exists; no adverse effect on the natural environment; and the property isn't within a shoreland area. Partway through, the board briefly realized it had skipped the “prior owner's actions” criterion, and circled back to it. It debated whether the 2005 relocation (apparently aligned to the street rather than the new lot lines) counted as a disqualifying prior action. City Attorney Lewis advised that “prior owner” is generally read to mean any prior owner. Lewis also advised that siting the house to suit the slope could still count as an action taken. Lewis said the board could interpret the criterion itself. The board concluded the placement read as an oversight rather than an intentional choice, and that the criterion should be read to mean an intentional act. CEO Stetson confirmed no neighbor complaints had been received and the property isn't in a resource-protection or shoreland zone."
+   "x": "City Attorney Lewis walked the board through Westbrook's “practical difficulty” variance standard. First, strict enforcement must cause a practical difficulty (precluding a permitted use and significant economic injury). There are also six further criteria:"
+  },
+  {
+   "t": "li",
+   "x": "Unique property circumstances (not general neighborhood conditions)."
+  },
+  {
+   "t": "li",
+   "x": "No undesirable change to neighborhood character or harm to abutting property values."
+  },
+  {
+   "t": "li",
+   "x": "The difficulty isn't the result of the applicant's or a prior owner's own actions."
+  },
+  {
+   "t": "li",
+   "x": "No feasible alternative exists."
+  },
+  {
+   "t": "li",
+   "x": "No adverse effect on the natural environment."
+  },
+  {
+   "t": "li",
+   "x": "The property isn't within a shoreland area."
+  },
+  {
+   "t": "p",
+   "x": "Partway through, the board briefly realized it had skipped the “prior owner's actions” criterion, and circled back to it. It debated whether the 2005 relocation (apparently aligned to the street rather than the new lot lines) counted as a disqualifying prior action."
+  },
+  {
+   "t": "p",
+   "x": "City Attorney Lewis advised that “prior owner” is generally read to mean any prior owner. Lewis also advised that siting the house to suit the slope could still count as an action taken. Lewis said the board could interpret the criterion itself."
+  },
+  {
+   "t": "p",
+   "x": "The board concluded the placement read as an oversight rather than an intentional choice, and that the criterion should be read to mean an intentional act."
+  },
+  {
+   "t": "p",
+   "x": "CEO Stetson confirmed no neighbor complaints had been received and the property isn't in a resource-protection or shoreland zone."
   },
   {
    "t": "p",

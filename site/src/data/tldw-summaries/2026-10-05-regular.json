@@ -28,7 +28,11 @@
   },
   {
    "t": "p",
-   "x": "President Jennifer Munro called the meeting to order. She noted a Committee of the Whole meeting would follow immediately after. The land acknowledgement statement was read. Roll call: Councilors McCambridge, Shaughnessy (Vice President), Chau, Faulkingham (joining remotely via Zoom), and Rairdon, plus President Munro, answered present — six of seven members. Councilor Anna Turcotte was named and marked absent. No minutes were presented for approval."
+   "x": "President Jennifer Munro called the meeting to order. She noted a Committee of the Whole meeting would follow immediately after. The land acknowledgement statement was read."
+  },
+  {
+   "t": "p",
+   "x": "Roll call: Councilors McCambridge, Shaughnessy (Vice President), Chau, Faulkingham (joining remotely via Zoom), and Rairdon, plus President Munro, answered present — six of seven members. Councilor Anna Turcotte was named and marked absent. No minutes were presented for approval."
   },
   {
    "t": "label",
@@ -62,7 +66,11 @@
   },
   {
    "t": "p",
-   "x": "Mayor David Morse spoke about the importance of Indigenous Peoples Day (observed Mon., Oct. 12) in Westbrook. He tied it to the Presumpscot River and Wabanaki history. He also pointed residents to the Chief Polin memorial on Conant Street. He then read a proclamation recognizing October 2026 as Domestic Violence Awareness Month. A representative from Through These Doors thanked the City. The representative described the organization's 24-hour helpline and county-wide partnerships with law enforcement."
+   "x": "Mayor David Morse spoke about the importance of Indigenous Peoples Day (observed Mon., Oct. 12) in Westbrook. He tied it to the Presumpscot River and Wabanaki history. He also pointed residents to the Chief Polin memorial on Conant Street."
+  },
+  {
+   "t": "p",
+   "x": "Mayor Morse then read a proclamation recognizing October 2026 as Domestic Violence Awareness Month. A representative from Through These Doors thanked the City. The representative described the organization's 24-hour helpline and county-wide partnerships with law enforcement."
   },
   {
    "t": "label",
@@ -91,11 +99,35 @@
   },
   {
    "t": "p",
-   "x": "Presenters were City Project Manager Robyn Saunders, Credere Associates (environmental consultants), a UConn Technical Assistance to Brownfields representative, and David Van Slyke. Van Slyke is senior counsel at Preti Flaherty. He is a former director of the national Superfund Enforcement Program at the U.S. Environmental Protection Agency, or EPA. Together they presented results of an ~18-month investigation into possible 1980s wastewater-sludge \"land spreading\" at Cornelia Warren Field, Fraser Field, and the field behind the high school/vocational center. The Maine Department of Environmental Protection (DEP) flagged these as unknown-history (\"Tier 4\") sites in 2025. The City itself signed the original land-application permits, so it couldn't use its own Brownfields grant. It used a Greater Portland Council of Governments grant, funded by the U.S. EPA, instead. The testing covered PFAS (per- and polyfluoroalkyl substances) and PFOS (perfluorooctane sulfonate)."
+   "x": "Presenters were City Project Manager Robyn Saunders, Credere Associates (environmental consultants), a UConn Technical Assistance to Brownfields representative, and David Van Slyke. Van Slyke is senior counsel at Preti Flaherty. He is a former director of the national Superfund Enforcement Program at the U.S. Environmental Protection Agency, or EPA."
   },
   {
    "t": "p",
-   "x": "Credere tested both surface soil (statistically composited samples, meaning several samples combined) and deeper core samples at each site. All results came back below Maine DEP's Remedial Action Guidelines. They were broadly consistent with ambient background PFAS levels rather than a point-source release (a release from one specific source). At the high school site, results came back even lower. Testing there was limited to the existing baseball fields, since the historically permitted area is now under the vocational building/parking lot. Subsurface samples were lower than surface samples at every site. A Maine DEP letter handed to councilors at the meeting states the fields \"may continue to be used as recreational and athletic fields\" and \"pose a minimal risk as such.\" The formal Phase II assessment reports are still in draft, pending EPA and Maine DEP review. They are expected to be finalized around early November. No material change is anticipated. A public webpage, a list of frequently asked questions, and a press release were set to publish the next day."
+   "x": "Together these presenters presented results of an ~18-month investigation into possible 1980s wastewater-sludge \"land spreading\" at Cornelia Warren Field, Fraser Field, and the field behind the high school/vocational center. The Maine Department of Environmental Protection (DEP) flagged these as unknown-history (\"Tier 4\") sites in 2025."
+  },
+  {
+   "t": "p",
+   "x": "The City itself signed the original land-application permits, so it couldn't use its own Brownfields grant. It used a Greater Portland Council of Governments grant, funded by the U.S. EPA, instead."
+  },
+  {
+   "t": "p",
+   "x": "The testing covered PFAS (per- and polyfluoroalkyl substances) and PFOS (perfluorooctane sulfonate)."
+  },
+  {
+   "t": "p",
+   "x": "Credere tested both surface soil (statistically composited samples, meaning several samples combined) and deeper core samples at each site. All results came back below Maine DEP's Remedial Action Guidelines. They were broadly consistent with ambient background PFAS levels rather than a point-source release (a release from one specific source)."
+  },
+  {
+   "t": "p",
+   "x": "At the high school site, results came back even lower. Testing there was limited to the existing baseball fields, since the historically permitted area is now under the vocational building/parking lot."
+  },
+  {
+   "t": "p",
+   "x": "Subsurface samples were lower than surface samples at every site. A Maine DEP letter handed to councilors at the meeting states the fields \"may continue to be used as recreational and athletic fields\" and \"pose a minimal risk as such.\""
+  },
+  {
+   "t": "p",
+   "x": "The formal Phase II assessment reports are still in draft, pending EPA and Maine DEP review. They are expected to be finalized around early November. No material change is anticipated. A public webpage, a list of frequently asked questions, and a press release were set to publish the next day."
   },
   {
    "t": "label",
@@ -139,7 +171,15 @@
   },
   {
    "t": "p",
-   "x": "City Clerk Ellis Ledoux announced that Oct. 5 was the first day of in-person absentee voting for the Nov. 3 election at City Hall. Extended hours are Wed. Oct. 21 and Oct. 28 (until 7 PM) and Sat. Oct. 17 (8 AM–noon). The deadline to vote absentee without a special circumstance is Oct. 29."
+   "x": "City Clerk Ellis Ledoux announced that Oct. 5 was the first day of in-person absentee voting for the Nov. 3 election at City Hall."
+  },
+  {
+   "t": "p",
+   "x": "Extended hours are Wed. Oct. 21 and Oct. 28 (until 7 PM) and Sat. Oct. 17 (8 AM–noon)."
+  },
+  {
+   "t": "p",
+   "x": "The deadline to vote absentee without a special circumstance is Oct. 29."
   },
   {
    "t": "p",
@@ -185,7 +225,27 @@
   },
   {
    "t": "p",
-   "x": "Operations Manager Doug Eaton returned with the cost data requested at the prior meeting. The order is a $64,891.31 purchase of two Vermac portable traffic signals. Eaton gave these figures: ~15-year municipal life expectancy; 1–2 year component/unit warranty; and an estimated ~$15,000/year (»$88,000 over a conservative 10-year life) in flagger-wage savings. This order was up for its second and final reading, the last and binding vote."
+   "x": "Operations Manager Doug Eaton returned with the cost data requested at the prior meeting. The order is a $64,891.31 purchase of two Vermac portable traffic signals."
+  },
+  {
+   "t": "p",
+   "x": "Eaton gave these figures:"
+  },
+  {
+   "t": "li",
+   "x": "~15-year municipal life expectancy"
+  },
+  {
+   "t": "li",
+   "x": "1–2 year component/unit warranty"
+  },
+  {
+   "t": "li",
+   "x": "an estimated ~$15,000/year (»$88,000 over a conservative 10-year life) in flagger-wage savings"
+  },
+  {
+   "t": "p",
+   "x": "This order was up for its second and final reading, the last and binding vote."
   },
   {
    "t": "label",
@@ -223,7 +283,31 @@
   },
   {
    "t": "p",
-   "x": "This Resolve, a formal decision by the Council, confirms the Mayor's appointment of Bruno Inácio as Finance Director and Municipal Treasurer. The appointment is effective September 28, 2026. It falls under Code of Ordinances §68-16 (the City's collection of laws). Administrator Holmes introduced his background. He has 20+ years in public/private finance and operations leadership. Most recently he was Director of Finance and Administrative Services for the Maine Secretary of State, overseeing a $70M+ budget. Before that he was Director of Public Services for the Maine Bureau of Motor Vehicles. He also spent ~8 years at UNUM in corporate strategy/operations roles. Inácio introduced himself briefly to the Council."
+   "x": "This Resolve, a formal decision by the Council, confirms the Mayor's appointment of Bruno Inácio as Finance Director and Municipal Treasurer. The appointment is effective September 28, 2026. It falls under Code of Ordinances §68-16 (the City's collection of laws)."
+  },
+  {
+   "t": "p",
+   "x": "Administrator Holmes introduced his background:"
+  },
+  {
+   "t": "li",
+   "x": "He has 20+ years in public/private finance and operations leadership."
+  },
+  {
+   "t": "li",
+   "x": "Most recently he was Director of Finance and Administrative Services for the Maine Secretary of State, overseeing a $70M+ budget."
+  },
+  {
+   "t": "li",
+   "x": "Before that he was Director of Public Services for the Maine Bureau of Motor Vehicles."
+  },
+  {
+   "t": "li",
+   "x": "He also spent ~8 years at UNUM in corporate strategy/operations roles."
+  },
+  {
+   "t": "p",
+   "x": "Inácio introduced himself briefly to the Council."
   },
   {
    "t": "label",
@@ -261,7 +345,11 @@
   },
   {
    "t": "p",
-   "x": "A public hearing was required and was held with no speakers. The order sets annual General Assistance benefit maximums (Appendices A, B, D, E, F, G, H). They cover Oct. 1, 2026 – Sept. 30, 2027. This is under Maine Department of Health and Human Services requirements. Appendix C (housing maximums) was included for information only and was not adopted. This preserves the City's negotiating leverage with landlords."
+   "x": "A public hearing was required and was held with no speakers. The order sets annual General Assistance benefit maximums (Appendices A, B, D, E, F, G, H). They cover Oct. 1, 2026 – Sept. 30, 2027. This is under Maine Department of Health and Human Services requirements."
+  },
+  {
+   "t": "p",
+   "x": "Appendix C (housing maximums) was included for information only and was not adopted. This preserves the City's negotiating leverage with landlords."
   },
   {
    "t": "label",
@@ -319,7 +407,11 @@
   },
   {
    "t": "p",
-   "x": "All six orders below passed first reading (the first of two required votes) unanimously, 6–0. There was little or no discussion beyond staff's brief context. Five returned for second and final reading (the last and binding vote) as a block at the Oct 19, 2026 Special Meeting. Order 2026-113 was considered separately and amended that night. See that meeting's summary for the final votes."
+   "x": "All six orders below passed first reading (the first of two required votes) unanimously, 6–0. There was little or no discussion beyond staff's brief context."
+  },
+  {
+   "t": "p",
+   "x": "Five returned for second and final reading (the last and binding vote) as a block at the Oct 19, 2026 Special Meeting. Order 2026-113 was considered separately and amended that night. See that meeting's summary for the final votes."
   },
   {
    "t": "h",
@@ -336,7 +428,11 @@
   },
   {
    "t": "p",
-   "x": "$71,476 bid award to Casco Bay Ford (Yarmouth, Maine) for a 2027 Ford F-350. It replaces Unit 7, a medium-duty pickup used to haul departmental trailers and forestry equipment. That pickup has been out of service ~2 years. Two bids were received; Casco Bay Ford was lowest."
+   "x": "$71,476 bid award to Casco Bay Ford (Yarmouth, Maine) for a 2027 Ford F-350. It replaces Unit 7, a medium-duty pickup used to haul departmental trailers and forestry equipment. That pickup has been out of service ~2 years."
+  },
+  {
+   "t": "p",
+   "x": "Two bids were received; Casco Bay Ford was lowest."
   },
   {
    "t": "label",
@@ -501,7 +597,35 @@
   },
   {
    "t": "p",
-   "x": "This order amends the landslide-vulnerability-assessment project's vendor list and funding. The amounts are: $22,000 (University of Maine College of Engineering, geotechnical work); $27,960 (Credere Associates, federal grant administration/contractor management); $60,999 (Camoin Associates, policy development/economic impact assessment); $37,175 (Soil Metrics, subsurface investigation); and $5,000/$10,000 stipends, or extra pay (Soil Metrics/Apex Companies), for technical advisory panel participation. The money comes from congressionally directed spending (Senators King and Collins) plus matching funds from the Maine Department of Transportation Infrastructure Adaptation Fund. Project completion is targeted for September 2027."
+   "x": "This order amends the landslide-vulnerability-assessment project's vendor list and funding."
+  },
+  {
+   "t": "p",
+   "x": "The amounts are:"
+  },
+  {
+   "t": "li",
+   "x": "$22,000 (University of Maine College of Engineering, geotechnical work)"
+  },
+  {
+   "t": "li",
+   "x": "$27,960 (Credere Associates, federal grant administration/contractor management)"
+  },
+  {
+   "t": "li",
+   "x": "$60,999 (Camoin Associates, policy development/economic impact assessment)"
+  },
+  {
+   "t": "li",
+   "x": "$37,175 (Soil Metrics, subsurface investigation)"
+  },
+  {
+   "t": "li",
+   "x": "$5,000/$10,000 stipends, or extra pay (Soil Metrics/Apex Companies), for technical advisory panel participation"
+  },
+  {
+   "t": "p",
+   "x": "The money comes from congressionally directed spending (Senators King and Collins) plus matching funds from the Maine Department of Transportation Infrastructure Adaptation Fund. Project completion is targeted for September 2027."
   },
   {
    "t": "label",

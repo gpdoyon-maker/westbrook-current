@@ -28,7 +28,15 @@
   },
   {
    "t": "p",
-   "x": "First meeting of 2026. Roll call: Councilors Shaughnessy, McCambridge, Chau, Turcotte, Faulkingham, and Rairdon answered present. That is six of seven members. President Jennifer Munro was not named at roll call at all. The President and Vice President were absent. Shaughnessy did join and vote by Zoom but did not preside. The Council elected Councilor Victor Chau as President Pro Tem, a temporary presiding officer, to run tonight's meeting."
+   "x": "First meeting of 2026. Roll call: Councilors Shaughnessy, McCambridge, Chau, Turcotte, Faulkingham, and Rairdon answered present. That is six of seven members."
+  },
+  {
+   "t": "p",
+   "x": "President Jennifer Munro was not named at roll call at all. The President and Vice President were absent."
+  },
+  {
+   "t": "p",
+   "x": "Shaughnessy did join and vote by Zoom but did not preside. The Council elected Councilor Victor Chau as President Pro Tem, a temporary presiding officer, to run tonight's meeting."
   },
   {
    "t": "label",
@@ -66,7 +74,11 @@
   },
   {
    "t": "p",
-   "x": "Workers' compensation savings: the City's 2026 premium came in at $360,373. That is down sharply from $556,683 in 2025. The drop was driven by the experience-modification rate improving from 1.08 to 0.84. The FY26 budget had set aside $645,000. This is a large favorable variance, meaning a gap between the budget and the actual cost, heading into next year's budget."
+   "x": "Workers' compensation savings: the City's 2026 premium came in at $360,373. That is down sharply from $556,683 in 2025. The drop was driven by the experience-modification rate improving from 1.08 to 0.84."
+  },
+  {
+   "t": "p",
+   "x": "The FY26 budget had set aside $645,000. This is a large favorable variance, meaning a gap between the budget and the actual cost, heading into next year's budget."
   },
   {
    "t": "p",
@@ -103,7 +115,15 @@
   },
   {
    "t": "p",
-   "x": "A Dec. 23–24 snowstorm caused Casella Waste to cancel routes. That week's collection was already shifted for Christmas, so no makeup day was available. Casella told the City it would let residents drop off trash at its County Road facility all week. But when a resident tried to, staff at the gate turned him away. They said Westbrook wasn't part of their program. Director Eric Dudley made calls up the chain and drove to the transfer station himself to get it resolved. Missed streets continued into the following week. The Wednesday, Dec. 31 route was so backed up that Casella brought employees in on their New Year's Day holiday to finish it."
+   "x": "A Dec. 23–24 snowstorm caused Casella Waste to cancel routes. That week's collection was already shifted for Christmas, so no makeup day was available."
+  },
+  {
+   "t": "p",
+   "x": "Casella told the City it would let residents drop off trash at its County Road facility all week. But when a resident tried to, staff at the gate turned him away. They said Westbrook wasn't part of their program."
+  },
+  {
+   "t": "p",
+   "x": "Director Eric Dudley made calls up the chain and drove to the transfer station himself to get it resolved. Missed streets continued into the following week. The Wednesday, Dec. 31 route was so backed up that Casella brought employees in on their New Year's Day holiday to finish it."
   },
   {
    "t": "label",
@@ -134,7 +154,11 @@
   },
   {
    "t": "p",
-   "x": "Dudley said the City checked Waste Management as an alternative in 2020 and found it probably 30–40% more expensive. He said he doesn't know whether Waste Management currently runs automated curbside collection in Maine. He said the City is checking whether it can offer an option. The City's relationship with Casella goes back 30+ years. The current 10-year contract began in 2020."
+   "x": "Dudley said the City checked Waste Management as an alternative in 2020 and found it probably 30–40% more expensive. He said he doesn't know whether Waste Management currently runs automated curbside collection in Maine. He said the City is checking whether it can offer an option."
+  },
+  {
+   "t": "p",
+   "x": "The City's relationship with Casella goes back 30+ years. The current 10-year contract began in 2020."
   },
   {
    "t": "h",
@@ -233,11 +257,19 @@
   },
   {
    "t": "p",
-   "x": "These three orders were up for final reading, the final, binding vote. Moved together by title only: Order 2025-169, a non-union pay plan adjustment of $99,101.44. It includes a 4% cost-of-living adjustment and grade corrections for 9 employees below market. Order 2025-170, a $48,671 reimbursement to the"
+   "x": "These three orders were up for final reading, the final, binding vote. Moved together by title only:"
   },
   {
-   "t": "p",
-   "x": "City of South Portland for a lateral-hire officer's training costs (required by state law). Order 2025-171 accepts $38,621.40 in Bureau of Highway Safety traffic-enforcement grant funds across six categories."
+   "t": "li",
+   "x": "Order 2025-169, a non-union pay plan adjustment of $99,101.44. It includes a 4% cost-of-living adjustment and grade corrections for 9 employees below market."
+  },
+  {
+   "t": "li",
+   "x": "Order 2025-170, a $48,671 reimbursement to the City of South Portland for a lateral-hire officer's training costs (required by state law)."
+  },
+  {
+   "t": "li",
+   "x": "Order 2025-171 accepts $38,621.40 in Bureau of Highway Safety traffic-enforcement grant funds across six categories."
   },
   {
    "t": "label",
@@ -333,7 +365,11 @@
   },
   {
    "t": "p",
-   "x": "Confirms reappointment of Jason Frazier, Nancy Litrocapes, and John Turcott to the Planning Board. It also confirms reappointment of Aaron Burns, Kevin Moss, and Sherri Quint to the Zoning Board of Appeals. The list also covers Nancy Milton-Heath for a 2-year term on the Zoning Board of Appeals, as an administrative correction. Councilor Anna Turcotte recused herself, meaning she stepped out of the vote because of a conflict of interest. She cited John Turcott's inclusion on the list (relationship not stated on the record)."
+   "x": "Confirms reappointment of Jason Frazier, Nancy Litrocapes, and John Turcott to the Planning Board. It also confirms reappointment of Aaron Burns, Kevin Moss, and Sherri Quint to the Zoning Board of Appeals. The list also covers Nancy Milton-Heath for a 2-year term on the Zoning Board of Appeals, as an administrative correction."
+  },
+  {
+   "t": "p",
+   "x": "Councilor Anna Turcotte recused herself, meaning she stepped out of the vote because of a conflict of interest. She cited John Turcott's inclusion on the list (relationship not stated on the record)."
   },
   {
    "t": "label",
@@ -358,7 +394,11 @@
   },
   {
    "t": "p",
-   "x": "One reading only. This amends the Code of Ordinances (§310-71, §310-106), the City's collection of laws. It removes the parking ban on the west side of Foster Street (the east side stays no-parking). It also lets the Police Chief or City Engineer designate, and later remove, accessible parking spaces citywide as needs change. That way a specific location is not hard-coded into the ordinance itself."
+   "x": "One reading only. This amends the Code of Ordinances (§310-71, §310-106), the City's collection of laws."
+  },
+  {
+   "t": "p",
+   "x": "It removes the parking ban on the west side of Foster Street (the east side stays no-parking). It also lets the Police Chief or City Engineer designate, and later remove, accessible parking spaces citywide as needs change. That way a specific location is not hard-coded into the ordinance itself."
   },
   {
    "t": "p",
@@ -383,7 +423,15 @@
   },
   {
    "t": "p",
-   "x": "Rairdon argued a commercial-plates-only loading zone would still let service vehicles reach Wood's property. He said it would also discourage long-term parking and preserve room for fire apparatus. Director Dudley clarified that loading zones legally require a commercial plate. That excludes an ordinary lawn-care worker's or plumber's personal vehicle, undercutting the idea in practice. The amendment failed, 0–6. Rairdon's follow-up suggestion of general 2-hour parking in the same stretch also died for lack of a second."
+   "x": "Rairdon argued a commercial-plates-only loading zone would still let service vehicles reach Wood's property. He said it would also discourage long-term parking and preserve room for fire apparatus."
+  },
+  {
+   "t": "p",
+   "x": "Director Dudley clarified that loading zones legally require a commercial plate. That excludes an ordinary lawn-care worker's or plumber's personal vehicle, undercutting the idea in practice."
+  },
+  {
+   "t": "p",
+   "x": "The amendment failed, 0–6. Rairdon's follow-up suggestion of general 2-hour parking in the same stretch also died for lack of a second."
   },
   {
    "t": "label",

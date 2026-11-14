@@ -32,7 +32,27 @@
   },
   {
    "t": "p",
-   "x": "Back-to-school calendar: staff orientation and professional development days August 25–28. Grades 1–12 begin August 31 (no staggered start). A series of building open houses runs August 31–September 15. The first day of kindergarten is September 2 (early release). The first day of preschool is September 3 (about 90 students)."
+   "x": "Back-to-school calendar:"
+  },
+  {
+   "t": "li",
+   "x": "Staff orientation and professional development days August 25–28."
+  },
+  {
+   "t": "li",
+   "x": "Grades 1–12 begin August 31 (no staggered start)."
+  },
+  {
+   "t": "li",
+   "x": "A series of building open houses runs August 31–September 15."
+  },
+  {
+   "t": "li",
+   "x": "The first day of kindergarten is September 2 (early release)."
+  },
+  {
+   "t": "li",
+   "x": "The first day of preschool is September 3 (about 90 students)."
   },
   {
    "t": "p",
@@ -99,15 +119,39 @@
   },
   {
    "t": "p",
-   "x": "A community Facebook post invited Westbrook teachers to share their classroom “Amazon wish lists.” After that, a school committee member publicly said teachers' participation violated school policy. The member also publicly supported other social-media posts. Those posts called it a violation of state law and professional ethics. Chair Mancuso devoted an extended, prepared statement to the matter."
+   "x": "A community Facebook post invited Westbrook teachers to share their classroom “Amazon wish lists.” After that, a school committee member publicly said teachers' participation violated school policy."
   },
   {
    "t": "p",
-   "x": "She reported that the district's legal counsel confirmed that no Maine law prohibits or discourages staff from sharing classroom wish lists. She cited two board policies. Policy BCA is the committee's value statement, holding that “public statements criticizing employees are inappropriate.” Policy BDB designates the chair as the board's public spokesperson except where specifically delegated. She reminded members that personal social-media posts about school matters are permitted. But they should come from a “personal perspective as a community member or a parent,” not on behalf of the committee."
+   "x": "The member also publicly supported other social-media posts. Those posts called it a violation of state law and professional ethics. Chair Mancuso devoted an extended, prepared statement to the matter."
   },
   {
    "t": "p",
-   "x": "She cited a Portland Press Herald report that 94% of Maine public school teachers buy classroom supplies without reimbursement. The report used National Center for Education Statistics data. She also cited a 2019 Maine Center for Economic Policy estimate. It found that Maine teachers spend an average of $356 annually on their own students. She announced that the Westbrook Education Foundation will work with Dr. Lancia on a permanent community-donation landing page. She also announced that she and Katy Rice will work with Dr. Lancia to better quantify staff out-of-pocket spending ahead of the next budget process. Separately, she named Erin Cavallaro and Allison Brunette as the committee's representatives to Metro's new bus-pass advisory committee."
+   "x": "She reported that the district's legal counsel confirmed that no Maine law prohibits or discourages staff from sharing classroom wish lists."
+  },
+  {
+   "t": "p",
+   "x": "She cited two board policies. Policy BCA is the committee's value statement, holding that “public statements criticizing employees are inappropriate.” Policy BDB designates the chair as the board's public spokesperson except where specifically delegated."
+  },
+  {
+   "t": "p",
+   "x": "She reminded members that personal social-media posts about school matters are permitted. But they should come from a “personal perspective as a community member or a parent,” not on behalf of the committee."
+  },
+  {
+   "t": "p",
+   "x": "She cited a Portland Press Herald report that 94% of Maine public school teachers buy classroom supplies without reimbursement. The report used National Center for Education Statistics data. She also cited a 2019 Maine Center for Economic Policy estimate. It found that Maine teachers spend an average of $356 annually on their own students."
+  },
+  {
+   "t": "li",
+   "x": "She announced that the Westbrook Education Foundation will work with Dr. Lancia on a permanent community-donation landing page."
+  },
+  {
+   "t": "li",
+   "x": "She also announced that she and Katy Rice will work with Dr. Lancia to better quantify staff out-of-pocket spending ahead of the next budget process."
+  },
+  {
+   "t": "li",
+   "x": "Separately, she named Erin Cavallaro and Allison Brunette as the committee's representatives to Metro's new bus-pass advisory committee."
   },
   {
    "t": "label",
@@ -137,7 +181,43 @@
   },
   {
    "t": "p",
-   "x": "Topics from the 5:00 PM Finance Committee meeting held earlier that evening included several items. The FY27 federal Title allocation is $1.2 million, with funds shifted to support Title I teacher salary/benefits. A payroll specialist search is ongoing. The proposed special-education transportation van lease is on the agenda (see item 12.3). Two new part-time School Nutrition positions at Canal School were also discussed (see item 12.2). FY26 is still being closed out, with auditors arriving the following Monday. There was a concern about unusually high Sacarappa School electrical costs relative to WRVC, with usage data requested. Savings from the Siemens solar project continue. There was also a request to file the Adult Education warrant separately for audit-trail clarity. The Chair suggested a joint Finance/Facilities presentation from Siemens' own data representative on future energy projects. Poitras agreed to coordinate with Facilities Chair Brooke Reed."
+   "x": "Topics from the 5:00 PM Finance Committee meeting held earlier that evening included several items."
+  },
+  {
+   "t": "li",
+   "x": "The FY27 federal Title allocation is $1.2 million, with funds shifted to support Title I teacher salary/benefits."
+  },
+  {
+   "t": "li",
+   "x": "A payroll specialist search is ongoing."
+  },
+  {
+   "t": "li",
+   "x": "The proposed special-education transportation van lease is on the agenda (see item 12.3)."
+  },
+  {
+   "t": "li",
+   "x": "Two new part-time School Nutrition positions at Canal School were also discussed (see item 12.2)."
+  },
+  {
+   "t": "li",
+   "x": "FY26 is still being closed out, with auditors arriving the following Monday."
+  },
+  {
+   "t": "li",
+   "x": "There was a concern about unusually high Sacarappa School electrical costs relative to WRVC, with usage data requested."
+  },
+  {
+   "t": "li",
+   "x": "Savings from the Siemens solar project continue."
+  },
+  {
+   "t": "li",
+   "x": "There was also a request to file the Adult Education warrant separately for audit-trail clarity."
+  },
+  {
+   "t": "p",
+   "x": "The Chair suggested a joint Finance/Facilities presentation from Siemens' own data representative on future energy projects. Poitras agreed to coordinate with Facilities Chair Brooke Reed."
   },
   {
    "t": "label",
@@ -167,7 +247,27 @@
   },
   {
    "t": "p",
-   "x": "Positions spanned every building. At WRVC: a Career and Technical Education Exploratory Teacher and a Business Instructor. At Westbrook Middle School: a Grade 5 Math Teacher, Alternative Education Teacher, Grade 7 English Language Arts (ELA) Teacher, Special Education Resource Teacher, Grade 5 ELA Teacher, and Grade 7 Science Teacher. At Westbrook High School: an English Teacher, a half-time Science Teacher, and a World Studies Teacher. At Canal School: a half-time Pre-K Multilingual Teacher, a Pre-K Teacher, and a Pre-K Special Education Teacher. At Sacarappa School: two Kindergarten Teachers, a Grade 3 Teacher, a Multilingual Teacher, and a Special Education FLS Teacher."
+   "x": "Positions spanned every building."
+  },
+  {
+   "t": "li",
+   "x": "At WRVC: a Career and Technical Education Exploratory Teacher and a Business Instructor."
+  },
+  {
+   "t": "li",
+   "x": "At Westbrook Middle School: a Grade 5 Math Teacher, Alternative Education Teacher, Grade 7 English Language Arts (ELA) Teacher, Special Education Resource Teacher, Grade 5 ELA Teacher, and Grade 7 Science Teacher."
+  },
+  {
+   "t": "li",
+   "x": "At Westbrook High School: an English Teacher, a half-time Science Teacher, and a World Studies Teacher."
+  },
+  {
+   "t": "li",
+   "x": "At Canal School: a half-time Pre-K Multilingual Teacher, a Pre-K Teacher, and a Pre-K Special Education Teacher."
+  },
+  {
+   "t": "li",
+   "x": "At Sacarappa School: two Kindergarten Teachers, a Grade 3 Teacher, a Multilingual Teacher, and a Special Education FLS Teacher."
   },
   {
    "t": "p",
@@ -262,8 +362,20 @@
    "x": "Discussion Summary"
   },
   {
-   "t": "p",
-   "x": "September 9, 5:00 PM: Educational Programs Committee (Central Office). September 9, 7:00 PM: regular School Committee meeting (Room 114). September 16, 5:00 PM: Facilities Committee's year-kickoff meeting (Canal School). September 23, 5:00 PM: Policy Committee's year-kickoff meeting (Central Office)."
+   "t": "li",
+   "x": "September 9, 5:00 PM: Educational Programs Committee (Central Office)."
+  },
+  {
+   "t": "li",
+   "x": "September 9, 7:00 PM: regular School Committee meeting (Room 114)."
+  },
+  {
+   "t": "li",
+   "x": "September 16, 5:00 PM: Facilities Committee's year-kickoff meeting (Canal School)."
+  },
+  {
+   "t": "li",
+   "x": "September 23, 5:00 PM: Policy Committee's year-kickoff meeting (Central Office)."
   },
   {
    "t": "label",
@@ -293,7 +405,15 @@
   },
   {
    "t": "p",
-   "x": "Erin Cavallaro read two public comments supporting classroom wish lists. Rebecca Allen, a second-grade teacher at Sacarappa, said she is grateful for her supply budget. Together with reimbursement and donated supplies from Ruth's, it covers her classroom necessities. After 18 years of teaching, her wish list is enrichment items, though she noted that isn't the case for all teachers. Aaron Druin, a first-grade teacher at Canal, framed wish lists as a voluntary supplement that can coexist with continued advocacy for strong school funding."
+   "x": "Erin Cavallaro read two public comments supporting classroom wish lists."
+  },
+  {
+   "t": "p",
+   "x": "Rebecca Allen, a second-grade teacher at Sacarappa, said she is grateful for her supply budget. Together with reimbursement and donated supplies from Ruth's, it covers her classroom necessities. After 18 years of teaching, her wish list is enrichment items, though she noted that isn't the case for all teachers."
+  },
+  {
+   "t": "p",
+   "x": "Aaron Druin, a first-grade teacher at Canal, framed wish lists as a voluntary supplement that can coexist with continued advocacy for strong school funding."
   },
   {
    "t": "label",
@@ -334,7 +454,15 @@
   },
   {
    "t": "p",
-   "x": "Poitras added a Finance Committee data point: $146,000 in unspent books-and-supplies budget districtwide last year (Sacarappa at roughly 18–19% unspent, Canal at 19.42%). The Chair responded that the finance director had cautioned about this figure. It spans many smaller individual accounts rather than one large pool. The Chair suggested that the administration look at whether supply funds are being tracked and maximized well from year to year. This was suggested as a budget-season follow-up."
+   "x": "Poitras added a Finance Committee data point: $146,000 in unspent books-and-supplies budget districtwide last year (Sacarappa at roughly 18–19% unspent, Canal at 19.42%)."
+  },
+  {
+   "t": "p",
+   "x": "The Chair responded that the finance director had cautioned about this figure. It spans many smaller individual accounts rather than one large pool."
+  },
+  {
+   "t": "p",
+   "x": "The Chair suggested that the administration look at whether supply funds are being tracked and maximized well from year to year. This was suggested as a budget-season follow-up."
   },
   {
    "t": "label",

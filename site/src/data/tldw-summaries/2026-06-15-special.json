@@ -28,7 +28,19 @@
   },
   {
    "t": "p",
-   "x": "Jerry Bryant's retirement became official Friday, June 5 (City Hall closed early for a staff send-off). The planned succession is now complete. Angela Holmes is City Administrator, and Monique Cornett is now the permanent Director of Economic & Community Development. The City has hired a new Tax Collector, Melissa Littlehale (starting June 22). Laura King continues as Interim Finance Director ahead of a search for a permanent Finance Director (Councilor Chau will join the interview team)."
+   "x": "Jerry Bryant's retirement became official Friday, June 5 (City Hall closed early for a staff send-off). The planned succession is now complete."
+  },
+  {
+   "t": "li",
+   "x": "Angela Holmes is City Administrator, and Monique Cornett is now the permanent Director of Economic & Community Development."
+  },
+  {
+   "t": "li",
+   "x": "The City has hired a new Tax Collector, Melissa Littlehale (starting June 22)."
+  },
+  {
+   "t": "li",
+   "x": "Laura King continues as Interim Finance Director ahead of a search for a permanent Finance Director (Councilor Chau will join the interview team)."
   },
   {
    "t": "p",
@@ -40,7 +52,11 @@
   },
   {
    "t": "p",
-   "x": "Soil testing for per- and polyfluoroalkyl substances will take place later this month at the Warren Baseball Field, the Fraser Softball Field, and the shared Vocational Center/Canal School field. The testing is approved by the U.S. Environmental Protection Agency, funded by its Brownfield Award via GPCOG, and supervised by Credere Associates. Results are expected in August. Project Manager Robyn Saunders is planned to give a presentation at a September Council meeting."
+   "x": "Soil testing for per- and polyfluoroalkyl substances will take place later this month at the Warren Baseball Field, the Fraser Softball Field, and the shared Vocational Center/Canal School field. The testing is approved by the U.S. Environmental Protection Agency, funded by its Brownfield Award via GPCOG, and supervised by Credere Associates."
+  },
+  {
+   "t": "p",
+   "x": "Results are expected in August. Project Manager Robyn Saunders is planned to give a presentation at a September Council meeting."
   },
   {
    "t": "p",
@@ -86,7 +102,31 @@
   },
   {
    "t": "p",
-   "x": "Chief Lally described the City's existing enforcement tools. They are hours restrictions on construction noise, motor vehicle noise law, the Peace and Good Order ordinance (a city law; Chapter 234), the City's disorderly-housing ordinance (which he said only Westbrook and Portland have in Maine), and the state disorderly conduct statute. These are applied using a “reasonableness” standard rather than a fixed decibel limit. Vehicle noise is the one category already decibel-regulated, in the mid-80s."
+   "x": "Chief Lally described the City's existing enforcement tools. They are:"
+  },
+  {
+   "t": "li",
+   "x": "hours restrictions on construction noise"
+  },
+  {
+   "t": "li",
+   "x": "motor vehicle noise law"
+  },
+  {
+   "t": "li",
+   "x": "the Peace and Good Order ordinance (a city law; Chapter 234)"
+  },
+  {
+   "t": "li",
+   "x": "the City's disorderly-housing ordinance (which he said only Westbrook and Portland have in Maine)"
+  },
+  {
+   "t": "li",
+   "x": "the state disorderly conduct statute"
+  },
+  {
+   "t": "p",
+   "x": "These are applied using a “reasonableness” standard rather than a fixed decibel limit. Vehicle noise is the one category already decibel-regulated, in the mid-80s."
   },
   {
    "t": "p",
@@ -124,15 +164,31 @@
   },
   {
    "t": "p",
-   "x": "Director Spitella presented data addressing recurring public concerns. She was prompted by a cluster of residential development applications reaching the Planning Board at once (mostly workshop-stage, not final approvals). Building permits averaged 120 units/year (2016–2020) and 134 units/year (2021–2026). That is up from 73/year (2006–2010) and 67/year (2011–2015). The data confirm faster growth than 20 years ago, though Westbrook still trails neighboring Windham and Scarborough in most years."
+   "x": "Director Spitella presented data addressing recurring public concerns. She was prompted by a cluster of residential development applications reaching the Planning Board at once (mostly workshop-stage, not final approvals)."
   },
   {
    "t": "p",
-   "x": "Housing mix (2018–2024): 34% single-family, 14% duplex, 53% multifamily (3+ units). Multifamily units, typically one-to-two bedrooms, are less likely to house school-age children. School enrollment remains steady or declining despite housing growth. It is below the 2005 baseline of 2,565 students. The 2016 School Impact Study significantly over-projected enrollment under both of its models. That is a reminder, she said, that such studies are planning tools, not guarantees."
+   "x": "Building permits averaged 120 units/year (2016–2020) and 134 units/year (2021–2026). That is up from 73/year (2006–2010) and 67/year (2011–2015). The data confirm faster growth than 20 years ago, though Westbrook still trails neighboring Windham and Scarborough in most years."
   },
   {
    "t": "p",
-   "x": "On traffic, she explained that site plan review (review of the detailed plan for a building project) requires that a project not exceed a roadway's physical capacity. It may also require off-site safety improvements. But general congestion and speeding are regional issues outside any single development's control. She showed several completed multifamily developments integrated into single-family neighborhoods. She also announced tentative public post-construction site walks for the weekend of August 8–9."
+   "x": "Housing mix (2018–2024): 34% single-family, 14% duplex, 53% multifamily (3+ units). Multifamily units, typically one-to-two bedrooms, are less likely to house school-age children."
+  },
+  {
+   "t": "p",
+   "x": "School enrollment remains steady or declining despite housing growth. It is below the 2005 baseline of 2,565 students."
+  },
+  {
+   "t": "p",
+   "x": "The 2016 School Impact Study significantly over-projected enrollment under both of its models. That is a reminder, she said, that such studies are planning tools, not guarantees."
+  },
+  {
+   "t": "p",
+   "x": "On traffic, she explained that site plan review (review of the detailed plan for a building project) requires that a project not exceed a roadway's physical capacity. It may also require off-site safety improvements. But general congestion and speeding are regional issues outside any single development's control."
+  },
+  {
+   "t": "p",
+   "x": "She showed several completed multifamily developments integrated into single-family neighborhoods. She also announced tentative public post-construction site walks for the weekend of August 8–9."
   },
   {
    "t": "label",
@@ -203,7 +259,15 @@
   },
   {
    "t": "p",
-   "x": "Authorizes up to $11,000 in open space funds ($8,000 to Portland Trails for trail access/signage, $3,000 for water quality monitoring equipment). Councilor Chau relayed detailed constituent questions from a neighborhood walk. They covered the project's passive-recreation scope, wildlife/debris impact, parking, and public safety. Director Spitella's answers satisfied the councilor's questions. Her answers were that an existing 15-foot sidewalk/waterline buffer is sufficient, there is no plan to reinstall removed fencing, and the City treats the pond like any other unsupervised water body."
+   "x": "Authorizes up to $11,000 in open space funds ($8,000 to Portland Trails for trail access/signage, $3,000 for water quality monitoring equipment)."
+  },
+  {
+   "t": "p",
+   "x": "Councilor Chau relayed detailed constituent questions from a neighborhood walk. They covered the project's passive-recreation scope, wildlife/debris impact, parking, and public safety."
+  },
+  {
+   "t": "p",
+   "x": "Director Spitella's answers satisfied the councilor's questions. Her answers were that an existing 15-foot sidewalk/waterline buffer is sufficient, there is no plan to reinstall removed fencing, and the City treats the pond like any other unsupervised water body."
   },
   {
    "t": "label",
@@ -406,7 +470,15 @@
   },
   {
    "t": "p",
-   "x": "Authorizes a $9,000 City contribution toward Westbrook High School tennis court repairs. Councilor Turcotte asked why the City was subsidizing a school facility. City Administrator Holmes explained the backstory. The School Department requested a 50/50 cost-share (against an initial $30,000 estimate) for emergency crack repairs. Director of Public Services Eric Dudley proposed moving up the City's planned FY2027 takeover of high school parking-lot sweeping services into spring 2026. The resulting ~$6,000 in school savings would be applied toward the City's share. That is how the City arrived at its $9,000 contribution. The final repair bill came in lower, at $22,525.20."
+   "x": "Authorizes a $9,000 City contribution toward Westbrook High School tennis court repairs. Councilor Turcotte asked why the City was subsidizing a school facility."
+  },
+  {
+   "t": "p",
+   "x": "City Administrator Holmes explained the backstory. The School Department requested a 50/50 cost-share (against an initial $30,000 estimate) for emergency crack repairs."
+  },
+  {
+   "t": "p",
+   "x": "Director of Public Services Eric Dudley proposed moving up the City's planned FY2027 takeover of high school parking-lot sweeping services into spring 2026. The resulting ~$6,000 in school savings would be applied toward the City's share. That is how the City arrived at its $9,000 contribution. The final repair bill came in lower, at $22,525.20."
   },
   {
    "t": "p",
@@ -448,7 +520,11 @@
   },
   {
    "t": "p",
-   "x": "Approves the FY2027 annual vendor lists. Councilor Chau asked for future vendor-list additions to include brief justifications, given the number of new entries this year. Staff agreed to build that into the annual process. Councilor Turcotte raised a vendor/invoice-fraud concern, given that annual vendor lists are public record. He asked what internal controls confirm payments go to the correct party (not just that a bill is accurate). Staff committed to walk through the City's procurement/payment-verification process at a future meeting."
+   "x": "Approves the FY2027 annual vendor lists. Councilor Chau asked for future vendor-list additions to include brief justifications, given the number of new entries this year. Staff agreed to build that into the annual process."
+  },
+  {
+   "t": "p",
+   "x": "Councilor Turcotte raised a vendor/invoice-fraud concern, given that annual vendor lists are public record. He asked what internal controls confirm payments go to the correct party (not just that a bill is accurate). Staff committed to walk through the City's procurement/payment-verification process at a future meeting."
   },
   {
    "t": "label",
@@ -473,11 +549,23 @@
   },
   {
    "t": "p",
-   "x": "These two connected items drew the evening's most substantive debate. Both need a public hearing at the July 6, 2026 meeting before final adoption. Tyler Norod, President of Westbrook Development"
+   "x": "These two connected items drew the evening's most substantive debate. Both need a public hearing at the July 6, 2026 meeting before final adoption. Tyler Norod, President of Westbrook Development Corporation, presented a single proposal covering both."
   },
   {
    "t": "p",
-   "x": "Corporation, presented a single proposal covering both. It would carve a 0.91-acre parcel out of the existing 22-acre Millbrook Estates tax increment financing (TIF) district (Order 2026-76). A TIF sets aside tax from new development for that district's projects. The parcel would become a new “Millbrook Estates III” affordable-housing TIF district with its own Credit Enhancement Agreement (Order 2026-77). A Credit Enhancement Agreement is a deal returning part of a developer's new property tax to the developer. The new district would fund a 36-unit, three-story senior housing building. It would be the first of up to two new buildings. At least 80% of units would be restricted to residents at or below 60% of area median income. Norod cited Westbrook's median home sale price (~$458,000) against a median household income of ~$85,000. He also cited average one-bedroom rents of $2,200–$2,400/month. He cited roughly 40% of Westbrook households falling within the project's income-eligibility range."
+   "x": "It would carve a 0.91-acre parcel out of the existing 22-acre Millbrook Estates tax increment financing (TIF) district (Order 2026-76). A TIF sets aside tax from new development for that district's projects."
+  },
+  {
+   "t": "p",
+   "x": "The parcel would become a new “Millbrook Estates III” affordable-housing TIF district with its own Credit Enhancement Agreement (Order 2026-77). A Credit Enhancement Agreement is a deal returning part of a developer's new property tax to the developer."
+  },
+  {
+   "t": "p",
+   "x": "The new district would fund a 36-unit, three-story senior housing building. It would be the first of up to two new buildings. At least 80% of units would be restricted to residents at or below 60% of area median income."
+  },
+  {
+   "t": "p",
+   "x": "Norod cited Westbrook's median home sale price (~$458,000) against a median household income of ~$85,000. He also cited average one-bedroom rents of $2,200–$2,400/month. He cited roughly 40% of Westbrook households falling within the project's income-eligibility range."
   },
   {
    "t": "p",
@@ -491,7 +579,15 @@
   },
   {
    "t": "p",
-   "x": "Omstead argued that a 1990s-era understanding had capped development at the complex's existing four residential “wings,” and that this TIF amendment works around that understanding. She also raised concern about Westbrook Development Corporation's scale as the City's largest developer/landlord. She noted past rejections of its expansion proposals in Cumberland and Arundel. Director Spitella said that so far she had found no such restriction on the original 1990/1992 subdivision plans, though she was still reviewing the file. She also said a 2024 contract-zone amendment is what specifically increased the parcel's allowed density and unit count for this proposal. That amendment was reviewed by the Planning Board and approved by Council. A contract zone is a special zoning deal for one property. Councilor Chau recalled a promise not to build further back, but said he didn't know of one about going forward."
+   "x": "Omstead argued that a 1990s-era understanding had capped development at the complex's existing four residential “wings,” and that this TIF amendment works around that understanding. She also raised concern about Westbrook Development Corporation's scale as the City's largest developer/landlord. She noted past rejections of its expansion proposals in Cumberland and Arundel."
+  },
+  {
+   "t": "p",
+   "x": "Director Spitella said that so far she had found no such restriction on the original 1990/1992 subdivision plans, though she was still reviewing the file. She also said a 2024 contract-zone amendment is what specifically increased the parcel's allowed density and unit count for this proposal. That amendment was reviewed by the Planning Board and approved by Council. A contract zone is a special zoning deal for one property."
+  },
+  {
+   "t": "p",
+   "x": "Councilor Chau recalled a promise not to build further back, but said he didn't know of one about going forward."
   },
   {
    "t": "q",
@@ -501,7 +597,23 @@
   },
   {
    "t": "p",
-   "x": "Fournier asked whether a published taxpayer-impact analysis exists for this TIF. Fournier also noted roughly 20 active TIF districts citywide. Mayor Morse and Director Cornett responded that the parcel is already within an existing TIF district regardless of this vote. They said the amendment only resets the increment-capture clock for the new building. They also said the federal low-income tax credit program is currently the only way new subsidized housing is being built nationally, and that projects using it need a TIF. City Administrator Holmes pointed to packet detail (around page 163) on the TIF's purpose and projected impacts. Councilor Chau gave an extended, informal defense of the City's broader TIF strategy. He framed TIF districts as sheltering assessed property value from the state's school-funding formula. He also noted that a separate municipal TIF (Arcadia) funds Westbrook Improvement Corporation projects such as the boardwalk, Saccarappa Park, and Westbrook Commons. Councilor Rairdon spoke in strong support. He cited a long personal record backing Westbrook Housing Authority's affordable senior-housing developments. He also noted that he had opposed a separate, non-affordable private TIF project in the past over inadequate affordable-housing commitments."
+   "x": "Fournier asked whether a published taxpayer-impact analysis exists for this TIF. Fournier also noted roughly 20 active TIF districts citywide."
+  },
+  {
+   "t": "p",
+   "x": "Mayor Morse and Director Cornett responded that the parcel is already within an existing TIF district regardless of this vote. They said the amendment only resets the increment-capture clock for the new building. They also said the federal low-income tax credit program is currently the only way new subsidized housing is being built nationally, and that projects using it need a TIF."
+  },
+  {
+   "t": "p",
+   "x": "City Administrator Holmes pointed to packet detail (around page 163) on the TIF's purpose and projected impacts."
+  },
+  {
+   "t": "p",
+   "x": "Councilor Chau gave an extended, informal defense of the City's broader TIF strategy. He framed TIF districts as sheltering assessed property value from the state's school-funding formula. He also noted that a separate municipal TIF (Arcadia) funds Westbrook Improvement Corporation projects such as the boardwalk, Saccarappa Park, and Westbrook Commons."
+  },
+  {
+   "t": "p",
+   "x": "Councilor Rairdon spoke in strong support. He cited a long personal record backing Westbrook Housing Authority's affordable senior-housing developments. He also noted that he had opposed a separate, non-affordable private TIF project in the past over inadequate affordable-housing commitments."
   },
   {
    "t": "label",

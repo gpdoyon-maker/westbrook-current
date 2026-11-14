@@ -102,8 +102,24 @@
    "x": "Discussion Summary"
   },
   {
-   "t": "p",
-   "x": "October 7, 5:00 PM: Finance Committee (Central Office). No school October 9 or 12. October 14, 5:00 PM: Educational Programs Committee (Central Office), followed by the October regular School Committee meeting at 7:00 PM (Room 114). October 21, 5:00 PM: Facilities Committee (Westbrook High School, this month only). October 28, 5:00 PM: Policy Committee (Central Office)."
+   "t": "li",
+   "x": "October 7, 5:00 PM: Finance Committee (Central Office)."
+  },
+  {
+   "t": "li",
+   "x": "No school October 9 or 12."
+  },
+  {
+   "t": "li",
+   "x": "October 14, 5:00 PM: Educational Programs Committee (Central Office), followed by the October regular School Committee meeting at 7:00 PM (Room 114)."
+  },
+  {
+   "t": "li",
+   "x": "October 21, 5:00 PM: Facilities Committee (Westbrook High School, this month only)."
+  },
+  {
+   "t": "li",
+   "x": "October 28, 5:00 PM: Policy Committee (Central Office)."
   },
   {
    "t": "label",
