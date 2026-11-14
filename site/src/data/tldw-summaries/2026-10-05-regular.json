@@ -28,7 +28,7 @@
   },
   {
    "t": "p",
-   "x": "President Jennifer Munro called the meeting to order and noted a Committee of the Whole meeting would follow immediately after. The land acknowledgement statement was read. Roll call: Councilors McCambridge, Shaughnessy (Vice President), Chau, Faulkingham (joining remotely via Zoom), and Rairdon, plus President Munro, answered present — six of seven members. Councilor Anna Turcotte was named and marked absent. No minutes were presented for approval."
+   "x": "President Jennifer Munro called the meeting to order. She noted a Committee of the Whole meeting would follow immediately after. The land acknowledgement statement was read. Roll call: Councilors McCambridge, Shaughnessy (Vice President), Chau, Faulkingham (joining remotely via Zoom), and Rairdon, plus President Munro, answered present — six of seven members. Councilor Anna Turcotte was named and marked absent. No minutes were presented for approval."
   },
   {
    "t": "label",
@@ -36,7 +36,7 @@
   },
   {
    "t": "d",
-   "x": "Quorum established — 6 of 7 members present."
+   "x": "Quorum (the minimum number of members needed to vote) established — 6 of 7 members present."
   },
   {
    "t": "label",
@@ -62,7 +62,7 @@
   },
   {
    "t": "p",
-   "x": "Mayor David Morse spoke to the significance of Indigenous Peoples Day (observed Mon., Oct. 12) in Westbrook, tied to the Presumpscot River and Wabanaki history, and pointed residents to the Chief Polin memorial on Conant Street. He then read a proclamation recognizing October 2026 as Domestic Violence Awareness Month; a representative from Through These Doors thanked the City and described the organization's 24-hour helpline and county-wide law-enforcement partnerships."
+   "x": "Mayor David Morse spoke about the importance of Indigenous Peoples Day (observed Mon., Oct. 12) in Westbrook. He tied it to the Presumpscot River and Wabanaki history. He also pointed residents to the Chief Polin memorial on Conant Street. He then read a proclamation recognizing October 2026 as Domestic Violence Awareness Month. A representative from Through These Doors thanked the City. The representative described the organization's 24-hour helpline and county-wide partnerships with law enforcement."
   },
   {
    "t": "label",
@@ -91,11 +91,11 @@
   },
   {
    "t": "p",
-   "x": "City Project Manager Robyn Saunders, Credere Associates (environmental consultants), a UConn Technical Assistance to Brownfields representative, and David Van Slyke (senior counsel, Preti Flaherty, former director of EPA's national Superfund Enforcement Program) presented results of an ~18-month investigation into possible 1980s wastewater-sludge \"land spreading\" at Cornelia Warren Field, Fraser Field, and the field behind the high school/vocational center — flagged by Maine DEP in 2025 as unknown-history (\"Tier 4\") sites. Because the City itself signed the original land-application permits, it couldn't use its own Brownfields grant and instead used a Greater Portland Council of Governments (GPCOG) grant funded by the U.S. EPA."
+   "x": "Presenters were City Project Manager Robyn Saunders, Credere Associates (environmental consultants), a UConn Technical Assistance to Brownfields representative, and David Van Slyke. Van Slyke is senior counsel at Preti Flaherty. He is a former director of the national Superfund Enforcement Program at the U.S. Environmental Protection Agency, or EPA. Together they presented results of an ~18-month investigation into possible 1980s wastewater-sludge \"land spreading\" at Cornelia Warren Field, Fraser Field, and the field behind the high school/vocational center. The Maine Department of Environmental Protection (DEP) flagged these as unknown-history (\"Tier 4\") sites in 2025. The City itself signed the original land-application permits, so it couldn't use its own Brownfields grant. It used a Greater Portland Council of Governments grant, funded by the U.S. EPA, instead. The testing covered PFAS (per- and polyfluoroalkyl substances) and PFOS (perfluorooctane sulfonate)."
   },
   {
    "t": "p",
-   "x": "Credere tested both surface soil (statistically-composited samples) and deeper core samples at each site. All results came back below Maine DEP's Remedial Action Guidelines, broadly consistent with ambient background PFAS levels rather than a point-source release; the high school site (where testing was limited to the existing baseball fields, since the historically permitted area is now under the vocational building/parking lot) came back even lower, and subsurface samples were lower than surface samples at every site. A Maine DEP letter handed to councilors at the meeting states the fields \"may continue to be used as recreational and athletic fields\" and \"pose a minimal risk as such.\" Formal Phase II assessment reports are still in draft pending EPA/Maine DEP review, expected finalized around early November; no material change is anticipated. A public webpage, FAQ, and press release were set to publish the next day."
+   "x": "Credere tested both surface soil (statistically composited samples, meaning several samples combined) and deeper core samples at each site. All results came back below Maine DEP's Remedial Action Guidelines. They were broadly consistent with ambient background PFAS levels rather than a point-source release (a release from one specific source). At the high school site, results came back even lower. Testing there was limited to the existing baseball fields, since the historically permitted area is now under the vocational building/parking lot. Subsurface samples were lower than surface samples at every site. A Maine DEP letter handed to councilors at the meeting states the fields \"may continue to be used as recreational and athletic fields\" and \"pose a minimal risk as such.\" The formal Phase II assessment reports are still in draft, pending EPA and Maine DEP review. They are expected to be finalized around early November. No material change is anticipated. A public webpage, a list of frequently asked questions, and a press release were set to publish the next day."
   },
   {
    "t": "label",
@@ -121,7 +121,7 @@
   },
   {
    "t": "p",
-   "x": "Councilor Rairdon thanked the team for testing both surface and subsurface soil rather than one pass, and asked what recourse exists for residents on private property with similar historical concerns; staff and Credere pointed to Maine DEP's public PFAS database/testing program and noted the City's own Brownfields Assessment Program could support a private redevelopment project the same way."
+   "x": "Councilor Rairdon thanked the team for testing both surface and subsurface soil rather than doing one pass. He asked what options residents on private property have if they share similar historical concerns. Staff and Credere pointed to Maine DEP's public PFAS database/testing program. They also noted the City's own Brownfields Assessment Program could support a private redevelopment project the same way."
   },
   {
    "t": "h",
@@ -139,15 +139,15 @@
   },
   {
    "t": "p",
-   "x": "City Clerk Ellis Ledoux announced Oct. 5 was the first day of in-person absentee voting for the Nov. 3 election at City Hall, with extended hours Wed. Oct. 21 and Oct. 28 (until 7 PM) and Sat. Oct. 17 (8 AM–noon); the deadline to vote absentee without a special circumstance is Oct. 29."
+   "x": "City Clerk Ellis Ledoux announced that Oct. 5 was the first day of in-person absentee voting for the Nov. 3 election at City Hall. Extended hours are Wed. Oct. 21 and Oct. 28 (until 7 PM) and Sat. Oct. 17 (8 AM–noon). The deadline to vote absentee without a special circumstance is Oct. 29."
   },
   {
    "t": "p",
-   "x": "Councilor Rairdon spoke on Domestic Violence Awareness Month and Westbrook Strong, a family fund he and his family created that has donated to Through These Doors and two other organizations for three to four years running."
+   "x": "Councilor Rairdon spoke on Domestic Violence Awareness Month and Westbrook Strong. Westbrook Strong is a family fund that he and his family created. It has donated to Through These Doors and two other organizations for three to four years running."
   },
   {
    "t": "p",
-   "x": "On the student council representative program: low interest last spring led to a pause; applications are being solicited again for 2026–2027 and will be reviewed with council leadership shortly."
+   "x": "On the student council representative program: low interest last spring led to a pause. Applications are being sought again for 2026–2027. They will be reviewed with council leadership shortly."
   },
   {
    "t": "label",
@@ -185,7 +185,7 @@
   },
   {
    "t": "p",
-   "x": "Operations Manager Doug Eaton returned with cost-justification data requested at the prior meeting on the $64,891.31 purchase of two Vermac portable traffic signals: ~15-year municipal life expectancy, 1–2 year component/unit warranty, and an estimated ~$15,000/year (»$88,000 over a conservative 10-year life) in flagger-wage savings."
+   "x": "Operations Manager Doug Eaton returned with the cost data requested at the prior meeting. The order is a $64,891.31 purchase of two Vermac portable traffic signals. Eaton gave these figures: ~15-year municipal life expectancy; 1–2 year component/unit warranty; and an estimated ~$15,000/year (»$88,000 over a conservative 10-year life) in flagger-wage savings. This order was up for its second and final reading, the last and binding vote."
   },
   {
    "t": "label",
@@ -223,7 +223,7 @@
   },
   {
    "t": "p",
-   "x": "Confirms the Mayor's appointment of Bruno Inácio as Finance Director and Municipal Treasurer (Code of Ordinances §68-16), effective September 28, 2026. Administrator Holmes introduced his background: 20+ years in public/private finance and operations leadership, most recently Director of Finance and Administrative Services for the Maine Secretary of State (overseeing a $70M+ budget), prior Director of Public Services for the Maine Bureau of Motor Vehicles, and ~8 years at UNUM in corporate strategy/operations roles. Inácio introduced himself briefly to the Council."
+   "x": "This Resolve, a formal decision by the Council, confirms the Mayor's appointment of Bruno Inácio as Finance Director and Municipal Treasurer. The appointment is effective September 28, 2026. It falls under Code of Ordinances §68-16 (the City's collection of laws). Administrator Holmes introduced his background. He has 20+ years in public/private finance and operations leadership. Most recently he was Director of Finance and Administrative Services for the Maine Secretary of State, overseeing a $70M+ budget. Before that he was Director of Public Services for the Maine Bureau of Motor Vehicles. He also spent ~8 years at UNUM in corporate strategy/operations roles. Inácio introduced himself briefly to the Council."
   },
   {
    "t": "label",
@@ -261,7 +261,7 @@
   },
   {
    "t": "p",
-   "x": "Required a public hearing, held with no speakers. Sets annual General Assistance benefit maximums (Appendices A, B, D, E, F, G, H) for Oct. 1, 2026 – Sept. 30, 2027, per Maine Department of Health and Human Services requirements. Appendix C (housing maximums) was included for information only, not adopted, preserving the City's negotiating leverage with landlords."
+   "x": "A public hearing was required and was held with no speakers. The order sets annual General Assistance benefit maximums (Appendices A, B, D, E, F, G, H). They cover Oct. 1, 2026 – Sept. 30, 2027. This is under Maine Department of Health and Human Services requirements. Appendix C (housing maximums) was included for information only and was not adopted. This preserves the City's negotiating leverage with landlords."
   },
   {
    "t": "label",
@@ -294,7 +294,7 @@
   },
   {
    "t": "p",
-   "x": "Accepts the fourth-quarter report of departmental donations/expenditures under $5,000, per Order 2021-121's quarterly reporting requirement. Councilor Chau thanked donors to the police, fire, library, public services, and community services departments."
+   "x": "This order accepts the fourth-quarter report of departmental donations/expenditures under $5,000. Order 2021-121 requires this report each quarter. Councilor Chau thanked donors to the police, fire, library, public services, and community services departments."
   },
   {
    "t": "label",
@@ -319,7 +319,7 @@
   },
   {
    "t": "p",
-   "x": "All six orders below passed first reading unanimously, 6–0, with little or no discussion beyond staff's brief context. Five returned for second/final reading as a block at the Oct 19, 2026 Special Meeting; Order 2026-113 was considered separately and amended that night — see that meeting's summary for the final votes."
+   "x": "All six orders below passed first reading (the first of two required votes) unanimously, 6–0. There was little or no discussion beyond staff's brief context. Five returned for second and final reading (the last and binding vote) as a block at the Oct 19, 2026 Special Meeting. Order 2026-113 was considered separately and amended that night. See that meeting's summary for the final votes."
   },
   {
    "t": "h",
@@ -336,7 +336,7 @@
   },
   {
    "t": "p",
-   "x": "$71,476 bid award to Casco Bay Ford (Yarmouth, Maine) for a 2027 Ford F-350 replacing Unit 7, a medium-duty pickup out of service ~2 years, used to haul departmental trailers and forestry equipment. Two bids were received; Casco Bay Ford was lowest."
+   "x": "$71,476 bid award to Casco Bay Ford (Yarmouth, Maine) for a 2027 Ford F-350. It replaces Unit 7, a medium-duty pickup used to haul departmental trailers and forestry equipment. That pickup has been out of service ~2 years. Two bids were received; Casco Bay Ford was lowest."
   },
   {
    "t": "label",
@@ -369,7 +369,7 @@
   },
   {
    "t": "p",
-   "x": "$5,433.05 credited to the Police Department following its participation, via an officer assigned to the FBI's Safe Streets Task Force, in a multi-agency methamphetamine-dealer investigation."
+   "x": "$5,433.05 is credited to the Police Department. This follows its participation in a multi-agency methamphetamine-dealer investigation. It took part through an officer assigned to the Federal Bureau of Investigation's Safe Streets Task Force."
   },
   {
    "t": "label",
@@ -402,7 +402,7 @@
   },
   {
    "t": "p",
-   "x": "$50,000 to the Presumpscot Regional Land Trust (PRLT) for trail and signage improvements, recommended by the Recreation & Conservation Commission, responding to growing visitor interest in the preserve's alewife run."
+   "x": "$50,000 goes to the Presumpscot Regional Land Trust for trail and signage improvements. The Recreation & Conservation Commission recommended it. It responds to growing visitor interest in the preserve's alewife run."
   },
   {
    "t": "label",
@@ -435,7 +435,7 @@
   },
   {
    "t": "p",
-   "x": "$10,000 to Portland Trails toward the Rock Row Eastern Connector Trail, building on Maine Turnpike Authority funding already secured, to connect the Rock Row campus/Jewell Falls to Portland's Stroudwater Trail Network."
+   "x": "$10,000 goes to Portland Trails toward the Rock Row Eastern Connector Trail. It builds on Maine Turnpike Authority funding already secured. The goal is to connect the Rock Row campus/Jewell Falls to Portland's Stroudwater Trail Network."
   },
   {
    "t": "label",
@@ -468,7 +468,7 @@
   },
   {
    "t": "p",
-   "x": "Authorizes Task Order No. 11 with Credere Associates (not to exceed $40,970) for geotechnical modeling and construction-cost estimating on the Riverwalk North project, funded by an FY24 U.S. EPA Brownfields Cleanup Grant."
+   "x": "This order authorizes Task Order No. 11 with Credere Associates, not to exceed $40,970. The work is geotechnical modeling and construction-cost estimating on the Riverwalk North project. It is funded by an FY24 (fiscal year) U.S. EPA Brownfields Cleanup Grant."
   },
   {
    "t": "label",
@@ -501,7 +501,7 @@
   },
   {
    "t": "p",
-   "x": "Amends the landslide-vulnerability-assessment project's vendor list and funding: $22,000 (University of Maine College of Engineering, geotechnical work), $27,960 (Credere Associates, federal grant administration/contractor management), $60,999 (Camoin Associates, policy development/economic impact assessment), $37,175 (Soil Metrics, subsurface investigation), and $5,000/$10,000 stipends (Soil Metrics/Apex Companies) for technical advisory panel participation. Funded by congressionally directed spending (Sens. King and Collins) plus Maine DOT Infrastructure Adaptation Fund matching funds; project completion targeted September 2027."
+   "x": "This order amends the landslide-vulnerability-assessment project's vendor list and funding. The amounts are: $22,000 (University of Maine College of Engineering, geotechnical work); $27,960 (Credere Associates, federal grant administration/contractor management); $60,999 (Camoin Associates, policy development/economic impact assessment); $37,175 (Soil Metrics, subsurface investigation); and $5,000/$10,000 stipends, or extra pay (Soil Metrics/Apex Companies), for technical advisory panel participation. The money comes from congressionally directed spending (Senators King and Collins) plus matching funds from the Maine Department of Transportation Infrastructure Adaptation Fund. Project completion is targeted for September 2027."
   },
   {
    "t": "label",
@@ -535,7 +535,7 @@
   },
   {
    "t": "p",
-   "x": "No public comment, referrals, committee reports, or executive session."
+   "x": "There was no public comment. There were no referrals or committee reports. There was no executive session (a closed, private session allowed by state law for certain topics)."
   },
   {
    "t": "label",
