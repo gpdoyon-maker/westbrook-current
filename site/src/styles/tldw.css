@@ -179,7 +179,7 @@ details.tldw-item:has(.ti-hot) .tldw-quote cite { color: #8c1c13; }
   .ti-title { font-size: 12pt; margin-top: 0; break-after: avoid; }
   .ti-body { display: block; padding: 4px 0 0; margin: 0; border: 0; }
   .ti-body > * { margin-bottom: 6px; }
-  .ti-body p, .ti-body ul { font-size: 10.5pt; color: #1f2d3a; orphans: 3; widows: 3; }
+  .ti-body p, .ti-body ul { font-size: 10.5pt; color: #1f2d3a; orphans: 3; widows: 3; margin: 0 0 7pt; }
   .ti-body .label { font-size: 8.5pt; margin: 6px 0 2px; break-after: avoid; }
   .tldw-quote { padding: 4px 0 4px 10px; background: none !important; border-left: 3px solid var(--accent); font-size: 10.5pt; color: #1f2d3a; -webkit-print-color-adjust: exact; print-color-adjust: exact; break-inside: avoid; }
   details.tldw-item:has(.ti-hot) .tldw-quote { color: #1f2d3a; border-left-color: var(--contention); }
