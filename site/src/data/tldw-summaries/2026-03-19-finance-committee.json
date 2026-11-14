@@ -28,7 +28,7 @@
   },
   {
    "t": "p",
-   "x": "Dr. O'Donnell reported the GT program is fully state-reimbursed (a year in arrears) and stays within the state's required 3–5% identification band (currently about 4%) using a blind, multi-person review process, not a budget-driven cap. Supplies are flat, though 10% of Dr. O'Donnell's salary is now charged to the GT budget (and later reimbursed); Director of Music Suzanne Proulx asked whether the GT population is culturally/linguistically representative given the underlying assessments aren't, and was told it's “better now than it's ever been.”"
+   "x": "Dr. O'Donnell reported the Gifted and Talented (GT) program is fully state-reimbursed (a year behind). It stays within the state's required 3–5% identification band (currently about 4%). It uses a blind, multi-person review process, not a budget-driven cap. Supplies are flat, though 10% of Dr. O'Donnell's salary is now charged to the GT budget (and later reimbursed). Director of Music Suzanne Proulx asked whether the GT population is culturally/linguistically representative, given the underlying assessments aren't. Proulx was told it's “better now than it's ever been.”"
   },
   {
    "t": "label",
@@ -57,7 +57,7 @@
   },
   {
    "t": "p",
-   "x": "Dr. Mazjanis described a small Finance team that recently moved to weekly accounts-payable processing and overhauled its business credit card program for better security/accountability. The Office of the Superintendent now consolidates three positions (Dr. Lancia, Dr. O'Donnell, Dr. Mazjanis). Notably, the district's budgeted contingency fund has been reduced to one-third of one percent of the total budget this year (down from half a percent). School Committee Chair Andrea Mancuso noted municipal auditors typically recommend holding roughly 14% of an operating budget in contingency, and asked for historical contingency spend data, plus a consolidated total of all “negotiated contracts” dollars currently scattered across dozens of individual cost-center lines — staff agreed to compile both."
+   "x": "Dr. Mazjanis described a small Finance team that recently moved to weekly accounts-payable (bill-paying) processing. The team also overhauled its business credit card program for better security/accountability. The Office of the Superintendent now consolidates three positions (Dr. Lancia, Dr. O'Donnell, Dr. Mazjanis). Notably, the district's budgeted contingency fund (a reserve for unexpected costs) has been reduced to one-third of one percent of the total budget this year (down from half a percent). School Committee Chair Andrea Mancuso noted municipal auditors typically recommend holding roughly 14% of an operating budget in contingency. She asked for historical contingency spend data, plus a consolidated total of all “negotiated contracts” dollars currently scattered across dozens of individual cost-center lines. Staff agreed to compile both."
   },
   {
    "t": "label",
@@ -91,7 +91,7 @@
   },
   {
    "t": "p",
-   "x": "The district now serves 581 identified multilingual learners (25% of enrollment, up from 24% last year), representing 42 birth countries and 28 languages — the third-largest ML population in Maine. Presenting staff explicitly acknowledged, for the record, “the very real challenges many of our students and families have faced this year related to immigration enforcement and the presence of ICE in our broader community,” thanking staff and the community for the compassion shown “during these difficult times.” No new K-12 ML staffing is requested; the only new ML position is a half-time ML Pre-K teacher, driven by a new state language-screening requirement. 76% of MLs improved English proficiency on last year's ACCESS assessment, and 47 students exited services."
+   "x": "The district now serves 581 identified multilingual learners (ML), which is 25% of enrollment, up from 24% last year. They represent 42 birth countries and 28 languages, the third-largest ML population in Maine. Presenting staff explicitly acknowledged, for the record, “the very real challenges many of our students and families have faced this year related to immigration enforcement and the presence of ICE in our broader community,” thanking staff and the community for the compassion shown “during these difficult times.” No new K-12 ML staffing is requested. The only new ML position is a half-time ML Pre-K teacher, driven by a new state language-screening requirement. 76% of MLs improved English proficiency on last year's ACCESS assessment, and 47 students exited services."
   },
   {
    "t": "label",
@@ -125,11 +125,11 @@
   },
   {
    "t": "p",
-   "x": "The district serves 644 special education students (27% of enrollment). New staffing requests include an Ed Tech at Congin, relocating an unfilled Middle School Ed Tech to Saccarappa, a half-time Saccarappa speech therapist, and a new high school resource teacher to address a 39-student incoming ninth-grade cohort that would otherwise push caseloads to about 34-plus per case manager, near the legal cap of 35, especially once new referrals are added. The Director of Special Services position remains vacant, covered by a retired former director on contract; sharing a director with a neighboring district was ruled out given Westbrook's special-education population is the highest in Cumberland County."
+   "x": "The district serves 644 special education students (27% of enrollment). New staffing requests include an Ed Tech at Congin, relocating an unfilled Middle School Ed Tech to Saccarappa, a half-time Saccarappa speech therapist, and a new high school resource teacher. The resource teacher would address a 39-student incoming ninth-grade cohort. Otherwise, caseloads would reach about 34-plus per case manager, near the legal cap of 35, especially once new referrals are added. The Director of Special Services position remains vacant, covered by a retired former director on contract. Sharing a director with a neighboring district was ruled out, given Westbrook's special-education population is the highest in Cumberland County."
   },
   {
    "t": "p",
-   "x": "A newly explicit “MaineCare Seed” budget line (the state's 38% share of MaineCare billings for out-of-district placements, which can no longer be offset against the district's own MaineCare revenue as the district's MaineCare seed amount has grown from $59,000 in 2020 to $255,000 in 2025) prompted one member to remark it “broke my brain” — staff will prepare a white paper with a visual depiction. The K–8 private-tuition line rises about $92,000; staff separately reported 2–6% daily-rate increases at the special-purpose private schools serving 14 Westbrook students."
+   "x": "A newly explicit “MaineCare Seed” budget line prompted one member to remark it “broke my brain.” The line is the state's 38% share of MaineCare billings for out-of-district placements. It can no longer be offset against the district's own MaineCare revenue as the district's MaineCare seed amount has grown from $59,000 in 2020 to $255,000 in 2025. Staff will prepare a white paper with a visual depiction. The K–8 private-tuition line rises about $92,000. Staff separately reported 2–6% daily-rate increases at the special-purpose private schools serving 14 Westbrook students."
   },
   {
    "t": "label",
@@ -163,7 +163,7 @@
   },
   {
    "t": "p",
-   "x": "Principal Vickie Hebert (29th year at Canal, 15th as principal) reported a striking 41.8% annual transiency rate (53 students in, 35 out since August) and shared same-day vendor pricing showing sharp consumable cost increases for next year (pencils +43%, pens +83%, highlighters +116%, staples +100%, student scissors +301%) against a flat, already-cut per-student supply allocation — added to the committee's revisit list. The district is dropping IXL software districtwide (renewal pricing became “astronomical”) in favor of more hands-on, less screen-dependent instruction, a shift board members voiced enthusiastic support for, and is not continuing paid BAR behavioral-framework affiliation once its state grant funding ends (retaining the practices developed through it at no extra cost). Capital work underway includes ADA-compliant bathroom renovations and new mini-split air conditioning via a state renovation grant."
+   "x": "Principal Vickie Hebert (29th year at Canal, 15th as principal) reported a striking 41.8% annual transiency rate (students moving in and out; 53 students in, 35 out since August). Hebert also shared same-day vendor pricing showing sharp consumable cost increases for next year (pencils +43%, pens +83%, highlighters +116%, staples +100%, student scissors +301%). This is against a flat, already-cut per-student supply allocation. It was added to the committee's revisit list. The district is dropping IXL software districtwide (renewal pricing became “astronomical”) in favor of more hands-on, less screen-dependent instruction, a shift board members voiced enthusiastic support for. The district is also not continuing paid BAR behavioral-framework affiliation once its state grant funding ends, retaining the practices developed through it at no extra cost. Capital (big-project) work underway includes bathroom renovations that comply with the Americans with Disabilities Act and new mini-split air conditioning via a state renovation grant."
   },
   {
    "t": "label",
@@ -192,7 +192,7 @@
   },
   {
    "t": "p",
-   "x": "Congin Principal Marc Bisson (3rd year) reported a stability-focused budget with one Title I teaching position moved to Saccarappa this year — a federally-required “maintenance of equity” reallocation, not an elimination. Playground mulch is being reduced to two-thirds of last year's catch-up order. Saccarappa Principal Alexis Jones reported the district's largest elementary enrollment (~400 students, 35% multilingual, 35% special education) and high mobility (79 students, 20% of enrollment, transferred in or out since August), running an active BAR-based intervention process serving about 100 students a year in formal math/literacy support. Both principals had several same-day budget-entry corrections identified and committed to during review."
+   "x": "Congin Principal Marc Bisson (3rd year) reported a stability-focused budget. One Title I teaching position moved to Saccarappa this year. It was a federally required “maintenance of equity” reallocation, not an elimination. Playground mulch is being reduced to two-thirds of last year's catch-up order. Saccarappa Principal Alexis Jones reported the district's largest elementary enrollment (~400 students, 35% multilingual, 35% special education) and high mobility (79 students, 20% of enrollment, transferred in or out since August). Saccarappa is running an active BAR-based intervention process serving about 100 students a year in formal math/literacy support. Both principals had several same-day budget-entry corrections identified and committed to during review."
   },
   {
    "t": "label",
