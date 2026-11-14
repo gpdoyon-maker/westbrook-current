@@ -96,8 +96,8 @@ function brief(body: any[]) {
   const p = body.find((b) => b.t === 'p');
   if (!p) return '';
   const s = p.x.replace(/\[\d{1,2}:\d{2}(?::\d{2})?\]\s*/g, '');
-  // first sentence, without stopping at abbreviations like "Dr." or "M.R.S.A."
-  const abbr = /(?:\b(?:Dr|Mr|Mrs|Ms|St|Jr|Sr|Sen|Rep|Gov|No|vs|etc)|\b[A-Z]|\.[A-Z])\.$/;
+  // first sentence, without stopping at abbreviations like "Dr.", "Sept." or "M.R.S.A."
+  const abbr = /(?:\b(?:Dr|Mr|Mrs|Ms|St|Jr|Sr|Sen|Rep|Gov|No|vs|etc|Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec|Dept|Mon|Tue|Tues|Wed|Thu|Thurs|Fri|Sat|Sun|sq|ft|approx)|\b[A-Z]|\.[A-Z])\.$/;
   const pieces = s.split(/(?<=[.!?])\s+/);
   let first = pieces[0];
   for (let i = 1; i < pieces.length && abbr.test(first); i++) first += ' ' + pieces[i];
