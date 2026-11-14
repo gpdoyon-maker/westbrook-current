@@ -190,3 +190,18 @@ details.tldw-item:has(.ti-hot) .tldw-quote cite { color: #8c1c13; }
   .tldw-wrap .disclaimer { background: none; padding: 8px 10px; font-size: 9.5pt; break-inside: avoid; margin-top: 14px; }
   .tldw-made-with { font-size: 8.5pt; }
 }
+
+/* Draft mode ("draft": true in the summary JSON). Drafts render only on the local dev server;
+   the banner and checklist say "draft" in words, so color is never the only signal. */
+.tldw-draft-banner { margin: 0; padding: 12px 16px; border: 1.5px solid var(--line); border-left: 6px solid var(--navy); border-radius: 8px; background: var(--mist); color: var(--navy); font-size: 14px; line-height: 1.5; }
+.tldw-draft-checklist { padding: 16px 18px; border: 2px dashed var(--navy); border-radius: 8px; background: #fff; }
+.tldw-draft-checklist h2 { margin: 0 0 6px; color: var(--navy); font-size: 18px; }
+.tldw-draft-checklist p { margin: 0 0 8px; color: #294858; font-size: 14px; line-height: 1.5; }
+.tldw-draft-checklist ol { margin: 0; padding-left: 22px; color: #294858; font-size: 15px; line-height: 1.55; }
+.tldw-draft-checklist li { margin-bottom: 4px; }
+.tldw-draft-checklist .ts-link { margin-right: 4px; color: var(--blue); font-weight: 800; }
+@media print {
+  .tldw-draft-banner { background: none; padding: 6px 10px; font-size: 9.5pt; }
+  .tldw-draft-checklist { border-width: 1px; padding: 8px 10px; break-inside: avoid; }
+  .tldw-draft-checklist ol, .tldw-draft-checklist p { font-size: 10pt; }
+}

@@ -1,7 +1,12 @@
 ---
 import SiteLayout from '../../layouts/SiteLayout.astro';
-import meetings from '../../data/tldw-meetings.json';
+import allMeetings from '../../data/tldw-meetings.json';
 import '../../styles/tldw.css';
+
+// A summary marked "draft": true is listed only on the local dev server, never in the published build.
+const summaryFiles = import.meta.glob('../../data/tldw-summaries/*.json', { eager: true }) as Record<string, any>;
+const draftSlugs = new Set(Object.values(summaryFiles).map((m: any) => m.default).filter((d: any) => d.draft).map((d: any) => d.slug));
+const meetings = (allMeetings as any[]).filter((m: any) => !(draftSlugs.has(m.slug) && import.meta.env.PROD));
 
 const categories = ['Regular Meeting', 'Special Meeting', 'Committee of the Whole', 'Planning Board', 'School Committee', 'Zoning Board of Appeals'];
 const topicList = ['Budget & Taxes', 'Zoning & Development', 'Housing', 'Ordinances', 'Infrastructure', 'Transit & Transportation', 'Public Safety', 'Parks & Recreation', 'Personnel', 'General Assistance', 'Education'];

@@ -11,6 +11,8 @@ export function getStaticPaths() {
   return Object.values(files)
     .map((m: any) => m.default)
     .filter((d: any) => d.slug !== '2026-10-19-special-meeting') // that page is hand-built
+    // Drafts ("draft": true) render only on the local dev server, never in the published build.
+    .filter((d: any) => !(d.draft && import.meta.env.PROD))
     .map((d: any) => ({ params: { slug: d.slug }, props: { data: d } }));
 }
 
@@ -125,6 +127,9 @@ const meetingNote = (data.note || '')
       <span>TL;DW! meeting summary · westbrookcurrents.com/tldw/{data.slug}</span>
     </div>
     <a class="help-back" href="/tldw">&#8249; TL;DW!</a>
+    {data.draft && (
+      <p class="tldw-draft-banner"><strong>Draft for review.</strong> Not yet audited or checked against the video. Movers, seconders and some speakers are provisional until the video checklist at the end is answered.</p>
+    )}
     {category && <span class="tldw-eyebrow">{category}</span>}
     <h1>{heading}</h1>
     <p class="tldw-meta">{metaBits.join(' · ')}</p>
@@ -176,6 +181,17 @@ const meetingNote = (data.note || '')
       <strong>Not a replacement for watching &mdash; and not an official record.</strong> This summary highlights the meeting's key discussions and decisions; it's not a substitute for watching the full meeting, and summarization necessarily condenses and selects. <strong>It's also an unofficial product of Westbrook Currents, an independent site &mdash; not the City of Westbrook &mdash; and may contain mistakes.</strong> For complete context or the official record, watch the full video or see the City's approved minutes.
     </div>
     {data.howMade && <p class="tldw-made-with">How this was made: {data.howMade.replace(/^This summary was produced from the meeting video/, 'Produced from the meeting video')}</p>}
+    {data.draft && data.checklist && data.checklist.length > 0 && (
+      <section class="tldw-draft-checklist" aria-labelledby="draft-checklist-heading">
+        <h2 id="draft-checklist-heading">Video checklist ({data.checklist.length} {data.checklist.length === 1 ? 'item' : 'items'})</h2>
+        <p>Only the video can settle these. Answer by number, for example &ldquo;#3 Rairdon.&rdquo; This list is removed from the final version.</p>
+        <ol>
+          {data.checklist.map((c: any) => (
+            <li><a class="ts-link" href={tsLink(c.ts)} target="_blank" rel="noopener noreferrer">{c.ts}</a> {c.q}</li>
+          ))}
+        </ol>
+      </section>
+    )}
   </main>
   <script is:inline>
     (() => {
