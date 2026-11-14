@@ -32,11 +32,19 @@
   },
   {
    "t": "p",
-   "x": "Mayor Morse gave an extended tribute to Barry Dodd, the departing Digital Creative Services Administrator. Dodd is leaving after 12 years for a role with the City of Biddeford. The Mayor credited him with modernizing the City's broadcast/communications operations. Examples included the “We Lit the City” holiday-lights video (a Silver Circle Award winner) and a U2 tribute band performance at the downtown parking garage's opening. Dodd's own farewell letter was read into the record during public comment."
+   "x": "Mayor Morse gave an extended tribute to Barry Dodd, the departing Digital Creative Services Administrator. Dodd is leaving after 12 years for a role with the City of Biddeford. The Mayor credited him with modernizing the City's broadcast/communications operations."
   },
   {
    "t": "p",
-   "x": "The Mayor previewed Order 2026-87. It is a $450,000 project to add a new crosswalk and Americans with Disabilities Act improvements at the William Clark Drive/Hannaford Drive intersection. The City is seeking $225,000 in Portland Area Comprehensive Transportation System (PACTS) Urban Partnership Initiative funding. The project addresses a long-standing resident complaint about pedestrians getting a “walk” signal at the same time as a left-turn green arrow. Westbrook's application ranked first among the sub-region's submissions."
+   "x": "Examples included the “We Lit the City” holiday-lights video (a Silver Circle Award winner) and a U2 tribute band performance at the downtown parking garage's opening. Dodd's own farewell letter was read into the record during public comment."
+  },
+  {
+   "t": "p",
+   "x": "The Mayor previewed Order 2026-87. It is a $450,000 project to add a new crosswalk and Americans with Disabilities Act improvements at the William Clark Drive/Hannaford Drive intersection. The City is seeking $225,000 in Portland Area Comprehensive Transportation System (PACTS) Urban Partnership Initiative funding."
+  },
+  {
+   "t": "p",
+   "x": "The project addresses a long-standing resident complaint about pedestrians getting a “walk” signal at the same time as a left-turn green arrow. Westbrook's application ranked first among the sub-region's submissions."
   },
   {
    "t": "p",
@@ -74,7 +82,31 @@
   },
   {
    "t": "p",
-   "x": "All three were first read July 20, 2026 (a first reading is the first of two required votes). They are the $24,300 Colonial Road pump station driveway repair, the $107,170 Fire Department SCBA (self-contained breathing apparatus) air compressor, and the $170,519.85 replacement aerial bucket truck. This is the final reading, the last and binding vote. Resident Larry McWilliams questioned the bucket truck's cost and the rust issue on the old unit. City Administrator Angela Holmes clarified that this is a Public Services (not Fire Department) vehicle. Director Eric Dudley said rust is concentrated around the painted-steel storage boxes. He explained that the new truck uses a gas engine rather than diesel specifically because stationary diesel “regen” cycles “can feel pretty toxic” and are difficult for crews to work around. Resident Joyce Van Waltham asked about an electric alternative. Staff said no electric aerial-bucket truck exists at the required power/hydraulic capacity."
+   "x": "All three were first read July 20, 2026 (a first reading is the first of two required votes). They are:"
+  },
+  {
+   "t": "li",
+   "x": "The $24,300 Colonial Road pump station driveway repair"
+  },
+  {
+   "t": "li",
+   "x": "The $107,170 Fire Department SCBA (self-contained breathing apparatus) air compressor"
+  },
+  {
+   "t": "li",
+   "x": "The $170,519.85 replacement aerial bucket truck."
+  },
+  {
+   "t": "p",
+   "x": "This is the final reading, the last and binding vote."
+  },
+  {
+   "t": "p",
+   "x": "Resident Larry McWilliams questioned the bucket truck's cost and the rust issue on the old unit. City Administrator Angela Holmes clarified that this is a Public Services (not Fire Department) vehicle. Director Eric Dudley said rust is concentrated around the painted-steel storage boxes. He explained that the new truck uses a gas engine rather than diesel specifically because stationary diesel “regen” cycles “can feel pretty toxic” and are difficult for crews to work around."
+  },
+  {
+   "t": "p",
+   "x": "Resident Joyce Van Waltham asked about an electric alternative. Staff said no electric aerial-bucket truck exists at the required power/hydraulic capacity."
   },
   {
    "t": "label",
@@ -103,7 +135,15 @@
   },
   {
    "t": "p",
-   "x": "Point/Counterpoint — is the bus-pass funding separable from the Monroe Avenue route change? Councilor Chau argued throughout that the Council was being asked to fund the pass program while a closely tied (but formally separate) Metro route change went ahead without enough ridership data. The change is a new Route 3 stop at Monroe Avenue and Stroudwater Street. He canvassed the Monroe/Glenwood neighborhood over the weekend. He reported broad support for the pass itself but unease about the specific route change. City Solicitor Cameron Ferrante confirmed that the Council has no authority over Metro's bus routes."
+   "x": "Point/Counterpoint — is the bus-pass funding separable from the Monroe Avenue route change? Councilor Chau argued throughout that the Council was being asked to fund the pass program while a closely tied (but formally separate) Metro route change went ahead without enough ridership data. The change is a new Route 3 stop at Monroe Avenue and Stroudwater Street."
+  },
+  {
+   "t": "p",
+   "x": "Councilor Chau canvassed the Monroe/Glenwood neighborhood over the weekend. He reported broad support for the pass itself but unease about the specific route change."
+  },
+  {
+   "t": "p",
+   "x": "City Solicitor Cameron Ferrante confirmed that the Council has no authority over Metro's bus routes."
   },
   {
    "t": "q",
@@ -113,7 +153,15 @@
   },
   {
    "t": "p",
-   "x": "Mike Tremblay, Metro's Director of Transit Development, explained that the Monroe Avenue alignment was the primary option for getting a stop within roughly a quarter-mile of the high school without a major route deviation. He later agreed that the walking distance from the Hannaford stop is similar. He said Metro was open to alternatives once school starts. Public comment ran heavily split. School Committee members, housing-sector professionals, and several residents spoke or wrote in support. They cited equity and a University of Minnesota study. The study found that free transit passes reduced excused absences 11.5% overall and 37.6% in a school's walk zone. Monroe/Glenwood-area residents raised a consistent set of concerns: lack of advance neighborhood notice, narrow-street traffic safety, and a shared sense that the route was being finalized without ridership evidence. The response was that a school survey (about 53% said they would ride) and estimates of about 100 available students, perhaps 50 riders, had effectively demonstrated the need."
+   "x": "Mike Tremblay, Metro's Director of Transit Development, explained that the Monroe Avenue alignment was the primary option for getting a stop within roughly a quarter-mile of the high school without a major route deviation. He later agreed that the walking distance from the Hannaford stop is similar. He said Metro was open to alternatives once school starts."
+  },
+  {
+   "t": "p",
+   "x": "Public comment ran heavily split. School Committee members, housing-sector professionals, and several residents spoke or wrote in support. They cited equity and a University of Minnesota study. The study found that free transit passes reduced excused absences 11.5% overall and 37.6% in a school's walk zone."
+  },
+  {
+   "t": "p",
+   "x": "Monroe/Glenwood-area residents raised a consistent set of concerns: lack of advance neighborhood notice, narrow-street traffic safety, and a shared sense that the route was being finalized without ridership evidence. The response was that a school survey (about 53% said they would ride) and estimates of about 100 available students, perhaps 50 riders, had effectively demonstrated the need."
   },
   {
    "t": "q",
@@ -161,7 +209,15 @@
   },
   {
    "t": "p",
-   "x": "Abutting (neighboring) property owner Deborah “Jean” Bryanton (57 Dana Court) spoke at length against the project generally. She said every abutter she has talked to is opposed. She raised questions about maintenance cost, trespassing, policing, lighting, winter maintenance, shoreland zoning, and wildlife impact. A letter from Sarah Hancock cited nearly twenty years of abutter opposition. It echoed similar long-standing concerns, including unresolved property-boundary and construction-liability questions. Countering this, a letter from Garfield Street residents Allison and Dan Peterson backed the Garfield Street alignment specifically. Longtime riverside resident Heather Chandler wrote in support of extending the trail."
+   "x": "Abutting (neighboring) property owner Deborah “Jean” Bryanton (57 Dana Court) spoke at length against the project generally. She said every abutter she has talked to is opposed. She raised questions about maintenance cost, trespassing, policing, lighting, winter maintenance, shoreland zoning, and wildlife impact."
+  },
+  {
+   "t": "p",
+   "x": "A letter from Sarah Hancock cited nearly twenty years of abutter opposition. It echoed similar long-standing concerns, including unresolved property-boundary and construction-liability questions."
+  },
+  {
+   "t": "p",
+   "x": "Countering this, a letter from Garfield Street residents Allison and Dan Peterson backed the Garfield Street alignment specifically. Longtime riverside resident Heather Chandler wrote in support of extending the trail."
   },
   {
    "t": "label",
@@ -199,7 +255,15 @@
   },
   {
    "t": "p",
-   "x": "This order confirms Melissa Littlehale as Tax Collector. She joined the City in late June. She has 20+ years of accounting/finance/payroll/tax experience. She previously operated her own law practice in estate planning and real estate. She has a Juris Doctor (law degree) from the University of Maine School of Law, and she is a U.S. Air Force veteran. The order also formally recommits outstanding tax collection duties from outgoing Interim Finance Director Laura King. A floor amendment (a change made during the meeting) corrected a typo in the covered tax-year range (April 1, 2020 to April 1, 2021)."
+   "x": "This order confirms Melissa Littlehale as Tax Collector. She joined the City in late June. She has 20+ years of accounting/finance/payroll/tax experience."
+  },
+  {
+   "t": "p",
+   "x": "Littlehale previously operated her own law practice in estate planning and real estate. She has a Juris Doctor (law degree) from the University of Maine School of Law, and she is a U.S. Air Force veteran."
+  },
+  {
+   "t": "p",
+   "x": "The order also formally recommits outstanding tax collection duties from outgoing Interim Finance Director Laura King. A floor amendment (a change made during the meeting) corrected a typo in the covered tax-year range (April 1, 2020 to April 1, 2021)."
   },
   {
    "t": "label",
@@ -302,7 +366,11 @@
   },
   {
    "t": "p",
-   "x": "This order repeals the City's local motorized-scooter prohibition in Chapter 310. That prohibition is an ordinance, meaning a city law. Regulation and enforcement would be deferred entirely to state statute. This follows the July 6 Public Safety Committee discussion. Councilor Chau asked that the City help publicize applicable state laws (minimum age 16, driver's license required). He cited a similar public-education campaign in Scarborough."
+   "x": "This order repeals the City's local motorized-scooter prohibition in Chapter 310. That prohibition is an ordinance, meaning a city law. Regulation and enforcement would be deferred entirely to state statute."
+  },
+  {
+   "t": "p",
+   "x": "This follows the July 6 Public Safety Committee discussion. Councilor Chau asked that the City help publicize applicable state laws (minimum age 16, driver's license required). He cited a similar public-education campaign in Scarborough."
   },
   {
    "t": "label",
@@ -407,7 +475,15 @@
   },
   {
    "t": "p",
-   "x": "Councilor Turcotte described witnessing police respond to a mental-health crisis near her home over the weekend. She praised the department's calm, professional handling. Councilor Chau described his weekend door-to-door canvass of Monroe Avenue residents. He relayed their separate concerns about rising tax bills and hoped new rental-vehicle-registration revenue could help offset future increases. There were no referrals, no committee report updates, and no executive session (a closed, private session allowed by state law for certain topics). The meeting adjourned. A Facilities & Streets Committee meeting on private roads followed immediately after (outside this pipeline's tracked scope)."
+   "x": "Councilor Turcotte described witnessing police respond to a mental-health crisis near her home over the weekend. She praised the department's calm, professional handling."
+  },
+  {
+   "t": "p",
+   "x": "Councilor Chau described his weekend door-to-door canvass of Monroe Avenue residents. He relayed their separate concerns about rising tax bills and hoped new rental-vehicle-registration revenue could help offset future increases."
+  },
+  {
+   "t": "p",
+   "x": "There were no referrals, no committee report updates, and no executive session (a closed, private session allowed by state law for certain topics). The meeting adjourned. A Facilities & Streets Committee meeting on private roads followed immediately after (outside this pipeline's tracked scope)."
   },
   {
    "t": "label",

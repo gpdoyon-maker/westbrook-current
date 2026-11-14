@@ -536,8 +536,36 @@
    "x": "Discussion Summary"
   },
   {
-   "t": "p",
-   "x": "May 20, 5:00 PM: Facilities Committee (Sacarappa). May 27, 5:00 PM: Policy Committee. June 2: Class Night (Performing Arts Center). June 5–6: Westbrook Together Days. June 6, 6:00 PM: Class of 2026 graduation (Merrill Auditorium). June 9: school budget referendum vote (Westbrook Community Center, all day). June 10, 7:00 PM: regular School Committee meeting. June 17: last day of school (half day)."
+   "t": "li",
+   "x": "May 20, 5:00 PM: Facilities Committee (Sacarappa)."
+  },
+  {
+   "t": "li",
+   "x": "May 27, 5:00 PM: Policy Committee."
+  },
+  {
+   "t": "li",
+   "x": "June 2: Class Night (Performing Arts Center)."
+  },
+  {
+   "t": "li",
+   "x": "June 5–6: Westbrook Together Days."
+  },
+  {
+   "t": "li",
+   "x": "June 6, 6:00 PM: Class of 2026 graduation (Merrill Auditorium)."
+  },
+  {
+   "t": "li",
+   "x": "June 9: school budget referendum vote (Westbrook Community Center, all day)."
+  },
+  {
+   "t": "li",
+   "x": "June 10, 7:00 PM: regular School Committee meeting."
+  },
+  {
+   "t": "li",
+   "x": "June 17: last day of school (half day)."
   },
   {
    "t": "label",

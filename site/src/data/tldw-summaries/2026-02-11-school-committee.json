@@ -32,11 +32,19 @@
   },
   {
    "t": "p",
-   "x": "Assistant Superintendent of Operations and Finance Dr. Brian Mazjanis reported on the FY25 financial audit. It found no significant findings and no material weaknesses. It made three minor internal-control recommendations. The district's fund balance (money left over from past years) entering FY26 is approximately $900,000–$905,000. About $700,000 of that is already allocated to buy down the FY26 budget. That leaves roughly $205,000 in margin."
+   "x": "Assistant Superintendent of Operations and Finance Dr. Brian Mazjanis reported on the FY25 financial audit. It found no significant findings and no material weaknesses. It made three minor internal-control recommendations."
   },
   {
    "t": "p",
-   "x": "Assistant Superintendent Dr. O'Donnell presented a new district-run Pre-K program. Westbrook has been accepted into “Cohort 3” of a state-mandated process. In it, districts take over responsibility for early-childhood programs for three- and four-year-olds as Maine's Child Development Services program winds down. The district will pause its partnership with Opportunity Alliance. It will open two district-managed Pre-K classrooms at Canal School, starting with four-year-olds only in year one. The state will reimburse special-education costs. The added seats also increase the district's state per-pupil funding count (ED279)."
+   "x": "The district's fund balance (money left over from past years) entering FY26 is approximately $900,000–$905,000. About $700,000 of that is already allocated to buy down the FY26 budget. That leaves roughly $205,000 in margin."
+  },
+  {
+   "t": "p",
+   "x": "Assistant Superintendent Dr. O'Donnell presented a new district-run Pre-K program. Westbrook has been accepted into “Cohort 3” of a state-mandated process. In it, districts take over responsibility for early-childhood programs for three- and four-year-olds as Maine's Child Development Services program winds down."
+  },
+  {
+   "t": "p",
+   "x": "The district will pause its partnership with Opportunity Alliance. It will open two district-managed Pre-K classrooms at Canal School, starting with four-year-olds only in year one. The state will reimburse special-education costs. The added seats also increase the district's state per-pupil funding count (ED279)."
   },
   {
    "t": "label",
@@ -70,11 +78,19 @@
   },
   {
    "t": "p",
-   "x": "Chair Andrea Mancuso reported a positive capital-improvement-planning meeting with city finance staff. She announced that the February 23 joint City Council/School Committee meeting has been canceled. Informal staff-level meetings will replace it. They are meant to maintain budget-season collaboration. She closed by thanking school staff for supporting the community through a challenging recent month. She did not specify the underlying event on the record."
+   "x": "Chair Andrea Mancuso reported a positive capital-improvement-planning meeting with city finance staff. She announced that the February 23 joint City Council/School Committee meeting has been canceled. Informal staff-level meetings will replace it. They are meant to maintain budget-season collaboration."
   },
   {
    "t": "p",
-   "x": "Student Representative Jamila Mohamed Ahmed gave several reports. One covered high school Spirit Week. Another covered WRVC's Career and Technical Education Month, with 308 program applications received as of February 9. The reports also covered Westbrook Middle School's Quarter 2 honor-roll assembly. They covered elementary-school updates from Canal, Saccarappa, and Congin too."
+   "x": "She closed by thanking school staff for supporting the community through a challenging recent month. She did not specify the underlying event on the record."
+  },
+  {
+   "t": "p",
+   "x": "Student Representative Jamila Mohamed Ahmed gave several reports. One covered high school Spirit Week. Another covered WRVC's Career and Technical Education Month, with 308 program applications received as of February 9."
+  },
+  {
+   "t": "p",
+   "x": "The reports also covered Westbrook Middle School's Quarter 2 honor-roll assembly. They covered elementary-school updates from Canal, Saccarappa, and Congin too."
   },
   {
    "t": "label",
@@ -103,11 +119,43 @@
   },
   {
    "t": "p",
-   "x": "Facilities (Reed) toured Congin School. Solar panel installation there is nearly complete. A possible summer bathroom renovation is under consideration but not confirmed. Finance (Poitras) reported healthy, on-track monthly financials. Poitras also reported a preliminary (not guaranteed) $2.2 million increase in state subsidy (ED279). Several things drive it: multilingual-learner growth, special-education cost catch-up, transportation funding, and career and technical education funding changes. Westbrook's local share of education costs has risen to 52.3%. The state share is down to 47.7% this year."
+   "x": "Facilities (Reed) toured Congin School. Solar panel installation there is nearly complete. A possible summer bathroom renovation is under consideration but not confirmed."
   },
   {
    "t": "p",
-   "x": "Policy (Cavallaro) previewed upcoming work. It includes reworking employee and student harassment and discrimination policies. The aim is to align them with the Maine Civil Rights Act, after related federal changes were rescinded. The homework-policy review continues. The cell-phone ad hoc committee, a temporary group set up for one task, is regrouping to weigh a possible “bell-to-bell” cell phone ban. The transportation ad hoc committee is reviewing walking distances, late-bus protocols, and stop consolidation. Educational Programs (Rice) reported a draft 2026–27 school calendar going out for community survey feedback."
+   "x": "Finance (Poitras) reported healthy, on-track monthly financials. Poitras also reported a preliminary (not guaranteed) $2.2 million increase in state subsidy (ED279). Several things drive it:"
+  },
+  {
+   "t": "li",
+   "x": "Multilingual-learner growth"
+  },
+  {
+   "t": "li",
+   "x": "Special-education cost catch-up"
+  },
+  {
+   "t": "li",
+   "x": "Transportation funding"
+  },
+  {
+   "t": "li",
+   "x": "Career and technical education funding changes."
+  },
+  {
+   "t": "p",
+   "x": "Westbrook's local share of education costs has risen to 52.3%. The state share is down to 47.7% this year."
+  },
+  {
+   "t": "p",
+   "x": "Policy (Cavallaro) previewed upcoming work. It includes reworking employee and student harassment and discrimination policies. The aim is to align them with the Maine Civil Rights Act, after related federal changes were rescinded."
+  },
+  {
+   "t": "p",
+   "x": "The homework-policy review continues. The cell-phone ad hoc committee, a temporary group set up for one task, is regrouping to weigh a possible “bell-to-bell” cell phone ban. The transportation ad hoc committee is reviewing walking distances, late-bus protocols, and stop consolidation."
+  },
+  {
+   "t": "p",
+   "x": "Educational Programs (Rice) reported a draft 2026–27 school calendar going out for community survey feedback."
   },
   {
    "t": "label",
@@ -141,7 +189,23 @@
   },
   {
    "t": "p",
-   "x": "Item 12.1 authorizes a request to City Council to reallocate (move to new uses) the remaining FY25 bond proceeds. Bond proceeds are money the City borrows and repays over years. The money was originally $1.7 million for Canal School's secure vestibule, finished under budget in 2025, and bathrooms, planned for summer 2026. It also included $1.4 million for Westbrook High School bathrooms, finished under budget. Leftover Canal funds would go to Congin School bathrooms, then to painting at Canal if money remains. Leftover high school funds would go to other high school capital projects. Item 12.2 accepts a $428,445 Maine Department of Education School Revolving Renovation Fund award to replace Canal School's heating, ventilation, and air conditioning (HVAC) system. It is a five-year loan, 49% forgiven, with the district repaying $218,421. Both items were escalated from first approval to a combined first-and-final reading on the floor. A final reading is the final, binding vote."
+   "x": "Item 12.1 authorizes a request to City Council to reallocate (move to new uses) the remaining FY25 bond proceeds. Bond proceeds are money the City borrows and repays over years."
+  },
+  {
+   "t": "p",
+   "x": "The money was originally $1.7 million for Canal School's secure vestibule, finished under budget in 2025, and bathrooms, planned for summer 2026. It also included $1.4 million for Westbrook High School bathrooms, finished under budget."
+  },
+  {
+   "t": "p",
+   "x": "Leftover Canal funds would go to Congin School bathrooms, then to painting at Canal if money remains. Leftover high school funds would go to other high school capital projects."
+  },
+  {
+   "t": "p",
+   "x": "Item 12.2 accepts a $428,445 Maine Department of Education School Revolving Renovation Fund award to replace Canal School's heating, ventilation, and air conditioning (HVAC) system. It is a five-year loan, 49% forgiven, with the district repaying $218,421."
+  },
+  {
+   "t": "p",
+   "x": "Both items were escalated from first approval to a combined first-and-final reading on the floor. A final reading is the final, binding vote."
   },
   {
    "t": "label",
@@ -174,7 +238,23 @@
   },
   {
    "t": "p",
-   "x": "At Noreen Poitras's request, six policy items were read into the record and voted together. First, adopt Policy BID (School Committee Member Compensation, under Westbrook City Charter Article 4.4). The packet draft sets pay at 7% of Area Median Income for the Chair, 6% for the Vice-Chair and 5% for members. Second, approve Policy EHB (Records Management), EHB–R2 (Records Retention Schedule), and EHB–R3 (School Records to be Transferred to Next Grade Level). Third, delete Policy EHB–L and EHB–LR (Litigation Hold and Litigation Hold Procedures). Unlike 12.1 and 12.2, these remained first approval only, the first of two required votes."
+   "x": "At Noreen Poitras's request, six policy items were read into the record and voted together:"
+  },
+  {
+   "t": "li",
+   "x": "First, adopt Policy BID (School Committee Member Compensation, under Westbrook City Charter Article 4.4). The packet draft sets pay at 7% of Area Median Income for the Chair, 6% for the Vice-Chair and 5% for members."
+  },
+  {
+   "t": "li",
+   "x": "Second, approve Policy EHB (Records Management), EHB–R2 (Records Retention Schedule), and EHB–R3 (School Records to be Transferred to Next Grade Level)."
+  },
+  {
+   "t": "li",
+   "x": "Third, delete Policy EHB–L and EHB–LR (Litigation Hold and Litigation Hold Procedures)."
+  },
+  {
+   "t": "p",
+   "x": "Unlike 12.1 and 12.2, these remained first approval only, the first of two required votes."
   },
   {
    "t": "label",

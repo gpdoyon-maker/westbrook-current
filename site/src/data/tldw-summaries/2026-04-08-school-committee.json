@@ -28,7 +28,51 @@
   },
   {
    "t": "p",
-   "x": "Dr. Lancia announced three retirements: Paula Curcio (Westbrook Middle School social studies teacher), Marina Davis (Westbrook High School math teacher), and Wendy Harvey (Westbrook High School co-principal, after 12 years as assistant and co-principal). He recognized extensive achievements. There were 35 Westbrook Regional Vocational Center students at the SkillsUSA state championships, with multiple medalists. The Westbrook Regional Vocational Center and Westbrook High School eSports team won two state championship titles. A Junior Achievement Titan Challenge state title unseated a longtime Yarmouth High School streak. Westbrook High School Winter Guard had a top-Maine, gold-New-England finish. There were also strong college acceptances, including Bowdoin, Colby, Boston University, and Northeastern. Details on the Pre-K admission lottery were to go out to interested families within a day or so. A student and a School Nutrition staff member were competing that day at the state cook-off after winning their regional round."
+   "x": "Dr. Lancia announced three retirements:"
+  },
+  {
+   "t": "li",
+   "x": "Paula Curcio (Westbrook Middle School social studies teacher)."
+  },
+  {
+   "t": "li",
+   "x": "Marina Davis (Westbrook High School math teacher)."
+  },
+  {
+   "t": "li",
+   "x": "Wendy Harvey (Westbrook High School co-principal, after 12 years as assistant and co-principal)."
+  },
+  {
+   "t": "p",
+   "x": "He recognized extensive achievements."
+  },
+  {
+   "t": "li",
+   "x": "There were 35 Westbrook Regional Vocational Center students at the SkillsUSA state championships, with multiple medalists."
+  },
+  {
+   "t": "li",
+   "x": "The Westbrook Regional Vocational Center and Westbrook High School eSports team won two state championship titles."
+  },
+  {
+   "t": "li",
+   "x": "A Junior Achievement Titan Challenge state title unseated a longtime Yarmouth High School streak."
+  },
+  {
+   "t": "li",
+   "x": "Westbrook High School Winter Guard had a top-Maine, gold-New-England finish."
+  },
+  {
+   "t": "li",
+   "x": "There were also strong college acceptances, including Bowdoin, Colby, Boston University, and Northeastern."
+  },
+  {
+   "t": "p",
+   "x": "Details on the Pre-K admission lottery were to go out to interested families within a day or so."
+  },
+  {
+   "t": "p",
+   "x": "A student and a School Nutrition staff member were competing that day at the state cook-off after winning their regional round."
   },
   {
    "t": "label",
@@ -96,7 +140,19 @@
   },
   {
    "t": "p",
-   "x": "The committee recessed into a public hearing on the proposed FY27 budget: $57,349,321.39, a 7.5% increase over FY26 (down from the original 9.88% March 4 proposal), a 7.34% increase to the local tax share. Mayor David Morse spoke during the earlier public-participation period. He thanked the committee and anticipated continued City Council support ahead of a June 9 voter referendum. No one spoke in person during the hearing itself. Three written comments were read into the record. One was in full support. Two urged the committee to keep instructional coach positions under consideration for elimination. One of those was from a Westbrook Middle School staff member about the middle school's two coaches. The other was from a Saccarappa teacher about the coaches' value there (partly read aloud, with the rest submitted in writing)."
+   "x": "The committee recessed into a public hearing on the proposed FY27 budget: $57,349,321.39, a 7.5% increase over FY26 (down from the original 9.88% March 4 proposal), a 7.34% increase to the local tax share."
+  },
+  {
+   "t": "p",
+   "x": "Mayor David Morse spoke during the earlier public-participation period. He thanked the committee and anticipated continued City Council support ahead of a June 9 voter referendum."
+  },
+  {
+   "t": "p",
+   "x": "No one spoke in person during the hearing itself. Three written comments were read into the record. One was in full support."
+  },
+  {
+   "t": "p",
+   "x": "Two urged the committee to keep instructional coach positions under consideration for elimination. One of those was from a Westbrook Middle School staff member about the middle school's two coaches. The other was from a Saccarappa teacher about the coaches' value there (partly read aloud, with the rest submitted in writing)."
   },
   {
    "t": "label",
@@ -146,7 +202,75 @@
   },
   {
    "t": "p",
-   "x": "Finance Committee Chair Noreen Poitras read the full set of state-required budget warrant articles, which are separate budget questions approved by the Council and voters. They included the per-category breakdown: regular instruction ($21,712,387.01), special education ($10,633,908.71), career and technical education ($3,433,294.98), other instruction ($847,790.41), student and staff support ($4,600,998.09), system administration ($2,034,810.20), school administration ($2,430,076.55), transportation ($2,705,330.37), facility maintenance ($4,836,685.98), and debt service (yearly loan payments)/other commitments ($4,114,039.09). Chair Mancuso detailed roughly $1.3 million in total reductions from the original proposal (the increase falling from 9.88% to 7.5%). These included seven eliminated or reduced staff positions, $114,000 cut from technology, $60,000-plus from professional development, nearly $20,000 from athletics/activities, and roughly $70,000 from facilities. This vote was a first reading, the first of two required votes."
+   "x": "Finance Committee Chair Noreen Poitras read the full set of state-required budget warrant articles, which are separate budget questions approved by the Council and voters. They included the per-category breakdown:"
+  },
+  {
+   "t": "li",
+   "x": "Regular instruction ($21,712,387.01)"
+  },
+  {
+   "t": "li",
+   "x": "Special education ($10,633,908.71)"
+  },
+  {
+   "t": "li",
+   "x": "Career and technical education ($3,433,294.98)"
+  },
+  {
+   "t": "li",
+   "x": "Other instruction ($847,790.41)"
+  },
+  {
+   "t": "li",
+   "x": "Student and staff support ($4,600,998.09)"
+  },
+  {
+   "t": "li",
+   "x": "System administration ($2,034,810.20)"
+  },
+  {
+   "t": "li",
+   "x": "School administration ($2,430,076.55)"
+  },
+  {
+   "t": "li",
+   "x": "Transportation ($2,705,330.37)"
+  },
+  {
+   "t": "li",
+   "x": "Facility maintenance ($4,836,685.98)"
+  },
+  {
+   "t": "li",
+   "x": "Debt service (yearly loan payments)/other commitments ($4,114,039.09)"
+  },
+  {
+   "t": "p",
+   "x": "Chair Mancuso detailed roughly $1.3 million in total reductions from the original proposal (the increase falling from 9.88% to 7.5%). These included:"
+  },
+  {
+   "t": "li",
+   "x": "Seven eliminated or reduced staff positions"
+  },
+  {
+   "t": "li",
+   "x": "$114,000 cut from technology"
+  },
+  {
+   "t": "li",
+   "x": "$60,000-plus from professional development"
+  },
+  {
+   "t": "li",
+   "x": "Nearly $20,000 from athletics/activities"
+  },
+  {
+   "t": "li",
+   "x": "Roughly $70,000 from facilities"
+  },
+  {
+   "t": "p",
+   "x": "This vote was a first reading, the first of two required votes."
   },
   {
    "t": "label",

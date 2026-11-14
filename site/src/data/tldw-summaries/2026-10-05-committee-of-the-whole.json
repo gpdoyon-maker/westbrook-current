@@ -28,7 +28,11 @@
   },
   {
    "t": "p",
-   "x": "Chair Gary Rairdon opened the meeting. He noted this was one of the last in a series of Committee of the Whole reviews of city board/committee ordinances (city laws). He asked for civility, given how passionate this particular topic tends to be. Roll call: Councilors McCambridge, Shaughnessy (Vice President), Munro (President), Chau, and Faulkingham, plus Chair Rairdon, answered present — six of seven members. Councilor Anna Turcotte was not named at roll call."
+   "x": "Chair Gary Rairdon opened the meeting. He noted this was one of the last in a series of Committee of the Whole reviews of city board/committee ordinances (city laws). He asked for civility, given how passionate this particular topic tends to be."
+  },
+  {
+   "t": "p",
+   "x": "Roll call: Councilors McCambridge, Shaughnessy (Vice President), Munro (President), Chau, and Faulkingham, plus Chair Rairdon, answered present — six of seven members. Councilor Anna Turcotte was not named at roll call."
   },
   {
    "t": "label",
@@ -53,7 +57,11 @@
   },
   {
    "t": "p",
-   "x": "City Administrator Angela Holmes presented a repeal-and-replace of Code of Ordinances Chapter 7, Article III (Recreation & Conservation Commission). That means the old text is struck and new text put in its place. She also presented related amendments to Chapter 295 (Trees, Green Space). This is the same rewrite that later passed as Order 2026-116 at the Oct 19, 2026 Special City Council Meeting. Tonight's step is the Committee of the Whole's review and referral (sending the ordinance on to the full Council). No commission members were present or spoke tonight despite two invitations from the Chair."
+   "x": "City Administrator Angela Holmes presented a repeal-and-replace of Code of Ordinances Chapter 7, Article III (Recreation & Conservation Commission). That means the old text is struck and new text put in its place. She also presented related amendments to Chapter 295 (Trees, Green Space). This is the same rewrite that later passed as Order 2026-116 at the Oct 19, 2026 Special City Council Meeting."
+  },
+  {
+   "t": "p",
+   "x": "Tonight's step is the Committee of the Whole's review and referral (sending the ordinance on to the full Council). No commission members were present or spoke tonight despite two invitations from the Chair."
   },
   {
    "t": "h",
@@ -62,7 +70,11 @@
   },
   {
    "t": "p",
-   "x": "The 1970 ordinance (amended 1987, 2018) carried over 1960s state-statute language. That language assigns operational (department), executive (mayoral), and legislative (council) authority to what is legally only an advisory body. This conflicts with the City Charter. Staff met with the Commission four separate times, including a paused first attempt after initial pushback, before drafting this version. That feedback, included in the packet, shows divided views. Some members had no concern with the title change. Others saw it as diminishing the body and worried about losing the conservation focus."
+   "x": "The 1970 ordinance (amended 1987, 2018) carried over 1960s state-statute language. That language assigns operational (department), executive (mayoral), and legislative (council) authority to what is legally only an advisory body. This conflicts with the City Charter."
+  },
+  {
+   "t": "p",
+   "x": "Staff met with the Commission four separate times, including a paused first attempt after initial pushback, before drafting this version. That feedback, included in the packet, shows divided views. Some members had no concern with the title change. Others saw it as diminishing the body and worried about losing the conservation focus."
   },
   {
    "t": "p",
@@ -70,11 +82,55 @@
   },
   {
    "t": "p",
-   "x": "Cited charter conflicts include the Commission's current authority to \"plan, develop, and conserve open areas,\" direct city-forest management, and compel other departments to assist it. They also include its authority to acquire land \"subject to council approval\" (the Charter reserves land acquisition solely to the Council). Others are its authority to coordinate other conservation bodies and initiate environmental studies (implying control over department priorities). The last is its authority to solicit grants/gifts. That bypasses the Council's appropriation process (its approval of spending) and the Mayor's veto. Staff emphasized preserving the Commission's real track record. That includes the Green Space ordinance (350 designated acres). It also includes partnerships with the Presumpscot Regional Land Trust (PRLT) and Portland Trails, subdivision-application review, and open-space-fund recommendations (two went to Council earlier that same evening)."
+   "x": "Cited charter conflicts include the Commission's current authority to \"plan, develop, and conserve open areas,\" direct city-forest management, and compel other departments to assist it. They also include its authority to acquire land \"subject to council approval\" (the Charter reserves land acquisition solely to the Council)."
   },
   {
    "t": "p",
-   "x": "Staff's draft sunsets (ends) the Commission. It creates a new advisory body, the \"Parks and Recreation Committee\" (the packet says the title \"Commission\" implies decision-making authority). The draft drops the state-statute reference. It keeps 7 seats while eliminating the 3 alternate seats. It drops the citizenship requirement (keeping Westbrook residency) and adds a purpose statement. It removes the ban on member compensation. It matches the Planning Board's removal process (mayoral complaint + 2/3 Council vote). It drops the Secretary role and annual-report obligation. It requires quarterly meetings called by the City Planner and/or Sustainability Coordinator. It also strikes its old supervisory-sounding language over city arborists, which Holmes said Commission members agreed needed to go. Transferring a Green Space parcel to a certified land trust (PRLT) would automatically remove its Green Space designation."
+   "x": "Others are its authority to coordinate other conservation bodies and initiate environmental studies (implying control over department priorities). The last is its authority to solicit grants/gifts. That bypasses the Council's appropriation process (its approval of spending) and the Mayor's veto."
+  },
+  {
+   "t": "p",
+   "x": "Staff emphasized preserving the Commission's real track record. That includes the Green Space ordinance (350 designated acres). It also includes partnerships with the Presumpscot Regional Land Trust (PRLT) and Portland Trails, subdivision-application review, and open-space-fund recommendations (two went to Council earlier that same evening)."
+  },
+  {
+   "t": "p",
+   "x": "Staff's draft sunsets (ends) the Commission. It creates a new advisory body, the \"Parks and Recreation Committee\" (the packet says the title \"Commission\" implies decision-making authority)."
+  },
+  {
+   "t": "li",
+   "x": "The draft drops the state-statute reference."
+  },
+  {
+   "t": "li",
+   "x": "It keeps 7 seats while eliminating the 3 alternate seats."
+  },
+  {
+   "t": "li",
+   "x": "It drops the citizenship requirement (keeping Westbrook residency) and adds a purpose statement."
+  },
+  {
+   "t": "li",
+   "x": "It removes the ban on member compensation."
+  },
+  {
+   "t": "li",
+   "x": "It matches the Planning Board's removal process (mayoral complaint + 2/3 Council vote)."
+  },
+  {
+   "t": "li",
+   "x": "It drops the Secretary role and annual-report obligation."
+  },
+  {
+   "t": "li",
+   "x": "It requires quarterly meetings called by the City Planner and/or Sustainability Coordinator."
+  },
+  {
+   "t": "li",
+   "x": "It also strikes its old supervisory-sounding language over city arborists, which Holmes said Commission members agreed needed to go."
+  },
+  {
+   "t": "p",
+   "x": "Transferring a Green Space parcel to a certified land trust (PRLT) would automatically remove its Green Space designation."
   },
   {
    "t": "h",
@@ -89,7 +145,11 @@
   },
   {
    "t": "p",
-   "x": "Shaughnessy developed the language with staff in advance (staff stated they fully support it). He proposed renaming the body \"Recreation and Sustainability Committee\" instead of staff's draft \"Parks and Recreation Committee.\" He also proposed expanding the purpose statement for clarity, and giving the Chair and Vice Chair an explicit role facilitating meetings. He separately raised a one-year report-back once the new committee is established, as an operational commitment rather than ordinance text. It was not added to the ordinance text when the full ordinance passed Oct 19."
+   "x": "Shaughnessy developed the language with staff in advance (staff stated they fully support it). He proposed renaming the body \"Recreation and Sustainability Committee\" instead of staff's draft \"Parks and Recreation Committee.\""
+  },
+  {
+   "t": "p",
+   "x": "Shaughnessy also proposed expanding the purpose statement for clarity, and giving the Chair and Vice Chair an explicit role facilitating meetings. He separately raised a one-year report-back once the new committee is established, as an operational commitment rather than ordinance text. It was not added to the ordinance text when the full ordinance passed Oct 19."
   },
   {
    "t": "label",

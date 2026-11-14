@@ -28,11 +28,23 @@
   },
   {
    "t": "p",
-   "x": "Dustin Roma (DM Roma Consulting Engineers) returned with the final plan for the three-lot subdivision workshopped August 4. The plan adds a confirmed sight-distance measurement at the proposed Lot 1 driveway (shown adequate in both directions). It also adds conditions. These restrict Lots 2 and 3 to shared access over the existing easement (a right to use part of someone else's land). They rule out new curb cuts onto Longfellow Street. City Planner Rebecca Spitella flagged one correction to the conditions of approval: the application date needed to read August 6, 2026. She also confirmed the open-space fee is due before the final plans can be released for recording."
+   "x": "Dustin Roma (DM Roma Consulting Engineers) returned with the final plan for the three-lot subdivision workshopped August 4. The plan adds a confirmed sight-distance measurement at the proposed Lot 1 driveway (shown adequate in both directions)."
   },
   {
    "t": "p",
-   "x": "Member Jason Frazier questioned why a small land subdivision like this one is subject to an open-space fee-in-lieu at all, given the resulting lots have ample private yard space. (A fee-in-lieu is a fee paid instead of providing the open space.) Staff explained the fee formula (a percentage of average lot size times an assessor-set cost per developable acre). Staff pointed to the workshop item later on the agenda that would amend the ordinance (a city law). That item covers the fuller policy rationale and planned revisions. No public comment."
+   "x": "It also adds conditions. These restrict Lots 2 and 3 to shared access over the existing easement (a right to use part of someone else's land). They rule out new curb cuts onto Longfellow Street."
+  },
+  {
+   "t": "p",
+   "x": "City Planner Rebecca Spitella flagged one correction to the conditions of approval: the application date needed to read August 6, 2026. She also confirmed the open-space fee is due before the final plans can be released for recording."
+  },
+  {
+   "t": "p",
+   "x": "Member Jason Frazier questioned why a small land subdivision like this one is subject to an open-space fee-in-lieu at all, given the resulting lots have ample private yard space. (A fee-in-lieu is a fee paid instead of providing the open space.) Staff explained the fee formula (a percentage of average lot size times an assessor-set cost per developable acre)."
+  },
+  {
+   "t": "p",
+   "x": "Staff pointed to the workshop item later on the agenda that would amend the ordinance (a city law). That item covers the fuller policy rationale and planned revisions. No public comment."
   },
   {
    "t": "label",
@@ -77,15 +89,47 @@
   },
   {
    "t": "p",
-   "x": "City Planner Rebecca Spitella reintroduced this “social engagement” ordinance amendment. An ordinance amendment is a change to a city law. It was workshopped last fall. A public hearing is planned for October. The amendment began as a City Council referral (a matter sent to a board or committee to study). It would fold the subdivision ordinance's existing, partly duplicative “appearance assessment” findings into clearer community site-design standards. The standards are modeled on the Village Review Overlay district's. They cover building orientation toward public streets, parking located behind/beside structures where feasible, native-species landscaping, and lower-scale pedestrian lighting. The lighting would copy the spacing of public street lights, though not necessarily their fixture style."
+   "x": "City Planner Rebecca Spitella reintroduced this “social engagement” ordinance amendment. An ordinance amendment is a change to a city law. It was workshopped last fall. A public hearing is planned for October."
   },
   {
    "t": "p",
-   "x": "It also rewrites the open-space standard. When amenities are provided on site, the new standard is 300 sq. ft. per studio/one-bedroom unit and 500 sq. ft. per two-plus-bedroom unit. Before, it was a flat 300 sq. ft. no matter the unit size. When conservation is used instead, a higher land-reservation requirement applies. This is to discourage reserving land that was unbuildable anyway. Projects that can do neither would pay a recalculated fee-in-lieu, based on an assessor-set cost per developable acre."
+   "x": "The amendment began as a City Council referral (a matter sent to a board or committee to study). It would fold the subdivision ordinance's existing, partly duplicative “appearance assessment” findings into clearer community site-design standards."
   },
   {
    "t": "p",
-   "x": "Several members pressed for clarity. Kevin Price asked how the amendment applies to projects already in process. That prompted a board discussion, led by Chair McWilliams. The discussion was about whether site plan extensions (more time on an approved site plan) should have a hard cap rather than the current informal practice. Jason Frazier argued the lighting standard was too rigid. He said it should state safety/anti-glare goals rather than dictate fixture spacing. He also asked for clearer language on what counts as a “corner” lot. Oriana Farnham agreed that clearer lighting language would help the board judge designs consistently. She backed keeping native plantings mandatory (“shall”), leaving the board's waiver provision as the route for any exception. Lucas Schrage agreed, citing the city's stewardship of the Presumpscot River. Staff welcomed the lighting feedback and will revise that language. Staff will also compare a new state dark-sky law with the city's own ordinance. The law takes effect October 1, for publicly funded projects. No public comment."
+   "x": "The standards are modeled on the Village Review Overlay district's. They cover building orientation toward public streets, parking located behind/beside structures where feasible, native-species landscaping, and lower-scale pedestrian lighting. The lighting would copy the spacing of public street lights, though not necessarily their fixture style."
+  },
+  {
+   "t": "p",
+   "x": "It also rewrites the open-space standard. When amenities are provided on site, the new standard is 300 sq. ft. per studio/one-bedroom unit and 500 sq. ft. per two-plus-bedroom unit. Before, it was a flat 300 sq. ft. no matter the unit size."
+  },
+  {
+   "t": "p",
+   "x": "When conservation is used instead, a higher land-reservation requirement applies. This is to discourage reserving land that was unbuildable anyway. Projects that can do neither would pay a recalculated fee-in-lieu, based on an assessor-set cost per developable acre."
+  },
+  {
+   "t": "p",
+   "x": "Several members pressed for clarity."
+  },
+  {
+   "t": "li",
+   "x": "Kevin Price asked how the amendment applies to projects already in process. That prompted a board discussion, led by Chair McWilliams. The discussion was about whether site plan extensions (more time on an approved site plan) should have a hard cap rather than the current informal practice."
+  },
+  {
+   "t": "li",
+   "x": "Jason Frazier argued the lighting standard was too rigid. He said it should state safety/anti-glare goals rather than dictate fixture spacing. He also asked for clearer language on what counts as a “corner” lot."
+  },
+  {
+   "t": "li",
+   "x": "Oriana Farnham agreed that clearer lighting language would help the board judge designs consistently. She backed keeping native plantings mandatory (“shall”), leaving the board's waiver provision as the route for any exception."
+  },
+  {
+   "t": "li",
+   "x": "Lucas Schrage agreed, citing the city's stewardship of the Presumpscot River."
+  },
+  {
+   "t": "p",
+   "x": "Staff welcomed the lighting feedback and will revise that language. Staff will also compare a new state dark-sky law with the city's own ordinance. The law takes effect October 1, for publicly funded projects. No public comment."
   },
   {
    "t": "label",
@@ -125,15 +169,47 @@
   },
   {
    "t": "p",
-   "x": "City Planner Rebecca Spitella gave an extensive briefing prompted by a City Council referral. The briefing followed the state legislature's passage of Legislative Document 307. That bill would have created a Maine Data Center Coordination Council and an 18-month moratorium (a temporary ban). Governor Mills vetoed it. The briefing also followed the Westbrook City Council's own precautionary June 1, 2026 180-day local moratorium, passed even though no data center project was then pending. Today, “data center” is a defined use with no standards beyond ordinary site plan review. It is permitted only within the Rock Row contract zone (a special zoning deal for one property)."
+   "x": "City Planner Rebecca Spitella gave an extensive briefing prompted by a City Council referral. The briefing followed the state legislature's passage of Legislative Document 307. That bill would have created a Maine Data Center Coordination Council and an 18-month moratorium (a temporary ban). Governor Mills vetoed it."
   },
   {
    "t": "p",
-   "x": "Spitella covered data center types. They range from small on-site “enterprise” server rooms to large “hyperscale” centers driven by artificial intelligence. None of the latter exist in Maine. Total New England data center capacity is smaller than Northern Virginia's alone. She also covered four impact areas. Water use/discharge: evaporative cooling is most common and most water-intensive. Closed-loop “dry” cooling uses far less water, but more energy. Immersion cooling raises unresolved questions about per- and polyfluoroalkyl substances. These are long-lasting man-made chemicals. Power demand: it could stress or support the grid, depending on existing capacity. The state's Public Utilities Commission is doing its own ongoing regulatory review. Noise: continuous ambient equipment noise. Locally, it is regulated only by a police-department reasonableness standard. Economic development: a tax base that does not lose value over time, but relatively few permanent jobs. There is also a public-trust risk around community benefit agreements."
+   "x": "The briefing also followed the Westbrook City Council's own precautionary June 1, 2026 180-day local moratorium, passed even though no data center project was then pending. Today, “data center” is a defined use with no standards beyond ordinary site plan review. It is permitted only within the Rock Row contract zone (a special zoning deal for one property)."
   },
   {
    "t": "p",
-   "x": "Staff recommendation: remove data centers as a permitted use from the Rock Row contract zone. This would effectively prohibit new standalone development citywide for now. Staff gave these reasons. Industry change is moving faster than regulation. Also, Westbrook's dense population pattern makes it more likely to stress than support the grid. Staff would continue to allow small on-site “enterprise” information technology rooms as an accessory use (a secondary use on the same property)."
+   "x": "Spitella covered data center types. They range from small on-site “enterprise” server rooms to large “hyperscale” centers driven by artificial intelligence. None of the latter exist in Maine. Total New England data center capacity is smaller than Northern Virginia's alone."
+  },
+  {
+   "t": "p",
+   "x": "She also covered four impact areas."
+  },
+  {
+   "t": "li",
+   "x": "Water use/discharge: evaporative cooling is most common and most water-intensive. Closed-loop “dry” cooling uses far less water, but more energy. Immersion cooling raises unresolved questions about per- and polyfluoroalkyl substances. These are long-lasting man-made chemicals."
+  },
+  {
+   "t": "li",
+   "x": "Power demand: it could stress or support the grid, depending on existing capacity. The state's Public Utilities Commission is doing its own ongoing regulatory review."
+  },
+  {
+   "t": "li",
+   "x": "Noise: continuous ambient equipment noise. Locally, it is regulated only by a police-department reasonableness standard."
+  },
+  {
+   "t": "li",
+   "x": "Economic development: a tax base that does not lose value over time, but relatively few permanent jobs. There is also a public-trust risk around community benefit agreements."
+  },
+  {
+   "t": "p",
+   "x": "Staff recommendation: remove data centers as a permitted use from the Rock Row contract zone. This would effectively prohibit new standalone development citywide for now."
+  },
+  {
+   "t": "p",
+   "x": "Staff gave these reasons. Industry change is moving faster than regulation. Also, Westbrook's dense population pattern makes it more likely to stress than support the grid."
+  },
+  {
+   "t": "p",
+   "x": "Staff would continue to allow small on-site “enterprise” information technology rooms as an accessory use (a secondary use on the same property)."
   },
   {
    "t": "label",

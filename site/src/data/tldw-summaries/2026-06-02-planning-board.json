@@ -91,7 +91,27 @@
   },
   {
    "t": "p",
-   "x": "Andy Morrill (BH2M) reported on three issues flagged at a November 2025 review. First, the sewer was rerouted entirely through the 712 Main Street parcel via a grinder pump. Second, Building A was pulled back to a 12.5-foot setback (a required distance from a property line) from a shared retaining wall. This removed the need for a maintenance easement (a right to use part of someone else's land) that an abutting neighbor had declined to grant. Third, stormwater was redesigned with expanded retention and an upstream-watershed bypass. Abutter Gary Minujian spoke against the project, citing lost backyard privacy and the declined easement request. Staff confirmed that the one-space-per-unit parking meets the City Center District standard. Vice Chair John Turcotte asked about buffering, given a roughly 40-foot grade difference to abutting yards. A 9-foot retaining wall with a wood guardrail serves as the primary buffer."
+   "x": "Andy Morrill (BH2M) reported on three issues flagged at a November 2025 review."
+  },
+  {
+   "t": "li",
+   "x": "First, the sewer was rerouted entirely through the 712 Main Street parcel via a grinder pump."
+  },
+  {
+   "t": "li",
+   "x": "Second, Building A was pulled back to a 12.5-foot setback (a required distance from a property line) from a shared retaining wall. This removed the need for a maintenance easement (a right to use part of someone else's land) that an abutting neighbor had declined to grant."
+  },
+  {
+   "t": "li",
+   "x": "Third, stormwater was redesigned with expanded retention and an upstream-watershed bypass."
+  },
+  {
+   "t": "p",
+   "x": "Abutter Gary Minujian spoke against the project, citing lost backyard privacy and the declined easement request. Staff confirmed that the one-space-per-unit parking meets the City Center District standard."
+  },
+  {
+   "t": "p",
+   "x": "Vice Chair John Turcotte asked about buffering, given a roughly 40-foot grade difference to abutting yards. A 9-foot retaining wall with a wood guardrail serves as the primary buffer."
   },
   {
    "t": "label",
@@ -120,7 +140,15 @@
   },
   {
    "t": "p",
-   "x": "Dustin Roma (DM Roma Consulting Engineers) presented a 7,500-sq-ft, five-bay multi-tenant “service business” building. It has a single access point designed to prevent left turns exiting onto Bridgton Road. It has no outdoor material storage and uses downcast building-mounted lighting. Staff required final plans to commit to whether a sprinkler system will be installed before signature. Abutters Pauline and Paul Barrows raised a deeded drainage easement they hold across the property. They also questioned the parking count and sign placement near their driveway sightline. The applicant confirmed a culvert will intercept drainage at its current entry point with a slow-release design. The applicant also said the sign will sit well back of their driveway. Chair McWilliams praised the traffic study (citing a 1.43% corridor traffic increase, 2016–2022) and the single-access design."
+   "x": "Dustin Roma (DM Roma Consulting Engineers) presented a 7,500-sq-ft, five-bay multi-tenant “service business” building. It has a single access point designed to prevent left turns exiting onto Bridgton Road. It has no outdoor material storage and uses downcast building-mounted lighting. Staff required final plans to commit to whether a sprinkler system will be installed before signature."
+  },
+  {
+   "t": "p",
+   "x": "Abutters Pauline and Paul Barrows raised a deeded drainage easement they hold across the property. They also questioned the parking count and sign placement near their driveway sightline. The applicant confirmed a culvert will intercept drainage at its current entry point with a slow-release design. The applicant also said the sign will sit well back of their driveway."
+  },
+  {
+   "t": "p",
+   "x": "Chair McWilliams praised the traffic study (citing a 1.43% corridor traffic increase, 2016–2022) and the single-access design."
   },
   {
    "t": "label",
@@ -149,7 +177,15 @@
   },
   {
    "t": "p",
-   "x": "Ian McKim (Jones & Beach Engineers) presented a third amendment. It reconfigures lot lines across several Phase 3 parcels to separate ownership and responsibility under a master condominium/cross-easement agreement. Staff noted that a November 2025 amendment to this subdivision was never finalized with Portland and was voided. So this amendment builds on the November 2024-approved baseline. Each lot still requires its own site plan review. A site plan is the detailed plan for a building project that the Planning Board reviews. The board granted a waiver extending the subdivision-plan recording deadline to 150 days (a prior joint-meeting waiver with Portland carries over)."
+   "x": "Ian McKim (Jones & Beach Engineers) presented a third amendment. It reconfigures lot lines across several Phase 3 parcels to separate ownership and responsibility under a master condominium/cross-easement agreement."
+  },
+  {
+   "t": "p",
+   "x": "Staff noted that a November 2025 amendment to this subdivision was never finalized with Portland and was voided. So this amendment builds on the November 2024-approved baseline. Each lot still requires its own site plan review. A site plan is the detailed plan for a building project that the Planning Board reviews."
+  },
+  {
+   "t": "p",
+   "x": "The board granted a waiver extending the subdivision-plan recording deadline to 150 days (a prior joint-meeting waiver with Portland carries over)."
   },
   {
    "t": "label",
@@ -183,11 +219,35 @@
   },
   {
    "t": "p",
-   "x": "Ian McKim introduced Tom Dever and Greg Del Niro of Dever Architects. They presented a 5-story, 119-room Element by Marriott hotel with a ground-floor restaurant/retail. The brand is an extended-stay, sustainability-branded line, and roughly 70% of the units have full kitchens. The site is near Nason's Brook, across Quarry Drive from the garage/residential buildings reviewed at the prior meeting. The building includes a pass-through “paseo” courtyard. It relies on the adjacent parking garage for guest parking through a planned cross-easement. Proposed facades are aluminum composite panels in gray, white, and wood tones, with ground-floor brick. No public comment."
+   "x": "Ian McKim introduced Tom Dever and Greg Del Niro of Dever Architects. They presented a 5-story, 119-room Element by Marriott hotel with a ground-floor restaurant/retail. The brand is an extended-stay, sustainability-branded line, and roughly 70% of the units have full kitchens. The site is near Nason's Brook, across Quarry Drive from the garage/residential buildings reviewed at the prior meeting."
   },
   {
    "t": "p",
-   "x": "Board reaction was strongly positive. Member Jason Frazier asked for more landscape-berming detail and example renderings. Vice Chair John Turcotte praised the team for showing the building in context with its neighbors for the first time. He asked for similar contextual views going forward. Member Robin Tannenbaum was at first disoriented by inconsistent plan orientations. Tannenbaum asked for a standard north arrow in future submissions. Member Karen Axelson confirmed there is no conference/banquet space. Member Nancy Litrocapes asked how facade consistency would be kept once retail tenants are chosen. The team explained that master developer Waterstone will build out and lease the ground-floor shell directly, using a consistent architectural “frame.”"
+   "x": "The building includes a pass-through “paseo” courtyard. It relies on the adjacent parking garage for guest parking through a planned cross-easement. Proposed facades are aluminum composite panels in gray, white, and wood tones, with ground-floor brick. No public comment."
+  },
+  {
+   "t": "p",
+   "x": "Board reaction was strongly positive."
+  },
+  {
+   "t": "li",
+   "x": "Member Jason Frazier asked for more landscape-berming detail and example renderings."
+  },
+  {
+   "t": "li",
+   "x": "Vice Chair John Turcotte praised the team for showing the building in context with its neighbors for the first time. He asked for similar contextual views going forward."
+  },
+  {
+   "t": "li",
+   "x": "Member Robin Tannenbaum was at first disoriented by inconsistent plan orientations. Tannenbaum asked for a standard north arrow in future submissions."
+  },
+  {
+   "t": "li",
+   "x": "Member Karen Axelson confirmed there is no conference/banquet space."
+  },
+  {
+   "t": "li",
+   "x": "Member Nancy Litrocapes asked how facade consistency would be kept once retail tenants are chosen. The team explained that master developer Waterstone will build out and lease the ground-floor shell directly, using a consistent architectural “frame.”"
   },
   {
    "t": "label",
@@ -212,7 +272,19 @@
   },
   {
    "t": "p",
-   "x": "Tyler Norod (President, Westbrook Development Corporation) reintroduced a project first approved for a contract zone amendment (a special zoning deal for one property) and sketch plan in 2024. It stalled when state funding cycles changed. The design is unchanged. The proposal is two 36-unit, three-story affordable apartment buildings. They would be funded through the Low-Income Housing Tax Credit, at 50–60% area median income. They would sit on two vacant lots at the existing 138-unit Millbrook Estates complex. Roughly two-thirds of that complex is already protected open space through a Presumpscot Regional Land Trust partnership. Norod cited statewide data: roughly 25,000 affordable units needed by 2030, with only 2,000–3,000 built so far. Norod also estimated about 40% of current Westbrook residents income-qualify for this project. Architects described wraparound porches, gabled (not flat) roofs stepping down toward the rear, and retained street trees intended to soften the buildings' scale."
+   "x": "Tyler Norod (President, Westbrook Development Corporation) reintroduced a project first approved for a contract zone amendment (a special zoning deal for one property) and sketch plan in 2024. It stalled when state funding cycles changed. The design is unchanged."
+  },
+  {
+   "t": "p",
+   "x": "The proposal is two 36-unit, three-story affordable apartment buildings. They would be funded through the Low-Income Housing Tax Credit, at 50–60% area median income. They would sit on two vacant lots at the existing 138-unit Millbrook Estates complex. Roughly two-thirds of that complex is already protected open space through a Presumpscot Regional Land Trust partnership."
+  },
+  {
+   "t": "p",
+   "x": "Norod cited statewide data: roughly 25,000 affordable units needed by 2030, with only 2,000–3,000 built so far. Norod also estimated about 40% of current Westbrook residents income-qualify for this project."
+  },
+  {
+   "t": "p",
+   "x": "Architects described wraparound porches, gabled (not flat) roofs stepping down toward the rear, and retained street trees intended to soften the buildings' scale."
   },
   {
    "t": "h",
@@ -236,7 +308,15 @@
   },
   {
    "t": "p",
-   "x": "Members Karen Axelson and Robin Tannenbaum recused (stepped out of a vote because of a conflict of interest) from this item. Alternate Lucas Schrage was strongly supportive. Schrage called the project “a testament to what you can do” and praised how it fits with the land trust green space. Vice Chair John Turcotte asked staff to check whether the original Millbrook Estates approval, which came before the current board, set conditions limiting the use of these lots. He also requested more parking buffering. Member Nancy Litrocapes took a middle position. Litrocapes supported the need in principle but asked how the height gap to smaller homes across the street could be visually bridged."
+   "x": "Members Karen Axelson and Robin Tannenbaum recused (stepped out of a vote because of a conflict of interest) from this item. Alternate Lucas Schrage was strongly supportive. Schrage called the project “a testament to what you can do” and praised how it fits with the land trust green space."
+  },
+  {
+   "t": "p",
+   "x": "Vice Chair John Turcotte asked staff to check whether the original Millbrook Estates approval, which came before the current board, set conditions limiting the use of these lots. He also requested more parking buffering."
+  },
+  {
+   "t": "p",
+   "x": "Member Nancy Litrocapes took a middle position. Litrocapes supported the need in principle but asked how the height gap to smaller homes across the street could be visually bridged."
   },
   {
    "t": "q",
@@ -259,7 +339,15 @@
   },
   {
    "t": "p",
-   "x": "Dustin Roma presented a conceptual plan for roughly 10 duplex (condo-for-sale) buildings. They would total 20–26 units (pending formal wetland delineation) on a 10-acre, legally non-conforming parcel (allowed to stay although it no longer meets current zoning). The parcel is reached by a rebuilt private driveway. The existing home and barn would be demolished. A wooded buffer along the Willow Drive property line would be retained. The primary open issue is driveway/entrance permitting. Route 302 here is treated as a mobility corridor/arterial inside the City's “urban compact.”"
+   "x": "Dustin Roma presented a conceptual plan for roughly 10 duplex (condo-for-sale) buildings. They would total 20–26 units (pending formal wetland delineation) on a 10-acre, legally non-conforming parcel (allowed to stay although it no longer meets current zoning). The parcel is reached by a rebuilt private driveway."
+  },
+  {
+   "t": "p",
+   "x": "The existing home and barn would be demolished. A wooded buffer along the Willow Drive property line would be retained."
+  },
+  {
+   "t": "p",
+   "x": "The primary open issue is driveway/entrance permitting. Route 302 here is treated as a mobility corridor/arterial inside the City's “urban compact.”"
   },
   {
    "t": "p",
@@ -273,7 +361,19 @@
   },
   {
    "t": "p",
-   "x": "Staff (Rebecca Spitella) gave a long explanation of the process. This is a conceptual workshop stage only. The unit-count range will be fixed once a wetland delineation determines the buildable area. The word “driveway” refers to legal frontage status (the length of a lot along the street), not literal width. It will be rebuilt to private-way standards with verified emergency-vehicle turning templates. Staff also said a Westbrook police officer is currently issuing the second-highest number of speeding tickets statewide, in an effort to address Route 302 speeding broadly. Chair McWilliams asked about buffering options (no fence is permitted under the adjacent homeowners association's covenant). McWilliams also asked about the driveway's raised grade as a possible icy-conditions hazard, and floated a future board site walk. The applicant said he would coordinate the walk with staff once the plan is ready."
+   "x": "Staff (Rebecca Spitella) gave a long explanation of the process. This is a conceptual workshop stage only. The unit-count range will be fixed once a wetland delineation determines the buildable area."
+  },
+  {
+   "t": "p",
+   "x": "The word “driveway” refers to legal frontage status (the length of a lot along the street), not literal width. It will be rebuilt to private-way standards with verified emergency-vehicle turning templates."
+  },
+  {
+   "t": "p",
+   "x": "Staff also said a Westbrook police officer is currently issuing the second-highest number of speeding tickets statewide, in an effort to address Route 302 speeding broadly."
+  },
+  {
+   "t": "p",
+   "x": "Chair McWilliams asked about buffering options (no fence is permitted under the adjacent homeowners association's covenant). McWilliams also asked about the driveway's raised grade as a possible icy-conditions hazard, and floated a future board site walk. The applicant said he would coordinate the walk with staff once the plan is ready."
   },
   {
    "t": "label",

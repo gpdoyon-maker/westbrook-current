@@ -28,7 +28,15 @@
   },
   {
    "t": "p",
-   "x": "Mayor Morse announced that finalized FY2027 property tax bills are being mailed. The final tax-rate increase came in at 6.6%. That is lower than the 7.6% estimated during spring budget discussions, thanks to new growth added to the City's tax base. The resulting rate is $16.10 per $1,000 of assessed value. Each bill will include a letter. The letter explains the rate and highlights the budget's guiding principles (accountability, due diligence, and sustaining services). It also covers the City's success securing outside grant funding. It cites the regional fire training facility, Riverwalk environmental cleanup, and landslide mitigation planning as examples where outside funding reduced what would otherwise fall on local taxpayers. The letter also lists available tax-relief programs and the ongoing effort to deepen City/School Department collaboration."
+   "x": "Mayor Morse announced that finalized FY2027 property tax bills are being mailed. The final tax-rate increase came in at 6.6%. That is lower than the 7.6% estimated during spring budget discussions, thanks to new growth added to the City's tax base. The resulting rate is $16.10 per $1,000 of assessed value."
+  },
+  {
+   "t": "p",
+   "x": "Each bill will include a letter. The letter explains the rate and highlights the budget's guiding principles (accountability, due diligence, and sustaining services)."
+  },
+  {
+   "t": "p",
+   "x": "It also covers the City's success securing outside grant funding. It cites the regional fire training facility, Riverwalk environmental cleanup, and landslide mitigation planning as examples where outside funding reduced what would otherwise fall on local taxpayers. The letter also lists available tax-relief programs and the ongoing effort to deepen City/School Department collaboration."
   },
   {
    "t": "label",
@@ -62,15 +70,31 @@
   },
   {
    "t": "p",
-   "x": "The project traces to the September 2020 landslide along Warren Avenue. The landslide affected over three acres. It deposited debris into the river to form an artificial dam, and it triggered a state of emergency over flood risk. The City subsequently secured $986,000 in federal spending directed by Congress, plus $120,000 in state matching funds from MaineDOT's Infrastructure Adaptation Fund. That came after two earlier funding applications were turned down, because landslides weren't initially treated as a regional funding priority. The project is 100% non-taxpayer funded. Roughly $95,180 remains under a one-year Maine Emergency Management Agency extension. That lets a University of Maine PhD candidate finish analyzing 2025 soil samples."
+   "x": "The project traces to the September 2020 landslide along Warren Avenue. The landslide affected over three acres. It deposited debris into the river to form an artificial dam, and it triggered a state of emergency over flood risk."
   },
   {
    "t": "p",
-   "x": "The study covers a regional problem. The six municipalities of the Presumpscot River watershed (Westbrook, Portland, Falmouth, Gorham, Windham, and Standish) all joined the funding application. The underlying issue is sensitive marine clays prone to landslide activity. That issue extends from the southern New Hampshire border north to the Penobscot River. Councilor McCambridge noted that Westbrook is effectively a “trailblazer” on this issue regionally."
+   "x": "The City subsequently secured $986,000 in federal spending directed by Congress, plus $120,000 in state matching funds from MaineDOT's Infrastructure Adaptation Fund. That came after two earlier funding applications were turned down, because landslides weren't initially treated as a regional funding priority."
   },
   {
    "t": "p",
-   "x": "Dr. Zollitsch's team has completed a roughly 112-page draft national/regional policy scan, covering the U.S., Maritime Canada, and Quebec. The team is finishing ten stakeholder interviews that feed a forthcoming “viewpoints analysis” report. It is now conducting a formal trade-offs analysis (Bardach's methodology) to narrow policy options. Public/stakeholder engagement is expected by fall 2026. The grant period runs through September 30, 2027, with three or four more Council updates planned before then."
+   "x": "The project is 100% non-taxpayer funded. Roughly $95,180 remains under a one-year Maine Emergency Management Agency extension. That lets a University of Maine PhD candidate finish analyzing 2025 soil samples."
+  },
+  {
+   "t": "p",
+   "x": "The study covers a regional problem. The six municipalities of the Presumpscot River watershed (Westbrook, Portland, Falmouth, Gorham, Windham, and Standish) all joined the funding application."
+  },
+  {
+   "t": "p",
+   "x": "The underlying issue is sensitive marine clays prone to landslide activity. That issue extends from the southern New Hampshire border north to the Penobscot River. Councilor McCambridge noted that Westbrook is effectively a “trailblazer” on this issue regionally."
+  },
+  {
+   "t": "p",
+   "x": "Dr. Zollitsch's team has completed a roughly 112-page draft national/regional policy scan, covering the U.S., Maritime Canada, and Quebec. The team is finishing ten stakeholder interviews that feed a forthcoming “viewpoints analysis” report. It is now conducting a formal trade-offs analysis (Bardach's methodology) to narrow policy options."
+  },
+  {
+   "t": "p",
+   "x": "Public/stakeholder engagement is expected by fall 2026. The grant period runs through September 30, 2027, with three or four more Council updates planned before then."
   },
   {
    "t": "label",
@@ -180,7 +204,11 @@
   },
   {
    "t": "p",
-   "x": "This order authorizes closing Pierce Street (Cumberland Street to Whitney Avenue) to through traffic for two days during the week of August 17, 2026, 7 AM–5 PM. It also authorizes a one-lane alternating closure on Cumberland Street. The closures are for a water main replacement project. The exact closure date will be finalized one week before, with public notice to residents. This follows the same flexible-scheduling approach used for the earlier Spring Street closure."
+   "x": "This order authorizes closing Pierce Street (Cumberland Street to Whitney Avenue) to through traffic for two days during the week of August 17, 2026, 7 AM–5 PM. It also authorizes a one-lane alternating closure on Cumberland Street. The closures are for a water main replacement project."
+  },
+  {
+   "t": "p",
+   "x": "The exact closure date will be finalized one week before, with public notice to residents. This follows the same flexible-scheduling approach used for the earlier Spring Street closure."
   },
   {
    "t": "label",
@@ -210,7 +238,19 @@
   },
   {
    "t": "p",
-   "x": "Councilors clarified that the City is pursuing two paths at the same time. This endorsement supports building the trail beside the existing rail corridor. A separate, slower Rail Use Advisory Council process could instead allow the trail to be built within the rail bed. That would be cheaper and have a smaller footprint, but it would take roughly two years for review plus a redesign. Staff said advancing both tracks pressures MaineDOT to engage and choose a direction rather than let the ~$16 million project stall. Two historic culverts along the route need separate repair funding, estimated at $1–1.5 million each. They are classified as bridges under Department of Transportation standards. This endorsement does not commit Westbrook to its ~10% local match (~$800,000). Windham has already endorsed the same application."
+   "x": "Councilors clarified that the City is pursuing two paths at the same time. This endorsement supports building the trail beside the existing rail corridor. A separate, slower Rail Use Advisory Council process could instead allow the trail to be built within the rail bed. That would be cheaper and have a smaller footprint, but it would take roughly two years for review plus a redesign."
+  },
+  {
+   "t": "p",
+   "x": "Staff said advancing both tracks pressures MaineDOT to engage and choose a direction rather than let the ~$16 million project stall."
+  },
+  {
+   "t": "p",
+   "x": "Two historic culverts along the route need separate repair funding, estimated at $1–1.5 million each. They are classified as bridges under Department of Transportation standards."
+  },
+  {
+   "t": "p",
+   "x": "This endorsement does not commit Westbrook to its ~10% local match (~$800,000). Windham has already endorsed the same application."
   },
   {
    "t": "label",
@@ -273,7 +313,11 @@
   },
   {
    "t": "p",
-   "x": "This order awards a $107,170 bid to Harrison Schrader Enterprises for a replacement SCBA (self-contained breathing apparatus) air compressor. It is part of the FY2026 Capital Improvement Plan (CIP), a multi-year plan for big purchases and projects. Staff lowered the original ~$110,970 bid by handling old-unit disposal in-house and using Corey Electric for associated electrical work. The balance above the CIP allocation comes from unspent Gas Meter CIP funds ($7,817) and Fire Reserves ($11,353)."
+   "x": "This order awards a $107,170 bid to Harrison Schrader Enterprises for a replacement SCBA (self-contained breathing apparatus) air compressor. It is part of the FY2026 Capital Improvement Plan (CIP), a multi-year plan for big purchases and projects."
+  },
+  {
+   "t": "p",
+   "x": "Staff lowered the original ~$110,970 bid by handling old-unit disposal in-house and using Corey Electric for associated electrical work. The balance above the CIP allocation comes from unspent Gas Meter CIP funds ($7,817) and Fire Reserves ($11,353)."
   },
   {
    "t": "label",
@@ -306,7 +350,11 @@
   },
   {
    "t": "p",
-   "x": "This order awards a $170,519.85 bid to Palfinger North America for a replacement 45-foot aerial bucket truck, 5 feet taller than the current unit. It replaces a 2010 truck needing ~$39,000 in repairs. The City passed over the single lowest bid. That bid assumed a trade-in credit that staff believe the old unit will exceed at auction instead. The $5,519.80 above the original $165,000 CIP allocation comes from unspent single-axle plow truck CIP funds."
+   "x": "This order awards a $170,519.85 bid to Palfinger North America for a replacement 45-foot aerial bucket truck, 5 feet taller than the current unit. It replaces a 2010 truck needing ~$39,000 in repairs."
+  },
+  {
+   "t": "p",
+   "x": "The City passed over the single lowest bid. That bid assumed a trade-in credit that staff believe the old unit will exceed at auction instead. The $5,519.80 above the original $165,000 CIP allocation comes from unspent single-axle plow truck CIP funds."
   },
   {
    "t": "label",
@@ -331,19 +379,55 @@
   },
   {
    "t": "p",
-   "x": "This order authorizes an agreement with the Greater Portland Transit District (Metro) to give every Westbrook High School student a free, unlimited-travel transit pass. The pass is capped at 30,000 rides/year and $1.13 per ride actually taken (maximum annual cost $34,000). Mayor Morse gave an extended endorsement. He framed it as both a near-term mobility benefit and a long-term investment in building transit habits. The pass would be funded entirely by anticipated new General Fund revenue from a previously untapped source. That source is state certification the City recently completed to process rental-vehicle registrations (e.g., for Enterprise) locally. Interim Finance Director Laura King identified it. This is a first reading, the first of two required votes."
+   "x": "This order authorizes an agreement with the Greater Portland Transit District (Metro) to give every Westbrook High School student a free, unlimited-travel transit pass. The pass is capped at 30,000 rides/year and $1.13 per ride actually taken (maximum annual cost $34,000)."
   },
   {
    "t": "p",
-   "x": "The high school principal explained the school-specific motivation. Roughly 110 ninth- and tenth-graders live within Westbrook High School's 1.5-mile walking radius. That is too close to qualify for school bus service, but often too far to walk safely. Officials said Metro has agreed to add a stop at Stroudwater & Monroe during morning/afternoon windows only, with buses going along Monroe and Glenwood at those times. President Munro stressed that this was one added stop on existing Route 3, not a new route. The principal estimated 50–100 daily student riders once the program is established."
+   "x": "Mayor Morse gave an extended endorsement. He framed it as both a near-term mobility benefit and a long-term investment in building transit habits."
+  },
+  {
+   "t": "p",
+   "x": "The pass would be funded entirely by anticipated new General Fund revenue from a previously untapped source. That source is state certification the City recently completed to process rental-vehicle registrations (e.g., for Enterprise) locally. Interim Finance Director Laura King identified it."
+  },
+  {
+   "t": "p",
+   "x": "This is a first reading, the first of two required votes."
+  },
+  {
+   "t": "p",
+   "x": "The high school principal explained the school-specific motivation. Roughly 110 ninth- and tenth-graders live within Westbrook High School's 1.5-mile walking radius. That is too close to qualify for school bus service, but often too far to walk safely."
+  },
+  {
+   "t": "p",
+   "x": "Officials said Metro has agreed to add a stop at Stroudwater & Monroe during morning/afternoon windows only, with buses going along Monroe and Glenwood at those times. President Munro stressed that this was one added stop on existing Route 3, not a new route."
+  },
+  {
+   "t": "p",
+   "x": "The principal estimated 50–100 daily student riders once the program is established."
   },
   {
    "t": "p",
    "x": "Discussion covered several concerns:"
   },
   {
-   "t": "p",
-   "x": "• Revenue certainty: Councilor Rairdon questioned relying on untested rental-registration revenue before committing to the cost. Officials said they weren't yet comfortable estimating the annual amount but expected it to far exceed the program's cost. They noted Enterprise wants to register here though it isn't required to, and promised updates. • Neighborhood impact: Councilor Rairdon raised traffic/bus-speed concerns on Monroe Street, a quiet residential street gaining a new stop. Councilor Chau asked that residents be notified well before the August 3 second reading. • Student safety/privacy: After Councilor Chau asked about IDs and resale, the principal said he'd get card logistics from Metro before the next reading. Councilor Turcotte asked that data-security concerns for minors with cards or apps be looked into. • Scope: The principal confirmed the program covers all Westbrook High School students, not just the walking-radius zone. Councilor McCambridge proposed a voluntary “ride the bus” familiarization event before the school year. The principal welcomed the idea. • Possible added costs: Councilor Chau asked whether the new stop could trigger additional complementary paratransit costs under the Americans with Disabilities Act (door-to-door rides for people who can't use regular buses), beyond the $34,000 cap. Staff believed any impact would be minimal but agreed to confirm."
+   "t": "li",
+   "x": "Revenue certainty: Councilor Rairdon questioned relying on untested rental-registration revenue before committing to the cost. Officials said they weren't yet comfortable estimating the annual amount but expected it to far exceed the program's cost. They noted Enterprise wants to register here though it isn't required to, and promised updates."
+  },
+  {
+   "t": "li",
+   "x": "Neighborhood impact: Councilor Rairdon raised traffic/bus-speed concerns on Monroe Street, a quiet residential street gaining a new stop. Councilor Chau asked that residents be notified well before the August 3 second reading."
+  },
+  {
+   "t": "li",
+   "x": "Student safety/privacy: After Councilor Chau asked about IDs and resale, the principal said he'd get card logistics from Metro before the next reading. Councilor Turcotte asked that data-security concerns for minors with cards or apps be looked into."
+  },
+  {
+   "t": "li",
+   "x": "Scope: The principal confirmed the program covers all Westbrook High School students, not just the walking-radius zone. Councilor McCambridge proposed a voluntary “ride the bus” familiarization event before the school year. The principal welcomed the idea."
+  },
+  {
+   "t": "li",
+   "x": "Possible added costs: Councilor Chau asked whether the new stop could trigger additional complementary paratransit costs under the Americans with Disabilities Act (door-to-door rides for people who can't use regular buses), beyond the $34,000 cap. Staff believed any impact would be minimal but agreed to confirm."
   },
   {
    "t": "label",

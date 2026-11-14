@@ -53,7 +53,11 @@
   },
   {
    "t": "p",
-   "x": "Tuck O'Brien (incoming JB Brown & Sons president), Caleb Barassa (Gorrill Palmer), and Tyler Norod (Westbrook Development Corporation) presented a substantially revised concept. It has 322 units of mixed market-rate and income-restricted housing. That is down from an original roughly 740-unit concept shown to the board in December 2024. The units are now clustered near Stroudwater Street, per board and staff feedback. Roughly half of Westbrook households would income-qualify for the affordable-phase units. Those units are planned as family (not senior) housing at 50–60% of area median income."
+   "x": "Tuck O'Brien (incoming JB Brown & Sons president), Caleb Barassa (Gorrill Palmer), and Tyler Norod (Westbrook Development Corporation) presented a substantially revised concept. It has 322 units of mixed market-rate and income-restricted housing. That is down from an original roughly 740-unit concept shown to the board in December 2024. The units are now clustered near Stroudwater Street, per board and staff feedback."
+  },
+  {
+   "t": "p",
+   "x": "Roughly half of Westbrook households would income-qualify for the affordable-phase units. Those units are planned as family (not senior) housing at 50–60% of area median income."
   },
   {
    "t": "p",
@@ -77,11 +81,27 @@
   },
   {
    "t": "p",
-   "x": "[1:02:55] City Planner Rebecca Spitella explained that the arterial is a freeway-type roadway. An at-grade (street-level) pedestrian crossing isn't permitted there under Department of Transportation standards. A grade-separated crossing (one over or under the road) was examined in an earlier design but proved too costly. Stroudwater Street's capacity and mitigation options (ways to reduce the traffic impact) are under review, including a possible roundabout at the middle-school intersection. This review is part of the traffic movement permit process. The proposal's density and building types are already permitted under current zoning."
+   "x": "[1:02:55] City Planner Rebecca Spitella explained that the arterial is a freeway-type roadway. An at-grade (street-level) pedestrian crossing isn't permitted there under Department of Transportation standards. A grade-separated crossing (one over or under the road) was examined in an earlier design but proved too costly."
   },
   {
    "t": "p",
-   "x": "Vice Chair John Turcotte [1:14:59] pressed for an updated traffic study reflecting actual school traffic patterns. He also noted that the largest building sits right next to an abutting home, and asked about buffering. Member Robin Tannenbaum asked that the biggest building not be placed up against the road. Nancy Litrocapes and Chair McWilliams later asked the same. Tannenbaum also urged a more contextual, pitched-roof architectural style. Chair McWilliams [1:40:28] asked to see traffic projections for both the 322-unit plan and the original larger concept. He was concerned that the reduced plan is a first phase of further buildup, since roughly half the parcel remains undeveloped. Staff and the applicant confirmed no future development is currently planned there, but could not rule it out long-term. Member Oriana Farnham [1:24:40] asked that affordable units not be clustered separately from market-rate units, for equitable amenity access."
+   "x": "Stroudwater Street's capacity and mitigation options (ways to reduce the traffic impact) are under review, including a possible roundabout at the middle-school intersection. This review is part of the traffic movement permit process. The proposal's density and building types are already permitted under current zoning."
+  },
+  {
+   "t": "p",
+   "x": "Vice Chair John Turcotte [1:14:59] pressed for an updated traffic study reflecting actual school traffic patterns. He also noted that the largest building sits right next to an abutting home, and asked about buffering."
+  },
+  {
+   "t": "p",
+   "x": "Member Robin Tannenbaum asked that the biggest building not be placed up against the road. Nancy Litrocapes and Chair McWilliams later asked the same. Tannenbaum also urged a more contextual, pitched-roof architectural style."
+  },
+  {
+   "t": "p",
+   "x": "Chair McWilliams [1:40:28] asked to see traffic projections for both the 322-unit plan and the original larger concept. He was concerned that the reduced plan is a first phase of further buildup, since roughly half the parcel remains undeveloped. Staff and the applicant confirmed no future development is currently planned there, but could not rule it out long-term."
+  },
+  {
+   "t": "p",
+   "x": "Member Oriana Farnham [1:24:40] asked that affordable units not be clustered separately from market-rate units, for equitable amenity access."
   },
   {
    "t": "label",
@@ -111,7 +131,15 @@
   },
   {
    "t": "p",
-   "x": "Neighboring residents raised concerns about a building sited only about 15 feet from a property line, light pollution, and — most substantively — longstanding road-runoff flooding tied to the 2006 state repaving of Route 302. Abutters said that repaving already funnels stormwater onto their properties. They fear this project's new curbing will worsen it. Staff acknowledged this drainage history requires follow-up research with the City Engineer. Board members Oriana Farnham and John Turcotte raised headlight-glare concerns from parking facing directly into abutting backyards. Chair McWilliams suggested reorienting one building to reduce a sightline into a neighboring yard. Chair McWilliams, with other members agreeing, asked whether the City could develop a cumulative, city-wide traffic framework rather than evaluating each large development in isolation. Staff noted that question falls to City Engineering/Council rather than the board's project-by-project review."
+   "x": "Neighboring residents raised concerns about a building sited only about 15 feet from a property line, light pollution, and — most substantively — longstanding road-runoff flooding tied to the 2006 state repaving of Route 302. Abutters said that repaving already funnels stormwater onto their properties. They fear this project's new curbing will worsen it. Staff acknowledged this drainage history requires follow-up research with the City Engineer."
+  },
+  {
+   "t": "p",
+   "x": "Board members Oriana Farnham and John Turcotte raised headlight-glare concerns from parking facing directly into abutting backyards. Chair McWilliams suggested reorienting one building to reduce a sightline into a neighboring yard."
+  },
+  {
+   "t": "p",
+   "x": "Chair McWilliams, with other members agreeing, asked whether the City could develop a cumulative, city-wide traffic framework rather than evaluating each large development in isolation. Staff noted that question falls to City Engineering/Council rather than the board's project-by-project review."
   },
   {
    "t": "label",
@@ -145,11 +173,27 @@
   },
   {
    "t": "p",
-   "x": "Dustin Roma (DM Roma Consulting Engineers), representing new owner MTR Development, presented 72 units across six 12-unit buildings on a former farm property. The existing farmhouse would be split onto its own lot, and a barn would be retained for storage. The buildings are proposed at two and a half stories with pitched roofs and dormers, a deliberately different style from boxier recent construction. The project would extend the City's sidewalk network toward El Maple along Saco Street. The applicant anticipates phased construction (roughly two buildings per year). The applicant also flagged time pressure from Saco Street's scheduled repaving this year."
+   "x": "Dustin Roma (DM Roma Consulting Engineers), representing new owner MTR Development, presented 72 units across six 12-unit buildings on a former farm property. The existing farmhouse would be split onto its own lot, and a barn would be retained for storage. The buildings are proposed at two and a half stories with pitched roofs and dormers, a deliberately different style from boxier recent construction."
   },
   {
    "t": "p",
-   "x": "Neighbors raised concerns that two buildings are sited close to a property line abutting a home with a pool. They also said density, height, and parking are all at or near the zoning maximum, with no dedicated visitor parking identified. And they said the wetland delineation (the mapping of wetland boundaries) underlying the 72-unit count isn't yet finalized. Staff clarified that site plan review (the Planning Board's review of the detailed plan for a building project) proceeds in two stages. The first is this conceptual sketch plan. The second is a detailed final application, including wetland surveys, stormwater design, and a required performance bond (a financial guarantee that the work gets done). Staff also clarified that the zoning ordinance (a city law) sets an objective development standard that the board applies, rather than a discretionary housing-type policy choice. Board member Robin Tannenbaum and Chair McWilliams praised the pitched-roof architectural style as more contextual than typical flat-roofed apartment buildings. Member Nancy Litrocapes asked whether straightening the site's curved driveway could pull the two buildings nearest the pool-owning neighbor's property line further back. The applicant said there appeared to be substantial room to do so."
+   "x": "The project would extend the City's sidewalk network toward El Maple along Saco Street. The applicant anticipates phased construction (roughly two buildings per year). The applicant also flagged time pressure from Saco Street's scheduled repaving this year."
+  },
+  {
+   "t": "p",
+   "x": "Neighbors raised concerns that two buildings are sited close to a property line abutting a home with a pool. They also said density, height, and parking are all at or near the zoning maximum, with no dedicated visitor parking identified. And they said the wetland delineation (the mapping of wetland boundaries) underlying the 72-unit count isn't yet finalized."
+  },
+  {
+   "t": "p",
+   "x": "Staff clarified that site plan review (the Planning Board's review of the detailed plan for a building project) proceeds in two stages. The first is this conceptual sketch plan. The second is a detailed final application, including wetland surveys, stormwater design, and a required performance bond (a financial guarantee that the work gets done)."
+  },
+  {
+   "t": "p",
+   "x": "Staff also clarified that the zoning ordinance (a city law) sets an objective development standard that the board applies, rather than a discretionary housing-type policy choice."
+  },
+  {
+   "t": "p",
+   "x": "Board member Robin Tannenbaum and Chair McWilliams praised the pitched-roof architectural style as more contextual than typical flat-roofed apartment buildings. Member Nancy Litrocapes asked whether straightening the site's curved driveway could pull the two buildings nearest the pool-owning neighbor's property line further back. The applicant said there appeared to be substantial room to do so."
   },
   {
    "t": "label",
@@ -183,11 +227,11 @@
   },
   {
    "t": "p",
-   "x": "At about 9:45 PM, after two lengthy workshop items, the board decided not to take up the items scheduled after the 547 Saco St. item. These were the Rock Row South Campus Building SG & SR site plan (the 267-unit/parking-garage building previewed at the April 7, 2026 Rock Row Phase 3 master-plan workshop) and a Land Use Ordinance amendment removing the"
+   "x": "At about 9:45 PM, after two lengthy workshop items, the board decided not to take up the items scheduled after the 547 Saco St. item. These were the Rock Row South Campus Building SG & SR site plan (the 267-unit/parking-garage building previewed at the April 7, 2026 Rock Row Phase 3 master-plan workshop) and a Land Use Ordinance amendment removing the 2.5-story height limit in Residential Growth Area 2 and 3 (while retaining the existing 35-foot maximum height)."
   },
   {
    "t": "p",
-   "x": "2.5-story height limit in Residential Growth Area 2 and 3 (while retaining the existing 35-foot maximum height). Two members said they couldn't attend the proposed May 19 makeup date. Staff said May 19 was preferred for Rock Row. Staff would check for a quorum (the minimum number of members needed to vote), with June 2 as the fallback. Rock Row was heard on May 19; rescheduling of the height amendment wasn't discussed."
+   "x": "Two members said they couldn't attend the proposed May 19 makeup date. Staff said May 19 was preferred for Rock Row. Staff would check for a quorum (the minimum number of members needed to vote), with June 2 as the fallback. Rock Row was heard on May 19; rescheduling of the height amendment wasn't discussed."
   },
   {
    "t": "label",

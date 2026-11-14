@@ -53,7 +53,47 @@
   },
   {
    "t": "p",
-   "x": "Eric Jensen (7 years, Transportation; Jody Peterson was also honored from Transportation, with Melissa Foy accepting on Peterson's behalf), Sandy Beasley (37 years, Canal), a Westbrook Middle School staff member with 39 years of service (name not clearly captured in the transcript), Maura McDermott (5 years, special education, Westbrook Middle School), Juni Dugas (25 years, administrative assistant, Westbrook Middle School), Paula Curcio (35 years, social studies, Westbrook Middle School), Marina Davis (7 years, math, Westbrook High School), Sarah Barker (cook, Westbrook High School), Nicole Sturgis (10 years, aspirations counselor, Westbrook High School), and Wendy Harvey (12 years, co-principal, Westbrook High School)."
+   "x": "The retirees honored were:"
+  },
+  {
+   "t": "li",
+   "x": "Eric Jensen (7 years, Transportation; Jody Peterson was also honored from Transportation, with Melissa Foy accepting on Peterson's behalf)"
+  },
+  {
+   "t": "li",
+   "x": "Sandy Beasley (37 years, Canal)"
+  },
+  {
+   "t": "li",
+   "x": "a Westbrook Middle School staff member with 39 years of service (name not clearly captured in the transcript)"
+  },
+  {
+   "t": "li",
+   "x": "Maura McDermott (5 years, special education, Westbrook Middle School)"
+  },
+  {
+   "t": "li",
+   "x": "Juni Dugas (25 years, administrative assistant, Westbrook Middle School)"
+  },
+  {
+   "t": "li",
+   "x": "Paula Curcio (35 years, social studies, Westbrook Middle School)"
+  },
+  {
+   "t": "li",
+   "x": "Marina Davis (7 years, math, Westbrook High School)"
+  },
+  {
+   "t": "li",
+   "x": "Sarah Barker (cook, Westbrook High School)"
+  },
+  {
+   "t": "li",
+   "x": "Nicole Sturgis (10 years, aspirations counselor, Westbrook High School)"
+  },
+  {
+   "t": "li",
+   "x": "Wendy Harvey (12 years, co-principal, Westbrook High School)"
   },
   {
    "t": "label",
@@ -91,11 +131,47 @@
   },
   {
    "t": "p",
-   "x": "2026–27 calendar: no staggered start. Grades 1–12 begin Monday, August 31. Kindergarten begins Wednesday, September 2. Pre-K opens Thursday, September 3. The staff back-to-school luncheon is Friday, August 28."
+   "x": "2026–27 calendar: no staggered start."
+  },
+  {
+   "t": "li",
+   "x": "Grades 1–12 begin Monday, August 31."
+  },
+  {
+   "t": "li",
+   "x": "Kindergarten begins Wednesday, September 2."
+  },
+  {
+   "t": "li",
+   "x": "Pre-K opens Thursday, September 3."
+  },
+  {
+   "t": "li",
+   "x": "The staff back-to-school luncheon is Friday, August 28."
   },
   {
    "t": "p",
-   "x": "Special services leadership restructuring: Director of Special Services Kelly Fogg retired last year. Repeated searches for a replacement, including one this year, were unsuccessful. Fogg has worked this year as a 3-day-a-week contracted consultant. Dr. Lancia proposed keeping two full-time assistant directors. One is fully funded by the general fund. The other is funded 20% by the general fund and 80% by the Maine Department of Education. That split reflects that position's oversight of pre-K special education and “child find” requirements. Lancia also proposed adding a third assistant director for one year only. That job would be paid for by the savings from not filling the director position, plus an increased state funding share. There would be no new general-fund money. Fogg would continue as a paid consultant. Asked by Noreen Poitras in discussion, Lancia said the new position would be a one-year-only bargaining-unit contract (a contract for employees a union represents). It would be reassessed before the FY28 budget. Poitras also asked for full salary and structure details. Asked by Mancuso, Lancia said the savings should entirely cover the position (aside from possible benefits costs). He also said no board action was needed, since no new money was involved. Lancia explained that the special education director role is difficult to fill statewide. He cited its specific certification requirements and small candidate pools. He said partnering with a neighboring district's director has not been explored, given Westbrook's position as the county's largest special education program. He remains open to it."
+   "x": "Special services leadership restructuring: Director of Special Services Kelly Fogg retired last year. Repeated searches for a replacement, including one this year, were unsuccessful. Fogg has worked this year as a 3-day-a-week contracted consultant."
+  },
+  {
+   "t": "p",
+   "x": "Dr. Lancia proposed keeping two full-time assistant directors. One is fully funded by the general fund. The other is funded 20% by the general fund and 80% by the Maine Department of Education. That split reflects that position's oversight of pre-K special education and “child find” requirements."
+  },
+  {
+   "t": "p",
+   "x": "Lancia also proposed adding a third assistant director for one year only. That job would be paid for by the savings from not filling the director position, plus an increased state funding share. There would be no new general-fund money. Fogg would continue as a paid consultant."
+  },
+  {
+   "t": "p",
+   "x": "Asked by Noreen Poitras in discussion, Lancia said the new position would be a one-year-only bargaining-unit contract (a contract for employees a union represents). It would be reassessed before the FY28 budget. Poitras also asked for full salary and structure details."
+  },
+  {
+   "t": "p",
+   "x": "Asked by Mancuso, Lancia said the savings should entirely cover the position (aside from possible benefits costs). He also said no board action was needed, since no new money was involved."
+  },
+  {
+   "t": "p",
+   "x": "Lancia explained that the special education director role is difficult to fill statewide. He cited its specific certification requirements and small candidate pools. He said partnering with a neighboring district's director has not been explored, given Westbrook's position as the county's largest special education program. He remains open to it."
   },
   {
    "t": "label",
@@ -120,7 +196,27 @@
   },
   {
    "t": "p",
-   "x": "Dr. O'Donnell also announced she is leaving after six years for Scarborough Public Schools. She presented Northwest Evaluation Association growth and achievement data comparing 2024–25 to 2025–26 across grades K–10. The data showed generally stable-to-improving trends districtwide. Westbrook High School had 60% or better of students meeting growth targets. Westbrook Middle School was close to 60%. The elementary schools were generally positive, with some dips (notably in Sacarappa achievement). In response to questions from Cavallaro, she distinguished “achievement” (performance against grade-level expectation) from “growth target” (predicted year-over-year progress). She also said district benchmarking data could be pulled with more lead time."
+   "x": "Dr. O'Donnell also announced she is leaving after six years for Scarborough Public Schools."
+  },
+  {
+   "t": "p",
+   "x": "She presented Northwest Evaluation Association growth and achievement data comparing 2024–25 to 2025–26 across grades K–10. The data showed generally stable-to-improving trends districtwide."
+  },
+  {
+   "t": "li",
+   "x": "Westbrook High School had 60% or better of students meeting growth targets."
+  },
+  {
+   "t": "li",
+   "x": "Westbrook Middle School was close to 60%."
+  },
+  {
+   "t": "li",
+   "x": "The elementary schools were generally positive, with some dips (notably in Sacarappa achievement)."
+  },
+  {
+   "t": "p",
+   "x": "In response to questions from Cavallaro, she distinguished “achievement” (performance against grade-level expectation) from “growth target” (predicted year-over-year progress). She also said district benchmarking data could be pulled with more lead time."
   },
   {
    "t": "label",
@@ -153,7 +249,11 @@
   },
   {
    "t": "p",
-   "x": "Reported ongoing conversations with City staff about pesticide/fertilizer use on shared school/municipal athletic fields. These included an informal meeting with City Administrator Angela Holmes and Mayor David Morse. Field-maintenance contracts have not been rebid in some time. Mancuso's sense was that the City hopes to gather information over the summer. Then requests for proposals (formal calls for vendors to bid) that account for the school department's field needs can go out in the fall. She will share her notes with Dr. Lancia and the committee."
+   "x": "Reported ongoing conversations with City staff about pesticide/fertilizer use on shared school/municipal athletic fields. These included an informal meeting with City Administrator Angela Holmes and Mayor David Morse."
+  },
+  {
+   "t": "p",
+   "x": "Field-maintenance contracts have not been rebid in some time. Mancuso's sense was that the City hopes to gather information over the summer. Then requests for proposals (formal calls for vendors to bid) that account for the school department's field needs can go out in the fall. She will share her notes with Dr. Lancia and the committee."
   },
   {
    "t": "label",
@@ -178,7 +278,31 @@
   },
   {
    "t": "p",
-   "x": "The end of the year is winding down districtwide. Events include step-up and field days at the elementary and middle schools. There is a district-wide 4th grade Beach Day sponsored by the Westbrook Education Foundation. Sacarappa has an end-of-year picnic and field day. Westbrook Middle School's 8th grade promotion is June 16, with a dance after. The last day of school is June 17. Congin has a Parent Teacher Organization family fun night. Westbrook High School has finals."
+   "x": "The end of the year is winding down districtwide. Events include step-up and field days at the elementary and middle schools."
+  },
+  {
+   "t": "li",
+   "x": "There is a district-wide 4th grade Beach Day sponsored by the Westbrook Education Foundation."
+  },
+  {
+   "t": "li",
+   "x": "Sacarappa has an end-of-year picnic and field day."
+  },
+  {
+   "t": "li",
+   "x": "Westbrook Middle School's 8th grade promotion is June 16, with a dance after."
+  },
+  {
+   "t": "li",
+   "x": "The last day of school is June 17."
+  },
+  {
+   "t": "li",
+   "x": "Congin has a Parent Teacher Organization family fun night."
+  },
+  {
+   "t": "li",
+   "x": "Westbrook High School has finals."
   },
   {
    "t": "label",
@@ -329,7 +453,11 @@
   },
   {
    "t": "p",
-   "x": "In response to a question from Dr. Flynn Ross, Dr. Lancia confirmed this is driven by enrollment demand. The pre-K program is expanding to three classrooms/six sessions (three teachers, three ed techs). It already has 74 students enrolled, with a week still remaining before the deadline. Canal School is now at its space maximum. More enrollment brings more state subsidy through the October 1 count."
+   "x": "In response to a question from Dr. Flynn Ross, Dr. Lancia confirmed this is driven by enrollment demand. The pre-K program is expanding to three classrooms/six sessions (three teachers, three ed techs)."
+  },
+  {
+   "t": "p",
+   "x": "It already has 74 students enrolled, with a week still remaining before the deadline. Canal School is now at its space maximum. More enrollment brings more state subsidy through the October 1 count."
   },
   {
    "t": "label",
@@ -362,8 +490,20 @@
    "x": "Discussion Summary"
   },
   {
-   "t": "p",
-   "x": "June 17: last day of school (half day). August 5, 5:00 PM: Finance Committee (Central Office). August 12, 7:00 PM: next regular School Committee meeting (Room 114, Westbrook High School). August 31: first day of school."
+   "t": "li",
+   "x": "June 17: last day of school (half day)."
+  },
+  {
+   "t": "li",
+   "x": "August 5, 5:00 PM: Finance Committee (Central Office)."
+  },
+  {
+   "t": "li",
+   "x": "August 12, 7:00 PM: next regular School Committee meeting (Room 114, Westbrook High School)."
+  },
+  {
+   "t": "li",
+   "x": "August 31: first day of school."
   },
   {
    "t": "label",

@@ -28,7 +28,15 @@
   },
   {
    "t": "p",
-   "x": "Peter Erig and Colleen Fassette of Siemens Smart Infrastructure shared early results from the district's Phase 1 energy efficiency project. The work included district-wide LED lighting, building envelope/weather-stripping work, upgraded energy controls, and new or refurbished windows at Canal School and the high school. The project carries a guaranteed annual savings of $255,000. Measured results so far project $279,000 in actual savings. Central Maine Power rate increases since January 2023 mean the district would have paid roughly $150,000 more in utility costs without this project. Those increases include 34% higher summer demand charges and a sharp rise in per-kilowatt-hour costs. A forthcoming rooftop solar array at four schools will add more savings. The state is using Westbrook's approach as a model. Regional School Unit 13 in Rockland is now copying it."
+   "x": "Peter Erig and Colleen Fassette of Siemens Smart Infrastructure shared early results from the district's Phase 1 energy efficiency project. The work included district-wide LED lighting, building envelope/weather-stripping work, upgraded energy controls, and new or refurbished windows at Canal School and the high school."
+  },
+  {
+   "t": "p",
+   "x": "The project carries a guaranteed annual savings of $255,000. Measured results so far project $279,000 in actual savings. Central Maine Power rate increases since January 2023 mean the district would have paid roughly $150,000 more in utility costs without this project. Those increases include 34% higher summer demand charges and a sharp rise in per-kilowatt-hour costs."
+  },
+  {
+   "t": "p",
+   "x": "A forthcoming rooftop solar array at four schools will add more savings. The state is using Westbrook's approach as a model. Regional School Unit 13 in Rockland is now copying it."
   },
   {
    "t": "label",
@@ -57,11 +65,19 @@
   },
   {
    "t": "p",
-   "x": "Dr. Mazjanis reviewed the routine report that compares budgeted and actual spending. January's high 12% spend rate (versus a typical ~8%) reflects a three-paycheck month. Substitute-teacher spending ($64,000 for the period) was flagged as a line to watch. Finance Committee Chair Noreen Poitras asked why Westbrook Middle School's water/sewer budget showed only 19% remaining versus 30–40% at other schools. Staff will investigate."
+   "x": "Dr. Mazjanis reviewed the routine report that compares budgeted and actual spending. January's high 12% spend rate (versus a typical ~8%) reflects a three-paycheck month. Substitute-teacher spending ($64,000 for the period) was flagged as a line to watch."
   },
   {
    "t": "p",
-   "x": "Dr. Lancia reported that City Council has given first-reading approval (the first of two required votes) to moving leftover bond money (money the City borrowed) and City-granted fund-balance money to new uses. The School Committee talked about these funds at its February 11 meeting. They cover Canal/Congin exterior and bathroom work, and Westbrook High School security system and window/door replacement. Dr. Lancia described FY27 as an intentional pause from aggressive capital work (large projects) because staff time is limited. The district received another Maine Revolving Renovation Fund grant for Canal School this cycle. It narrowly missed getting a second grant for Congin."
+   "x": "Finance Committee Chair Noreen Poitras asked why Westbrook Middle School's water/sewer budget showed only 19% remaining versus 30–40% at other schools. Staff will investigate."
+  },
+  {
+   "t": "p",
+   "x": "Dr. Lancia reported that City Council has given first-reading approval (the first of two required votes) to moving leftover bond money (money the City borrowed) and City-granted fund-balance money to new uses. The School Committee talked about these funds at its February 11 meeting. They cover Canal/Congin exterior and bathroom work, and Westbrook High School security system and window/door replacement."
+  },
+  {
+   "t": "p",
+   "x": "Dr. Lancia described FY27 as an intentional pause from aggressive capital work (large projects) because staff time is limited. The district received another Maine Revolving Renovation Fund grant for Canal School this cycle. It narrowly missed getting a second grant for Congin."
   },
   {
    "t": "label",
@@ -99,7 +115,23 @@
   },
   {
    "t": "p",
-   "x": "Four main drivers: (1) Positions are moving off unreliable federal funding. Five positions are moving from Title I to the general fund ($585,806), the first step of a multi-year transition. Five special-education Ed Tech IIIs are also moving off Individuals with Disabilities Education Act funding. This also avoids an 18% Maine Public Employees Retirement System penalty on federally-funded positions. (2) The new Pre-K program at Canal School costs $384,864 in local funds for its general-education portion. The special-education portion remains state-funded. This is partly offset because the roughly $100,000 currently paid to the Opportunity Alliance is removed from the elementary schools' budgets. (3) Existing-staff salary/benefit increases (~$2.5 million) reflect current contracts and a 10% health-benefit placeholder, lowered from 15%. (4) New/reorganized positions (~$591,578) plus rising special-education out-of-district placement costs."
+   "x": "Four main drivers:"
+  },
+  {
+   "t": "li",
+   "x": "(1) Positions are moving off unreliable federal funding. Five positions are moving from Title I to the general fund ($585,806), the first step of a multi-year transition. Five special-education Ed Tech IIIs are also moving off Individuals with Disabilities Education Act funding. This also avoids an 18% Maine Public Employees Retirement System penalty on federally-funded positions."
+  },
+  {
+   "t": "li",
+   "x": "(2) The new Pre-K program at Canal School costs $384,864 in local funds for its general-education portion. The special-education portion remains state-funded. This is partly offset because the roughly $100,000 currently paid to the Opportunity Alliance is removed from the elementary schools' budgets."
+  },
+  {
+   "t": "li",
+   "x": "(3) Existing-staff salary/benefit increases (~$2.5 million) reflect current contracts and a 10% health-benefit placeholder, lowered from 15%."
+  },
+  {
+   "t": "li",
+   "x": "(4) New/reorganized positions (~$591,578) plus rising special-education out-of-district placement costs."
   },
   {
    "t": "label",
@@ -128,11 +160,67 @@
   },
   {
    "t": "p",
-   "x": "New or reorganized positions include a nutrition education coordinator. This position is funded entirely within the self-sustaining School Nutrition budget. The list also includes a cybersecurity-focused network systems specialist and an instructional technology integration specialist. It includes an additional special-education bus aide and van driver. It includes a new gifted-and-talented-model English teacher at the high school. It also includes a new Career and Technical Education Exploratory teacher and cooperative-education instructor at Westbrook Regional Vocational Center. The last items are a special-education resource teacher and Ed Tech III, and a part-time speech therapist. Not included are a full-time Assistant Director of Special Services for pre-K and a long-sought curriculum coordinator role. Dr. Lancia said the curriculum coordinator role needs clearer definition before it returns."
+   "x": "New or reorganized positions include a nutrition education coordinator. This position is funded entirely within the self-sustaining School Nutrition budget. The list also includes:"
+  },
+  {
+   "t": "li",
+   "x": "A cybersecurity-focused network systems specialist and an instructional technology integration specialist."
+  },
+  {
+   "t": "li",
+   "x": "An additional special-education bus aide and van driver."
+  },
+  {
+   "t": "li",
+   "x": "A new gifted-and-talented-model English teacher at the high school."
+  },
+  {
+   "t": "li",
+   "x": "A new Career and Technical Education Exploratory teacher and cooperative-education instructor at Westbrook Regional Vocational Center."
+  },
+  {
+   "t": "li",
+   "x": "A special-education resource teacher and Ed Tech III, and a part-time speech therapist."
   },
   {
    "t": "p",
-   "x": "The budget maintains student/staff ratios and class sizes. It also maintains all core programs (general ed, special ed, multilingual, unified arts), student support services, athletics, and the music program. Cut from the initial request: the health-benefits projection, expanded substitute staffing, and one bus purchase (leased instead). Also cut: a four-year rather than three-year iPad lease with no new iPads for seniors. Also cut: elementary staff device replacement (deferred a year), K-8 IXL software, and one unfilled alternative-learning position."
+   "x": "Not included are a full-time Assistant Director of Special Services for pre-K and a long-sought curriculum coordinator role. Dr. Lancia said the curriculum coordinator role needs clearer definition before it returns."
+  },
+  {
+   "t": "p",
+   "x": "The budget maintains student/staff ratios and class sizes. It also maintains all core programs (general ed, special ed, multilingual, unified arts), student support services, athletics, and the music program."
+  },
+  {
+   "t": "p",
+   "x": "Cut from the initial request:"
+  },
+  {
+   "t": "li",
+   "x": "The health-benefits projection"
+  },
+  {
+   "t": "li",
+   "x": "Expanded substitute staffing"
+  },
+  {
+   "t": "li",
+   "x": "One bus purchase (leased instead)."
+  },
+  {
+   "t": "li",
+   "x": "A four-year rather than three-year iPad lease with no new iPads for seniors."
+  },
+  {
+   "t": "li",
+   "x": "Elementary staff device replacement (deferred a year)"
+  },
+  {
+   "t": "li",
+   "x": "K-8 IXL software"
+  },
+  {
+   "t": "li",
+   "x": "One unfilled alternative-learning position."
   },
   {
    "t": "label",
@@ -161,7 +249,15 @@
   },
   {
    "t": "p",
-   "x": "General Purpose Aid to Education (ED279) is projected to rise about $2.4 million. But Westbrook's local-vs-state cost share has flipped to 52% local / 48% state, the reverse of a few years ago, as the city's property valuation (assessed value) rises. The district also has far less fund-balance cushion (savings) available this year. It already used $700,000 of FY24 carryforward (unspent money carried over) to buy down the FY26 budget. Using preliminary 2025 valuation figures, staff estimated the school portion of the FY27 mill rate (the tax per thousand dollars of assessed value) at 9.72, up from 8.74. That is roughly a $336.31 annual increase for a home valued at the city's 2025 average of $341,000. Staff explicitly caveated this as a preliminary estimate."
+   "x": "General Purpose Aid to Education (ED279) is projected to rise about $2.4 million. But Westbrook's local-vs-state cost share has flipped to 52% local / 48% state, the reverse of a few years ago, as the city's property valuation (assessed value) rises."
+  },
+  {
+   "t": "p",
+   "x": "The district also has far less fund-balance cushion (savings) available this year. It already used $700,000 of FY24 carryforward (unspent money carried over) to buy down the FY26 budget."
+  },
+  {
+   "t": "p",
+   "x": "Using preliminary 2025 valuation figures, staff estimated the school portion of the FY27 mill rate (the tax per thousand dollars of assessed value) at 9.72, up from 8.74. That is roughly a $336.31 annual increase for a home valued at the city's 2025 average of $341,000. Staff explicitly caveated this as a preliminary estimate."
   },
   {
    "t": "label",

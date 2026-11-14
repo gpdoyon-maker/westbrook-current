@@ -158,19 +158,43 @@
   },
   {
    "t": "p",
-   "x": "Order 2026-44 (Community Center bus): authorizes $122,845 to Quality Van Sales, Inc. for a new 27/28-passenger Ford E-450 bus. It replaces a 10-year-old, ~115,000-mile bus in active use 114 of 168 open weekdays this year (58 adult trips, 14 youth programs, per Director Greg Post). The City switched from a planned 5-year lease (~$26,170/year) to an outright purchase as more economical. This is after a $7,000 trade-in credit and $800 discount. Passed unanimously, first reading (the first of two required votes)."
+   "x": "Order 2026-44 (Community Center bus): authorizes $122,845 to Quality Van Sales, Inc. for a new 27/28-passenger Ford E-450 bus. It replaces a 10-year-old, ~115,000-mile bus in active use 114 of 168 open weekdays this year (58 adult trips, 14 youth programs, per Director Greg Post)."
+  },
+  {
+   "t": "p",
+   "x": "The City switched from a planned 5-year lease (~$26,170/year) to an outright purchase as more economical. This is after a $7,000 trade-in credit and $800 discount."
+  },
+  {
+   "t": "p",
+   "x": "Passed unanimously, first reading (the first of two required votes)."
   },
   {
    "t": "p",
    "x": "Order 2026-45 (the budget itself): the bus purchase passed. So the Council first adopted a floor amendment (a change made during the meeting). It reflects the $26,170 reduction in municipal tax need. It passed 5–1 by roll call (Councilor Rairdon opposed). As amended:"
   },
   {
-   "t": "p",
-   "x": "• Total appropriation (money approved to be spent): $106,543,473 (reduced from $106,569,643) • Municipal operating expenses: $39,021,807 (reduced from $39,047,977) • Net budget to be raised and assessed: $61,666,487 (reduced from $61,692,657)"
+   "t": "li",
+   "x": "Total appropriation (money approved to be spent): $106,543,473 (reduced from $106,569,643)"
+  },
+  {
+   "t": "li",
+   "x": "Municipal operating expenses: $39,021,807 (reduced from $39,047,977)"
+  },
+  {
+   "t": "li",
+   "x": "Net budget to be raised and assessed: $61,666,487 (reduced from $61,692,657)"
+  },
+  {
+   "t": "li",
+   "x": "Resulting property tax rate increase: an estimated 7.61% (reduced from 7.65% pre-amendment)"
   },
   {
    "t": "p",
-   "x": "• Resulting property tax rate increase: an estimated 7.61% (reduced from 7.65% pre-amendment). This combines a 6.30% municipal expenditure increase and 7.24% and 6.06% school increases (PreK-12 and Adult Education, in that order). It also includes a 6.62% increase in the Tax Increment Financing transfer, and a 12.37% Cumberland County assessment increase. Tax Increment Financing is tax from new development set aside for that district's projects. (These are the Finance-Committee-refined figures; see the Apr. 6 meeting summary for the Mayor's earlier, higher preliminary estimate.)"
+   "x": "This combines a 6.30% municipal expenditure increase and 7.24% and 6.06% school increases (PreK-12 and Adult Education, in that order). It also includes a 6.62% increase in the Tax Increment Financing transfer, and a 12.37% Cumberland County assessment increase. Tax Increment Financing is tax from new development set aside for that district's projects."
+  },
+  {
+   "t": "p",
+   "x": "(These are the Finance-Committee-refined figures; see the Apr. 6 meeting summary for the Mayor's earlier, higher preliminary estimate.)"
   },
   {
    "t": "p",
@@ -465,7 +489,15 @@
   },
   {
    "t": "p",
-   "x": "Dudley explained that the William Clark Drive/New Gorham Road and Hannaford crossings are governed by best-practice engineering standards. The standards are those of the Federal Highway Administration, the Institute of Transportation Engineers, and the American Association of State Highway and Transportation Officials. They are not state mandates as such. These standards currently limit some requested fixes. A prior grant application to relocate the Hannaford crosswalk (~$250,000) was unsuccessful on competitive scoring. He said he'd explore nighttime “halo” lighting and consider folding a design study for both locations into the Order 2026-49 Sebago Technics contract. Councilors Turcotte, Shaughnessy, and Munro all voiced personal concern about these crossings as parents/residents of the area."
+   "x": "Dudley explained that the William Clark Drive/New Gorham Road and Hannaford crossings are governed by best-practice engineering standards. The standards are those of the Federal Highway Administration, the Institute of Transportation Engineers, and the American Association of State Highway and Transportation Officials. They are not state mandates as such. These standards currently limit some requested fixes."
+  },
+  {
+   "t": "p",
+   "x": "A prior grant application to relocate the Hannaford crosswalk (~$250,000) was unsuccessful on competitive scoring. Dudley said he'd explore nighttime “halo” lighting and consider folding a design study for both locations into the Order 2026-49 Sebago Technics contract."
+  },
+  {
+   "t": "p",
+   "x": "Councilors Turcotte, Shaughnessy, and Munro all voiced personal concern about these crossings as parents/residents of the area."
   },
   {
    "t": "p",
@@ -479,7 +511,15 @@
   },
   {
    "t": "p",
-   "x": "Vice President Shaughnessy responded that North Carolina's stronger county-government structure makes direct comparisons difficult. Resident Steve Pulsoni separately cited an October 2025 Axios report ranking Maine's five-year electricity price increase highest in the nation (67.4%, with 36% in 2024 alone). Pulsoni encouraged the City to pursue solar/LED savings wherever possible. A resident also read aloud an unrelated email from a state representative. It publicized an April 29 State House rally in support of Legislative Document (LD) 127, a child-welfare bill, unconnected to city business."
+   "x": "Vice President Shaughnessy responded that North Carolina's stronger county-government structure makes direct comparisons difficult."
+  },
+  {
+   "t": "p",
+   "x": "Resident Steve Pulsoni separately cited an October 2025 Axios report ranking Maine's five-year electricity price increase highest in the nation (67.4%, with 36% in 2024 alone). Pulsoni encouraged the City to pursue solar/LED savings wherever possible."
+  },
+  {
+   "t": "p",
+   "x": "A resident also read aloud an unrelated email from a state representative. It publicized an April 29 State House rally in support of Legislative Document (LD) 127, a child-welfare bill, unconnected to city business."
   },
   {
    "t": "label",
@@ -505,7 +545,11 @@
   },
   {
    "t": "p",
-   "x": "No committee report updates. The Council voted to enter executive session, a closed, private session allowed by state law for certain topics. The vote cited 1 M.R.S. (Maine Revised Statutes) §405(6)(E) (attorney consultation on legal rights, duties, or pending/contemplated litigation). The Mayor, City Administrator, Assistant City Administrator, City Clerk, Interim and Deputy Directors of Economic Development, Project Manager, and legal counsel were invited to attend. The transcript ends there."
+   "x": "No committee report updates. The Council voted to enter executive session, a closed, private session allowed by state law for certain topics."
+  },
+  {
+   "t": "p",
+   "x": "The vote cited 1 M.R.S. (Maine Revised Statutes) §405(6)(E) (attorney consultation on legal rights, duties, or pending/contemplated litigation). The Mayor, City Administrator, Assistant City Administrator, City Clerk, Interim and Deputy Directors of Economic Development, Project Manager, and legal counsel were invited to attend. The transcript ends there."
   },
   {
    "t": "label",
