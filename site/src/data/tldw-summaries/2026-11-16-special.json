@@ -11,7 +11,6 @@
  "packetNote": "",
  "note": "This summary highlights the meeting's key discussions and decisions, with direct quotes and timestamps for verification — it is not a substitute for watching the full meeting. Six of seven councilors were present (Councilor Rairdon absent). The censure of Councilor Turcotte passed 4–2; every other vote was unanimous. For complete context, nuance, and anything not covered, watch the full video at the link above. (Produced by: WestbrookCurrents.com)",
  "attendance": "Present: President Jennifer Munro, Vice President Michael Shaughnessy, Brian McCambridge, Victor Chau, Anna Turcotte, Amy Faulkingham. Absent: Gary Rairdon. Mayor David Morse also attended.",
- "draft": true,
  "blocks": [
   {
    "t": "h",
@@ -196,7 +195,11 @@
   },
   {
    "t": "p",
-   "x": "Questions [52:34]: President Munro thanked the team. One councilor asked how residents can send questions; Saunders offered to be the contact. Another asked when the questions-and-answers list would be posted; she said as soon as the next day."
+   "x": "Questions [52:34]: President Munro thanked the team. Councilor Chau asked how residents can send questions; Saunders offered to be the contact."
+  },
+  {
+   "t": "p",
+   "x": "Councilor McCambridge asked when the questions-and-answers list would be posted; Saunders said as soon as the next day."
   },
   {
    "t": "p",
@@ -217,7 +220,7 @@
   },
   {
    "t": "p",
-   "x": "Vice President Shaughnessy thanked the Mayor for attending the Friends of the Presumpscot River's annual meeting. A councilor invited residents to the Westbrook High School Project Graduation 2027 Turkey Trot 5K fundraiser that Sunday [1:04:03]."
+   "x": "Vice President Shaughnessy thanked the Mayor for attending the Friends of the Presumpscot River's annual meeting. Councilor Chau invited residents to the Westbrook High School Project Graduation 2027 Turkey Trot 5K fundraiser that Sunday [1:04:03]."
   },
   {
    "t": "p",
@@ -261,7 +264,7 @@
   },
   {
    "t": "d",
-   "x": "Both passed 6–0 by roll call (second and final reading). Mover's name not clear on the recording; seconded by Councilor Brian McCambridge."
+   "x": "Both passed 6–0 by roll call (second and final reading). Moved by Councilor Victor Chau, seconded by Councilor Brian McCambridge."
   },
   {
    "t": "h",
@@ -355,7 +358,7 @@
   },
   {
    "t": "p",
-   "x": "Moments later she said, \"You can't shut me up, okay? I'm speaking ... This is the second time you interrupted me.\" After another call of \"point of order,\" she said, \"This is disgusting. It's disrespectful.\" Watch it:",
+   "x": "Moments later she said, \"You can't shut me up, okay? I'm speaking ... This is the second time you interrupted me.\" After President Munro called \"point of order\" again, she said, \"This is disgusting. It's disrespectful.\" Watch it:",
    "links": [
     {
      "label": "Oct. 19 meeting video at 1:11:05",
@@ -428,7 +431,7 @@
   },
   {
    "t": "li",
-   "x": "A resident who gave his name as John (last name not clear on the recording) said a point of order must state the rule or issue being raised. He said that on Oct. 19 the President said only \"point of order,\" and Turcotte paused each time."
+   "x": "John Turcotte, a Westbrook resident, said a point of order must state the rule or issue being raised. He said that on Oct. 19 the President said only \"point of order,\" and Councilor Turcotte paused each time."
   },
   {
    "t": "li",
@@ -676,53 +679,7 @@
   },
   {
    "t": "d",
-   "x": "Executive session approved after President Munro called for all in favor (method and count not stated on the recording). Mover and seconder not stated on the recording. The recording ends as the session begins, so no later action or adjournment time is on it."
-  }
- ],
- "checklist": [
-  {
-   "ts": "52:51",
-   "q": "Which councilor asked how residents can send questions about the landslide study?"
-  },
-  {
-   "ts": "54:29",
-   "q": "Which councilor asked when the landslide questions-and-answers list would be posted?"
-  },
-  {
-   "ts": "58:25",
-   "q": "Resident who asked about the 2020 slide and spoke at 1:28:37: is it spelled Fawson (as on our Nov. 2 page) or Fosson?"
-  },
-  {
-   "ts": "1:04:03",
-   "q": "Which councilor announced the Project Graduation Turkey Trot 5K?"
-  },
-  {
-   "ts": "1:05:57",
-   "q": "Who moved Orders 2026-122 and 2026-123 together? The transcript is garbled; it may be Councilor Chau."
-  },
-  {
-   "ts": "1:09:09",
-   "q": "Oct. 19 video (vimeo.com/1237411633 at 1:11:05; this link opens tonight's video): who called \"Point of order\" right before Turcotte's \"This is disgusting\"? At this link, President Munro says she called the point of order on Oct. 19."
-  },
-  {
-   "ts": "1:14:08",
-   "q": "Turcotte quote: did she say \"without citing to the rule\"? (Our transcript reads \"siding to the rule\"; the Vimeo captions read \"citing to the rule.\")"
-  },
-  {
-   "ts": "1:27:36",
-   "q": "The third public speaker on the censure gave his name as \"John ___\" (the transcript reads \"John Turka\"). What is his last name?"
-  },
-  {
-   "ts": "1:31:58",
-   "q": "Censure roll call: confirm the votes are McCambridge yes, Shaughnessy yes, Chau no, Faulkingham yes, Turcotte no, Munro yes (4–2)."
-  },
-  {
-   "ts": "1:39:48",
-   "q": "Snow removal: who answered Vice President Shaughnessy's question about whether the price changes with snowfall, and said 20 to 22 storms a winter? We have Eric Dudley."
-  },
-  {
-   "ts": "1:59:36",
-   "q": "Executive session: who moved and who seconded?"
+   "x": "Executive session approved after President Munro called for all in favor (method and count not stated on the recording). Moved by Councilor Victor Chau, seconded by Vice President Michael Shaughnessy. The recording ends as the session begins, so no later action or adjournment time is on it."
   }
  ],
  "howMade": "This summary was produced from the meeting video (linked above, hosted on the City's Vimeo showcase). The audio was transcribed with AI-assisted speech-to-text and speaker identification. This process cross-checked names against the official city council roster and the agenda packet, attributed speakers from context (introductions, roll-call order, direct address by the presiding officer) rather than the raw diarization labels alone, and drafted this summary and the quoted excerpts. Quotes are lightly cleaned of filler words/false starts but not reworded. The meeting continued into executive session (1 M.R.S.A. §405(6)(E)) after the point captured on the source recording; by law, no content from that session is reflected here.",
