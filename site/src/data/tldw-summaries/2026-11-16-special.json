@@ -1,0 +1,708 @@
+{
+ "title": "Westbrook City Council — Special Meeting",
+ "fields": {
+  "Date": "Monday, November 16, 2026",
+  "Time": "6:00 PM",
+  "Location": "Westbrook High School (Room 114), 125 Stroudwater St. (Hybrid via Zoom)",
+  "Video": "https://vimeo.com/1247427395",
+  "Packet": "https://www.westbrookmaine.gov/AgendaCenter/ViewFile/Agenda/_11162026-1038"
+ },
+ "packetUrl": "https://www.westbrookmaine.gov/AgendaCenter/ViewFile/Agenda/_11162026-1038",
+ "packetNote": "",
+ "note": "This summary highlights the meeting's key discussions and decisions, with direct quotes and timestamps for verification — it is not a substitute for watching the full meeting. Six of seven councilors were present (Councilor Rairdon absent). The censure of Councilor Turcotte passed 4–2; every other vote was unanimous. For complete context, nuance, and anything not covered, watch the full video at the link above. (Produced by: WestbrookCurrents.com)",
+ "attendance": "Present: President Jennifer Munro, Vice President Michael Shaughnessy, Brian McCambridge, Victor Chau, Anna Turcotte, Amy Faulkingham. Absent: Gary Rairdon. Mayor David Morse also attended.",
+ "draft": true,
+ "blocks": [
+  {
+   "t": "h",
+   "x": "Opening & Procedural Record",
+   "ts": null
+  },
+  {
+   "t": "h",
+   "x": "Call to Order, Roll Call & Minutes",
+   "ts": "0:15"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "Mayor David Morse called this special meeting on Friday, Nov. 13. President Munro opened it with a reminder to councilors and the public. She asked everyone to raise a hand and wait to be called on, to keep comments to the merits of the issue, and to avoid personal comments."
+  },
+  {
+   "t": "p",
+   "x": "Six councilors answered the roll call. Councilor Gary Rairdon was absent."
+  },
+  {
+   "t": "p",
+   "x": "The Council approved six sets of minutes [1:27]:"
+  },
+  {
+   "t": "li",
+   "x": "Aug. 17 Facilities & Streets Committee"
+  },
+  {
+   "t": "li",
+   "x": "Sept. 14 Regular Meeting and Committee of the Whole"
+  },
+  {
+   "t": "li",
+   "x": "Sept. 21 Special Meeting"
+  },
+  {
+   "t": "li",
+   "x": "Oct. 5 Regular Meeting and Committee of the Whole"
+  },
+  {
+   "t": "li",
+   "x": "Oct. 19 Special Meeting"
+  },
+  {
+   "t": "li",
+   "x": "Nov. 2 Regular Meeting"
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "Minutes approved without objection. No motion or vote was taken; President Munro asked for discussion, heard none, and declared them approved."
+  },
+  {
+   "t": "h",
+   "x": "Mayor's Message",
+   "ts": null
+  },
+  {
+   "t": "h",
+   "x": "Mayor's Announcements",
+   "ts": "2:03"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "Mayor Morse congratulated two police officers promoted that day, to captain and to sergeant. He thanked a police captain who retired after 17 years in Westbrook. He also congratulated a deputy fire chief named a fellow of the American College of Paramedic Executives. The Mayor said he is the 97th person in the world to earn it."
+  },
+  {
+   "t": "p",
+   "x": "Other updates:"
+  },
+  {
+   "t": "li",
+   "x": "Election: 9,762 Westbrook voters cast ballots on Nov. 3, a turnout of 68.3%."
+  },
+  {
+   "t": "li",
+   "x": "Student bus passes: high school students had taken 646 Metro rides so far in November. Daily boardings had topped 100 twice."
+  },
+  {
+   "t": "li",
+   "x": "Main Street: more than 60 people came to a streetscape meeting with the Maine Department of Transportation. The Mayor said comments on its plans can be sent through the department's project website until Nov. 25."
+  },
+  {
+   "t": "li",
+   "x": "Riverwalk North: a second public meeting is Thursday, Nov. 19, at 5 PM in the Oak Room at the Westbrook Community Center."
+  },
+  {
+   "t": "li",
+   "x": "Holidays: the tree lighting is Sunday, Dec. 6, at 6 PM in Riverbank Park. A Hanukkah celebration with a public menorah lighting is Monday, Dec. 7, at 5 PM at the Westbrook Common, 850 Main St."
+  },
+  {
+   "t": "h",
+   "x": "Presumpscot River Landslide Vulnerability Assessment: Project Update",
+   "ts": "8:38"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "Presented by Project Manager Robyn Saunders, policy analyst Dr. Brenda Zollitsch, and Credere Associates."
+  },
+  {
+   "t": "p",
+   "x": "The study began after a landslide of about three acres on Warren Avenue in 2020. Two applications for Federal Emergency Management Agency grants were not funded. The study was then paid for with congressionally directed federal spending. It ends in September 2027."
+  },
+  {
+   "t": "p",
+   "x": "Saunders said the cause is a sensitive clay soil called the Presumpscot Formation, left behind at the end of the last ice age. She said nine landslides have happened in York and Cumberland counties since 1960, or about one every seven years."
+  },
+  {
+   "t": "p",
+   "x": "University of Maine researchers drilled and tested soil in a neighborhood north of the river. That neighborhood has stayed in place while land around it slid. [20:17]"
+  },
+  {
+   "t": "p",
+   "x": "Engineers rate a slope with a \"factor of safety.\" Above 1 means stable, and engineers like to see 1.3 to 1.5."
+  },
+  {
+   "t": "p",
+   "x": "The computer model gave the 2020 slide site 1.23 before it failed and 0.58 once the clay weakened. The north-side neighborhood scored 1.28. Even with its clay's strength taken away in the model, it stayed above 1, at 1.1."
+  },
+  {
+   "t": "p",
+   "x": "Instruments in that neighborhood have shown no change in a year of monitoring. Months of lab work and analysis remain."
+  },
+  {
+   "t": "p",
+   "x": "Dr. Zollitsch described the policy side [36:19]. The team found 26 possible policies and interviewed 20 people, from riverside homeowners to business owners."
+  },
+  {
+   "t": "p",
+   "x": "Most knew little about the 2020 slide. All wanted landslide risk taken into account, and they were open to some City rules. The team then narrowed the options for Westbrook."
+  },
+  {
+   "t": "p",
+   "x": "Ideas for existing homes and businesses:"
+  },
+  {
+   "t": "li",
+   "x": "Raising awareness and planning for emergencies. Saunders said Westbrook's public safety staff wrote the state's first landslide emergency response plan, and perhaps New England's."
+  },
+  {
+   "t": "li",
+   "x": "Finding outside funding and technical help for property owners, without raising taxes or fees."
+  },
+  {
+   "t": "li",
+   "x": "Using landslide-aware practices for drainage, digging, grading and erosion control."
+  },
+  {
+   "t": "li",
+   "x": "Helping owners find insurance. Standard policies usually don't cover landslides."
+  },
+  {
+   "t": "li",
+   "x": "Voluntary disclosure when a home is sold. The City can't require it."
+  },
+  {
+   "t": "li",
+   "x": "Considering landslides in land use and the coming comprehensive plan update."
+  },
+  {
+   "t": "p",
+   "x": "For new building, the options include extra steps in site plan review (the Planning Board's review of a building project's detailed plan) and subdivision review. Building and blasting permits, open space planning and a decision tree are also options. Zollitsch said the goal is to avoid blanket rules and ask for extra steps only where the evidence calls for them."
+  },
+  {
+   "t": "p",
+   "x": "Next steps: community information meetings in December, then roundtables for homeowners and for businesses in early 2027. Policies would come to the Council after that. The findings will be shared with Portland, Falmouth, Gorham, Windham and Standish. Project information is at westbrookmaine.gov/landslide, where a list of common questions and answers is to be posted."
+  },
+  {
+   "t": "p",
+   "x": "Questions [52:34]: President Munro thanked the team. One councilor asked how residents can send questions; Saunders offered to be the contact. Another asked when the questions-and-answers list would be posted; she said as soon as the next day."
+  },
+  {
+   "t": "p",
+   "x": "Vice President Shaughnessy said \"vulnerability\" does not mean a landslide is about to happen, and Saunders agreed."
+  },
+  {
+   "t": "p",
+   "x": "Resident Ken Fawson asked what triggered the 2020 slide [58:25]. The Credere Associates engineer said several things combined. She named added weight at the top of a slope, shaking from equipment, digging at the bottom, and a drought followed by heavy rain. She said the slide itself happened suddenly."
+  },
+  {
+   "t": "h",
+   "x": "City Council Messages & First Public Comment",
+   "ts": "1:03:32"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "Vice President Shaughnessy thanked the Mayor for attending the Friends of the Presumpscot River's annual meeting. A councilor invited residents to the Westbrook High School Project Graduation 2027 Turkey Trot 5K fundraiser that Sunday [1:04:03]."
+  },
+  {
+   "t": "p",
+   "x": "There was no student representative update. No one spoke at the first public comment, in the room or online, and there was no unfinished business."
+  },
+  {
+   "t": "h",
+   "x": "Orders of the Day (Second & Final Reading)",
+   "ts": null
+  },
+  {
+   "t": "h",
+   "x": "2026-122 & 2026-123 — Sale of 12 Water Street; Essential Services Unit Contract",
+   "ts": "1:05:36"
+  },
+  {
+   "t": "q",
+   "x": "“That the Westbrook City Council hereby authorizes the Mayor or designee to sell the City-owned property located at 12 Water Street to Dori Schulberger of Westbrook, ME for a price of not less than $50,000 and to negotiate and enter into a Purchase & Sale Agreement and to execute a municipal quitclaim deed and any other documents or instruments necessary or convenient to convey such property all on such terms and subject to such conditions as the Mayor or designee determines are in the City’s best interest.”",
+   "cite": "Order 2026-122 (packet page 43)"
+  },
+  {
+   "t": "q",
+   "x": "“That the Westbrook City Council hereby approves the attached 2026-2029 Collective Bargaining Agreement with the Teamsters Local Union No. 340 (Westbrook Essential Services Unit), a copy of which shall be placed on file with the Human Resources Department.”",
+   "cite": "Order 2026-123 (packet page 53)"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "Both orders had their first readings on Nov. 2 (see that meeting's summary). Tonight was the second and final reading, the last and binding vote. The land sale money goes to the Riverwalk North project. The contract covers the City's 12-position Essential Services Unit."
+  },
+  {
+   "t": "p",
+   "x": "The two were taken together in one motion and read by title only. No councilor or member of the public spoke on them."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "Both passed 6–0 by roll call (second and final reading). Mover's name not clear on the recording; seconded by Councilor Brian McCambridge."
+  },
+  {
+   "t": "h",
+   "x": "New Business: Resolve (One Reading)",
+   "ts": null
+  },
+  {
+   "t": "h",
+   "x": "Resolve 2026-19 — Censuring City Councilor Anna Turcotte (One Reading)",
+   "ts": "1:06:52"
+  },
+  {
+   "t": "p",
+   "x": "A resolve is a formal statement by the Council. This one was sponsored by Council President Jennifer Munro. The packet says she placed it on the agenda \"on behalf of a majority of Council members.\""
+  },
+  {
+   "t": "p",
+   "x": "The full text of the resolve, as adopted, is below. You can also read it in the City's packet:",
+   "links": [
+    {
+     "label": "Resolve 2026-19 (packet page 109)",
+     "url": "https://www.westbrookmaine.gov/AgendaCenter/ViewFile/Agenda/_11162026-1038#page=109"
+    },
+    {
+     "label": "Council Rules of Order, Section 5 (packet page 114)",
+     "url": "https://www.westbrookmaine.gov/AgendaCenter/ViewFile/Agenda/_11162026-1038#page=114"
+    }
+   ]
+  },
+  {
+   "t": "q",
+   "x": "“The Westbrook City Council believes that free and open debate between differing opinions is central to a functioning City government and ensures the best outcomes for Westbrook’s residents. Productive discussions are only possible where issues before the Council are evaluated based on their merits, and the positions and opinions of the public, other Councilors, and the City Administration are treated with respect. The City Council adopted its Rules of Order to foster discussion and debate; however, those rules are only effective when Councilors respect and abide by them.”",
+   "cite": "Resolve 2026-19, first paragraph (packet page 109)",
+   "ts": "1:07:04"
+  },
+  {
+   "t": "q",
+   "x": "“During the City Council meeting held on October 19, 2026, Councilor Turcotte breached the Rules of Order. Councilor Turcotte made statements that did not address the issue before the Council and instead directly attacked and demeaned the personal motivations and intentions of the City Administration, calling them ‘disgusting’ and ‘corrupt.’ Additionally, Councilor Turcotte failed to honor repeated calls to points of order. Statements and conduct of this kind violate Section 5 of the City Council Rules of Order, undermine the function of the City Council and City Administration, and do not advance the interests of Westbrook’s residents. The City Council strongly disagrees with and does not condone Councilor Turcotte’s statements or conduct.”",
+   "cite": "Resolve 2026-19, second paragraph (packet page 109)"
+  },
+  {
+   "t": "q",
+   "x": "“The City Council hereby censures Councilor Anna Turcotte for the above violations of Section 5 of the City Council Rules of Order. The City Council urges Councilor Turcotte to reflect on her statements and conduct and to offer an apology to the Council and City Administration.”",
+   "cite": "Resolve 2026-19, third paragraph (packet page 109)"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "A censure is a formal statement of disapproval. The resolve sets no other penalty. It urges Councilor Turcotte to apologize to the Council and the City Administration."
+  },
+  {
+   "t": "p",
+   "x": "The resolve cites Section 5 of the Council's Rules of Order. It says in part that members \"shall confine themselves to the question under discussion and avoid intemperate and abusive language and personalities.\""
+  },
+  {
+   "t": "p",
+   "x": "Background: the remarks came during the Oct. 19 debate on replacing the Recreation and Conservation Commission with a new committee. That change passed 6–1, with Turcotte the only \"no\" vote. Residents spoke about her dissent at the Nov. 2 meeting. Earlier coverage:",
+   "links": [
+    {
+     "label": "Our Oct. 19 summary (Order 2026-116)",
+     "url": "/tldw/2026-10-19-special-meeting#order-2026-116"
+    },
+    {
+     "label": "Our Nov. 2 summary (residents' reactions)",
+     "url": "/tldw/2026-11-02-regular"
+    }
+   ]
+  },
+  {
+   "t": "p",
+   "x": "Her words on Oct. 19: Turcotte said, \"I find this whole process, including the Planning Board appeals process ... to be incredibly corrupt.\" Watch it:",
+   "links": [
+    {
+     "label": "Oct. 19 meeting video at 1:10:41",
+     "url": "https://vimeo.com/1237411633#t=1h10m41s"
+    }
+   ]
+  },
+  {
+   "t": "p",
+   "x": "Moments later she said, \"You can't shut me up, okay? I'm speaking ... This is the second time you interrupted me. This is disgusting.\" Watch it:",
+   "links": [
+    {
+     "label": "Oct. 19 meeting video at 1:11:05",
+     "url": "https://vimeo.com/1237411633#t=1h11m05s"
+    }
+   ]
+  },
+  {
+   "t": "p",
+   "x": "Opening the debate, President Munro said she had called the point of order on Oct. 19. A point of order is a request to stop and bring a meeting back to its rules. She said she brought the resolve because the Council must uphold the rules it agreed to follow."
+  },
+  {
+   "t": "h",
+   "x": "Point / Counterpoint",
+   "ts": null
+  },
+  {
+   "t": "q",
+   "x": "“On October 19th, during the debate on the Recreation and Conservation Commission ordinance, I called a point of order and asked Councilor Turcotte to return to the merits of the proposal ... There is a distinction between challenging idea, questioning a decision, proposing new ideas, and making personal attacks. We can disagree strongly without making these disagreements personal.”",
+   "cite": "President Jennifer Munro (for the resolve)",
+   "ts": "1:09:09"
+  },
+  {
+   "t": "q",
+   "x": "“This is less about Councilor Turcotte as a person. I have a deep respect and regard for Councilor Turcotte ... It is about the particular comments stated and how they violated our rules of order and Robert's Rules of Order. The refusal also to comply to the leadership of the council to bring focus to the comments is an issue as well ... It's uncomfortable, but regrettably it must be undertaken.”",
+   "cite": "Vice President Michael Shaughnessy (for the resolve)",
+   "ts": "1:11:41"
+  },
+  {
+   "t": "q",
+   "x": "“Tonight the Westbrook City Council is voting to censure me for statements the city administration, the mayor, and the city council president did not like ... The rules were not followed by the president herself. You can't state point of order to interrupt someone without citing the rule that's being allegedly raised ... In my public statements I did not insult anyone. I asked hard questions and I offered my honest opinion.”",
+   "cite": "Councilor Anna Turcotte (against the resolve)",
+   "ts": "1:13:49"
+  },
+  {
+   "t": "p",
+   "x": "Turcotte also said she has been elected to her seat four times and has heard support from Democrats, Republicans and independents since her Oct. 19 remarks. She said none of her comments were aimed at any councilor, and that she will keep representing her constituents the same way."
+  },
+  {
+   "t": "q",
+   "x": "“If you guys want to beat up on me, that's fine. I have real thick skin. But please leave the city employees alone and thank them for the hard work they do ... I've been a subject of some sort of city council action myself. And I will not put anyone else through that.”",
+   "cite": "Councilor Victor Chau (against the resolve, while praising City staff)",
+   "ts": "1:19:02"
+  },
+  {
+   "t": "q",
+   "x": "“I admire Councilor Turcotte and I have a lot of admiration for her. But the point of order stuff, I think that's, to me that's heat of the moment. What crossed the line for me was the remark about corruption. In my opinion that was baseless and unwarranted.”",
+   "cite": "Councilor Brian McCambridge (for the resolve)",
+   "ts": "1:20:31"
+  },
+  {
+   "t": "p",
+   "x": "At President Munro's request, City Solicitor Cameron Ferrante explained points of order [1:21:26]. He called one \"basically like a pause button.\" Debate stops, and the presiding officer rules on it. The member it was called on can appeal, and then the full Council votes."
+  },
+  {
+   "t": "p",
+   "x": "Public comment on the resolve: 4 spoke, all against the censure; none spoke in favor. [1:23:36]"
+  },
+  {
+   "t": "li",
+   "x": "Anthony Doms, Ward 3, said he ran against Turcotte and doesn't always agree with her. He called the censure \"an irresponsible use of that tool.\""
+  },
+  {
+   "t": "li",
+   "x": "Chuck Ellis, Ward 5, said Turcotte was right to oppose ending the Recreation and Conservation Commission. He said councilors are elected to oversee the City administration."
+  },
+  {
+   "t": "li",
+   "x": "A resident who gave his name as John (last name not clear on the recording) said a point of order must state the rule or issue being raised. He said that on Oct. 19 the President said only \"point of order,\" and Turcotte paused each time."
+  },
+  {
+   "t": "li",
+   "x": "Ken Fawson, Ward 4, said he reviewed the Oct. 19 video at least five times and read Section 5."
+  },
+  {
+   "t": "q",
+   "x": "“I read section five of your rules of order and see nothing wrong with what she said that evening. Nothing. Did she question motives? Yes. Is that a violation of these rules? Absolutely not.”",
+   "cite": "Ken Fawson, Ward 4 resident",
+   "ts": "1:28:37"
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "Passed 4–2 by roll call (one reading, so this was the final vote). Moved by Vice President Michael Shaughnessy, seconded by Councilor Brian McCambridge. For: Brian McCambridge, Michael Shaughnessy, Amy Faulkingham, Jennifer Munro. Against: Victor Chau, Anna Turcotte. [1:31:58]"
+  },
+  {
+   "t": "p",
+   "x": "Councilor Gary Rairdon was absent. The clerk called Councilor Turcotte's name late, after President Munro's, and then took the President's vote again. Turcotte answered, \"Absolutely not.\" President Munro announced, \"Four in favor, two opposed.\""
+  },
+  {
+   "t": "h",
+   "x": "New Business: Orders (One Reading)",
+   "ts": null
+  },
+  {
+   "t": "h",
+   "x": "2026-124 — Unappropriated Funds Report, 1st Quarter FY 2027",
+   "ts": "1:32:33"
+  },
+  {
+   "t": "q",
+   "x": "“That the Westbrook City Council hereby accepts the Unappropriated Funds Report for the 1st Quarter of FY 2027, in accordance with Order 2021-121.”",
+   "cite": "Order 2026-124 (packet page 118)"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "Under a 2021 order, City departments may accept and spend grants and donations under $5,000 without Council approval. They report them to the Council every three months. This report covers July 1 to Sept. 30, 2026."
+  },
+  {
+   "t": "p",
+   "x": "Councilor Faulkingham first read the next order, 2026-125, by mistake. The clerk caught it, and she then read this one."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "Approved 6–0 by roll call. Moved by Councilor Amy Faulkingham, seconded by Vice President Michael Shaughnessy."
+  },
+  {
+   "t": "h",
+   "x": "New Business: Orders Needing Two Readings (First Reading)",
+   "ts": null
+  },
+  {
+   "t": "h",
+   "x": "2026-125 — Distracted Driving Enforcement Grant, $10,390 (First Reading)",
+   "ts": "1:35:35"
+  },
+  {
+   "t": "q",
+   "x": "“That the Westbrook City Council hereby authorizes the acceptance and expenditure of a Maine Bureau of Highway Safety Distracted Driving Enforcement Grant in the amount of $10,390 for distracted driving enforcement, as outlined in the attached exhibit.”",
+   "cite": "Order 2026-125 (packet page 122)"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "A first reading is the first of two required votes; it is not final yet. The police department applied for and won this state grant. It pays officers' overtime for distracted driving enforcement. Councilors thanked the department for finding grants."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "First reading approved by a show of hands, all in favor, none opposed (count not announced). Moved by Vice President Michael Shaughnessy, seconded by Councilor Victor Chau. Second and final reading is set for Dec. 7, 2026."
+  },
+  {
+   "t": "h",
+   "x": "2026-126 — Parking Garage Snow Removal Contract, Glidden Excavating & Paving (First Reading)",
+   "ts": "1:37:11"
+  },
+  {
+   "t": "q",
+   "x": "“That the Westbrook City Council hereby authorizes an award of bid for snow removal services at the Riverfront Garage and Downtown Parking Garage to Glidden Excavating & Paving, Inc. of Gorham, ME for a period of three (3) years with a two (2) year mutual option extension, as outlined in the attached exhibit and detailed below:”",
+   "cite": "Order 2026-126 (packet page 126, which lists each year's amount)"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "Glidden was the lowest of the bids that met the requirements. The yearly prices:"
+  },
+  {
+   "t": "li",
+   "x": "Riverfront Parking Garage: $37,759 a year for three years, then $39,000 and $40,000 if both sides extend."
+  },
+  {
+   "t": "li",
+   "x": "Downtown Parking Garage: $33,642 a year for three years, then $35,000 and $36,000 if both sides extend."
+  },
+  {
+   "t": "p",
+   "x": "City Administrator Angela Holmes said City crews used to clear the Downtown garage. Hiring it out frees them to clear streets, sidewalks and downtown crosswalks sooner."
+  },
+  {
+   "t": "p",
+   "x": "Vice President Shaughnessy asked whether the price changes with the amount of snow. Public Services Director Eric Dudley said no; it is one price for the whole season. He said Westbrook usually sees 20 to 22 storms a winter."
+  },
+  {
+   "t": "p",
+   "x": "Councilor Chau asked where the money comes from. Holmes said the Riverfront garage's lease partly covers its cost. Year one at the Downtown garage comes from $50,000 the City received in a settlement with TDB LLC (Order 2026-55). Later years would go in the regular budget."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "First reading approved by a show of hands, all in favor, none opposed (count not announced). Moved by Councilor Brian McCambridge, seconded by Councilor Victor Chau. Second and final reading is set for Dec. 7, 2026."
+  },
+  {
+   "t": "h",
+   "x": "2026-127 — New Flooring at the Westbrook Community Center, $19,999.86 (First Reading)",
+   "ts": "1:44:36"
+  },
+  {
+   "t": "q",
+   "x": "“That the Westbrook City Council hereby authorizes an expenditure of $19,999.86 to Sherwin Williams of South Portland, ME, for the purchase and installation of new flooring in the Media Center within the Children's Wing at the Westbrook Community Center, as outlined in the attached exhibit.”",
+   "cite": "Order 2026-127 (packet page 144)"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "The flooring replaces ripped, buckling carpet in the old school library, now called the Media Center. Community Services Director Greg Post plans to turn the room into a game space. It would have bocce, shuffleboard, three-hole mini golf, table tennis and more."
+  },
+  {
+   "t": "p",
+   "x": "The room would serve the before- and after-school program, camps, and the Redwood Society for ages 50 and up. It would also host birthday parties for ages 8 and up and rentals. Post said the center's toddler room has hosted 444 birthday parties and nearly 10,000 drop-ins in under four years. He said it has brought in more than $150,000."
+  },
+  {
+   "t": "p",
+   "x": "Post said the cost will be covered fully by donations from community partners. He hopes to open the room in January. Councilors Chau and Turcotte praised the center and its staff."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "First reading approved 6–0 by a show of hands. Moved by Councilor Brian McCambridge, seconded by Councilor Victor Chau. Second and final reading is set for Dec. 7, 2026."
+  },
+  {
+   "t": "h",
+   "x": "2026-128 — Non-Union Pay Study, Career Management Associates, $8,970 (First Reading)",
+   "ts": "1:53:26"
+  },
+  {
+   "t": "q",
+   "x": "“That the Westbrook City Council hereby authorizes an expenditure in the amount of $8,970 to Career Management Associates of Scarborough, ME for the Non-Union Compensation Study & Pay Structure Development Project, as outlined in the attached exhibit.”",
+   "cite": "Order 2026-128 (packet page 151)"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "Four consultants bid. Career Management Associates of Scarborough was the lowest:"
+  },
+  {
+   "t": "li",
+   "x": "Career Management Associates: $8,970"
+  },
+  {
+   "t": "li",
+   "x": "Municipal Resources, Inc.: $13,300"
+  },
+  {
+   "t": "li",
+   "x": "Evergreen Solutions, LLC: $15,500"
+  },
+  {
+   "t": "li",
+   "x": "PayPoint HR: $20,000"
+  },
+  {
+   "t": "p",
+   "x": "City Administrator Holmes said the pay structure for non-union employees hasn't been redesigned in at least 15 years. This money pays for the study and a new structure this year; putting it in place would come in the next budget year."
+  },
+  {
+   "t": "p",
+   "x": "Councilor McCambridge asked if hiring a consultant is common. Staff said it is, naming Biddeford, Bath and Kennebunk. The goal is pay that competes for workers and fair gaps between pay levels. Human Resources Director Joanne LePauloue was present."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "First reading approved by a show of hands, all in favor, none opposed (count not announced). Moved by Councilor Victor Chau, seconded by Vice President Michael Shaughnessy. Second and final reading is set for Dec. 7, 2026."
+  },
+  {
+   "t": "h",
+   "x": "Closing",
+   "ts": null
+  },
+  {
+   "t": "h",
+   "x": "Second Public Comment & Executive Session",
+   "ts": "1:58:53"
+  },
+  {
+   "t": "label",
+   "x": "Discussion Summary"
+  },
+  {
+   "t": "p",
+   "x": "No one spoke at the second public comment, in the room or online. There were no referrals or committee reports."
+  },
+  {
+   "t": "p",
+   "x": "The Council then went into executive session, a closed-door session the law allows for certain topics [1:59:25]. The reason given was 1 M.R.S.A. §405(6)(E): consultation with legal counsel about the Council's legal rights and duties."
+  },
+  {
+   "t": "label",
+   "x": "Key Decisions"
+  },
+  {
+   "t": "d",
+   "x": "Executive session approved by a show of hands (count not announced). Mover and seconder not stated on the recording. The recording ends as the session begins, so no later action or adjournment time is on it."
+  }
+ ],
+ "checklist": [
+  {
+   "ts": "1:05:57",
+   "q": "Who moved Orders 2026-122 and 2026-123 together? The transcript is garbled; it may be Councilor Chau."
+  },
+  {
+   "ts": "1:31:58",
+   "q": "Censure roll call: confirm the votes are McCambridge yes, Shaughnessy yes, Chau no, Faulkingham yes, Turcotte no, Munro yes (4–2)."
+  },
+  {
+   "ts": "1:14:08",
+   "q": "Turcotte quote: did she say \"without citing the rule\"? (The transcript says \"siding.\")"
+  },
+  {
+   "ts": "1:27:36",
+   "q": "The third public speaker on the censure gave his name as \"John ___.\" What is his last name?"
+  },
+  {
+   "ts": "58:25",
+   "q": "Resident who asked about the 2020 slide and spoke at 1:28:37: is it spelled Fawson (as on our Nov. 2 page) or Fosson?"
+  },
+  {
+   "ts": "52:51",
+   "q": "Which councilor asked how residents can send questions about the landslide study?"
+  },
+  {
+   "ts": "54:29",
+   "q": "Which councilor asked when the landslide questions-and-answers list would be posted?"
+  },
+  {
+   "ts": "1:04:03",
+   "q": "Which councilor announced the Project Graduation Turkey Trot 5K?"
+  },
+  {
+   "ts": "1:59:36",
+   "q": "Executive session: who moved and who seconded?"
+  }
+ ],
+ "howMade": "This summary was produced from the meeting video (linked above, hosted on the City's Vimeo showcase). The audio was transcribed with AI-assisted speech-to-text and speaker identification. This process cross-checked names against the official city council roster and the agenda packet, attributed speakers from context (introductions, roll-call order, direct address by the presiding officer) rather than the raw diarization labels alone, and drafted this summary and the quoted excerpts. Quotes are lightly cleaned of filler words/false starts but not reworded. The meeting continued into executive session (1 M.R.S.A. §405(6)(E)) after the point captured on the source recording; by law, no content from that session is reflected here.",
+ "slug": "2026-11-16-special"
+}
