@@ -107,7 +107,7 @@
   },
   {
    "t": "d",
-   "x": "Approved unanimously by roll call, 7–0 — extends the recording deadline to January 28, 2027. All findings/conditions of the June 2, 2026 approval remain valid. Mover not stated on the recording; seconded by Robin Tannenbaum. Oriana Farnham (alternate) did not vote; the alternates took turns by item."
+   "x": "Approved unanimously by roll call, 7–0 — extends the recording deadline to January 28, 2027. All findings/conditions of the June 2, 2026 approval remain valid. Moved by John Turcotte, seconded by Robin Tannenbaum. Oriana Farnham (alternate) did not vote; the alternates took turns by item."
   },
   {
    "t": "label",
@@ -141,7 +141,7 @@
   },
   {
    "t": "d",
-   "x": "Approved unanimously by roll call, 7–0. Mover not stated on the recording; seconded by Oriana Farnham. Lucas Schrage (alternate) did not vote; the alternates took turns by item."
+   "x": "Approved unanimously by roll call, 7–0. Moved by Nancy Litrocapes, seconded by Oriana Farnham. Lucas Schrage (alternate) did not vote; the alternates took turns by item."
   },
   {
    "t": "label",
@@ -513,6 +513,6 @@
    "x": "Revisit the Planning Board's meeting-date policy for future election years — Assignee: City Administration | Deadline: none set."
   }
  ],
- "howMade": "This summary was produced from the meeting video (linked above, hosted on the City's Vimeo showcase). The audio was transcribed with AI-assisted speech-to-text and speaker identification. This process cross-checked names against the official Planning Board roster, attributed speakers from context (introductions, roll-call order, direct address by the Chair) rather than the raw diarization labels alone, and drafted this summary and the quoted excerpts. Quotes are lightly cleaned of filler words/false starts but not reworded. Reviewed by Gerald Doyon.",
+ "howMade": "This summary was produced from the meeting video (linked above, hosted on the City's Vimeo showcase). The audio was transcribed with AI-assisted speech-to-text and speaker identification. This process cross-checked names against the official Planning Board roster, attributed speakers from context (introductions, roll-call order, direct address by the Chair) rather than the raw diarization labels alone, and drafted this summary and the quoted excerpts. Quotes are lightly cleaned of filler words/false starts but not reworded. Reviewed by Gerald Doyon. A separate AI accuracy check then compared this summary against the transcript and agenda packet. Errors it found were corrected, and Gerald Doyon verified against the meeting video the points only the video could settle.",
  "slug": "2026-10-06-planning-board"
 }

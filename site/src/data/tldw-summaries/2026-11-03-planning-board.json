@@ -43,7 +43,7 @@
   },
   {
    "t": "d",
-   "x": "Quorum established; Oct. 6, 2026 minutes approved unanimously, 5–0. Mover and seconder not stated on the recording."
+   "x": "Quorum established; Oct. 6, 2026 minutes approved unanimously, 5–0. Moved by Kevin Price, seconded by Nancy Litrocapes."
   },
   {
    "t": "label",
@@ -89,7 +89,7 @@
   },
   {
    "t": "d",
-   "x": "Approved unanimously, 5–0, by roll call. Mover and seconder not stated on the recording."
+   "x": "Approved unanimously, 5–0, by roll call. Moved by Nancy Litrocapes, seconded by Kevin Price."
   },
   {
    "t": "label",
@@ -153,7 +153,7 @@
   },
   {
    "t": "d",
-   "x": "Recommended to City Council unanimously, 5–0, by roll call. Mover and seconder not stated on the recording."
+   "x": "Recommended to City Council unanimously, 5–0, by roll call. Moved by Kevin Price, seconded by Karen Axelson."
   },
   {
    "t": "label",
@@ -316,6 +316,6 @@
    "x": "None."
   }
  ],
- "howMade": "This summary was produced from the meeting video (linked above, hosted on the City's Vimeo showcase). The audio was transcribed with AI-assisted speech-to-text and speaker identification. This process cross-checked names against the official Planning Board roster and this pipeline's prior Planning Board meetings, attributed speakers from context (self-identification, direct address, roll-call order, and consistency with previously-established recurring roles) rather than the raw diarization labels alone, and drafted this summary and the quoted excerpts. Quotes are lightly cleaned of filler words/false starts but not reworded. The agenda posted for this meeting was a single page with no attached item worksheets, and had not yet appeared on the City's own Agenda Center as of this writing; it was found instead via a direct City Document Center link. Reviewed by Gerald Doyon.",
+ "howMade": "This summary was produced from the meeting video (linked above, hosted on the City's Vimeo showcase). The audio was transcribed with AI-assisted speech-to-text and speaker identification. This process cross-checked names against the official Planning Board roster and this pipeline's prior Planning Board meetings, attributed speakers from context (self-identification, direct address, roll-call order, and consistency with previously-established recurring roles) rather than the raw diarization labels alone, and drafted this summary and the quoted excerpts. Quotes are lightly cleaned of filler words/false starts but not reworded. The agenda posted for this meeting was a single page with no attached item worksheets, and had not yet appeared on the City's own Agenda Center as of this writing; it was found instead via a direct City Document Center link. Reviewed by Gerald Doyon. A separate AI accuracy check then compared this summary against the transcript and agenda packet. Errors it found were corrected, and Gerald Doyon verified against the meeting video the points only the video could settle.",
  "slug": "2026-11-03-planning-board"
 }
