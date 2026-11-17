@@ -43,7 +43,11 @@
   },
   {
    "t": "d",
-   "x": "Aaron Burns elected Chair (no opposition); Keith Richard elected Vice Chair unanimously. Both: nominator and seconder not stated on the recording; vote count not stated."
+   "x": "Aaron Burns elected Chair unanimously; all six present, including alternate Cliff McCarthy, voted in favor, none opposed. Nominated by Nancy Heath, seconded by Sherri Quint."
+  },
+  {
+   "t": "d",
+   "x": "Keith Richard elected Vice Chair unanimously; all six present, including alternate Cliff McCarthy, voted in favor. Nominated by Sherri Quint, seconded by Nancy Heath."
   },
   {
    "t": "label",
@@ -210,7 +214,7 @@
   },
   {
    "t": "d",
-   "x": "No final decision. The board closed the evidentiary record (the period for presenting evidence is over) and continued the matter to March 24, 2026, 7:00 PM. It will then deliberate on written Findings of Fact and Conclusions of Law and take a final, binding vote. Record closed 5–0; mover and seconder not stated on the recording."
+   "x": "No final decision. The board closed the evidentiary record (the period for presenting evidence is over) and continued the matter to March 24, 2026, 7:00 PM. It will then deliberate on written Findings of Fact and Conclusions of Law and take a final, binding vote. Record closed 5–0. Moved by Keith Richard, seconded by Nancy Heath."
   },
   {
    "t": "label",
@@ -226,6 +230,6 @@
    "cite": "Update, Nov. 7, 2026"
   }
  ],
- "howMade": "This summary was produced from the meeting video (linked above). The audio was transcribed with AI-assisted speech-to-text and speaker identification. This process cross-checked names against the official Zoning Board of Appeals roster, attributed speakers from context (self-identification, direct address, roll-call order, and consistency with this pipeline's established recurring staff roles) rather than the raw diarization labels alone, and drafted this summary and the quoted excerpts. Quotes are lightly cleaned of filler words/false starts but not reworded. This was a quasi-judicial proceeding (sworn testimony, cross-examination-style questioning, a formal evidentiary record) condensed from roughly three hours of hearing and deliberation into its key threads and outcome. Reviewed by Gerald Doyon.",
+ "howMade": "This summary was produced from the meeting video (linked above). The audio was transcribed with AI-assisted speech-to-text and speaker identification. This process cross-checked names against the official Zoning Board of Appeals roster, attributed speakers from context (self-identification, direct address, roll-call order, and consistency with this pipeline's established recurring staff roles) rather than the raw diarization labels alone, and drafted this summary and the quoted excerpts. Quotes are lightly cleaned of filler words/false starts but not reworded. This was a quasi-judicial proceeding (sworn testimony, cross-examination-style questioning, a formal evidentiary record) condensed from roughly three hours of hearing and deliberation into its key threads and outcome. Reviewed by Gerald Doyon. A separate AI accuracy check then compared this summary against the transcript and agenda packet. Errors it found were corrected, and Gerald Doyon verified against the meeting video the points only the video could settle.",
  "slug": "2026-02-10-zoning-board-of-appeals"
 }
