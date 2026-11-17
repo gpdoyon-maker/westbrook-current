@@ -37,7 +37,7 @@
   },
   {
    "t": "p",
-   "x": "The Council approved six sets of minutes [1:27]:"
+   "x": "The Council approved minutes from six meeting dates [1:27]:"
   },
   {
    "t": "li",
@@ -335,7 +335,17 @@
   },
   {
    "t": "p",
-   "x": "Her words on Oct. 19: Turcotte said, \"I find this whole process, including the Planning Board appeals process ... to be incredibly corrupt.\" Watch it:",
+   "x": "Her words on Oct. 19: Turcotte said she had told the administration that the change was \"probably the most disgusting thing I've seen on the council in the 11 years I've been on the council ... I think it's underhanded, I think it's shady.\" Watch it:",
+   "links": [
+    {
+     "label": "Oct. 19 meeting video at 1:09:43",
+     "url": "https://vimeo.com/1237411633#t=1h09m43s"
+    }
+   ]
+  },
+  {
+   "t": "p",
+   "x": "A minute later she said, \"I find this whole process, including the Planning Board appeals process ... to be incredibly corrupt.\" Watch it:",
    "links": [
     {
      "label": "Oct. 19 meeting video at 1:10:41",
@@ -345,7 +355,7 @@
   },
   {
    "t": "p",
-   "x": "Moments later she said, \"You can't shut me up, okay? I'm speaking ... This is the second time you interrupted me. This is disgusting.\" Watch it:",
+   "x": "Moments later she said, \"You can't shut me up, okay? I'm speaking ... This is the second time you interrupted me.\" After another call of \"point of order,\" she said, \"This is disgusting. It's disrespectful.\" Watch it:",
    "links": [
     {
      "label": "Oct. 19 meeting video at 1:11:05",
@@ -376,13 +386,13 @@
   },
   {
    "t": "q",
-   "x": "“Tonight the Westbrook City Council is voting to censure me for statements the city administration, the mayor, and the city council president did not like ... The rules were not followed by the president herself. You can't state point of order to interrupt someone without citing the rule that's being allegedly raised ... In my public statements I did not insult anyone. I asked hard questions and I offered my honest opinion.”",
+   "x": "“Tonight the Westbrook City Council is voting to censure me for statements the city administration, the mayor, and the city council president did not like ... The rules were not followed by the president herself. You can't state point of order to interrupt someone without citing to the rule that's being allegedly raised ... In my public statements I did not insult anyone. I asked hard questions and I offered my honest opinion.”",
    "cite": "Councilor Anna Turcotte (against the resolve)",
    "ts": "1:13:49"
   },
   {
    "t": "p",
-   "x": "Turcotte also said she has been elected to her seat four times and has heard support from Democrats, Republicans and independents since her Oct. 19 remarks. She said none of her comments were aimed at any councilor, and that she will keep representing her constituents the same way."
+   "x": "Turcotte also said she has been elected to her seat four times and has heard support from constituents who are Democrats, Republicans and independents after her statement. She said none of her comments were aimed at any councilor, and that she will keep representing her constituents the same way."
   },
   {
    "t": "q",
@@ -398,7 +408,11 @@
   },
   {
    "t": "p",
-   "x": "At President Munro's request, City Solicitor Cameron Ferrante explained points of order [1:21:26]. He called one \"basically like a pause button.\" Debate stops, and the presiding officer rules on it. The member it was called on can appeal, and then the full Council votes."
+   "x": "At President Munro's request, City Solicitor Cameron Ferrante explained points of order [1:21:26]. He called one \"basically like a pause button.\""
+  },
+  {
+   "t": "p",
+   "x": "He said it \"can be called generally\" or \"with specificity towards the rules.\" Debate stops, and the presiding officer rules on it. The member it was called on can appeal, and then the full Council votes."
   },
   {
    "t": "p",
@@ -532,11 +546,11 @@
   },
   {
    "t": "p",
-   "x": "City Administrator Angela Holmes said City crews used to clear the Downtown garage. Hiring it out frees them to clear streets, sidewalks and downtown crosswalks sooner."
+   "x": "City Administrator Angela Holmes said City crews used to clear the Downtown garage. Hiring it out lets them be redeployed to the streets. Asked by Councilor McCambridge, Engineering and Public Services Director Eric Dudley said that way crews can clear downtown crosswalk ramps and streets sooner."
   },
   {
    "t": "p",
-   "x": "Vice President Shaughnessy asked whether the price changes with the amount of snow. Public Services Director Eric Dudley said no; it is one price for the whole season. He said Westbrook usually sees 20 to 22 storms a winter."
+   "x": "Vice President Shaughnessy asked whether the price changes with the amount of snow. Dudley said no; it is one price for the whole season. He said Westbrook usually sees 20 to 22 storms a winter."
   },
   {
    "t": "p",
@@ -662,7 +676,7 @@
   },
   {
    "t": "d",
-   "x": "Executive session approved by a show of hands (count not announced). Mover and seconder not stated on the recording. The recording ends as the session begins, so no later action or adjournment time is on it."
+   "x": "Executive session approved after President Munro called for all in favor (method and count not stated on the recording). Mover and seconder not stated on the recording. The recording ends as the session begins, so no later action or adjournment time is on it."
   }
  ],
  "checklist": [
@@ -676,11 +690,19 @@
   },
   {
    "ts": "1:14:08",
-   "q": "Turcotte quote: did she say \"without citing the rule\"? (The transcript says \"siding.\")"
+   "q": "Turcotte quote: did she say \"without citing to the rule\"? (Our transcript reads \"siding to the rule\"; the Vimeo captions read \"citing to the rule.\")"
   },
   {
    "ts": "1:27:36",
-   "q": "The third public speaker on the censure gave his name as \"John ___.\" What is his last name?"
+   "q": "The third public speaker on the censure gave his name as \"John ___\" (the transcript reads \"John Turka\"). What is his last name?"
+  },
+  {
+   "ts": "1:39:48",
+   "q": "Snow removal: who answered Vice President Shaughnessy's question about whether the price changes with snowfall, and said 20 to 22 storms a winter? We have Eric Dudley."
+  },
+  {
+   "ts": "1:09:09",
+   "q": "Oct. 19 video (vimeo.com/1237411633 at 1:11:05; this link opens tonight's video): who called \"Point of order\" right before Turcotte's \"This is disgusting\"? At this link, President Munro says she called the point of order on Oct. 19."
   },
   {
    "ts": "58:25",
