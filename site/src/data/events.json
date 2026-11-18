@@ -55,6 +55,17 @@
     "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3668"
   },
   {
+    "title": "Riverwalk North Public Meeting",
+    "date": "2026-11-19",
+    "startTime": "17:00",
+    "endTime": "",
+    "venue": "Westbrook Community Center, 426 Bridge Street, Westbrook, ME",
+    "category": "Community & civic",
+    "admission": "free",
+    "description": "Public meeting hosted by the City of Westbrook about the Riverwalk North trail project.",
+    "sourceLink": "https://www.westbrookmaine.gov/calendar.aspx"
+  },
+  {
     "title": "New York Voices and Portland Jazz Orchestra",
     "date": "2026-11-19",
     "startTime": "19:30",
@@ -253,6 +264,17 @@
     "sourceLink": "https://www.westbrookmaine.gov/calendar.aspx"
   },
   {
+    "title": "Kids' Crafternoon: Make a Tiny Town",
+    "date": "2026-12-02",
+    "startTime": "15:30",
+    "endTime": "",
+    "venue": "Walker Memorial Library, 610 Main Street, Westbrook, ME",
+    "category": "Family & kids",
+    "admission": "free",
+    "description": "Kids' craft program at the library where children build a tiny town.",
+    "sourceLink": "https://www.westbrookmaine.gov/calendar.aspx"
+  },
+  {
     "title": "The Locker Project at Walker Memorial Library",
     "date": "2026-12-03",
     "startTime": "11:00",
@@ -261,6 +283,17 @@
     "category": "Food & drink",
     "admission": "free",
     "description": "Monthly Locker Project visit providing food support to local students and families at the library.",
+    "sourceLink": "https://www.westbrookmaine.gov/calendar.aspx"
+  },
+  {
+    "title": "Sit and Stitch: Crafting and Conversation",
+    "date": "2026-12-04",
+    "startTime": "15:00",
+    "endTime": "",
+    "venue": "Walker Memorial Library, Historic Wing, 610 Main Street, Westbrook, ME",
+    "category": "Arts & music",
+    "admission": "free",
+    "description": "Casual drop-in crafting group in the library's Historic Wing.",
     "sourceLink": "https://www.westbrookmaine.gov/calendar.aspx"
   },
   {
@@ -317,6 +350,61 @@
     "admission": "free",
     "description": "Menorah lighting ceremony on the Westbrook Common, listed on the City of Westbrook calendar.",
     "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3713"
+  },
+  {
+    "title": "Regular City Council Meeting",
+    "date": "2026-12-07",
+    "startTime": "19:00",
+    "endTime": "",
+    "venue": "Westbrook High School, Room 114, 125 Stroudwater Street, Westbrook, ME 04092",
+    "category": "Community & civic",
+    "admission": "free",
+    "description": "Regular public meeting of the Westbrook City Council.",
+    "sourceLink": "https://www.westbrookmaine.gov/calendar.aspx"
+  },
+  {
+    "title": "Reading to a Dog Program (Reservations required)",
+    "date": "2026-12-08",
+    "startTime": "15:30",
+    "endTime": "",
+    "venue": "Walker Memorial Library, Youth Program Room, 610 Main Street, Westbrook, ME",
+    "category": "Family & kids",
+    "admission": "free",
+    "description": "Children practice reading aloud to a therapy dog; reservations required.",
+    "sourceLink": "https://www.westbrookmaine.gov/calendar.aspx"
+  },
+  {
+    "title": "Construction Club - Build with us!",
+    "date": "2026-12-09",
+    "startTime": "15:30",
+    "endTime": "",
+    "venue": "Walker Memorial Library, Youth Services Program Room, 610 Main Street, Westbrook, ME",
+    "category": "Family & kids",
+    "admission": "free",
+    "description": "Library building-toy club for kids.",
+    "sourceLink": "https://www.westbrookmaine.gov/calendar.aspx"
+  },
+  {
+    "title": "Little Roots Family Music Time",
+    "date": "2026-12-10",
+    "startTime": "11:00",
+    "endTime": "",
+    "venue": "Walker Memorial Library, 610 Main Street, Westbrook, ME",
+    "category": "Arts & music",
+    "admission": "free",
+    "description": "Interactive music and movement session for young children and families.",
+    "sourceLink": "https://www.westbrookmaine.gov/calendar.aspx"
+  },
+  {
+    "title": "Pokémon Club",
+    "date": "2026-12-10",
+    "startTime": "15:30",
+    "endTime": "",
+    "venue": "Walker Memorial Library, Youth Services Program Room, 610 Main Street, Westbrook, ME",
+    "category": "Family & kids",
+    "admission": "free",
+    "description": "Pokémon club for ages 5-18 at the library.",
+    "sourceLink": "https://www.westbrookmaine.gov/calendar.aspx"
   },
   {
     "title": "Opus One Big Band \"Swing-O-Rama\" Fundraiser for Westbrook High School Chamber Singers",
