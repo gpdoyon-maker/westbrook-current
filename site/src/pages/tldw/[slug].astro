@@ -126,8 +126,16 @@ const meetingNote = (data.note || '')
   .split(/(?<=[.!?)])\s+/)
   .filter((s: string) => s && !noteBoilerplate.some((b) => s.startsWith(b)))
   .join(' ');
+
+// Link previews (Facebook etc.) show only the description, not the card title, so a blurb
+// that starts with "Also:" needs the title in front of it to make sense on its own.
+const blurb = meeting.blurb || 'Plain-language summary of the meeting.';
+const metaDescription = /^Also\b/.test(blurb) && meeting.title ? `${meeting.title}. ${blurb}` : blurb;
+// Optional 1200x630 share image made by scripts/make-tldw-share-image.mjs.
+const shareImage = meeting.shareImage || undefined;
+const shareImageAlt = shareImage ? `TL;DW! summary card: ${meeting.title}` : undefined;
 ---
-<SiteLayout title={pageTitle} description={meeting.blurb || 'Plain-language summary of the meeting.'} currentPage="tldw">
+<SiteLayout title={pageTitle} description={metaDescription} image={shareImage} imageAlt={shareImageAlt} currentPage="tldw">
   <main class="tldw-wrap">
     <div class="tldw-print-head">
       <img src="/logo-desktop.webp" alt="Westbrook Currents" />
