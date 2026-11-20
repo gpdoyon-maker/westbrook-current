@@ -1,49 +1,5 @@
 [
   {
-    "title": "Family Storytime at Walker Library",
-    "date": "2026-11-19",
-    "startTime": "10:30",
-    "endTime": "11:00",
-    "venue": "Walker Memorial Library, Youth Services Program Room",
-    "category": "Family & kids",
-    "admission": "free",
-    "description": "Family Storytime at Walker Memorial Library is geared to ages 1-3 with caregivers, but all ages are welcome. We will sing, move around, read books, and have fun! Storytimes are Tuesdays and Thursdays at 10:30am in the Youth Services Program Room.",
-    "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3559"
-  },
-  {
-    "title": "Hanging out in the Historic Wing",
-    "date": "2026-11-19",
-    "startTime": "15:00",
-    "endTime": "16:30",
-    "venue": "Historic Wing",
-    "category": "Community & civic",
-    "admission": "free",
-    "description": "Hang out with us upstairs in our historic wing! Knit/crochet/stitch, read a book, make a puzzle, play a game, or just sit and enjoy the atmosphere!",
-    "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3668"
-  },
-  {
-    "title": "Riverwalk North Public Meeting",
-    "date": "2026-11-19",
-    "startTime": "17:00",
-    "endTime": "",
-    "venue": "Westbrook Community Center, 426 Bridge Street, Westbrook, ME",
-    "category": "Community & civic",
-    "admission": "free",
-    "description": "Public meeting hosted by the City of Westbrook about the Riverwalk North trail project.",
-    "sourceLink": "https://www.westbrookmaine.gov/calendar.aspx"
-  },
-  {
-    "title": "New York Voices and Portland Jazz Orchestra",
-    "date": "2026-11-19",
-    "startTime": "19:30",
-    "endTime": "21:30",
-    "venue": "Westbrook Performing Arts Center, 471 Stroudwater St, Westbrook, ME 04092",
-    "category": "Arts & music",
-    "admission": "paid",
-    "description": "Jazz concert featuring vocal group New York Voices with the Portland Jazz Orchestra. Ticket price not confirmed.",
-    "sourceLink": "https://usm.maine.edu/calendar-of-events/event/new-york-voices-portland-jazz-orchestra/"
-  },
-  {
     "title": "Silent Book Club",
     "date": "2026-11-20",
     "startTime": "15:00",
