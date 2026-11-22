@@ -36,4 +36,4 @@ When asked for a "design" or "whitespace" change, distinguish **passive** whites
 - This is a judgment call, not a numeric rule — verify any new whitespace change at both desktop and 375×812 phone width in the browser pane before merging, the same way accessibility changes get checked at both widths above.
 
 ## TL;DW! summaries
-Each meeting's JSON file in `site/src/data/tldw-summaries/` is the master copy. There are no meeting PDFs. The workflow is in `PROCESS.md` in the Westbrook City Council Meetings folder.
+Each meeting's JSON file in `site/src/data/tldw-summaries/` is the master copy. There are no meeting PDFs. The workflow is in `PROCESS.md` in the `Claude Work Folder/Town Meetings/Westbrook` folder (moved there 2026-11-22; it used to be called "Westbrook City Council Meetings").
