@@ -136,14 +136,14 @@ const shareImage = meeting.shareImage || undefined;
 const shareImageAlt = shareImage ? `TL;DW! summary card: ${meeting.title}` : undefined;
 ---
 <SiteLayout title={pageTitle} description={metaDescription} image={shareImage} imageAlt={shareImageAlt} currentPage="tldw">
-  <main class="tldw-wrap">
-    <div class="tldw-print-head">
+  <main class="tldw-wrap" data-pagefind-body>
+    <div class="tldw-print-head" data-pagefind-ignore>
       <img src="/logo-desktop.webp" alt="Westbrook Currents" />
       <span>TL;DW! meeting summary · westbrookcurrents.com/tldw/{data.slug}</span>
     </div>
-    <a class="help-back" href="/tldw">&#8249; TL;DW!</a>
+    <a class="help-back" href="/tldw" data-pagefind-ignore>&#8249; TL;DW!</a>
     {data.draft && (
-      <p class="tldw-draft-banner"><strong>Draft for review.</strong> Not yet audited or checked against the video. Movers, seconders and some speakers are provisional until the video checklist at the end is answered.</p>
+      <p class="tldw-draft-banner" data-pagefind-ignore><strong>Draft for review.</strong> Not yet audited or checked against the video. Movers, seconders and some speakers are provisional until the video checklist at the end is answered.</p>
     )}
     {category && <span class="tldw-eyebrow">{category}</span>}
     <h1>{heading}</h1>
@@ -151,15 +151,15 @@ const shareImageAlt = shareImage ? `TL;DW! summary card: ${meeting.title}` : und
     {data.attendance && <p class="tldw-attendance"><strong>Attendance:</strong> {data.attendance}</p>}
 
     {videoUrl && (
-      <div class="tldw-video-box">
+      <div class="tldw-video-box" data-pagefind-ignore>
         <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#07749b" stroke-width="2"><rect x="2" y="5" width="15" height="14" rx="2"></rect><path d="M17 10l5-3v10l-5-3z"></path></svg>
         <a class="watch" href={videoUrl} target="_blank" rel="noopener noreferrer">Watch the full video on Vimeo &#8599;</a>
         {data.packetUrl && <a class="watch" href={data.packetUrl} target="_blank" rel="noopener noreferrer">Meeting packet{data.packetNote ? ` ${data.packetNote}` : ''} &#8599;</a>}
       </div>
     )}
-    <p class="tldw-scrub-note">Each item shows a timestamp like <b>57:13</b> (minutes:seconds) or <b>1:52:13</b> (hours:minutes:seconds). Tap it to jump to that moment in the video.</p>
+    <p class="tldw-scrub-note" data-pagefind-ignore>Each item shows a timestamp like <b>57:13</b> (minutes:seconds) or <b>1:52:13</b> (hours:minutes:seconds). Tap it to jump to that moment in the video.</p>
 
-    <button class="tldw-print-btn" type="button">Save or print this summary</button>
+    <button class="tldw-print-btn" type="button" data-pagefind-ignore>Save or print this summary</button>
 
     {(meeting.title || meeting.blurb) && <p class="intro-line">Quick read: {[meeting.title && `${meeting.title}.`, meeting.blurb].filter(Boolean).join(' ')}</p>}
     {meetingNote && <p class="tldw-meeting-note">{meetingNote}</p>}
@@ -173,7 +173,7 @@ const shareImageAlt = shareImage ? `TL;DW! summary card: ${meeting.title}` : und
         <summary>
           <span class="ti-text">
             <span class="ti-title">{r.title}</span>
-            {brief(r.body) && <span class="ti-brief">{brief(r.body)}</span>}
+            {brief(r.body) && <span class="ti-brief" data-pagefind-ignore>{brief(r.body)}</span>}
           </span>
           <span class="ti-chev" aria-hidden="true"></span>
         </summary>
@@ -193,12 +193,12 @@ const shareImageAlt = shareImage ? `TL;DW! summary card: ${meeting.title}` : und
       </div>
     ))}
 
-    <div class="disclaimer">
+    <div class="disclaimer" data-pagefind-ignore>
       <strong>Not a replacement for watching &mdash; and not an official record.</strong> This summary highlights the meeting's key discussions and decisions; it's not a substitute for watching the full meeting, and summarization necessarily condenses and selects. <strong>It's also an unofficial product of Westbrook Currents, an independent site &mdash; not the City of Westbrook &mdash; and may contain mistakes.</strong> For complete context or the official record, watch the full video or see the City's approved minutes.
     </div>
-    {data.howMade && <p class="tldw-made-with">How this was made: {data.howMade.replace(/^This summary was produced from the meeting video/, 'Produced from the meeting video')}</p>}
+    {data.howMade && <p class="tldw-made-with" data-pagefind-ignore>How this was made: {data.howMade.replace(/^This summary was produced from the meeting video/, 'Produced from the meeting video')}</p>}
     {data.draft && data.checklist && data.checklist.length > 0 && (
-      <section class="tldw-draft-checklist" aria-labelledby="draft-checklist-heading">
+      <section class="tldw-draft-checklist" data-pagefind-ignore aria-labelledby="draft-checklist-heading">
         <h2 id="draft-checklist-heading">Video checklist ({data.checklist.length} {data.checklist.length === 1 ? 'item' : 'items'})</h2>
         <p>Only the video can settle these. Answer by number, for example &ldquo;#3 Rairdon.&rdquo; This list is removed from the final version.</p>
         <ol>

@@ -4,11 +4,14 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev --host 0.0.0.0",
-    "build": "astro build",
+    "build": "astro build && pagefind --site dist",
     "preview": "astro preview --host 0.0.0.0"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",
     "astro": "^5.0.0"
+  },
+  "devDependencies": {
+    "pagefind": "1.6.0"
   }
 }
