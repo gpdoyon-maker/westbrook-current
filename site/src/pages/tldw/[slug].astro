@@ -24,6 +24,14 @@ const videoUrl: string = f.Video || '';
 // A decision line is "split" if it says a vote failed, or states a X–Y tally where Y > 0
 // (a dissent/opposition). Numbers are bounded to 1–2 digits with word boundaries so an
 // order number like "2026-120" or "26-000123" never matches as a fake tally.
+// A failed motion gets ✗. Everything else gets ✓, including a split vote that passed, which also
+// gets a "Split vote" label so a 4–2 win never looks like a loss.
+function isFailedDecision(text: string) {
+  return /\b(failed|defeated|did not pass|was rejected)\b/i.test(text);
+}
+function splitLabel(text: string) {
+  return /\bno (formal )?vote\b/i.test(text) ? 'Informal tally' : 'Split vote';
+}
 function isSplitDecision(text: string) {
   if (/\bfailed\b/i.test(text)) return true;
   const m = text.match(/\b(\d{1,2})\b\s*[–‒-]\s*\b(\d{1,2})\b/);
@@ -183,7 +191,7 @@ const shareImageAlt = shareImage ? `TL;DW! summary card: ${meeting.title}` : und
             if (b.t === 'sub') return <p class="label">{b.x}</p>;
             if (b.t === 'q') return <p class="tldw-quote">{b.x}<cite>&mdash; {b.cite}{b.ts && <> &middot; <a class="ts-link" href={tsLink(b.ts)} target="_blank" rel="noopener noreferrer">{b.ts}</a></>}</cite></p>;
             if (b.t === 'fc') return <aside class="tldw-factcheck" aria-label="Westbrook Currents fact check"><span class="fc-label">Independent fact check by Westbrook Currents</span><span class="fc-note">Added after the meeting from public records. This was not said at the meeting and does not come from the City.</span> {b.x}{b.links && b.links.length > 0 && <span class="fc-src"> {b.links.length > 1 ? 'Sources' : 'Source'}: {b.links.map((l: any, i: number) => <>{i > 0 && '; '}<a href={l.url} target="_blank" rel="noopener noreferrer">{l.label}</a></>)}</span>}</aside>;
-            if (b.t === 'd') { const split = isSplitDecision(b.x); return <span class={`tldw-decision${split ? ' split' : ''}`}>{split ? '✗' : '✓'} {parts(b.x).map((s: any) => s.ts ? <a class="ts-link" href={tsLink(s.ts)} target="_blank" rel="noopener noreferrer">{s.ts}</a> : s.text)}</span>; }
+            if (b.t === 'd') { const split = isSplitDecision(b.x); const failed = isFailedDecision(b.x); return <span class={`tldw-decision${split ? ' split' : ''}`}><span aria-hidden="true">{failed ? '✗' : '✓'}</span> {split && !failed && <span class="tldw-split-tag">{splitLabel(b.x)}</span>}{split && !failed && ' '}{parts(b.x).map((s: any) => s.ts ? <a class="ts-link" href={tsLink(s.ts)} target="_blank" rel="noopener noreferrer">{s.ts}</a> : s.text)}</span>; }
             if (b.t === 'a') return <ul><li>{b.x}</li></ul>;
             if (b.t === 'ul') return <ul>{b.items.map((it: any) => <li>{parts(it.x).map((s: any) => s.ts ? <a class="ts-link" href={tsLink(s.ts)} target="_blank" rel="noopener noreferrer">{s.ts}</a> : s.text)}</li>)}</ul>;
             return null;
