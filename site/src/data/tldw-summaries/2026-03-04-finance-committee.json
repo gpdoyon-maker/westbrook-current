@@ -52,7 +52,7 @@
   },
   {
    "t": "p",
-   "x": "None."
+   "x": "Dr. Mazjanis will send members the Siemens slides and a list of the energy projects."
   },
   {
    "t": "h",
@@ -111,7 +111,7 @@
   },
   {
    "t": "p",
-   "x": "Dr. Lancia and Dr. Mazjanis jointly presented the administration's opening FY27 budget proposal. It is $58,622,000 (approximate), an increase of $5,271,617.34, or 9.88%, over FY26. The leadership team's initial draft had called for a 13.5% increase at $60.5 million. Careful review trimmed about $2 million from that request."
+   "x": "Dr. Lancia and Dr. Mazjanis jointly presented the administration's opening FY27 budget proposal. It is $58,622,000 (approximate), an increase of $5,271,617.34, or 9.88%, over FY26. The leadership team's initial draft had called for an increase of about 13.6%, to about $60.6 million. Careful review trimmed about $2 million from that request."
   },
   {
    "t": "p",
@@ -127,7 +127,7 @@
   },
   {
    "t": "li",
-   "x": "(3) Existing-staff salary/benefit increases (~$2.5 million) reflect current contracts and a 10% health-benefit placeholder, lowered from 15%."
+   "x": "(3) Existing-staff salary/benefit increases (about $2.44 million) reflect current contracts and a 10% health-benefit placeholder, lowered from 15%."
   },
   {
    "t": "li",
@@ -276,6 +276,6 @@
    "x": "None."
   }
  ],
- "howMade": "This summary was produced from the meeting video (linked above, hosted on the City's Vimeo showcase). The audio was transcribed with AI-assisted speech-to-text and speaker identification. This process cross-checked names against the official School Committee roster, attributed speakers from context (introductions, roll-call order, direct address by the Chair) rather than the raw diarization labels alone, and drafted this summary and the quoted excerpts. Quotes are lightly cleaned of filler words/false starts but not reworded. Reviewed by Gerald Doyon. A separate AI accuracy check then compared this summary against the transcript and agenda packet. Errors it found were corrected, and Gerald Doyon verified against the meeting video the points only the video could settle.",
+ "howMade": "This summary was produced from the meeting video (linked above, hosted on the City's Vimeo showcase). The audio was transcribed with AI-assisted speech-to-text and speaker identification. This process cross-checked names against the official School Committee roster, attributed speakers from context (introductions, roll-call order, direct address by the Chair) rather than the raw diarization labels alone, and drafted this summary and the quoted excerpts. Quotes are lightly cleaned of filler words/false starts but not reworded. Reviewed by Gerald Doyon. A separate AI accuracy check then compared this summary against the transcript and agenda packet. Errors it found were corrected, and Gerald Doyon verified against the meeting video the points only the video could settle. On November 22, 2026, attendance and figures were also checked against the Finance Committee's posted meeting report and budget slides.",
  "slug": "2026-03-04-finance-committee"
 }
