@@ -85,7 +85,7 @@ function cardCta() {
       </div>
 
       <div class="tldw-filter-footer">
-        <span class="tldw-result-count"><span id="result-count">{meetings.length}</span> of {meetings.length} meetings <button type="button" class="tldw-clear" id="clear-filters" hidden>Clear filters</button></span>
+        <span class="tldw-result-count" id="result-box"><span role="status" aria-live="polite"><strong class="tldw-result-num" id="result-count">{meetings.length}</strong> <span id="result-label">meetings</span></span> <button type="button" class="tldw-clear" id="clear-filters" hidden>Clear filters</button></span>
         <div class="tldw-view-toggle">
           <button type="button" class="is-active" id="view-card">Cards</button>
           <button type="button" id="view-compact">Compact</button>
@@ -151,6 +151,8 @@ function cardCta() {
     const groups = Array.from(document.querySelectorAll<HTMLElement>('#tldw-list .tldw-month-group'));
     const empty = document.querySelector<HTMLElement>('#tldw-empty');
     const resultCount = document.querySelector<HTMLElement>('#result-count');
+    const resultLabel = document.querySelector<HTMLElement>('#result-label');
+    const resultBox = document.querySelector<HTMLElement>('#result-box');
     const clearBtn = document.querySelector<HTMLButtonElement>('#clear-filters');
     const list = document.querySelector<HTMLElement>('#tldw-list');
 
@@ -251,10 +253,18 @@ function cardCta() {
         group.style.display = hasVisible ? '' : 'none';
       });
 
+      const hasActiveFilters = selectedCategory !== 'All' || selectedTopics.size > 0 || q.length > 0;
+
+      // With no search or filters: "59 meetings". Otherwise: "11 of 59 meetings match "credere"".
       if (resultCount) resultCount.textContent = String(visible);
+      if (resultLabel) {
+        const total = items.length;
+        const what = q ? `match \u201c${(input?.value ?? '').trim()}\u201d` : 'match these filters';
+        resultLabel.textContent = hasActiveFilters ? `of ${total} meetings ${what}` : 'meetings';
+      }
+      resultBox?.classList.toggle('is-filtered', hasActiveFilters);
       empty?.classList.toggle('show', visible === 0);
 
-      const hasActiveFilters = selectedCategory !== 'All' || selectedTopics.size > 0 || q.length > 0;
       if (clearBtn) clearBtn.hidden = !hasActiveFilters;
     }
 
