@@ -36,6 +36,9 @@ body:has(.tldw-wrap) { background: #f6f9fb; }
 /* Month groups + card/compact list */
 .tldw-month-head { position: sticky; top: 0; background: var(--blue); margin: 26px 0 12px; padding: 10px 16px; border-bottom: none; border-radius: 8px; color: #fff; font-size: 13px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
 .mc-item { margin-bottom: 12px; }
+.mc-hit { margin: 6px 4px 0; padding: 8px 12px; border-left: 3px solid var(--blue); background: var(--mist); color: var(--navy); font-size: 14px; line-height: 1.45; }
+.mc-hit-label { font-weight: 700; }
+.mc-hit mark { background: #fff3a8; color: inherit; padding: 0 1px; border-radius: 2px; }
 .mc-type-badge, .mcc-type-badge { display: inline-block; padding: 3px 10px; border-radius: 999px; color: #fff; font-size: 11px; font-weight: 800; white-space: nowrap; }
 .mc-type-badge[data-cat="Regular Meeting"], .mcc-type-badge[data-cat="Regular Meeting"] { background: #355c7d; }
 .mc-type-badge[data-cat="Special Meeting"], .mcc-type-badge[data-cat="Special Meeting"] { background: #8e5572; }

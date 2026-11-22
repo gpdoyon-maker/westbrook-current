@@ -60,7 +60,7 @@ function cardCta() {
       <label for="tldw-search-input" class="tldw-filter-label">Search</label>
       <div class="tldw-search">
         <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="color:#7c8a99"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-        <input type="text" id="tldw-search-input" placeholder="Search by topic, name, or keyword&hellip;" aria-label="Search meeting summaries">
+        <input type="text" id="tldw-search-input" placeholder="Search names, places, topics or any word&hellip;" aria-label="Search meeting summaries">
       </div>
 
       <button type="button" class="tldw-filter-toggle" id="type-toggle" aria-expanded="false" aria-controls="type-pills">
@@ -106,6 +106,7 @@ function cardCta() {
           {group.items.map((m: any) => (
             <div
               class="mc-item"
+              data-slug={m.slug}
               data-category={m.category}
               data-topics={m.topics.join('|')}
               data-search={[m.title, m.blurb, ...m.tags, ...m.topics, m.category].join(' ').toLowerCase()}
@@ -130,6 +131,7 @@ function cardCta() {
                 <span class="mcc-title">{m.title}</span>
                 {m.hot && <span class="mcc-hot">Contested</span>}
               </a>
+              <p class="mc-hit" hidden></p>
             </div>
           ))}
         </section>
@@ -160,6 +162,66 @@ function cardCta() {
     let selectedCategory = 'All';
     const selectedTopics = new Set<string>();
 
+    // Full-text search: Pagefind indexes the words inside every summary at build time
+    // (npm run build). Its index lives at /pagefind/ in the built site only, so on the
+    // dev server the search quietly falls back to titles, blurbs, tags and topics.
+    // hits maps a meeting slug to a short excerpt around the matching words.
+    let hits = new Map<string, string>();
+    let hitsQuery = '';
+    let pagefind: any = null;
+    let pagefindFailed = false;
+    let searchSeq = 0;
+
+    async function loadPagefind() {
+      if (pagefind || pagefindFailed) return pagefind;
+      try {
+        const url = '/pagefind/pagefind.js';
+        pagefind = await import(/* @vite-ignore */ url);
+        await pagefind.options({ excerptLength: 24 });
+      } catch {
+        pagefindFailed = true;
+      }
+      return pagefind;
+    }
+
+    // Pagefind marks matches with <mark>. Escape everything else so only that tag survives.
+    function safeExcerpt(html: string) {
+      const text = html.replace(/<mark>/g, '\u0001').replace(/<\/mark>/g, '\u0002').replace(/<[^>]*>/g, '');
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML.replace(/\u0001/g, '<mark>').replace(/\u0002/g, '</mark>');
+    }
+
+    async function runFullTextSearch(q: string) {
+      const seq = ++searchSeq;
+      if (q.length < 2) {
+        hits = new Map();
+        hitsQuery = q;
+        return;
+      }
+      const pf = await loadPagefind();
+      if (!pf || seq !== searchSeq) return;
+      // Several words ("warren avenue") look for that exact phrase first, so "mill brook" doesn't
+      // also match every "Westbrook". If the phrase appears nowhere, fall back to all the words.
+      const phrase = /\s/.test(q) && !q.includes('"');
+      let search = await pf.debouncedSearch(phrase ? `"${q}"` : q, {}, 200);
+      if (search === null || seq !== searchSeq) return; // a newer keystroke replaced this search
+      if (phrase && search.results.length === 0) {
+        search = await pf.search(q);
+        if (seq !== searchSeq) return;
+      }
+      const data = await Promise.all(search.results.map((r: any) => r.data()));
+      if (seq !== searchSeq) return;
+      const next = new Map<string, string>();
+      data.forEach((d: any) => {
+        const slug = String(d.url || '').replace(/\.html$/, '').replace(/\/$/, '').split('/').pop() || '';
+        if (slug) next.set(slug, safeExcerpt(d.excerpt || ''));
+      });
+      hits = next;
+      hitsQuery = q;
+      applyFilters();
+    }
+
     function applyFilters() {
       const q = (input?.value ?? '').trim().toLowerCase();
       let visible = 0;
@@ -168,10 +230,20 @@ function cardCta() {
         const categoryOk = selectedCategory === 'All' || item.dataset.category === selectedCategory;
         const itemTopics = (item.dataset.topics ?? '').split('|');
         const topicsOk = selectedTopics.size === 0 || Array.from(selectedTopics).every((t) => itemTopics.includes(t));
-        const searchOk = !q || (item.dataset.search ?? '').includes(q);
+        const fullTextHit = hitsQuery === q ? hits.get(item.dataset.slug ?? '') : undefined;
+        const metaOk = (item.dataset.search ?? '').includes(q);
+        const searchOk = !q || metaOk || fullTextHit !== undefined;
         const match = categoryOk && topicsOk && searchOk;
         item.style.display = match ? '' : 'none';
         if (match) visible += 1;
+
+        // Show where the words were found inside the summary, unless the card itself already shows them.
+        const hitEl = item.querySelector<HTMLElement>('.mc-hit');
+        if (hitEl) {
+          const showHit = match && !!q && !metaOk && !!fullTextHit;
+          hitEl.hidden = !showHit;
+          hitEl.innerHTML = showHit ? `<span class="mc-hit-label">Found in the summary:</span> \u2026${fullTextHit}\u2026` : '';
+        }
       });
 
       groups.forEach((group) => {
@@ -208,12 +280,20 @@ function cardCta() {
       });
     });
 
-    input?.addEventListener('input', applyFilters);
+    input?.addEventListener('input', () => {
+      applyFilters();
+      runFullTextSearch((input.value ?? '').trim().toLowerCase());
+    });
+    // Start loading the search index as soon as someone reaches for the search box.
+    input?.addEventListener('focus', () => { loadPagefind(); }, { once: true });
 
     clearBtn?.addEventListener('click', () => {
       selectedCategory = 'All';
       selectedTopics.clear();
       if (input) input.value = '';
+      searchSeq += 1;
+      hits = new Map();
+      hitsQuery = '';
       typePills.forEach((p) => p.classList.toggle('is-active', p.dataset.category === 'All'));
       topicChips.forEach((c) => c.classList.remove('is-active'));
       if (typeSummary) typeSummary.textContent = 'All';
