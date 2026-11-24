@@ -169,7 +169,7 @@ const shareImageAlt = shareImage ? `TL;DW! summary card: ${meeting.title}` : und
 
     <button class="tldw-print-btn" type="button" data-pagefind-ignore>Save or print this summary</button>
 
-    {(meeting.title || meeting.blurb) && <p class="intro-line">Quick read: {[meeting.title && `${meeting.title}.`, meeting.blurb].filter(Boolean).join(' ')}</p>}
+    {(meeting.title || meeting.blurb) && <p class="intro-line"><strong>Quick read:</strong> {[meeting.title && `${meeting.title}.`, meeting.blurb].filter(Boolean).join(' ')}</p>}
     {meetingNote && <p class="tldw-meeting-note">{meetingNote}</p>}
 
     {rows.map((r) => r.kind === 'section' ? (
