@@ -55,7 +55,7 @@
     "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3201"
   },
   {
-    "title": "Thanksgiving Day (Closure)",
+    "title": "City Hall Thanksgiving Day (Closure)",
     "date": "2026-11-26",
     "startTime": "",
     "endTime": "",
@@ -89,7 +89,7 @@
     "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3202"
   },
   {
-    "title": "Thanksgiving Friday (Closure)",
+    "title": "City Hall Thanksgiving Friday (Closure)",
     "date": "2026-11-27",
     "startTime": "",
     "endTime": "",
@@ -231,6 +231,17 @@
     "admission": "free",
     "description": "Annual City of Westbrook holiday tree lighting ceremony at Riverbank Park.",
     "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3712"
+  },
+  {
+    "title": "Harbor Brass Quintet Holiday Concert",
+    "date": "2026-12-07",
+    "startTime": "12:00",
+    "endTime": "15:00",
+    "venue": "Rock Row Health Campus lobby",
+    "category": "Arts & music",
+    "admission": "free",
+    "description": "Free and open to all.",
+    "sourceLink": ""
   },
   {
     "title": "Menorah Lighting Ceremony",
