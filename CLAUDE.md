@@ -11,7 +11,7 @@ A GitHub check named "Accessibility check" (`.github/workflows/accessibility.yml
 3. Fix all errors. If one can't be fixed, say so in the pull request and tell Gerald.
 
 ### After every deploy that changes a page
-Run the changed pages through WAVE (`https://wave.webaim.org/report#/<page URL>`). Fix any errors or contrast errors, and review its alerts, which need judgment rather than automatic fixes.
+Run the changed pages through WAVE (`https://wave.webaim.org/report#/<page URL>`). When one template makes many pages, such as the TL;DW! summaries, run WAVE on one of them, not all. Fix any errors or contrast errors, and review its alerts, which need judgment rather than automatic fixes.
 
 ### Building it right
 - **Contrast:** at least 4.5:1 for text and 3:1 for large text and meaningful graphics. Reuse the color tokens in `global.css` instead of adding new colors, and check the tokens on every background they sit on.
