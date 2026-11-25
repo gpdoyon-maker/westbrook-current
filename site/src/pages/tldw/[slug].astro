@@ -204,7 +204,15 @@ const shareImageAlt = shareImage ? `TL;DW! summary card: ${meeting.title}` : und
     <div class="disclaimer" data-pagefind-ignore>
       <strong>Not a replacement for watching &mdash; and not an official record.</strong> This summary highlights the meeting's key discussions and decisions; it's not a substitute for watching the full meeting, and summarization necessarily condenses and selects. <strong>It's also an unofficial product of Westbrook Currents, an independent site &mdash; not the City of Westbrook &mdash; and may contain mistakes.</strong> For complete context or the official record, watch the full video or see the City's approved minutes.
     </div>
-    {data.howMade && <p class="tldw-made-with" data-pagefind-ignore>How this was made: {data.howMade.replace(/^This summary was produced from the meeting video/, 'Produced from the meeting video')}</p>}
+    {data.howMade && (() => {
+      // The first mention of the editor links to the About page, so readers can see who that is.
+      const made = data.howMade.replace(/^This summary was produced from the meeting video/, 'Produced from the meeting video');
+      const editor = 'Westbrook Currents editor';
+      const at = made.indexOf(editor);
+      return at < 0
+        ? <p class="tldw-made-with" data-pagefind-ignore>How this was made: {made}</p>
+        : <p class="tldw-made-with" data-pagefind-ignore>How this was made: {made.slice(0, at)}<a href="/about/">{editor}</a>{made.slice(at + editor.length)}</p>;
+    })()}
     {data.draft && data.checklist && data.checklist.length > 0 && (
       <section class="tldw-draft-checklist" data-pagefind-ignore aria-labelledby="draft-checklist-heading">
         <h2 id="draft-checklist-heading">Video checklist ({data.checklist.length} {data.checklist.length === 1 ? 'item' : 'items'})</h2>
