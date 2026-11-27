@@ -419,6 +419,17 @@
     "sourceLink": ""
   },
   {
+    "title": "Adult/Teen Craft: Polymer Clay Jewelry (Ages 12+)",
+    "date": "2026-12-19",
+    "startTime": "10:30",
+    "endTime": "",
+    "venue": "Walker Memorial Library, 610 Main Street, Westbrook, ME",
+    "category": "Arts & music",
+    "admission": "free",
+    "description": "Walker Memorial Library hosts a hands-on polymer clay jewelry craft session for ages 12 and up.",
+    "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3736"
+  },
+  {
     "title": "Portland Ballet presents \"A Victorian Nutcracker\"",
     "date": "2026-12-19",
     "startTime": "11:00",
@@ -463,6 +474,28 @@
     "sourceLink": "https://www.portlandballet.org/nutcracker"
   },
   {
+    "title": "Reading to a Dog Program (Reservations required)",
+    "date": "2026-12-21",
+    "startTime": "15:30",
+    "endTime": "",
+    "venue": "Walker Memorial Library, 610 Main Street, Westbrook, ME",
+    "category": "Family & kids",
+    "admission": "free",
+    "description": "Children practice reading aloud to a therapy dog at the library. Reservations are required.",
+    "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3729"
+  },
+  {
+    "title": "Special City Council Meeting",
+    "date": "2026-12-21",
+    "startTime": "18:00",
+    "endTime": "",
+    "venue": "Westbrook High School, Room 114, 125 Stroudwater Street, Westbrook, ME 04092",
+    "category": "Community & civic",
+    "admission": "free",
+    "description": "Special meeting of the Westbrook City Council, open to the public.",
+    "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3265"
+  },
+  {
     "title": "Community Blood Drive",
     "date": "2026-12-22",
     "startTime": "09:00",
@@ -484,5 +517,27 @@
     "description": "Located next to Riverbank Park. Appointments: call 1-800-733-2767 or visit www.redcrossblood.org. Contact: Dennis Marrotte, dennis.marrotte1111@gmail.com, (207) 232-4855.",
     "sourceLink": "https://www.redcrossblood.org",
     "highlight": true
+  },
+  {
+    "title": "Family Storytime at Walker Library",
+    "date": "2026-12-22",
+    "startTime": "10:30",
+    "endTime": "",
+    "venue": "Walker Memorial Library, Youth Services Program Room, 610 Main Street, Westbrook, ME",
+    "category": "Family & kids",
+    "admission": "free",
+    "description": "Weekly family storytime for young children at the library.",
+    "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3568"
+  },
+  {
+    "title": "Pokémon Club",
+    "date": "2026-12-22",
+    "startTime": "15:30",
+    "endTime": "",
+    "venue": "Walker Memorial Library, Youth Services Program Room, 610 Main Street, Westbrook, ME",
+    "category": "Family & kids",
+    "admission": "free",
+    "description": "Library Pokémon club for ages 5-18.",
+    "sourceLink": "https://www.westbrookmaine.gov/Calendar.aspx?EID=3737"
   }
 ]
