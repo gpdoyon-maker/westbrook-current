@@ -121,6 +121,12 @@ function brief(body: any[]) {
   return first.length > 150 ? first.slice(0, 147).trimEnd() + '…' : first;
 }
 
+// "In this meeting" jump list: one link per agenda item, so readers can go straight to the one they came for.
+const items = rows.filter((r): r is Item => r.kind === 'item');
+const itemId = (r: Item) => `item-${items.indexOf(r) + 1}`;
+const jumpTitle = (t: string) => t.replace(/\s*\((?:packet|see packet)[^)]*\)\s*$/i, '');
+const showJump = items.length >= 4;
+
 const dateLabel = meeting.dateLabel || f.Date || '';
 const category = meeting.category || '';
 const heading = `${(data.title || '').split(' — ')[0]} — ${f.Date ? f.Date.replace(/^\w+day,\s*/, '') : dateLabel}`;
@@ -172,10 +178,19 @@ const shareImageAlt = shareImage ? `TL;DW! summary card: ${meeting.title}` : und
     {(meeting.title || meeting.blurb) && <p class="intro-line"><strong>Quick read:</strong> {[meeting.title && `${meeting.title}.`, meeting.blurb].filter(Boolean).join(' ')}</p>}
     {meetingNote && <p class="tldw-meeting-note">{meetingNote}</p>}
 
+    {showJump && (
+      <nav class="tldw-jump" aria-labelledby="tldw-jump-head" data-pagefind-ignore>
+        <h2 id="tldw-jump-head">In this meeting</h2>
+        <ol>
+          {items.map((r) => <li><a href={`#${itemId(r)}`}>{jumpTitle(r.title)}</a></li>)}
+        </ol>
+      </nav>
+    )}
+
     {rows.map((r) => r.kind === 'section' ? (
       <h2 class="tldw-section-head">{r.title}</h2>
     ) : (
-      <div class="tldw-item-wrap">
+      <div class="tldw-item-wrap" id={itemId(r)}>
       {r.ts && <a class="ti-ts" href={tsLink(r.ts)} target="_blank" rel="noopener noreferrer">{r.ts}</a>}
       <details class="tldw-item">
         <summary>
@@ -240,6 +255,15 @@ const shareImageAlt = shareImage ? `TL;DW! summary card: ${meeting.title}` : und
         items.forEach((d, i) => { d.open = saved[i]; });
         saved = null;
       };
+      // A jump link (or a shared link ending in #item-N) opens that section so its text shows.
+      const openTarget = () => {
+        const id = decodeURIComponent(location.hash.slice(1));
+        const wrap = id && document.getElementById(id);
+        const d = wrap && wrap.querySelector('details.tldw-item');
+        if (d) { d.open = true; wrap.scrollIntoView(); }
+      };
+      window.addEventListener('hashchange', openTarget);
+      openTarget();
       window.addEventListener('beforeprint', openAll);
       window.addEventListener('afterprint', restore);
       document.querySelector('.tldw-print-btn')?.addEventListener('click', () => {
